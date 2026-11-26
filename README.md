@@ -111,7 +111,7 @@ Linux／Colab：同樣兩行，直譯器是 `.venv/bin/python`；`colorama` 只�
 | 放哪 | `data/katago/b18c384nbt-humanv0.ckpt` |
 | 用法 | 只做推論、不微調：讀中性設定下的內部表示（稱 P1 特徵）與各棋力設定的逐手機率（稱 HS） |
 
-### 5.2 本隊的權重與特徵：`【雲端硬碟連結】`
+### 5.2 本隊的權重與特徵：<https://drive.google.com/drive/folders/1VyPw1_ULh5v-t4N-QAbT5IJiiqhF_XnK>
 
 下載後照表中的路徑放到 repo 根目錄下。SHA-256 是 2026-11-25 在開發機實測的值。
 
@@ -194,7 +194,7 @@ Linux／Colab 把直譯器換成 `.venv/bin/python`。兩支入口最後會比�
 - 開發機實測（2026-11-25，Windows，私有 repo）：兩支都 PASS；競賽一約 2–4 分鐘、峰值記憶體約 2 GB，競賽二約 10–30 秒。
 - 這份公開副本的實測（2026-11-26，Windows）：在空資料夾 `git clone` 本 repo 的 commit → `stage_inputs.py`（官方測試檔用 AIdea 下載的兩個 zip）→ 兩支入口，**兩場都逐位元組 PASS**。
 - Linux 上浮點數最後一位會和 Windows 不同，工具內「逐位元組相同」的中間檢查會停下。這時加 `--tolerant`：中間的數值檢查改用容許差（絕對差 ≤ 1e-9 + 1e-9 × 參考值），實際差異寫進 `<out>/tolerant_report.json`；PASS 的判定不變，仍然只看最終 CSV 的 SHA-256。容許模式另需 `repro/ref_lda_L.npz`（在 `C10_features_layer1_ingit.zip` 裡，`stage_inputs.py` 會放好）。Linux／Colab 上的實測結果見 `repro/README.md` 第 2.4、5 節。
-- Colab notebook：**`repro/colab_public.ipynb`**（CPU 執行階段）。第 0 格的參數：`REPO_URL`（本 repo）、`DRIVE_DIR`（你的 Google Drive 上放三個包的資料夾；也接受 `parts/` 的 7 MB 分塊＋`C10_public_parts_manifest.json`）、`OFFICIAL_DIR`（你放官方測試檔的資料夾）、`MOUNT_DRIVE`、`SAVE_TO_DRIVE` 等。它依序 clone 本 repo → 取三個包 → `stage_inputs.py` → 用 `uv` 建 Python 3.12.13 環境 → 兩支入口先跑嚴格模式、停在接縫就加 `--tolerant` 再跑 → 比 SHA-256。這份 notebook 在公開 repo 建立前寫成，還沒有在 Colab 上執行過。
+- Colab notebook：**`repro/colab_public.ipynb`**（CPU 執行階段）。第 0 格的參數：`REPO_URL`（本 repo）、`DRIVE_DIR`（你的 Google Drive 上放三個包的資料夾；也接受 `parts/` 的 7 MB 分塊＋`C10_public_parts_manifest.json`）、`OFFICIAL_DIR`（你放官方測試檔的資料夾）、`MOUNT_DRIVE`、`SAVE_TO_DRIVE` 等。它依序 clone 本 repo → 取三個包 → `stage_inputs.py` → 用 `uv` 建 Python 3.12.13 環境 → 兩支入口先跑嚴格模式、停在接縫就加 `--tolerant` 再跑 → 比 SHA-256。2026-11-26 Colab 實測（公開 notebook，clone 本 repo commit `7df09c0`；CPU 執行階段，Python 3.12.13、NumPy 2.5.3、SciPy 1.18.1；notebook 少了一個 `sha256` 小函式，執行中補上，已改進本 repo）：兩場的嚴格模式都在接縫停下、沒有最終 CSV；加 `--tolerant` 後**兩場的最終 CSV 都和上傳檔 SHA-256 相同（PASS）**。競賽二放寬 2 個數值接縫，最大絕對差 1.89e-15，規則 A／B 與交件列 0 列不同；競賽一放寬 2 個（兩池的 L-LDA 重擬合，和 `ref_lda_L.npz` 的最大絕對差 5.10e-12），top5 接縫 0 列不同。耗時：接回分塊 297 秒、stage_inputs 56 秒、建環境 12 秒、競賽二 21＋27 秒、競賽一 36＋84 秒，全程約 16.5 分鐘。
 - `repro/colab_layer1.ipynb`、`repro/wsl_drill.sh` 與 `repro/make_delivery.py` 的 `code`／`bundle`／`features`／`sums` 是開發時用私有 repo 的 git bundle 交付的版本，留作紀錄；公開 repo 不提供 bundle，請用上面的流程（`repro/README.md` 第 5.6 節）。
 - 競賽一原題的 800 列沿用 v1 測試日 06 路徑已產生的交件檔，第 1 層不重算（原因見 `repro/README.md` 第 2.2 節）。
 
@@ -316,6 +316,6 @@ Q64  = w_A·log_softmax(Q25) + w_O·OPP3          （w_A 0.7667、w_O 0.4941）
 
 ## 11. 授權
 
-`【授權待定】`
+未附開源授權（保留所有權利）。本 repo 公開是為了讓競賽審查者與第三方檢視、除錯與重現本隊的結果；其他用途請先聯絡作者。
 
 `third_party/` 內的檔案依各自的授權（見第 9 節），不在本 repo 的授權範圍內。

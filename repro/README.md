@@ -142,9 +142,9 @@ Linux／Colab 把 `.venv/Scripts/python.exe` 換成該環境的 `bin/python`，�
 | 兩支入口加 `--tolerant` | 都 **PASS**（18.5 秒、148.1 秒）。競賽二的報告：接縫 A `strict_equal` true、最大差 0、放寬 0 個（這次執行時接縫 T 相同的情形還不會記進報告，之後已改成也記）。競賽一的報告：記了 6 筆（每池的 LDA、v2-8 top5、v2-9 top5），全部 `strict_equal`、放寬 0 個、不同列 0 |
 | 模擬漂移（不在 repo 的測試腳本，在程序內擾動中間值）：競賽二把接縫 A 的紀錄改成 Colab 看到的 `byte_equal` false／7.77e-16，並把接縫 T 的機率乘 (1+1e-13) | 不加旗標：停在接縫 A（和 Colab 相同的訊息）。加 `--tolerant`：接縫 A、接縫 T 機率各放寬 1 個（最大絕對差 7.77e-16、9.99e-14），接縫 T 交件 0 列不同，最終 CSV **PASS** |
 | 同上但接縫 T 的機率乘 (1+1e-6) | 加 `--tolerant` 仍停在接縫 T（`BEYOND TOLERANCE`，最大絕對差 1e-6），沒有最終 CSV，報告有寫出 |
-| 模擬漂移：競賽一把 LDA 的 `W` 乘 (1+1e-13) | 不加旗標：以 `the L LDA refit differs from prereg43 tune.json` 停下（和 Colab 相同的訊息）。加 `--tolerant` 的那一次**沒跑完**（共用電腦夜間排程，程序在走到 LDA 之前被停掉）→ 競賽一「LDA 有差時改和 `ref_lda_L.npz` 比」這條路徑**還沒有被實際走過**【待測】 |
+| 模擬漂移：競賽一把 LDA 的 `W` 乘 (1+1e-13) | 不加旗標：以 `the L LDA refit differs from prereg43 tune.json` 停下（和 Colab 相同的訊息）。加 `--tolerant` 的那一次**沒跑完**（共用電腦夜間排程，程序在走到 LDA 之前被停掉）→ 這條路徑 11/26 在 Colab 實際走過（見第 5 節開頭），PASS |
 
-**Linux 上還沒有實測容許模式**：本機 WSL 模擬（`wsl_drill.sh`：clone bundle、解壓特徵 zip、uv 建 3.12.13，兩支入口各跑不加旗標與 `--tolerant`）排在 11/26 07:50 之後（共用電腦排程），Colab 也要重跑。所以「Linux 上各接縫實際差多少、容許模式下後面還有沒有別的檢查會擋、最終 CSV 是否相同」目前都不知道；已知的只有上面 Colab 那兩行。【待 WSL／Colab 實測】
+**Linux 上還沒有實測容許模式**：本機 WSL 模擬（`wsl_drill.sh`：clone bundle、解壓特徵 zip、uv 建 3.12.13，兩支入口各跑不加旗標與 `--tolerant`）排在 11/26 07:50 之後（共用電腦排程），Colab 也要重跑。所以「Linux 上各接縫實際差多少、容許模式下後面還有沒有別的檢查會擋、最終 CSV 是否相同」當時還不知道。**11/26 Colab 實測結果見第 5 節開頭**（WSL 模擬沒有跑）。
 
 ## 3. 第 2 層（GPU）：從官方測試 SGF 抽特徵
 
@@ -211,7 +211,11 @@ CNN（E0）逐盤輸出：`colab/test02_player.ipynb`（Colab G4；權重 `best_
 
 除 c49 那一行外，上表沒有逐條核對完整的命令列參數；交付前要從各登記的 PLAN／腳本補齊。
 
-## 5. Colab（第 1 層；交付包已做好，Colab 上【待 Colab 實測】）
+## 5. Colab（第 1 層）
+
+2026-11-26 Colab 實測（公開 notebook，clone 本 repo commit `7df09c0`；CPU 執行階段，Python 3.12.13、NumPy 2.5.3、SciPy 1.18.1；notebook 少了一個 `sha256` 小函式，執行中補上，已改進本 repo）：兩場的嚴格模式都在接縫停下、沒有最終 CSV；加 `--tolerant` 後**兩場的最終 CSV 都和上傳檔 SHA-256 相同（PASS）**。競賽二放寬 2 個數值接縫，最大絕對差 1.89e-15，規則 A／B 與交件列 0 列不同；競賽一放寬 2 個（兩池的 L-LDA 重擬合，和 `ref_lda_L.npz` 的最大絕對差 5.10e-12），top5 接縫 0 列不同。耗時：接回分塊 297 秒、stage_inputs 56 秒、建環境 12 秒、競賽二 21＋27 秒、競賽一 36＋84 秒，全程約 16.5 分鐘。
+
+以下 5.1–5.3 是 11/25 用私有 git bundle 交付的舊流程，留作紀錄；公開 repo 請用 `repro/colab_public.ipynb`（第 5.6 節）。
 
 第 2、3 層的盤點在 `colab_plan.md`。這一節只講第 1 層。
 
@@ -240,8 +244,8 @@ CNN（E0）逐盤輸出：`colab/test02_player.ipynb`（Colab G4；權重 `best_
 3. notebook 依序做：掛載 Drive → 複製到本機磁碟並核 SHA-256 → `git clone` bundle 到 `/content/c10`（`core.autocrlf=false`）→ 兩個特徵 zip 解壓進同一棵樹 → 照 manifest 核 1,089 個檔 → 用 `uv` 建 Python 3.12.13 環境（在樹外 `/content/venv312`）並裝 `requirements_cpu.txt`（排除 `colorama`：它只是 Windows 上 pytest 的相依；清單裡沒有其他 Windows 專用套件。整份裝不起來時退回只裝 numpy、scipy、psutil 並印出說明）→ 跑 `comp2_from_features.py`、`comp1_from_features.py`：每支**先不加旗標跑一次**（輸出 `/content/out/<comp>`，記錄是否逐位元組 PASS）；若在接縫停下、沒有產生最終 CSV，**再加 `--tolerant` 跑一次**（輸出 `/content/out/<comp>_tolerant`，印出每個接縫的實際差異）→ 兩次都印 PASS／FAIL、SHA-256、停在哪裡；有產生 CSV 但 SHA 不同時印出和已上傳檔不同的列數與前 10 列 → 最後印 python／numpy／scipy 版本、CPU、各段耗時，並把紀錄（summary 內含兩次的結果與 `tolerant_report.json` 的內容、兩種模式的 log）和產生的 CSV 存回 Drive 的 `colab_run_<時間>/`。
 4. 啟動入口時，子程序的環境拿掉 `OMP_NUM_THREADS`／`OPENBLAS_NUM_THREADS`／`MKL_NUM_THREADS`（入口的要求）和 `PYTHONPATH`／`PYTHONHOME`（不讓 Colab 內建 Python 的套件混進來），不另外設執行緒變數。
 
-預期耗時：【待 Colab 實測】（本機參考：競賽二約 25 秒、競賽一約 135 秒；Colab 另加 Drive 複製約 5.4 GB、核 SHA、建環境）。
-Colab 上的結果：11/25 第一次實跑（還沒有 `--tolerant`）兩支都停在接縫、沒有最終 CSV（第 2.4 節開頭）；加了 `--tolerant` 的 notebook【待 Colab 實測】（改過的 notebook 只做過語法檢查，沒有執行過）。
+預期耗時：見本節開頭的 11/26 實測（本機參考：競賽二約 25 秒、競賽一約 135 秒；Colab 另加 Drive 複製約 5.4 GB、核 SHA、建環境）。
+Colab 上的結果：11/25 第一次實跑（還沒有 `--tolerant`）兩支都停在接縫、沒有最終 CSV（第 2.4 節開頭）；加了 `--tolerant` 的公開 notebook 11/26 實測見本節開頭。
 
 ### 5.3 為了能在 Linux／乾淨機器上跑所做的事
 
