@@ -12,7 +12,7 @@ AI CUP 2026 圍棋，競賽一（辨識玩家，TEAM_11249）與競賽二（預�
 
 | 層 | 從哪裡到哪裡 | 硬體 | 本資料夾的狀態 |
 |---|---|---|---|
-| 第 1 層 | 已存的中間特徵（CNN 向量、KataGo P1 特徵、各模型輸出）＋官方測試 CSV → 最終 CSV | CPU | **已實作，兩條都逐位元組 PASS**（第 2 節） |
+| 第 1 層 | 已存的中間特徵（CNN 向量、KataGo P1 特徵、各模型輸出）＋官方測試 CSV → 最終 CSV | CPU | **已實作**：Windows 兩條都逐位元組 PASS（第 2 節）；Linux／Colab 加 `--tolerant` 兩條都 PASS（2026-11-26，第 5 節開頭） |
 | 第 2 層 | 官方測試 SGF → 中間特徵（CNN 向量、KataGo P1／HumanSL、官方 CNN 的逐盤輸出） | GPU | 指令與相依寫在第 3 節；抽樣比對做了 4 項（第 3.4 節）；沒有單一入口 |
 | 第 3 層 | 訓練（各模型的權重、LDA、融合參數） | GPU／CPU | 只列程式與指令（第 4 節），沒有重跑 |
 
@@ -144,7 +144,7 @@ Linux／Colab 把 `.venv/Scripts/python.exe` 換成該環境的 `bin/python`，�
 | 同上但接縫 T 的機率乘 (1+1e-6) | 加 `--tolerant` 仍停在接縫 T（`BEYOND TOLERANCE`，最大絕對差 1e-6），沒有最終 CSV，報告有寫出 |
 | 模擬漂移：競賽一把 LDA 的 `W` 乘 (1+1e-13) | 不加旗標：以 `the L LDA refit differs from prereg43 tune.json` 停下（和 Colab 相同的訊息）。加 `--tolerant` 的那一次**沒跑完**（共用電腦夜間排程，程序在走到 LDA 之前被停掉）→ 這條路徑 11/26 在 Colab 實際走過（見第 5 節開頭），PASS |
 
-**Linux 上還沒有實測容許模式**：本機 WSL 模擬（`wsl_drill.sh`：clone bundle、解壓特徵 zip、uv 建 3.12.13，兩支入口各跑不加旗標與 `--tolerant`）排在 11/26 07:50 之後（共用電腦排程），Colab 也要重跑。所以「Linux 上各接縫實際差多少、容許模式下後面還有沒有別的檢查會擋、最終 CSV 是否相同」當時還不知道。**11/26 Colab 實測結果見第 5 節開頭**（WSL 模擬沒有跑）。
+**（11/25 寫的，已過時：11/26 Colab 已實測容許模式，兩場 PASS，見第 5 節開頭。）** 當時：本機 WSL 模擬（`wsl_drill.sh`：clone bundle、解壓特徵 zip、uv 建 3.12.13，兩支入口各跑不加旗標與 `--tolerant`）排在 11/26 07:50 之後（共用電腦排程），Colab 也要重跑。所以「Linux 上各接縫實際差多少、容許模式下後面還有沒有別的檢查會擋、最終 CSV 是否相同」當時還不知道。**11/26 Colab 實測結果見第 5 節開頭**（WSL 模擬沒有跑）。
 
 ## 3. 第 2 層（GPU）：從官方測試 SGF 抽特徵
 
