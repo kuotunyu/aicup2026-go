@@ -1,0 +1,9 @@
+{
+ "rows": 720307,
+ "unique_games": 720307,
+ "dup_groups": 0,
+ "pairs_opposite_colour": 0,
+ "pairs_same_colour_diff_player": 0,
+ "pairs_same_player": 0,
+ "abs_level_diff_opposite": {}
+}

@@ -1,0 +1,353 @@
+{
+ "format": "c10-prereg09 rank train_report v1",
+ "what": "PREREG_09 1.3 ens3fam members on the probe the manifest rule chose (judged by tune)",
+ "created": "2026-10-09T09:16:22+00:00",
+ "seconds": 6923.2,
+ "preview": false,
+ "precommit": false,
+ "complete": true,
+ "probe_used": "P1+P2+P3",
+ "rows": 270000,
+ "players": 5767,
+ "sets_sha256": {
+  "p1": "f0c494962788615d76080b5481de5b762d71f3ad37f8add55a09efef82acb7c7",
+  "p2": "2b68f7ae27b2b6bbe00a3920065495d2a5d6b73fd7df33854f4bf99ae5390049",
+  "p3": "164d8bd7b0f212110e222f0a92aeb20079d91ae538c2f0414d563b8478d92eba"
+ },
+ "members": {
+  "mlpclm256": {
+   "cv": {
+    "logloss": 1.5436563562850938,
+    "top1": 0.36312222222222224,
+    "rule_b_score_per_game": 0.5156513733408321,
+    "games": 270000,
+    "logloss_by_epoch": [
+     1.6155027949348977,
+     1.5965711130893274,
+     1.585814784968266,
+     1.5695132056220313,
+     1.568837759781387,
+     1.562096216251216,
+     1.5621231110352307,
+     1.5602505168897036,
+     1.5576014026719904,
+     1.5560581631869543,
+     1.5543421071066983,
+     1.5526718064713525,
+     1.5543067967762274,
+     1.5514005222082172,
+     1.548835299480029,
+     1.547755440409744,
+     1.548628730562313,
+     1.5463644295980714,
+     1.546137699479129,
+     1.5449791680670426,
+     1.5438207946709324,
+     1.5440118392891424,
+     1.5436964521196468,
+     1.5436563562850938
+    ],
+    "epochs_chosen": 24,
+    "epochs_schedule": 24,
+    "seconds_cv": 825.4,
+    "seconds_refit": 180.7
+   },
+   "e_star": 24,
+   "seconds": 1006.2,
+   "reused": false
+  },
+  "mlpclm256_s1": {
+   "cv": {
+    "logloss": 1.5435011302566735,
+    "top1": 0.36307407407407405,
+    "rule_b_score_per_game": 0.5154447009346151,
+    "games": 270000,
+    "logloss_by_epoch": [
+     1.615651967634474,
+     1.5979952658822165,
+     1.5784160006574381,
+     1.5704191877608322,
+     1.5674845067749108,
+     1.5670559236743098,
+     1.5589001497432697,
+     1.55800071898709,
+     1.561184804668824,
+     1.556866100227794,
+     1.5564100574577069,
+     1.552972208406953,
+     1.5505628824875022,
+     1.5504990219924841,
+     1.548173559889958,
+     1.549204431793947,
+     1.547177234535688,
+     1.546870165508607,
+     1.5454362207421597,
+     1.5447754614008578,
+     1.5439057485966772,
+     1.543922001799869,
+     1.5435505780221872,
+     1.5435011302566735
+    ],
+    "epochs_chosen": 24,
+    "epochs_schedule": 24,
+    "seconds_cv": 806.6,
+    "seconds_refit": 177.9
+   },
+   "e_star": 24,
+   "seconds": 984.5,
+   "reused": false
+  },
+  "mlpclm256_s2": {
+   "cv": {
+    "logloss": 1.5438858143101615,
+    "top1": 0.3627185185185185,
+    "rule_b_score_per_game": 0.5152381932595637,
+    "games": 270000,
+    "logloss_by_epoch": [
+     1.6184134874303304,
+     1.596122930614757,
+     1.583382412524936,
+     1.5712542481160612,
+     1.567044351919859,
+     1.564601398093404,
+     1.564370286244543,
+     1.5587934954438392,
+     1.5576946328005845,
+     1.5568052436431006,
+     1.5559054817782887,
+     1.5537422371149974,
+     1.5546548253079573,
+     1.5501017516552742,
+     1.5503179913555547,
+     1.5486658252850818,
+     1.5495897356550936,
+     1.546403293475432,
+     1.5455432644492033,
+     1.5452407323466355,
+     1.544891675337411,
+     1.544397586945311,
+     1.5439251598497412,
+     1.5438858143101615
+    ],
+    "epochs_chosen": 24,
+    "epochs_schedule": 24,
+    "seconds_cv": 805.9,
+    "seconds_refit": 177.2
+   },
+   "e_star": 24,
+   "seconds": 983.1,
+   "reused": false
+  },
+  "mlp512": {
+   "cv": {
+    "logloss": 1.5565195211010845,
+    "top1": 0.35127037037037034,
+    "rule_b_score_per_game": 0.5063161373497356,
+    "games": 270000,
+    "logloss_by_epoch": [
+     1.617521213515987,
+     1.5965995568148743,
+     1.5887486600594725,
+     1.5783443930361878,
+     1.5815133404903903,
+     1.576746008031623,
+     1.5731186680313467,
+     1.570879110265537,
+     1.570618504775584,
+     1.5702215214278106,
+     1.5679145491613224,
+     1.563210017665946,
+     1.5608905470014804,
+     1.5624171444578894,
+     1.562515711506027,
+     1.5598845627576359,
+     1.5586280189886559,
+     1.5586260364710047,
+     1.5580541698051478,
+     1.557605325293746,
+     1.5565261546794984,
+     1.5567585129802333,
+     1.5565995781245978,
+     1.5565195211010845
+    ],
+    "epochs_chosen": 24,
+    "epochs_schedule": 24,
+    "seconds_cv": 1122.5,
+    "seconds_refit": 237.7
+   },
+   "e_star": 24,
+   "seconds": 1360.2,
+   "reused": false
+  },
+  "mlp512_s1": {
+   "cv": {
+    "logloss": 1.5561492528441545,
+    "top1": 0.3521148148148148,
+    "rule_b_score_per_game": 0.5062385351497318,
+    "games": 270000,
+    "logloss_by_epoch": [
+     1.6166847447590524,
+     1.5887853913371808,
+     1.586063222062756,
+     1.5792254709039384,
+     1.5758798750721081,
+     1.5798324805037578,
+     1.5794175273587412,
+     1.5735333665179196,
+     1.5702426872620303,
+     1.5679809043590769,
+     1.5667568194776043,
+     1.566961491328294,
+     1.5606455562777029,
+     1.558823047444577,
+     1.560327290711385,
+     1.5572703504944074,
+     1.558511238089415,
+     1.5567691590088544,
+     1.5567393283005253,
+     1.5562836340677362,
+     1.5567862358586109,
+     1.5567545662270583,
+     1.55618749886518,
+     1.5561492528441545
+    ],
+    "epochs_chosen": 24,
+    "epochs_schedule": 24,
+    "seconds_cv": 1406.6,
+    "seconds_refit": 301.3
+   },
+   "e_star": 24,
+   "seconds": 1708.0,
+   "reused": false
+  },
+  "lowrank3_ex": {
+   "cv": {
+    "logloss": 1.5669616358706597,
+    "top1": 0.35734814814814814,
+    "rule_b_score_per_game": 0.5085579832287801,
+    "games": 270000,
+    "logloss_by_epoch": null,
+    "epochs_chosen": 30,
+    "epochs_schedule": 30,
+    "seconds_cv": 698.7,
+    "seconds_refit": 142.1
+   },
+   "e_star": 30,
+   "seconds": 840.7,
+   "reused": false
+  }
+ },
+ "training": {
+  "probe_used": "P1+P2+P3",
+  "rows": 270000,
+  "players": 5767,
+  "folds": {
+   "0": 53295,
+   "1": 54353,
+   "2": 54409,
+   "3": 53073,
+   "4": 54870
+  },
+  "threads": 8
+ },
+ "folder": "data/prereg09/map/train",
+ "files_sha256": {
+  "member_lowrank3_ex.npz": "eca3ac3b78e6a6514ee6ff29fc76430b25c8c2c4a6b0ed515e1164eae8d97436",
+  "member_mlp512.npz": "3f01844d867b678fee1524a82af26f8ebbab3ea81c26ccbe8fdd644f975901b1",
+  "member_mlp512_s1.npz": "bfb8e8727ba9050ede48d064f0c405b8d983dcc36b02466dab27537cf97a0228",
+  "member_mlpclm256.npz": "44f2abefc04b44f7f80312669b06d59fbc057fbad7ab3000e32c861b9e5dd814",
+  "member_mlpclm256_s1.npz": "302a723af11134708c16a0d6fa7b2ed0ea08e457f5122d4b062c990b32c6258c",
+  "member_mlpclm256_s2.npz": "889cb2cad9309e6652fc2053ee9b63065d0e8951373c3e6ddc30442b267097cc",
+  "moments.npz": "888d515d671d5ffc528e858120e172b4fe5aaa2b2d2c8cdb2d98c8b8ae6192d2"
+ },
+ "prep_record_sha256": "886a549f1995b6a78d2c3f56c1030c14bac5fbdb3f1611190a663bed66e18ae8",
+ "prep": {
+  "files_sha256": {
+   "probe_X.npy": "ee8ce70ec56b8ffb92952ca44ad271a420f1d145b8277f09ea6a611fb05701dc",
+   "probe_ex.npy": "13d7e3a0a501d22599ecae69ed622f5089cf3850da430e3acac6c18f76c0c0dd",
+   "probe_meta.npz": "28286a663dacc0dd545819b52ee7c2b9c73caa7f280b4aeccb1760122c0929ac",
+   "inner_X.npy": "333186ad6a56b1c432965672193d80b3983d98260bc6b54dd95c36df385c4460",
+   "inner_ex.npy": "a46b3fde784a8c2ceecc9d6c9a33001fe031509acb820bd037e90bfe45baa37c",
+   "inner_meta.npz": "6410e7ecb1b061d0e8c18d0b314fcce91fbced4f0c967ec7c2322f7b9b0ed381"
+  },
+  "record_sha256": "886a549f1995b6a78d2c3f56c1030c14bac5fbdb3f1611190a663bed66e18ae8"
+ },
+ "check_report_sha256": "3dfe765d1b7aa1c7c9f33ac8c0d6f89e44a5abf0141ca1195fdaa0fc71fe00a0",
+ "selfcheck": {
+  "sha256": "1a83ea60ad98f53c815d9d93a8ab854a30cf6ada9878cb227f1d755529eea808",
+  "commit": {
+   "files": {
+    "results/prereg09/rank/selfcheck.json": "1a83ea60ad98f53c815d9d93a8ab854a30cf6ada9878cb227f1d755529eea808"
+   },
+   "commit_problems": [],
+   "precommit_skipped": false
+  }
+ },
+ "selfcheck_override": null,
+ "explore_e_star_record_only": {
+  "mlpclm256": 24,
+  "mlpclm256_s1": 24,
+  "mlpclm256_s2": 24,
+  "mlp512": 24,
+  "mlp512_s1": 15,
+  "lowrank3_ex": 30
+ },
+ "note": "CPU torch training is not guaranteed bit-reproducible; the weights are what is frozen (PREREG_09 1.3 item 7)",
+ "tool": {
+  "git_head": "e612e7ffc0925479cdc631b3496eed8adf7b7f6a",
+  "dirty_or_untracked": [],
+  "files_sha256_rule": "sha256, CRLF folded to LF",
+  "files_sha256": {
+   "tools/p09_map.py": "fff3ffe6ae6b8c32163803a6d307fa184c2857af5d6e1505e3c931a4e8831566",
+   "tools/p09_rank_fuse.py": "1486f7ce102450c1ed0b051234537286f6f9a0b38f7aaaf182a38458e4ddfb8b",
+   "tools/p09_forward.py": "67124e0e534f575493aa8d72dbd2582335e4166718448e36bb5e105c61cb185d",
+   "tools/p08_rank_fuse.py": "64f42bd956f7808947e0c85abe1f9fa60d9958cb8e769fc889c6283c188d481e",
+   "tools/p08_p1.py": "a10c77c4bd97472b464f39080816090f0f64986195384b28e1d95dfc76e6677f",
+   "results/prereg07/explore/pilot_humansl/hs_lib.py": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+   "results/prereg07/explore/pilot_humansl/pilot_run.py": "b0d127fd1d5a83af5b17ec3df1dccc85d94b11c3479d33cac07448a3796a3936",
+   "results/prereg07/explore/pilot_humansl/pilot_fuse.py": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+   "results/prereg05/explore/u1/u1_lib.py": "225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7",
+   "results/prereg08/p1/p1_lib.py": "062600168326f9eecd4ec1073e54881c475f8f276e376164eab20d373bbff511",
+   "results/prereg08/p1/p1_extract.py": "2ee8eb127150e672b62bcb30b70c4fac46b8cd6e32c7e4eb19d54f746a6e3f9c",
+   "results/prereg08/p1/p1_fuse.py": "ad356c8ca9f26e1e761677afa07b5aa369ca31e5318f61eb6a6cbda33b970953",
+   "results/prereg08/p1/p1_plan.json": "0cd46bf90c764cae3824f5906e72e13336ab7276ef5fa7edb2ec6831911b228d",
+   "results/prereg08/p2/p2_sets.py": "98bad3d85a32e80c065226b0cc8cd1065b423cdb39dce89829a54b0cbf381c8f",
+   "tools/p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142",
+   "tools/p07_hs.py": "b27ea371bdc1477558effb9ca86c540805dcced971d983226e15fb5e19b7b8dc",
+   "results/prereg09/explore/mapping/prep.py": "48fec73cb10014a4e775b6d425486d449fdd89dbfd4a4143c7f1e2a5827aa219",
+   "results/prereg09/explore/mapping/train.py": "5f53180992ada3a4f1fef433a0024ce4d2aa2c10613729cbca1484311e80a67b",
+   "results/prereg09/explore/mapping/combos.py": "de7690186b647f18f1be82db167a71080be8b0e0c3f936aa636acb2d3c608073",
+   "results/prereg09/explore/mapping/ev_lib.py": "0f2ccb9c2690f1256b53df370200bf0a32de3068c8d378934e1a7d3096c0bf1b",
+   "results/prereg09/explore/mapping/run_eval.py": "aff31dbf4e13b3bd7ca64e791fc68dccb579e92b4a4a9ed78e0ed401b37bbb10",
+   "results/prereg09/explore/p3/p3_sets.py": "7f77071747d5a3b2d85e4814cbc4834c7aee8f6b95a866da3f2d69e320dd5d6d"
+  }
+ },
+ "venv": {
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "torch": "2.14.0+cpu",
+  "differences": {}
+ },
+ "environment": {
+  "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "blas_env": {
+   "OMP_NUM_THREADS": null,
+   "OPENBLAS_NUM_THREADS": null,
+   "MKL_NUM_THREADS": null
+  },
+  "cpu_count": 24,
+  "registered_venv": {
+   "python": "3.12.13",
+   "torch": "2.14.0+cpu",
+   "numpy": "2.5.3",
+   "scipy": "1.18.1",
+   "threads": 8
+  },
+  "torch_threads": 8
+ }
+}

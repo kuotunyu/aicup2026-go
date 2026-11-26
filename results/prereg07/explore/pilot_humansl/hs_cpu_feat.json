@@ -1,0 +1,64 @@
+{
+ "what": "featurize_game throughput with N spawn worker processes (fit fixture games, target side)",
+ "created_utc": "2026-10-02T13:39:53+00:00",
+ "logical_cpus": 24,
+ "games": 120,
+ "rows": [
+  {
+   "workers": 1,
+   "games": 24,
+   "positions": 2788,
+   "seconds": 18.02413845062256,
+   "positions_per_s": 154.68145718242093
+  },
+  {
+   "workers": 2,
+   "games": 120,
+   "positions": 13446,
+   "seconds": 51.33187913894653,
+   "positions_per_s": 261.9424853628288
+  },
+  {
+   "workers": 4,
+   "games": 120,
+   "positions": 13446,
+   "seconds": 32.16014218330383,
+   "positions_per_s": 418.09516647537043
+  },
+  {
+   "workers": 8,
+   "games": 120,
+   "positions": 13446,
+   "seconds": 20.01136803627014,
+   "positions_per_s": 671.9180805444903
+  },
+  {
+   "workers": 12,
+   "games": 120,
+   "positions": 13446,
+   "seconds": 16.924500226974487,
+   "positions_per_s": 794.4695453145252
+  },
+  {
+   "workers": 16,
+   "games": 120,
+   "positions": 13446,
+   "seconds": 13.689157485961914,
+   "positions_per_s": 982.2372205001462
+  },
+  {
+   "workers": 20,
+   "games": 120,
+   "positions": 13446,
+   "seconds": 12.62997841835022,
+   "positions_per_s": 1064.6098951732313
+  },
+  {
+   "workers": 23,
+   "games": 120,
+   "positions": 13446,
+   "seconds": 12.290264368057251,
+   "positions_per_s": 1094.0366779209842
+  }
+ ]
+}

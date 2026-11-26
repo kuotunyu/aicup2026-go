@@ -1,0 +1,14 @@
+{
+ "format": "c10-test02 checks summary v1",
+ "comp": "player",
+ "checks": {
+  "T1": {
+   "verdict": "PASS",
+   "consequence": "none; the raw files are used as they are",
+   "details_file": "t1.json",
+   "sha256": "a80595b7afa827bc72f1072720f6166a095f00b9cb51c1ab13448f7b89638e30"
+  }
+ },
+ "updated": "2026-11-04T14:26:52+0800",
+ "git_head": "3d004d310156e0c3a99ac54efa814a6e8d2af37e"
+}

@@ -1,0 +1,67 @@
+{
+ "format": "c10-prereg43 apply v1",
+ "pool": "private",
+ "c_star": "S0",
+ "members": [
+  [
+   "S0",
+   "raw"
+  ]
+ ],
+ "vectors": "data/prereg43/emb_S0/V2_step_320000_raw_tta1/pool_private.npz",
+ "vectors_sha256": "4550b32f54655baa9d94ad161e7694492b2e7c1995355f99be1d70936aa68665",
+ "cfg": {
+  "gnorm": true,
+  "pool_w": "mean",
+  "centre_colour": false,
+  "whiten": {
+   "lam": 0.7,
+   "lda": null
+  },
+  "sim": "proto",
+  "alpha": null,
+  "pair": null,
+  "krecip": null,
+  "aqe": null,
+  "qsmooth": null,
+  "wE": 8,
+  "gmul": null,
+  "rowz": false,
+  "norm": [
+   "csls",
+   10
+  ]
+ },
+ "p1": {
+  "variant": "joint",
+  "pw": "b4",
+  "wP": 8,
+  "csls_k": 20,
+  "mean": 0.7467766213119217,
+  "per_pool": [
+   0.7823105950724139,
+   0.7252220037188875,
+   0.7260344906896121,
+   0.7520077070878101,
+   0.7445478414109656,
+   0.7618750215306903,
+   0.7413968096245789,
+   0.7582706093769482,
+   0.7529125324170494,
+   0.7231886021902605
+  ]
+ },
+ "v25_top5_equals_prereg39_apply": true,
+ "questions": 400,
+ "candidates": 600,
+ "games": 7100,
+ "games_without_vector": 0,
+ "candidates_without_vector": 0,
+ "questions_without_vector": 0,
+ "games_without_P1": 0,
+ "questions_without_P1": 0,
+ "tune_sha256": "217d50ce637c76022a127881ef9620090c0fcde33998b7a1220fb0e9b655e112",
+ "eval_sha256": "726670f9034de9129d7dcdb7497fe9d76fd1efc68734d6dffb31f1b13d7cabe7",
+ "top5_sha256": "005f6ec763066228bef84941661487d75f68985272082cf2572c5ec3255adb11",
+ "seconds": 314.5
+}

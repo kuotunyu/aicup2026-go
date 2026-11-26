@@ -1,0 +1,7 @@
+{
+ "set": "public",
+ "question_file": "player_identification_test_public.csv",
+ "sha256": "0e59f7f72376cfa2e81ae913d61092caeb1240d95abb43a581207ed29f1647a8",
+ "candidates_file": "player_identification_candidates_public.csv",
+ "candidates_sha256": "8175aeb08235536a1435bb6ba4c55088f906096cc14e7048e8898e3d7a3597a6"
+}

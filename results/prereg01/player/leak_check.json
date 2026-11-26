@@ -1,0 +1,30 @@
+{
+ "checked_utc": "2026-09-25T18:43:26+00:00",
+ "smoke": false,
+ "load_rows": {
+  "call": "load_rows(TRAIN_DIR, SPLIT_CSV, part=\"train\", local_dir=LOCAL_DIR)",
+  "expected": {
+   "players": 6407,
+   "games": 793863
+  },
+  "got": {
+   "players": 6407,
+   "games": 793863
+  },
+  "count_assert": "passed",
+  "local_leak_check": "passed: 回傳的訓練棋沒有任何一盤出現在 local/ 的題目檔與候選庫",
+  "c10data_sha256": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+  "players_split_sha256": "69554875064ecbd83d790b3215c8ba8f9540f217ec4af3e4a8c43228ac2a3dfc"
+ },
+ "split_players": {
+  "train": 6407,
+  "val": 1600
+ },
+ "index_players": 6404,
+ "index_games": 793860,
+ "index_sha256": "d1cda8ccf4a35ef0c8e320cad53f3ec7f4241864f5bcd955dafa9219aded279e",
+ "index_content_sha256": "2f39534641e751b441cc7c67389ac855b3a80340d10e7e9a80d97c077299ac89",
+ "val_players_in_index": 0,
+ "unknown_players_in_index": 0,
+ "passed": true
+}

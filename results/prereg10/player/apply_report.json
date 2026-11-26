@@ -1,0 +1,108 @@
+{
+ "format": "c10-prereg10 player apply_report v1",
+ "what": "PREREG_10 2.5 apply of 10B on the local validation pool",
+ "p06_reproduction": {
+  "identical": true,
+  "sha256": "094223f69bf445a4c450212cc9b4a3eceda9c69e992d1ed7f7c6e02105b818be",
+  "reference": "results/prereg06/player/player_val_top5.csv",
+  "reference_sha256": "094223f69bf445a4c450212cc9b4a3eceda9c69e992d1ed7f7c6e02105b818be"
+ },
+ "sr06": {
+  "V2": 0.975888,
+  "V3": 0.969734,
+  "V0": 0.922136,
+  "R02": 0.899872
+ },
+ "sr06_equals_06_report": true,
+ "sr06_10B": {
+  "V2": 0.955996,
+  "V3": 0.946718,
+  "V0": 0.931824
+ },
+ "selected": "V2",
+ "pool_gate": {
+  "sr_10B_minus_selected": -0.019891447034757093,
+  "passed": false
+ },
+ "w_star": 16.0,
+ "k_star": 10,
+ "p1": {
+  "games": 44935,
+  "failed": 0,
+  "failed_fraction": 0.0,
+  "no_target_moves": 0,
+  "usable": 44935,
+  "questions_without_usable_p1": 0
+ },
+ "changed_top1_vs_06": 30,
+ "format_check": {
+  "returncode": 0,
+  "stdout": "OK: player submission covers all 400 questions and passes every strict check\n",
+  "stderr": ""
+ },
+ "outputs_sha256": {
+  "player_val_top5.csv": "0efd160d59c4649a3ae94e84b385475149db943bff19c97b6edaf497beec55cb"
+ },
+ "inputs_sha256": {
+  "candidates_csv": "7cd2897593ee9add20dce4ff5d4b0dcf8699b6d51a3f10950dc399a757dd3ad5",
+  "cand_games_npz": "56ed03d12e9a79871a21b5f69dc4bd4bb8c8aa69b1544cb8ec799e80227cfdea",
+  "questions_csv": "d893a559f175b6535dc0d5f749314408b110149462f6a78a1b8cf7e9332cd676",
+  "query_games_npz": "665d0888a93f6632eb19edac76abf996d5499cd27c683d9844b97cb274b6f689",
+  "p1_lda.npz": "924357870cd55ebfb8cc6856d3ec5d9d00542882a3c7a07176f1ab552337a40a",
+  "frozen_config.json": "8e2bd5a312c5174a731e783671b7dccc37449d5f0274511434ee9523bd93c88b",
+  "val_report.json": "76ed0b83d529d70977679be2de66d8f5081800c4b30c67c442b5ddcc558c70f4"
+ },
+ "score_allowed": false,
+ "score_blocked_reasons": [
+  "pool gate sr(10B) - sr(06 selected) < 0: B not used this season (not submitted)"
+ ],
+ "commits": {
+  "frozen": {
+   "files": {
+    "results/prereg10/player/frozen_config.json": "8e2bd5a312c5174a731e783671b7dccc37449d5f0274511434ee9523bd93c88b",
+    "results/prereg10/player/p1_lda.npz": "924357870cd55ebfb8cc6856d3ec5d9d00542882a3c7a07176f1ab552337a40a"
+   },
+   "commit": "2026-10-11T19:18:12+08:00"
+  },
+  "val_report": {
+   "files": {
+    "results/prereg10/feat/val_report.json": "76ed0b83d529d70977679be2de66d8f5081800c4b30c67c442b5ddcc558c70f4"
+   },
+   "commit": "2026-10-12T03:46:06+08:00"
+  }
+ },
+ "rerun": null,
+ "preview": false,
+ "created": "2026-10-11T19:46:49+00:00",
+ "tools": {
+  "git_head": "bb007d7e2939a37d00d6eae2ec270dec6dd75c47",
+  "dirty_or_untracked": [],
+  "files_sha256_rule": "sha256, CRLF folded to LF",
+  "files_sha256": {
+   "tools/p10_fuse.py": "63878050e5c59c79778db613af41773a460834cd122b1e5ef384a31acfb72e9a",
+   "tools/p06_style.py": "78beb8138c27853da70081e469e534508174265852a64ebada21e354ae72058a",
+   "tools/p06_sim.py": "21deeea1eb08b1d6580ba78c47505789f66dbdd10c8891973e14f523ef443eeb",
+   "tools/p02_player_fuse.py": "cb1cc1a2ba626a80ed49e7ae8269715f1e123f33777b6ed135380dbd07b35d5b",
+   "tools/p02_player_open.py": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+   "tools/p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "tools/c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "tools/p10_apply.py": "b5056e1da7cae969b92a68243669c9131d92adc79e24b26a258692e6bbbf63e3",
+   "tools/p10_p1.py": "6512dd3c914a8e846d9b3baed38516fc55b65126453430cf545aa1edeb830f41",
+   "tools/p06_player.py": "b25636878ee87ca828a9c65177965dc60466ac4e9aa348acd88785ca11075590",
+   "tools/check_submission.py": "b5c7c300cca4fcd5b243e4579417453699777e99bd4aff88dcbf6805e9346144"
+  }
+ },
+ "env": {
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "executable": ".venv/Scripts/python.exe"
+ },
+ "blas_env": {
+  "OMP_NUM_THREADS": null,
+  "OPENBLAS_NUM_THREADS": null,
+  "MKL_NUM_THREADS": null
+ },
+ "inputs": {},
+ "seconds": 34.0
+}

@@ -1,0 +1,189 @@
+{
+ "format": "c10-prereg34 ogs sample v1",
+ "parse_record_lines": 56412992,
+ "parse_rows_sha256": "fbe7cbd361a7df0c22323fc8495b72b9d3e85f5be79805b922640d7fe10f5c67",
+ "rows_in": 10487440,
+ "duplicate_rows_dropped": 0,
+ "players_in": 222637,
+ "players_with_ge_20_rows": 38602,
+ "players_accepted_window": 26939,
+ "players_below_15k_clipped": 781,
+ "players_above_7d_clipped": 10,
+ "players_nominal_12k_6d": 24707,
+ "kept_rows_per_accepted_player": {
+  "n": 26939,
+  "p10": 23.0,
+  "p25": 30.0,
+  "median": 40.0,
+  "p75": 40.0,
+  "p90": 40.0
+ },
+ "per_bin": {
+  "15k": {
+   "bin": 15,
+   "players_available": 1129,
+   "players_sampled": 150,
+   "rows_sampled": 3575
+  },
+  "14k": {
+   "bin": 16,
+   "players_available": 476,
+   "players_sampled": 150,
+   "rows_sampled": 3630
+  },
+  "13k": {
+   "bin": 17,
+   "players_available": 594,
+   "players_sampled": 150,
+   "rows_sampled": 3677
+  },
+  "12k": {
+   "bin": 18,
+   "players_available": 750,
+   "players_sampled": 150,
+   "rows_sampled": 3678
+  },
+  "11k": {
+   "bin": 19,
+   "players_available": 1022,
+   "players_sampled": 150,
+   "rows_sampled": 3636
+  },
+  "10k": {
+   "bin": 20,
+   "players_available": 1385,
+   "players_sampled": 150,
+   "rows_sampled": 3675
+  },
+  "9k": {
+   "bin": 21,
+   "players_available": 1488,
+   "players_sampled": 150,
+   "rows_sampled": 3682
+  },
+  "8k": {
+   "bin": 22,
+   "players_available": 1704,
+   "players_sampled": 150,
+   "rows_sampled": 3698
+  },
+  "7k": {
+   "bin": 23,
+   "players_available": 2019,
+   "players_sampled": 150,
+   "rows_sampled": 3679
+  },
+  "6k": {
+   "bin": 24,
+   "players_available": 2304,
+   "players_sampled": 150,
+   "rows_sampled": 3694
+  },
+  "5k": {
+   "bin": 25,
+   "players_available": 2409,
+   "players_sampled": 150,
+   "rows_sampled": 3682
+  },
+  "4k": {
+   "bin": 26,
+   "players_available": 2306,
+   "players_sampled": 150,
+   "rows_sampled": 3716
+  },
+  "3k": {
+   "bin": 27,
+   "players_available": 2172,
+   "players_sampled": 150,
+   "rows_sampled": 3684
+  },
+  "2k": {
+   "bin": 28,
+   "players_available": 2013,
+   "players_sampled": 150,
+   "rows_sampled": 3699
+  },
+  "1k": {
+   "bin": 29,
+   "players_available": 1761,
+   "players_sampled": 150,
+   "rows_sampled": 3718
+  },
+  "1d": {
+   "bin": 30,
+   "players_available": 1333,
+   "players_sampled": 150,
+   "rows_sampled": 3691
+  },
+  "2d": {
+   "bin": 31,
+   "players_available": 931,
+   "players_sampled": 150,
+   "rows_sampled": 3703
+  },
+  "3d": {
+   "bin": 32,
+   "players_available": 589,
+   "players_sampled": 150,
+   "rows_sampled": 3677
+  },
+  "4d": {
+   "bin": 33,
+   "players_available": 326,
+   "players_sampled": 150,
+   "rows_sampled": 3692
+  },
+  "5d": {
+   "bin": 34,
+   "players_available": 129,
+   "players_sampled": 129,
+   "rows_sampled": 3176
+  },
+  "6d": {
+   "bin": 35,
+   "players_available": 66,
+   "players_sampled": 66,
+   "rows_sampled": 1616
+  },
+  "7d": {
+   "bin": 36,
+   "players_available": 33,
+   "players_sampled": 33,
+   "rows_sampled": 807
+  }
+ },
+ "players_sampled": 3078,
+ "rows_sampled": 75485,
+ "black_share": 0.45554745976021727,
+ "moves_sampled": {
+  "n": 75485,
+  "p10": 122.0,
+  "p25": 151.0,
+  "median": 198.0,
+  "p75": 245.0,
+  "p90": 276.0
+ },
+ "moves_official": null,
+ "official_csv": null,
+ "year": {
+  "2019": 2966,
+  "2020": 4242,
+  "2021": 9111,
+  "2022": 12601,
+  "2023": 11972,
+  "2024": 17250,
+  "2025": 17343
+ },
+ "speed": {
+  "blitz": 4934,
+  "live": 64533,
+  "rapid": 6018
+ },
+ "stop": false,
+ "stop_reasons": [],
+ "elapsed_s": 175.7,
+ "outputs": {
+  "sample_games": "sample_games.csv.gz",
+  "sha256": "bc5515862d78ad7424b38a5894c8619a6df23ebb808a274c4bb60e7e94b72e59"
+ }
+}

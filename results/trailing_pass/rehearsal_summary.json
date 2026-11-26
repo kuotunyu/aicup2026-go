@@ -1,0 +1,360 @@
+{
+ "inputs": {
+  "fake_tree": "W:/reh/F",
+  "fake_tree_FAKE_TREE_sha256": "9f4aecb7b0d41bacfbf087854807294145d008c9b4d492b133bdd751af72dd66",
+  "clean_sha256": {
+   "rank_prediction_test_public.csv": "7184828eb33e0e0eafbdcaa70eae3172133d28fd86ba68ad39402582146b58ec",
+   "rank_prediction_test_private.csv": "3af4134630db31d1c737dd1979c1a71be6fefca0e0993382bbb2b618ec4934da",
+   "player_identification_test_public.csv": "85e792275231219c1f1c5366355dae51a89ef961ba541610b2836269ff060e0c",
+   "player_identification_candidates_public.csv": "8ff3a1ee9e50a720cec87896e0a6d683251bf45a1bf4559a5ff65c0e7b53a99d",
+   "player_identification_test_private.csv": "2e1edd26bb54e85726991566171da01ed40cf5501512047f71642847d7302869",
+   "player_identification_candidates_private.csv": "14f4db30a881789e145abbfa37f23097700e99474fea10835ec2a8db4edb575e"
+  }
+ },
+ "injected": {
+  "pass": {
+   "rank_prediction_test_public.csv": {
+    "trailing": 1540,
+    "mid": 0
+   },
+   "rank_prediction_test_private.csv": {
+    "trailing": 1510,
+    "mid": 0
+   },
+   "player_identification_test_public.csv": {
+    "trailing": 1531,
+    "mid": 0
+   },
+   "player_identification_candidates_public.csv": {
+    "trailing": 12017,
+    "mid": 0
+   },
+   "player_identification_test_private.csv": {
+    "trailing": 1535,
+    "mid": 0
+   },
+   "player_identification_candidates_private.csv": {
+    "trailing": 12168,
+    "mid": 0
+   }
+  },
+  "control": {
+   "rank_prediction_test_public.csv": {
+    "trailing": 1540,
+    "mid": 156
+   },
+   "rank_prediction_test_private.csv": {
+    "trailing": 1508,
+    "mid": 163
+   },
+   "player_identification_test_public.csv": {
+    "trailing": 1666,
+    "mid": 0
+   },
+   "player_identification_candidates_public.csv": {
+    "trailing": 13173,
+    "mid": 0
+   },
+   "player_identification_test_private.csv": {
+    "trailing": 1648,
+    "mid": 0
+   },
+   "player_identification_candidates_private.csv": {
+    "trailing": 13262,
+    "mid": 0
+   }
+  },
+  "midonly": {
+   "rank_prediction_test_public.csv": {
+    "trailing": 0,
+    "mid": 133
+   },
+   "rank_prediction_test_private.csv": {
+    "trailing": 0,
+    "mid": 148
+   }
+  }
+ },
+ "A_clean": {
+  "t1": {
+   "rank": "PASS",
+   "player": "PASS"
+  },
+  "prepare_exit": 2,
+  "built_sha256": {
+   "rank_prediction_test_public.csv": "7184828eb33e0e0eafbdcaa70eae3172133d28fd86ba68ad39402582146b58ec",
+   "rank_prediction_test_private.csv": "3af4134630db31d1c737dd1979c1a71be6fefca0e0993382bbb2b618ec4934da",
+   "player_identification_test_public.csv": "85e792275231219c1f1c5366355dae51a89ef961ba541610b2836269ff060e0c",
+   "player_identification_candidates_public.csv": "8ff3a1ee9e50a720cec87896e0a6d683251bf45a1bf4559a5ff65c0e7b53a99d",
+   "player_identification_test_private.csv": "2e1edd26bb54e85726991566171da01ed40cf5501512047f71642847d7302869",
+   "player_identification_candidates_private.csv": "14f4db30a881789e145abbfa37f23097700e99474fea10835ec2a8db4edb575e"
+  },
+  "t4_t5": {
+   "rank/t4": "1e954f1ffccd31385d3fd83605af4e8fcc429898113173abd45942c2fc3f50c4",
+   "rank/t5": "9debd4c6f27a04edbff3f482819f600f9501e1ad32fdc703a7e515775402ec78",
+   "player/t4": "8364186a65c5e8e7ad0f6f60927f2b2077e97e3500ba3aeea904597a27ddba29",
+   "player/t5": "2f732472d414a895c34564be531af3cbbdf703c1051ad60b95aafd1812691d21"
+  }
+ },
+ "B_pass": {
+  "t1_raw": {
+   "rank": [
+    2,
+    "FAIL_OPENING"
+   ],
+   "player": [
+    2,
+    "FAIL_OPENING"
+   ]
+  },
+  "t1_raw_T14": {
+   "rank": {
+    "rank_prediction_test_public.csv": {
+     "games": 5000,
+     "violating_games": 1540,
+     "share": 0.308
+    },
+    "rank_prediction_test_private.csv": {
+     "games": 5000,
+     "violating_games": 1510,
+     "share": 0.302
+    }
+   },
+   "player": {
+    "player_identification_test_public.csv": {
+     "games": 5000,
+     "violating_games": 1531,
+     "share": 0.3062
+    },
+    "player_identification_candidates_public.csv": {
+     "games": 40000,
+     "violating_games": 12017,
+     "share": 0.300425
+    },
+    "player_identification_test_private.csv": {
+     "games": 5000,
+     "violating_games": 1535,
+     "share": 0.307
+    },
+    "player_identification_candidates_private.csv": {
+     "games": 40000,
+     "violating_games": 12168,
+     "share": 0.3042
+    }
+   }
+  },
+  "prepare_exit": 0,
+  "decisions": {
+   "rank": [
+    "apply",
+    "PASS"
+   ],
+   "player": [
+    "apply",
+    "PASS"
+   ]
+  },
+  "files": {
+   "rank_prediction_test_public.csv": {
+    "games": 5000,
+    "games_stripped": 1540,
+    "pass_nodes_removed": 2313,
+    "sha256_before": "5131bf05949ef61eb45d67a732fc57c1d9c1833c6fb8e08924c43c5610665294",
+    "sha256_after": "7184828eb33e0e0eafbdcaa70eae3172133d28fd86ba68ad39402582146b58ec",
+    "bytes_before": 6746974,
+    "bytes_after": 6735418
+   },
+   "rank_prediction_test_private.csv": {
+    "games": 5000,
+    "games_stripped": 1510,
+    "pass_nodes_removed": 2248,
+    "sha256_before": "237c39a834d74c9474bba0609bf6dd28d6ae097a2359642d22816b177544c03e",
+    "sha256_after": "3af4134630db31d1c737dd1979c1a71be6fefca0e0993382bbb2b618ec4934da",
+    "bytes_before": 6716042,
+    "bytes_after": 6704840
+   },
+   "player_identification_test_public.csv": {
+    "games": 5000,
+    "games_stripped": 1531,
+    "pass_nodes_removed": 2301,
+    "sha256_before": "77bda12cf5fb5b82b3d465b3c8dd5faaec251ef71ffa3850230e7b71a3e404fb",
+    "sha256_after": "85e792275231219c1f1c5366355dae51a89ef961ba541610b2836269ff060e0c",
+    "bytes_before": 6743736,
+    "bytes_after": 6732202
+   },
+   "player_identification_candidates_public.csv": {
+    "games": 40000,
+    "games_stripped": 12017,
+    "pass_nodes_removed": 18046,
+    "sha256_before": "62ff83581e3e13314fc003411371a5b662177e44baed78824a404f93e61accd4",
+    "sha256_after": "8ff3a1ee9e50a720cec87896e0a6d683251bf45a1bf4559a5ff65c0e7b53a99d",
+    "bytes_before": 54924738,
+    "bytes_after": 54834520
+   },
+   "player_identification_test_private.csv": {
+    "games": 5000,
+    "games_stripped": 1535,
+    "pass_nodes_removed": 2300,
+    "sha256_before": "6256df97999e4ba6462b207b9ad91d7d799a059325f0288f7a0b0261c50d17a8",
+    "sha256_after": "2e1edd26bb54e85726991566171da01ed40cf5501512047f71642847d7302869",
+    "bytes_before": 6759178,
+    "bytes_after": 6747566
+   },
+   "player_identification_candidates_private.csv": {
+    "games": 40000,
+    "games_stripped": 12168,
+    "pass_nodes_removed": 18246,
+    "sha256_before": "908d1aa8049b133e36616e597127618b4e7df662b195b8cc5a558a9d0f2f3559",
+    "sha256_after": "14f4db30a881789e145abbfa37f23097700e99474fea10835ec2a8db4edb575e",
+    "bytes_before": 55061660,
+    "bytes_after": 54970518
+   }
+  },
+  "stripped_equals_clean_bytes": {
+   "rank_prediction_test_public.csv": true,
+   "rank_prediction_test_private.csv": true,
+   "player_identification_test_public.csv": true,
+   "player_identification_candidates_public.csv": true,
+   "player_identification_test_private.csv": true,
+   "player_identification_candidates_private.csv": true
+  },
+  "verify_before_ingest_exit": 1,
+  "t1_copy": {
+   "rank": [
+    0,
+    "PASS"
+   ],
+   "player": [
+    0,
+    "PASS"
+   ]
+  },
+  "verify_exit": 0,
+  "built_sha256": {
+   "rank_prediction_test_public.csv": "7184828eb33e0e0eafbdcaa70eae3172133d28fd86ba68ad39402582146b58ec",
+   "rank_prediction_test_private.csv": "3af4134630db31d1c737dd1979c1a71be6fefca0e0993382bbb2b618ec4934da",
+   "player_identification_test_public.csv": "85e792275231219c1f1c5366355dae51a89ef961ba541610b2836269ff060e0c",
+   "player_identification_candidates_public.csv": "8ff3a1ee9e50a720cec87896e0a6d683251bf45a1bf4559a5ff65c0e7b53a99d",
+   "player_identification_test_private.csv": "2e1edd26bb54e85726991566171da01ed40cf5501512047f71642847d7302869",
+   "player_identification_candidates_private.csv": "14f4db30a881789e145abbfa37f23097700e99474fea10835ec2a8db4edb575e"
+  },
+  "built_equals_A": {
+   "rank_prediction_test_public.csv": true,
+   "rank_prediction_test_private.csv": true,
+   "player_identification_test_public.csv": true,
+   "player_identification_candidates_public.csv": true,
+   "player_identification_test_private.csv": true,
+   "player_identification_candidates_private.csv": true
+  },
+  "built_t1_verdicts": {
+   "rank": "PASS",
+   "player": "PASS"
+  },
+  "t4_t5": {
+   "rank/t4": "1e954f1ffccd31385d3fd83605af4e8fcc429898113173abd45942c2fc3f50c4",
+   "rank/t5": "9debd4c6f27a04edbff3f482819f600f9501e1ad32fdc703a7e515775402ec78",
+   "player/t4": "8364186a65c5e8e7ad0f6f60927f2b2077e97e3500ba3aeea904597a27ddba29",
+   "player/t5": "2f732472d414a895c34564be531af3cbbdf703c1051ad60b95aafd1812691d21"
+  },
+  "t4_t5_equal_A": {
+   "rank/t4": true,
+   "rank/t5": true,
+   "player/t4": true,
+   "player/t5": true
+  }
+ },
+ "C_control": {
+  "t1_raw": {
+   "rank": [
+    2,
+    "FAIL_OPENING"
+   ],
+   "player": [
+    2,
+    "FAIL_OPENING"
+   ]
+  },
+  "prepare_exit": 0,
+  "decisions": {
+   "rank": [
+    "not_applicable",
+    "3048 trailing-pass games; the copy's T1 is still FAIL_OPENING (rev 9 section 3 item 4)",
+    "FAIL_OPENING"
+   ],
+   "player": [
+    "apply",
+    "29749 trailing-pass games",
+    "PASS"
+   ]
+  },
+  "rank_counts": {
+   "rank_prediction_test_public.csv": {
+    "no_pass": 3304,
+    "trailing": 1540,
+    "trailing_unusual_cell": 0,
+    "pass_with_other_reason": 0,
+    "mid_game_pass": 156,
+    "pass_not_trailing_other": 0,
+    "pass_parse_error": 0,
+    "pass_nodes_removed": 2304,
+    "max_pass_nodes_in_one_tail": 2
+   },
+   "rank_prediction_test_private.csv": {
+    "no_pass": 3329,
+    "trailing": 1508,
+    "trailing_unusual_cell": 0,
+    "pass_with_other_reason": 0,
+    "mid_game_pass": 163,
+    "pass_not_trailing_other": 0,
+    "pass_parse_error": 0,
+    "pass_nodes_removed": 2241,
+    "max_pass_nodes_in_one_tail": 2
+   }
+  },
+  "rank_edited": {
+   "rank_prediction_test_public.csv": false,
+   "rank_prediction_test_private.csv": false
+  },
+  "t1_after": {
+   "rank": [
+    2,
+    "FAIL_OPENING"
+   ],
+   "player": [
+    0,
+    "PASS"
+   ]
+  },
+  "verify_exit": 0,
+  "player_files_equal_clean": {
+   "player_identification_test_public.csv": true,
+   "player_identification_candidates_public.csv": true,
+   "player_identification_test_private.csv": true,
+   "player_identification_candidates_private.csv": true
+  }
+ },
+ "D_midonly": {
+  "t1_raw": {
+   "rank": [
+    2,
+    "FAIL_OPENING"
+   ],
+   "player": [
+    0,
+    "PASS"
+   ]
+  },
+  "prepare_exit": 2,
+  "decisions": {
+   "rank": [
+    "not_applicable",
+    "no trailing-pass game"
+   ],
+   "player": [
+    "not_needed",
+    "raw T1 verdict PASS"
+   ]
+  },
+  "test_pass_dir_exists": false
+ }
+}

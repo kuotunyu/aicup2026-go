@@ -1,0 +1,275 @@
+{
+ "format": "c10-prereg19 explore audit v1",
+ "created": "2026-10-20",
+ "auditor": "independent Claude Code subagent (read code + recomputed from data/prereg19/models/*.npz and existing P1 caches; CPU .venv; no data/local, no tools/score.py, no GPU)",
+ "audited": {
+  "plan": "937f48c",
+  "train_record": "310f39c",
+  "eval": "17f1974",
+  "merge": "0f80342"
+ },
+ "verdict": "real",
+ "leakage_checks": [
+  {
+   "check": "probe (set-model training A + step-selection H) players vs inner evaluation players",
+   "pass": true,
+   "evidence": "from data/prereg17/prep/probe_meta.npz players (5767 keys) vs inner bank players (636) and every inner row's player (640): key overlap 0, row-key overlap 0, player_id-only overlap 0"
+  },
+  {
+   "check": "probe games vs inner games",
+   "pass": true,
+   "evidence": "(rank, game_id) overlap 0 (270000 probe vs 73556 inner game keys); byte-identical 1,540-dim feature rows probe_X vs inner_X: 0 (270,000 x 73,169 rows)"
+  },
+  {
+   "check": "A/H split recomputed independently",
+   "pass": true,
+   "evidence": "sha256 rule gives A 5186, H 581 = train_record {'A_players': 5186, 'A_games': 242942, 'H_players': 581, 'H_games': 27058, 'A_and_H': 0, 'A_players_per_level': [571, 527, 677, 1028, 286, 396, 405, 412, 425, 459], 'H_players_per_level': [70, 62, 78, 112, 26, 43, 40, 48, 49, 53], 'A_eligible_n_level_colour': {'5': [[545, 538], [487, 491], [599, 602], [816, 823], [283, 277], [391, 385], [387, 386], [397, 396], [415, 410], [426, 441]], '10': [[443, 454], [392, 407], [451, 459], [569, 589], [275, 270], [350, 356], [347, 361], [361, 346], [380, 379], [392, 422]], '15': [[346, 361], [304, 319], [372, 357], [401, 422], [250, 248], [309, 318], [309, 324], [303, 296], [334, 337], [331, 368]], '20': [[295, 293], [270, 277], [318, 295], [146, 190], [219, 223], [260, 271], [270, 277], [258, 257], [279, 301], [274, 306]]}, 'H_eligible_n_level_colour': {'5': [[65, 63], [58, 56], [68, 69], [89, 88], [26, 25], [43, 42], [39, 38], [47, 46], [47, 47], [53, 53]], '10': [[53, 53], [42, 45], [58, 54], [62, 60], [26, 25], [41, 41], [37, 35], [46, 42], [44, 44], [49, 51]], '15': [[38, 42], [32, 37], [43, 38], [42, 44], [23, 23], [38, 36], [32, 31], [38, 37], [42, 40], [41, 45]], '20': [[32, 34], [28, 27], [30, 35], [19, 16], [20, 20], [33, 29], [29, 29], [32, 30], [35, 33], [37, 34]]}, 'holdout_questions': {'5': 1000, '10': 1000, '15': 1000, '20': 1000}, 'holdout_sampling': {'colour_switched': 0, 'level_missing': 0}}"
+  },
+  {
+   "check": "training reads no inner data",
+   "pass": true,
+   "evidence": "p19_train.py ProbeOnly opens only probe_X.npy / probe_meta.npz and the probe sets.json; held-out step selection uses H (probe) questions only; no inner array, statistic or label reaches training"
+  },
+  {
+   "check": "normalisation / per-game features apples to apples",
+   "pass": true,
+   "evidence": "SET uses the same standardised 1,540-dim P1 TO inputs as Q09's 6 members (mu/sd of frozen p1e_map.npz = 08 p1_map, computed on probe fit players per PREREG_09 1.3); P1 features are KataGo probe outputs (no fitting on inner). SET's E equals own re-implementation to 7e-11 (log) / 1.6e-15 (prob)"
+  },
+  {
+   "check": "fusion cross-fitting folds by player; fold f params never saw fold f players",
+   "pass": true,
+   "evidence": "fit/eval/mono: every question's fold == its player's pseudo_inner fold (True/True/True); every question's rows belong to the question's player (True x3); fusion is the unchanged Q09 run_terms/gen_oof_record (fold f fitted on fit questions of other folds); SET itself has no inner-fitted parameter"
+  },
+  {
+   "check": "evaluation question set identical to Q09's",
+   "pass": true,
+   "evidence": "both arms use the same Inner object's S_fit/S_eval/S_mono (25,400 / 127,200 / 120,544 questions, same usable mask Inner.covered); Q09 arm reproduces tune_report 0.7114420614163589 / 0.7145431684624712 bit-exactly; no question lacks a usable game"
+  }
+ ],
+ "recompute_identical": true,
+ "recompute": {
+  "exact_path": "re-running p19_eval's own set_terms + Inner.run from the committed model files reproduces the report bit-exactly: Q09+SET inner 0.7345843051712626, single-colour 0.7430172362615272, inner_ci95 [0.010367593675138084, 0.03517834331738191], mono_ci95 [0.01986019496763437, 0.036066560678500136]",
+  "independent_path": {
+   "note": "own numpy forward (own GELU/softplus/CLM, own usable-mean pooling) + Q09's fusion; own rule B, scoring and PlayerBootstrap implementation (per-level player resampling, 1000 draws, default_rng(0)). Differs only by optimizer sensitivity to ~1e-11 input differences (|d rb| <= 5e-6)",
+   "q09_inner": 0.7114420614163589,
+   "cand_inner": 0.7345868747670303,
+   "inner_diff": 0.023144813350671423,
+   "inner_ci95_own": [
+    0.010367722154926462,
+    0.035183354029128644
+   ],
+   "q09_mono": 0.7145431684624712,
+   "cand_mono": 0.7430126636301699,
+   "mono_diff": 0.0284694951676987,
+   "mono_ci95_own": [
+    0.019842335587109558,
+    0.0360537207296488
+   ],
+   "mono_by_colour_diff": {
+    "B": 0.030562339122044646,
+    "W": 0.026396675089789046
+   },
+   "mono_by_k": {
+    "5": {
+     "q09": 0.6744431012565648,
+     "cand": 0.6857358985351573,
+     "ci95_own": [
+      0.0034047514653077096,
+      0.01820392380720936
+     ]
+    },
+    "10": {
+     "q09": 0.7193808323048465,
+     "cand": 0.749094419085149,
+     "ci95_own": [
+      0.0198202807620141,
+      0.03953771864837182
+     ]
+    },
+    "15": {
+     "q09": 0.7350282271441375,
+     "cand": 0.77433511358379,
+     "ci95_own": [
+      0.027269251038397717,
+      0.050360702504765965
+     ]
+    },
+    "20": {
+     "q09": 0.7459700546092242,
+     "cand": 0.7870230490569177,
+     "ci95_own": [
+      0.02843229934441233,
+      0.0533074169136296
+     ]
+    }
+   },
+   "eval_by_n_exact": {
+    "5": {
+     "diff": 0.008651984438529992,
+     "ci95_own": [
+      -0.0026066587897331044,
+      0.01849754115381549
+     ]
+    },
+    "10": {
+     "diff": 0.020951969275278426,
+     "ci95_own": [
+      0.007322311198057707,
+      0.033509407636265615
+     ]
+    },
+    "15": {
+     "diff": 0.037294614386500946,
+     "ci95_own": [
+      0.015968551530780584,
+      0.0592616057518932
+     ]
+    },
+    "20": {
+     "diff": 0.03214175683523024,
+     "ci95_own": [
+      0.008291595731398852,
+      0.05298789440995225
+     ]
+    }
+   },
+   "eval_by_bin": {
+    "5-7": {
+     "diff": 0.010382135134579196,
+     "ci95_own": [
+      -0.002358072900331884,
+      0.022914316631013756
+     ]
+    },
+    "8-12": {
+     "diff": 0.018629543231485246,
+     "ci95_own": [
+      0.00369647197948674,
+      0.03410886546529538
+     ]
+    },
+    "13-20": {
+     "diff": 0.030927422827454643,
+     "ci95_own": [
+      0.015485046968003902,
+      0.04616049762756606
+     ]
+    }
+   },
+   "set_alone_rule_b": {
+    "eval": 0.7286159242039837,
+    "mono": 0.7374392550925651
+   }
+  },
+  "report": {
+   "cand_inner": 0.7345843051712626,
+   "inner_diff": 0.023142243754903702,
+   "inner_ci95": [
+    0.010367593675138084,
+    0.03517834331738191
+   ],
+   "mono_diff": 0.028474067799055924,
+   "mono_ci95": [
+    0.01986019496763437,
+    0.036066560678500136
+   ]
+  },
+  "tolerance": "exact path: bit-identical; independent path: 1e-5 on scores and CI bounds (all within)"
+ },
+ "sanity": {
+  "per_fold_eval_diff": {
+   "0": 0.01481455010157906,
+   "1": 0.031003219644389235,
+   "2": 0.01981331295944211,
+   "3": 0.026759703198625417,
+   "4": 0.02358845437624313
+  },
+  "fold_weights": "raw w_SET 2.71/0.62/3.50/3.82/2.52 look unstable only because w and the global temperature e^a are scale-redundant (fold 1 a=-1.17 vs -2.5..-2.9 in the others). Effective weights w*e^a at n=12: SET 0.195/0.192/0.211/0.215/0.204, P1TO 0.288/0.240/0.241/0.215/0.190 -> stable, not a degenerate fit. In Q09 the P1TO raw weight sits at the bound 4 in every fold (effective 0.85-0.92); in the candidate P1TO+SET effective ~0.41-0.48, so the gain is not bound relief",
+  "confusion_diag_eval": {
+   "q09": [
+    0.768,
+    0.613,
+    0.589,
+    0.498,
+    0.408,
+    0.399,
+    0.497,
+    0.559,
+    0.565,
+    0.826
+   ],
+   "cand": [
+    0.796,
+    0.64,
+    0.608,
+    0.525,
+    0.504,
+    0.46,
+    0.497,
+    0.583,
+    0.572,
+    0.827
+   ],
+   "set_alone": [
+    0.813,
+    0.588,
+    0.609,
+    0.508,
+    0.535,
+    0.466,
+    0.514,
+    0.55,
+    0.523,
+    0.822
+   ]
+  },
+  "pred_level_counts_eval": {
+   "q09": [
+    13694,
+    14271,
+    16729,
+    17140,
+    12083,
+    9121,
+    10316,
+    11263,
+    10009,
+    12574
+   ],
+   "cand": [
+    14305,
+    13923,
+    16251,
+    17634,
+    12078,
+    9965,
+    10709,
+    11050,
+    9663,
+    11622
+   ],
+   "set_alone": [
+    15259,
+    12873,
+    16740,
+    17047,
+    12847,
+    9933,
+    10868,
+    10898,
+    9102,
+    11633
+   ]
+  },
+  "level_collapse": "none: every level's predicted count stays 9.1k-17.6k for all three; candidate diagonal >= Q09 at every level (3D equal 0.497)",
+  "set_alone": "SET alone 0.7286 > Q09 0.7114 is plausible: it is trained on question-level likelihood, gain grows with n (mono +0.011 at 5 games to +0.041 at 20); OP+SET fusion alone gives 0.7320",
+  "unit_tests": "test_p19.py 13 passed"
+ },
+ "program_errors_affecting_verdict": [],
+ "notes": [
+  "Minor, not affecting the verdict: training-time torch float32 CLM underflows to the 1e-12 clamp for very confident questions (port check log-prob diff ~11 at the floor, prob diff ~1e-6); it only affects held-out NLL step selection / gradients, evaluation uses numpy float64.",
+  "Raw per-fold weights should not be read as instability (scale redundancy with a); quote effective weights instead.",
+  "Remaining caveat is not leakage: inner has been reused by many rounds (selection bias ~0.003 per RESULTS.md) and Q09 itself was selected on inner (that biases the baseline upward, i.e. conservative for the diff). Eval questions are single-player pseudo-questions; the gain at 5 games is small and its eval-question CI spans 0.",
+  "Hygiene gate run after adding this file only (see commit)."
+ ]
+}

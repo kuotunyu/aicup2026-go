@@ -1,0 +1,101 @@
+{
+ "notebook": "colab/prereg02_player.ipynb",
+ "base_notebook": "colab/prereg01_player.ipynb",
+ "base_notebook_sha256": "54c96f03871cbb24be419850b6915c222a9e1315083034928a56a87d55c15c53",
+ "official_notebook": "third_party/aicup2026_tutorial/player-identification.ipynb",
+ "prereg": "docs/PREREG_02_OPENING_FUSION.md 第 2.1 節（只推論、每盤 embedding、重現核對）；規格 results/prereg02/design/plan.md 3.0、3.2",
+ "split": "split_v1 rev 2",
+ "in_colab": true,
+ "smoke": false,
+ "inference": {
+  "weights": "prereg01 的 ckpt/best_model.pth（只讀；SHA-256 見 p01_inputs）",
+  "model": "GoPlayerResNet() 預設值：in_channels 17、num_channels 128、num_blocks 16、embed_dim 256",
+  "features": "SGFParsePlayerIdentification() 預設 history_length 8：8 層自己 + 8 層對手 + 1 層執色 = 17 層",
+  "precision": "fp32（和 prereg01 的推論相同，沒有 autocast）",
+  "per_game": "每盤 sgf_windows → 一盤一次 embed（GPU_BATCH 4096）→ emb_sum = e.sum(0)（float32）、n_windows = len(e)；每次平行解析 CHUNK 256 盤（同 prereg01 的 mean_embeddings）",
+  "centroid": "依窗口數加權：同一位候選（或同一題）的各盤 emb_sum 依列順序在 float32 下累加，再除以窗口數的和（同 prereg01）",
+  "distance": "L2（np.linalg.norm），np.argsort 取前 TOP_N；沒有任何可解析棋譜的題填照代號排序的前 TOP_N 位（同官方）",
+  "TOP_N": 5
+ },
+ "repro_criteria": {
+  "top5_max_mismatch": 2,
+  "centroid_max_abs_diff": 0.0001,
+  "rule": "top_1…top_5 完全相同的題 ≥ 題數 − top5_max_mismatch；候選代號與順序相同；重心最大差距 ≤ centroid_max_abs_diff"
+ },
+ "nproc": 48,
+ "device": "cuda",
+ "mp_start_method": "fork",
+ "smoke_settings": null,
+ "paths": {
+  "DRIVE_DIR": "/content/drive/MyDrive/C10",
+  "WORK": "/content/c10",
+  "RESULT_DIR": "/content/drive/MyDrive/C10/results/prereg02/player",
+  "P01_ROOT": "/content/drive/MyDrive/C10/results/prereg01",
+  "P01_RESULT_DIR": "/content/drive/MyDrive/C10/results/prereg01/player",
+  "CKPT_DIR": "/content/drive/MyDrive/C10/results/prereg01/player/ckpt",
+  "QUESTIONS_CSV": "/content/c10/C10_bundle_v1/local/player_val_questions.csv",
+  "CANDIDATES_CSV": "/content/c10/C10_bundle_v1/local/player_val_candidates.csv"
+ },
+ "p01_inputs": {
+  "root": "/content/drive/MyDrive/C10/results/prereg01",
+  "files": {
+   "best_model.pth": {
+    "path": "/content/drive/MyDrive/C10/results/prereg01/player/ckpt/best_model.pth",
+    "sha256": "356eb4f65488925e2a552ea382979780c903ef515b85d329a3805db837b7773b",
+    "bytes": 19212521
+   },
+   "player_val_top5.csv": {
+    "path": "/content/drive/MyDrive/C10/results/prereg01/player/player_val_top5.csv",
+    "sha256": "0f5761a11b9f68ab07b2bc91b9650236f85b8cbeff45d459753dbd24459d3ec7",
+    "bytes": 50842
+   },
+   "player_val_embeddings.npz": {
+    "path": "/content/drive/MyDrive/C10/results/prereg01/player/player_val_embeddings.npz",
+    "sha256": "c247b2653e73589975d558b17e96c4a1f38c3e4d66468d56ea6d02596e15752d",
+    "bytes": 873032
+   },
+   "predict_summary.json": {
+    "path": "/content/drive/MyDrive/C10/results/prereg01/player/predict_summary.json",
+    "sha256": "88b720242fef538a99327fdbdf839515c214a8492e2bf551f48b93c4c81eeb32",
+    "bytes": 826
+   }
+  },
+  "checked_against_repo": true,
+  "predict_summary": {
+   "finished_utc": "2026-09-25T19:29:46+00:00",
+   "smoke": false,
+   "weights": "/content/drive/MyDrive/C10/results/prereg01/player/ckpt/best_model.pth",
+   "weights_sha256": "356eb4f65488925e2a552ea382979780c903ef515b85d329a3805db837b7773b",
+   "output": "/content/drive/MyDrive/C10/results/prereg01/player/player_val_top5.csv",
+   "output_sha256": "0f5761a11b9f68ab07b2bc91b9650236f85b8cbeff45d459753dbd24459d3ec7",
+   "questions_csv_sha256": "d893a559f175b6535dc0d5f749314408b110149462f6a78a1b8cf7e9332cd676",
+   "candidates_csv_sha256": "7cd2897593ee9add20dce4ff5d4b0dcf8699b6d51a3f10950dc399a757dd3ad5",
+   "n_questions": 400,
+   "n_query_games": 4935,
+   "n_questions_embedded": 400,
+   "n_fallback_questions": 0,
+   "n_candidate_rows": 40000,
+   "n_candidate_players": 400,
+   "n_centroids": 400,
+   "GPU_BATCH": 4096,
+   "CHUNK": 256,
+   "NPROC": 48
+  },
+  "p01_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "p01_torch": "2.11.0+cu128",
+  "questions_csv_sha256": "d893a559f175b6535dc0d5f749314408b110149462f6a78a1b8cf7e9332cd676",
+  "candidates_csv_sha256": "7cd2897593ee9add20dce4ff5d4b0dcf8699b6d51a3f10950dc399a757dd3ad5"
+ },
+ "deviations_from_base": [
+  "[登記 2.1] 只推論：不訓練、不讀訓練資料。底稿裡讀訓練資料、抽特徵、外洩檢查、DataLoader、接續偵測、建模型與訓練、loss 曲線的格（官方 cell 3–18 與 prereg01 新增的外洩檢查、接續偵測）和官方 cell 21 都拿掉；官方 cell 20 只留 `sgf_windows`、`embed`（和官方原文相同），拿掉 `mean_embeddings`、`predict` 與另存 `player_val_embeddings.npz`。準備格不再解開訓練資料壓縮檔（打包檔仍逐檔核對 SHA-256，包括那個壓縮檔，但不解開），也不 import `c10data`。底稿的官方 cell 0、19、22 等說明格不沿用，改寫在第 1 格。",
+  "[登記 2.1] 權重：只讀 prereg01 的 `results/prereg01/player/ckpt/best_model.pth`。官方 cell 2 的 `CKPT_DIR` 改指 prereg01 的 ckpt 目錄，不建立資料夾；印「總訓練量」那行改成印權重路徑，印 `device` 那行多印 GPU 型號（`ENV['gpu']`）。權重整檔讀進記憶體，SHA-256 和 preflight 記下的相同才從同一份位元組載入；推論是 fp32，和 prereg01 的推論相同。",
+  "[登記 2.1] 每盤 embedding：新增 `game_embeddings()`。每盤的算法和 prereg01 的 `mean_embeddings` 相同（`sgf_windows` → 一盤一次 `embed` → `e.sum(0)`、`len(e)`；CHUNK 256、GPU_BATCH 4096），只是不按人或題加總，每盤各存一列：窗口 embedding 的加總（float32）與窗口數。候選 → `dumps/cand_games.npz`（game_id、player_id、color、emb_sum [N,256]、n_windows；候選檔的列順序，40,000 列）；題目 → `dumps/query_games.npz`（question_id、slot、color、emb_sum、n_windows、parsed；題目檔的列順序、每題 slot 由小到大，slot 是 `sgf_<slot>` 欄的編號，4,935 列）。解析失敗或沒有窗口的盤 emb_sum 全 0、n_windows 0（題目另記 parsed=False），和 prereg01 一樣不算進重心。兩個檔另存 `weights_sha256`。",
+  "[登記 2.1] 重現核對：只用上面存的每盤 embedding，照 prereg01 的順序與精度（依列順序逐盤在 float32 下累加、除以窗口數）重算依窗口數加權的候選重心與題目向量，照官方做法用 L2 距離取 Top-5，寫 `player_val_top5_repro.csv`。通過條件：和 prereg01 的 `player_val_top5.csv` 相比，400 題中至少 398 題的 top_1…top_5 完全相同（SMOKE：全部相同）；候選代號與順序和 prereg01 `player_val_embeddings.npz` 相同，重心的最大差距 ≤ 1e-4。結果寫 `repro_check.json`（題目向量的差距只記錄，不當條件）。沒過的話收尾格照樣打包，最後停下，run_log 的狀態記為 repro_failed。",
+  "[營運性] prereg01 唯讀保護：設定格定義 `P01_ROOT`（`results/prereg01`，SMOKE 是 `prereg01_smoke`）和 `guard_write(path)`：realpath 落在 `P01_ROOT` 底下就停止。所有寫檔（`save_json`、npz、csv、zip）、建資料夾、刪檔、複製與解壓的目的地都先經過它。preflight 開頭和收尾格各記一次 `P01_ROOT` 底下每個檔的相對路徑、大小、mtime（`p01_readonly_before.json`、`p01_readonly_after.json`），兩者不同就停下。",
+  "[營運性] preflight（新增）：確認 prereg01 的 `ckpt/best_model.pth`、`player_val_top5.csv`、`player_val_embeddings.npz`、`predict_summary.json` 都在，記下 SHA-256（config.json 的 `p01_inputs`）。`predict_summary.json` 記的權重與 Top-5 的 SHA-256、題目檔與候選檔的 SHA-256、smoke 旗標都要對得上；正式執行時四個檔的 SHA-256 和盤數題數還要和 repo 的 `results/prereg01/player/` 相同（產生本 notebook 時寫進來），而且必須有 GPU、GPU 型號是 G4（`ENV['gpu']` 含 RTX PRO 6000；登記第 7 節第 8 條）、Drive 剩 ≥ 0.5 GB。任何一項不符就用中文說明處理方式後停下，還沒開始推論。",
+  "[營運性] 結果目錄改成 `results/prereg02/player/`（SMOKE 是 `prereg02_smoke`），結果 zip 是 `results/prereg02/player_results.zip`；權重不複製。收尾格另外核對 dump 的列數與 SHA-256、每個輸出檔 < 100 MB（zip 會跳過 ≥ 100 MB 的檔），再比對 prereg01 前後指紋；有任何問題照樣打包，最後停下。",
+  "[營運性] 中斷後重新「全部執行」會整份重跑，沒有接續（G4 約 5 分鐘，推估）：dump 格先刪掉上一次的 dump、重現核對結果和結尾指紋，npz 先寫暫存檔再改名。run_log.json、timings.json 每次執行各記一筆。",
+  "[營運性] SMOKE：讀同一個 `--scratch` 裡 prereg01 冒煙測試產生的 `results/prereg01_smoke/`，縮小方式和 prereg01 冒煙測試相同（題目檔前 6 題、每題前 2 盤；候選照代號排序的前 12 位、每人前 3 盤），所以重現核對在 SMOKE 也必須全部相同。設定格的 SMOKE 縮小值沿用底稿（訓練用的幾個值這裡用不到）。",
+  "[營運性] notebook：沿用的格保留底稿的 cell id（官方格就是官方的 id），新增的格用 `c10-player02-NN`；每格的 metadata `c10` 記對應的底稿格、官方格、是否改動。notebook metadata 拿掉底稿 Colab 設定裡 A100、高 RAM 的預設（照第一格選 G4；重現核對不因 GPU 放寬，所以拿不到 G4 時先等，不換 GPU），`c10` 欄改記底稿與這份差異清單。"
+ ]
+}

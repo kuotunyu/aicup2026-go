@@ -1,0 +1,40 @@
+{
+ "what": "Guard for the 09 test-day path before the PREREG_10 test-day kit is built (PREREG_10 4.1 step 1, done the way PREREG_09 5.1 did it for 08): tracked files hashed with CRLF folded to LF, as results/test08/design/p08_path_fingerprint.json. tests/test_t09_path_hygiene.py fails if a listed file changes, if a new program or design file matches the patterns, or if an insert_only file loses or changes a line of local tag p09-testday-pre10. tests/test_t09_hygiene.py is pinned in its current version. results/test08/design/p08_path_fingerprint.json and the older fingerprints keep pinning the R20, 04, 06, 07 and 08 paths. This file lives under results/test09/design/ (PREREG_10 4.1), so it is excluded from its own patterns; the constant in tests/test_t09_path_hygiene.py and the tag pin it. tools/p10_p1.py and results/test10/ match no pattern.",
+ "head": "9e819c48267f613fd18718bcf5caa1ac6ca9a004",
+ "patterns": [
+  "tools/t09_*.py",
+  "tests/test_t09_*.py",
+  "results/test09/design/*",
+  "docs/TESTDAY_09.md"
+ ],
+ "exclude": [
+  "tests/test_t09_path_hygiene.py",
+  "results/test09/design/p09_path_fingerprint.json"
+ ],
+ "n_files": 12,
+ "files": {
+  "docs/TESTDAY_09.md": "06b6bd0e610e2b3a2139ee15daca846e527765699920d10fcad301ac60d438d7",
+  "results/test09/design/baseline_pre09.json": "0e9e01fdb27fba9a8dd4b2fb67617e29c69e9eca820bbaa0c9ab38da1af39db3",
+  "results/test09/design/build_review.md": "0c93afcd139775bbdbc6e4ee7c31426347a536788ddea1d544f5737fee1d3e14",
+  "results/test09/design/ex_rule_rev4_check.json": "e4b5e3471e4a4cd0ee73b473b68932390c0f1df22249c292c25dcaf3fdbdc274",
+  "results/test09/design/t09_fake_golden.json": "77a3601064405c8dff1234a8c1a9a492adc0c9b1b9a3c7b20e69f733915aebaf",
+  "results/test09/design/tol_e_measurement.json": "f3b547d1eae252da70a921d6fa531c023e069e8b0785f1816ad8b03a6f1932fd",
+  "tests/test_t09_dryrun.py": "e720888da8f4fbcc8d37cf7908cfc413316da613e422de5dd207857a3e285dc6",
+  "tests/test_t09_hygiene.py": "00404f50f17efd40507b154916f76c7cad6a35bfc2f9d5a3ee8a6461ac911f09",
+  "tests/test_t09_official_log.py": "6e4aa88871b04b5baa292c7a9ae3264e9c06f8ce033f7ff8b5e15e65e8840134",
+  "tests/test_t09_rank.py": "ffd52a1b006a83b30ffe3ea65790a60db3ae3867271240c60275be113cf3175b",
+  "tools/t09_fake_tests.py": "4907c8ee2ac440df09c43ee8b59f7537874ab4df03028780040b2a6da8d10f80",
+  "tools/t09_rank.py": "f1a9ab0417bb0480f663ff1f3829571d9f5fff6e28f87966b173b7eb3c0c61fa"
+ },
+ "insert_only": {
+  "rule": "not pinned: later registered steps may only insert or append lines; every line of the version at tag p09-testday-pre10 must still be there, in order (CRLF folded)",
+  "files": {
+   "tools/official_log.py": "older tags (r20-testday-pre04 .. p08-testday-pre09: tests/test_p04_hygiene.py, tests/test_p06_hygiene.py, tests/test_t06_path_hygiene.py, tests/test_t07_hygiene.py, tests/test_t07_path_hygiene.py, tests/test_t08_hygiene.py, tests/test_t08_path_hygiene.py, tests/test_t09_hygiene.py); tests/test_p09_hygiene.py (since 1ce913a); tests/test_t09_official_log.py; every line up to the tag (09's branches included): tests/test_t09_path_hygiene.py InsertOnlySinceTag",
+   "docs/PREREG_07_HUMANSL.md": "tests/test_t07_hygiene.py, tests/test_t07_path_hygiene.py, tests/test_t08_hygiene.py, tests/test_t08_path_hygiene.py, tests/test_t09_hygiene.py (tag p08-testday-pre09), tests/test_p09_hygiene.py; every line up to the tag: tests/test_t09_path_hygiene.py InsertOnlySinceTag",
+   "docs/PREREG_08_STRENGTH_PROBE.md": "tests/test_t08_hygiene.py, tests/test_t08_path_hygiene.py, tests/test_t09_hygiene.py (tag p08-testday-pre09), tests/test_p09_hygiene.py; every line up to the tag: tests/test_t09_path_hygiene.py InsertOnlySinceTag",
+   "docs/PREREG_09_MAPPING_ENSEMBLE.md": "tests/test_p09_hygiene.py (since 1ce913a), tests/test_t09_hygiene.py (tag p08-testday-pre09; test-day rows rev 3 / rev 4); every line up to the tag: tests/test_t09_path_hygiene.py InsertOnlySinceTag",
+   ".gitignore": "older tags (tests/test_t04_hygiene.py .. tests/test_t09_hygiene.py; 'results/test09_rehearsal/': tests/test_t09_hygiene.py), tests/test_p09_hygiene.py; every line up to the tag: tests/test_t09_path_hygiene.py InsertOnlySinceTag",
+   ".gitattributes": "older tags (tests/test_t04_hygiene.py .. tests/test_t09_hygiene.py; 'results/test09/** -text': tests/test_t09_hygiene.py), tests/test_p09_hygiene.py; every line up to the tag: tests/test_t09_path_hygiene.py InsertOnlySinceTag"
+  }
+ }
+}

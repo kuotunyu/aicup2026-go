@@ -1,0 +1,40 @@
+{
+ "what": "Guard for the 07 test-day path before the PREREG_08 test-day kit is built (PREREG_08 5.1 steps 1-3, done the way PREREG_07 5.1 did it for 06): tracked files hashed with CRLF folded to LF, as results/prereg06/design/p06_path_fingerprint.json. tests/test_t07_path_hygiene.py fails if a listed file changes, if a new program or design file matches the patterns, or if an insert_only file loses or changes a line of local tag p07-testday-pre08. This file lives under results/test07/design/ (PREREG_08 5.1), so it is excluded from its own patterns; the constant in tests/test_t07_path_hygiene.py and the tag pin it.",
+ "head": "2c371e4fd37b3f59eda95556fafdae9715a7758f",
+ "patterns": [
+  "tools/t07_*.py",
+  "tests/test_t07_*.py",
+  "results/test07/design/*",
+  "docs/TESTDAY_07.md",
+  "tests/conftest.py"
+ ],
+ "exclude": [
+  "tests/test_t07_path_hygiene.py",
+  "results/test07/design/p07_path_fingerprint.json"
+ ],
+ "n_files": 13,
+ "files": {
+  "docs/TESTDAY_07.md": "6587cd8782952eba8bc9a0db37c1de415c35cf222d00f2e6d84e86b9ee45b60f",
+  "results/test07/design/build_review.md": "04a2d3f5b208c645ff84cbc6a5d8851ae32ecc45245f9d9dd38405f0a49de4b9",
+  "results/test07/design/gpu_rehearsal.log": "61caa38173024f968edeba8d5fbad6e1fd2963ae83368f0e00cad7e00a34395c",
+  "results/test07/design/gpu_rehearsal_compare_public.json": "21a6a3466cabe99db86c97969a70a0ce98f72d4df6136ebe5ce8e0ef33905a6f",
+  "results/test07/design/gpu_rehearsal_seam.json": "e5d87a58cf685300452cb9adf1ac970c9f0413c4c527c4c3d6e598eb3338812e",
+  "results/test07/design/t07_fake_golden.json": "3b20c99ee162475eccc10d55fce17235604e2424034fd42c5da8331eab6eb9c9",
+  "tests/conftest.py": "f015d618b5be0c3ac15ec043dd76a5b373da2a7302cb5c2a15c9818e64f4697b",
+  "tests/test_t07_dryrun.py": "b4a25e91549ac71bdc85ea87c5210a7e1f86f405a24b084558a7d17cfdd10514",
+  "tests/test_t07_hygiene.py": "5b93d1cd7ca844b93527718acae09cf096523f094f200dc17cbce7069ceec9d4",
+  "tests/test_t07_official_log.py": "6e8920a21a4e02b8977cd99ffdfbabd3b6c8def8c44aa2c9d7b9483a6a117475",
+  "tests/test_t07_rank.py": "7af2477e13faaf96c24467f21df061a4d07f762e104b67890920ad7facb165b4",
+  "tools/t07_fake_tests.py": "934efe1268ebb776aab5aab95b31ad299da804a1933ce7261238097083c9948c",
+  "tools/t07_rank.py": "2c02e5c5d462c58393856bb286ca910881fb9677a5d15bf49e767909174f9f27"
+ },
+ "insert_only": {
+  "rule": "not pinned: later registered steps may only insert or append lines; every line of the version at tag p07-testday-pre08 must still be there, in order (CRLF folded)",
+  "files": {
+   "tools/official_log.py": "tests/test_p04_hygiene.py (tag r20-testday-pre04), tests/test_p06_hygiene.py (tag p04-testday-pre06), tests/test_t06_path_hygiene.py and tests/test_t07_hygiene.py (tag p06-testday-pre07); tests/test_t07_official_log.py TagVersusNew; the lines 07 added (its 07 branches): tests/test_t07_path_hygiene.py InsertOnlySinceTag",
+   "docs/PREREG_07_HUMANSL.md": "tests/test_t07_hygiene.py (rev 3, 6204b9e); rev 4 row and section 11 and later lines up to the tag: tests/test_t07_path_hygiene.py InsertOnlySinceTag",
+   ".gitignore": "tests/test_t04_hygiene.py, tests/test_p06_hygiene.py, tests/test_t06_path_hygiene.py and tests/test_t07_hygiene.py (older tags); lines added up to the tag: tests/test_t07_path_hygiene.py InsertOnlySinceTag",
+   ".gitattributes": "tests/test_t04_hygiene.py, tests/test_p06_hygiene.py, tests/test_t06_path_hygiene.py and tests/test_t07_hygiene.py (older tags; results/test07/** -text: tests/test_t07_hygiene.py InsertOnly); lines added up to the tag: tests/test_t07_path_hygiene.py InsertOnlySinceTag"
+  }
+ }
+}

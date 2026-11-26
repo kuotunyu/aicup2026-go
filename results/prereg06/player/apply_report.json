@@ -1,0 +1,134 @@
+{
+ "what": "PREREG_06 apply (spec section 6) on the local validation pool",
+ "q04_reproduction": {
+  "identical": true,
+  "sha256": "69ca74a61ce34f8ffa8949df731df433d474347dce9aabb535156ab8197ead6c",
+  "identical_06_path": true,
+  "sha256_06_path": "69ca74a61ce34f8ffa8949df731df433d474347dce9aabb535156ab8197ead6c",
+  "reference": "results/prereg02/player/player_val_top5.csv",
+  "reference_sha256": "69ca74a61ce34f8ffa8949df731df433d474347dce9aabb535156ab8197ead6c"
+ },
+ "sr06": {
+  "V2": 0.975888,
+  "V3": 0.969734,
+  "V0": 0.922136,
+  "R02": 0.899872
+ },
+ "selected": "V2",
+ "order": [
+  "V2",
+  "V3",
+  "V0"
+ ],
+ "gate": {
+  "sr_selected_minus_V0": 0.05375214047956567,
+  "min": 0.005
+ },
+ "sr_selected_minus_R02": 0.0760156576946509,
+ "k_star": 10,
+ "detector": {
+  "r_forced_cost": 1.1457767848959581,
+  "forced_cost": 0.01095832026307217,
+  "pseudo_forced_cost": [
+   0.011472083898255719,
+   0.007656110017921833
+  ],
+  "r_star": 2.2515761243137895,
+  "usable": true,
+  "would_open": true,
+  "changed_top1": 17
+ },
+ "secondary_structure": {
+  "rank1_distinct": true,
+  "rank1_equals_independent_lsa": true,
+  "ranks2to5_csls3_without_rank1": true
+ },
+ "mono_black_check": {
+  "sr06_black_only": {
+   "V2": 0.934273,
+   "V3": 0.919085,
+   "V0": 0.817689,
+   "R02": 0.720885
+  },
+  "selected_minus_V0": 0.11658356319555407
+ },
+ "games": {
+  "candidate": {
+   "B": 20109,
+   "W": 19891,
+   "not_alternating_B": 0,
+   "not_alternating_W": 0
+  },
+  "question": {
+   "B": 2514,
+   "W": 2421,
+   "not_alternating_B": 0,
+   "not_alternating_W": 0
+  }
+ },
+ "out_of_vocabulary_tokens": {
+  "B": 0,
+  "W": 0
+ },
+ "format_checks": {
+  "player_val_top5.csv": {
+   "returncode": 0,
+   "stdout": "OK: player submission covers all 400 questions and passes every strict check\n",
+   "stderr": ""
+  },
+  "player_val_top5_switch.csv": {
+   "returncode": 0,
+   "stdout": "OK: player submission covers all 400 questions and passes every strict check\n",
+   "stderr": ""
+  }
+ },
+ "outputs": {
+  "player_val_top5.csv": "094223f69bf445a4c450212cc9b4a3eceda9c69e992d1ed7f7c6e02105b818be",
+  "player_val_top5_switch.csv": "9dfc8e1b5500d632f4a7f035dd50832723a72556caabb3ba1e57f779a3c7dcb6"
+ },
+ "frozen_config_sha256": "5e5c3b827782678bb3e985cd0caeada61e62951312ee1d6938bf4e331348bfc9",
+ "dmix_passed": true,
+ "lda_sha256": {
+  "B": "ecfee95d0c7d8fdeb499ca9f89a8a6bb840e9a3cf0e999b1baa14ff78d69faa5",
+  "W": "e8bc63331a749bce83cc7cab8b7852bec70c6644f38fe89982f0dbbad581292d"
+ },
+ "score_allowed": true,
+ "score_blocked_reasons": [],
+ "rerun": {
+  "rerun": false,
+  "reason": null,
+  "previous_report": null
+ },
+ "command": "apply",
+ "mode": "real",
+ "precommit": false,
+ "created": "2026-10-03T11:37:57+08:00",
+ "git_head": "5fed835a4542104144c039889abfb72969f0ea2c",
+ "tools": {
+  "tools/p06_style.py": {
+   "sha256_lf": "78beb8138c27853da70081e469e534508174265852a64ebada21e354ae72058a",
+   "committed_and_clean": true
+  },
+  "tools/p06_sim.py": {
+   "sha256_lf": "21deeea1eb08b1d6580ba78c47505789f66dbdd10c8891973e14f523ef443eeb",
+   "committed_and_clean": true
+  },
+  "tools/p06_player.py": {
+   "sha256_lf": "b25636878ee87ca828a9c65177965dc60466ac4e9aa348acd88785ca11075590",
+   "committed_and_clean": true
+  }
+ },
+ "env": {
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "executable": ".venv/Scripts/python.exe"
+ },
+ "inputs": {
+  "candidates_csv": "7cd2897593ee9add20dce4ff5d4b0dcf8699b6d51a3f10950dc399a757dd3ad5",
+  "cand_games_npz": "56ed03d12e9a79871a21b5f69dc4bd4bb8c8aa69b1544cb8ec799e80227cfdea",
+  "questions_csv": "d893a559f175b6535dc0d5f749314408b110149462f6a78a1b8cf7e9332cd676",
+  "query_games_npz": "665d0888a93f6632eb19edac76abf996d5499cd27c683d9844b97cb274b6f689"
+ },
+ "seconds": 40.9
+}

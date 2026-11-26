@@ -1,0 +1,45 @@
+{
+ "format": "c10-prereg49 data record v1",
+ "first_games_identical_to_prereg36": true,
+ "E": {
+  "players": 600,
+  "sha256_sorted_ids": "7778702211b3e234b731355b63e0da991ee2df9802c97c69313dc118044ffb7b"
+ },
+ "T36": {
+  "players": 3685,
+  "sha256_sorted_ids": "9c1db9001568040a648276d3993c6012afc914abd2466f7d9c5411d667cfa066"
+ },
+ "T49": {
+  "players": 5771,
+  "games": 785705,
+  "sha256_sorted_ids": "a23c64d297803a4d6a5e98229a006cc12791571fc99830e49015e0c71130ed4b",
+  "from_D": 300,
+  "added_vs_T36": 2086
+ },
+ "T49_and_E_disjoint": true,
+ "added": {
+  "inner": {
+   "games": 73556,
+   "players": 640
+  },
+  "val": {
+   "games": 206137,
+   "players": 1600
+  }
+ },
+ "new_games_equal_to_an_E_game": 0,
+ "cache": {
+  "format": "c10-prereg49 cache v1",
+  "source": "prereg36 cache (first 720307 games, unchanged) + split v1 inner + validation players' games from data/training/train_<LEVEL>.csv (LEVELS order, file order)",
+  "games": 1000000,
+  "players": 8007,
+  "moves": 221894008,
+  "unparsed_games": 0,
+  "codes_sha256": "2447f0e05a42c3634a3ba16ba2666affeed95e90c4c8724ed29d8a4ee849a09a",
+  "seconds": 64.6
+ },
+ "inputs_sha256": {
+  "players_split.csv": "69554875064ecbd83d790b3215c8ba8f9540f217ec4af3e4a8c43228ac2a3dfc",
+  "prereg36_codes": "be5831abbccf22be3c96725082939638e6607f88ad45b1ed2164db33060c0303"
+ }
+}

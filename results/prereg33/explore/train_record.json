@@ -1,0 +1,500 @@
+{
+ "format": "c10-prereg33 explore train v1",
+ "smoke": false,
+ "code": {
+  "head": "1265c7a1200edc505ecd10d636cf2e039adce4ef",
+  "dirty": "",
+  "sha256_lf": {
+   "results/prereg09/rank/check_report.json": "3dfe765d1b7aa1c7c9f33ac8c0d6f89e44a5abf0141ca1195fdaa0fc71fe00a0",
+   "results/prereg09/rank/frozen_config.json": "50d38d2787c94569d88ed87a482e872ed64be2d1d20e4f57ffbb07a216663ff5",
+   "results/prereg09/rank/p1e_map.npz": "b5a9e33023a48099cbbafa87e5c92a081b272a73402dbd7d0fba4c70323be5eb",
+   "results/prereg12/explore/finetune/ft_eval.py": "2e3302cad19ab4c6b3f4242278a7d9bd751cdfbd92b4672696a6af46860b8021",
+   "results/prereg19/explore/p19_lib.py": "bbdc4225687777b732df1275277c4f4986f77225b935808f02cc7aefd4256376",
+   "results/prereg19/explore/p19_train.py": "9493ef1367b01495769a40ab792dc2b57208a9555de25a8f118147501b7b10ed",
+   "results/prereg25/explore/p25_lib.py": "a5c2454dd69ff971e3f5fa29636b231b9fda0568704b62d78cc832b282ff774d",
+   "results/prereg25/explore/p25_train.py": "01a9bd738060ff7a25123503c7369ac692f69220c157b2817249c7aa9b87a23f",
+   "results/prereg25/explore/train_record.json": "c5197c54bbbc9c1981fbdbdf5912d556811bfa7ce9c9ae0a093f70480cb08d63",
+   "results/prereg25/rank/s25_seed0.npz": "733c69d050988e082d04305dd33d8ef2af26bf4211b8f539631ca6481d4797b2",
+   "results/prereg25/rank/s25_seed1.npz": "87daa77cef4da9df5caa8a234cad5237c083b4d71022c1d19d938724f97d3175",
+   "results/prereg25/rank/s25_seed2.npz": "790d6145d293c5cd9fb955afb35ed01fae0e9c5ec4fe3003ec162f4c71da8450",
+   "results/prereg29/explore/p29_lib.py": "d618af25c0e3c5d95ed7f55156d7e69186e76f249d5004d46f38b02a1eb5b4ce",
+   "results/prereg29/explore/p29_train.py": "d3b0b0ea3eb269a5673a69585e387e6fafbb33bf1e46cc64ffcf7c108873e1db",
+   "results/prereg31/explore/ram_watch.py": "b1b4e92657b342c9f0e9861bfd6e15e5dd21d5ea1f82ad7e1fb84badffcd94bc",
+   "results/prereg33/explore/PLAN.md": "10a6e947f68ef51bdaa9c12d21714d5fc7cd9a5b01b8fdaaa2b9ef5ac0b70c92",
+   "results/prereg33/explore/p33_train.py": "15865da90ed7546ba83aa415b2407bf7eb448a0eb3f125b016d92b70250da54a",
+   "results/prereg33/explore/run_train.sh": "a1291cf2f60e3a9ed1bc609ffcf1367f01a7bf477104b494c111878b9dce380b",
+   "tools/c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "tools/decide.py": "cf66daf1231b3c2bd60c5b6484245627e133bd0f1cd7ff5557e978da3801d0e3",
+   "tools/p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "tools/p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+   "tools/p02_rank_opening.py": "a4195fece41aa3d50ecda82d1af93d9c04f49df5fd2157d69dd8a488dea93463",
+   "tools/p02_rank_pseudo.py": "16e5bfdfb2995874ddb11bde1f7a9e786a478b14443453f675a4fb3a480bb098",
+   "tools/p03_rank_fuse.py": "77abd7479d26f0f647a258b4a6d5d2e517808b4c187184f14ff599d70b8aca2f",
+   "tools/p04_rank_fuse.py": "c3a647b09c46760239d5b2ee274d56f7231987354fc1c1f6c3ff40102f4b26a2",
+   "tools/p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142",
+   "tools/p08_rank_fuse.py": "64f42bd956f7808947e0c85abe1f9fa60d9958cb8e769fc889c6283c188d481e",
+   "tools/p09_forward.py": "67124e0e534f575493aa8d72dbd2582335e4166718448e36bb5e105c61cb185d",
+   "tools/p09_map.py": "fff3ffe6ae6b8c32163803a6d307fa184c2857af5d6e1505e3c931a4e8831566",
+   "tools/p09_rank_fuse.py": "1486f7ce102450c1ed0b051234537286f6f9a0b38f7aaaf182a38458e4ddfb8b"
+  }
+ },
+ "seam_r": {
+  "retrain_file": "data/prereg33/models/s33_seed0_seamR.npz",
+  "retrain_sha256": "4a01d6a60355cd514e9cc4988c08424a7952fc33302b47a63542a8caf67163bb",
+  "s25_seed0_frozen_sha256": "4a01d6a60355cd514e9cc4988c08424a7952fc33302b47a63542a8caf67163bb",
+  "s25_seed0_train_record_sha256": "4a01d6a60355cd514e9cc4988c08424a7952fc33302b47a63542a8caf67163bb",
+  "bytes_equal_frozen_file": true,
+  "applicable": true,
+  "ok": true,
+  "stop_step": 11000,
+  "state_at_stop": {
+   "sampler_rng_state_sha256": "92d918a8cdbd7d70a237af97d2e4720083908eb22a737d7370615415cf6edefd",
+   "scheduler_last_epoch": 11000,
+   "last_lr": 0.00020133057565312028
+  }
+ },
+ "seed0_seamR": {
+  "seed": 0,
+  "role": "seamR33",
+  "stop_step": 11000,
+  "schedule_steps": 15000,
+  "players": "A",
+  "sampling": {
+   "colour_switched": 0,
+   "level_redrawn": 0,
+   "questions": 1408000
+  },
+  "batches_per_n": {
+   "5": 2705,
+   "10": 2781,
+   "15": 2826,
+   "20": 2688
+  },
+  "seconds": 655.1,
+  "last_batch_loss": 0.6297682523727417,
+  "state_at_stop": {
+   "sampler_rng_state_sha256": "92d918a8cdbd7d70a237af97d2e4720083908eb22a737d7370615415cf6edefd",
+   "scheduler_last_epoch": 11000,
+   "last_lr": 0.00020133057565312028
+  },
+  "port_check": {
+   "max_abs_prob_diff": 1.2050945519814782e-06,
+   "max_abs_logp_diff_record": 10.994890008484745,
+   "tol": 0.0001,
+   "ok": true
+  },
+  "s25_holdout_nll_record_only": 1.0073546251903926,
+  "s25_holdout_note": "the S25 held-out questions; for A+H models these players were trained on, so this is not a held-out number and chooses nothing",
+  "model_file": "data/prereg33/models/s33_seed0_seamR.npz",
+  "model_sha256": "4a01d6a60355cd514e9cc4988c08424a7952fc33302b47a63542a8caf67163bb",
+  "head": "1265c7a1200edc505ecd10d636cf2e039adce4ef"
+ },
+ "created": "2026-11-10T18:34:01+00:00",
+ "smoke_note": null,
+ "seconds": 2724.9,
+ "what": "PLAN.md 1: S33 = S25's code, settings, rows and salt (imported unchanged) trained on A u H (7,367 players), seed s stopped at prereg25's best_step(s) of the same 15,000-step OneCycle schedule; seam R33 = A only, seed 0 at best_step(0), byte-identical to S25 seed 0; no inner data read",
+ "settings": {
+  "steps": 15000,
+  "eval_every": 500,
+  "hold_per": 100,
+  "batch": 128,
+  "ks": [
+   5,
+   10,
+   15,
+   20
+  ],
+  "lr": 0.001,
+  "wd": 0.01,
+  "pct_start": 0.1,
+  "hidden": 256,
+  "h_dim": 64,
+  "rho": 32,
+  "drop_in": 0.1,
+  "drop": 0.3,
+  "threads": 8,
+  "hold_seed": 19019,
+  "sampler_base": 19,
+  "salt": "c10-prereg25|holdout|",
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "seam_r_seed": 0,
+  "model_format": "c10-prereg25 s25 model v1",
+  "stop_steps": {
+   "0": 11000,
+   "1": 7500,
+   "2": 10500
+  },
+  "seam_r_stop_step": 11000,
+  "stop_steps_prereg25": {
+   "0": 11000,
+   "1": 7500,
+   "2": 10500
+  },
+  "standardisation": "frozen Q09 map mu_x / sd_x (= S25)"
+ },
+ "environment": {
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "torch": "2.14.0+cpu",
+  "torch_threads": 8
+ },
+ "environment_prereg25": {
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "torch": "2.14.0+cpu",
+  "torch_threads": 8
+ },
+ "q09_map_sha256": "ecc9c9b1747b7b7d40cf53869b6c67c8e6f776ba7498498737fe3eede8e2edba",
+ "seam_p": {
+  "want": "ee8ce70ec56b8ffb92952ca44ad271a420f1d145b8277f09ea6a611fb05701dc",
+  "got": "ee8ce70ec56b8ffb92952ca44ad271a420f1d145b8277f09ea6a611fb05701dc",
+  "ok": true,
+  "v_X_sha256": "d70d151f401870671ec81227e8b7c1e804f6b110470ccd6468c2a839f8b3b61e",
+  "v_X_is_prep_record": true,
+  "v_X_is_prereg25_train_record": true,
+  "v_meta_sha256": "d79241a35fef16aab19dd5845ab6021cb7e7c370fc266b5d6d34907c3d51a4a2",
+  "v_meta_is_prep_record": true
+ },
+ "v_prep_record": {
+  "games_sha256": "0607d974776f32b7dae3e3319d20b4c66b9442b0e08a2cf8dcbd68b392a0b238",
+  "rows": 74946,
+  "unusable": 0,
+  "files_sha256": {
+   "v_X.npy": "d70d151f401870671ec81227e8b7c1e804f6b110470ccd6468c2a839f8b3b61e",
+   "v_meta.npz": "d79241a35fef16aab19dd5845ab6021cb7e7c370fc266b5d6d34907c3d51a4a2"
+  }
+ },
+ "players": {
+  "A_players": 6619,
+  "A_games": 311086,
+  "H_players": 748,
+  "H_games": 33860,
+  "A_and_H": 0,
+  "train_players": 7367,
+  "train_games": 344946,
+  "probe_rows": 270000,
+  "v_rows": 74946,
+  "probe_V_overlap": {
+   "probe_and_V_keys": 0,
+   "probe_and_V_player_id": 0
+  },
+  "train_players_per_level": [
+   819,
+   752,
+   964,
+   1456,
+   399,
+   561,
+   569,
+   588,
+   605,
+   654
+  ],
+  "train_eligible_n_level_colour": {
+   "5": [
+    [
+     777,
+     768
+    ],
+    [
+     700,
+     698
+    ],
+    [
+     846,
+     862
+    ],
+    [
+     1155,
+     1165
+    ],
+    [
+     395,
+     387
+    ],
+    [
+     551,
+     546
+    ],
+    [
+     550,
+     544
+    ],
+    [
+     570,
+     567
+    ],
+    [
+     592,
+     583
+    ],
+    [
+     609,
+     634
+    ]
+   ],
+   "10": [
+    [
+     640,
+     639
+    ],
+    [
+     554,
+     576
+    ],
+    [
+     648,
+     657
+    ],
+    [
+     809,
+     832
+    ],
+    [
+     382,
+     378
+    ],
+    [
+     495,
+     511
+    ],
+    [
+     494,
+     510
+    ],
+    [
+     524,
+     499
+    ],
+    [
+     546,
+     541
+    ],
+    [
+     561,
+     605
+    ]
+   ],
+   "15": [
+    [
+     498,
+     514
+    ],
+    [
+     434,
+     453
+    ],
+    [
+     527,
+     512
+    ],
+    [
+     572,
+     597
+    ],
+    [
+     348,
+     351
+    ],
+    [
+     437,
+     453
+    ],
+    [
+     435,
+     457
+    ],
+    [
+     439,
+     423
+    ],
+    [
+     482,
+     480
+    ],
+    [
+     484,
+     530
+    ]
+   ],
+   "20": [
+    [
+     422,
+     414
+    ],
+    [
+     384,
+     385
+    ],
+    [
+     445,
+     425
+    ],
+    [
+     206,
+     261
+    ],
+    [
+     306,
+     317
+    ],
+    [
+     371,
+     388
+    ],
+    [
+     379,
+     391
+    ],
+    [
+     376,
+     364
+    ],
+    [
+     405,
+     424
+    ],
+    [
+     410,
+     435
+    ]
+   ]
+  },
+  "holdout_questions": {
+   "5": 1000,
+   "10": 1000,
+   "15": 1000,
+   "20": 1000
+  },
+  "holdout_sampling": {
+   "colour_switched": 0,
+   "level_missing": 0
+  },
+  "holdout_use": "port check and a record-only NLL; chooses nothing (PLAN.md 1)",
+  "same_as_prereg25": true
+ },
+ "seeds": {
+  "0": {
+   "seed": 0,
+   "role": "S33",
+   "stop_step": 11000,
+   "schedule_steps": 15000,
+   "players": "A+H",
+   "sampling": {
+    "colour_switched": 0,
+    "level_redrawn": 0,
+    "questions": 1408000
+   },
+   "batches_per_n": {
+    "5": 2711,
+    "10": 2772,
+    "15": 2819,
+    "20": 2698
+   },
+   "seconds": 775.2,
+   "last_batch_loss": 1.0668143033981323,
+   "state_at_stop": {
+    "sampler_rng_state_sha256": "f230a8d730b14ee965ffa1f1197f494d0b201b79d585d455cb3baead31c15ced",
+    "scheduler_last_epoch": 11000,
+    "last_lr": 0.00020133057565312028
+   },
+   "port_check": {
+    "max_abs_prob_diff": 1.1744340341346415e-06,
+    "max_abs_logp_diff_record": 10.982037892081905,
+    "tol": 0.0001,
+    "ok": true
+   },
+   "s25_holdout_nll_record_only": 0.7594277008302416,
+   "s25_holdout_note": "the S25 held-out questions; for A+H models these players were trained on, so this is not a held-out number and chooses nothing",
+   "model_file": "data/prereg33/models/s33_seed0.npz",
+   "model_sha256": "5e1f79dd192285ddfa68a5e8309f4026eb3e3ee2336f5cdc439c0a04f8d2ad5f",
+   "head": "1265c7a1200edc505ecd10d636cf2e039adce4ef"
+  },
+  "1": {
+   "seed": 1,
+   "role": "S33",
+   "stop_step": 7500,
+   "schedule_steps": 15000,
+   "players": "A+H",
+   "sampling": {
+    "colour_switched": 0,
+    "level_redrawn": 0,
+    "questions": 960000
+   },
+   "batches_per_n": {
+    "5": 1876,
+    "10": 1843,
+    "15": 1919,
+    "20": 1862
+   },
+   "seconds": 533.2,
+   "last_batch_loss": 1.1169734001159668,
+   "state_at_stop": {
+    "sampler_rng_state_sha256": "de260971f770000e9f0dd7eaff451424773e3059db0f8907e832a10b79901d93",
+    "scheduler_last_epoch": 7500,
+    "last_lr": 0.0005867111520602974
+   },
+   "port_check": {
+    "max_abs_prob_diff": 9.740933439861266e-07,
+    "max_abs_logp_diff_record": 10.99188182430321,
+    "tol": 0.0001,
+    "ok": true
+   },
+   "s25_holdout_nll_record_only": 0.8435393083125927,
+   "s25_holdout_note": "the S25 held-out questions; for A+H models these players were trained on, so this is not a held-out number and chooses nothing",
+   "model_file": "data/prereg33/models/s33_seed1.npz",
+   "model_sha256": "4a72794b5a5b2f1c88b97533edd3c58f33966087a163687f8a0774038b0c34c1",
+   "head": "1265c7a1200edc505ecd10d636cf2e039adce4ef"
+  },
+  "2": {
+   "seed": 2,
+   "role": "S33",
+   "stop_step": 10500,
+   "schedule_steps": 15000,
+   "players": "A+H",
+   "sampling": {
+    "colour_switched": 0,
+    "level_redrawn": 0,
+    "questions": 1344000
+   },
+   "batches_per_n": {
+    "5": 2588,
+    "10": 2592,
+    "15": 2634,
+    "20": 2686
+   },
+   "seconds": 731.3,
+   "last_batch_loss": 0.6881049871444702,
+   "state_at_stop": {
+    "sampler_rng_state_sha256": "dcd6b6f30d81a80ff4003488b0d4593c73a7205142353c0d972b12b3a705b35a",
+    "scheduler_last_epoch": 10500,
+    "last_lr": 0.0002499022405418785
+   },
+   "port_check": {
+    "max_abs_prob_diff": 1.0113633274189127e-06,
+    "max_abs_logp_diff_record": 10.975640612800813,
+    "tol": 0.0001,
+    "ok": true
+   },
+   "s25_holdout_nll_record_only": 0.7738122070240608,
+   "s25_holdout_note": "the S25 held-out questions; for A+H models these players were trained on, so this is not a held-out number and chooses nothing",
+   "model_file": "data/prereg33/models/s33_seed2.npz",
+   "model_sha256": "615dd91f6dbf8fdad54b6138d9b74c92850ba475a6a38befd863f62930e42e75",
+   "head": "1265c7a1200edc505ecd10d636cf2e039adce4ef"
+  }
+ },
+ "models_sha256": {
+  "0": "5e1f79dd192285ddfa68a5e8309f4026eb3e3ee2336f5cdc439c0a04f8d2ad5f",
+  "1": "4a72794b5a5b2f1c88b97533edd3c58f33966087a163687f8a0774038b0c34c1",
+  "2": "615dd91f6dbf8fdad54b6138d9b74c92850ba475a6a38befd863f62930e42e75"
+ },
+ "s25_models_sha256": {
+  "0": "4a01d6a60355cd514e9cc4988c08424a7952fc33302b47a63542a8caf67163bb",
+  "1": "ab53d69b2762a7c01bed354ac6c218cf167fda44bbd3d88eed06a6f4adf3cba4",
+  "2": "20e190f56866c7a28b4eeef0c0d4d656867b79a908e066ba91a47570601c4fbb"
+ }
+}

@@ -1,0 +1,167 @@
+{
+ "layout": "頂層：固定說明與跨執行的累計狀態；runs：每次執行各一筆的實際設定",
+ "smoke": false,
+ "smoke_cfg": null,
+ "prereg": "docs/PREREG_01_BASELINE.md rev 2（競賽二）",
+ "official_notebook": "third_party/aicup2026_tutorial/rank-prediction.ipynb",
+ "deviations_from_official": [
+  "[①] 官方 cell 4：改用 `c10data.load_rows(..., part=\"fit\")` 讀訓練資料（5,767 人、720,307 盤），`part=\"inner\"` 讀內部驗證（640 人、73,556 盤），各自轉成 DataFrame。`load_rows` 會 assert 人數、盤數，並確認沒有任何一盤出現在本機驗證檔。結果存 `leak_check.json`（每次執行各記一筆）。SMOKE 時等 `load_rows` 全部通過，才用固定 seed 縮小資料。",
+  "[②] 官方 cell 4：取代 `df.iloc[:VAL_SIZE]` 的切法：`df_train`、`df_val` 各自 `sample(frac=1.0, random_state=42)` 打散之後，才寫分片。",
+  "[③] 官方 cell 2、8、9：`VAL_SIZE` 改成內部驗證實際寫入的盤數：每個抽特徵的 worker 寫完後，把 `rows`、`written`、`bad` 寫進分片目錄的 `_count_w<N>.json`；`extract_split` 加總、核對後回傳；cell 9 設定 `VAL_SIZE` 並印出。cell 2 先設成 `None`。",
+  "[④] 官方 cell 20、21：`predict()` 改讀打包檔的 `local/rank_val_questions.csv`，拿掉 public／private 迴圈（內層程式因此少一層縮排，進度訊息不印 split 名稱）。每題另存 10 維平均機率到 `rank_val_probs.csv`（完整 float；沒有可解析棋譜的題 `n_parsed=0`、機率欄留空）。官方的 argmax 結果改存成 `pred_official_argmax.csv`（官方是 `./submission_rank.csv`）。`predict()` 因此多了題目檔、機率檔路徑和 `limit` 三個參數；SMOKE 時只推論前 12 題。",
+  "[營運性] 新增：最前面兩格 markdown：這份 notebook 的用途與操作說明，以及這張差異表。",
+  "[營運性] 新增：新增的程式格：設定（Colab 或本機、Drive 路徑、SMOKE 縮小設定、結果紀錄工具）、準備（解壓打包檔並逐檔核對 SHA-256、確認沒有答案檔、解開訓練資料、把打包檔的 `tools/`、`tutorial/` 加進 import 路徑）、環境紀錄（`env.json`）、分片備份工具、設定紀錄與接續工具、結尾核對，以及把結果目錄裡權重以外的檔案打成 `rank_results.zip`（放在結果目錄旁，方便下載）。",
+  "[營運性] 新增（準備格）：缺 `sgfmill` 或 `webdataset` 時才用 pip 安裝，版本固定為 `sgfmill==1.1.1`、`webdataset==1.0.2`（本機冒煙測試用的版本）。官方 notebook 只列出需要的套件，不安裝也不固定版本。Colab 內建的 torch、pandas、numpy、matplotlib 不動，實際版本記在 `env.json`。",
+  "[營運性] 新增（設定格）：在 Linux 上明確指定 multiprocessing 用 `fork`。官方的 worker 函式定義在 notebook 內，依賴 fork；Python 3.14 起 Linux 預設改成 forkserver。3.13 以前本來就是 fork，行為不變。實際的啟動方式記在 `config.json`。",
+  "[營運性] metadata：notebook metadata 加上 Colab 設定（GPU、A100、高 RAM），其餘沿用官方。官方格沿用官方的 cell id，新增的格用 `c10-rank-NN`；每格的 cell metadata 加 `c10` 對照欄（對應的官方格、是否改動）。官方原本就沒有存輸出。",
+  "[營運性] 官方 cell markdown 0、3、5、19、22：官方的說明原文不動，在後面附加一段「**本版**」說明：路徑由設定格決定（0）、① ② 的讀法（3）、分片會備份到 Drive（5）、④ 只預測本機驗證題（19）、分數不在這裡算（22）。",
+  "[營運性] 全部：工作目錄切到 `WORK`（Colab 是 `/content/c10`），官方的相對路徑 `./training`、`./rank-features` 照用。webdataset 會把 Windows 路徑的 `C:` 當成網址格式，本機冒煙測試只能用相對路徑。",
+  "[營運性] 全部：改過的格在開頭或行內加了說明註解（標 ①–④ 或「本版」）。",
+  "[營運性] 全部：紀錄檔都是每次執行各記一筆、不覆蓋前幾次：`timings.json`（各階段秒數）、`run_log.json`（每次執行與接續）、`env.json`、`leak_check.json`、`config.json`（頂層是固定說明與跨執行的累計狀態，每次執行的實際設定在 `runs`）。JSON 和 CSV 的 float 都寫完整精度。原生 Windows 的正式執行會直接報錯，因為官方的多進程依賴 Linux 的 fork。",
+  "[營運性] 官方 cell 2：`CKPT_DIR` 改到 Drive 的結果目錄 `ckpt/`，拿掉 `TEST_DIR`。`NPROC` 從寫死的 8 改成 `os.cpu_count()`（官方註解寫「設成 CPU 核數」）。加上 SMOKE 縮小設定（只在 SMOKE 生效）。最後的 `print` 多印 `NPROC`、batch、epoch 數。",
+  "[營運性] 官方 cell 4：不印官方的「全量 N 局」和全量的等級分布；改成逐一印 `fit`、`inner` 的人數與盤數，等級分布只印訓練集（`df_train`）。顯示前 3 列時不印棋譜欄，不讓棋譜內容進 notebook 輸出。",
+  "[營運性] 官方 cell 6：示範用的第一盤改取 `df_train`（本版沒有合併的 `df`）。",
+  "[營運性] 官方 cell 9：分片特徵抽完後備份到 Drive 的 `features_rank/`，全部核對後才寫完成標記。重跑時有完整且設定相符的備份，就複製回來、核對 SHA-256，不重抽；備份缺檔、大小或 SHA-256 不符時改成重抽。重抽前先清掉不完整的舊分片。",
+  "[營運性] 官方 cell 11、12：`pick_workers` 另外記下讀出的筆數（寫進 `config.json`）。本機冒煙測試的 worker 候選數是 0（Windows 的 spawn 無法 pickle notebook 內定義的函式）。多 worker 對不上時照官方退回 0，並用 0 個 worker 再數一次；還是對不上 `VAL_SIZE` 就停下來，因為這表示 ③ 沒有成立。",
+  "[營運性] 官方 cell 16：每個 epoch 結束，把 model、optimizer、epoch、最佳分數、history 存成 `ckpt/state.pt`。重跑時從最後完成的 epoch 接續；`state.pt` 讀不進來、或設定和上次不同，就停下來並說明處理方式。另外記最佳 epoch 的編號，結束時一併印出。history 多記 loss、步數、樣本數、秒數和第幾次執行。官方的 `epoch_N.pth`、`best_model.pth`、`history.csv` 照樣存在 `ckpt/`。",
+  "[營運性] 官方 cell 16：`sync_best()` 把最佳 epoch 的 `epoch_N.pth` 複製成 `best_model.pth`：接續時做一次（中斷時可能留下寫一半的 `best_model.pth`），正常訓練結束時也做一次。複製來源和官方存的 `best_model.pth` 是同一個 epoch 結束時的同一份權重。找不到那個 `epoch_N.pth` 就停下來並說明處理方式。",
+  "[營運性] 官方 cell 16：每次執行記下有沒有讀 `state.pt`、是否接續訓練、實際訓練了哪些 epoch（`run_log.json`、`config.json` 的 `runs`），頂層的 `resumed` 表示是否曾經接續訓練。",
+  "[營運性] 官方 cell 18：訓練曲線另存 `ckpt/history.png`。非 Colab 時用不開視窗的 Agg 後端，不 `show()`，畫完就 `close()`。",
+  "[營運性] 官方 cell 20：`predict()` 讀題目檔時 `question_id` 以字串讀入（`dtype={'question_id': str}`），代號原樣照抄，不會被轉成數字。每題 assert 非空的 `sgf_` 欄數等於 `num_games`，題目檔格式不對就停。兩者都不改變預測。",
+  "[營運性] 官方 cell 21：推論用的權重、題目檔、題數寫進 `config.json`，秒數寫進 `timings.json`；輸出路徑指向 Drive 的結果目錄。"
+ ],
+ "resumed": false,
+ "resume_count": 0,
+ "runs": [
+  {
+   "run": 1,
+   "start": "2026-09-25T18:37:50+00:00",
+   "end": "2026-09-25T19:22:01+00:00",
+   "in_colab": true,
+   "mp_start_method": "fork",
+   "hyperparameters": {
+    "SEED": 42,
+    "BATCH_SIZE": 256,
+    "LEARNING_RATE": 0.001,
+    "NUM_EPOCHS": 5,
+    "NUM_CLASSES": 10,
+    "PER_SHARD": 1000,
+    "shuffle_buffer": 1000,
+    "shardshuffle_train": 1
+   },
+   "optimizer": {
+    "class": "AdamW",
+    "lr": 0.001,
+    "betas": [
+     0.9,
+     0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.01,
+    "amsgrad": false,
+    "maximize": false,
+    "foreach": null,
+    "capturable": false,
+    "differentiable": false,
+    "fused": null,
+    "decoupled_weight_decay": true
+   },
+   "criterion": "CrossEntropyLoss",
+   "model": {
+    "class": "GoRankResNet",
+    "parameters": 26349806,
+    "network_py_sha256": "794a0d9cc9a20984292a3746bcec6f6e106dac2ef14394cc0d142958693ec3b6"
+   },
+   "feature": {
+    "parser": "SGFParseRankPrediction",
+    "history_length": 250,
+    "utils_py_sha256": "3bdf715c6211282be103a75275ce211fdead65703d230b21db5be6ac411c1e63"
+   },
+   "device": "cuda",
+   "device_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "nproc": 48,
+   "cpu_count": 48,
+   "loader_workers": 4,
+   "worker_checks": [
+    {
+     "candidate": 4,
+     "counted": 73556,
+     "expected": 73556,
+     "matched": true
+    }
+   ],
+   "val_size": 73556,
+   "data": {
+    "fit_games_used": 720307,
+    "inner_games_used": 73556,
+    "train_written": {
+     "rows": 720307,
+     "written": 720307,
+     "bad": 0
+    },
+    "val_written": {
+     "rows": 73556,
+     "written": 73556,
+     "bad": 0
+    }
+   },
+   "features_mode": "extracted",
+   "checkpoint_rule": "best_model.pth＝內部驗證逐盤 accuracy 最高的 epoch（官方 validate()；同分取較早的 epoch）",
+   "start_epoch": 0,
+   "loaded_state": false,
+   "resumed_from_state": false,
+   "epochs_trained": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "trained_any_epoch": true,
+   "inference": {
+    "weights": "ckpt/best_model.pth",
+    "questions_file": "rank_val_questions.csv",
+    "questions_predicted": 1589,
+    "GPU_BATCH": 64,
+    "NPROC": 48,
+    "aggregation": "每盤各自 softmax，同題取平均（float32，與官方相同）",
+    "no_parsable_games": "pred_rank 填 D；rank_val_probs.csv 的 n_parsed=0、機率欄留空"
+   },
+   "outputs": {
+    "questions": 1589,
+    "questions_without_parsable_games": 0,
+    "games_total": 19156,
+    "games_parsed": 19156,
+    "prob_row_sum_min": 0.9999999012798066,
+    "prob_row_sum_max": 1.0000001164153214,
+    "pred_distribution": {
+     "D": 373,
+     "6D": 264,
+     "5D": 197,
+     "B": 166,
+     "A": 148,
+     "C": 133,
+     "2D": 112,
+     "1D": 106,
+     "4D": 70,
+     "3D": 20
+    },
+    "files": {
+     "config.json": 10052,
+     "env.json": 1626,
+     "leak_check.json": 1322,
+     "pred_official_argmax.csv": 21448,
+     "rank_val_probs.csv": 343570,
+     "run_log.json": 322,
+     "timings.json": 509
+    }
+   }
+  }
+ ],
+ "epochs_completed": 5,
+ "best_epoch": 5,
+ "best_val_acc": 25.14818641579205,
+ "trained_in_runs": [
+  1
+ ]
+}

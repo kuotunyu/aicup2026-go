@@ -1,0 +1,27 @@
+{
+ "games": 400,
+ "counts_equal": true,
+ "moves_compared": 45153,
+ "max_abs_move": 0.01823139190673828,
+ "max_abs_profile_mean": 0.0005971711402068536,
+ "max_abs_lp_hs": 0.007693472339934004,
+ "tolerances": {
+  "move": 0.05,
+  "profile_mean": 0.002,
+  "lp_hs": 0.02
+ },
+ "lp_hs_review_line": 0.005,
+ "lp_hs_above_review_line": true,
+ "bitwise_equal_sums": false,
+ "bitwise_equal_moves": false,
+ "problems": [],
+ "passed": true,
+ "format": "c10-test07 gpu seam v1",
+ "mode": "real",
+ "created": "2026-11-04T10:16:14+00:00",
+ "seam_hs_sha256": "81d774ca73b1bf4df766499184d602a454457f0bbf2551dd801c9a873b0a5b7a",
+ "reference": {
+  "val_hs.npz": "ef2067e8cb633f521c205a09aa4638c79fef3ba0b4e90e6a54bdc046e5a5550f",
+  "val_seam_moves.npz": "3e55fbfa70b43c36c2ebe30bdbca63ea6c68968a1521ec6d63fd2b698f6598ab"
+ }
+}

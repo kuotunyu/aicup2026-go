@@ -1,0 +1,36 @@
+{
+ "what": "Guard for the 06 test-day path before the PREREG_07 test-day kit is merged (K5', docs/TESTDAY_06.md K5' list): tracked files hashed with CRLF folded to LF, as results/prereg06/design/p04_path_fingerprint.json. tests/test_t06_path_hygiene.py fails if a listed file changes, if a new program or design file matches the patterns, or if an insert_only file loses or changes a line of local tag p06-testday-pre07.",
+ "head": "ce6416109b7a586e1dc361451c99c38365d51f2c",
+ "patterns": [
+  "tools/t06_*.py",
+  "tests/test_t06_*.py",
+  "results/test06/design/*",
+  "docs/TESTDAY_06.md",
+  "tests/conftest.py"
+ ],
+ "exclude": [
+  "tests/test_t06_path_hygiene.py"
+ ],
+ "n_files": 10,
+ "files": {
+  "docs/TESTDAY_06.md": "640a858c86f95fe76dbbe5b3115c08a5dee5576471e34a5bf22cc8e858a88bb5",
+  "results/test06/design/build_review.md": "01189482960040580246a3b1298a7b4ec6eaef9cdf48bc13ed1065e0c9472e87",
+  "results/test06/design/q04_fake_golden.json": "d24d3d583b6bf5e4ba23130afccc0f7c60cbdc6823d86877ccfd0a115847d12a",
+  "tests/conftest.py": "f015d618b5be0c3ac15ec043dd76a5b373da2a7302cb5c2a15c9818e64f4697b",
+  "tests/test_t06_dryrun.py": "cad52289f71197f0412422985b91504d8bebb15e141d0f1e8f13f284d7a617de",
+  "tests/test_t06_hygiene.py": "f8a7cc38c104fc9c33e91fabdf00a717fc20af5e6e5f019028e8e70f026e49ad",
+  "tests/test_t06_official_log.py": "b18d537bcd0dac55afef2aa457702e51eff80d75b524563054e5075626d358c9",
+  "tests/test_t06_player.py": "21fae6f2e5ff152706bd5f9dac6f512d3315a8b80adeb5e4e55b58313d85c17f",
+  "tools/t06_fake_tests.py": "cecfb2e78924ad4ac9da4fb90c93c1b108328f5030bcc37c5879f7dc5c462609",
+  "tools/t06_player.py": "d1e48050f827495579fc22b5ceff9b4d8eba8f18ab471909436ceb4d16f3b0f6"
+ },
+ "insert_only": {
+  "rule": "not pinned: later registered steps may only insert or append lines; every line of the version at tag p06-testday-pre07 must still be there, in order (CRLF folded)",
+  "files": {
+   "tools/official_log.py": "tests/test_p04_hygiene.py (every line of tag r20-testday-pre04) and tests/test_p06_hygiene.py InsertOnlySinceTag (every line of tag p04-testday-pre06); tests/test_t04_official_log.py and tests/test_t06_official_log.py TagVersusNew; the lines 06 added (its 06 branches): tests/test_t06_path_hygiene.py InsertOnlySinceTag",
+   "docs/PREREG_06_PLAYER_STYLE.md": "tests/test_p06_player_hygiene.py (PREREG_06 only gains lines); rev 3 row and section 11 and later lines up to the tag: tests/test_t06_path_hygiene.py InsertOnlySinceTag",
+   ".gitignore": "tests/test_t04_hygiene.py and tests/test_p06_hygiene.py (older tags); lines added up to the tag: tests/test_t06_path_hygiene.py InsertOnlySinceTag",
+   ".gitattributes": "tests/test_t04_hygiene.py and tests/test_p06_hygiene.py (older tags; results/test06/** -text: tests/test_t06_hygiene.py Attributes); lines added up to the tag: tests/test_t06_path_hygiene.py InsertOnlySinceTag"
+  }
+ }
+}

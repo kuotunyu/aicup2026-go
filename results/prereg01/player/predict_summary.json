@@ -1,0 +1,20 @@
+{
+ "finished_utc": "2026-09-25T19:29:46+00:00",
+ "smoke": false,
+ "weights": "/content/drive/MyDrive/C10/results/prereg01/player/ckpt/best_model.pth",
+ "weights_sha256": "356eb4f65488925e2a552ea382979780c903ef515b85d329a3805db837b7773b",
+ "output": "/content/drive/MyDrive/C10/results/prereg01/player/player_val_top5.csv",
+ "output_sha256": "0f5761a11b9f68ab07b2bc91b9650236f85b8cbeff45d459753dbd24459d3ec7",
+ "questions_csv_sha256": "d893a559f175b6535dc0d5f749314408b110149462f6a78a1b8cf7e9332cd676",
+ "candidates_csv_sha256": "7cd2897593ee9add20dce4ff5d4b0dcf8699b6d51a3f10950dc399a757dd3ad5",
+ "n_questions": 400,
+ "n_query_games": 4935,
+ "n_questions_embedded": 400,
+ "n_fallback_questions": 0,
+ "n_candidate_rows": 40000,
+ "n_candidate_players": 400,
+ "n_centroids": 400,
+ "GPU_BATCH": 4096,
+ "CHUNK": 256,
+ "NPROC": 48
+}

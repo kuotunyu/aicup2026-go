@@ -1,0 +1,26 @@
+{
+ "games": 73556,
+ "scored_games": 11813,
+ "anomalies": 0,
+ "tables": {
+  "t": {
+   "r0": 0.004021114978638617,
+   "moves": 79985811.0
+  },
+  "o": {
+   "r0": 0.004021144559569304,
+   "moves": 79985352.0
+  }
+ },
+ "variants": [
+  "t_choice_a5",
+  "t_choice_a20",
+  "t_choice_a100",
+  "t_nb",
+  "o_choice_a20",
+  "o_nb",
+  "t_choice_pat",
+  "t_choice_ctx"
+ ],
+ "seconds": 154.1
+}

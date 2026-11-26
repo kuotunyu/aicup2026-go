@@ -1,0 +1,92 @@
+{
+ "D": {
+  "players": 641,
+  "games": 69748,
+  "eff_players": 225.9,
+  "top10pct_share": 0.433,
+  "max_games": 965,
+  "median": 41.0,
+  "r20_oof": 0.742
+ },
+ "C": {
+  "players": 589,
+  "games": 75315,
+  "eff_players": 199.1,
+  "top10pct_share": 0.439,
+  "max_games": 1545,
+  "median": 45.0,
+  "r20_oof": 0.618
+ },
+ "B": {
+  "players": 755,
+  "games": 72264,
+  "eff_players": 287.9,
+  "top10pct_share": 0.406,
+  "max_games": 674,
+  "median": 37.0,
+  "r20_oof": 0.577
+ },
+ "A": {
+  "players": 1140,
+  "games": 71255,
+  "eff_players": 415.8,
+  "top10pct_share": 0.412,
+  "max_games": 924,
+  "median": 24.0,
+  "r20_oof": 0.536
+ },
+ "1D": {
+  "players": 312,
+  "games": 71538,
+  "eff_players": 121.8,
+  "top10pct_share": 0.406,
+  "max_games": 1505,
+  "median": 84.0,
+  "r20_oof": 0.467
+ },
+ "2D": {
+  "players": 439,
+  "games": 73011,
+  "eff_players": 166.5,
+  "top10pct_share": 0.402,
+  "max_games": 1467,
+  "median": 76.0,
+  "r20_oof": 0.488
+ },
+ "3D": {
+  "players": 445,
+  "games": 73725,
+  "eff_players": 169.1,
+  "top10pct_share": 0.41,
+  "max_games": 1304,
+  "median": 68.0,
+  "r20_oof": 0.472
+ },
+ "4D": {
+  "players": 460,
+  "games": 71135,
+  "eff_players": 155.4,
+  "top10pct_share": 0.435,
+  "max_games": 1800,
+  "median": 60.0,
+  "r20_oof": 0.576
+ },
+ "5D": {
+  "players": 474,
+  "games": 73840,
+  "eff_players": 180.1,
+  "top10pct_share": 0.407,
+  "max_games": 1275,
+  "median": 63.0,
+  "r20_oof": 0.631
+ },
+ "6D": {
+  "players": 512,
+  "games": 68476,
+  "eff_players": 207.3,
+  "top10pct_share": 0.403,
+  "max_games": 898,
+  "median": 62.0,
+  "r20_oof": 0.747
+ }
+}

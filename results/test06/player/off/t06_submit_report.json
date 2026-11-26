@@ -1,0 +1,323 @@
+{
+ "format": "c10-test06 submit v1",
+ "mode": "real",
+ "variant": "off",
+ "method": "prereg06 06-OFF: Q04 + v2 style + CSLS (甲)",
+ "what": "PREREG_06 5.2 / 5.3 submit: submission_player.csv = public rows, then private rows (question-file order), question_id,top_1..top_5, UTF-8 without BOM, LF",
+ "run_id": "3fa8588a283822ca5efd6e795d5b50256caddb8be8594575e5c52fde2b176471",
+ "on_conditions": {
+  "private_switch_usable_and_detector_open": {
+   "ok": true,
+   "detail": {
+    "selected": "V2",
+    "usable": true,
+    "r_forced_cost": 0.7952449495006428,
+    "r_star": 2.2515761243137895,
+    "opens": true
+   }
+  },
+  "h6p_secondary_not_negative": {
+   "ok": true,
+   "detail": {
+    "mean_diff": 0.025661908852146115
+   }
+  },
+  "pools_400_by_400": {
+   "ok": true,
+   "detail": {
+    "public": {
+     "questions": 400,
+     "candidates": 400,
+     "test02_questions": 400,
+     "test02_candidates": 400
+    },
+    "private": {
+     "questions": 400,
+     "candidates": 400,
+     "test02_questions": 400,
+     "test02_candidates": 400
+    }
+   }
+  },
+  "t2_c_zero_and_abd_not_failed": {
+   "ok": true,
+   "detail": {
+    "c_copies": {
+     "player_identification_test_public.csv": 0,
+     "player_identification_test_private.csv": 0
+    },
+    "abd_failed": [],
+    "units_present": [
+     "a",
+     "b",
+     "c",
+     "d"
+    ],
+    "verdict": "PASS",
+    "fake": null
+   }
+  },
+  "both_pools_06_at_guard_level_1": {
+   "ok": true,
+   "detail": {
+    "public": {
+     "used06": true,
+     "guard_level": 1
+    },
+    "private": {
+     "used06": true,
+     "guard_level": 1
+    }
+   }
+  },
+  "aidea_page_not_against_one_to_one": {
+   "ok": true,
+   "detail": {
+    "checked": "11/04 16:05 read https://www.aidea-web.tw/topic/dc0b799e-690f-4e84-a597-93e68d8ba688 (資料, 簡介, 規則 tabs; page text searched for 一對一/一一對應/不重複/重複/同一位/同一玩家/多題). 資料 says: 兩份候選庫皆包含：400 位候選玩家，每人 100 盤; Public 與 Private 測試集各包含 400 題; 正解必為該池候選之一. No statement that questions and candidates are or are not one-to-one, nor that one player can appear in several questions (沒有提到).",
+    "says_not_one_to_one": false
+   }
+  },
+  "before_k7": {
+   "ok": true,
+   "detail": {
+    "now": "2026-11-04T15:58:51.695778+08:00",
+    "k7p": "2026-11-22T23:59:59+08:00"
+   }
+  }
+ },
+ "all_on_conditions": true,
+ "on_produced": true,
+ "check_submission": {
+  "official": true,
+  "passed": true,
+  "errors": [],
+  "n_errors": 0,
+  "question_files": [
+   {
+    "path": "data/test/player_identification_test_public.csv",
+    "sha256": "0e59f7f72376cfa2e81ae913d61092caeb1240d95abb43a581207ed29f1647a8"
+   },
+   {
+    "path": "data/test/player_identification_test_private.csv",
+    "sha256": "4b07a403b36875f44007adb22aaa8da3c75ec3994e165f36c29a9400e6efcd11"
+   }
+  ]
+ },
+ "output": {
+  "path": "results/test06/player/off/submission_player.csv",
+  "sha256": "d06f9c8a7ffd3eb180479c8b234fc21ba067607db3b7baf056a620b538976140",
+  "rows": 800,
+  "bytes": 55242
+ },
+ "top1_differences_vs_q04": {
+  "public": 22,
+  "private": 39
+ },
+ "top1_differences_off_vs_on": {
+  "public": 6,
+  "private": 7
+ },
+ "q04_submission": {
+  "path": "results/test02/player/submission_player.csv",
+  "sha256": "e87aaa91df9ddb3f5838b8ce18fd56715c6edaa55d6902de1ceaa0afc3d5bc79"
+ },
+ "pools": {
+  "public": {
+   "used06": true,
+   "fallback_to_test02": false,
+   "rule": "guard level 1",
+   "selected": "V2",
+   "sr06": {
+    "V2": 0.984345432467946,
+    "V3": 0.9829677602130393,
+    "V0": 0.9432087606530851,
+    "R02": 0.9287105620793318
+   },
+   "gate06": {
+    "sr_selected_minus_R02": 0.055634870388614255,
+    "min": 0.0,
+    "passed": true
+   },
+   "detector": {
+    "r_forced_cost": 0.5960423224687734,
+    "forced_cost": 0.0041952465713247155,
+    "pseudo_forced_cost": [
+     0.00570952723504398,
+     0.008367481773135985
+    ],
+    "r_star": 2.2515761243137895,
+    "usable": true,
+    "opens": true,
+    "changed_top1": 6,
+    "assignment_distinct": true
+   },
+   "top5_on_written": true,
+   "top5_on_role": "the forced probe of 06-ON (PREREG_06 5.3: public always opens)",
+   "n_questions": 400,
+   "n_candidates": 400,
+   "guard_level": 1,
+   "t06_pool_sha256_lf": "45435f67519ef914a6f57d7d17e10febb1361e83ff40ae9da0f08a193eb3472d"
+  },
+  "private": {
+   "used06": true,
+   "fallback_to_test02": false,
+   "rule": "guard level 1",
+   "selected": "V2",
+   "sr06": {
+    "V2": 0.9803922319837648,
+    "V3": 0.9822917188942816,
+    "V0": 0.9392113121757732,
+    "R02": 0.9209807849472245
+   },
+   "gate06": {
+    "sr_selected_minus_R02": 0.05941144703654033,
+    "min": 0.0,
+    "passed": true
+   },
+   "detector": {
+    "r_forced_cost": 0.7952449495006428,
+    "forced_cost": 0.006682240457437653,
+    "pseudo_forced_cost": [
+     0.008566431824230425,
+     0.008239058010401342
+    ],
+    "r_star": 2.2515761243137895,
+    "usable": true,
+    "opens": true,
+    "changed_top1": 7,
+    "assignment_distinct": true
+   },
+   "top5_on_written": true,
+   "top5_on_role": "private: level 1, the combination usable, the detector open",
+   "n_questions": 400,
+   "n_candidates": 400,
+   "guard_level": 1,
+   "t06_pool_sha256_lf": "fb0b921d81887cfb734e757082d133552fffc548651b2c3d07c920aed23fdbb5"
+  }
+ },
+ "t6_record_only": {
+  "public": {
+   "r_forced_cost": 0.5960423224687734,
+   "changed_top1": 6
+  },
+  "private": {
+   "r_forced_cost": 0.7952449495006428,
+   "changed_top1": 7
+  }
+ },
+ "data_md_item5_record": {
+  "public": {
+   "questions": 400,
+   "candidates": 400
+  },
+  "private": {
+   "questions": 400,
+   "candidates": 400
+  },
+  "t2b_failed": []
+ },
+ "h6p": {
+  "score_H6P": {
+   "ci95_low": 0.06086986623422421,
+   "mean_diff": 0.08514148756572552
+  },
+  "score_H6P_switch": {
+   "mean_diff": 0.025661908852146115
+  },
+  "pins_checked": true,
+  "sha256": {
+   "apply_report.json": "5207662cade5dd795bef97f1bf5b8a07d8cfbebc2d689ce60efe3a4c56078351",
+   "frozen_config.json": "5e5c3b827782678bb3e985cd0caeada61e62951312ee1d6938bf4e331348bfc9",
+   "lda_B.npz": "ecfee95d0c7d8fdeb499ca9f89a8a6bb840e9a3cf0e999b1baa14ff78d69faa5",
+   "lda_W.npz": "e8bc63331a749bce83cc7cab8b7852bec70c6644f38fe89982f0dbbad581292d",
+   "player_val_top5.csv": "094223f69bf445a4c450212cc9b4a3eceda9c69e992d1ed7f7c6e02105b818be",
+   "player_val_top5_switch.csv": "9dfc8e1b5500d632f4a7f035dd50832723a72556caabb3ba1e57f779a3c7dcb6",
+   "score_H6P.json": "e73144af5c3039e5923ed0048252382dab4dfa7f2e54f63b8312cd9717f1569f",
+   "score_H6P_switch.json": "073beb887e89e6e30e58ff00bcf1ebbdfb96c591f84005cc13450df16573b04c"
+  },
+  "adopted": true,
+  "secondary_not_negative": true,
+  "results_md_says_adopted": true,
+  "ledger_h6p_rows": 4
+ },
+ "seam": {
+  "path": "results/test06/player/seam_val/t06_seam.json",
+  "sha256_lf": "6a019179f86dcec088dc21fecbc2c1f00e14285e0efc490ae10055fa3fc7246c",
+  "passed": true
+ },
+ "t1": {
+  "path": "results/test02/checks/player/t1.json",
+  "sha256_lf": "cc0ddcf72f857ed4c5ab335cf14e17a4747fe0c82e4fa6db73ffca76ec0c42cd",
+  "verdict": "PASS"
+ },
+ "q04_upload": {
+  "checked": true,
+  "entry_id": 2,
+  "sha256": "e87aaa91df9ddb3f5838b8ce18fd56715c6edaa55d6902de1ceaa0afc3d5bc79",
+  "uploaded_at": "2026-11-04T15:32:01+08:00"
+ },
+ "inputs_bound": {
+  "results/test02/player/submission_player.csv": "e87aaa91df9ddb3f5838b8ce18fd56715c6edaa55d6902de1ceaa0afc3d5bc79",
+  "results/test02/player/submit_report.json": "bbb32535fe6c8925749d7c328f57292702399fa605e555b6daa08ee6342d713b",
+  "results/test02/player/seam_val/seam_local.json": "76cd1626a7e017c42f0abb5024fd42ab88cf4d141468b25a8ed2f8db37206dac",
+  "results/test02/checks/player/t1.json": "cc0ddcf72f857ed4c5ab335cf14e17a4747fe0c82e4fa6db73ffca76ec0c42cd",
+  "results/test02/player/public/apply_report.json": "f3373b0c385e0c5d3e59d1ebc02ee657ce25d10914bde3a959f84f9618558412",
+  "results/test02/player/public/pool_select.json": "756d7cfaa922fe974f1bfeab968ebe8ff1184c9f9bd0706d1e548adbcc237436",
+  "results/test02/player/public/top5.csv": "33f69f12e5faf9417c8e9dc253f47b471992979d1a80e882f9d5b27d5a073ef8",
+  "results/test02/player/private/apply_report.json": "d78c3ab22f5cf841002190b06e87dd750e39e4843d1571d84e0bc8becc54d2b5",
+  "results/test02/player/private/pool_select.json": "06e311ccf081177cc389310ab8fdec23ff5367b35c35ebba8a454ed3a7182e6d",
+  "results/test02/player/private/top5.csv": "bd63ad26ec38d4c73f74ab8d0b3497527ba2f9ef7557a89945876d3753692ed2",
+  "results/test02/player/seam_val/dumps/cand_games.npz": "56ed03d12e9a79871a21b5f69dc4bd4bb8c8aa69b1544cb8ec799e80227cfdea",
+  "results/test02/player/seam_val/dumps/query_games.npz": "665d0888a93f6632eb19edac76abf996d5499cd27c683d9844b97cb274b6f689",
+  "results/test02/player/public/dumps/cand_games.npz": "e8ade6004f4be0a29e791ce44cedf31f65af57c25e2a9628fd4cfd73dde5edf3",
+  "results/test02/player/public/dumps/query_games.npz": "9efe8788f5b302676b647df65ed033decf132e1a0766f7f433e68dbcdf9ce55e",
+  "results/test02/player/private/dumps/cand_games.npz": "d133b7d0c8256e3a2b8d0f20477649fe01b6af2a34bb2689f5ae6a6a126b2af2",
+  "results/test02/player/private/dumps/query_games.npz": "7f4e67d6b715a9eb6625793ac27d9c25017db423fce9f8c723fb8b5d9b425870",
+  "results/prereg06/player/frozen_config.json": "5e5c3b827782678bb3e985cd0caeada61e62951312ee1d6938bf4e331348bfc9",
+  "results/prereg06/player/lda_B.npz": "ecfee95d0c7d8fdeb499ca9f89a8a6bb840e9a3cf0e999b1baa14ff78d69faa5",
+  "results/prereg06/player/lda_W.npz": "e8bc63331a749bce83cc7cab8b7852bec70c6644f38fe89982f0dbbad581292d",
+  "results/prereg06/player/score_H6P.json": "e73144af5c3039e5923ed0048252382dab4dfa7f2e54f63b8312cd9717f1569f",
+  "results/prereg06/player/score_H6P_switch.json": "073beb887e89e6e30e58ff00bcf1ebbdfb96c591f84005cc13450df16573b04c",
+  "results/test06/player/seam_val/t06_seam.json": "6a019179f86dcec088dc21fecbc2c1f00e14285e0efc490ae10055fa3fc7246c",
+  "results/test06/player/seam_val/feats_report.json": "e51a8402d5a705b5d9274d6c11f1c1fa398acf1e1bf983e96732e25a74e476d7",
+  "results/test06/player/public/feats_report.json": "f9904f9ecf60ad858446609751b5e8dc7984d0e9ff524309293dbc790f47c600",
+  "results/test06/player/private/feats_report.json": "0b8b465f88a91d030f692980520e3ca32217edd156d986087c2d514991657ca4",
+  "results/test06/player/public/t06_pool.json": "45435f67519ef914a6f57d7d17e10febb1361e83ff40ae9da0f08a193eb3472d",
+  "results/test06/player/public/top5_off.csv": "699b4990eb163b67565b5c21381ae0305d29f131b1caa0dd3aa6e27738253850",
+  "results/test06/player/private/t06_pool.json": "fb0b921d81887cfb734e757082d133552fffc548651b2c3d07c920aed23fdbb5",
+  "results/test06/player/private/top5_off.csv": "59702d2c0a2b03a3c9fdcdb57fb4bac270d14a03581baa9ff18fa4c4c9fddc40"
+ },
+ "inputs_bound_rule": "sha256 with CRLF folded to LF for .csv / .json, raw bytes otherwise",
+ "frozen": {
+  "path": "results/prereg06/player/frozen_config.json",
+  "sha256_lf": "5e5c3b827782678bb3e985cd0caeada61e62951312ee1d6938bf4e331348bfc9",
+  "pinned": true,
+  "lda_sha256": {
+   "B": "ecfee95d0c7d8fdeb499ca9f89a8a6bb840e9a3cf0e999b1baa14ff78d69faa5",
+   "W": "e8bc63331a749bce83cc7cab8b7852bec70c6644f38fe89982f0dbbad581292d"
+  }
+ },
+ "rerun": null,
+ "tools": {
+  "git_head": "3cb01331751fe7b7e4182e0c2aa3425402a80ac1",
+  "files_sha256_lf": {
+   "tools/t06_player.py": "d1e48050f827495579fc22b5ceff9b4d8eba8f18ab471909436ceb4d16f3b0f6",
+   "tools/p06_style.py": "78beb8138c27853da70081e469e534508174265852a64ebada21e354ae72058a",
+   "tools/p06_sim.py": "21deeea1eb08b1d6580ba78c47505789f66dbdd10c8891973e14f523ef443eeb",
+   "tools/p06_player.py": "b25636878ee87ca828a9c65177965dc60466ac4e9aa348acd88785ca11075590",
+   "tools/p02_player_fuse.py": "cb1cc1a2ba626a80ed49e7ae8269715f1e123f33777b6ed135380dbd07b35d5b",
+   "tools/p02_player_open.py": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+   "tools/p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "tools/c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "tools/check_submission.py": "b5c7c300cca4fcd5b243e4579417453699777e99bd4aff88dcbf6805e9346144"
+  }
+ },
+ "env": {
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "executable": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\.venv\\Scripts\\python.exe"
+ },
+ "created": "2026-11-04T15:58:56+08:00",
+ "seconds": 5.1
+}

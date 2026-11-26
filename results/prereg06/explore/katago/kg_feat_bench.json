@@ -1,0 +1,531 @@
+{
+ "what": "KataGo python featurisation on fit-player SGFs (no network weights); Japanese rules komi 6.5",
+ "katago_python": "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\D--AI-Portfolio-competitions-aicup2026-go\\a8d08794-7564-42a1-933e-30b4ef8b21ce\\scratchpad\\katago\\KataGo\\python",
+ "seconds_load_rows": 1092.2460434436798,
+ "move_stats_fit": {
+  "games": 720307,
+  "total_moves_mean": 222.087475201546,
+  "total_moves_median": 228,
+  "target_moves_mean": 111.04405621491946,
+  "target_moves_median": 114,
+  "target_moves_p90": 143.0,
+  "target_moves_max": 223,
+  "per_level_target_moves_mean": {
+   "D": 114.28980042438494,
+   "C": 113.77679081192325,
+   "B": 113.2507472600465,
+   "A": 112.00825205248755,
+   "1D": 112.17580866113114,
+   "2D": 110.52730410486092,
+   "3D": 109.00401492031197,
+   "4D": 109.021114781753,
+   "5D": 109.59507042253522,
+   "6D": 106.62928617325778
+  },
+  "per_level_games": {
+   "D": 69748,
+   "C": 75315,
+   "B": 72264,
+   "A": 71255,
+   "1D": 71538,
+   "2D": 73011,
+   "3D": 73725,
+   "4D": 71135,
+   "5D": 73840,
+   "6D": 68476
+  }
+ },
+ "sample_games": 60,
+ "sample_seed": 20261002,
+ "illegal_or_out_of_turn_games": 0,
+ "illegal_moves": 0,
+ "target_positions": 6301,
+ "positions_with_any_ladder_feature": 4446,
+ "seconds_feature_fill": 81.6866916000472,
+ "seconds_board_play_and_copy": 0.4169675000130155,
+ "positions_per_second_one_core_features_only": 77.13618799560196,
+ "positions_per_second_one_core_including_play": 76.74444804367286,
+ "per_game": [
+  {
+   "rank": "D",
+   "color": "B",
+   "moves": 168,
+   "target_positions": 84,
+   "replayed_ok": true,
+   "seconds": 1.463300700000218
+  },
+  {
+   "rank": "D",
+   "color": "B",
+   "moves": 165,
+   "target_positions": 83,
+   "replayed_ok": true,
+   "seconds": 0.35477050000008603
+  },
+  {
+   "rank": "D",
+   "color": "W",
+   "moves": 107,
+   "target_positions": 53,
+   "replayed_ok": true,
+   "seconds": 0.2700825000001714
+  },
+  {
+   "rank": "D",
+   "color": "W",
+   "moves": 228,
+   "target_positions": 114,
+   "replayed_ok": true,
+   "seconds": 2.075565000000097
+  },
+  {
+   "rank": "D",
+   "color": "W",
+   "moves": 267,
+   "target_positions": 133,
+   "replayed_ok": true,
+   "seconds": 3.1718313000001217
+  },
+  {
+   "rank": "D",
+   "color": "B",
+   "moves": 237,
+   "target_positions": 119,
+   "replayed_ok": true,
+   "seconds": 1.0779150999997
+  },
+  {
+   "rank": "C",
+   "color": "W",
+   "moves": 237,
+   "target_positions": 118,
+   "replayed_ok": true,
+   "seconds": 0.9756671000004644
+  },
+  {
+   "rank": "C",
+   "color": "W",
+   "moves": 172,
+   "target_positions": 86,
+   "replayed_ok": true,
+   "seconds": 0.9691429999993488
+  },
+  {
+   "rank": "C",
+   "color": "B",
+   "moves": 290,
+   "target_positions": 145,
+   "replayed_ok": true,
+   "seconds": 2.015857500000493
+  },
+  {
+   "rank": "C",
+   "color": "W",
+   "moves": 107,
+   "target_positions": 53,
+   "replayed_ok": true,
+   "seconds": 0.24479359999986627
+  },
+  {
+   "rank": "C",
+   "color": "B",
+   "moves": 219,
+   "target_positions": 110,
+   "replayed_ok": true,
+   "seconds": 1.1529383999995844
+  },
+  {
+   "rank": "C",
+   "color": "B",
+   "moves": 256,
+   "target_positions": 128,
+   "replayed_ok": true,
+   "seconds": 1.4973148999997647
+  },
+  {
+   "rank": "B",
+   "color": "W",
+   "moves": 230,
+   "target_positions": 115,
+   "replayed_ok": true,
+   "seconds": 0.9954644999997981
+  },
+  {
+   "rank": "B",
+   "color": "B",
+   "moves": 285,
+   "target_positions": 143,
+   "replayed_ok": true,
+   "seconds": 2.0579697999992277
+  },
+  {
+   "rank": "B",
+   "color": "W",
+   "moves": 185,
+   "target_positions": 92,
+   "replayed_ok": true,
+   "seconds": 1.0285351000002265
+  },
+  {
+   "rank": "B",
+   "color": "W",
+   "moves": 271,
+   "target_positions": 135,
+   "replayed_ok": true,
+   "seconds": 3.3069323999998232
+  },
+  {
+   "rank": "B",
+   "color": "W",
+   "moves": 245,
+   "target_positions": 122,
+   "replayed_ok": true,
+   "seconds": 1.832399699999769
+  },
+  {
+   "rank": "B",
+   "color": "B",
+   "moves": 208,
+   "target_positions": 104,
+   "replayed_ok": true,
+   "seconds": 0.5755175000003874
+  },
+  {
+   "rank": "A",
+   "color": "W",
+   "moves": 115,
+   "target_positions": 57,
+   "replayed_ok": true,
+   "seconds": 0.20278439999947295
+  },
+  {
+   "rank": "A",
+   "color": "B",
+   "moves": 221,
+   "target_positions": 111,
+   "replayed_ok": true,
+   "seconds": 0.8397098000004917
+  },
+  {
+   "rank": "A",
+   "color": "B",
+   "moves": 133,
+   "target_positions": 67,
+   "replayed_ok": true,
+   "seconds": 0.5099559000000227
+  },
+  {
+   "rank": "A",
+   "color": "B",
+   "moves": 246,
+   "target_positions": 123,
+   "replayed_ok": true,
+   "seconds": 2.206390100000135
+  },
+  {
+   "rank": "A",
+   "color": "B",
+   "moves": 280,
+   "target_positions": 140,
+   "replayed_ok": true,
+   "seconds": 1.6626102999998693
+  },
+  {
+   "rank": "A",
+   "color": "B",
+   "moves": 223,
+   "target_positions": 112,
+   "replayed_ok": true,
+   "seconds": 1.675996099999793
+  },
+  {
+   "rank": "1D",
+   "color": "W",
+   "moves": 156,
+   "target_positions": 78,
+   "replayed_ok": true,
+   "seconds": 0.6492521000000124
+  },
+  {
+   "rank": "1D",
+   "color": "B",
+   "moves": 302,
+   "target_positions": 151,
+   "replayed_ok": true,
+   "seconds": 2.7253299999993033
+  },
+  {
+   "rank": "1D",
+   "color": "B",
+   "moves": 236,
+   "target_positions": 118,
+   "replayed_ok": true,
+   "seconds": 1.8052420999993046
+  },
+  {
+   "rank": "1D",
+   "color": "B",
+   "moves": 188,
+   "target_positions": 94,
+   "replayed_ok": true,
+   "seconds": 0.4798285999995642
+  },
+  {
+   "rank": "1D",
+   "color": "W",
+   "moves": 287,
+   "target_positions": 143,
+   "replayed_ok": true,
+   "seconds": 2.6572949000001245
+  },
+  {
+   "rank": "1D",
+   "color": "W",
+   "moves": 254,
+   "target_positions": 127,
+   "replayed_ok": true,
+   "seconds": 2.238293700000213
+  },
+  {
+   "rank": "2D",
+   "color": "B",
+   "moves": 229,
+   "target_positions": 115,
+   "replayed_ok": true,
+   "seconds": 3.2113510999997743
+  },
+  {
+   "rank": "2D",
+   "color": "W",
+   "moves": 171,
+   "target_positions": 85,
+   "replayed_ok": true,
+   "seconds": 0.8505841000005603
+  },
+  {
+   "rank": "2D",
+   "color": "W",
+   "moves": 296,
+   "target_positions": 148,
+   "replayed_ok": true,
+   "seconds": 2.4258528999998816
+  },
+  {
+   "rank": "2D",
+   "color": "B",
+   "moves": 246,
+   "target_positions": 123,
+   "replayed_ok": true,
+   "seconds": 1.4081335999999283
+  },
+  {
+   "rank": "2D",
+   "color": "W",
+   "moves": 215,
+   "target_positions": 107,
+   "replayed_ok": true,
+   "seconds": 1.275688199999422
+  },
+  {
+   "rank": "2D",
+   "color": "W",
+   "moves": 207,
+   "target_positions": 103,
+   "replayed_ok": true,
+   "seconds": 1.5177068000002691
+  },
+  {
+   "rank": "3D",
+   "color": "W",
+   "moves": 184,
+   "target_positions": 92,
+   "replayed_ok": true,
+   "seconds": 0.5590481999997792
+  },
+  {
+   "rank": "3D",
+   "color": "B",
+   "moves": 135,
+   "target_positions": 68,
+   "replayed_ok": true,
+   "seconds": 0.6742256999996243
+  },
+  {
+   "rank": "3D",
+   "color": "W",
+   "moves": 186,
+   "target_positions": 93,
+   "replayed_ok": true,
+   "seconds": 1.2337192000004507
+  },
+  {
+   "rank": "3D",
+   "color": "B",
+   "moves": 181,
+   "target_positions": 91,
+   "replayed_ok": true,
+   "seconds": 0.80523919999996
+  },
+  {
+   "rank": "3D",
+   "color": "B",
+   "moves": 241,
+   "target_positions": 121,
+   "replayed_ok": true,
+   "seconds": 2.3552534999998898
+  },
+  {
+   "rank": "3D",
+   "color": "B",
+   "moves": 231,
+   "target_positions": 116,
+   "replayed_ok": true,
+   "seconds": 2.4524777000005997
+  },
+  {
+   "rank": "4D",
+   "color": "W",
+   "moves": 109,
+   "target_positions": 54,
+   "replayed_ok": true,
+   "seconds": 0.5376615999994101
+  },
+  {
+   "rank": "4D",
+   "color": "W",
+   "moves": 233,
+   "target_positions": 116,
+   "replayed_ok": true,
+   "seconds": 1.7046988000001875
+  },
+  {
+   "rank": "4D",
+   "color": "B",
+   "moves": 250,
+   "target_positions": 125,
+   "replayed_ok": true,
+   "seconds": 2.070458099999996
+  },
+  {
+   "rank": "4D",
+   "color": "B",
+   "moves": 211,
+   "target_positions": 106,
+   "replayed_ok": true,
+   "seconds": 1.089911499999289
+  },
+  {
+   "rank": "4D",
+   "color": "B",
+   "moves": 197,
+   "target_positions": 99,
+   "replayed_ok": true,
+   "seconds": 0.871337699999458
+  },
+  {
+   "rank": "4D",
+   "color": "W",
+   "moves": 193,
+   "target_positions": 96,
+   "replayed_ok": true,
+   "seconds": 0.8935252999999648
+  },
+  {
+   "rank": "5D",
+   "color": "B",
+   "moves": 248,
+   "target_positions": 124,
+   "replayed_ok": true,
+   "seconds": 1.643586299999697
+  },
+  {
+   "rank": "5D",
+   "color": "W",
+   "moves": 157,
+   "target_positions": 78,
+   "replayed_ok": true,
+   "seconds": 0.37065549999988434
+  },
+  {
+   "rank": "5D",
+   "color": "W",
+   "moves": 128,
+   "target_positions": 64,
+   "replayed_ok": true,
+   "seconds": 0.4613022000003184
+  },
+  {
+   "rank": "5D",
+   "color": "B",
+   "moves": 228,
+   "target_positions": 114,
+   "replayed_ok": true,
+   "seconds": 1.1359607000003962
+  },
+  {
+   "rank": "5D",
+   "color": "B",
+   "moves": 133,
+   "target_positions": 67,
+   "replayed_ok": true,
+   "seconds": 0.736946999999418
+  },
+  {
+   "rank": "5D",
+   "color": "B",
+   "moves": 290,
+   "target_positions": 145,
+   "replayed_ok": true,
+   "seconds": 2.401759800000036
+  },
+  {
+   "rank": "6D",
+   "color": "W",
+   "moves": 113,
+   "target_positions": 56,
+   "replayed_ok": true,
+   "seconds": 0.23650869999983115
+  },
+  {
+   "rank": "6D",
+   "color": "W",
+   "moves": 237,
+   "target_positions": 118,
+   "replayed_ok": true,
+   "seconds": 1.3202967999995963
+  },
+  {
+   "rank": "6D",
+   "color": "W",
+   "moves": 216,
+   "target_positions": 108,
+   "replayed_ok": true,
+   "seconds": 1.6738710999998148
+  },
+  {
+   "rank": "6D",
+   "color": "W",
+   "moves": 120,
+   "target_positions": 60,
+   "replayed_ok": true,
+   "seconds": 0.6625365999998394
+  },
+  {
+   "rank": "6D",
+   "color": "W",
+   "moves": 208,
+   "target_positions": 104,
+   "replayed_ok": true,
+   "seconds": 1.153721300000143
+  },
+  {
+   "rank": "6D",
+   "color": "B",
+   "moves": 294,
+   "target_positions": 147,
+   "replayed_ok": true,
+   "seconds": 1.954848100000163
+  }
+ ],
+ "note": "single process on a shared desktop CPU; other jobs were running, so treat speed as a rough lower bound"
+}

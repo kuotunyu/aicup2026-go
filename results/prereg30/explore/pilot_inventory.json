@@ -1,0 +1,66 @@
+{
+ "format": "c10-prereg30 pilot inventory v1",
+ "what": "PLAN.md 2: pilot games = probe rows whose player is held out by S25 (fit players only)",
+ "games": 26779,
+ "players": 588,
+ "per_level": {
+  "D": {
+   "players": 69,
+   "games": 2978
+  },
+  "C": {
+   "players": 57,
+   "games": 2414
+  },
+  "B": {
+   "players": 71,
+   "games": 2363
+  },
+  "A": {
+   "players": 107,
+   "games": 2262
+  },
+  "1D": {
+   "players": 30,
+   "games": 2506
+  },
+  "2D": {
+   "players": 43,
+   "games": 2587
+  },
+  "3D": {
+   "players": 58,
+   "games": 3272
+  },
+  "4D": {
+   "players": 52,
+   "games": 2798
+  },
+  "5D": {
+   "players": 48,
+   "games": 2815
+  },
+  "6D": {
+   "players": 53,
+   "games": 2784
+  }
+ },
+ "colours": {
+  "W": 13722,
+  "B": 13057
+ },
+ "games_by_src": {
+  "p1_probe": 3103,
+  "p2_probe": 12217,
+  "p3_probe": 11459
+ },
+ "positions_from_original_chunks": 5924986,
+ "positions_per_game": 221.25,
+ "gpu_hours_at_p1_speed": 1.334,
+ "p1_speed_reference_positions_per_s": 1234.2,
+ "game_list_sha256": "76d507bd3b740aa2b67490326cc573a2ad505c8f8c106a83016f3bf46f401da5",
+ "sets_json_sha256": "55b4bb14def5dae27c5c9e7f491d7c144fb5a23b658b27087aea0631b307cbac",
+ "pilot_map_sha256": "bbb3850807880704491c8b7658c160a2fec59b467346f0052aea397c2d952396",
+ "probe_meta_sha256": "28286a663dacc0dd545819b52ee7c2b9c73caa7f280b4aeccb1760122c0929ac",
+ "seconds": 4.9
+}

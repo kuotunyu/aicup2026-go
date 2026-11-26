@@ -1,0 +1,15 @@
+{
+ "rows": 1600,
+ "problems": [],
+ "ok": true,
+ "v1_file": "results/test06/player/on/submission_player.csv",
+ "v1_sha256": "94cc82650dd451d95336ad9d3951519ecfb84482a5bad0f52667089a25ac2cbf",
+ "v1_rows_kept": 800,
+ "sha256": "ac25aa81bbf86679b8a4604af8cd284c91b21d3985ba0f688ad67204ba1746fa",
+ "by_prefix": {
+  "pub_": 400,
+  "priv_": 400,
+  "pub2_": 400,
+  "priv2_": 400
+ }
+}

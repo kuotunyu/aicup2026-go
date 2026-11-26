@@ -1,0 +1,15 @@
+{
+ "terms": [
+  "base",
+  "lda64",
+  "joseki_own",
+  "style2"
+ ],
+ "weights": [
+  1.0,
+  2.66,
+  0.5,
+  0.5
+ ],
+ "post": "csls3"
+}

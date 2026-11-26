@@ -1,0 +1,32 @@
+{
+ "format": "c10-prereg66 prep-e v1",
+ "file": "data/prereg66/z_E.npz",
+ "sha256": "d0921a285c2a6dfd59b46b3ed1702238c36babc5dbfb51b9ccc53daff8991e93",
+ "carbon_loader_equals_v27_p1_sets": {
+  "E": {
+   "games": 56934,
+   "usable_equal": true,
+   "side0_equal": true,
+   "rows_equal": true
+  },
+  "E2": {
+   "games": 35769,
+   "usable_equal": true,
+   "side0_equal": true,
+   "rows_equal": true
+  }
+ },
+ "z_multi_equals_prereg63_zBC_E": true,
+ "head": {
+  "file": "results/prereg64/rank/c49_head.npz",
+  "sha256": "ea7408d96181e5f6012bb7aafd1f4c2c31a66be77bf72b8220d688a41d0f0a6a"
+ },
+ "vectors": {
+  "file": "data/prereg49/emb/V2_step_320000_raw_tta1/store_E.npz",
+  "sha256": "27ce57a23c1b99a6968bf71689fea35e46f3f6cd4b8f7bb244be33a154e010f6"
+ },
+ "note": "features only: no owner is read, no score is computed",
+ "git_head": "1fe1d2dd36c3d034cb757d8709f5400e514843d2",
+ "peak_rss_mb": 2438.4,
+ "seconds": 138.6
+}

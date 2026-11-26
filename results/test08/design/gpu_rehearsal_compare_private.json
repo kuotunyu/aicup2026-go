@@ -1,0 +1,30 @@
+{
+ "games": 1000,
+ "equal": {
+  "failed": true,
+  "counts": true,
+  "n_moves": true,
+  "color": true
+ },
+ "max_abs_std_feature": 0.01863875994554931,
+ "max_abs_lp_p1": 0.015975245995750953,
+ "bitwise_equal_means": false,
+ "positions_per_s": 983.3,
+ "positions": 221085,
+ "gpu_seconds": 224.8,
+ "validation_rows": [
+  4787,
+  5786
+ ],
+ "rows_contiguous": true,
+ "chunk_starts_val_rows": [
+  4787,
+  4987,
+  5187,
+  5387,
+  5587
+ ],
+ "chunk_boundaries_differ_from_val": true,
+ "passed": true,
+ "rule": "failed / counts / n_moves equal; standardised features <= 0.05; lp_P1TO <= 0.02 (PREREG_08 5.2)"
+}

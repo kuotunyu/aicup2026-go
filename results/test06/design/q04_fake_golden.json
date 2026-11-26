@@ -1,0 +1,118 @@
+{
+ "what": "Q04 fake-tree golden (results/prereg06/design/spec.md 9.3 item 1; PREREG_06 5.1): the deterministic outputs of test02's competition-1 dry run (t02_fake_tests.py from-val -> t02_checks.py t1 --only T1.1,T1.2,T1.3 -> t02_player.py run seam_val / public / private --dry-run -> submit --dry-run), recorded on branch p06-testday before tools/t06_player.py existed. tests/test_t06_dryrun.py Q04Golden and the pre-merge check must reproduce every value under files_sha256 and reports_normalised_sha256.",
+ "tree": "S = the from-val tree (tests/test_t02_dryrun.py FromValPipeline workdir('fromval') when recorded; tests/test_t06_dryrun.py uses its own workdir); paths below are relative to S",
+ "normalise_rule": "json.load; drop the keys ['provenance', 'runtime_s'] at any depth; replace the values at the key paths ['notebook/config_sha256', 'notebook_config_sha256', 't1/sha256', 'test_bundle/MANIFEST.json', 'seam/sha256', 'seam_local/sha256', 'pools/*/apply_report_sha256', 'pools/*/pool_select_sha256'] with '<volatile>' (SHA-256 of files with a creation time); a string that is a path with a data/local segment (either slash, absolute or relative) becomes 'data/local/<rest>' with forward slashes; replace the tree's absolute path (backslash and slash forms) inside every other string with '<S>'; sha256 of json.dumps(obj, sort_keys=True, ensure_ascii=False) as UTF-8",
+ "files_sha256": {
+  "out/player/submission_player.csv": "b5d7473e1011c299f509a5ac269d60471068fc3f6cfbe1430ddafcd50ee9b8b4",
+  "out/player/seam_val/top5.csv": "69ca74a61ce34f8ffa8949df731df433d474347dce9aabb535156ab8197ead6c",
+  "out/player/public/top5.csv": "ad589e4fdb4251b7b0af4a2f63a755c48dcf12c1adda209ea21f7be598c47abb",
+  "out/player/private/top5.csv": "ec461436fa8c0e9886a998008768e3fda4dfbdedc15716fc12b8613165bb30a5"
+ },
+ "reports_normalised_sha256": {
+  "out/player/seam_val/pool_select.json": "5905ed44bc102134e8913fef1aade3cb888a1b576e493b46cbd5076c79a9e2e1",
+  "out/player/seam_val/apply_report.json": "3f31984a0a66398c956f7b76858ab865a8e052dbb5fc2e0d9b258dce7b6eb476",
+  "out/player/seam_val/seam_local.json": "84bfcea7cbb39be845208b8bce005f73dd78b8c75e4a5cac9d83b7e1ec6fba1c",
+  "out/player/public/pool_select.json": "c108cb1ae135de690c1cde0599ce14e743dbeac7d2c9b2bebc442e934d146652",
+  "out/player/public/apply_report.json": "560be25b7cfd591bc478dc9b0ccf31ce88c4e664303c6e979dd087fbbe17d996",
+  "out/player/private/pool_select.json": "5d91362ae53be352ee64015c8f71e3e9f1d2eb58e1dadb6e5a7effa196c357df",
+  "out/player/private/apply_report.json": "057ae538ae20a897159dd883a77fe8e6a7494f1aa4236686fa5f93b2b767f60b",
+  "out/player/submit_report.json": "74888c9f05c4ca3b22ac34e19f71445f8757b46ef082cdfb079b88d0bccd39cf"
+ },
+ "decisions": {
+  "seam_val": {
+   "selected": "Q04",
+   "gate": {
+    "q00_mean": 0.4006408144088361,
+    "selected_mean": 0.8997649863787647,
+    "selected_minus_q00": 0.4991241719699286,
+    "threshold": 0.02,
+    "passed": true
+   },
+   "effective": "Q04",
+   "applied": "Q04",
+   "guard_level": 1,
+   "rho": {
+    "raw": 1.0068420434547063,
+    "canon": 0.98879379491075
+   },
+   "self_retrieval_mean_selected": 0.8997649863787647,
+   "seam_passed": true,
+   "byte_identical_top5": true
+  },
+  "public": {
+   "selected": "Q04",
+   "gate": {
+    "q00_mean": 0.40996749934606624,
+    "selected_mean": 0.9021469023127683,
+    "selected_minus_q00": 0.49217940296670204,
+    "threshold": 0.02,
+    "passed": true
+   },
+   "effective": "Q04",
+   "applied": "Q04",
+   "guard_level": 1,
+   "rho": {
+    "raw": 1.0126024400509277,
+    "canon": 0.9922254632089934
+   },
+   "self_retrieval_mean_selected": 0.9021469023127683
+  },
+  "private": {
+   "selected": "Q04",
+   "gate": {
+    "q00_mean": 0.40477611239745626,
+    "selected_mean": 0.8982118617937633,
+    "selected_minus_q00": 0.4934357493963071,
+    "threshold": 0.02,
+    "passed": true
+   },
+   "effective": "Q04",
+   "applied": "Q04",
+   "guard_level": 1,
+   "rho": {
+    "raw": 1.0039671134814359,
+    "canon": 0.9868256148859564
+   },
+   "self_retrieval_mean_selected": 0.8982118617937633
+  }
+ },
+ "provenance": {
+  "git_head": "952180cb9d09a6437ef559134f6a5c141fa0db77",
+  "branch": "p06-testday",
+  "recorded": "2026-10-03T12:00:42+0800",
+  "tree": "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\D--AI-Portfolio-competitions-aicup2026-go\\a8d08794-7564-42a1-933e-30b4ef8b21ce\\scratchpad\\p06td\\golden\\fromval",
+  "commands": "C10_SLOW=1 C10_KEEP=1 C10_DRYRUN_DIR=<scratch>/golden PY -m pytest -q tests/test_t02_dryrun.py -k FromValPipeline (15 passed), run twice at the same path: the files and the normalised reports were equal; only the VOLATILE values and the dropped keys differed",
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "tools_sha256_lf": {
+   "t02_player.py": "b83a979615ee978792e18eecb32f60936622dcbc6c10068dbda00f2a33207bdf",
+   "t02_fake_tests.py": "17cf88024ac8b34c5f473d9bf5ca8d1201f1e2779e6d7b535e9b3fac8fbf34d7",
+   "t02_checks.py": "a6fb40f99e7af19bfe4eef3f5cbb1d0049a8f0c14a7cc95cddfac73884f99cc8",
+   "p02_player_fuse.py": "cb1cc1a2ba626a80ed49e7ae8269715f1e123f33777b6ed135380dbd07b35d5b",
+   "p02_player_open.py": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+   "check_submission.py": "b5c7c300cca4fcd5b243e4579417453699777e99bd4aff88dcbf6805e9346144"
+  },
+  "rerecorded": {
+   "note": "re-recorded 10/6 on main after the path-normalisation fix (tests/test_t06_dryrun.py normalise: a data/local path, relative on main or absolute in the p06-testday worktree whose data is a junction, becomes 'data/local/<rest>'); submission SHAs unchanged: files_sha256 and decisions equal the 10/3 recording; only reports_normalised_sha256 of out/player/seam_val/pool_select.json and apply_report.json changed (their inputs/{candidates,questions}_csv/path). The 10/3 values are in git at commit 3b0414a.",
+   "git_head": "f0b8447331fc46da63196186776815065210f68b",
+   "branch": "main",
+   "recorded": "2026-10-05T21:37:27+0800",
+   "tree": "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\D--AI-Portfolio-competitions-aicup2026-go\\a8d08794-7564-42a1-933e-30b4ef8b21ce\\scratchpad\\k5p\\golden\\q04golden",
+   "previous_reports_normalised_sha256": {
+    "out/player/seam_val/pool_select.json": "ec9e51af0dab4461331ddad04148fd70fbbb173c8d31c0656ed8757834012c7e",
+    "out/player/seam_val/apply_report.json": "c4e335525e7053790fb3c871054adba7569ee7025f346399016b9652200bd797",
+    "out/player/seam_val/seam_local.json": "84bfcea7cbb39be845208b8bce005f73dd78b8c75e4a5cac9d83b7e1ec6fba1c",
+    "out/player/public/pool_select.json": "c108cb1ae135de690c1cde0599ce14e743dbeac7d2c9b2bebc442e934d146652",
+    "out/player/public/apply_report.json": "560be25b7cfd591bc478dc9b0ccf31ce88c4e664303c6e979dd087fbbe17d996",
+    "out/player/private/pool_select.json": "5d91362ae53be352ee64015c8f71e3e9f1d2eb58e1dadb6e5a7effa196c357df",
+    "out/player/private/apply_report.json": "057ae538ae20a897159dd883a77fe8e6a7494f1aa4236686fa5f93b2b767f60b",
+    "out/player/submit_report.json": "74888c9f05c4ca3b22ac34e19f71445f8757b46ef082cdfb079b88d0bccd39cf"
+   },
+   "python": "3.12.13",
+   "numpy": "2.5.3",
+   "scipy": "1.18.1",
+   "how": "golden_record(tree) of tests/test_t06_dryrun.py on a Q04Golden tree built on main (C10_SLOW=1 C10_KEEP=1); the record-golden entry point refuses once tools/t06_player.py exists, so the existing record was updated in place with its normalise_rule and reports_normalised_sha256"
+  }
+ }
+}

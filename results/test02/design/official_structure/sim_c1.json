@@ -1,0 +1,425 @@
+{
+ "what": "Audit (read-only on the repo): how the registered test-day checks and the competition-1 guard\nbehave on the OFFICIAL structure (candidates and questions black-only; questions num_games in\n{5,10,15,20}; rank questions single-colour). Training players only (c10data.load_rows part\n'train' = fit + inner through t02_checks.load_train / Train); no validation game is used for any\nstatistic, no label file is opened. Outputs only in this scratch folder.",
+ "fit_players_by_black_games": {
+  "100": 1133,
+  "105": 1082,
+  "120": 926,
+  "200": 424
+ },
+ "fit_players_ge120_black_by_level": {
+  "D": 92,
+  "2D": 105,
+  "A": 57,
+  "5D": 96,
+  "3D": 99,
+  "C": 103,
+  "6D": 86,
+  "4D": 93,
+  "1D": 95,
+  "B": 100
+ },
+ "T1_official_shape": {
+  "A_unused_colour_empty": {
+   "player": {
+    "verdict": "PASS",
+    "subverdicts": {
+     "T1.1": "PASS",
+     "T1.2": "PASS",
+     "T1.3": "PASS",
+     "T1.4": "PASS",
+     "T1.5": "PASS"
+    },
+    "T1.3_problems_first": [],
+    "T1.3_counts": {
+     "player_identification_test_public.csv": {},
+     "player_identification_candidates_public.csv": {},
+     "player_identification_test_private.csv": {},
+     "player_identification_candidates_private.csv": {}
+    },
+    "T1.5_share": {
+     "player_identification_test_public.csv": 0.9918,
+     "player_identification_candidates_public.csv": 0.990425,
+     "player_identification_test_private.csv": 0.9896,
+     "player_identification_candidates_private.csv": 0.99125
+    },
+    "T1.4_share": {
+     "player_identification_test_public.csv": 0.0,
+     "player_identification_candidates_public.csv": 0.0,
+     "player_identification_test_private.csv": 0.0,
+     "player_identification_candidates_private.csv": 0.0
+    },
+    "normalize": {}
+   },
+   "rank": {
+    "verdict": "PASS",
+    "subverdicts": {
+     "T1.1": "PASS",
+     "T1.2": "PASS",
+     "T1.3": "PASS",
+     "T1.4": "PASS",
+     "T1.5": "PASS"
+    },
+    "T1.3_problems_first": [],
+    "T1.3_counts": {
+     "rank_prediction_test_public.csv": {},
+     "rank_prediction_test_private.csv": {}
+    },
+    "T1.5_share": {
+     "rank_prediction_test_public.csv": 0.9918,
+     "rank_prediction_test_private.csv": 0.9916
+    },
+    "T1.4_share": {
+     "rank_prediction_test_public.csv": 0.0,
+     "rank_prediction_test_private.csv": 0.0
+    },
+    "normalize": {}
+   },
+   "t02_test_bundle.quick_structure": {
+    "player": [],
+    "rank": []
+   }
+  },
+  "B_unused_colour_filled": {
+   "player": {
+    "verdict": "FAIL_STRUCT",
+    "subverdicts": {
+     "T1.1": "PASS",
+     "T1.2": "PASS",
+     "T1.3": "FAIL",
+     "T1.4": "PASS",
+     "T1.5": "PASS"
+    },
+    "T1.3_problems_first": [
+     "player_identification_test_public.csv: pub_q_0001: slot 6 > num_games = 5 is not empty",
+     "player_identification_test_public.csv: pub_q_0001: slot 7 > num_games = 5 is not empty"
+    ],
+    "T1.3_counts": {
+     "player_identification_test_public.csv": {
+      "content_after_num_games": 3000
+     },
+     "player_identification_candidates_public.csv": {},
+     "player_identification_test_private.csv": {
+      "content_after_num_games": 3000
+     },
+     "player_identification_candidates_private.csv": {}
+    },
+    "T1.5_share": {
+     "player_identification_test_public.csv": 0.9918,
+     "player_identification_candidates_public.csv": 0.990425,
+     "player_identification_test_private.csv": 0.9896,
+     "player_identification_candidates_private.csv": 0.99125
+    },
+    "T1.4_share": {
+     "player_identification_test_public.csv": 0.0,
+     "player_identification_candidates_public.csv": 0.0,
+     "player_identification_test_private.csv": 0.0,
+     "player_identification_candidates_private.csv": 0.0
+    },
+    "normalize": {}
+   },
+   "rank": {
+    "verdict": "FAIL_STRUCT",
+    "subverdicts": {
+     "T1.1": "PASS",
+     "T1.2": "PASS",
+     "T1.3": "FAIL",
+     "T1.4": "PASS",
+     "T1.5": "PASS"
+    },
+    "T1.3_problems_first": [
+     "rank_prediction_test_public.csv: pub_q_0001: slot 6 > num_games = 5 is not empty",
+     "rank_prediction_test_public.csv: pub_q_0001: slot 7 > num_games = 5 is not empty"
+    ],
+    "T1.3_counts": {
+     "rank_prediction_test_public.csv": {
+      "content_after_num_games": 3000
+     },
+     "rank_prediction_test_private.csv": {
+      "content_after_num_games": 3000
+     }
+    },
+    "T1.5_share": {
+     "rank_prediction_test_public.csv": 0.9918,
+     "rank_prediction_test_private.csv": 0.9916
+    },
+    "T1.4_share": {
+     "rank_prediction_test_public.csv": 0.0,
+     "rank_prediction_test_private.csv": 0.0
+    },
+    "normalize": {}
+   },
+   "t02_test_bundle.quick_structure": {
+    "player": [
+     "player_identification_test_public.csv: pub_q_0001 slot 6 > num_games is not empty",
+     "player_identification_test_public.csv: pub_q_0002 slot 11 > num_games is not empty"
+    ],
+    "rank": [
+     "rank_prediction_test_public.csv: pub_q_0001 slot 6 > num_games is not empty",
+     "rank_prediction_test_public.csv: pub_q_0002 slot 11 > num_games is not empty"
+    ]
+   }
+  }
+ },
+ "T1_official_shape_note": "fit players with >= 120 black games: 926 (private pool disjoint)",
+ "black_only_pools_T1_5_T4": {
+  "cand": {
+   "reps": 40,
+   "share_in_S99_min": 0.983775,
+   "share_in_S99_mean": 0.990951875,
+   "upper_right_min": 0.80855,
+   "upper_right_max": 0.85325,
+   "tvd_mean": 0.05751968293645983,
+   "tvd_max": 0.07141171422084922,
+   "registered_mixed_null": {
+    "share_in_S99_min": 0.9828,
+    "tvd_max": 0.047678663773940574,
+    "upper_right": [
+     0.79095,
+     0.8394
+    ]
+   }
+  },
+  "ques": {
+   "reps": 40,
+   "share_in_S99_min": 0.9842,
+   "share_in_S99_mean": 0.991085,
+   "upper_right_min": 0.7974,
+   "upper_right_max": 0.8598,
+   "tvd_mean": 0.06218375379259371,
+   "tvd_max": 0.07611956410693002,
+   "registered_mixed_null": {
+    "share_in_S99_min": 0.9847853272196748,
+    "tvd_max": 0.0730216373204756,
+    "upper_right": [
+     0.748792270531401,
+     0.8061329491664951
+    ]
+   }
+  }
+ },
+ "black_only_per_player_S99_share": {
+  "players": 1133,
+  "p01": 0.8352386377263461,
+  "min": 0.0,
+  "n_below_0.5": 5
+ },
+ "guard_thresholds_registered": {
+  "raw": {
+   "theta1": 0.9630063040189639,
+   "theta2": 0.8267520442154412,
+   "rho_R": 1.0197271503546743,
+   "rho_F": 0.9062854576832535,
+   "rho_X": 0.7472186307476288
+  },
+  "canon": {
+   "theta1": 0.9706181784861119,
+   "theta2": 0.8636681777008952,
+   "rho_R": 1.014179401069461,
+   "rho_F": 0.9270569559027629,
+   "rho_X": 0.8002793994990274
+  }
+ },
+ "guard_rho": {
+  "mixed_random_calibration_repro": [
+   {
+    "seed": 0,
+    "b_c": 0.503125,
+    "b_q": 0.5087939698492462,
+    "raw": {
+     "rho": 1.0149781474191444,
+     "real_max_cos_median": 0.23044469458100525,
+     "sr_max_cos_median": 0.22704399613624493,
+     "real_open_score": 0.8804109722834607,
+     "sr_open_score": 0.8868193035513566
+    },
+    "canon": {
+     "rho": 0.9991324254049754,
+     "real_max_cos_median": 0.2236752993602628,
+     "sr_max_cos_median": 0.2238695228709059,
+     "real_open_score": 0.8369667291280487,
+     "sr_open_score": 0.8502568933591549
+    }
+   },
+   {
+    "seed": 1,
+    "b_c": 0.512775,
+    "b_q": 0.5203464947622884,
+    "raw": {
+     "rho": 1.0300609405689014,
+     "real_max_cos_median": 0.2341023923762499,
+     "sr_max_cos_median": 0.2272704295019239,
+     "real_open_score": 0.8975359321345355,
+     "sr_open_score": 0.8883806346389219
+    },
+    "canon": {
+     "rho": 1.032432761545364,
+     "real_max_cos_median": 0.22875925017603918,
+     "sr_max_cos_median": 0.22157302508846022,
+     "real_open_score": 0.8627329868172717,
+     "sr_open_score": 0.8692947144770108
+    }
+   },
+   {
+    "seed": 2,
+    "b_c": 0.50225,
+    "b_q": 0.4972211194918619,
+    "raw": {
+     "rho": 1.0141423630759776,
+     "real_max_cos_median": 0.23542222481834624,
+     "sr_max_cos_median": 0.2321392275777645,
+     "real_open_score": 0.925042103670657,
+     "sr_open_score": 0.8984904255220307
+    },
+    "canon": {
+     "rho": 1.010973016258044,
+     "real_max_cos_median": 0.22946459609779157,
+     "sr_max_cos_median": 0.22697400663285588,
+     "real_open_score": 0.8978200122552823,
+     "sr_open_score": 0.8703100303932495
+    }
+   }
+  ],
+  "black_only_random_official_k": [
+   {
+    "seed": 0,
+    "b_c": 1.0,
+    "b_q": 1.0,
+    "raw": {
+     "rho": 1.0046082032876038,
+     "real_max_cos_median": 0.3131116641855394,
+     "sr_max_cos_median": 0.3116754005799217,
+     "real_open_score": 0.9321272078764015,
+     "sr_open_score": 0.9195304305416605
+    },
+    "canon": {
+     "rho": 1.0040926020717627,
+     "real_max_cos_median": 0.2973596715540471,
+     "sr_max_cos_median": 0.29614765703930035,
+     "real_open_score": 0.9049417437644053,
+     "sr_open_score": 0.8954185139749862
+    }
+   },
+   {
+    "seed": 1,
+    "b_c": 1.0,
+    "b_q": 1.0,
+    "raw": {
+     "rho": 1.02258189193611,
+     "real_max_cos_median": 0.30976233712176277,
+     "sr_max_cos_median": 0.3029217899950026,
+     "real_open_score": 0.926159599188717,
+     "sr_open_score": 0.9164698762194843
+    },
+    "canon": {
+     "rho": 1.015663552164564,
+     "real_max_cos_median": 0.2928452241323943,
+     "sr_max_cos_median": 0.2883289682969205,
+     "real_open_score": 0.9080383085110946,
+     "sr_open_score": 0.8898217243974075
+    }
+   },
+   {
+    "seed": 2,
+    "b_c": 1.0,
+    "b_q": 1.0,
+    "raw": {
+     "rho": 1.0359461269830865,
+     "real_max_cos_median": 0.3160809722986564,
+     "sr_max_cos_median": 0.3051133298013835,
+     "real_open_score": 0.9191579793573461,
+     "sr_open_score": 0.9253852313184857
+    },
+    "canon": {
+     "rho": 1.021444417168728,
+     "real_max_cos_median": 0.29860909560155247,
+     "sr_max_cos_median": 0.29234003395823205,
+     "real_open_score": 0.8942913014372089,
+     "sr_open_score": 0.8946441937216009
+    }
+   }
+  ]
+ },
+ "black_only_token_set_duplication": {
+  "raw": {
+   "max_abs_diff_cos_both_vs_colour_free_only": 0.04633477046345867,
+   "vocab_both": 47122,
+   "vocab_colour_free": 19620
+  },
+  "canon": {
+   "max_abs_diff_cos_both_vs_colour_free_only": 0.044548064618011265,
+   "vocab_both": 46445,
+   "vocab_colour_free": 19366
+  }
+ },
+ "T3": {
+  "raw": {
+   "registered_q99": 0.1004267242871777,
+   "registered_null_share_above": 0.009571788413098237,
+   "registered_null_S1_median": 0.33912595095890524,
+   "black_only_null_players": 1133,
+   "black_only_null_share_above_q99": 0.00706090026478376,
+   "black_only_null_P_declare_400_binomial": 1.4758219200853686e-32,
+   "black_only_null_S2_quantiles": {
+    "0.0": 1.3537587258527495e-05,
+    "0.01": 0.0001916950457634714,
+    "0.5": 0.010813971262583155,
+    "0.9": 0.03503302646880842,
+    "0.99": 0.08276993687239503,
+    "1.0": 0.17009140777326376
+   },
+   "black_only_null_S1_median": 0.33062227649898523,
+   "registered_null_S2_quantiles": {
+    "0.0": 1.1731780572010742e-06,
+    "0.01": 0.00012759736444744707,
+    "0.5": 0.006558479686650964,
+    "0.9": 0.025068872133920186,
+    "0.99": 0.09926944722474747,
+    "1.0": 0.20609941566182255
+   },
+   "black_only_positive_tpr": 0.12533097969991175,
+   "registered_positive_tpr_all": 0.3804,
+   "black_only_P_declare_by_pi_single_orientation": {
+    "0.0": 0.0,
+    "0.2": 0.0,
+    "0.3": 0.0,
+    "0.5": 0.0,
+    "1.0": 0.3214
+   }
+  },
+  "canon": {
+   "registered_q99": 0.08085695648061325,
+   "registered_null_share_above": 0.009571788413098237,
+   "registered_null_S1_median": 0.34428633649636603,
+   "black_only_null_players": 1133,
+   "black_only_null_share_above_q99": 0.00794351279788173,
+   "black_only_null_P_declare_400_binomial": 1.20155560561197e-30,
+   "black_only_null_S2_quantiles": {
+    "0.0": 3.90869679484096e-06,
+    "0.01": 0.00019503940516600428,
+    "0.5": 0.01021022529934229,
+    "0.9": 0.03537932543709771,
+    "0.99": 0.07756255731211449,
+    "1.0": 0.15929816611502634
+   },
+   "black_only_null_S1_median": 0.33509570053902027,
+   "registered_null_S2_quantiles": {
+    "0.0": 5.625720434665471e-06,
+    "0.01": 0.0001132431132818712,
+    "0.5": 0.006193812422527312,
+    "0.9": 0.024682514492184105,
+    "0.99": 0.0803618330481557,
+    "1.0": 0.2252265168166019
+   },
+   "black_only_positive_tpr": 0.13592233009708737,
+   "registered_positive_tpr_all": 0.4296,
+   "black_only_P_declare_by_pi_single_orientation": {
+    "0.0": 0.0,
+    "0.2": 0.0,
+    "0.3": 0.0,
+    "0.5": 0.0,
+    "1.0": 0.5254
+   }
+  }
+ },
+ "runtime_s": 369.4
+}

@@ -1,0 +1,787 @@
+{
+ "format": "c10-prereg04 rank selfcheck v1",
+ "what": "PREREG_04 2.3: Q00 reproduces R20 (inner OOF, refit, validation probabilities); Q01 / Q02 reproduce the design-phase inner OOF (a check of the port, not a choice)",
+ "created": "2026-09-29T17:07:38+08:00",
+ "seconds": 27.7,
+ "smoke": false,
+ "preview": false,
+ "design_input": false,
+ "passed": true,
+ "failures": [],
+ "checks": {
+  "per_game_logprobs_equal_p02_source_logprobs_C5": {
+   "ok": true,
+   "detail": "combo_logprobs(('C5',)) vs p02_rank_fuse.source_logprobs('C5'), element by element",
+   "required": true
+  },
+  "Q00_inner_oof_equals_R20": {
+   "ok": true,
+   "detail": {
+    "Q00_rank_balanced": 0.5854702521055817,
+    "R20_rank_balanced": 0.5854702521055817,
+    "abs_diff": 0.0,
+    "differences": [],
+    "compared": "every entry of the R20 OOF record and every fold's params, loss and counts; floats <= 1e-12, the rest exactly"
+   },
+   "required": true
+  },
+  "registered_R20_value": {
+   "ok": true,
+   "detail": {
+    "tune_report": 0.5854702521055817,
+    "Q00": 0.5854702521055817,
+    "registered": 0.5854702521055817
+   },
+   "required": true
+  },
+  "Q00_refit_params_equal_frozen": {
+   "ok": true,
+   "detail": {
+    "max_abs_diff": 0.0,
+    "tolerance": 1e-12,
+    "refit_loss": 1.294020404166363,
+    "frozen_refit_loss": 1.294020404166363
+   },
+   "required": true
+  },
+  "Q00_val_probs_equal_rank_val_probs": {
+   "ok": true,
+   "detail": {
+    "questions": 1589,
+    "max_abs_diff": 0.0,
+    "tolerance": 1e-12,
+    "row_mismatches": [],
+    "rule_b_differences": [],
+    "pred_B_differences": [],
+    "inputs_sha256": {
+     "val_p02e9_d4.npz": "ec0b729d805eb9f3458f7a497444b099b8ec47e5cec73703ae4b8bf9cf0a11b2",
+     "rank_val_probs.csv": "a83700432fce5d7d26653fdaee345b0c894729fdff0029a244ed94e06c803b63",
+     "pred_B.csv": "863a62582424adddc9c2e1821fcc056008bd651e103c19ec8ada98a14f87a2fd"
+    }
+   },
+   "required": true
+  },
+  "gen_path_Q00_seam": {
+   "ok": true,
+   "detail": {
+    "max_abs_prob_diff_recorded_only": 2.3925306180672123e-14,
+    "same_rule_b": true,
+    "gen_oof_rank_balanced": 0.5854702521055817,
+    "p02_oof_rank_balanced": 0.5854702521055817,
+    "fold_params_max_abs_diff_recorded_only": 2.936539900133539e-14,
+    "refit_params_max_abs_diff_recorded_only": 1.3944956300804279e-12,
+    "refit_loss_diff_recorded_only": 2.220446049250313e-16,
+    "required": "the same rule-B decision on every inner eval question and the same OOF rank-balanced mean (<= 1e-12): Q00 (prereg02's fit) and Q01 / Q02 (generalised fit) are then compared on equal terms",
+    "note": "Q00 is taken from prereg02's path (R20 bit for bit); the generalised path's parameters and probabilities differ at the 1e-12 level (summation order (m + B beta) + w m_op vs (m + w m_op) + B beta), so they are recorded"
+   },
+   "required": true
+  },
+  "Q01_reproduces_design": {
+   "ok": true,
+   "detail": {
+    "rank_balanced": 0.6042484782462081,
+    "design": 0.6042484782462081,
+    "abs_diff": 0.0,
+    "weights_by_fold": [
+     [
+      0.1320168479182157,
+      0.45291897617633176
+     ],
+     [
+      0.12802616042646972,
+      0.48629494256914774
+     ],
+     [
+      0.15333039113483057,
+      0.5545012063598723
+     ],
+     [
+      0.1301119384920335,
+      0.5472212799721052
+     ],
+     [
+      0.1353978043316705,
+      0.4324589629461311
+     ]
+    ],
+    "terms": [
+     "OP",
+     "O4"
+    ]
+   },
+   "required": true
+  },
+  "Q02_reproduces_design": {
+   "ok": true,
+   "detail": {
+    "rank_balanced": 0.6101211982700248,
+    "design": 0.6101211982700248,
+    "abs_diff": 0.0,
+    "weights_by_fold": [
+     [
+      0.3384994136901169,
+      1.0310816540021088,
+      1.4229414778618097,
+      0.7293613141778824
+     ],
+     [
+      0.3139364170430689,
+      1.1035386947432777,
+      1.2630058855341486,
+      0.7101773652299364
+     ],
+     [
+      0.4659092005537002,
+      1.5531151062856272,
+      1.4155843093218763,
+      1.564406907504374
+     ],
+     [
+      0.4060640854161829,
+      1.472975215284863,
+      1.4373745215857623,
+      1.540380331285523
+     ],
+     [
+      0.3149878356743481,
+      0.8909513374793332,
+      1.3344758954459162,
+      0.5222044288262366
+     ]
+    ],
+    "terms": [
+     "OP",
+     "O4",
+     "SWA",
+     "SWB"
+    ]
+   },
+   "required": true
+  }
+ },
+ "Q00": {
+  "oof": {
+   "rank_balanced": 0.5854702521055817,
+   "question_mean": 0.5905571616546672,
+   "n_questions": 127200,
+   "levels_present": 10,
+   "per_level": {
+    "D": 0.7424545614277263,
+    "C": 0.6180499465927426,
+    "B": 0.5768152596702619,
+    "A": 0.5358661717112264,
+    "1D": 0.466979909266574,
+    "2D": 0.4880439669484264,
+    "3D": 0.47205873382680635,
+    "4D": 0.5758968994548631,
+    "5D": 0.6314930970759283,
+    "6D": 0.7470439750812616
+   },
+   "per_n_bin": {
+    "5-7": {
+     "n_questions": 26849,
+     "rank_balanced": 0.5503841648294491,
+     "levels_present": 10,
+     "question_mean": 0.5442849643027197,
+     "pred_distribution": {
+      "D": 2280,
+      "C": 3365,
+      "B": 3513,
+      "A": 3626,
+      "1D": 2961,
+      "2D": 2347,
+      "3D": 2096,
+      "4D": 1953,
+      "5D": 2062,
+      "6D": 2646
+     },
+     "true_distribution": {
+      "D": 2649,
+      "C": 2428,
+      "B": 4237,
+      "A": 6446,
+      "1D": 1254,
+      "2D": 2032,
+      "3D": 1798,
+      "4D": 1929,
+      "5D": 1962,
+      "6D": 2114
+     }
+    },
+    "8-12": {
+     "n_questions": 42850,
+     "rank_balanced": 0.5821341955556558,
+     "levels_present": 10,
+     "question_mean": 0.5859097317928592,
+     "pred_distribution": {
+      "D": 4022,
+      "C": 5297,
+      "B": 5572,
+      "A": 5545,
+      "1D": 4951,
+      "2D": 3707,
+      "3D": 3124,
+      "4D": 3472,
+      "5D": 3431,
+      "6D": 3729
+     },
+     "true_distribution": {
+      "D": 4640,
+      "C": 4702,
+      "B": 5719,
+      "A": 9227,
+      "1D": 2119,
+      "2D": 2990,
+      "3D": 3068,
+      "4D": 3319,
+      "5D": 3374,
+      "6D": 3692
+     }
+    },
+    "13-20": {
+     "n_questions": 57501,
+     "rank_balanced": 0.6047865159972228,
+     "levels_present": 10,
+     "question_mean": 0.6156263708211324,
+     "pred_distribution": {
+      "D": 6311,
+      "C": 6185,
+      "B": 6758,
+      "A": 6886,
+      "1D": 5455,
+      "2D": 5230,
+      "3D": 4593,
+      "4D": 5370,
+      "5D": 5302,
+      "6D": 5411
+     },
+     "true_distribution": {
+      "D": 6911,
+      "C": 5870,
+      "B": 6644,
+      "A": 8927,
+      "1D": 3427,
+      "2D": 4778,
+      "3D": 4934,
+      "4D": 5152,
+      "5D": 5264,
+      "6D": 5594
+     }
+    }
+   },
+   "pred_distribution": {
+    "D": 12613,
+    "C": 14847,
+    "B": 15843,
+    "A": 16057,
+    "1D": 13367,
+    "2D": 11284,
+    "3D": 9813,
+    "4D": 10795,
+    "5D": 10795,
+    "6D": 11786
+   },
+   "se": 0.010921065434211015
+  },
+  "folds": [
+   {
+    "loss": 1.2990328450576776,
+    "starts": [
+     {
+      "start_a": 0.0,
+      "loss": 1.3302567067979036,
+      "nit": 10,
+      "success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+     },
+     {
+      "start_a": 1.0,
+      "loss": 1.2990328450576776,
+      "nit": 18,
+      "success": true,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+     }
+    ],
+    "params": {
+     "a": 1.143614535751053,
+     "gamma": 0.4388514317506186,
+     "w": 0.11318769538936523,
+     "beta": [
+      0.1804996206748729,
+      0.16099372642506748,
+      0.21539386634336366,
+      0.13893816044588578,
+      0.19741746042434138,
+      0.08641445019127651,
+      0.10935425749170935,
+      -0.07633868271624823,
+      -0.4384111252393644
+     ],
+     "b": [
+      0.2953855481787464,
+      0.04012053661714208,
+      -0.0294231983673777,
+      -0.146687784620767,
+      -0.11548881026095058,
+      -0.20747873433023176,
+      -0.12060034784476382,
+      -0.15750073160946715,
+      0.025760210043552455,
+      0.41591331219411704
+     ]
+    },
+    "fit_questions": 20150,
+    "fold": 0,
+    "eval_questions": 26200
+   },
+   {
+    "loss": 1.2925097310544393,
+    "starts": [
+     {
+      "start_a": 0.0,
+      "loss": 1.2925097310544393,
+      "nit": 19,
+      "success": true,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+     },
+     {
+      "start_a": 1.0,
+      "loss": 1.2925097311196436,
+      "nit": 14,
+      "success": true,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+     }
+    ],
+    "params": {
+     "a": 1.1727322198528085,
+     "gamma": 0.4476654049145368,
+     "w": 0.1089484776168769,
+     "beta": [
+      0.18460745303437304,
+      0.1644443422299889,
+      0.21213117969031486,
+      0.12712328143398985,
+      0.186778078791087,
+      0.06159610519513102,
+      0.06925430634451958,
+      -0.12355344136048245,
+      -0.44923230361641414
+     ],
+     "b": [
+      0.2782796119213054,
+      0.017205248124940863,
+      -0.053659934752419154,
+      -0.16433967896415663,
+      -0.1227568378222015,
+      -0.21365945230121738,
+      -0.10968657159920764,
+      -0.12669562702753007,
+      0.06913405903483665,
+      0.42617918338564953
+     ]
+    },
+    "fit_questions": 20350,
+    "fold": 1,
+    "eval_questions": 26000
+   },
+   {
+    "loss": 1.2898721880029975,
+    "starts": [
+     {
+      "start_a": 0.0,
+      "loss": 1.2898721880244473,
+      "nit": 19,
+      "success": true,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+     },
+     {
+      "start_a": 1.0,
+      "loss": 1.2898721880029975,
+      "nit": 16,
+      "success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+     }
+    ],
+    "params": {
+     "a": 1.1531293120863326,
+     "gamma": 0.4138568257525735,
+     "w": 0.1294597143977879,
+     "beta": [
+      0.18647096767899446,
+      0.18974965273724503,
+      0.25288351324611114,
+      0.18071598145335138,
+      0.24528674512922674,
+      0.12194358571156384,
+      0.12534505533010473,
+      -0.07652738531203312,
+      -0.460412013429094
+     ],
+     "b": [
+      0.345529104037053,
+      0.08181933255658401,
+      -0.018720695741457394,
+      -0.1557954819417946,
+      -0.1388385448475462,
+      -0.2458994239160281,
+      -0.15369841144731805,
+      -0.1748000893776367,
+      0.023619023316153644,
+      0.43678518736199035
+     ]
+    },
+    "fit_questions": 20300,
+    "fold": 2,
+    "eval_questions": 25600
+   },
+   {
+    "loss": 1.3089041370600343,
+    "starts": [
+     {
+      "start_a": 0.0,
+      "loss": 1.3089041370600343,
+      "nit": 18,
+      "success": true,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+     },
+     {
+      "start_a": 1.0,
+      "loss": 1.3089041385595503,
+      "nit": 12,
+      "success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+     }
+    ],
+    "params": {
+     "a": 1.1394043037358534,
+     "gamma": 0.44043442802130317,
+     "w": 0.11226507430653972,
+     "beta": [
+      0.18000405276070813,
+      0.17087286472453062,
+      0.2419366271095113,
+      0.15709716989889622,
+      0.19785570003735672,
+      0.07140597370337227,
+      0.05797830071498358,
+      -0.12113877747450633,
+      -0.5022942252807988
+     ],
+     "b": [
+      0.2896761232889031,
+      0.03511195059258752,
+      -0.04688162779061237,
+      -0.18672887154672022,
+      -0.15284558184734334,
+      -0.2290736615435091,
+      -0.1255842114559301,
+      -0.12145653636975184,
+      0.06126427444126039,
+      0.476518142231116
+     ]
+    },
+    "fit_questions": 20450,
+    "fold": 3,
+    "eval_questions": 25000
+   },
+   {
+    "loss": 1.2786424868561934,
+    "starts": [
+     {
+      "start_a": 0.0,
+      "loss": 1.278642487171086,
+      "nit": 19,
+      "success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+     },
+     {
+      "start_a": 1.0,
+      "loss": 1.2786424868561934,
+      "nit": 16,
+      "success": true,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+     }
+    ],
+    "params": {
+     "a": 1.1980287085429222,
+     "gamma": 0.4571449773724737,
+     "w": 0.11657748647101654,
+     "beta": [
+      0.1845504411402602,
+      0.18437075792468727,
+      0.2514354039259876,
+      0.1768064299241887,
+      0.23796871761886104,
+      0.11943711267066019,
+      0.1248296109408221,
+      -0.05755595271267926,
+      -0.44283245537810834
+     ],
+     "b": [
+      0.34298006027669803,
+      0.08198632347420455,
+      -0.013323948327389574,
+      -0.15311845113977152,
+      -0.13304460201383406,
+      -0.23558579278687303,
+      -0.14735789458367302,
+      -0.17022908240433243,
+      0.007585633253060277,
+      0.42010775425191077
+     ]
+    },
+    "fit_questions": 20350,
+    "fold": 4,
+    "eval_questions": 24400
+   }
+  ],
+  "refit": {
+   "loss": 1.294020404166363,
+   "starts": [
+    {
+     "start_a": 0.0,
+     "loss": 1.2940204068859902,
+     "nit": 17,
+     "success": true,
+     "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+     "start_a": 1.0,
+     "loss": 1.294020404166363,
+     "nit": 17,
+     "success": true,
+     "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    }
+   ],
+   "params": {
+    "a": 1.1602079071066613,
+    "gamma": 0.438654254867862,
+    "w": 0.11638934532134285,
+    "beta": [
+     0.1831710576335903,
+     0.17373812758386764,
+     0.23477712341286536,
+     0.1556856202566642,
+     0.2128731851817358,
+     0.09182149799190883,
+     0.09707244014432542,
+     -0.09104100845360842,
+     -0.4582006134934143
+    ],
+    "b": [
+     0.3100139637054239,
+     0.05097096976577672,
+     -0.03229241398791922,
+     -0.16153309764287382,
+     -0.13227195954645776,
+     -0.22621339836523235,
+     -0.13106620918270362,
+     -0.149830824384337,
+     0.037535700460622094,
+     0.434687269177701
+    ]
+   },
+   "fit_questions": 25400
+  },
+  "params": {
+   "a": 1.1602079071066613,
+   "gamma": 0.438654254867862,
+   "w": 0.11638934532134285,
+   "beta": [
+    0.1831710576335903,
+    0.17373812758386764,
+    0.23477712341286536,
+    0.1556856202566642,
+    0.2128731851817358,
+    0.09182149799190883,
+    0.09707244014432542,
+    -0.09104100845360842,
+    -0.4582006134934143
+   ],
+   "b": [
+    0.3100139637054239,
+    0.05097096976577672,
+    -0.03229241398791922,
+    -0.16153309764287382,
+    -0.13227195954645776,
+    -0.22621339836523235,
+    -0.13106620918270362,
+    -0.149830824384337,
+    0.037535700460622094,
+    0.434687269177701
+   ]
+  }
+ },
+ "design_reproduction": {
+  "Q01": {
+   "rank_balanced": 0.6042484782462081,
+   "design": 0.6042484782462081,
+   "abs_diff": 0.0,
+   "weights_by_fold": [
+    [
+     0.1320168479182157,
+     0.45291897617633176
+    ],
+    [
+     0.12802616042646972,
+     0.48629494256914774
+    ],
+    [
+     0.15333039113483057,
+     0.5545012063598723
+    ],
+    [
+     0.1301119384920335,
+     0.5472212799721052
+    ],
+    [
+     0.1353978043316705,
+     0.4324589629461311
+    ]
+   ],
+   "terms": [
+    "OP",
+    "O4"
+   ]
+  },
+  "Q02": {
+   "rank_balanced": 0.6101211982700248,
+   "design": 0.6101211982700248,
+   "abs_diff": 0.0,
+   "weights_by_fold": [
+    [
+     0.3384994136901169,
+     1.0310816540021088,
+     1.4229414778618097,
+     0.7293613141778824
+    ],
+    [
+     0.3139364170430689,
+     1.1035386947432777,
+     1.2630058855341486,
+     0.7101773652299364
+    ],
+    [
+     0.4659092005537002,
+     1.5531151062856272,
+     1.4155843093218763,
+     1.564406907504374
+    ],
+    [
+     0.4060640854161829,
+     1.472975215284863,
+     1.4373745215857623,
+     1.540380331285523
+    ],
+    [
+     0.3149878356743481,
+     0.8909513374793332,
+     1.3344758954459162,
+     0.5222044288262366
+    ]
+   ],
+   "terms": [
+    "OP",
+    "O4",
+    "SWA",
+    "SWB"
+   ]
+  }
+ },
+ "order_check": {
+  "files": 1,
+  "git_head": "00acde5aaefc69346ac2280f2d178e50ecd049a1"
+ },
+ "p02_inputs": {
+  "sha256": {
+   "inner_keys.npz": "b686872d459161330af26132fc0ec2617d104be6cd72eae509250ffef0c03ab6",
+   "pseudo_inner.json": "3a51b3dd4edf8e5745f6a7ff52ca925d4a0eacd6a24950ee1b6e3b48fd0b7923",
+   "opening_inner.npz": "054689536524f7d8ea41a19d19b49ae47e7eedd128bd9cad98c429e5f80fdee5",
+   "players_split.csv": "69554875064ecbd83d790b3215c8ba8f9540f217ec4af3e4a8c43228ac2a3dfc",
+   "inner_p02e9_d4.npz": "d042fca41e04a365dd9f7f4ebc31d244d39b24e803a1191cb06ecaaf3d056de5",
+   "val_p02e9_d4.npz": "ec0b729d805eb9f3458f7a497444b099b8ec47e5cec73703ae4b8bf9cf0a11b2",
+   "val_keys.npz": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+   "opening_val.npz": "75ffec64f9e949ac0be52ce9e72a4a19bb978a25de2b6ed9d355aac7a1a5ae85"
+  },
+  "equal_to_prereg02_records": true,
+  "commit_check": {
+   "files": 8,
+   "git_head": "00acde5aaefc69346ac2280f2d178e50ecd049a1"
+  }
+ },
+ "inputs_sha256": {
+  "inner_p02e9_d4.npz": "d042fca41e04a365dd9f7f4ebc31d244d39b24e803a1191cb06ecaaf3d056de5",
+  "O4_inner": "100a889367e147696a056d6cd70fab583926062a9b4fbbedd49acc42a2da9ce7",
+  "inner_p03a_d4.npz": "3b26a39952bfe8dc2df9676ff9b15cab472861a66b628c3a4ee49c4010626cab",
+  "inner_p03a_s0_swap.npz": "743825209569aeb922b0246587ec5801f3c2e0a10083bfb6111a327dd5ff1071",
+  "inner_p03b_d4.npz": "a9c9b1509328d2c77c74ad09bcd63424c1be1979a85f372e755e3931a414ca54",
+  "inner_p03b_s0_swap.npz": "106887321cc9d54316e0d7d96e776c2060dc309c54720a8c7345f280056d2056"
+ },
+ "inner_inputs_sha256": {
+  "inner_keys.npz": "b686872d459161330af26132fc0ec2617d104be6cd72eae509250ffef0c03ab6",
+  "pseudo_inner.json": "3a51b3dd4edf8e5745f6a7ff52ca925d4a0eacd6a24950ee1b6e3b48fd0b7923",
+  "opening_inner.npz": "054689536524f7d8ea41a19d19b49ae47e7eedd128bd9cad98c429e5f80fdee5",
+  "players_split.csv": "69554875064ecbd83d790b3215c8ba8f9540f217ec4af3e4a8c43228ac2a3dfc"
+ },
+ "reference_files_sha256": {
+  "tune_report.json": "297384f87aadebe43851737c1ca1b23bc72b8e3f3b18e669f1c3a91810c33238",
+  "frozen_config.json": "44a16e09679cc6815d41d9a1255882f4a38599cd97cbf66996d447709b4f2efa",
+  "rank_val_probs.csv": "a83700432fce5d7d26653fdaee345b0c894729fdff0029a244ed94e06c803b63",
+  "pred_B.csv": "863a62582424adddc9c2e1821fcc056008bd651e103c19ec8ada98a14f87a2fd"
+ },
+ "tool": {
+  "git_head": "00acde5aaefc69346ac2280f2d178e50ecd049a1",
+  "dirty_or_untracked": [],
+  "files_sha256_rule": "sha256 of the file with CRLF folded to LF",
+  "files_sha256": {
+   "p04_rank_fuse.py": "c3a647b09c46760239d5b2ee274d56f7231987354fc1c1f6c3ff40102f4b26a2",
+   "p04_opp.py": "b594e0eff135b539616d60f26403ca1a1a37ac3f44855785c36e2cc6be9768fa",
+   "p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "p02_player_fuse.py": "cb1cc1a2ba626a80ed49e7ae8269715f1e123f33777b6ed135380dbd07b35d5b",
+   "p02_player_open.py": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+   "p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+   "p02_rank_opening.py": "a4195fece41aa3d50ecda82d1af93d9c04f49df5fd2157d69dd8a488dea93463",
+   "p02_rank_pseudo.py": "16e5bfdfb2995874ddb11bde1f7a9e786a478b14443453f675a4fb3a480bb098",
+   "p03_rank_fuse.py": "77abd7479d26f0f647a258b4a6d5d2e517808b4c187184f14ff599d70b8aca2f",
+   "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "decide.py": "cf66daf1231b3c2bd60c5b6484245627e133bd0f1cd7ff5557e978da3801d0e3"
+  }
+ },
+ "frozen_tools": {
+  "rule": "sha256 with CRLF folded to LF, working file == HEAD blob",
+  "files_sha256": {
+   "p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "p02_player_fuse.py": "cb1cc1a2ba626a80ed49e7ae8269715f1e123f33777b6ed135380dbd07b35d5b",
+   "p02_player_open.py": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+   "p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+   "p02_rank_opening.py": "a4195fece41aa3d50ecda82d1af93d9c04f49df5fd2157d69dd8a488dea93463",
+   "p02_rank_pseudo.py": "16e5bfdfb2995874ddb11bde1f7a9e786a478b14443453f675a4fb3a480bb098",
+   "p03_rank_fuse.py": "77abd7479d26f0f647a258b4a6d5d2e517808b4c187184f14ff599d70b8aca2f",
+   "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "decide.py": "cf66daf1231b3c2bd60c5b6484245627e133bd0f1cd7ff5557e978da3801d0e3"
+  },
+  "equal_to_prereg02_frozen_config_record": [
+   "c10data.py",
+   "decide.py",
+   "p02_moves.py",
+   "p02_rank_fuse.py",
+   "p02_rank_opening.py",
+   "p02_rank_pseudo.py"
+  ],
+  "equal_to_prereg03_frozen_config_record": [
+   "c10data.py",
+   "decide.py",
+   "p02_moves.py",
+   "p02_rank_fuse.py",
+   "p02_rank_opening.py",
+   "p02_rank_pseudo.py",
+   "p03_rank_fuse.py"
+  ]
+ },
+ "environment": {
+  "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1"
+ }
+}

@@ -1,0 +1,297 @@
+{
+ "format": "c10-prereg08 rank apply_report v1",
+ "what": "PREREG_08 2.7 apply: Q08 on the validation questions (no score)",
+ "created": "2026-10-08T15:24:47+00:00",
+ "seconds": 10.5,
+ "mode": "real",
+ "rerun": null,
+ "prerequisites": {
+  "frozen_config": {
+   "files": {
+    "results/prereg08/rank/frozen_config.json": "421bbeb4524bed8ccf73babd58cac6b16c82f45b1aa57acef2e55bd52be0ba70",
+    "results/prereg08/rank/p1_map.npz": "116923629b66198a79da06282aac9ca863acf77bf6a1e1f5d584b526fb54afb2"
+   },
+   "commit_problems": [],
+   "precommit_skipped": false
+  },
+  "design_records": {
+   "files": {
+    "results/prereg08/feat/inner_manifest.json": "0ce2114d637f5205b666e46cfc2b05b9201982e06e231a85212f479f49a415d3",
+    "results/prereg08/rank/check_report.json": "1b3b06ba614a7bc1a3d550a0b591801fd582cf034c15d58f3d661c2dbd74533d",
+    "results/prereg08/rank/selfcheck.json": "dd95be1f9c60a86c1f70ce0069e0d719beffa708907bf016ad09332cdf43191c",
+    "results/prereg08/rank/tune_report.json": "995c7cd9cf8f4a01c4e888872c253f075e0246e9f603cbfa09f84bb015aa1b06"
+   },
+   "commit_problems": [],
+   "precommit_skipped": false
+  },
+  "tool": {
+   "git_head": "2200013199f848b99c8c85fb36d01b17c930ad75",
+   "dirty_or_untracked": [],
+   "files_sha256_rule": "sha256, CRLF folded to LF",
+   "files_sha256": {
+    "tools/p08_p1.py": "a10c77c4bd97472b464f39080816090f0f64986195384b28e1d95dfc76e6677f",
+    "tools/p08_rank_fuse.py": "64f42bd956f7808947e0c85abe1f9fa60d9958cb8e769fc889c6283c188d481e",
+    "results/prereg07/explore/pilot_humansl/hs_lib.py": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+    "results/prereg07/explore/pilot_humansl/pilot_run.py": "b0d127fd1d5a83af5b17ec3df1dccc85d94b11c3479d33cac07448a3796a3936",
+    "results/prereg07/explore/pilot_humansl/pilot_fuse.py": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+    "results/prereg05/explore/u1/u1_lib.py": "225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7",
+    "results/prereg08/p1/p1_lib.py": "062600168326f9eecd4ec1073e54881c475f8f276e376164eab20d373bbff511",
+    "results/prereg08/p1/p1_extract.py": "2ee8eb127150e672b62bcb30b70c4fac46b8cd6e32c7e4eb19d54f746a6e3f9c",
+    "results/prereg08/p1/p1_fuse.py": "ad356c8ca9f26e1e761677afa07b5aa369ca31e5318f61eb6a6cbda33b970953",
+    "results/prereg08/p1/p1_plan.json": "0cd46bf90c764cae3824f5906e72e13336ab7276ef5fa7edb2ec6831911b228d",
+    "results/prereg08/p2/p2_sets.py": "98bad3d85a32e80c065226b0cc8cd1065b423cdb39dce89829a54b0cbf381c8f",
+    "tools/p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142",
+    "tools/p07_hs.py": "b27ea371bdc1477558effb9ca86c540805dcced971d983226e15fb5e19b7b8dc"
+   }
+  },
+  "frozen_commit_time": "2026-10-08T22:19:14+08:00",
+  "val_p1": {
+   "files": {
+    "results/prereg08/feat/val_p1.npz": "11b1d38cc116401d44825883b864bf635b2d44e109baa17115fb4093055da4e0",
+    "results/prereg08/feat/val_seam_feats.npz": "0a7b9b0010192a4c7f3878e914f9e514a18cfa338d94dc8c49936b6b625b9318",
+    "results/prereg08/feat/val_report.json": "2ce9e86f8e639217c38814541f7d1bfb083b609ac194b5e19c8c38c60e653535"
+   },
+   "commit_problems": [],
+   "precommit_skipped": false
+  },
+  "p07_pins": {
+   "results/prereg07/rank/frozen_config.json": "93a0ac29615260865d554ee61aec258c633820a87aeb7dfcf8047a5dfd200c0b",
+   "results/prereg07/rank/hs_map.npz": "a4334e79c490e4d8102dd5136ac08c0de1060315981f4ccc527ebffa1b84a3e4",
+   "results/prereg07/rank/rank_val_probs.csv": "6ae2db6025a903eb5c58af9418dc203c0b6e84dd664049f85dfa850e57dc28c1",
+   "results/prereg07/rank/pred_B.csv": "51d7dbf82d50c3848acadb6934069580bd3ade7e6ca71ad5d1023633a18a26fa",
+   "results/prereg07/hs/val_hs.npz": "ef2067e8cb633f521c205a09aa4638c79fef3ba0b4e90e6a54bdc046e5a5550f",
+   "results/prereg04/opp/val_o4.npz": "30d312c02c357f6761567099003885be5e08635b6e6c0b49d71baac137cd9cd4",
+   "results/prereg04/rank/rank_val_probs.csv": "3c7ab658dc558ce8c6aefdd7b0747de1a60de575d151e9eee96ca6775f442e5c"
+  },
+  "val_first_chunk_started": "2026-10-08T14:22:45+00:00"
+ },
+ "q02_reproduction": {
+  "raw_equal": true,
+  "lf_equal": true,
+  "reference_sha256_lf": "3c7ab658dc558ce8c6aefdd7b0747de1a60de575d151e9eee96ca6775f442e5c",
+  "computed_sha256": "3c7ab658dc558ce8c6aefdd7b0747de1a60de575d151e9eee96ca6775f442e5c",
+  "passed": true
+ },
+ "q02h_reproduction": {
+  "computed_sha256": "6ae2db6025a903eb5c58af9418dc203c0b6e84dd664049f85dfa850e57dc28c1",
+  "registered_sha256": "6ae2db6025a903eb5c58af9418dc203c0b6e84dd664049f85dfa850e57dc28c1",
+  "bytes_equal_committed": true,
+  "passed": true
+ },
+ "frozen_tools_p04": {
+  "rule": "sha256 with CRLF folded to LF, working file == HEAD blob",
+  "files_sha256": {
+   "p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "p02_player_fuse.py": "cb1cc1a2ba626a80ed49e7ae8269715f1e123f33777b6ed135380dbd07b35d5b",
+   "p02_player_open.py": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+   "p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+   "p02_rank_opening.py": "a4195fece41aa3d50ecda82d1af93d9c04f49df5fd2157d69dd8a488dea93463",
+   "p02_rank_pseudo.py": "16e5bfdfb2995874ddb11bde1f7a9e786a478b14443453f675a4fb3a480bb098",
+   "p03_rank_fuse.py": "77abd7479d26f0f647a258b4a6d5d2e517808b4c187184f14ff599d70b8aca2f",
+   "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "decide.py": "cf66daf1231b3c2bd60c5b6484245627e133bd0f1cd7ff5557e978da3801d0e3"
+  },
+  "equal_to_prereg02_frozen_config_record": [
+   "c10data.py",
+   "decide.py",
+   "p02_moves.py",
+   "p02_rank_fuse.py",
+   "p02_rank_opening.py",
+   "p02_rank_pseudo.py"
+  ],
+  "equal_to_prereg03_frozen_config_record": [
+   "c10data.py",
+   "decide.py",
+   "p02_moves.py",
+   "p02_rank_fuse.py",
+   "p02_rank_opening.py",
+   "p02_rank_pseudo.py",
+   "p03_rank_fuse.py"
+  ]
+ },
+ "score_allowed": true,
+ "score_blocked_reasons": [],
+ "accept_data_failures": null,
+ "p1_failures": {
+  "failed_or_no_move": 0,
+  "failed": 0,
+  "no_target_move_not_failed": 0,
+  "unusable_games": 0,
+  "limit": 95
+ },
+ "move_cross_check": {
+  "vs_val_hs": {
+   "compared": 19156,
+   "mismatches": 0,
+   "first_mismatches": [],
+   "only_hs_failed": 0,
+   "only_o4_failed": 0,
+   "both_failed": 0
+  },
+  "vs_val_o4": {
+   "compared": 19156,
+   "mismatches": 0,
+   "first_mismatches": [],
+   "only_hs_failed": 0,
+   "only_o4_failed": 0,
+   "both_failed": 0
+  },
+  "mismatches": 0
+ },
+ "p1_direction": {
+  "rho": 0.9683239283284883,
+  "questions": 1589,
+  "reference": 0.9628047229694198,
+  "floor": 0.078,
+  "threshold": 0.4814023614847099,
+  "passed": true,
+  "rule": "rho >= max(0.5 x reference, floor) (spec 4.6)"
+ },
+ "masked_E_P1": {
+  "games_in_questions": 19156,
+  "unusable_slots_in_questions": 0,
+  "path": "pooled",
+  "scale": 4.0
+ },
+ "audit": {
+  "sha256": "3a90d0bf46fade84cb94333607ef06b98d51aeedbb7c3a5c1d35000be44d41ce",
+  "commit": "2026-10-08T23:29:53+08:00"
+ },
+ "questions": 1589,
+ "questions_without_parsed_game": 0,
+ "questions_without_usable_p1_game": 0,
+ "rule_B_differs_from_Q02H": 540,
+ "pred_distribution": {
+  "D": 184,
+  "C": 176,
+  "B": 222,
+  "A": 205,
+  "1D": 137,
+  "2D": 143,
+  "3D": 128,
+  "4D": 120,
+  "5D": 147,
+  "6D": 127
+ },
+ "lp_p1_summary": {
+  "mean": [
+   -6.498070162169304,
+   -4.843750561675396,
+   -3.787540867347527,
+   -3.247348982381044,
+   -3.258505102252091,
+   -3.4318330995065476,
+   -3.773635716960648,
+   -4.521592354779352,
+   -5.716932345916089,
+   -7.928755390961069
+  ]
+ },
+ "se_val_record_from_tune": {
+  "se_val": 0.008959895145982487,
+  "adoption_probability": 0.9999999998832042,
+  "delta": 0.07434432556651904,
+  "N_l": {
+   "D": 178,
+   "C": 163,
+   "B": 207,
+   "A": 308,
+   "1D": 87,
+   "2D": 122,
+   "3D": 124,
+   "4D": 128,
+   "5D": 131,
+   "6D": 141
+  },
+  "per_level_var_over_N": {
+   "D": 0.00046149940363710083,
+   "C": 0.0006715262760469323,
+   "B": 0.0005960017751936214,
+   "A": 0.00038931371263414664,
+   "1D": 0.001451388395250601,
+   "2D": 0.001039613424864734,
+   "3D": 0.001013746724240468,
+   "4D": 0.0009618676329673295,
+   "5D": 0.0009333646908202862,
+   "6D": 0.0005096500670448318
+  },
+  "formula": "sqrt(sum_l Var_l(d, ddof 1) / N_l) / 10; Phi(delta / SE_val - 1.96)",
+  "adoption_probability_at_fraction_of_delta": {
+   "1.0": 0.9999999998832042,
+   "0.75": 0.9999899190886208,
+   "0.5": 0.9856916715590824
+  }
+ },
+ "inputs_sha256": {
+  "frozen_config.json": "421bbeb4524bed8ccf73babd58cac6b16c82f45b1aa57acef2e55bd52be0ba70",
+  "p1_map.npz": "116923629b66198a79da06282aac9ca863acf77bf6a1e1f5d584b526fb54afb2",
+  "val_p1.npz": "11b1d38cc116401d44825883b864bf635b2d44e109baa17115fb4093055da4e0",
+  "val_report.json": "2ce9e86f8e639217c38814541f7d1bfb083b609ac194b5e19c8c38c60e653535",
+  "val_hs.npz": "ef2067e8cb633f521c205a09aa4638c79fef3ba0b4e90e6a54bdc046e5a5550f",
+  "hs_map.npz (07)": "a4334e79c490e4d8102dd5136ac08c0de1060315981f4ccc527ebffa1b84a3e4",
+  "frozen_config.json (07)": "93a0ac29615260865d554ee61aec258c633820a87aeb7dfcf8047a5dfd200c0b",
+  "questions": "73e51bbfd7b051e73cbb62af4b180c403d2422f122240c5e67e9c92303776db5",
+  "val_keys.npz": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+  "val_o4.npz": "30d312c02c357f6761567099003885be5e08635b6e6c0b49d71baac137cd9cd4",
+  "val_p02e9_d4.npz": "ec0b729d805eb9f3458f7a497444b099b8ec47e5cec73703ae4b8bf9cf0a11b2"
+ },
+ "outputs_sha256": {
+  "rank_val_probs.csv": "7a513367147227e3631bfb7bad36064f3e90fffb6ee358716e389698ce1ccd97",
+  "pred_A.csv": "e24699e989543bfbfc73b1b710677c93f018747193a9ba18d89fc004cdd17753",
+  "pred_B.csv": "b02d4f947910726fa25c292e9798e7407b1e802e2fed080d843f56b9beb48872",
+  "decide_summary.json": "001639061aec32504530a279192942e58952aa2659a6142c425b2608860e52df",
+  "check_submission.txt": "b62dd5ca82e8d5cce25b20a3f87f35a4c3ba2d78cc683d3bfc2764dbcb932f54",
+  "val_lp_p1.npz": "8815db14654eefdb8c2a11cfbb709de4254272de734cec415b3dfc2dbb0e59a9"
+ },
+ "decide_stdout": "questions: 1589\nmissing (n_parsed == 0, no parsable game; filled with D): 0  of which probabilities given but ignored: 0\nA != B: 95\nA distribution: D=190 C=170 B=224 A=226 1D=119 2D=138 3D=124 4D=115 5D=152 6D=131\nB distribution: D=184 C=176 B=222 A=205 1D=137 2D=143 3D=128 4D=120 5D=147 6D=127\nwrote pred_A.csv, pred_B.csv, decide_summary.json in D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg08\\rank\n",
+ "tool": {
+  "git_head": "2200013199f848b99c8c85fb36d01b17c930ad75",
+  "dirty_or_untracked": [],
+  "files_sha256_rule": "sha256, CRLF folded to LF",
+  "files_sha256": {
+   "tools/p08_p1.py": "a10c77c4bd97472b464f39080816090f0f64986195384b28e1d95dfc76e6677f",
+   "tools/p08_rank_fuse.py": "64f42bd956f7808947e0c85abe1f9fa60d9958cb8e769fc889c6283c188d481e",
+   "results/prereg07/explore/pilot_humansl/hs_lib.py": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+   "results/prereg07/explore/pilot_humansl/pilot_run.py": "b0d127fd1d5a83af5b17ec3df1dccc85d94b11c3479d33cac07448a3796a3936",
+   "results/prereg07/explore/pilot_humansl/pilot_fuse.py": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+   "results/prereg05/explore/u1/u1_lib.py": "225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7",
+   "results/prereg08/p1/p1_lib.py": "062600168326f9eecd4ec1073e54881c475f8f276e376164eab20d373bbff511",
+   "results/prereg08/p1/p1_extract.py": "2ee8eb127150e672b62bcb30b70c4fac46b8cd6e32c7e4eb19d54f746a6e3f9c",
+   "results/prereg08/p1/p1_fuse.py": "ad356c8ca9f26e1e761677afa07b5aa369ca31e5318f61eb6a6cbda33b970953",
+   "results/prereg08/p1/p1_plan.json": "0cd46bf90c764cae3824f5906e72e13336ab7276ef5fa7edb2ec6831911b228d",
+   "results/prereg08/p2/p2_sets.py": "98bad3d85a32e80c065226b0cc8cd1065b423cdb39dce89829a54b0cbf381c8f",
+   "tools/p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142",
+   "tools/p07_hs.py": "b27ea371bdc1477558effb9ca86c540805dcced971d983226e15fb5e19b7b8dc"
+  }
+ },
+ "environment": {
+  "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "blas_env": {
+   "OMP_NUM_THREADS": null,
+   "OPENBLAS_NUM_THREADS": null,
+   "MKL_NUM_THREADS": null
+  },
+  "cpu_count": 24
+ },
+ "next": "commit; prescore_audit.json by another agent (no scores) -> commit; apply --finalize; H8R (PREREG_08 3) only when score_allowed is true",
+ "finalized": "2026-10-08T15:29:54+00:00",
+ "finalized_by_tool": {
+  "tools/p08_p1.py": "a10c77c4bd97472b464f39080816090f0f64986195384b28e1d95dfc76e6677f",
+  "tools/p08_rank_fuse.py": "64f42bd956f7808947e0c85abe1f9fa60d9958cb8e769fc889c6283c188d481e",
+  "results/prereg07/explore/pilot_humansl/hs_lib.py": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+  "results/prereg07/explore/pilot_humansl/pilot_run.py": "b0d127fd1d5a83af5b17ec3df1dccc85d94b11c3479d33cac07448a3796a3936",
+  "results/prereg07/explore/pilot_humansl/pilot_fuse.py": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+  "results/prereg05/explore/u1/u1_lib.py": "225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7",
+  "results/prereg08/p1/p1_lib.py": "062600168326f9eecd4ec1073e54881c475f8f276e376164eab20d373bbff511",
+  "results/prereg08/p1/p1_extract.py": "2ee8eb127150e672b62bcb30b70c4fac46b8cd6e32c7e4eb19d54f746a6e3f9c",
+  "results/prereg08/p1/p1_fuse.py": "ad356c8ca9f26e1e761677afa07b5aa369ca31e5318f61eb6a6cbda33b970953",
+  "results/prereg08/p1/p1_plan.json": "0cd46bf90c764cae3824f5906e72e13336ab7276ef5fa7edb2ec6831911b228d",
+  "results/prereg08/p2/p2_sets.py": "98bad3d85a32e80c065226b0cc8cd1065b423cdb39dce89829a54b0cbf381c8f",
+  "tools/p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142",
+  "tools/p07_hs.py": "b27ea371bdc1477558effb9ca86c540805dcced971d983226e15fb5e19b7b8dc"
+ }
+}

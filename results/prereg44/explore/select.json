@@ -1,0 +1,73 @@
+{
+ "format": "c10-prereg44 select v1",
+ "smoke": false,
+ "created": "2026-11-13T11:15:45",
+ "code": {
+  "head": "3a256a375c1fb183ec21ed4917d47237439133ce",
+  "dirty": "",
+  "sha256_lf": {
+   "results/prereg36/explore/p36_lib.py": "8df27b37a6b3de786b54af25908d3d91ffe4c030dceb7350d9dd130a14ce241f",
+   "results/prereg44/explore/PLAN.md": "e49601ffed31c4fa99bd9f87c4b65d71646414bcc7975253e3526054aa28cfcd",
+   "results/prereg44/explore/data_record.json": "fefc023cdfe954cdaebaa1aa38c2b7b771ab39f7668ac6e9328435dcafdba6ea",
+   "results/prereg44/explore/p44_data.py": "f8cc8a5a72e24d71b0218a1a0d411704584eddd6bb7d6c5b96242a2a65bece45",
+   "results/prereg44/explore/p44_eval.py": "ba45c461707cb364f4c2bcf54cf36be144953cb9ecbeaa5b456d978cd1952e88",
+   "results/prereg44/explore/p44_infer.py": "f01ab81811e7da2fb89ba29ef75eea7fb9f2457752571a0e399207dda5620dd3",
+   "results/prereg44/explore/p44_lib.py": "92a2893e9b84a3bd3882e67773286b777dba4e6194c83945c0b07a392d9e213a",
+   "results/prereg44/explore/p44_train.py": "29aeb34928e5e1377d08d379359da2258a1dcbecadaa12800f43f3730dd21480",
+   "results/prereg44/explore/test_p44.py": "6a50833101fbf6440195927da1cc1980a58a1e952e9e6dad2116f76edf35baa2",
+   "tools/c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495"
+  }
+ },
+ "what": "PLAN.md 4: level-balanced mean per-game NLL on the H held-out question games; lowest of the 8 candidates (no inner logits read)",
+ "candidates": {
+  "s140000_raw": {
+   "balanced_game_nll": 1.7778548722075047,
+   "games": 24827,
+   "bad_games": 0,
+   "ckpt_sha256": "a307061d24dd50004d4446bfdbc25b7773c146f27e8e4f96877f1f109542e4ca"
+  },
+  "s140000_ema": {
+   "balanced_game_nll": 1.81754238914021,
+   "games": 24827,
+   "bad_games": 0,
+   "ckpt_sha256": "a307061d24dd50004d4446bfdbc25b7773c146f27e8e4f96877f1f109542e4ca"
+  },
+  "s160000_raw": {
+   "balanced_game_nll": 1.7689628665476669,
+   "games": 24827,
+   "bad_games": 0,
+   "ckpt_sha256": "634c04fc247b759ea91b341fbe605f8f2862c4671d6ad0ab7452c5e723d28e20"
+  },
+  "s160000_ema": {
+   "balanced_game_nll": 1.7705931723403876,
+   "games": 24827,
+   "bad_games": 0,
+   "ckpt_sha256": "634c04fc247b759ea91b341fbe605f8f2862c4671d6ad0ab7452c5e723d28e20"
+  },
+  "s180000_raw": {
+   "balanced_game_nll": 1.7681946684263181,
+   "games": 24827,
+   "bad_games": 0,
+   "ckpt_sha256": "2bfff0da1a4c91454af09dee779eef10fbaa4b991406cf63bddffbc3bf53ba45"
+  },
+  "s180000_ema": {
+   "balanced_game_nll": 1.768611669812763,
+   "games": 24827,
+   "bad_games": 0,
+   "ckpt_sha256": "2bfff0da1a4c91454af09dee779eef10fbaa4b991406cf63bddffbc3bf53ba45"
+  },
+  "s200000_raw": {
+   "balanced_game_nll": 1.767346575073391,
+   "games": 24827,
+   "bad_games": 0,
+   "ckpt_sha256": "749a8837a51f662fc392b0b1ea58302f88aac802446dfb512611f0aa0d3f270b"
+  },
+  "s200000_ema": {
+   "balanced_game_nll": 1.7673438674787185,
+   "games": 24827,
+   "bad_games": 0,
+   "ckpt_sha256": "749a8837a51f662fc392b0b1ea58302f88aac802446dfb512611f0aa0d3f270b"
+  }
+ },
+ "selected": "s200000_ema"
+}

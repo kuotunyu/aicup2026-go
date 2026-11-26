@@ -1,0 +1,299 @@
+{
+ "format": "c10-prereg07 rank selfcheck v1",
+ "what": "PREREG_07 2.3 selfcheck: the main-branch tool reproduces the pilot (a check of the port)",
+ "created": "2026-10-05T05:16:26+00:00",
+ "seconds": 210.6,
+ "preview": false,
+ "precommit": true,
+ "rerun": null,
+ "passed": true,
+ "problems": [],
+ "check_report": {
+  "sha256": "2e9bd5042df736ea50391c562502341c10188b1d2f8d36360707412c186f4fff",
+  "commit": {
+   "files": {
+    "results/prereg07/rank/check_report.json": "2e9bd5042df736ea50391c562502341c10188b1d2f8d36360707412c186f4fff"
+   },
+   "commit_problems": [
+    "results/prereg07/rank/check_report.json not committed"
+   ],
+   "precommit_skipped": true
+  }
+ },
+ "mapping": {
+  "lambda": 0.0001,
+  "cv": {
+   "0.0001": {
+    "logloss": 1.7571755879185869,
+    "top1": 0.331,
+    "rule_b_score_per_game": 0.47221560135103385
+   },
+   "0.001": {
+    "logloss": 1.7766839389925941,
+    "top1": 0.323,
+    "rule_b_score_per_game": 0.46540732004710056
+   },
+   "0.01": {
+    "logloss": 1.8443037674729725,
+    "top1": 0.30566666666666664,
+    "rule_b_score_per_game": 0.4487562113313958
+   },
+   "0.1": {
+    "logloss": 2.0439101452455177,
+    "top1": 0.25566666666666665,
+    "rule_b_score_per_game": 0.39281158272341526
+   },
+   "1.0": {
+    "logloss": 2.241491518222481,
+    "top1": 0.20833333333333334,
+    "rule_b_score_per_game": 0.32609297487064337
+   }
+  },
+  "refit_loss": 1.7425066323027925,
+  "games": 3000,
+  "success": true
+ },
+ "pilot_reference": {
+  "Q02": 0.6101211982700248,
+  "Q02H": 0.6242752597994481,
+  "diff": 0.014154061529423334,
+  "ci95": [
+   0.004729748170068845,
+   0.023937551131530375
+  ],
+  "question_mean_diff": 0.012494963827849034,
+  "lambda": 0.0001,
+  "cv_logloss": 1.7571755879185869,
+  "refit_loss": 1.7425066323027925,
+  "eval_questions": 127200
+ },
+ "q02_seam_vs_u1_oof": {
+  "eval_P_equal_u1": true,
+  "mono_P_equal_u1": true
+ },
+ "inner_eval": {
+  "Q02": 0.6101211982700248,
+  "Q02H": 0.6242752597994481,
+  "diff": 0.014154061529423334,
+  "ci95": [
+   0.004729748170068845,
+   0.023937551131530375
+  ],
+  "question_mean_diff": 0.012494963827849034
+ },
+ "folds_Q02H": [
+  [
+   -0.12104658499775073,
+   0.3860801765231865,
+   0.39338632604909396,
+   1.2488161859955598,
+   1.503236989455181,
+   0.0,
+   1.2425755563543088,
+   0.3586114000028912,
+   0.06385754306085747,
+   0.08920730929524062,
+   0.03278071566983907,
+   0.18417410107646395,
+   0.13267598424942534,
+   0.1640659199002589,
+   0.06799755002315734,
+   -0.35578185365849546
+  ],
+  [
+   0.007705721793111554,
+   0.3996299961745117,
+   0.3388296266698121,
+   1.2616363866133262,
+   1.3159769414440998,
+   0.0,
+   0.9495096144534713,
+   0.36033036283669995,
+   0.12371687856177269,
+   0.14246472574054464,
+   0.06893094859688699,
+   0.22380155737033955,
+   0.11102775947582055,
+   0.08999421775351922,
+   -0.026072038934806564,
+   -0.3448436430134443
+  ],
+  [
+   -0.94486699999285,
+   0.2822934714813516,
+   0.9303282317544741,
+   3.317017480213708,
+   2.9116752606859335,
+   1.2248349279889792,
+   4.0,
+   0.272943179769062,
+   0.011321822544128052,
+   0.026568604058238462,
+   0.015534337489658004,
+   0.1708998033967916,
+   0.11861187854445568,
+   0.11422181553721221,
+   0.027385646683276695,
+   -0.21958765055494023
+  ],
+  [
+   -1.2101161948704453,
+   0.3758570113794497,
+   1.1127482234971973,
+   4.0,
+   3.7876273490496346,
+   3.346591780920184,
+   3.181561735043371,
+   0.24985320415199042,
+   0.017841759022151932,
+   0.06097016603195137,
+   0.008589600898204437,
+   0.10801482141188976,
+   0.06025103432933196,
+   0.030793045209116847,
+   0.04131517259626229,
+   -0.19613058221814392
+  ],
+  [
+   0.09561860093286079,
+   0.4024568499620336,
+   0.3465535647455313,
+   1.0528789081464134,
+   1.3740113115341968,
+   0.0,
+   0.7603223447594084,
+   0.35882872346757333,
+   0.15064097040585137,
+   0.1881954378277693,
+   0.15332015156033085,
+   0.2988524671991801,
+   0.20603189223349924,
+   0.19613844468467503,
+   0.10813433730183888,
+   -0.3905997674805897
+  ]
+ ],
+ "mono_pilot_logic": {
+  "coverage": "120544/120544 questions",
+  "difference": {
+   "rank_balanced": 0.015409749395039474,
+   "question_mean": 0.014463407794221173,
+   "ci95": [
+    0.009536342860068294,
+    0.0210199429984344
+   ],
+   "se": 0.0029999059896679042,
+   "n_questions": 120544,
+   "by_colour": {
+    "B": {
+     "rank_balanced": 0.01573619639273005,
+     "question_mean": 0.015260972832117137,
+     "ci95": [
+      0.009951287110905285,
+      0.0220318846774951
+     ],
+     "se": 0.0032123614376235315,
+     "n_questions": 59744
+    },
+    "W": {
+     "rank_balanced": 0.01517872883713789,
+     "question_mean": 0.01367969520172041,
+     "ci95": [
+      0.007474011101880063,
+      0.023972300112718888
+     ],
+     "se": 0.004261320698226151,
+     "n_questions": 60800
+    }
+   },
+   "by_k": {
+    "5": {
+     "rank_balanced": 0.026703810139340645
+    },
+    "10": {
+     "rank_balanced": 0.015669490766561767
+    },
+    "15": {
+     "rank_balanced": 0.008408056330769242
+    },
+    "20": {
+     "rank_balanced": 0.0055837897397440495
+    }
+   },
+   "bootstrap": "paired, players within each level, 1000 draws, default_rng(0); the colour splits draw their own players"
+  },
+  "reference": "results/prereg07/explore/pilot_humansl/pilot_fuse_report.json combinations.Q02+HS.mono_diff_vs_Q02",
+  "reference_sha256": "64abf553dbcf6e9013f08cfa53647ace44e5d41cc4fcf453e83b31331d8e27f6",
+  "mono_failed_games": 0
+ },
+ "masked_E_HS": {
+  "equal_to_pooled": {
+   "fit": true,
+   "eval": true,
+   "mono": true
+  },
+  "Q02H_P_equal": {
+   "eval": true,
+   "mono": true
+  },
+  "info": {
+   "fit": {
+    "games_in_questions": 10160,
+    "unusable_slots_in_questions": 0,
+    "path": "pooled"
+   },
+   "eval": {
+    "games_in_questions": 11813,
+    "unusable_slots_in_questions": 0,
+    "path": "pooled"
+   },
+   "mono": {
+    "games_in_questions": 72908,
+    "unusable_slots_in_questions": 0,
+    "path": "pooled"
+   }
+  },
+  "forced_mask_max_abs_diff_record_only": {
+   "fit": 0.0,
+   "eval": 0.0,
+   "mono": 0.0
+  }
+ },
+ "inner_coverage": {
+  "inner_games_scored": 73169,
+  "unusable_in_questions": {
+   "fit": 0,
+   "eval": 0,
+   "mono": 0
+  }
+ },
+ "pinned_sha256": {
+  "results/prereg07/explore/pilot_humansl/hs_lib.py": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+  "results/prereg07/explore/pilot_humansl/pilot_run.py": "b0d127fd1d5a83af5b17ec3df1dccc85d94b11c3479d33cac07448a3796a3936",
+  "results/prereg07/explore/pilot_humansl/pilot_fuse.py": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+  "results/prereg05/explore/u1/u1_lib.py": "225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7"
+ },
+ "tool": {
+  "git_head": "a4f19c1c2bb5482e1751f028799c1c260e9955f5",
+  "dirty_or_untracked": [
+   "tools/p07_hs.py",
+   "tools/p07_rank_fuse.py"
+  ],
+  "files_sha256_rule": "sha256, CRLF folded to LF",
+  "files_sha256": {
+   "tools/p07_hs.py": "b27ea371bdc1477558effb9ca86c540805dcced971d983226e15fb5e19b7b8dc",
+   "tools/p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142",
+   "results/prereg07/explore/pilot_humansl/hs_lib.py": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+   "results/prereg07/explore/pilot_humansl/pilot_run.py": "b0d127fd1d5a83af5b17ec3df1dccc85d94b11c3479d33cac07448a3796a3936",
+   "results/prereg07/explore/pilot_humansl/pilot_fuse.py": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+   "results/prereg05/explore/u1/u1_lib.py": "225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7"
+  }
+ },
+ "environment": {
+  "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1"
+ }
+}

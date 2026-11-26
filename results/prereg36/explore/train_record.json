@@ -1,0 +1,65 @@
+{
+ "format": "c10-prereg36 train v1",
+ "config": {
+  "total_steps": 40000,
+  "batch_games": 96,
+  "segment_moves": 24,
+  "lr": 0.002,
+  "weight_decay": 0.0001,
+  "onecycle_pct": 0.05,
+  "seed": 0,
+  "scale": 30.0,
+  "blocks": 10,
+  "channels": 128,
+  "emb_dim": 256,
+  "fp16": true,
+  "channels_last": false,
+  "n_classes": 3685,
+  "T_sha256_sorted_ids": "9c1db9001568040a648276d3993c6012afc914abd2466f7d9c5411d667cfa066",
+  "cache_codes_sha256": "be5831abbccf22be3c96725082939638e6607f88ad45b1ed2164db33060c0303"
+ },
+ "finished": true,
+ "steps": 40000,
+ "smoke": false,
+ "device": "cuda",
+ "workers": 4,
+ "git_head": "9f2dd57ace2cbe7a178727ecc27532417187fafc",
+ "torch": "2.11.0+cu128",
+ "counts": {
+  "T_players": 3685,
+  "T_games": 417698,
+  "positions_seen": 92160000,
+  "games_seen": 3840000
+ },
+ "split_sha256_sorted_ids": {
+  "E": "7778702211b3e234b731355b63e0da991ee2df9802c97c69313dc118044ffb7b",
+  "D": "490c37a134d0162301d3eb8faadcb16fbb8c8ec8dbbfda3ad6050b78fe8590bf",
+  "T": "9c1db9001568040a648276d3993c6012afc914abd2466f7d9c5411d667cfa066"
+ },
+ "seconds": 10832.9,
+ "checkpoints": {
+  "step_02700.pt": "0b7e8baf48d54bb2b07a776c425d5c777fd0428fc08f99a30ca0c1cfcad0034d",
+  "step_04000.pt": "b8639d95b33905b9fd0c513218cd65a948af57241d893271d60fd7847d9a2481",
+  "step_08000.pt": "de2af09662d668641fc2838eaac2b47df4df6345f93b2120d14ea76604358739",
+  "step_12000.pt": "47a11adfb9b972bd4035109802de7e6af547053d48aee73bf935ce5e2998b36c",
+  "step_16000.pt": "d9133e8cac2ca7c8291b58d59cb6bee08452355b68539e6d1091d355a89dc398",
+  "step_20000.pt": "82af40091f875c5e5b047f9c3678a72ce792ffe9bb5091e3c80c57197c0de50d",
+  "step_24000.pt": "a45b078532cf1302944770c7531e41171ff6d141db0a811adb468b49fb069254",
+  "step_28000.pt": "5249d45f00f8d791ee8baca8d5afa6a0308bb098b7e8516cdcd7a2de0391848f",
+  "step_32000.pt": "13a22bd0d2a3d2387282b31d18bec0088a685544ac63d4597a983e0339173c73",
+  "step_36000.pt": "e50d66708194279a11baa30f5d1427a1a4cc3c031feead8afd0cc93391c5a05a",
+  "step_40000.pt": "a2c8e03ac5ee780bcd977dd85fdeca875c1df278b9b1d34d68e94e4546f9db67"
+ },
+ "regular_checkpoints": [
+  "step_04000.pt",
+  "step_08000.pt",
+  "step_12000.pt",
+  "step_16000.pt",
+  "step_20000.pt",
+  "step_24000.pt",
+  "step_28000.pt",
+  "step_32000.pt",
+  "step_36000.pt",
+  "step_40000.pt"
+ ]
+}

@@ -1,0 +1,50 @@
+{
+ "checked_utc": "2026-09-26T05:23:42+00:00",
+ "smoke": false,
+ "method": "E0：依窗口數加權的重心、L2 距離、np.argsort 取前 5（同 prereg01）；只用 dumps/ 的每盤 embedding 重算",
+ "n_questions": 400,
+ "n_top5_identical": 400,
+ "n_top5_mismatch": 0,
+ "top5_max_mismatch_allowed": 2,
+ "mismatched_questions": [],
+ "n_fallback_questions": 0,
+ "n_centroids": 400,
+ "centroid_max_abs_diff": 0.0,
+ "centroid_tol": 0.0001,
+ "centroids_bitwise_identical": true,
+ "query_max_abs_diff_info_only": 0.0,
+ "query_ids_same_order_info_only": true,
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "p01_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "same_gpu_as_p01": true,
+ "torch": "2.11.0+cu128",
+ "p01_torch": "2.11.0+cu128",
+ "weights_sha256": "356eb4f65488925e2a552ea382979780c903ef515b85d329a3805db837b7773b",
+ "p01_top5_sha256": "0f5761a11b9f68ab07b2bc91b9650236f85b8cbeff45d459753dbd24459d3ec7",
+ "p01_embeddings_sha256": "c247b2653e73589975d558b17e96c4a1f38c3e4d66468d56ea6d02596e15752d",
+ "repro_top5_sha256": "0f5761a11b9f68ab07b2bc91b9650236f85b8cbeff45d459753dbd24459d3ec7",
+ "dumps": {
+  "cand_games.npz": {
+   "rows": 40000,
+   "sha256": "56ed03d12e9a79871a21b5f69dc4bd4bb8c8aa69b1544cb8ec799e80227cfdea",
+   "bytes": 46721772,
+   "n_parsed": 40000,
+   "n_windows_total": 4298662
+  },
+  "query_games.npz": {
+   "rows": 4935,
+   "sha256": "665d0888a93f6632eb19edac76abf996d5499cd27c683d9844b97cb274b6f689",
+   "bytes": 5336749,
+   "n_parsed": 4935,
+   "n_windows_total": 531339
+  }
+ },
+ "criteria": {
+  "question_ids_same_order": true,
+  "questions_count_ok": true,
+  "top5_identical_ok": true,
+  "candidate_ids_same_order": true,
+  "centroid_diff_ok": true
+ },
+ "passed": true
+}

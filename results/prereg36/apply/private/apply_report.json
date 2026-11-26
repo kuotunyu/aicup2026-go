@@ -1,0 +1,34 @@
+{
+ "format": "c10-prereg36 apply v1",
+ "pool": "private",
+ "weights_O_L_JO_S2_PA": [
+  1,
+  2,
+  0.5,
+  0,
+  1
+ ],
+ "wE": 4,
+ "csls_k": 20,
+ "checkpoint": {
+  "name": "step_40000.pt",
+  "sha256": "a2c8e03ac5ee780bcd977dd85fdeca875c1df278b9b1d34d68e94e4546f9db67",
+  "cnn_only_mean": 0.3838190536103516
+ },
+ "questions": 400,
+ "candidates": 600,
+ "games": 7100,
+ "games_without_E36": 0,
+ "questions_without_E36": 0,
+ "terms_rows_without_signal": {
+  "O": 0,
+  "L": 0,
+  "JO": 0,
+  "S2": 0,
+  "PA": 0
+ },
+ "tune_sha256": "a4624bedacf1efac645cd94bf8d61bf7da0900f456da321d8762a5d08c45c778",
+ "eval_sha256": "8f8b22e648765c1fc639f9d03766dd190211d9347773209d160fb8112b946308",
+ "top5_sha256": "053986020db417cb53aa5f2853882d7c31e87090c3f20e4c7c522f7d574e9391",
+ "seconds": 7.7
+}

@@ -1,0 +1,37 @@
+{
+ "format": "c10-prereg59 rows v1",
+ "created": "2026-11-20T16:02:45",
+ "what": "every training game of the split v1 validation players (split == 'val' in the committed results/split_v1/players_split.csv, as p49_lib.extra_players) = rows of the prereg49 move cache",
+ "validation_players": 1600,
+ "validation_games": 206137,
+ "games_per_player": {
+  "min": 2,
+  "median": 53.0,
+  "max": 1442
+ },
+ "players_per_rank": [
+  178,
+  163,
+  209,
+  316,
+  87,
+  122,
+  124,
+  128,
+  131,
+  142
+ ],
+ "first_row": 793863,
+ "last_row": 999999,
+ "overlap": {
+  "val_and_inner_split": 0,
+  "val_and_inner_keys": 0,
+  "val_and_s0_classes": 0,
+  "inner_and_s0_classes": 0
+ },
+ "cache_codes_sha256": "2447f0e05a42c3634a3ba16ba2666affeed95e90c4c8724ed29d8a4ee849a09a",
+ "cache_games": 1000000,
+ "split_csv_sha256_lf": "fc20f6bf1338ed454222f9097c39d58dc2eba2cac4d89be4014b368c74646b8c",
+ "val_rows_sha256": "35f0cd02fb954144b9019e6dbd1a5c2ae9db7936ffe03bd42285c33ad2e959d2",
+ "peak_working_set_gb": 0.28
+}

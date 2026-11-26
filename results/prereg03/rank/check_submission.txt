@@ -1,0 +1,4 @@
+# PY tools/check_submission.py rank results/prereg03/rank/pred_B.csv --questions data/local/rank_val_questions.csv
+OK: rank submission covers all 1589 questions and passes every strict check
+# PY tools/check_submission.py rank results/prereg03/rank/pred_A.csv --questions data/local/rank_val_questions.csv
+OK: rank submission covers all 1589 questions and passes every strict check

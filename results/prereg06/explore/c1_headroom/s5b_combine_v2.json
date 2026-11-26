@@ -1,0 +1,1259 @@
+{
+ "what": "Step 5b (continuation run) = analysis (c) v2 and the proxy part of analysis (d).\n\nSame o2o official-shaped pools and the same method as s5_combine.py (all choices on the tuning pools\n100-109, every reported number on the evaluation pools 0-19, paired differences with t-intervals over\nthe 20 pools), with two new terms computed by s4_terms.py in the continuation run:\n  style2    finer dense style features (c1h_feats.style2_vec), Gaussian NB as 'style'\n  lda<d>    c1h_lda: player-discriminant projection (d dims) learned on fit players outside the pool\ns5_combine.json / fused_best.json / fused_nopost.json of the first run are left untouched; this\nwrites s5b_combine_v2.json, fused_v2_best.json, fused_v2_nopost.json.\n\n(d) proxy: the CNN part of Q04 cannot be computed for fit players on this machine (the prereg01\nplayer weights are only on Drive and the CNN has no CPU path here). Q04 = z(CNN) + 1.0 z(open). Two\nstand-ins for z(CNN), from the same pools:\n  proxyA = style  (Gaussian NB on 34 style values; alone ~0.38 here; the CNN alone scored 0.4006 in\n                   the prereg02 candidate-pool self-retrieval, results/prereg02/player/sr_report.json)\n  proxyB = lda32  (a much stronger style embedding; pessimistic stand-in: if the CNN already carried\n                   all of it, the new terms would add only what is left)\nFor each, Q04proxy = z(base) + 1.0 z(stand-in); the greedy forward selection is re-run on top of it\n(stand-in kept, its weight fixed at 1) and the gain over Q04proxy is reported.",
+ "terms_available": [
+  "base",
+  "n20",
+  "n30",
+  "deep",
+  "prefix",
+  "opp",
+  "joseki",
+  "joseki_own",
+  "resp",
+  "style",
+  "gw10",
+  "knn1",
+  "knn3",
+  "pknn1",
+  "style2",
+  "lda16",
+  "lda32",
+  "lda64",
+  "lda128"
+ ],
+ "base_eval": [
+  0.9253,
+  0.9201,
+  0.9305
+ ],
+ "alone": {
+  "style2": {
+   "tune_mean": 0.4852,
+   "eval": [
+    0.4902,
+    0.4824,
+    0.498
+   ]
+  },
+  "lda16": {
+   "tune_mean": 0.6487,
+   "eval": [
+    0.6589,
+    0.6513,
+    0.6665
+   ]
+  },
+  "lda32": {
+   "tune_mean": 0.7405,
+   "eval": [
+    0.7475,
+    0.7394,
+    0.7555
+   ]
+  },
+  "lda64": {
+   "tune_mean": 0.7462,
+   "eval": [
+    0.7563,
+    0.7478,
+    0.7648
+   ]
+  },
+  "lda128": {
+   "tune_mean": 0.7048,
+   "eval": [
+    0.7132,
+    0.7052,
+    0.7212
+   ]
+  }
+ },
+ "with_base": {
+  "style2": {
+   "tune_gain_by_w": {
+    "0.1": 0.0042,
+    "0.25": 0.0104,
+    "0.5": 0.0176,
+    "1.0": 0.0264,
+    "2.0": 0.0288,
+    "4.0": 0.0074
+   },
+   "w": 2.0,
+   "eval_diff_vs_base": [
+    0.0243,
+    0.0196,
+    0.0289
+   ],
+   "eval_score": [
+    0.9495,
+    0.9447,
+    0.9544
+   ]
+  },
+  "lda16": {
+   "tune_gain_by_w": {
+    "0.1": 0.0051,
+    "0.25": 0.0116,
+    "0.5": 0.0213,
+    "1.0": 0.034,
+    "2.0": 0.0408,
+    "4.0": 0.0413
+   },
+   "w": 4.0,
+   "eval_diff_vs_base": [
+    0.0378,
+    0.0335,
+    0.0422
+   ],
+   "eval_score": [
+    0.9631,
+    0.9586,
+    0.9677
+   ]
+  },
+  "lda32": {
+   "tune_gain_by_w": {
+    "0.1": 0.0058,
+    "0.25": 0.0126,
+    "0.5": 0.0234,
+    "1.0": 0.0369,
+    "2.0": 0.046,
+    "4.0": 0.0457
+   },
+   "w": 2.0,
+   "eval_diff_vs_base": [
+    0.0452,
+    0.041,
+    0.0494
+   ],
+   "eval_score": [
+    0.9705,
+    0.9666,
+    0.9744
+   ]
+  },
+  "lda64": {
+   "tune_gain_by_w": {
+    "0.1": 0.0057,
+    "0.25": 0.0126,
+    "0.5": 0.0247,
+    "1.0": 0.0372,
+    "2.0": 0.0468,
+    "4.0": 0.0449
+   },
+   "w": 2.0,
+   "eval_diff_vs_base": [
+    0.0452,
+    0.0405,
+    0.0499
+   ],
+   "eval_score": [
+    0.9705,
+    0.9669,
+    0.9741
+   ]
+  },
+  "lda128": {
+   "tune_gain_by_w": {
+    "0.1": 0.0059,
+    "0.25": 0.0137,
+    "0.5": 0.0241,
+    "1.0": 0.0378,
+    "2.0": 0.0436,
+    "4.0": 0.0381
+   },
+   "w": 2.0,
+   "eval_diff_vs_base": [
+    0.0408,
+    0.036,
+    0.0456
+   ],
+   "eval_score": [
+    0.9661,
+    0.9626,
+    0.9695
+   ]
+  }
+ },
+ "lda_selected_on_tune": "lda64",
+ "v2": {
+  "terms": [
+   "base",
+   "lda64",
+   "joseki_own",
+   "style2"
+  ],
+  "weights": [
+   1.0,
+   2.66,
+   0.5,
+   0.5
+  ],
+  "ref_terms": [
+   "base"
+  ],
+  "ref_weights": [
+   1.0
+  ],
+  "ref_post": null,
+  "ref_eval_score": [
+   0.9253,
+   0.9201,
+   0.9305
+  ],
+  "post": {
+   "None": {
+    "tune_gain_vs_ref": 0.061,
+    "eval_score": [
+     0.9819,
+     0.9786,
+     0.9853
+    ],
+    "eval_diff_vs_ref": [
+     0.0566,
+     0.0522,
+     0.0611
+    ]
+   },
+   "csls3": {
+    "tune_gain_vs_ref": 0.0673,
+    "eval_score": [
+     0.9911,
+     0.9889,
+     0.9934
+    ],
+    "eval_diff_vs_ref": [
+     0.0659,
+     0.0612,
+     0.0706
+    ]
+   },
+   "csls5": {
+    "tune_gain_vs_ref": 0.0658,
+    "eval_score": [
+     0.9894,
+     0.987,
+     0.9917
+    ],
+    "eval_diff_vs_ref": [
+     0.0641,
+     0.059,
+     0.0692
+    ]
+   },
+   "csls10": {
+    "tune_gain_vs_ref": 0.0634,
+    "eval_score": [
+     0.9869,
+     0.9842,
+     0.9896
+    ],
+    "eval_diff_vs_ref": [
+     0.0616,
+     0.0566,
+     0.0666
+    ]
+   },
+   "csls20": {
+    "tune_gain_vs_ref": 0.0624,
+    "eval_score": [
+     0.985,
+     0.9822,
+     0.9879
+    ],
+    "eval_diff_vs_ref": [
+     0.0598,
+     0.0546,
+     0.0649
+    ]
+   }
+  },
+  "post_selected_on_tune": "csls3",
+  "selected_eval_top1": [
+   0.9883,
+   0.9855,
+   0.991
+  ],
+  "selected_eval_top5": [
+   0.9988,
+   0.998,
+   0.9995
+  ],
+  "selected_rank_distribution": {
+   "1-1": 0.9882,
+   "2-2": 0.0069,
+   "3-3": 0.0024,
+   "4-4": 0.0008,
+   "5-5": 0.0005,
+   "6-10": 0.0009,
+   "11-400": 0.0004
+  },
+  "selected_rank_distribution_k5": {
+   "1-1": 0.9585,
+   "2-2": 0.023,
+   "3-3": 0.009,
+   "4-4": 0.0025,
+   "5-5": 0.002,
+   "6-10": 0.0035,
+   "11-400": 0.0015
+  },
+  "selected_by_k_vs_ref": {
+   "5": {
+    "score": [
+     0.9683,
+     0.9611,
+     0.9756
+    ],
+    "top1": [
+     0.9585,
+     0.9497,
+     0.9673
+    ],
+    "top5": [
+     0.995,
+     0.9922,
+     0.9978
+    ],
+    "diff_vs_ref": [
+     0.1587,
+     0.1455,
+     0.1718
+    ]
+   },
+   "10": {
+    "score": [
+     0.9976,
+     0.995,
+     1.0002
+    ],
+    "top1": [
+     0.9965,
+     0.9927,
+     1.0003
+    ],
+    "top5": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "diff_vs_ref": [
+     0.0616,
+     0.0507,
+     0.0725
+    ]
+   },
+   "15": {
+    "score": [
+     0.9993,
+     0.9982,
+     1.0003
+    ],
+    "top1": [
+     0.999,
+     0.9976,
+     1.0004
+    ],
+    "top5": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "diff_vs_ref": [
+     0.0264,
+     0.0206,
+     0.0322
+    ]
+   },
+   "20": {
+    "score": [
+     0.9994,
+     0.9985,
+     1.0003
+    ],
+    "top1": [
+     0.999,
+     0.9976,
+     1.0004
+    ],
+    "top5": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "diff_vs_ref": [
+     0.0168,
+     0.0116,
+     0.022
+    ]
+   }
+  },
+  "nopost_by_k_vs_ref": {
+   "5": {
+    "score": [
+     0.9368,
+     0.9246,
+     0.949
+    ],
+    "top1": [
+     0.921,
+     0.9066,
+     0.9354
+    ],
+    "top5": [
+     0.985,
+     0.9781,
+     0.9919
+    ],
+    "diff_vs_ref": [
+     0.1271,
+     0.1157,
+     0.1386
+    ]
+   },
+   "10": {
+    "score": [
+     0.9948,
+     0.9916,
+     0.998
+    ],
+    "top1": [
+     0.9925,
+     0.9882,
+     0.9968
+    ],
+    "top5": [
+     0.9995,
+     0.9985,
+     1.0005
+    ],
+    "diff_vs_ref": [
+     0.0588,
+     0.0487,
+     0.0688
+    ]
+   },
+   "15": {
+    "score": [
+     0.9975,
+     0.9957,
+     0.9992
+    ],
+    "top1": [
+     0.996,
+     0.9932,
+     0.9988
+    ],
+    "top5": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "diff_vs_ref": [
+     0.0246,
+     0.0191,
+     0.0301
+    ]
+   },
+   "20": {
+    "score": [
+     0.9986,
+     0.997,
+     1.0003
+    ],
+    "top1": [
+     0.998,
+     0.9956,
+     1.0004
+    ],
+    "top5": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "diff_vs_ref": [
+     0.0161,
+     0.0113,
+     0.0208
+    ]
+   }
+  },
+  "path": [
+   {
+    "add": "lda64",
+    "w": 2.0,
+    "tune_mean": 0.9715
+   },
+   {
+    "add": "joseki_own",
+    "w": 0.5,
+    "tune_mean": 0.9827
+   },
+   {
+    "add": "style2",
+    "w": 0.5,
+    "tune_mean": 0.9845
+   }
+  ],
+  "eval_diff_vs_v1_nopost_by_post": {
+   "None": [
+    0.0037,
+    0.0012,
+    0.0062
+   ],
+   "csls3": [
+    0.0129,
+    0.0101,
+    0.0157
+   ],
+   "csls5": [
+    0.0111,
+    0.0082,
+    0.0141
+   ],
+   "csls10": [
+    0.0086,
+    0.0057,
+    0.0116
+   ],
+   "csls20": [
+    0.0068,
+    0.0038,
+    0.0098
+   ]
+  },
+  "eval_diff_selected_vs_v1_csls10": [
+   0.0057,
+   0.0035,
+   0.0079
+  ]
+ },
+ "proxy": {
+  "proxyA_style": {
+   "terms": [
+    "base",
+    "style",
+    "joseki_own",
+    "lda64",
+    "joseki"
+   ],
+   "weights": [
+    1.0,
+    1.0,
+    0.5,
+    2.66,
+    0.375
+   ],
+   "ref_terms": [
+    "base",
+    "style"
+   ],
+   "ref_weights": [
+    1.0,
+    1.0
+   ],
+   "ref_post": null,
+   "ref_eval_score": [
+    0.9542,
+    0.9494,
+    0.959
+   ],
+   "post": {
+    "None": {
+     "tune_gain_vs_ref": 0.0335,
+     "eval_score": [
+      0.983,
+      0.9802,
+      0.9858
+     ],
+     "eval_diff_vs_ref": [
+      0.0288,
+      0.0246,
+      0.0331
+     ]
+    },
+    "csls3": {
+     "tune_gain_vs_ref": 0.0399,
+     "eval_score": [
+      0.9926,
+      0.9908,
+      0.9944
+     ],
+     "eval_diff_vs_ref": [
+      0.0383,
+      0.0338,
+      0.0429
+     ]
+    },
+    "csls5": {
+     "tune_gain_vs_ref": 0.0386,
+     "eval_score": [
+      0.9908,
+      0.9888,
+      0.9928
+     ],
+     "eval_diff_vs_ref": [
+      0.0366,
+      0.0325,
+      0.0407
+     ]
+    },
+    "csls10": {
+     "tune_gain_vs_ref": 0.0363,
+     "eval_score": [
+      0.9881,
+      0.986,
+      0.9902
+     ],
+     "eval_diff_vs_ref": [
+      0.0339,
+      0.0298,
+      0.038
+     ]
+    },
+    "csls20": {
+     "tune_gain_vs_ref": 0.0353,
+     "eval_score": [
+      0.9864,
+      0.9842,
+      0.9885
+     ],
+     "eval_diff_vs_ref": [
+      0.0322,
+      0.0281,
+      0.0362
+     ]
+    }
+   },
+   "post_selected_on_tune": "csls3",
+   "selected_eval_top1": [
+    0.99,
+    0.9877,
+    0.9923
+   ],
+   "selected_eval_top5": [
+    0.9994,
+    0.9989,
+    0.9999
+   ],
+   "selected_rank_distribution": {
+    "1-1": 0.99,
+    "2-2": 0.0063,
+    "3-3": 0.0015,
+    "4-4": 0.001,
+    "5-5": 0.0006,
+    "6-10": 0.0005,
+    "11-400": 0.0001
+   },
+   "selected_rank_distribution_k5": {
+    "1-1": 0.9655,
+    "2-2": 0.0215,
+    "3-3": 0.0055,
+    "4-4": 0.003,
+    "5-5": 0.002,
+    "6-10": 0.002,
+    "11-400": 0.0005
+   },
+   "selected_by_k_vs_ref": {
+    "5": {
+     "score": [
+      0.9743,
+      0.9685,
+      0.9802
+     ],
+     "top1": [
+      0.9655,
+      0.958,
+      0.973
+     ],
+     "top5": [
+      0.9975,
+      0.9954,
+      0.9996
+     ],
+     "diff_vs_ref": [
+      0.1093,
+      0.0971,
+      0.1215
+     ]
+    },
+    "10": {
+     "score": [
+      0.9977,
+      0.9956,
+      0.9998
+     ],
+     "top1": [
+      0.997,
+      0.9943,
+      0.9997
+     ],
+     "top5": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "diff_vs_ref": [
+      0.0282,
+      0.0219,
+      0.0346
+     ]
+    },
+    "15": {
+     "score": [
+      0.9991,
+      0.998,
+      1.0001
+     ],
+     "top1": [
+      0.9985,
+      0.9968,
+      1.0002
+     ],
+     "top5": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "diff_vs_ref": [
+      0.0096,
+      0.0052,
+      0.0141
+     ]
+    },
+    "20": {
+     "score": [
+      0.9992,
+      0.998,
+      1.0004
+     ],
+     "top1": [
+      0.999,
+      0.9976,
+      1.0004
+     ],
+     "top5": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "diff_vs_ref": [
+      0.0063,
+      0.0036,
+      0.009
+     ]
+    }
+   },
+   "nopost_by_k_vs_ref": {
+    "5": {
+     "score": [
+      0.9409,
+      0.9297,
+      0.9521
+     ],
+     "top1": [
+      0.9255,
+      0.9115,
+      0.9395
+     ],
+     "top5": [
+      0.987,
+      0.9804,
+      0.9936
+     ],
+     "diff_vs_ref": [
+      0.0758,
+      0.0645,
+      0.0872
+     ]
+    },
+    "10": {
+     "score": [
+      0.9954,
+      0.9923,
+      0.9986
+     ],
+     "top1": [
+      0.994,
+      0.9902,
+      0.9978
+     ],
+     "top5": [
+      0.999,
+      0.9976,
+      1.0004
+     ],
+     "diff_vs_ref": [
+      0.026,
+      0.0191,
+      0.0329
+     ]
+    },
+    "15": {
+     "score": [
+      0.9969,
+      0.995,
+      0.9988
+     ],
+     "top1": [
+      0.9955,
+      0.9927,
+      0.9983
+     ],
+     "top5": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "diff_vs_ref": [
+      0.0075,
+      0.0032,
+      0.0117
+     ]
+    },
+    "20": {
+     "score": [
+      0.9989,
+      0.9975,
+      1.0002
+     ],
+     "top1": [
+      0.9985,
+      0.9968,
+      1.0002
+     ],
+     "top5": [
+      0.9995,
+      0.9985,
+      1.0005
+     ],
+     "diff_vs_ref": [
+      0.0059,
+      0.0036,
+      0.0083
+     ]
+    }
+   },
+   "path": [
+    {
+     "add": "joseki_own",
+     "w": 0.5,
+     "tune_mean": 0.9764
+    },
+    {
+     "add": "lda64",
+     "w": 2.0,
+     "tune_mean": 0.9843
+    },
+    {
+     "add": "joseki",
+     "w": 0.5,
+     "tune_mean": 0.986
+    }
+   ],
+   "q04proxy_eval_score": [
+    0.9542,
+    0.9494,
+    0.959
+   ],
+   "q04proxy_gain_vs_base": [
+    0.0289,
+    0.0246,
+    0.0332
+   ],
+   "q04proxy_csls10_gain": [
+    0.0128,
+    0.0106,
+    0.0149
+   ],
+   "v2_terms_added_as_is": {
+    "terms": [
+     "base",
+     "style",
+     "lda64",
+     "joseki_own",
+     "style2"
+    ],
+    "weights": [
+     1.0,
+     1.0,
+     2.66,
+     0.5,
+     0.5
+    ],
+    "eval_diff_vs_proxy_nopost": [
+     0.0254,
+     0.0213,
+     0.0294
+    ],
+    "eval_diff_vs_proxy_csls10": [
+     0.03,
+     0.026,
+     0.034
+    ]
+   }
+  },
+  "proxyB_lda": {
+   "terms": [
+    "base",
+    "lda64",
+    "joseki_own",
+    "style",
+    "joseki"
+   ],
+   "weights": [
+    1.0,
+    1.0,
+    0.5,
+    1.0,
+    0.25
+   ],
+   "ref_terms": [
+    "base",
+    "lda64"
+   ],
+   "ref_weights": [
+    1.0,
+    1.0
+   ],
+   "ref_post": null,
+   "ref_eval_score": [
+    0.9631,
+    0.9592,
+    0.967
+   ],
+   "post": {
+    "None": {
+     "tune_gain_vs_ref": 0.0221,
+     "eval_score": [
+      0.9819,
+      0.9791,
+      0.9847
+     ],
+     "eval_diff_vs_ref": [
+      0.0188,
+      0.0153,
+      0.0222
+     ]
+    },
+    "csls3": {
+     "tune_gain_vs_ref": 0.0309,
+     "eval_score": [
+      0.9927,
+      0.9909,
+      0.9945
+     ],
+     "eval_diff_vs_ref": [
+      0.0296,
+      0.0265,
+      0.0327
+     ]
+    },
+    "csls5": {
+     "tune_gain_vs_ref": 0.0294,
+     "eval_score": [
+      0.9909,
+      0.989,
+      0.9928
+     ],
+     "eval_diff_vs_ref": [
+      0.0278,
+      0.0246,
+      0.0309
+     ]
+    },
+    "csls10": {
+     "tune_gain_vs_ref": 0.028,
+     "eval_score": [
+      0.9881,
+      0.9862,
+      0.99
+     ],
+     "eval_diff_vs_ref": [
+      0.025,
+      0.0219,
+      0.0281
+     ]
+    },
+    "csls20": {
+     "tune_gain_vs_ref": 0.025,
+     "eval_score": [
+      0.9863,
+      0.9844,
+      0.9882
+     ],
+     "eval_diff_vs_ref": [
+      0.0232,
+      0.0199,
+      0.0264
+     ]
+    }
+   },
+   "post_selected_on_tune": "csls3",
+   "selected_eval_top1": [
+    0.9904,
+    0.9881,
+    0.9927
+   ],
+   "selected_eval_top5": [
+    0.9994,
+    0.9989,
+    0.9999
+   ],
+   "selected_rank_distribution": {
+    "1-1": 0.9904,
+    "2-2": 0.0056,
+    "3-3": 0.0014,
+    "4-4": 0.0015,
+    "5-5": 0.0005,
+    "6-10": 0.0005,
+    "11-400": 0.0001
+   },
+   "selected_rank_distribution_k5": {
+    "1-1": 0.9665,
+    "2-2": 0.019,
+    "3-3": 0.0055,
+    "4-4": 0.005,
+    "5-5": 0.002,
+    "6-10": 0.0015,
+    "11-400": 0.0005
+   },
+   "selected_by_k_vs_ref": {
+    "5": {
+     "score": [
+      0.9745,
+      0.9685,
+      0.9805
+     ],
+     "top1": [
+      0.9665,
+      0.9587,
+      0.9743
+     ],
+     "top5": [
+      0.998,
+      0.9961,
+      0.9999
+     ],
+     "diff_vs_ref": [
+      0.0844,
+      0.0739,
+      0.095
+     ]
+    },
+    "10": {
+     "score": [
+      0.9978,
+      0.9957,
+      0.9998
+     ],
+     "top1": [
+      0.997,
+      0.9943,
+      0.9997
+     ],
+     "top5": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "diff_vs_ref": [
+      0.0224,
+      0.0168,
+      0.0281
+     ]
+    },
+    "15": {
+     "score": [
+      0.9994,
+      0.9985,
+      1.0003
+     ],
+     "top1": [
+      0.999,
+      0.9976,
+      1.0004
+     ],
+     "top5": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "diff_vs_ref": [
+      0.0079,
+      0.0043,
+      0.0116
+     ]
+    },
+    "20": {
+     "score": [
+      0.9992,
+      0.998,
+      1.0004
+     ],
+     "top1": [
+      0.999,
+      0.9976,
+      1.0004
+     ],
+     "top5": [
+      0.9995,
+      0.9985,
+      1.0005
+     ],
+     "diff_vs_ref": [
+      0.0036,
+      0.0016,
+      0.0056
+     ]
+    }
+   },
+   "nopost_by_k_vs_ref": {
+    "5": {
+     "score": [
+      0.9388,
+      0.9293,
+      0.9482
+     ],
+     "top1": [
+      0.9235,
+      0.9121,
+      0.9349
+     ],
+     "top5": [
+      0.99,
+      0.986,
+      0.994
+     ],
+     "diff_vs_ref": [
+      0.0487,
+      0.0364,
+      0.061
+     ]
+    },
+    "10": {
+     "score": [
+      0.9928,
+      0.9883,
+      0.9973
+     ],
+     "top1": [
+      0.99,
+      0.9839,
+      0.9961
+     ],
+     "top5": [
+      0.9985,
+      0.9968,
+      1.0002
+     ],
+     "diff_vs_ref": [
+      0.0174,
+      0.0119,
+      0.0229
+     ]
+    },
+    "15": {
+     "score": [
+      0.9975,
+      0.9958,
+      0.9992
+     ],
+     "top1": [
+      0.9965,
+      0.9942,
+      0.9988
+     ],
+     "top5": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "diff_vs_ref": [
+      0.0061,
+      0.003,
+      0.0091
+     ]
+    },
+    "20": {
+     "score": [
+      0.9986,
+      0.9968,
+      1.0003
+     ],
+     "top1": [
+      0.998,
+      0.9956,
+      1.0004
+     ],
+     "top5": [
+      0.9995,
+      0.9985,
+      1.0005
+     ],
+     "diff_vs_ref": [
+      0.0029,
+      0.0009,
+      0.005
+     ]
+    }
+   },
+   "path": [
+    {
+     "add": "joseki_own",
+     "w": 0.5,
+     "tune_mean": 0.9797
+    },
+    {
+     "add": "style",
+     "w": 1.0,
+     "tune_mean": 0.9828
+    },
+    {
+     "add": "joseki",
+     "w": 0.25,
+     "tune_mean": 0.984
+    }
+   ],
+   "q04proxy_eval_score": [
+    0.9631,
+    0.9592,
+    0.967
+   ],
+   "q04proxy_gain_vs_base": [
+    0.0378,
+    0.0343,
+    0.0414
+   ],
+   "q04proxy_csls10_gain": [
+    0.0112,
+    0.0093,
+    0.0132
+   ],
+   "v2_terms_added_as_is": {
+    "terms": [
+     "base",
+     "lda64",
+     "joseki_own",
+     "style2"
+    ],
+    "weights": [
+     1.0,
+     1.0,
+     0.5,
+     0.5
+    ],
+    "eval_diff_vs_proxy_nopost": [
+     0.0164,
+     0.0134,
+     0.0194
+    ],
+    "eval_diff_vs_proxy_csls10": [
+     0.0234,
+     0.0204,
+     0.0265
+    ]
+   }
+  }
+ },
+ "total_seconds": 52.5
+}

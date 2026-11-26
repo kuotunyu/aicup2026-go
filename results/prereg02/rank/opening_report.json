@@ -1,0 +1,95 @@
+{
+ "what": "PREREG_02 competition 2 opening n-gram (tools/p02_rank_opening.py)",
+ "params": {
+  "M": 12,
+  "alpha": 20.0,
+  "n_points": 361,
+  "levels": [
+   "D",
+   "C",
+   "B",
+   "A",
+   "1D",
+   "2D",
+   "3D",
+   "4D",
+   "5D",
+   "6D"
+  ],
+  "canonical": "p02_moves.canon(mv, 12): D4 transform making the first 12 points smallest, ties -> smallest symmetry index",
+  "counted_on": "load_rows(part='fit') only"
+ },
+ "build_id": "c0cb86b47cd3f95c75940cc71b3b7ca24d43c3390c1a510bf96c6ae68e0f93a6",
+ "created": "2026-09-26T14:01:55+08:00",
+ "seconds": 47.9,
+ "inputs": {
+  "players_split_sha256": "69554875064ecbd83d790b3215c8ba8f9540f217ec4af3e4a8c43228ac2a3dfc",
+  "questions": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\data\\local\\rank_val_questions.csv",
+  "questions_sha256": "73e51bbfd7b051e73cbb62af4b180c403d2422f122240c5e67e9c92303776db5"
+ },
+ "fit_games": 720307,
+ "fit_games_by_level": {
+  "D": 69748,
+  "C": 75315,
+  "B": 72264,
+  "A": 71255,
+  "1D": 71538,
+  "2D": 73011,
+  "3D": 73725,
+  "4D": 71135,
+  "5D": 73840,
+  "6D": 68476
+ },
+ "fit_games_by_number_of_moves_kept": {
+  "12": 720307
+ },
+ "keys_counted": {
+  "contexts": 429548,
+  "entries": 515494,
+  "contexts_seen_in_fit": 138037,
+  "entries_seen_in_fit": 147877
+ },
+ "inner": {
+  "games": 73556,
+  "with_score": 73556,
+  "mean_terms": 8.70888846593072,
+  "terms_histogram": {
+   "2": 141,
+   "3": 840,
+   "4": 1544,
+   "5": 3990,
+   "6": 8214,
+   "7": 11666,
+   "8": 10727,
+   "9": 7806,
+   "10": 6737,
+   "11": 5415,
+   "12": 16476
+  },
+  "per_game_argmax_accuracy": 0.1751318723149709
+ },
+ "val": {
+  "slots": 19156,
+  "questions": 1589,
+  "with_score": 19156,
+  "mean_terms": 8.683128001670495,
+  "terms_histogram": {
+   "1": 1,
+   "2": 31,
+   "3": 188,
+   "4": 413,
+   "5": 1009,
+   "6": 2123,
+   "7": 3065,
+   "8": 2942,
+   "9": 2140,
+   "10": 1776,
+   "11": 1355,
+   "12": 4113
+  }
+ },
+ "outputs_sha256": {
+  "opening_inner.npz": "054689536524f7d8ea41a19d19b49ae47e7eedd128bd9cad98c429e5f80fdee5",
+  "opening_val.npz": "75ffec64f9e949ac0be52ce9e72a4a19bb978a25de2b6ed9d355aac7a1a5ae85"
+ }
+}

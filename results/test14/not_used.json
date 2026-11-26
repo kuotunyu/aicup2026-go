@@ -1,0 +1,16 @@
+{
+ "format": "c10-test14 not used v1",
+ "registration": "docs/PREREG_14_RANK_EXACT_COPY.md",
+ "stage": "scan",
+ "reason": "S1 scan: no question has an exact same-side copy (PREREG_14 7 S1)",
+ "scan": "results/test14/scan/scan.json",
+ "provenance": {
+  "tool": "tools/t14_copy.py",
+  "tool_sha256_lf": "b8bc029a5688f1e937a9f625dc17a62cbd4ad8e436a23b633a2c7841537654ae",
+  "t02_checks_sha256_lf": "a6fb40f99e7af19bfe4eef3f5cbb1d0049a8f0c14a7cc95cddfac73884f99cc8",
+  "mode": "real",
+  "git_head": "bea2db6d528d5a77bce27e12e221bb2f7aa24dff",
+  "python": "3.12.13",
+  "created_utc": "2026-11-04T07:34:24+00:00"
+ }
+}

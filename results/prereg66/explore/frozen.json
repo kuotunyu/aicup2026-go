@@ -1,0 +1,209 @@
+{
+ "format": "c10-prereg66 frozen v1",
+ "source": {
+  "report": "data/advice/gemini_1121b/REPORT.md section 3",
+  "recipe": "data/advice/gemini_1121b/04_final_registerable_recipe.py FROZEN_RECIPE lines 37-72; system 04_R_final_PRIMARY lines 341-355",
+  "sha256": {
+   "REPORT.md": "efae983126798f9cca708d56dca8e156ae8fef7d8c542f394fd6bee883f49cfd",
+   "04_final_registerable_recipe.py": "8afd62ea8016245b00d2c61dd891a9c967a7ed2506c0973de36bfdcb63b9d720",
+   "04_final_registerable_recipe.json": "49c0d6312aa7eba37892375c59e02ad509c70102d1a2c7825820cd106e99c875",
+   "02_task2_systematic_experiments.py": "af8d7cb10df345f6d9844c6baa273bc5a249dfd616fe1dedf456f9cba6a831db",
+   "01b_build_bundles_and_eval_task1.py": "823012b6396c8ffccd87ef7713d06bb7076130279ca222d766cb88e95de0b21b",
+   "02a_extract_s0_head.py": "c287b6bff3d8c0e63a7502d5df42fa6cc79afc5e9d8cd900faa7fe4e6fca812f",
+   "c13_breg_models.npz": "db2a9861c98627201f59819d5d42fcbfd3c2b941d20610fe6a16878ea5692a71",
+   "s0_head.npz": "4b80bba8bdbd21a65557783322ac488e26ca22d2b45b348086279d9028273587",
+   "bundle_L_c49.npz": "79b681ef5c49b929be49a526c8bfe8c044e4fb0b3ce7928bc92dfacb1ac3d920",
+   "pstore_L_c49.npz": "462b3896c656470cc84119db6baa7546e6bb41b73c86e6f9818748f4f921671a"
+  }
+ },
+ "recipe": {
+  "use_color_fix_A": {
+   "value": false,
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.py:39"
+  },
+  "w_G": {
+   "value": [
+    1.0,
+    0.85,
+    0.75,
+    0.25,
+    1.0
+   ],
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.py:40",
+   "note": "comment only; fuse_cfg's own G weights are used (not read by the code)"
+  },
+  "cnn_gnorm": {
+   "value": true,
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.py:43",
+   "note": "= v2-6 cfg gnorm"
+  },
+  "cnn_whiten_lam": {
+   "value": 0.78,
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.py:44, used 303-304 (whiten = {lam 0.78, lda None})"
+  },
+  "w_E": {
+   "value": 8.0,
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.py:45",
+   "note": "= v2-6 cfg wE 8"
+  },
+  "w_p1_orig": {
+   "value": 5.5,
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.py:48, used 342"
+  },
+  "w_p1_multi": {
+   "value": 3.0,
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.py:49, used 343"
+  },
+  "w_c13_sp128": {
+   "value": 3.0,
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.py:50, used 344"
+  },
+  "c13_lda_dim": {
+   "value": 128,
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.py:51; fit data/advice/gemini_1121b/02_task2_systematic_experiments.py:278"
+  },
+  "c13_lda_reg": {
+   "value": 0.01,
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.py:52; fit 02:278"
+  },
+  "c13_pool_lam": {
+   "value": 0.5,
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.py:53, used 326"
+  },
+  "c13_feature": {
+   "value": "[means[:,0,0:384]-means[:,0,384:768], means[:,0,768]+means[:,0,769]]",
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.py:131-140; fit features 02:270-277 (float32)"
+  },
+  "sp128_arrays": {
+   "value": "c13_breg_models.npz keys sp128_mu, sp128_sd, sp128_W",
+   "where": "02:332; projection data/advice/gemini_1121b/04_final_registerable_recipe.py:290-291"
+  },
+  "pool_whiten_proto_z": {
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.py:143-175"
+  },
+  "rk_w_s25": {
+   "value": 1.0,
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.py:56"
+  },
+  "rk_w_p1to": {
+   "value": 0.6,
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.py:57"
+  },
+  "rk_w_cnn": {
+   "value": 0.5,
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.py:58"
+  },
+  "rk_cnn_tau": {
+   "value": 35.0,
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.py:59, used 204"
+  },
+  "rk_sigma": {
+   "value": 0.85,
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.py:60, used 266"
+  },
+  "rk_eps": {
+   "value": 1e-06,
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.py:61, used 267"
+  },
+  "rk_cnn_prob_floor": {
+   "value": 1e-12,
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.py:208"
+  },
+  "rk_p1to_members": {
+   "value": "Q09 map members with not p09_forward.uses_ex(kind) (5), lse_mean",
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.py:183-191"
+  },
+  "rk_cnn_head": {
+   "value": "results/prereg64/rank/c49_head.npz for c49 vectors; s0_head.npz for S0 (D seam)",
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.py:486-487, 543, 607, 684"
+  },
+  "tri_rank_compat_z": {
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.py:212-268"
+  },
+  "w_rk_in_csls": {
+   "value": 1.8,
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.py:62, used 353"
+  },
+  "w_rk_post_by_k": {
+   "value": {
+    "1": 2.8,
+    "2": 2.2,
+    "3": 1.5,
+    "5": 0.8
+   },
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.py:63-68, used 339, 354"
+  },
+  "csls_k": {
+   "value": 20,
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.py:71",
+   "note": "= v2-6 csls_k 20"
+  },
+  "p1multi": {
+   "value": "data/prereg63/p1multi.npz (prereg63 fit.json sha256)",
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.py:471, 325"
+  },
+  "s25_models": {
+   "value": "data/prereg25/models + results/prereg09/rank/p1e_map.npz",
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.py:472 (p63_eval.load_models)"
+  }
+ },
+ "seams": {
+  "D_base": {
+   "value": 0.7467766213119217,
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.py:610",
+   "rule": "bit for bit"
+  },
+  "D_PRIMARY": {
+   "value": 0.768315,
+   "per_pool": [
+    0.797383,
+    0.771075,
+    0.741022,
+    0.778487,
+    0.75622,
+    0.797174,
+    0.762371,
+    0.767635,
+    0.763328,
+    0.748452
+   ],
+   "where": "data/advice/gemini_1121b/04_final_registerable_recipe.json D_10pools",
+   "rule": "|diff| <= 1e-6"
+  },
+  "L_c49_base": {
+   "value": 0.659802,
+   "where": "04 json L_c49_12pools 00_base_v27",
+   "rule": "|diff| <= 1e-6"
+  },
+  "L_c49_PRIMARY": {
+   "value": 0.681568,
+   "per_pool": [
+    0.696893,
+    0.681068,
+    0.673209,
+    0.663045,
+    0.683506,
+    0.700925,
+    0.686619,
+    0.684579,
+    0.685494,
+    0.679008,
+    0.696785,
+    0.647688
+   ],
+   "where": "04 json L_c49_12pools 04_R_final_PRIMARY",
+   "rule": "|diff| <= 1e-6"
+  },
+  "E_v27": {
+   "value": 0.7035676497986656,
+   "where": "results/prereg49/explore/eval.json",
+   "rule": "bit for bit, A66 function with the new parts off"
+  }
+ },
+ "judgement": {
+  "pools": "E 20",
+  "rule": "mean(A66 - v2-7) >= 0.01, bootstrap 10,000 seed 43 low > 0, >= 18 of 20 higher",
+  "expected_e_use": 10,
+  "hard_stop": "2026-11-23 12:00"
+ }
+}

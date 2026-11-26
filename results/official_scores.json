@@ -1,0 +1,846 @@
+{
+ "format": "c10 official_scores v1",
+ "teams": {
+  "rank": "TEAM_11248",
+  "player": "TEAM_11249"
+ },
+ "baselines_public": {
+  "rank": 0.4631,
+  "player": 0.2845
+ },
+ "final_choice": {
+  "rank": null,
+  "player": null
+ },
+ "uploads": [
+  {
+   "id": 1,
+   "comp": "rank",
+   "team": "TEAM_11248",
+   "status": "uploaded",
+   "file": "results/test02/rank/submission_rank.csv",
+   "sha256": "711b3d1b73a31d50e243df03458e70970d0f7d50faf7b6e1e2d9eaae60b9558a",
+   "rows": 800,
+   "git_commit": "bca0f9502e5d8bfaecde7117172d942eae9e7b3d",
+   "file_commit": "bca0f9502e5d8bfaecde7117172d942eae9e7b3d",
+   "method": "prereg02 R20 rule B (甲)",
+   "reason": "first upload (U1): catch format errors early",
+   "check_submission": "OK (official)",
+   "t1_verdict": "PASS",
+   "fallback_used": false,
+   "reports_sha256": {
+    "results/test02/rank/apply_test_report.json": "1479233446b99c2cacc6c4bf95de3ab6f697990296cb50334a8c9b5974e84468",
+    "results/test02/rank/seam_val/seam_local.json": "791beb475801e7bfd13d7f2d732cd00da192aa492bc46c936abb7e7ebcda5a43",
+    "results/test02/checks/rank/t1.json": "9ddf1cc98c4085493c7ec81f539acaba5e8a2701ba849d41bf168368a8bcfb2c",
+    "results/test02/checks/rank/summary.json": "4a735d469ec98f653884e49f0afb0240f3e974ec0854c0b9a178cfa40bd083c3",
+    "results/test02/checks/rank/t2.json": "4c314c714eebae784908bf4d06bd8811e7f7f599c6c3a314f5ffb72597e7e0ab",
+    "results/test02/checks/rank/t3.json": "c122ef9b2c17424a02be17e69d02c51d98ea1cfe2a464835df9bc03dbef9469e",
+    "results/test02/checks/rank/t4.json": "2e9dbd597a4a9d6fc94f9f0b0cef7b194650c277d0e3c3bc9f5ba4e25a1a6280",
+    "results/test02/checks/rank/t5.json": "e25279f8483b8aa1788b2bc304727bc1678346d966df9562c4024251b043ae9c"
+   },
+   "t2_t5": {
+    "recorded": {
+     "T2": "PASS",
+     "T3": "RECORD_ONLY",
+     "T4": "RECORD_ONLY",
+     "T5": "RECORD_ONLY"
+    },
+    "missing": [],
+    "missing_reason": null
+   },
+   "prepared_at": "2026-11-04T07:13:45+00:00",
+   "user_ok_at": "2026-11-04T15:29:00+08:00",
+   "uploaded_at": "2026-11-04T15:30:35+08:00",
+   "public_score": 0.5675275,
+   "public_delta_vs_prev": null,
+   "lb_rank": 15,
+   "investigate": false,
+   "note": "15/28 teams at upload time; user standing approval 11/04 (no per-file OK), uploaded by Claude in Chrome; Gemini 3.8 Flash independent check OK"
+  },
+  {
+   "id": 2,
+   "comp": "player",
+   "team": "TEAM_11249",
+   "status": "uploaded",
+   "file": "results/test02/player/submission_player.csv",
+   "sha256": "e87aaa91df9ddb3f5838b8ce18fd56715c6edaa55d6902de1ceaa0afc3d5bc79",
+   "rows": 800,
+   "git_commit": "0058a2139f97221f2253da94c717a29daa9bf78c",
+   "file_commit": "b1e76f42d0d56b8bbeccd63b3535b6b7f487cee8",
+   "method": "prereg02 per-pool self-retrieval + guard (甲)",
+   "reason": "first upload (U1): catch format errors early",
+   "check_submission": "OK (official)",
+   "t1_verdict": "PASS",
+   "fallback_used": null,
+   "reports_sha256": {
+    "results/test02/player/submit_report.json": "bbb32535fe6c8925749d7c328f57292702399fa605e555b6daa08ee6342d713b",
+    "results/test02/player/seam_val/seam_local.json": "76cd1626a7e017c42f0abb5024fd42ab88cf4d141468b25a8ed2f8db37206dac",
+    "results/test02/checks/player/t1.json": "cc0ddcf72f857ed4c5ab335cf14e17a4747fe0c82e4fa6db73ffca76ec0c42cd",
+    "results/test02/checks/player/summary.json": "9325c135573d9affbbfdf349d158f333ded7f4b792148999a46de5c92b002c3a",
+    "results/test02/checks/player/t2.json": "2e52086a45a91225804abae3f9d202d2b4ee2c61987e309a2ad142da6dba7161",
+    "results/test02/checks/player/t3.json": "db5c5f05196a93dae0d13ae0a906409cd064567526a0390a74282c7482e274d8",
+    "results/test02/checks/player/t4.json": "5953c8a7ee1df0c5f40a1ab100ceb5d16a5e9fad48f4d370d058847615e505ec",
+    "results/test02/checks/player/t5.json": "fdc05d47aebe4b460922606b6162bc4ded536033d3e05624e92f07c9aceb0936"
+   },
+   "t2_t5": {
+    "recorded": {
+     "T2": "PASS",
+     "T3": "PASS",
+     "T4": "PASS",
+     "T5": "RECORD_ONLY"
+    },
+    "missing": [],
+    "missing_reason": null
+   },
+   "prepared_at": "2026-11-04T07:31:08+00:00",
+   "user_ok_at": "2026-11-04T15:31:30+08:00",
+   "uploaded_at": "2026-11-04T15:32:01+08:00",
+   "public_score": 0.9574382,
+   "public_delta_vs_prev": null,
+   "lb_rank": 14,
+   "investigate": false,
+   "note": "14/23 teams at upload time; ok-at = Claude's go under the user's standing approval given 11/04 15:29 (no per-file OK); uploaded by Claude in Chrome"
+  },
+  {
+   "id": 3,
+   "comp": "rank",
+   "team": "TEAM_11248",
+   "status": "uploaded",
+   "file": "results/test04/rank/submission_rank.csv",
+   "sha256": "6fea3ed27f6251494f8934fd2b8a85f423e3cfe53ae3ffd7ffc2d120e19ee3ce",
+   "rows": 800,
+   "git_commit": "e8b97a7d3995404c5a681a845998b246c5b65d0d",
+   "file_commit": "e8b97a7d3995404c5a681a845998b246c5b65d0d",
+   "method": "prereg04 Q02 = R20 + O4 + SWA + SWB, rule B (甲)",
+   "reason": "prereg04 Q02 first upload (PREREG_04 5.3)",
+   "check_submission": "OK (official)",
+   "t1_verdict": "PASS",
+   "fallback_used": false,
+   "reports_sha256": {
+    "results/test04/rank/t04_apply_report.json": "fac8aced89bf38f030270f4959899b5022ad5b125449b0af9e9650d309250297",
+    "results/test04/rank/seam_val/seam_local.json": "7d012bcb8954a29d80d71995097902b7d5653357d33434276ae13f4afc5048fd",
+    "results/test04/opp/opp_report.json": "750016f47b69e19951cf45254af9c2817d1418c2f7a4ab39dee18282ed568e60",
+    "results/test04/sw/seam_check.json": "1cab988c0f5bee572b9b1af26662426ae874ecfed5254db2e37d899690b56112",
+    "results/test02/rank/apply_test_report.json": "1479233446b99c2cacc6c4bf95de3ab6f697990296cb50334a8c9b5974e84468",
+    "results/test02/checks/rank/t1.json": "9ddf1cc98c4085493c7ec81f539acaba5e8a2701ba849d41bf168368a8bcfb2c",
+    "results/test02/checks/rank/summary.json": "4a735d469ec98f653884e49f0afb0240f3e974ec0854c0b9a178cfa40bd083c3",
+    "results/test02/checks/rank/t2.json": "4c314c714eebae784908bf4d06bd8811e7f7f599c6c3a314f5ffb72597e7e0ab",
+    "results/test02/checks/rank/t3.json": "c122ef9b2c17424a02be17e69d02c51d98ea1cfe2a464835df9bc03dbef9469e",
+    "results/test02/checks/rank/t4.json": "2e9dbd597a4a9d6fc94f9f0b0cef7b194650c277d0e3c3bc9f5ba4e25a1a6280",
+    "results/test02/checks/rank/t5.json": "e25279f8483b8aa1788b2bc304727bc1678346d966df9562c4024251b043ae9c"
+   },
+   "t2_t5": {
+    "recorded": {
+     "T2": "PASS",
+     "T3": "RECORD_ONLY",
+     "T4": "RECORD_ONLY",
+     "T5": "RECORD_ONLY"
+    },
+    "missing": [],
+    "missing_reason": null
+   },
+   "prepared_at": "2026-11-04T07:53:01+00:00",
+   "user_ok_at": "2026-11-04T15:53:10+08:00",
+   "uploaded_at": "2026-11-04T15:53:38+08:00",
+   "public_score": 0.5870093,
+   "public_delta_vs_prev": 0.0194818,
+   "lb_rank": 13,
+   "investigate": false,
+   "note": "13/30 teams at upload time; ok-at = Claude's go under the user's standing approval of 11/04 15:29; uploaded by Claude in Chrome",
+   "test04": {
+    "dkappa": {
+     "public.O4": 0.07639955147994494,
+     "public.SWA": 0.028757580927342402,
+     "public.SWB": 0.027040683191345175,
+     "private.O4": 0.08862248853625843,
+     "private.SWA": 0.03340844735823495,
+     "private.SWB": 0.038979675667763454
+    },
+    "replay_rate": {
+     "seam_val": 0.0,
+     "public": 0.0,
+     "private": 0.0
+    },
+    "combo": "Q02",
+    "h4r": "adopted (results/prereg04/RESULTS.md, commit e8b24f2)",
+    "report": "results/test04/rank/t04_apply_report.json",
+    "report_sha256": "fac8aced89bf38f030270f4959899b5022ad5b125449b0af9e9650d309250297",
+    "k6": {
+     "commit": "e8b97a7d3995404c5a681a845998b246c5b65d0d",
+     "committed_at": "2026-11-04T15:52:51+08:00",
+     "deadline": "2026-11-16T23:59:59+08:00",
+     "ok": true
+    },
+    "seam_local_tol": 0.0001,
+    "notebook_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "inputs_bound_checked": 33,
+    "rule_b_differences_vs_r20": 198,
+    "questions_compared_with_r20": 800,
+    "rule_b_differences_vs_r20_report": 198,
+    "r20_first_upload_id": 1
+   }
+  },
+  {
+   "id": 4,
+   "comp": "player",
+   "team": "TEAM_11249",
+   "status": "uploaded",
+   "file": "results/test06/player/off/submission_player.csv",
+   "sha256": "d06f9c8a7ffd3eb180479c8b234fc21ba067607db3b7baf056a620b538976140",
+   "rows": 800,
+   "git_commit": "0044fb2a4436ac9ac3fcaabd57a2a9e468b1191d",
+   "file_commit": "0044fb2a4436ac9ac3fcaabd57a2a9e468b1191d",
+   "method": "prereg06 06-OFF: Q04 + v2 style + CSLS (甲)",
+   "reason": "prereg06 06-OFF first upload (PREREG_06 5.3 step 2; TESTDAY U4 (b))",
+   "check_submission": "OK (official)",
+   "t1_verdict": "PASS",
+   "fallback_used": null,
+   "reports_sha256": {
+    "results/test06/player/off/t06_submit_report.json": "da2dba3599ef82920b301566f6967d509e06daa25e015fc1c5c28482d5de517b",
+    "results/test06/player/seam_val/t06_seam.json": "6a019179f86dcec088dc21fecbc2c1f00e14285e0efc490ae10055fa3fc7246c",
+    "results/test06/player/public/t06_pool.json": "45435f67519ef914a6f57d7d17e10febb1361e83ff40ae9da0f08a193eb3472d",
+    "results/test06/player/private/t06_pool.json": "fb0b921d81887cfb734e757082d133552fffc548651b2c3d07c920aed23fdbb5",
+    "results/test02/player/submit_report.json": "bbb32535fe6c8925749d7c328f57292702399fa605e555b6daa08ee6342d713b",
+    "results/test02/player/seam_val/seam_local.json": "76cd1626a7e017c42f0abb5024fd42ab88cf4d141468b25a8ed2f8db37206dac",
+    "results/test02/checks/player/t1.json": "cc0ddcf72f857ed4c5ab335cf14e17a4747fe0c82e4fa6db73ffca76ec0c42cd",
+    "results/test02/checks/player/summary.json": "9325c135573d9affbbfdf349d158f333ded7f4b792148999a46de5c92b002c3a",
+    "results/test02/checks/player/t2.json": "2e52086a45a91225804abae3f9d202d2b4ee2c61987e309a2ad142da6dba7161",
+    "results/test02/checks/player/t3.json": "db5c5f05196a93dae0d13ae0a906409cd064567526a0390a74282c7482e274d8",
+    "results/test02/checks/player/t4.json": "5953c8a7ee1df0c5f40a1ab100ceb5d16a5e9fad48f4d370d058847615e505ec",
+    "results/test02/checks/player/t5.json": "fdc05d47aebe4b460922606b6162bc4ded536033d3e05624e92f07c9aceb0936"
+   },
+   "t2_t5": {
+    "recorded": {
+     "T2": "PASS",
+     "T3": "PASS",
+     "T4": "PASS",
+     "T5": "RECORD_ONLY"
+    },
+    "missing": [],
+    "missing_reason": null
+   },
+   "prepared_at": "2026-11-04T07:59:08+00:00",
+   "user_ok_at": "2026-11-04T15:59:30+08:00",
+   "uploaded_at": "2026-11-04T15:59:46+08:00",
+   "public_score": 0.9886787,
+   "public_delta_vs_prev": 0.0312405,
+   "lb_rank": 12,
+   "investigate": false,
+   "note": "12/24 teams at upload time; ok-at = Claude's go under the user's standing approval of 11/04 15:29; uploaded by Claude in Chrome",
+   "test06": {
+    "variant": "off",
+    "label": "06-OFF",
+    "run_id": "3fa8588a283822ca5efd6e795d5b50256caddb8be8594575e5c52fde2b176471",
+    "h6p": "adopted (results/prereg06/RESULTS.md, commit 5c1eea8)",
+    "report": "results/test06/player/off/t06_submit_report.json",
+    "report_sha256": "da2dba3599ef82920b301566f6967d509e06daa25e015fc1c5c28482d5de517b",
+    "k6p": {
+     "commit": "0044fb2a4436ac9ac3fcaabd57a2a9e468b1191d",
+     "committed_at": "2026-11-04T15:59:02+08:00",
+     "deadline": "2026-11-21T23:59:59+08:00",
+     "ok": true
+    },
+    "top1_differences_vs_q04": {
+     "public": 22,
+     "private": 39
+    },
+    "top1_differences_off_vs_on": {
+     "public": 6,
+     "private": 7
+    },
+    "all_on_conditions": true,
+    "on_produced": true,
+    "inputs_bound_checked": 29,
+    "q04_first_upload_id": 2
+   }
+  },
+  {
+   "id": 5,
+   "comp": "player",
+   "team": "TEAM_11249",
+   "status": "uploaded",
+   "file": "results/test06/player/on/submission_player.csv",
+   "sha256": "94cc82650dd451d95336ad9d3951519ecfb84482a5bad0f52667089a25ac2cbf",
+   "rows": 800,
+   "git_commit": "8a9ec4b25bc364be62c3554a592ce9be730d1d72",
+   "file_commit": "0044fb2a4436ac9ac3fcaabd57a2a9e468b1191d",
+   "method": "prereg06 06-ON: 06-OFF + one-to-one switch (甲)",
+   "reason": "prereg06 06-ON (PREREG_06 5.3 step 3, 5.5 E1: once a season)",
+   "check_submission": "OK (official)",
+   "t1_verdict": "PASS",
+   "fallback_used": null,
+   "reports_sha256": {
+    "results/test06/player/on/t06_submit_report.json": "84aee4ccf0eed75dad828d967fec0639208574fa3f46ae8e6f3508e0292b73c7",
+    "results/test06/player/seam_val/t06_seam.json": "6a019179f86dcec088dc21fecbc2c1f00e14285e0efc490ae10055fa3fc7246c",
+    "results/test06/player/public/t06_pool.json": "45435f67519ef914a6f57d7d17e10febb1361e83ff40ae9da0f08a193eb3472d",
+    "results/test06/player/private/t06_pool.json": "fb0b921d81887cfb734e757082d133552fffc548651b2c3d07c920aed23fdbb5",
+    "results/test02/player/submit_report.json": "bbb32535fe6c8925749d7c328f57292702399fa605e555b6daa08ee6342d713b",
+    "results/test02/player/seam_val/seam_local.json": "76cd1626a7e017c42f0abb5024fd42ab88cf4d141468b25a8ed2f8db37206dac",
+    "results/test02/checks/player/t1.json": "cc0ddcf72f857ed4c5ab335cf14e17a4747fe0c82e4fa6db73ffca76ec0c42cd",
+    "results/test02/checks/player/summary.json": "9325c135573d9affbbfdf349d158f333ded7f4b792148999a46de5c92b002c3a",
+    "results/test02/checks/player/t2.json": "2e52086a45a91225804abae3f9d202d2b4ee2c61987e309a2ad142da6dba7161",
+    "results/test02/checks/player/t3.json": "db5c5f05196a93dae0d13ae0a906409cd064567526a0390a74282c7482e274d8",
+    "results/test02/checks/player/t4.json": "5953c8a7ee1df0c5f40a1ab100ceb5d16a5e9fad48f4d370d058847615e505ec",
+    "results/test02/checks/player/t5.json": "fdc05d47aebe4b460922606b6162bc4ded536033d3e05624e92f07c9aceb0936"
+   },
+   "t2_t5": {
+    "recorded": {
+     "T2": "PASS",
+     "T3": "PASS",
+     "T4": "PASS",
+     "T5": "RECORD_ONLY"
+    },
+    "missing": [],
+    "missing_reason": null
+   },
+   "prepared_at": "2026-11-04T08:00:14+00:00",
+   "user_ok_at": "2026-11-04T16:00:45+08:00",
+   "uploaded_at": "2026-11-04T16:01:00+08:00",
+   "public_score": 1.0,
+   "public_delta_vs_prev": 0.0113213,
+   "lb_rank": 9,
+   "investigate": false,
+   "note": "9/24 teams (tied 1.0) at upload time; ok-at = Claude's go under the user's standing approval of 11/04 15:29; uploaded by Claude in Chrome",
+   "test06": {
+    "variant": "on",
+    "label": "06-ON",
+    "run_id": "3fa8588a283822ca5efd6e795d5b50256caddb8be8594575e5c52fde2b176471",
+    "h6p": "adopted (results/prereg06/RESULTS.md, commit 5c1eea8)",
+    "report": "results/test06/player/on/t06_submit_report.json",
+    "report_sha256": "84aee4ccf0eed75dad828d967fec0639208574fa3f46ae8e6f3508e0292b73c7",
+    "k6p": {
+     "commit": "0044fb2a4436ac9ac3fcaabd57a2a9e468b1191d",
+     "committed_at": "2026-11-04T15:59:02+08:00",
+     "deadline": "2026-11-21T23:59:59+08:00",
+     "ok": true
+    },
+    "top1_differences_vs_q04": {
+     "public": 21,
+     "private": 37
+    },
+    "top1_differences_off_vs_on": {
+     "public": 6,
+     "private": 7
+    },
+    "all_on_conditions": true,
+    "on_produced": true,
+    "inputs_bound_checked": 32,
+    "q04_first_upload_id": 2,
+    "off_entry_id": 4
+   }
+  },
+  {
+   "id": 6,
+   "comp": "rank",
+   "team": "TEAM_11248",
+   "status": "uploaded",
+   "file": "results/test07/rank/submission_rank.csv",
+   "sha256": "ee2ea02bfb2e4bdbce5e2e0725de883b25a3184916b829a1a3c1259befc7aaeb",
+   "rows": 800,
+   "git_commit": "fd70d2b8481e5fcb93ddb31fee070aea5ff2e44b",
+   "file_commit": "fd70d2b8481e5fcb93ddb31fee070aea5ff2e44b",
+   "method": "prereg07 Q02H = Q02 + HumanSL, rule B (甲)",
+   "reason": "prereg07 Q02H (PREREG_07 5.4)",
+   "check_submission": "OK (official)",
+   "t1_verdict": "PASS",
+   "fallback_used": false,
+   "reports_sha256": {
+    "results/test07/rank/t07_apply_report.json": "cf78bf03ddd3b347e3de66a9d7977f4fa1d83a82986b57ce0e9ec2b8f7f59cf9",
+    "results/test07/hs/gpu_seam.json": "02d2bf2699e94de565873a14a242c52ce7456c15a02233dc7c9d8961e4c6d22e",
+    "results/test07/rank/seam_val/seam_local.json": "2bbf7bb1c158610bfdf7e414441a597e0e6e26c770c54a879f7e73203d362bc1",
+    "results/test02/rank/apply_test_report.json": "1479233446b99c2cacc6c4bf95de3ab6f697990296cb50334a8c9b5974e84468",
+    "results/test02/checks/rank/t1.json": "9ddf1cc98c4085493c7ec81f539acaba5e8a2701ba849d41bf168368a8bcfb2c",
+    "results/test02/checks/rank/summary.json": "4a735d469ec98f653884e49f0afb0240f3e974ec0854c0b9a178cfa40bd083c3",
+    "results/test02/checks/rank/t2.json": "4c314c714eebae784908bf4d06bd8811e7f7f599c6c3a314f5ffb72597e7e0ab",
+    "results/test02/checks/rank/t3.json": "c122ef9b2c17424a02be17e69d02c51d98ea1cfe2a464835df9bc03dbef9469e",
+    "results/test02/checks/rank/t4.json": "2e9dbd597a4a9d6fc94f9f0b0cef7b194650c277d0e3c3bc9f5ba4e25a1a6280",
+    "results/test02/checks/rank/t5.json": "e25279f8483b8aa1788b2bc304727bc1678346d966df9562c4024251b043ae9c"
+   },
+   "t2_t5": {
+    "recorded": {
+     "T2": "PASS",
+     "T3": "RECORD_ONLY",
+     "T4": "RECORD_ONLY",
+     "T5": "RECORD_ONLY"
+    },
+    "missing": [],
+    "missing_reason": null
+   },
+   "prepared_at": "2026-11-04T10:16:40+00:00",
+   "user_ok_at": "2026-11-04T18:17:00+08:00",
+   "uploaded_at": "2026-11-04T18:17:37+08:00",
+   "public_score": 0.6035896,
+   "public_delta_vs_prev": 0.0165803,
+   "lb_rank": 16,
+   "investigate": false,
+   "note": "16/42 teams at upload time; ok-at = Claude's go under the user's standing approval of 11/04 15:29; uploaded by Claude in Chrome",
+   "test07": {
+    "gpu_seam": {
+     "move": 0.01823139190673828,
+     "profile_mean": 0.0005971711402068536,
+     "lp_hs": 0.007693472339934004
+    },
+    "hs_failure_rate": {
+     "public": 0.0,
+     "private": 0.0
+    },
+    "rho": {
+     "public": 0.9206718166988543,
+     "private": 0.9095964974781092
+    },
+    "rho_threshold": 0.4751284462649558,
+    "seam_local_max_abs_diff": 0.0,
+    "combo": "Q02H",
+    "h7r": "rev 3: H7R scored, Q02H >= 0.57, reference re-read equal (results/prereg07/RESULTS.md, commit a7fb0ca)",
+    "report": "results/test07/rank/t07_apply_report.json",
+    "report_sha256": "cf78bf03ddd3b347e3de66a9d7977f4fa1d83a82986b57ce0e9ec2b8f7f59cf9",
+    "k6_07": {
+     "commit": "fd70d2b8481e5fcb93ddb31fee070aea5ff2e44b",
+     "committed_at": "2026-11-04T18:16:29+08:00",
+     "deadline": "2026-11-19T23:59:59+08:00",
+     "ok": true
+    },
+    "t04_report_sha256": "fac8aced89bf38f030270f4959899b5022ad5b125449b0af9e9650d309250297",
+    "earliest_hs_chunk_created_utc": "2026-11-04T07:41:26+00:00",
+    "inputs_bound_checked": 54,
+    "public_rule_b_differences": {
+     "04": 72,
+     "R20": 119
+    },
+    "rule_b_differences_all": {
+     "04": 149,
+     "R20": 245
+    },
+    "r20_first_upload_id": 1,
+    "t04_entry_id": 3
+   }
+  },
+  {
+   "id": 7,
+   "comp": "rank",
+   "team": "TEAM_11248",
+   "status": "uploaded",
+   "file": "results/test08/rank/submission_rank.csv",
+   "sha256": "c84c1a52f7512bb5a7117cde26fec91399eb26a8cfcb5ffff43ef677efd9a3ba",
+   "rows": 800,
+   "git_commit": "482d8eaa054979dd7217caf1569ab414ec9400a0",
+   "file_commit": "482d8eaa054979dd7217caf1569ab414ec9400a0",
+   "method": "prereg08 Q08 = Q02H + 4 x P1TO, rule B (甲)",
+   "reason": "prereg08 Q08 (PREREG_08 5.4)",
+   "check_submission": "OK (official)",
+   "t1_verdict": "PASS",
+   "fallback_used": false,
+   "reports_sha256": {
+    "results/test08/rank/t08_apply_report.json": "c8de43d85faa82b4c813b28db80d71f68997a075c6499a453f44cc4ee913dd19",
+    "results/test08/p1/gpu_seam.json": "afb700842a27da2906141cb40aea56527cac3bd5c7d804978436aee418974446",
+    "results/test08/rank/seam_val/seam_local.json": "e85b3c049fd3502897a771fedefd20678a6d19a05fdb23fb9b97abff21aa2f40",
+    "results/test02/rank/apply_test_report.json": "1479233446b99c2cacc6c4bf95de3ab6f697990296cb50334a8c9b5974e84468",
+    "results/test02/checks/rank/t1.json": "9ddf1cc98c4085493c7ec81f539acaba5e8a2701ba849d41bf168368a8bcfb2c",
+    "results/test02/checks/rank/summary.json": "4a735d469ec98f653884e49f0afb0240f3e974ec0854c0b9a178cfa40bd083c3",
+    "results/test02/checks/rank/t2.json": "4c314c714eebae784908bf4d06bd8811e7f7f599c6c3a314f5ffb72597e7e0ab",
+    "results/test02/checks/rank/t3.json": "c122ef9b2c17424a02be17e69d02c51d98ea1cfe2a464835df9bc03dbef9469e",
+    "results/test02/checks/rank/t4.json": "2e9dbd597a4a9d6fc94f9f0b0cef7b194650c277d0e3c3bc9f5ba4e25a1a6280",
+    "results/test02/checks/rank/t5.json": "e25279f8483b8aa1788b2bc304727bc1678346d966df9562c4024251b043ae9c"
+   },
+   "t2_t5": {
+    "recorded": {
+     "T2": "PASS",
+     "T3": "RECORD_ONLY",
+     "T4": "RECORD_ONLY",
+     "T5": "RECORD_ONLY"
+    },
+    "missing": [],
+    "missing_reason": null
+   },
+   "prepared_at": "2026-11-04T10:54:51+00:00",
+   "user_ok_at": "2026-11-04T18:55:30+08:00",
+   "uploaded_at": "2026-11-04T18:57:45+08:00",
+   "public_score": 0.6732138,
+   "public_delta_vs_prev": 0.0696242,
+   "lb_rank": 10,
+   "investigate": false,
+   "note": "10/44 teams at upload time; ok-at = Claude's go under the user's standing approval of 11/04 15:29; uploaded by Claude in Chrome (first two submit clicks did not register; AIdea count stayed 3 until the JS click)",
+   "test08": {
+    "gpu_seam": {
+     "std_feature": 0.009569825109513985,
+     "lp_p1": 0.005462575287179305
+    },
+    "p1_failure_rate": {
+     "public": 0.0,
+     "private": 0.0
+    },
+    "rho": {
+     "public": 0.9725792661204132,
+     "private": 0.9670020437627734
+    },
+    "rho_threshold": 0.4836508533888232,
+    "seam_local_max_abs_diff": 0.0,
+    "combo": "Q08",
+    "h8r": "H8R adopted: Q08 - Q02H lower bound > 0 (results/prereg08/RESULTS.md, commit 08b5e4a)",
+    "report": "results/test08/rank/t08_apply_report.json",
+    "report_sha256": "c8de43d85faa82b4c813b28db80d71f68997a075c6499a453f44cc4ee913dd19",
+    "k6_08": {
+     "commit": "482d8eaa054979dd7217caf1569ab414ec9400a0",
+     "committed_at": "2026-11-04T18:54:36+08:00",
+     "deadline": "2026-11-19T23:59:59+08:00",
+     "ok": true
+    },
+    "t07_report_sha256": "cf78bf03ddd3b347e3de66a9d7977f4fa1d83a82986b57ce0e9ec2b8f7f59cf9",
+    "earliest_p1_chunk_created_utc": "2026-11-04T10:20:46+00:00",
+    "inputs_bound_checked": 53,
+    "public_rule_b_differences": {
+     "07": 125,
+     "04": 155,
+     "R20": 160
+    },
+    "rule_b_differences_all": {
+     "07": 245,
+     "04": 314,
+     "R20": 319
+    },
+    "r20_first_upload_id": 1,
+    "t07_entry_id": 6,
+    "t04_entry_id": 3
+   }
+  },
+  {
+   "id": 8,
+   "comp": "rank",
+   "team": "TEAM_11248",
+   "status": "uploaded",
+   "file": "results/test09/rank/submission_rank.csv",
+   "sha256": "44b5b372d62eb8922436112f98787e17cb2054f6ab298b997d3086c25da7df0b",
+   "rows": 800,
+   "git_commit": "2088f67b507392e030a239a40773cd4ce5bb29cf",
+   "file_commit": "2088f67b507392e030a239a40773cd4ce5bb29cf",
+   "method": "prereg09 Q09 = Q02H + 4 x P1TO_E (ens3fam), rule B (甲)",
+   "reason": "prereg09 Q09 (PREREG_09 5.3)",
+   "check_submission": "OK (official)",
+   "t1_verdict": "PASS",
+   "fallback_used": false,
+   "reports_sha256": {
+    "results/test09/rank/t09_apply_report.json": "14d6bd9de19b032f962fb91f7f5263557915f9b14f3316e06e54aba699103e6c",
+    "results/test09/gpu_seam.json": "e4e68d54a18b00426b4cb2d746c85beb7458806d4abe3dc792f1a084b309ae17",
+    "results/test09/rank/seam_val/seam_local.json": "e7444032332bde433c4e495b558a3086d558982858603de5a5ec8d7a48465871",
+    "results/test02/rank/apply_test_report.json": "1479233446b99c2cacc6c4bf95de3ab6f697990296cb50334a8c9b5974e84468",
+    "results/test02/checks/rank/t1.json": "9ddf1cc98c4085493c7ec81f539acaba5e8a2701ba849d41bf168368a8bcfb2c",
+    "results/test02/checks/rank/summary.json": "4a735d469ec98f653884e49f0afb0240f3e974ec0854c0b9a178cfa40bd083c3",
+    "results/test02/checks/rank/t2.json": "4c314c714eebae784908bf4d06bd8811e7f7f599c6c3a314f5ffb72597e7e0ab",
+    "results/test02/checks/rank/t3.json": "c122ef9b2c17424a02be17e69d02c51d98ea1cfe2a464835df9bc03dbef9469e",
+    "results/test02/checks/rank/t4.json": "2e9dbd597a4a9d6fc94f9f0b0cef7b194650c277d0e3c3bc9f5ba4e25a1a6280",
+    "results/test02/checks/rank/t5.json": "e25279f8483b8aa1788b2bc304727bc1678346d966df9562c4024251b043ae9c"
+   },
+   "t2_t5": {
+    "recorded": {
+     "T2": "PASS",
+     "T3": "RECORD_ONLY",
+     "T4": "RECORD_ONLY",
+     "T5": "RECORD_ONLY"
+    },
+    "missing": [],
+    "missing_reason": null
+   },
+   "prepared_at": "2026-11-04T10:59:21+00:00",
+   "user_ok_at": "2026-11-04T18:59:30+08:00",
+   "uploaded_at": "2026-11-04T18:59:48+08:00",
+   "public_score": 0.6916335,
+   "public_delta_vs_prev": 0.0184197,
+   "lb_rank": 8,
+   "investigate": false,
+   "note": "8/44 teams at upload time; ok-at = Claude's go under the user's standing approval of 11/04 15:29; uploaded by Claude in Chrome",
+   "test09": {
+    "gpu_seam": {
+     "std_ex": 0.007377602709122355,
+     "lp_p1e": 0.005900628827308019
+    },
+    "p1_failure_rate": {
+     "public": 0.0,
+     "private": 0.0
+    },
+    "rho": {
+     "public": 0.9722110138188362,
+     "private": 0.9675472971706073
+    },
+    "rho_threshold": 0.48425802602327594,
+    "seam_local_max_abs_diff": 0.0,
+    "q08_max_abs_diff": 0.0,
+    "combo": "Q09",
+    "adoption": "09 adopted on the inner gate, validation not scored (results/prereg09/RESULTS.md, finalize 9b4d1c4)",
+    "report": "results/test09/rank/t09_apply_report.json",
+    "report_sha256": "14d6bd9de19b032f962fb91f7f5263557915f9b14f3316e06e54aba699103e6c",
+    "k6_09": {
+     "commit": "2088f67b507392e030a239a40773cd4ce5bb29cf",
+     "committed_at": "2026-11-04T18:58:54+08:00",
+     "deadline": "2026-11-19T23:59:59+08:00",
+     "ok": true
+    },
+    "t08_report_sha256": "c8de43d85faa82b4c813b28db80d71f68997a075c6499a453f44cc4ee913dd19",
+    "earliest_p1_chunk_created_utc": "2026-11-04T10:20:46+00:00",
+    "inputs_bound_checked": 37,
+    "public_rule_b_differences": {
+     "08": 61,
+     "07": 132,
+     "04": 162,
+     "R20": 161
+    },
+    "rule_b_differences_all": {
+     "08": 150,
+     "07": 260,
+     "04": 326,
+     "R20": 326
+    },
+    "r20_first_upload_id": 1,
+    "t08_entry_id": 7,
+    "t07_entry_id": 6,
+    "t04_entry_id": 3
+   }
+  },
+  {
+   "id": 9,
+   "comp": "rank",
+   "team": "TEAM_11248",
+   "status": "uploaded",
+   "file": "results/test19/rank/submission_rank.csv",
+   "sha256": "eb94dbba5d3cf9edfde94e927afd915af5484586e4c13cd56c0cddbd62f63662",
+   "rows": 800,
+   "git_commit": "cefb14348a45056f522c557c58c989442abc4c6c",
+   "file_commit": "69a745be01ce86eba3cf6ecb4285d96f9d9d6b69",
+   "method": "prereg19 Q19 = Q09 + 4 x SET (S19 set model), rule B (甲)",
+   "reason": "prereg19 Q19 (PREREG_19 4.3)",
+   "check_submission": "OK (official)",
+   "t1_verdict": "PASS",
+   "fallback_used": false,
+   "reports_sha256": {
+    "results/test19/rank/t19_apply_report.json": "38f6adc72c0f9ee861b45b6b09e8e2eb4d2455a85ad1b285e65e8d8fe840ad6c",
+    "results/test19/set_seam.json": "6d4471af30be0f91d6ade196e476ee49c3233092efa8cc79c1bb71c283882b8f",
+    "results/test19/rank/seam_val/seam_local.json": "a0d131ce2c8035893bb930e5784c930c42156f47c08b5737860deba0f4ee3cb3",
+    "results/test02/rank/apply_test_report.json": "1479233446b99c2cacc6c4bf95de3ab6f697990296cb50334a8c9b5974e84468",
+    "results/test02/checks/rank/t1.json": "9ddf1cc98c4085493c7ec81f539acaba5e8a2701ba849d41bf168368a8bcfb2c",
+    "results/test02/checks/rank/summary.json": "4a735d469ec98f653884e49f0afb0240f3e974ec0854c0b9a178cfa40bd083c3",
+    "results/test02/checks/rank/t2.json": "4c314c714eebae784908bf4d06bd8811e7f7f599c6c3a314f5ffb72597e7e0ab",
+    "results/test02/checks/rank/t3.json": "c122ef9b2c17424a02be17e69d02c51d98ea1cfe2a464835df9bc03dbef9469e",
+    "results/test02/checks/rank/t4.json": "2e9dbd597a4a9d6fc94f9f0b0cef7b194650c277d0e3c3bc9f5ba4e25a1a6280",
+    "results/test02/checks/rank/t5.json": "e25279f8483b8aa1788b2bc304727bc1678346d966df9562c4024251b043ae9c"
+   },
+   "t2_t5": {
+    "recorded": {
+     "T2": "PASS",
+     "T3": "RECORD_ONLY",
+     "T4": "RECORD_ONLY",
+     "T5": "RECORD_ONLY"
+    },
+    "missing": [],
+    "missing_reason": null
+   },
+   "prepared_at": "2026-11-05T06:37:32+00:00",
+   "user_ok_at": "2026-11-05T14:38:00+08:00",
+   "uploaded_at": "2026-11-05T14:38:23+08:00",
+   "public_score": 0.7142759,
+   "public_delta_vs_prev": 0.0226424,
+   "lb_rank": 12,
+   "investigate": false,
+   "note": "12/61 teams at upload time; ok-at = Claude's go under the user's standing approval of 11/04 15:29; uploaded by Claude in Chrome",
+   "test19": {
+    "rho": {
+     "public": 0.960038062737892,
+     "private": 0.95637016481353
+    },
+    "rho_threshold": 0.4792752582816624,
+    "seam_local_max_abs_diff": 0.0,
+    "q09_max_abs_diff": 0.0,
+    "set_seam_record_only": 0.006628416062975262,
+    "combo": "Q19",
+    "adoption": "19 adopted on the inner gate, validation not scored (results/prereg19/rank/apply_report.json, finalized)",
+    "report": "results/test19/rank/t19_apply_report.json",
+    "report_sha256": "38f6adc72c0f9ee861b45b6b09e8e2eb4d2455a85ad1b285e65e8d8fe840ad6c",
+    "k6_19": {
+     "commit": "69a745be01ce86eba3cf6ecb4285d96f9d9d6b69",
+     "committed_at": "2026-11-04T19:01:02+08:00",
+     "deadline": "2026-11-19T23:59:59+08:00",
+     "ok": true
+    },
+    "t09_report_sha256": "14d6bd9de19b032f962fb91f7f5263557915f9b14f3316e06e54aba699103e6c",
+    "earliest_p1_chunk_created_utc": "2026-11-04T10:20:46+00:00",
+    "inputs_bound_checked": 37,
+    "public_rule_b_differences": {
+     "09": 77,
+     "08": 88,
+     "07": 158,
+     "04": 175,
+     "R20": 186
+    },
+    "rule_b_differences_all": {
+     "09": 162,
+     "08": 210,
+     "07": 320,
+     "04": 355,
+     "R20": 377
+    },
+    "r20_first_upload_id": 1,
+    "t09_entry_id": 8,
+    "t08_entry_id": 7,
+    "t07_entry_id": 6,
+    "t04_entry_id": 3
+   }
+  },
+  {
+   "id": 10,
+   "comp": "rank",
+   "team": "TEAM_11248",
+   "status": "uploaded",
+   "file": "results/test25/rank/submission_rank.csv",
+   "sha256": "833c6e3749a30c61eac9a37de6bbfe9b0c2f1f7c6ca2b3ecf4bfeebc4453e445",
+   "rows": 800,
+   "git_commit": "1aecd0bbd342a82af34811e09f097843cffb5b4c",
+   "file_commit": "1aecd0bbd342a82af34811e09f097843cffb5b4c",
+   "method": "prereg25 Q25 = Q19 with S25 (set model + validation players), rule B (甲)",
+   "reason": "prereg25 Q25 (PREREG_25 4.3)",
+   "check_submission": "OK (official)",
+   "t1_verdict": "PASS",
+   "fallback_used": false,
+   "reports_sha256": {
+    "results/test25/rank/t25_apply_report.json": "63312f51183c5c03303b590b55ece0636d0064ec1eff01e36878538122d615cd",
+    "results/test25/set_seam.json": "a8bf8ead3e2fc20eefbe76274242c4b62ca4458c351f5a8553e94325b11b30ae",
+    "results/test02/rank/apply_test_report.json": "1479233446b99c2cacc6c4bf95de3ab6f697990296cb50334a8c9b5974e84468",
+    "results/test02/checks/rank/t1.json": "9ddf1cc98c4085493c7ec81f539acaba5e8a2701ba849d41bf168368a8bcfb2c",
+    "results/test02/checks/rank/summary.json": "4a735d469ec98f653884e49f0afb0240f3e974ec0854c0b9a178cfa40bd083c3",
+    "results/test02/checks/rank/t2.json": "4c314c714eebae784908bf4d06bd8811e7f7f599c6c3a314f5ffb72597e7e0ab",
+    "results/test02/checks/rank/t3.json": "c122ef9b2c17424a02be17e69d02c51d98ea1cfe2a464835df9bc03dbef9469e",
+    "results/test02/checks/rank/t4.json": "2e9dbd597a4a9d6fc94f9f0b0cef7b194650c277d0e3c3bc9f5ba4e25a1a6280",
+    "results/test02/checks/rank/t5.json": "e25279f8483b8aa1788b2bc304727bc1678346d966df9562c4024251b043ae9c"
+   },
+   "t2_t5": {
+    "recorded": {
+     "T2": "PASS",
+     "T3": "RECORD_ONLY",
+     "T4": "RECORD_ONLY",
+     "T5": "RECORD_ONLY"
+    },
+    "missing": [],
+    "missing_reason": null
+   },
+   "prepared_at": "2026-11-05T22:17:02+00:00",
+   "user_ok_at": "2026-11-06T06:20:19+08:00",
+   "uploaded_at": "2026-11-06T06:20:28+08:00",
+   "public_score": 0.7237578,
+   "public_delta_vs_prev": 0.0094819,
+   "lb_rank": 11,
+   "investigate": false,
+   "note": "ok-at = Claude's go under the user's standing approval of 11/04 15:29; uploaded by Claude in Chrome; public rank 11 of 73; competition 2 final candidate 25 (PREREG_25)",
+   "test25": {
+    "rho": {
+     "public": 0.9604072525453283,
+     "private": 0.9559066619166369
+    },
+    "rho_threshold": 0.47880806681040905,
+    "q09_max_abs_diff": 0.0,
+    "q19_max_abs_diff": 0.0,
+    "set_seam_record_only": 0.008397842116600884,
+    "combo": "Q25",
+    "adoption": "25 adopted on the inner gate, validation not scored (results/prereg25/rank/adoption.json, finalized)",
+    "report": "results/test25/rank/t25_apply_report.json",
+    "report_sha256": "63312f51183c5c03303b590b55ece0636d0064ec1eff01e36878538122d615cd",
+    "k6_25": {
+     "commit": "1aecd0bbd342a82af34811e09f097843cffb5b4c",
+     "committed_at": "2026-11-06T06:16:38+08:00",
+     "deadline": "2026-11-18T23:59:59+08:00",
+     "ok": true
+    },
+    "t19_report_sha256": "38f6adc72c0f9ee861b45b6b09e8e2eb4d2455a85ad1b285e65e8d8fe840ad6c",
+    "earliest_p1_chunk_created_utc": "2026-11-04T10:20:46+00:00",
+    "inputs_bound_checked": 45,
+    "public_rule_b_differences": {
+     "19": 42,
+     "09": 82,
+     "08": 112,
+     "07": 161,
+     "04": 179,
+     "R20": 186
+    },
+    "private_rule_b_differences": {
+     "19": 47,
+     "09": 89,
+     "08": 128,
+     "07": 165,
+     "04": 180,
+     "R20": 191
+    },
+    "rule_b_differences_all": {
+     "19": 89,
+     "09": 171,
+     "08": 240,
+     "07": 326,
+     "04": 359,
+     "R20": 377
+    },
+    "r20_first_upload_id": 1,
+    "t19_entry_id": 9,
+    "t09_entry_id": 8
+   }
+  },
+  {
+   "id": 11,
+   "comp": "rank",
+   "team": "TEAM_11248",
+   "status": "uploaded",
+   "file": "results/test59/rank/submission_rank.csv",
+   "sha256": "244427fc75895eb0e0ed3d2debc0e4b9e12efad1d114992cbed6678eb720634b",
+   "rows": 800,
+   "git_commit": "fabcc169d84ca41de7f750e1ac3897cc94710825",
+   "file_commit": "8918c62772de55381b879b29e477f2ce37815cba",
+   "method": "prereg59 Q59 = Q25 fusion + opponent-strength term (OPP2), frozen on all inner fit questions, rule B",
+   "reason": "PREREG_59 (inner +0.0083 [+0.0015, +0.0154], G1/G2/G4 pass; controls 2ccf433)",
+   "check_submission": "OK (official)",
+   "uploaded_at_site": "2026-11-21 00:45:07",
+   "public_score": 0.7255972,
+   "public_rank": "45/161",
+   "note": "hand-written (official_log.py does not know 59); uploaded by Claude under the user's standing approval of 11/04, user logged in on 11/21; public +0.0018 vs 25 (0.7237578) - within noise, kept as the last competition-2 upload per PREREG_59"
+  },
+  {
+   "id": 12,
+   "comp": "rank",
+   "team": "TEAM_11248",
+   "status": "uploaded",
+   "file": "results/test64/rank/submission_rank.csv",
+   "sha256": "deeb913c882e54463cf4ce3d7ddf3a1d48c7b22e476f058759a4f927e64acdc6",
+   "rows": 800,
+   "git_commit": "33adefae496a7710dc80981a85285151a2ca33a1",
+   "file_commit": "33adefae496a7710dc80981a85285151a2ca33a1",
+   "method": "prereg64 Q64 = w_A*log_softmax(Q25) + w_O*OPP3 (opponent term with c49 head + 2,104 prototypes, D-only table, flat mean); merge off",
+   "reason": "PREREG_64 (inner vs Q59 +0.0070 [+0.0012, +0.0128], single colour +0.0046 [+0.0011, +0.0079]; vs Q25 +0.0154)",
+   "check_submission": "OK (official)",
+   "uploaded_at_site": "2026-11-21 05:28:17",
+   "public_score": 0.7493017,
+   "public_rank": "31/161",
+   "note": "hand-written; uploaded by Claude under the user's standing approval of 11/04 (user asked on 11/21 that Claude operate everything); public +0.0237 vs 59 (0.7255972), +0.0255 vs 25"
+  },
+  {
+   "id": 13,
+   "comp": "rank",
+   "team": "TEAM_11248",
+   "status": "uploaded",
+   "file": "results/test69/rank/submission_rank.csv",
+   "sha256": "c7595f2eb43c185973c55c7b4b03875de41c5ce92327f7042fc3769dbbae36c8",
+   "rows": 800,
+   "file_commit": "4fe3354070909b5757f9e36cd3664881e06cf53d",
+   "method": "prereg69 = 64 + Neon's M8 safe same-player merge (test pools separately)",
+   "reason": "PREREG_69 gate: 0% repeats 0 changes in 100/100 pools, 35% +0.000389",
+   "check_submission": "OK (official)",
+   "uploaded_at_site": "2026-11-22 10:03:22",
+   "public_score": 0.7493017,
+   "public_rank": "33/165",
+   "note": "changes 3 private questions only (public identical to 64, as expected); uploaded under the standing approval of 11/04"
+  }
+ ],
+ "private_leaderboard": {
+  "read_at": "2026-11-25 17:10 +08:00 (AIdea leaderboard, Claude via Chrome)",
+  "competition": "2 rank prediction (TEAM_11248)",
+  "final_upload": "#13 = 69 (results/test69/rank/submission_rank.csv)",
+  "private_score": 0.7267759,
+  "private_rank": 30,
+  "private_teams": 175,
+  "public_score": 0.7493017,
+  "public_rank_final": 35,
+  "private_first": 0.8238092
+ }
+}

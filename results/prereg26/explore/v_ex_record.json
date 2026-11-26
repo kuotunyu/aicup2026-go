@@ -1,0 +1,23 @@
+{
+ "format": "c10-prereg26 explore v_ex v1",
+ "created": "2026-11-06T11:15:32+0800",
+ "what": "PLAN.md 1 / 5.4: raw EX (44, float32) of the V games, re-read with tools/p09_map.read_chunk_rows (unchanged) from prereg25's V chunks, in v_meta.npz order",
+ "rows": 74946,
+ "chunks": 375,
+ "seam_v": {
+  "rows_equal": true,
+  "X_equal_prereg25": true,
+  "ref_equal_prereg25": true,
+  "y_equal_prereg25": true,
+  "players_equal_prereg25": true,
+  "chunk_sha256_equal_prereg25": true,
+  "ex_inf_values": 0,
+  "passed": true
+ },
+ "rows_with_some_nan_ex_record_only": 8249,
+ "v_ex_sha256": "4016f30765b32884ae445d33144810b2e0aa4a0a756d2171506cd3165730c625",
+ "v_X_sha256": "d70d151f401870671ec81227e8b7c1e804f6b110470ccd6468c2a839f8b3b61e",
+ "v_meta_sha256": "d79241a35fef16aab19dd5845ab6021cb7e7c370fc266b5d6d34907c3d51a4a2",
+ "prereg25_prep_record_sha256_lf": "43769ff8ea3565e3395aae8e0dfb18ed3e4d45351d67d6f3cfbfb10a4136c666",
+ "seconds": 38.6
+}

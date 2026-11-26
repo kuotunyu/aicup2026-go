@@ -1,0 +1,24 @@
+{
+ "format": "c10-prereg10 mock sets record v1",
+ "sets_json": "data/prereg10/mock/sets.json",
+ "sets_sha256": "167c5a518cb2d2b01e4c85bf77d6d308abec76e40d2313f59233d905b84425bc",
+ "players": 926,
+ "games": 123114,
+ "by_role": {
+  "cand": 92600,
+  "base": 18520,
+  "nov4": 11994
+ },
+ "nov4_per_player": {
+  "min": 0,
+  "mean": 12.95,
+  "zero": 50,
+  "full_20": 394
+ },
+ "chunks": 616,
+ "inputs_sha256": {
+  "meta.npz": "b1b5def7312dc6321ab08dd7e74e9b9069c49e9efb8caf7133b9869bf7338df5",
+  "open_keys.npz": "c2562d27d5c7515de14692188d2c084cda76011aa85be2bc6787f339bcc44460"
+ },
+ "tool_sha256": "12097087a1d7ecb50e4cbb87075934a1e1b07b28c20c0c0713b6dc4c78a31a30"
+}

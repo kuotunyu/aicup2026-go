@@ -1,0 +1,340 @@
+{
+ "what": "PREREG_28 rehearsal: t28 vs t06 size condition on testset_v2 fake trees",
+ "trees": {
+  "same": {
+   "counts": {
+    "public": {
+     "questions": 400,
+     "candidates": 400
+    },
+    "private": {
+     "questions": 400,
+     "candidates": 400
+    }
+   },
+   "as_built": {
+    "t06_size_ok": true,
+    "t06_all_on": true,
+    "t28_size_ok": true,
+    "t28_all_on": true,
+    "t28_identical_to_t06": true,
+    "t28_size_detail": {
+     "public": {
+      "questions": 400,
+      "candidates": 400,
+      "test02_questions": 400,
+      "test02_candidates": 400
+     },
+     "private": {
+      "questions": 400,
+      "candidates": 400,
+      "test02_questions": 400,
+      "test02_candidates": 400
+     }
+    }
+   },
+   "q_extra": {
+    "t06_size_ok": false,
+    "t06_all_on": false,
+    "t28_size_ok": false,
+    "t28_all_on": false,
+    "t28_identical_to_t06": false,
+    "t28_size_detail": {
+     "literal_400_by_400": {
+      "ok": false,
+      "detail": {
+       "public": {
+        "questions": 400,
+        "candidates": 400,
+        "test02_questions": 400,
+        "test02_candidates": 400
+       },
+       "private": {
+        "questions": 401,
+        "candidates": 400,
+        "test02_questions": 401,
+        "test02_candidates": 400
+       }
+      }
+     },
+     "prereg28": {
+      "ok": false,
+      "pools": {
+       "public": {
+        "counts": [
+         400,
+         400,
+         400,
+         400
+        ],
+        "n": 400,
+        "ok": true
+       },
+       "private": {
+        "counts": [
+         401,
+         400,
+         401,
+         400
+        ],
+        "n": null,
+        "ok": false
+       }
+      },
+      "range": [
+       400,
+       800
+      ],
+      "rule": "each pool: 06's and test02's question and candidate counts are one N, 400 <= N <= 800 (PREREG_28)"
+     },
+     "registration": "docs/PREREG_28_06ON_N_BY_N.md",
+     "tool": "tools/t28_n.py"
+    }
+   },
+   "c_extra": {
+    "t06_size_ok": false,
+    "t06_all_on": false,
+    "t28_size_ok": false,
+    "t28_all_on": false,
+    "t28_identical_to_t06": false,
+    "t28_size_detail": {
+     "literal_400_by_400": {
+      "ok": false,
+      "detail": {
+       "public": {
+        "questions": 400,
+        "candidates": 400,
+        "test02_questions": 400,
+        "test02_candidates": 400
+       },
+       "private": {
+        "questions": 400,
+        "candidates": 401,
+        "test02_questions": 400,
+        "test02_candidates": 401
+       }
+      }
+     },
+     "prereg28": {
+      "ok": false,
+      "pools": {
+       "public": {
+        "counts": [
+         400,
+         400,
+         400,
+         400
+        ],
+        "n": 400,
+        "ok": true
+       },
+       "private": {
+        "counts": [
+         400,
+         401,
+         400,
+         401
+        ],
+        "n": null,
+        "ok": false
+       }
+      },
+      "range": [
+       400,
+       800
+      ],
+      "rule": "each pool: 06's and test02's question and candidate counts are one N, 400 <= N <= 800 (PREREG_28)"
+     },
+     "registration": "docs/PREREG_28_06ON_N_BY_N.md",
+     "tool": "tools/t28_n.py"
+    }
+   }
+  },
+  "grow-player": {
+   "counts": {
+    "public": {
+     "questions": 500,
+     "candidates": 500
+    },
+    "private": {
+     "questions": 500,
+     "candidates": 500
+    }
+   },
+   "as_built": {
+    "t06_size_ok": false,
+    "t06_all_on": false,
+    "t28_size_ok": true,
+    "t28_all_on": true,
+    "t28_identical_to_t06": false,
+    "t28_size_detail": {
+     "literal_400_by_400": {
+      "ok": false,
+      "detail": {
+       "public": {
+        "questions": 500,
+        "candidates": 500,
+        "test02_questions": 500,
+        "test02_candidates": 500
+       },
+       "private": {
+        "questions": 500,
+        "candidates": 500,
+        "test02_questions": 500,
+        "test02_candidates": 500
+       }
+      }
+     },
+     "prereg28": {
+      "ok": true,
+      "pools": {
+       "public": {
+        "counts": [
+         500,
+         500,
+         500,
+         500
+        ],
+        "n": 500,
+        "ok": true
+       },
+       "private": {
+        "counts": [
+         500,
+         500,
+         500,
+         500
+        ],
+        "n": 500,
+        "ok": true
+       }
+      },
+      "range": [
+       400,
+       800
+      ],
+      "rule": "each pool: 06's and test02's question and candidate counts are one N, 400 <= N <= 800 (PREREG_28)"
+     },
+     "registration": "docs/PREREG_28_06ON_N_BY_N.md",
+     "tool": "tools/t28_n.py"
+    }
+   },
+   "q_extra": {
+    "t06_size_ok": false,
+    "t06_all_on": false,
+    "t28_size_ok": false,
+    "t28_all_on": false,
+    "t28_identical_to_t06": false,
+    "t28_size_detail": {
+     "literal_400_by_400": {
+      "ok": false,
+      "detail": {
+       "public": {
+        "questions": 500,
+        "candidates": 500,
+        "test02_questions": 500,
+        "test02_candidates": 500
+       },
+       "private": {
+        "questions": 501,
+        "candidates": 500,
+        "test02_questions": 501,
+        "test02_candidates": 500
+       }
+      }
+     },
+     "prereg28": {
+      "ok": false,
+      "pools": {
+       "public": {
+        "counts": [
+         500,
+         500,
+         500,
+         500
+        ],
+        "n": 500,
+        "ok": true
+       },
+       "private": {
+        "counts": [
+         501,
+         500,
+         501,
+         500
+        ],
+        "n": null,
+        "ok": false
+       }
+      },
+      "range": [
+       400,
+       800
+      ],
+      "rule": "each pool: 06's and test02's question and candidate counts are one N, 400 <= N <= 800 (PREREG_28)"
+     },
+     "registration": "docs/PREREG_28_06ON_N_BY_N.md",
+     "tool": "tools/t28_n.py"
+    }
+   },
+   "c_extra": {
+    "t06_size_ok": false,
+    "t06_all_on": false,
+    "t28_size_ok": false,
+    "t28_all_on": false,
+    "t28_identical_to_t06": false,
+    "t28_size_detail": {
+     "literal_400_by_400": {
+      "ok": false,
+      "detail": {
+       "public": {
+        "questions": 500,
+        "candidates": 500,
+        "test02_questions": 500,
+        "test02_candidates": 500
+       },
+       "private": {
+        "questions": 500,
+        "candidates": 501,
+        "test02_questions": 500,
+        "test02_candidates": 501
+       }
+      }
+     },
+     "prereg28": {
+      "ok": false,
+      "pools": {
+       "public": {
+        "counts": [
+         500,
+         500,
+         500,
+         500
+        ],
+        "n": 500,
+        "ok": true
+       },
+       "private": {
+        "counts": [
+         500,
+         501,
+         500,
+         501
+        ],
+        "n": null,
+        "ok": false
+       }
+      },
+      "range": [
+       400,
+       800
+      ],
+      "rule": "each pool: 06's and test02's question and candidate counts are one N, 400 <= N <= 800 (PREREG_28)"
+     },
+     "registration": "docs/PREREG_28_06ON_N_BY_N.md",
+     "tool": "tools/t28_n.py"
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,64 @@
+{
+ "what": "PREREG_02 1.2 local reproduction check: R00 on the validation dumps vs prereg01",
+ "passed": true,
+ "smoke": false,
+ "created": "2026-09-26T14:00:40+08:00",
+ "questions": 1589,
+ "games": 19156,
+ "games_parsed": 19156,
+ "max_abs_diff": 9.176848048131347e-08,
+ "tolerance": 0.0001,
+ "tolerance_rule": "PREREG_02 1.2 with the GPU rule of 1.1 (revision): <= 1e-4; <= 1e-3 when the dump was made on a GPU model other than prereg01's; 1e-4 when unknown",
+ "gpu_differs_from_prereg01": false,
+ "gpu_decided_by": "dumps/_DONE_val_p01e5_d4.json gpu_name vs prereg01 env.json (last run)",
+ "dump_gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "p01_gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "gpu_prereg01_env": [
+  "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+ ],
+ "gpu_prereg02_env": [
+  "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+ ],
+ "notebook_same_gpu_as_p01": true,
+ "gpu_consistent_with_notebook": true,
+ "seam": {
+  "notebook_c0_max_abs_diff": 8.940696716308594e-08,
+  "abs_difference": 2.361513318227537e-09,
+  "tolerance": 1e-06,
+  "ok": true,
+  "required": true
+ },
+ "notebook_run": {
+  "repro_check_passed": true,
+  "p01_unchanged": true,
+  "p01_changed_files": []
+ },
+ "notebook_run_ok": true,
+ "notebook_run_required": true,
+ "rule_b_differences": 0,
+ "rule_b_max": 4,
+ "rule_b_differing_questions": [],
+ "notebook_rule_b_differing_questions": [],
+ "count_mismatch_questions": [],
+ "prereg01_pred_B_vs_rule_b_on_its_probs_mismatches": 0,
+ "p02_dumps_dir": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg02\\rank\\dumps",
+ "inputs_sha256": {
+  "val_keys.npz": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+  "val_p01e5_d4.npz": "ef91e9cd967802719d4f16bf74ebf475809b0f4b31971589f73097f928b0a434",
+  "prereg01 rank_val_probs.csv": "92cc750cad9eb114541047cf0c4863634ef4de0be1bac75f889edcee4823800c"
+ },
+ "val_p01e5_d4_weights_sha256": "3e2267a24860c836e8db219d07cd265f3f180f3573aa565ccadd27f859fc3c8d",
+ "marker": {
+  "file": "_DONE_val_p01e5_d4.json",
+  "sha256_matches_file": true,
+  "rows": 19156,
+  "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "torch": "2.11.0+cu128",
+  "cudnn": 91900,
+  "run": 1
+ },
+ "notebook_repro_check": {
+  "sha256": "7e561aba29ee8569ba840766e86fbc18715f744456ee74d1c756cf882bb2c746",
+  "pass": true
+ }
+}

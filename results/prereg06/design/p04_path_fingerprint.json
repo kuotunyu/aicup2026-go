@@ -1,0 +1,53 @@
+{
+ "what": "Guard for the 04 test-day path before any PREREG_06 / PREREG_07 work (2026-10-02, guard04): tracked files hashed with CRLF folded to LF, as results/prereg04/design/r20_path_fingerprint.json. tests/test_p06_hygiene.py fails if a listed file changes, if a new program or design file matches the patterns, if an untracked item that exists changes, or if an insert_only file loses or changes a line of local tag p04-testday-pre06.",
+ "head": "5c2792bed5822ae76cee8dd2077ec50c11eb04a5",
+ "patterns": [
+  "tools/t04_*.py",
+  "colab/*test04*",
+  "tests/test_t04_*.py",
+  "results/test04/*",
+  "docs/TESTDAY_04.md"
+ ],
+ "n_files": 21,
+ "files": {
+  "colab/build_test04_rank_nb.py": "c464db77b86f658fd979a8ffa99f48bdeb85505d341762af40681c7ff6e891fc",
+  "colab/make_test04_smoke_tree.py": "ff2bcab2aeeace5b213fb3784a2a40c1ad3df545f5220f5beb9e3a1792499075",
+  "colab/test04_rank.ipynb": "9dcbf8953c3cffff013e15ec2c619f7c61c1a905d58635abe4507501e408a549",
+  "docs/TESTDAY_04.md": "a299be3bffdf5adeb50b1645c7dc97ad7c0e08d9dc6e63bcfff6aa3f69ac218d",
+  "results/test04/design/build_review.md": "1a5e9e415fae60b5e05dbe45b3d9e0bf4e4d69d66cb1ab3003a09958a7d5c992",
+  "results/test04/design/r20_fake_golden.json": "36c8900b7e7b222391c4a63c8c4dc15b210f7909e4e4317521c3e50560e4c11c",
+  "results/test04/design/rev3_draft.md": "17686337feb41ac21aa45d2ca978ad06d32f80e91b020d4778375b5e6b2c7ec5",
+  "results/test04/design/rev3_final.md": "c422cbbfd2021f1c5a8e7db8a9e048d6314df4fa2c71c9e06ff87b647480a81d",
+  "results/test04/design/spec.md": "6f328329acb229cf545ab7007b52c2bff4e44d2199c32f72ead4ca087df24a59",
+  "results/test04/design/understand_nb.md": "08dd6df6feb18adb3757520cfe36940504c1caa906d50add9240ce6ef6d0bfa5",
+  "results/test04/design/understand_p04.md": "68cd2fae73343d61a82e2cf6e1e9bb83057638f8cec95057d4a7e5b72ede6aec",
+  "results/test04/design/understand_protocol.md": "5ded72461839526fbdbb8d6b96c595680fb19394d91fdbc88e5de4fed77479d2",
+  "results/test04/design/understand_t02.md": "9da98eacbcb182273f406b9c9946cf481d2bf7eb1a8bac099bea33a3d5f5bd49",
+  "results/test04/notebook_diff_rank.txt": "b80ab4536d2676f7dadbc372dfd0b0c6de22af44de74c260d9d4445074e66f95",
+  "tests/test_t04_dryrun.py": "81cb12ec16a6588c8aac213390008104f881b29165ed2ec255593764af163520",
+  "tests/test_t04_hygiene.py": "9e94a224bc7b1aeecaa63c785808051249862bcc3b2d2033ef70c1de579b14ff",
+  "tests/test_t04_nb.py": "3bc4a31b5ab0f7918969014a7aa58cc9e152a1f6cc1586769013a3446a1b4839",
+  "tests/test_t04_official_log.py": "8109b09cd3e9fecd854dc3f3944adb1b17a23db4eab40183ef49aa2e2cf50a9b",
+  "tests/test_t04_rank.py": "92f5cba6ed2c272340168bb54ab3a3166cf5d7b489f78aa61f719290d2dd5bdf",
+  "tools/t04_fake_tests.py": "928d6989b3db72a4161aebc159a05b1b9078c99fc6541b1ddff46aae2bf1b5bc",
+  "tools/t04_rank.py": "f212879e5aaf6fe90060e2b8f03a5e61e8d8704c9dd8204e9c42e65b589940e4"
+ },
+ "untracked": {
+  "rule": "raw SHA-256 of the bytes (no CRLF folding; the rule of docs/TESTDAY_04.md and tools/t04_rank.py); outside git under data/ (never data/local); checked only when the file exists",
+  "files": {
+   "data/colab_upload/test04/test04_rank.ipynb": "9dcbf8953c3cffff013e15ec2c619f7c61c1a905d58635abe4507501e408a549",
+   "data/prereg04/counts_fit.npz": "f6c6debe90639585763b9812c235743a6b7f89d8db1c6422ece7bccd550a08a5",
+   "data/prereg04/design_scratch/counts_fit.npz": "f6c6debe90639585763b9812c235743a6b7f89d8db1c6422ece7bccd550a08a5"
+  }
+ },
+ "insert_only": {
+  "rule": "not pinned: later registered steps may only insert or append lines; every line of the version at tag p04-testday-pre06 must still be there, in order (CRLF folded)",
+  "files": {
+   "tools/official_log.py": "tests/test_p04_hygiene.py R20TestDayPath.test_official_log_additive_only (every line of tag r20-testday-pre04, in order); tests/test_t04_official_log.py TagVersusNew (R20 flow output identical to that tag); the 652 lines 04 added after that tag: tests/test_p06_hygiene.py InsertOnlySinceTag",
+   "docs/COLAB_RUN.md": "tests/test_t04_hygiene.py SameAsBranchPoint.test_ledger_docs_colab_run_keep_every_line (every line of 6ec5e68) and test_colab_run_has_the_test04_section (one test04 heading); the test04 section body: tests/test_p06_hygiene.py InsertOnlySinceTag",
+   "docs/PREREG_04_OPPONENT.md": "tests/test_t04_hygiene.py SameAsBranchPoint.test_prereg04_only_gains_lines (every line of 6ec5e68); rev 3 row and section 11: tests/test_p06_hygiene.py InsertOnlySinceTag",
+   ".gitignore": "tests/test_t04_hygiene.py SameAsBranchPoint.test_gitattributes_gitignore_only_gain_lines (every line of 6ec5e68) and LineEndingsAndIgnores; lines added later: tests/test_p06_hygiene.py InsertOnlySinceTag",
+   ".gitattributes": "tests/test_t04_hygiene.py SameAsBranchPoint.test_gitattributes_gitignore_only_gain_lines (every line of 6ec5e68) and LineEndingsAndIgnores; lines added later: tests/test_p06_hygiene.py InsertOnlySinceTag"
+  }
+ }
+}

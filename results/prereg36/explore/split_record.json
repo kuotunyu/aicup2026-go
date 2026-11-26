@@ -1,0 +1,86 @@
+{
+ "format": "c10-prereg36 split v1",
+ "rule": "E: store players per level, first 60 by sha256('p36|E|pid'); D: of the rest, first 30 by sha256('p36|D|pid'); T: fit players outside E and D with >= 20 games",
+ "fit": {
+  "players": 5767,
+  "games": 720307
+ },
+ "store_players": 1937,
+ "by_level": {
+  "D": {
+   "store": 192,
+   "E": 60,
+   "D": 30
+  },
+  "C": {
+   "store": 210,
+   "E": 60,
+   "D": 30
+  },
+  "B": {
+   "store": 229,
+   "E": 60,
+   "D": 30
+  },
+  "A": {
+   "store": 232,
+   "E": 60,
+   "D": 30
+  },
+  "1D": {
+   "store": 146,
+   "E": 60,
+   "D": 30
+  },
+  "2D": {
+   "store": 187,
+   "E": 60,
+   "D": 30
+  },
+  "3D": {
+   "store": 189,
+   "E": 60,
+   "D": 30
+  },
+  "4D": {
+   "store": 178,
+   "E": 60,
+   "D": 30
+  },
+  "5D": {
+   "store": 189,
+   "E": 60,
+   "D": 30
+  },
+  "6D": {
+   "store": 185,
+   "E": 60,
+   "D": 30
+  }
+ },
+ "E": {
+  "players": 600,
+  "games": 193736,
+  "sha256_sorted_ids": "7778702211b3e234b731355b63e0da991ee2df9802c97c69313dc118044ffb7b"
+ },
+ "D": {
+  "players": 300,
+  "games": 94015,
+  "sha256_sorted_ids": "490c37a134d0162301d3eb8faadcb16fbb8c8ec8dbbfda3ad6050b78fe8590bf"
+ },
+ "T": {
+  "players": 3685,
+  "games": 417698,
+  "sha256_sorted_ids": "9c1db9001568040a648276d3993c6012afc914abd2466f7d9c5411d667cfa066"
+ },
+ "levels_with_fewer_D_than_planned": {},
+ "cache": {
+  "format": "c10-prereg36 cache v1",
+  "source": "c10data.load_rows(part='fit', local_dir=None)",
+  "games": 720307,
+  "players": 5767,
+  "moves": 159971163,
+  "unparsed_games": 0,
+  "codes_sha256": "be5831abbccf22be3c96725082939638e6607f88ad45b1ed2164db33060c0303"
+ }
+}

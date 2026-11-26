@@ -1,0 +1,38 @@
+=== 1 hs seam (GPU) 2026-10-05T14:54:27Z
+{"time_utc": "2026-10-05T14:55:29+00:00", "msg": "hs start", "set": "seam", "mode": "dry-run", "games": 400, "chunks": 2, "todo": 2}
+{"time_utc": "2026-10-05T14:59:30+00:00", "msg": "chunk done", "set": "seam", "chunk": 0, "games": 200, "failed": 0, "evals": 323232, "seconds": 220.8, "evals_per_s": 1464.2, "progress": "1/2", "eta_min": 3.7}
+{"time_utc": "2026-10-05T15:02:33+00:00", "msg": "chunk done", "set": "seam", "chunk": 1, "games": 200, "failed": 0, "evals": 308910, "seconds": 182.6, "evals_per_s": 1691.6, "progress": "2/2", "eta_min": 0.0}
+hs seam: 400 games, failed 0, 632142 evals in 403 s (1567.1 evals/s) -> D:\c10_t07_reh\gpu\test07\hs\seam_hs.npz
+rc=0
+=== 1b fake public/private + apply (CPU) 2026-10-05T15:02:38Z
+t07 from-val: public rows 0-4787 -> D:\c10_t07_reh\gpu\test07\hs\public_hs.npz
+t07 from-val: private rows 4787-9602 -> D:\c10_t07_reh\gpu\test07\hs\private_hs.npz
+rc=0
+GPU seam: counts equal True, max |dlogp| per move 0 (<= 0.05), per game/profile mean 0 (<= 0.002), lp_HS 0 (<= 0.02) -> PASSED
+local seam: 1589 questions, max |dP| 0 (tol 0.0001), rule-B differences 0, byte identical True/True/True (required: True) -> passed
+apply Q02H: public 400, private 400 questions -> D:\c10_t07_reh\gpu\test07\rank\submission_rank.csv (sha256 d3bcad47e43d); check_submission official: OK; rule-B differences on public vs 04 / R20: 57 / 108
+(dry-run: nothing is uploaded)
+rc=0
+=== 2 hs public --max-games 400 (GPU) 2026-10-05T15:02:46Z
+{"time_utc": "2026-10-05T15:02:55+00:00", "msg": "hs start", "set": "public", "mode": "dry-run", "games": 400, "chunks": 2, "todo": 2}
+{"time_utc": "2026-10-05T15:06:21+00:00", "msg": "chunk done", "set": "public", "chunk": 0, "games": 200, "failed": 0, "evals": 323232, "seconds": 201.0, "evals_per_s": 1608.4, "progress": "1/2", "eta_min": 3.4}
+{"time_utc": "2026-10-05T15:09:22+00:00", "msg": "chunk done", "set": "public", "chunk": 1, "games": 200, "failed": 0, "evals": 308910, "seconds": 181.2, "evals_per_s": 1704.7, "progress": "2/2", "eta_min": 0.0}
+hs public: 400 games, failed 0, 632142 evals in 382 s (1654.1 evals/s) -> D:\c10_t07_reh\gpu_pub\test07\hs\public_hs.npz
+rc=0
+{
+ "games": 400,
+ "equal": {
+  "failed": true,
+  "counts": true,
+  "n_moves": true,
+  "color": true
+ },
+ "max_abs_profile_mean": 0.00045943095348777163,
+ "max_abs_lp_hs": 0.005947533142400374,
+ "bitwise_equal_sums": false,
+ "passed": true,
+ "rule": "spec 9 item 2: failed / counts / n_moves equal, per game per profile mean log p <= 0.002"
+}
+rc=0
+=== done 2026-10-05T15:09:25Z
+gpu rc=0

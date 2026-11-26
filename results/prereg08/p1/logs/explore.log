@@ -1,0 +1,56 @@
+E2 10079 {'lambda': 0.03, 'cv': {'logloss': 1.76302394880781, 'top1': 0.2994344677051295, 'rule_b_score_per_game': 0.441002513220098, 'nit': [173, 162, 166, 166, 162]}}
+E2 20003 {'lambda': 0.03, 'cv': {'logloss': 1.7093665594951977, 'top1': 0.3107033944908264, 'rule_b_score_per_game': 0.4586259448916058, 'nit': [152, 179, 153, 156, 158]}}
+  fold 0 lambda 1.0: CV log-loss 1.9430, nit 66, 4s
+  fold 0 lambda 0.3: CV log-loss 1.8285, nit 88, 5s
+  fold 0 lambda 0.1: CV log-loss 1.7394, nit 124, 7s
+  fold 0 lambda 0.03: CV log-loss 1.6748, nit 181, 10s
+  fold 0 lambda 0.01: CV log-loss 1.6543, nit 189, 11s
+  fold 0 lambda 0.003: CV log-loss 1.6750, nit 252, 14s
+  fold 0 lambda 0.001: CV log-loss 1.7259, nit 322, 18s
+  fold 0 lambda 0.0003: CV log-loss 1.8037, nit 519, 29s
+  fold 0 lambda 0.0001: CV log-loss 1.8801, nit 748, 41s
+  fold 1 lambda 1.0: CV log-loss 1.9690, nit 52, 3s
+  fold 1 lambda 0.3: CV log-loss 1.8569, nit 89, 5s
+  fold 1 lambda 0.1: CV log-loss 1.7684, nit 145, 8s
+  fold 1 lambda 0.03: CV log-loss 1.7063, nit 165, 9s
+  fold 1 lambda 0.01: CV log-loss 1.6904, nit 191, 11s
+  fold 1 lambda 0.003: CV log-loss 1.7171, nit 245, 14s
+  fold 1 lambda 0.001: CV log-loss 1.7736, nit 326, 18s
+  fold 1 lambda 0.0003: CV log-loss 1.8573, nit 549, 30s
+  fold 1 lambda 0.0001: CV log-loss 1.9398, nit 749, 41s
+  fold 2 lambda 1.0: CV log-loss 1.9545, nit 60, 4s
+  fold 2 lambda 0.3: CV log-loss 1.8406, nit 90, 5s
+  fold 2 lambda 0.1: CV log-loss 1.7528, nit 143, 8s
+  fold 2 lambda 0.03: CV log-loss 1.6940, nit 168, 9s
+  fold 2 lambda 0.01: CV log-loss 1.6826, nit 180, 10s
+  fold 2 lambda 0.003: CV log-loss 1.7143, nit 256, 14s
+  fold 2 lambda 0.001: CV log-loss 1.7746, nit 323, 18s
+  fold 2 lambda 0.0003: CV log-loss 1.8619, nit 529, 29s
+  fold 2 lambda 0.0001: CV log-loss 1.9467, nit 774, 42s
+  fold 3 lambda 1.0: CV log-loss 1.9629, nit 62, 4s
+  fold 3 lambda 0.3: CV log-loss 1.8458, nit 89, 5s
+  fold 3 lambda 0.1: CV log-loss 1.7539, nit 145, 8s
+  fold 3 lambda 0.03: CV log-loss 1.6904, nit 173, 9s
+  fold 3 lambda 0.01: CV log-loss 1.6734, nit 171, 10s
+  fold 3 lambda 0.003: CV log-loss 1.6975, nit 244, 14s
+  fold 3 lambda 0.001: CV log-loss 1.7504, nit 332, 18s
+  fold 3 lambda 0.0003: CV log-loss 1.8294, nit 545, 30s
+  fold 3 lambda 0.0001: CV log-loss 1.9077, nit 760, 41s
+  fold 4 lambda 1.0: CV log-loss 1.9685, nit 52, 3s
+  fold 4 lambda 0.3: CV log-loss 1.8558, nit 103, 6s
+  fold 4 lambda 0.1: CV log-loss 1.7679, nit 138, 8s
+  fold 4 lambda 0.03: CV log-loss 1.7079, nit 155, 8s
+  fold 4 lambda 0.01: CV log-loss 1.6943, nit 185, 10s
+  fold 4 lambda 0.003: CV log-loss 1.7242, nit 231, 13s
+  fold 4 lambda 0.001: CV log-loss 1.7852, nit 330, 18s
+  fold 4 lambda 0.0003: CV log-loss 1.8753, nit 526, 28s
+  fold 4 lambda 0.0001: CV log-loss 1.9633, nit 769, 41s
+E1 Q02H+P1TO x1: 0.6750 (+0.0508) mono +0.0496 w [4.0, 4.0, 4.0, 4.0, 4.0]
+E1 R20+P1TO x1: 0.6749 (+0.0506) mono +0.0464 w [3.55, 3.72, 4.0, 4.0, 2.66]
+E1 Q02H+P1TO x2: 0.6762 (+0.0519) mono +0.0504 w [4.0, 4.0, 4.0, 4.0, 4.0]
+E1 R20+P1TO x2: 0.6751 (+0.0508) mono +0.0462 w [1.78, 1.86, 2.37, 2.29, 1.33]
+E1 Q02H+P1TO x4: 0.6768 (+0.0525) mono +0.0508 w [3.2, 2.16, 3.55, 3.84, 2.59]
+E1 R20+P1TO x4: 0.6751 (+0.0508) mono +0.0462 w [0.89, 0.93, 1.19, 1.14, 0.67]
+E1 Q02H+P1TO x8: 0.6768 (+0.0525) mono +0.0508 w [1.6, 1.08, 1.77, 1.92, 1.3]
+E1 R20+P1TO x8: 0.6751 (+0.0508) mono +0.0462 w [0.44, 0.46, 0.59, 0.57, 0.33]
+-> D:\AI-Portfolio\competitions\aicup2026-go\results\prereg08\p1\p1_explore_report.json

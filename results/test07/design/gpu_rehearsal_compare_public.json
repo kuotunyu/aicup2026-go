@@ -1,0 +1,14 @@
+{
+ "games": 400,
+ "equal": {
+  "failed": true,
+  "counts": true,
+  "n_moves": true,
+  "color": true
+ },
+ "max_abs_profile_mean": 0.00045943095348777163,
+ "max_abs_lp_hs": 0.005947533142400374,
+ "bitwise_equal_sums": false,
+ "passed": true,
+ "rule": "spec 9 item 2: failed / counts / n_moves equal, per game per profile mean log p <= 0.002"
+}

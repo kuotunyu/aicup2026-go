@@ -1,0 +1,74 @@
+{
+ "what": "prereg05 PILOT of D2 (train-player lookup by opening, conditional switch) in the official question shape. Every fixed choice is written here BEFORE any similarity or fusion is computed (2026-10-02); this file is never edited afterwards and its SHA-256 is recorded in every output. Training players only (fit + inner); design-stage simulation on inner pseudo-questions, NOT a validation result. No scoring, results/score_ledger.csv untouched, data/local never opened (u1_lib guard), no frozen or existing file changed, nothing committed.",
+ "decides": "whether a full prereg 05 (Q02 + D2-V3 conditional switch) is built; test-day merge deadline 11/03 23:59",
+ "inputs_allowed": [
+  "results/prereg05/explore/u1/u1_oof.npz (mono_* arrays, mono_P_Q02; SHA-256 checked against u1/u1_repro.json output)",
+  "data/prereg04/design_scratch/moves_fit.npz, moves_fit_moves.npy (720,307 fit games, 5,767 fit players), moves_inner.npz, moves_inner_moves.npy (73,556 inner games); SHA-256 checked against results/prereg04/design/scratch_manifest.json",
+  "inner_keys / pseudo_inner / Q02 sources read through u1_lib.load_inputs() (inner files only), for the seams",
+  "results/prereg05/explore/D2_train_player_lookup/d2_probe.py (imported read-only for the token / similarity / vote code) and d2_report.json (comparison numbers and the stage-1 vocabulary seam)"
+ ],
+ "forbidden": ["data/local/** (u1_lib guard installed before anything else is imported)", "validation questions, predictions or answers", "tools/score.py, results/score_ledger.csv, any scoring", "any p02_player_* module (asserted)", "GPU, external data", "writing outside results/prereg05/explore/pilot_D2/", "git commit"],
+ "questions": {
+  "set": "the PREREG_03 single-colour inner pseudo-questions mono_* of u1_oof.npz: 120,544 questions, one colour each, k in {5, 10, 15, 20}, 636 inner players (their split-v1 folds 0-4)",
+  "baseline": "Q02 = mono_P_Q02 (each question from its player's fold's OOF parameters)",
+  "decision": "rule B (p02_rank_fuse.rule_b_np) for Q02 and for the PILOT; official score 1 / e^-1 / 0 (p02_rank_fuse.official_score)",
+  "subset": "all 120,544 questions and all 636 players (no main-subset restriction)"
+ },
+ "metrics": {
+  "primary": "official-type weighted mean = (1/10) sum over levels (1/4) sum over k of the mean score of the questions in cell (level, k) (= mean over k of the within-k rank-balanced mean); the PRIMARY number is its paired difference PILOT - Q02",
+  "also": "plain rank-balanced mean (mean over levels of the per-level question mean), question mean, exact rate",
+  "bootstrap": "PlayerBootstrap = p02_rank_fuse.PlayerBootstrap(mono_player, mono_y, 636): players resampled within level, 1,000 draws, numpy default_rng(0) (= inner['mono_boot'] of the prior probes). The rank-balanced statistic is its .stats(); the official-type statistic uses the SAME draws: per draw and level, cell (level, k) mean = sum of the drawn players' scores in that k / their question count in that k, mean over k, then mean over levels. 95% CI = 2.5 / 97.5 percentiles of the paired difference."
+ },
+ "tokens": {
+  "code": "imported from D2_train_player_lookup/d2_probe.py unchanged: sym_tables, first_moves, canon_index, canonise, check_canon, tokens, weights, row_normalise (definitions in d2_variants.json 'tokens')",
+  "content": "target side's first 10 moves (T_pos, T_set) and the whole game's first 10 moves (G_pos, G_set, G_bigram), no-colour and target-colour-prefixed sets, first MAX_MOVES = 60 moves parsed",
+  "orientations": "raw and canon (p02_moves.canon(mv, 10) vectorised as in D2)",
+  "weights": "count c summed over the games of a profile / question, weight (1 + ln c) * IDF, IDF = ln(5768 / (1 + df)) + 1, df = number of the 5,767 fit players having the token; vocabulary = fit tokens + all inner-game tokens (as D2); rows L2-normalised; cosine"
+ },
+ "reference_set": {
+  "fit": "5,767 fit players, one profile each from ALL their fit games (no cap)",
+  "inner_other": "each of the 636 inner players, profile from ALL his inner games (every inner_keys row with his player_id), used for the questions of every OTHER player",
+  "inner_own": "for a question of inner player p: p's profile = ALL of p's inner games EXCEPT that question's own games, implemented by subtracting the question's token counts from p's full inner counts before weighting; an own profile with no token left is absent (masked; count recorded)",
+  "numerics": "question x reference cosines as a float32 sparse product (reference profiles float32, question weights float32) as in D2; the own-profile cosine is computed in float64 and stored as float32 in the same matrix; masked entries = -9.0 (D2's MASKED)"
+ },
+ "scenarios": {
+  "pi1": "own profile present (as in reference_set.inner_own); every other profile present",
+  "pi0": "own profile removed; every other profile present",
+  "pi05": "inner player kept iff the first byte of sha256('c10-p05-d2|' + player_id) < 128 (D2's rule); profiles of the other inner players removed for every question (a kept player's own profile is the inner_own profile)"
+ },
+ "similarity": "top-10 per scenario and orientation as D2 (argpartition, then stable argsort of the values); S2 = top-1 cosine - top-2 cosine per orientation; the orientation with the larger S2 is used (tie -> raw); top-1 and top-10 come from that orientation (d2_probe.choose)",
+ "threshold": "theta[f, k] = numpy.percentile(pi0 S2 of the mono questions with fold != f and n == k, 99) (linear interpolation), f = 0..4, k = 5/10/15/20. The fold-f model triggers question q iff S2(q) > theta[f, k(q)]; every question is evaluated by its own fold's model. The same theta is used in every scenario.",
+ "variant": {
+  "only": "V3 = V2 * 1[S2 > theta]",
+  "V2": "log(level distribution of the top-10 profiles weighted by softmax(cos / 0.02) + 0.01) = d2_probe.soft_vote (reference levels: fit players' labels, inner players' levels)"
+ },
+ "fusion": {
+  "form": "P_new proportional to exp(log P_Q02 + w * E_V3); for a row whose E_V3 is all zero (not triggered) or when w == 0, P_new = P_Q02 copied bit for bit; otherwise P_new = p02_rank_fuse.softmax(log(P_Q02) + w * E_V3)",
+  "fit": "per fold f, the scalar w_f in [0, 4] (the generalised calibration's w bound, p02_rank_fuse.BOUNDS['w']) minimising the LEVEL-WEIGHTED mean log-loss (p02_rank_fuse.level_weights of the fit questions' levels) of P_new on the pi1 mono questions of the OTHER 4 folds, triggered with theta[f, k]; scipy.optimize.minimize_scalar(method='bounded', bounds=(0, 4), options={'xatol': 1e-10}); the endpoints 0 and 4 are also evaluated and the lowest of the three losses is taken (ties -> the Brent value); a w at a bound is recorded",
+  "apply": "fold-f questions use (theta[f, .], w_f) in every scenario: pi1, pi0 (= the switch wrongly on) and pi05 all use the pi1-fitted w_f",
+  "record_only_extra": "pi0 with w refitted on the pi0 mono questions of the other 4 folds (D2's original pi0 setting)"
+ },
+ "pools": {
+  "count": "1,000 pools of 400 questions, numpy default_rng(0), the same pools for every scenario",
+  "draw": "per pool: order = rng.permutation(636 inner players); for k in 20, 15, 10, 5 (most restrictive first) take the first 100 players in that order not yet used in this pool that have at least one mono question with that k; if fewer than 100 are left, fill the rest with already-used players having that k, in the same order (count recorded); then for each (player, k) slot one of that player's mono questions with that k, chosen by rng.integers(0, count)",
+  "switch": "ON iff the share of triggered questions (each with its own fold's theta) in the pool >= 10%",
+  "report": "P(ON) for pi1, pi0, pi05; trigger-share mean and 1 / 5 / 50 / 95 / 99 percentiles; reused-player counts"
+ },
+ "criteria": {
+  "rule": "all must hold (fixed before running)",
+  "c1": "pi1: V3 official-type weighted delta vs Q02 >= +0.03 and PlayerBootstrap 95% lower bound > 0",
+  "c2": "pi0 with the pi1-fitted w applied (switch wrongly on): official-type weighted delta >= -0.005, and the per-question trigger rate at pi0 (all 120,544 questions, own fold's theta) <= 2%",
+  "c3": "pools: P(ON | pi1) >= 0.9 and P(ON | pi0) <= 0.01",
+  "if_all_pass": "GO for a full prereg 05 (the user has accepted the rule question); otherwise NO-GO for 05"
+ },
+ "record_only": ["pi05 delta (pi1-fitted w) and P(ON | pi05)", "per-k and per-level deltas (official-type and rank-balanced) for pi1 / pi0 / pi05", "triggered share overall and by k; top-1-is-self rate among triggered questions and without threshold; borrowed level exact / within 1", "own profile present / absent counts; own-is-top-1 rate per orientation under pi1", "pi0 with pi0-refitted w", "D2's numbers for comparison (d2_report.json)"],
+ "seams": {
+  "rule": "all must pass before any result is trusted; a failure stops the run before the criteria",
+  "s1": "rule-B rank-balanced mean of u1_oof.npz mono_P_Q02 equals 0.6106683012815998 (abs diff <= 1e-12; the exact difference is recorded); u1_lib.run_gen(d, ['OP','O4','SWA','SWB']) reproduces mono_P_Q02 (max abs diff <= 1e-12) and the mono question set of load_inputs (players, levels, folds, k, colours, games) equals u1_oof.npz",
+  "s2": "the fusion with an all-zero E (every row) returns P_Q02 bit for bit, and every non-triggered row of every scenario equals P_Q02 bit for bit",
+  "s3": "token code equals D2's: (a) D2's check_canon (20,000 fit and 20,000 inner games, 0 mismatches); (b) an independent pure-Python tokeniser written from d2_variants.json equals tokens() on 3,000 sampled games per orientation; (c) vocabulary size and SHA-256 per orientation and the fit-profile nnz equal d2_report.json stage1",
+  "s4": "own profile by subtraction equals a direct recomputation from the remaining games on 300 sampled questions per orientation (cosine abs diff <= 1e-9); float32 reference cosines equal a float64 recomputation on the same questions (abs diff <= 1e-5)"
+ },
+ "compute": "CPU only; OPENBLAS / MKL / OMP / NUMEXPR threads = 1 in every process; at most 4 worker processes (multiprocessing spawn, one pool per orientation); each run under about 60 minutes; temporary files only in results/prereg05/explore/pilot_D2/_tmp (deleted at the end); sys.dont_write_bytecode = True",
+ "outputs": ["pilot_variants.json (this file, first)", "pilot_probe.py", "pilot_report.json (every number, seams, SHA-256 of the inputs and of this file, runtime, worker / thread settings)", "pilot_arrays.npz (per-question S2 and trigger per scenario, top-1 index, Q02 and PILOT rule-B scores per scenario, E_V3 rows of the triggered questions, theta, w)"]
+}

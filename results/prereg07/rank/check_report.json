@@ -1,0 +1,138 @@
+{
+ "format": "c10-prereg07 rank check_report v1",
+ "what": "PREREG_07 2.2 check: are the inputs usable (no score)",
+ "created": "2026-10-05T05:12:48+00:00",
+ "seconds": 75.2,
+ "preview": false,
+ "precommit": true,
+ "rerun": null,
+ "status": "ok",
+ "problems": [],
+ "inner_manifest": {
+  "sha256": "81bfe2f319c0a6a3d34dee8b6d8b5ad6b50f341dbf31861ca13f63000032e267",
+  "commit": {
+   "files": {
+    "results/prereg07/hs/inner_manifest.json": "81bfe2f319c0a6a3d34dee8b6d8b5ad6b50f341dbf31861ca13f63000032e267"
+   },
+   "commit_problems": [
+    "results/prereg07/hs/inner_manifest.json not committed"
+   ],
+   "precommit_skipped": true
+  }
+ },
+ "chunks": {
+  "fitmap": {
+   "chunks": 15,
+   "games": 3000,
+   "sha_mismatch": [],
+   "meta_mismatch": [],
+   "failed": 0,
+   "no_target_moves": 0
+  },
+  "bank": {
+   "chunks": 60,
+   "games": 11813,
+   "sha_mismatch": [],
+   "meta_mismatch": [],
+   "failed": 0,
+   "no_target_moves": 0
+  },
+  "mono": {
+   "chunks": 307,
+   "games": 61356,
+   "sha_mismatch": [],
+   "meta_mismatch": [],
+   "failed": 0,
+   "no_target_moves": 0
+  }
+ },
+ "move_cross_check": {
+  "against": "results/prereg04/opp/inner_o4.npz",
+  "inner_o4_sha256": "100a889367e147696a056d6cd70fab583926062a9b4fbbedd49acc42a2da9ce7",
+  "key_arrays_equal_inner_keys": true,
+  "key_arrays_differing": [],
+  "by_set": {
+   "bank": {
+    "compared": 11813,
+    "mismatches": 0,
+    "first_mismatches": [],
+    "only_hs_failed": 0,
+    "only_o4_failed": 0,
+    "both_failed": 0
+   },
+   "mono": {
+    "compared": 61356,
+    "mismatches": 0,
+    "first_mismatches": [],
+    "only_hs_failed": 0,
+    "only_o4_failed": 0,
+    "both_failed": 0
+   }
+  },
+  "compared": 73169,
+  "mismatches": 0,
+  "definition": "both sides not failed (HS failed false, O4 anomalies 0): HS n_moves == sum O4 n_moves, HS target moves (counts[:, 0]) == sum O4 n_moves[:, 0, :]"
+ },
+ "checkpoint": {
+  "path": "data/katago/b18c384nbt-humanv0.ckpt",
+  "bytes": 323752318,
+  "sha256": "84b23476b56a73a775a0f09bad7d1c5c435690adb343aa851e80bf198c0c8b27",
+  "ok": true,
+  "backup": {
+   "path": "data/katago_backup/b18c384nbt-humanv0.ckpt",
+   "bytes": 323752318
+  }
+ },
+ "katago": {
+  "source_txt_sha256": "039d5a1cbc815b4d69b68dc8c01163354820ac00b5070ef136c14a040b5ba20b",
+  "files": 15,
+  "differing": []
+ },
+ "plan": {
+  "sha256": "8494e9afd79c06249bd81545263b86caef7b9e77f3cd631a1e354368cfe33946",
+  "inputs_sha256_now": {
+   "inner_keys.npz": "b686872d459161330af26132fc0ec2617d104be6cd72eae509250ffef0c03ab6",
+   "pseudo_inner.json": "3a51b3dd4edf8e5745f6a7ff52ca925d4a0eacd6a24950ee1b6e3b48fd0b7923",
+   "u1_oof.npz": "7e874e079c835ab9bce03cc4f2f0d7c39db9337640656d895390fcf710b83b72",
+   "players_split.csv": "69554875064ecbd83d790b3215c8ba8f9540f217ec4af3e4a8c43228ac2a3dfc"
+  }
+ },
+ "u1_load_inputs": {
+  "ok": true,
+  "inner_games": 73556,
+  "fit": 25400,
+  "eval": 127200,
+  "single_colour": 120544,
+  "mono_sha256": "45d0f14acd98786adfd7cae040edc551420f095aaf6118d52edb47ddf91a5622"
+ },
+ "pinned_sha256": {
+  "results/prereg07/explore/pilot_humansl/hs_lib.py": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+  "results/prereg07/explore/pilot_humansl/pilot_run.py": "b0d127fd1d5a83af5b17ec3df1dccc85d94b11c3479d33cac07448a3796a3936",
+  "results/prereg07/explore/pilot_humansl/pilot_fuse.py": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+  "results/prereg05/explore/u1/u1_lib.py": "225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7"
+ },
+ "tool": {
+  "git_head": "a4f19c1c2bb5482e1751f028799c1c260e9955f5",
+  "dirty_or_untracked": [
+   "tools/p07_hs.py",
+   "tools/p07_rank_fuse.py"
+  ],
+  "files_sha256_rule": "sha256, CRLF folded to LF",
+  "files_sha256": {
+   "tools/p07_hs.py": "b27ea371bdc1477558effb9ca86c540805dcced971d983226e15fb5e19b7b8dc",
+   "tools/p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142",
+   "results/prereg07/explore/pilot_humansl/hs_lib.py": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+   "results/prereg07/explore/pilot_humansl/pilot_run.py": "b0d127fd1d5a83af5b17ec3df1dccc85d94b11c3479d33cac07448a3796a3936",
+   "results/prereg07/explore/pilot_humansl/pilot_fuse.py": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+   "results/prereg05/explore/u1/u1_lib.py": "225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7"
+  }
+ },
+ "environment": {
+  "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1"
+ },
+ "no_pycache_after": true
+}

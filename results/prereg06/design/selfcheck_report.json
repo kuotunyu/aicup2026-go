@@ -1,0 +1,278 @@
+{
+ "what": "PREREG_06 S3 (2.8): the p06 port vs the exploration functions on the exploration's evaluation pools (black only)",
+ "term_seeds": [
+  0,
+  1,
+  2,
+  3,
+  4
+ ],
+ "score_seeds": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19
+ ],
+ "term_comparison": [
+  {
+   "seed": 0,
+   "same_pool": true,
+   "O_max_abs": 1.2212453270876722e-15,
+   "JO_max_abs": 2.220446049250313e-16,
+   "S2_max_abs": 0.0,
+   "S2_z_max_abs": 0.0,
+   "L_z_max_abs": 3.126388037344441e-13,
+   "not_alternating_games": 0
+  },
+  {
+   "seed": 1,
+   "same_pool": true,
+   "O_max_abs": 7.771561172376096e-16,
+   "JO_max_abs": 1.3877787807814457e-16,
+   "S2_max_abs": 0.0,
+   "S2_z_max_abs": 0.0,
+   "L_z_max_abs": 4.147793219999585e-13,
+   "not_alternating_games": 0
+  },
+  {
+   "seed": 2,
+   "same_pool": true,
+   "O_max_abs": 9.992007221626409e-16,
+   "JO_max_abs": 3.3306690738754696e-16,
+   "S2_max_abs": 0.0,
+   "S2_z_max_abs": 0.0,
+   "L_z_max_abs": 3.497202527569243e-13,
+   "not_alternating_games": 0
+  },
+  {
+   "seed": 3,
+   "same_pool": true,
+   "O_max_abs": 9.992007221626409e-16,
+   "JO_max_abs": 2.220446049250313e-16,
+   "S2_max_abs": 0.0,
+   "S2_z_max_abs": 0.0,
+   "L_z_max_abs": 5.88862292261183e-13,
+   "not_alternating_games": 0
+  },
+  {
+   "seed": 4,
+   "same_pool": true,
+   "O_max_abs": 1.6653345369377348e-15,
+   "JO_max_abs": 1.6653345369377348e-16,
+   "S2_max_abs": 0.0,
+   "S2_z_max_abs": 0.0,
+   "L_z_max_abs": 9.36140054363932e-13,
+   "not_alternating_games": 0
+  }
+ ],
+ "v2_means": {
+  "v2_nopost": 0.9819173486030897,
+  "v2_csls10": 0.98687544112648
+ },
+ "v2_means_rounded": {
+  "v2_nopost": 0.9819,
+  "v2_csls10": 0.9869
+ },
+ "expected": {
+  "v2_nopost": 0.9819,
+  "v2_csls10": 0.9869
+ },
+ "checks": {
+  "pools_identical": true,
+  "O_le_1e-9": true,
+  "JO_le_1e-9": true,
+  "S2_le_1e-9": true,
+  "L_z_le_1e-6": true,
+  "v2_nopost_rounds_to_0.9819": true,
+  "v2_csls10_rounds_to_0.9869": true,
+  "no_new_pycache_in_explore": true
+ },
+ "passed": true,
+ "explore_cache": {
+  "dir": "data/prereg06/explore_cache",
+  "sha256": {
+   "cache_black.pkl": "db761c91da82724d90a7e61ff04766b1cfe486db7b8ab244878b6d9e31a5407a",
+   "dense_ldain.npy": "00328fdc79a34ac2095615e231765b6257d711155f96fd6ba9a2ba8572ff7da2",
+   "dense_style.npy": "228c703ff3fc30fec08068b3b1af2a43077f5ca3279a60981d0aa9a038c52885",
+   "dense_style2.npy": "a36783966616667f06d9253cbe505ad1047fdc805b92ade4a3215ebf08863e47",
+   "fam_base.npz": "d22e7ae8a952fe3dd87bc9003ca879bdc1cf593b7e6222019e07cc3348f332ce",
+   "fam_joseki_own.npz": "76a352561a6790c96e2c661c1c707f4632f3354a39405ad954cb6b72c6779287",
+   "fam_resp.npz": "93acff356d417ffa724ad646242c7cd6028a2b0211e754093b36bac58b4dbd6b"
+  },
+  "bad_alternation_in_cache": 0
+ },
+ "per_seed": [
+  {
+   "seed": 0,
+   "v2_nopost": 0.9838193357046744,
+   "v2_csls10": 0.9899368312227347,
+   "seconds": 0
+  },
+  {
+   "seed": 1,
+   "v2_nopost": 0.9799820564943486,
+   "v2_csls10": 0.983267126959411,
+   "seconds": 0
+  },
+  {
+   "seed": 2,
+   "v2_nopost": 0.9890171326198061,
+   "v2_csls10": 0.9923022030848684,
+   "seconds": 0
+  },
+  {
+   "seed": 3,
+   "v2_nopost": 0.9771954205385726,
+   "v2_csls10": 0.9821603557339051,
+   "seconds": 0
+  },
+  {
+   "seed": 4,
+   "v2_nopost": 0.9846044061697369,
+   "v2_csls10": 0.9912931016156875,
+   "seconds": 0
+  },
+  {
+   "seed": 5,
+   "v2_nopost": 0.9707045220077534,
+   "v2_csls10": 0.9763193357046744,
+   "seconds": 0
+  },
+  {
+   "seed": 6,
+   "v2_nopost": 0.9831135076389177,
+   "v2_csls10": 0.9921777354139487,
+   "seconds": 0
+  },
+  {
+   "seed": 7,
+   "v2_nopost": 0.9838985781039802,
+   "v2_csls10": 0.9860602398958885,
+   "seconds": 0
+  },
+  {
+   "seed": 8,
+   "v2_nopost": 0.9930974340168774,
+   "v2_csls10": 0.9946777354139488,
+   "seconds": 0
+  },
+  {
+   "seed": 9,
+   "v2_nopost": 0.991930975400301,
+   "v2_csls10": 0.9934654877001505,
+   "seconds": 0
+  },
+  {
+   "seed": 10,
+   "v2_nopost": 0.9913825044819399,
+   "v2_csls10": 0.9915069721528594,
+   "seconds": 0
+  },
+  {
+   "seed": 11,
+   "v2_nopost": 0.9888032620826341,
+   "v2_csls10": 0.9911787944117145,
+   "seconds": 0
+  },
+  {
+   "seed": 12,
+   "v2_nopost": 0.9843554708278975,
+   "v2_csls10": 0.988803262082634,
+   "seconds": 0
+  },
+  {
+   "seed": 13,
+   "v2_nopost": 0.9758463693587166,
+   "v2_csls10": 0.9807348013085427,
+   "seconds": 0
+  },
+  {
+   "seed": 14,
+   "v2_nopost": 0.9752417161287422,
+   "v2_csls10": 0.9872235245111705,
+   "seconds": 0
+  },
+  {
+   "seed": 15,
+   "v2_nopost": 0.9756884483857132,
+   "v2_csls10": 0.9809809974965827,
+   "seconds": 0
+  },
+  {
+   "seed": 16,
+   "v2_nopost": 0.9699098549013523,
+   "v2_csls10": 0.9758630068063648,
+   "seconds": 0
+  },
+  {
+   "seed": 17,
+   "v2_nopost": 0.9776986661853198,
+   "v2_csls10": 0.9830241047726653,
+   "seconds": 0
+  },
+  {
+   "seed": 18,
+   "v2_nopost": 0.9737109416557951,
+   "v2_csls10": 0.9843554708278975,
+   "seconds": 0
+  },
+  {
+   "seed": 19,
+   "v2_nopost": 0.9883463693587166,
+   "v2_csls10": 0.9921777354139487,
+   "seconds": 0
+  }
+ ],
+ "workers": 6,
+ "thread_env_per_worker": 4,
+ "feature_store_check": {
+  "checked": true,
+  "build_report_sha256": "5a103fa0726e82b00b573db71350cd3fcb49dfb785a63891f5c1b8dda2a1dbf4",
+  "lda_report_sha256": "07dd419d1c4acf3290768c42bde3452b895ee3d082c82e62979b975a654d7633"
+ },
+ "command": "selfcheck",
+ "mode": "real",
+ "precommit": false,
+ "created": "2026-10-03T11:31:03+08:00",
+ "git_head": "c3fb105cbeb03f6e3f94a8bd47bfec693d4012bd",
+ "tools": {
+  "tools/p06_style.py": {
+   "sha256_lf": "78beb8138c27853da70081e469e534508174265852a64ebada21e354ae72058a",
+   "committed_and_clean": true
+  },
+  "tools/p06_sim.py": {
+   "sha256_lf": "21deeea1eb08b1d6580ba78c47505789f66dbdd10c8891973e14f523ef443eeb",
+   "committed_and_clean": true
+  },
+  "tools/p06_player.py": {
+   "sha256_lf": "b25636878ee87ca828a9c65177965dc60466ac4e9aa348acd88785ca11075590",
+   "committed_and_clean": true
+  }
+ },
+ "env": {
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "executable": ".venv/Scripts/python.exe"
+ },
+ "inputs": {
+  "lda_report.json": "07dd419d1c4acf3290768c42bde3452b895ee3d082c82e62979b975a654d7633"
+ },
+ "seconds": 33.3
+}

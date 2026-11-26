@@ -1,0 +1,58 @@
+{
+ "what": "prereg05 exploration B1 (O4 count-table smoothing / back-off): the four variants, fixed before any replay or fusion was run. This file is not edited or extended after the run; b1_probe.py refuses to run unless its SHA-256 equals the value pinned in the script.",
+ "created": "2026-10-01T19:03:00+08:00",
+ "stage": "design-stage exploration on inner pseudo-questions (training players only); not a validation result; no scoring",
+ "counts": {
+  "file": "data/prereg04/counts_fit.npz",
+  "arrays_used": ["C_o", "A_o"],
+  "arrays_used_for_seam_only": ["C_t", "A_t"],
+  "sha256_must_equal": "results/prereg04/opp/count_report.json counts_sha256",
+  "players": "split-v1 fit players only (the inner players' games are not in the counts)"
+ },
+ "cells": "unchanged: p04_opp cell = ((((pat * 8 + tac) * 7 + d_opp) * 3 + d_own) * 3 + phase), 557,928 cells",
+ "registered_formula": {
+  "pooled": "r(c) = (C(c) + 1) / (A(c) + 1 / r0), r0 = sum C / sum A, C = sum_k C_k, A = sum_k A_k",
+  "per_level": "r_k(c) = (C_k(c) + alpha) / (A_k(c) + alpha / r(c)), alpha = 20",
+  "per_move": "log P_k = log r_k(cell of the played point) - log sum_{empty q} r_k(cell(q))",
+  "per_game": "O4 = sum over the opponent's moves, per phase then over the 3 phases -> 10-vector"
+ },
+ "variants": [
+  {
+   "id": "V0",
+   "name": "registered (PREREG_04 O4)",
+   "definition": "p04_opp.build_tables(counts)[0][1] (opponent side), alpha = 20",
+   "alpha": 20.0
+  },
+  {
+   "id": "V1",
+   "name": "adjacent-level smoothing, lambda = 0.25",
+   "lambda": 0.25,
+   "alpha": 20.0,
+   "definition": "C~_k = 0.5 C_k + 0.25 C_{k-1} + 0.25 C_{k+1}; ends: C~_D = 0.75 C_D + 0.25 C_C, C~_6D = 0.25 C_5D + 0.75 C_6D; A~ the same way; then the registered formula on (C~, A~) with alpha = 20 (the pooled sums are unchanged: every C_k is spread with weights summing to 1, and the products are exact in float64)",
+   "level_order": ["D", "C", "B", "A", "1D", "2D", "3D", "4D", "5D", "6D"]
+  },
+  {
+   "id": "V2",
+   "name": "level back-off to a coarse cell (pat, tac, phase)",
+   "alpha": 20.0,
+   "coarse_cell": "phase = cell % 3, tac = (cell // 63) % 8, pat = cell // 504; coarse index = (pat * 8 + tac) * 3 + phase; 1,107 * 8 * 3 = 26,568 coarse cells",
+   "coarse_tables": "C_bar_k, A_bar_k = sums of C_k, A_k over the fine cells of each coarse cell; r_bar(c_bar) and r_bar_k(c_bar) by the registered formula (alpha = 20, the same r0)",
+   "fine_table": "r_k(c) = (C_k(c) + 20) / (A_k(c) + 20 / (r(c) * r_bar_k(c_bar) / r_bar(c_bar))), r(c) the registered pooled rate of the fine cell"
+  },
+  {
+   "id": "V3",
+   "name": "alpha = 50",
+   "alpha": 50.0,
+   "definition": "registered formula with alpha = 50 in r_k (the pooled r keeps its +1 prior)"
+  }
+ ],
+ "replay": "every inner game (73,556, results/prereg02/rank/dumps/inner_keys.npz order) from data/prereg04/design_scratch/moves_inner.npz + moves_inner_moves.npy matched by (rank, game_id), player and colour checked; p04_opp.replay + cells_of on the opponent's moves only; the four tables gathered at once; arithmetic order of p04_opp.score_game (per phase, then over the phases); 4 spawn workers",
+ "fusion": "Q02 with O4 replaced by the variant: lp['O4v'] = log_softmax(o_v) as p04_rank_fuse.inner_sources does; u1_lib.run_gen(d, ['OP', 'O4v', 'SWA', 'SWB']) (Q02's registered term list is OP, O4, SWA, SWB; only O4 is swapped); 5-fold OOF, fold f fitted on the fit questions of the other four folds' players (p04_rank_fuse.gen_oof_record); decision rule B (p02_rank_fuse.rule_b_np)",
+ "no_tuning": "the variants and their constants are fixed here; nothing is chosen on the inner questions; every variant is reported",
+ "comparison": "each variant vs Q02 on the same 127,200 inner eval questions (rank-balanced mean difference with the paired PlayerBootstrap 95 % CI of inner['boot'], players within each level, 1,000 draws, default_rng(0)); question-only bootstrap recorded only",
+ "success_signal": {
+  "pass": "some variant: delta >= +0.008 on the 127,200 mixed-colour questions, PlayerBootstrap 95 % lower bound > 0, and on the 120,544 single-colour questions delta > 0 overall and > 0 for black and for white",
+  "weak": "+0.005 <= delta < +0.008 and lower bound > 0 (only together with B2; no PREREG_05 on its own)",
+  "otherwise": "B1 stops (also when a seam fails)"
+ }
+}

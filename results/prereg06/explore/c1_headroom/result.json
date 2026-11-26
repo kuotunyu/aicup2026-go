@@ -1,0 +1,136 @@
+{
+ "dir": "c1_headroom",
+ "summary_zh": "競賽一在官方形狀的模擬池（只用 fit 訓練玩家，20 個評估池）上，Q04 的開局部分單獨是 0.9253，失分有 64% 在 5 盤題。新增「用池外訓練玩家學的分辨玩家線性投影（LDA）＋角落定式 token＋style2」再加 CSLS 修正，分數到 0.9911（+0.066），5 盤題從 0.81 到 0.97；改成照檔案順序切、或池子全是同一級，增益幾乎不變。CNN 在本機算不出 fit 玩家的 embedding，所以用兩種替身估：疊在 Q04 上約 +0.030～+0.038。一對一配對：官方若一題對一人，再多 +0.011～+0.016（v2 之上幾乎滿分 0.998）；若不是，最多會虧 −0.22。新做的自我校準偵測器（真題池和「用候選自己的棋切出來的假題池」比 forced cost）換了三種特徵都適用：一對一池開啟 95～100%，120 個非一對一池全部沒有開（評估池），所以可以安全地做成開關。GPU 方案在模擬裡剩下的空間最多約 +0.008，11/04 前不建議投入。整合要另寫新工具，不能改 R20 指紋裡的 t02_player.py；一對一的用法也要先寫進事前登記（DATA.md 第 7 條）。",
+ "report_md": "# c1_headroom：競賽一（辨識玩家）還能從哪裡加分\n\n2026-10-02，prereg06 探索（接續上一輪被用量上限中斷的同一題）。只用 fit 訓練玩家，只用 CPU。沒有讀 `data/local`，沒有跑 `tools/score.py`。所有數字都來自本資料夾的 JSON，路徑寫在各段；彙整檔是 `c1h_summary.json`。\n\n## 先講結論\n\n1. **現況**：在官方形狀的模擬池上（400 位候選、每人 100 盤黑棋、400 題，5／10／15／20 盤各 100 題），Q04 的開局部分單獨是 **0.9253** [0.9201, 0.9305]。\n   - 失分有 64% 在 5 盤題（5 盤題只有 0.81）。\n   - 輸的主要是「自己開局前後不一致」的玩家：自我一致度最低的那 1/5 玩家只有 0.79，失分占全部的 57%。\n2. **最大的新訊號**：用池外訓練玩家學一個「分辨玩家」的線性投影（LDA，在 286 個逐盤風格統計量上，CPU 幾秒），加上角落定式 token，再做 CSLS hubness 修正。\n   - 分數 0.9253 → **0.9911**（+0.066 [0.061, 0.071]）；5 盤題 0.81 → 0.97。\n   - 改成照檔案順序切、或池子只有同一級，增益都沒有變小。\n3. **疊在 Q04 上的估計**：CNN 那一半在本機算不出來，所以用兩種替身估，增益約 **+0.030～+0.038**（多半落在 5 盤題）。\n4. **一對一配對（Hungarian）**：\n   - 官方若一題對一人：疊在新特徵上再多 **+0.011～+0.016**，分數到 0.998。\n   - 若不是：最多虧 −0.22。\n   - 新做的**自我校準偵測器**在三種特徵下都可靠：一對一池開啟 95～100%，120 個非一對一池全部沒有開（評估池）。可以做成安全開關。\n5. **GPU 方案**（GE2E＋Transformer 學風格 embedding）：模擬中剩下的空間最多約 +0.008，11/04 前不建議投入。只有測試日發現官方切法比模擬難很多時，才值得重新考慮。\n\n下一步建議（要總部決定）：寫 PREREG_06 競賽一的部分，內容是「v2 特徵＋CSLS＋自我校準一對一開關」，另寫一支測試日工具。R20 指紋裡的 `tools/t02_player.py` 和 test02 notebook 不能動。全部在 CPU 上跑，不需要新的 Colab。\n\n---\n\n## 0. 做法與資料紀律\n\n- **模擬池**：fit 玩家中黑棋 ≥120 盤的 926 人（`s0_cache_counts.json`），每級 40 人，候選取每人洗牌後的前 100 盤黑棋，題目取接下來的 k 盤。這和 `results/test02/design/official_structure/official_c1_blackonly_sim.py` 的 P120 black_random 完全相同。\n  - seed 0–4 逐位重現它的 0.9184／0.9213／0.9263／0.9232／0.9319（`s2_baseline.json`）。\n  - 照檔案順序切的 seed 0 也重現 0.9427。\n- **三組 seed**：\n  - 調參：100–109（融合權重、CSLS k）。\n  - 選門檻：100–109 和 200–219（s8 的開關門檻、軟修正參數）。\n  - 評估：0–19，**報告的數字全部來自這組**。\n  - 信賴區間是 20 個池的 95% t 區間；差值是同一池配對相減。\n- **CNN**：fit 玩家沒有 CNN embedding。prereg02 的 dumps 只有驗證玩家，權重只在 Drive，本機也沒有 CPU 推論路徑。所以 (a)–(c) 只用開局和風格特徵，(d) 用替身估。\n- **防護的偏離**：沒有直接 import `u1_lib`。它的子字串檢查會把 session 暫存區（`AppData\\Local\\...`）也當成 `data\\local` 擋掉（Windows normcase 後 `appdata\\local` 含 `data\\local`）。\n  - `c1h_lib.py` 裝了同樣的防護：open／listdir／scandir／stat 對 `data/local` 前綴一律拒絕，另外比對 realpath。\n  - `load_rows` 用 `local_dir=None`，全程沒有碰 `data/local`。\n- **對上一輪檔案的處理**：上一輪的結果都沿用。逐一檢查後沒有找到影響數字的 bug，以下是改動：\n  - `s3b_switch.py` 沒跑完，而且安全邊際公式在門檻低於 o2o 中位數時會往寬鬆方向移。已標為作廢，由 `s8_switch.py` 取代。\n  - `s4_terms_timing.json` 被這一輪的 s4 覆寫過，已還原成上一輪的內容。這一輪的耗時另存 `s4_terms_timing_lda.json`。\n  - `c1h_lib.make_pool` 加了 `d<m>` 情境（和兄弟主題的 dup80 同構）和 `split='ord'`，舊的行為不變（seed 0 照樣是 0.9184）。\n  - `c1h_fused.py` 加了 `lda<d>` 這一項；`s7_level_check.py` 加了 v2；`s1_families.json` 多了 style2 那一列。\n\n## (a) 現況：只用開局（Q04 的開局部分）\n\n來源：`s2_baseline.json`。用的是開局版，因為 fit 玩家沒有 CNN embedding。\n\n| k | 分數 | Top-1 | Top-5 |\n|---|---|---|---|\n| 5 | 0.8097 [0.7936, 0.8258] | 0.7745 | 0.9215 |\n| 10 | 0.9360 [0.9247, 0.9473] | 0.9205 | 0.9840 |\n| 15 | 0.9729 [0.9671, 0.9786] | 0.9645 | 0.9960 |\n| 20 | 0.9826 [0.9771, 0.9881] | 0.9760 | 0.9985 |\n| 全部 | **0.9253** [0.9201, 0.9305] | 0.9089 | 0.9750 |\n\n- **正解排在第幾名**：\n  - 第 1 名 90.89%，第 2 名 3.79%，第 3 名 1.44%，第 4 名 0.88%，第 5 名 0.51%。\n  - 第 6–10 名 1.04%，第 11–20 名 0.85%，第 21–50 名 0.47%，50 名以外 0.14%。\n- **失分在哪裡**：每題平均失 0.0747 分。\n  - 0.0497 是「有進 Top-5 但不是第 1」，0.025 是沒進 Top-5。\n  - 依盤數看，5 盤題占 63.7%，10 盤 21.4%，15 盤 9.1%，20 盤 5.8%（`s9_split_check.json` miss_analysis）。\n- **哪些玩家會錯**（指標都只用候選自己的 100 盤算，不需要答案）：\n  - 自我一致度 selfcos（自己 20 盤對自己另外 80 盤的相似度）最低的 1/5：分數 0.7888，Top-1 0.751，8.7% 沒進 Top-5，占全部失分 56.5%。最高的 1/5 是 0.9931。\n  - 開局多變（前 3 手組合的 entropy）最高的 1/5：0.8508；最低的 1/5：0.9734。\n  - 第一手固定度 < 0.64 的：0.8792。\n  - 等級的差異小：最差 B 0.8945、6D 0.9119，最好 2D 0.9414。\n  - 結論：輸在「開局不固定的人」，不是哪一級。\n- **用 v2＋CSLS3 之後還剩什麼**：每題失 0.0089 分，89% 在 5 盤題（`s9_split_check.json`）。\n  - 5 盤題的名次：第 1 名 95.85%、第 2 名 2.3%、第 3 名 0.9%、6 名以外 0.5%。\n  - 最差的等級是 6D 0.9823，D 已經 1.0。\n  - 失分仍集中在自我一致度最低的那 1/5（占 53%）。\n\n## (b) 一對一：值多少、不是時虧多少、怎麼安全地開\n\n來源：`s8_switch.py` → `s8_switch.json`。50 個 seed × 7 種情境 × 3 種特徵。\n\n情境說明（候選和候選棋都一樣，只換題目的主人）：\n- o2o：每位候選剛好一題。\n- u390、u375、u350、u300：只有 m 位候選有題，其餘題目從這 m 位中重抽。\n- d80：80 位沒題、80 位兩題，和兄弟主題的 dup80 同構。\n- wr：有放回抽，約 240–266 位不同的主人。\n\n三種特徵：\n- base：只用開局。\n- proxyA：Q04 的替身，z(開局)＋z(style)。\n- v2：見 (c)。\n\n### 1. Hungarian（固定第 1 名、2–5 名照原分數）相對「不修正」的差值（評估池）\n\n| 特徵 | o2o | u390 | u375 | u350 | d80 | u300 | wr |\n|---|---|---|---|---|---|---|---|\n| base | **+0.0562** [0.0513, 0.0610] | +0.0280 | −0.0039 | −0.0476 | −0.0923 | −0.1267 | −0.1934 |\n| proxyA | **+0.0385** [0.0342, 0.0429] | +0.0125 | −0.0199 | −0.0599 | −0.1067 | −0.1406 | −0.2098 |\n| v2 | **+0.0169** [0.0136, 0.0201] | −0.0032 | −0.0324 | −0.0715 | −0.1212 | −0.1531 | −0.2229 |\n\n- v2 在 o2o 用 Hungarian 是 0.9988（Top-1 0.999，5 盤題 0.997）。\n- 特徵越強，一對一能補的越少，但猜錯時的損失一樣大。\n\n### 2. 軟修正（永遠開著也不怕）\n\n規則：在選門檻的 seed 上，「7 種情境平均增益都不為負」的參數中，挑平均增益最大的。\n\n| 特徵 | 選中的 | o2o | d80 | wr |\n|---|---|---|---|---|\n| base | CSLS k=3 | +0.0326 | +0.0239 | +0.0057 [0.0016, 0.0098] |\n| base | unbalanced Sinkhorn t=0.5, λ=1 | +0.0261 | +0.0175 | +0.0044 |\n| proxyA | CSLS k=5 | +0.0157 | +0.0126 | +0.0013 [−0.0015, 0.0041] |\n| v2 | CSLS k=10 | +0.0050 | +0.0029 | +0.0000 [−0.0013, 0.0014] |\n\n- **dual softmax**（在 z 分數上，b ∈ {0.5, 1, 2, 4}）：三種特徵都沒有一個參數在所有情境都不為負。例如 base 的 b=2：o2o +0.0381，wr −0.1049。\n- **只看 o2o 會挑到不安全的參數**：s5b 只看 o2o 選了 CSLS3，它在 v2 上 o2o +0.0092，但 wr −0.0070 [−0.0095, −0.0046]。所以不靠一對一時用 CSLS10。\n\n### 3. 偵測器（不需要答案）\n\n- **forced_cost**：每題「自己的第 1 名」和「Hungarian 指派的候選」之間 z 分數差的平均。\n- **自我校準版 r_forced_cost**：同一個池用候選自己的棋切出假題（每人 20 盤中取 k 盤當題目、其餘 80 盤當參考，一人一題，所以一定是一對一），取兩折平均，再算「真題池的 forced_cost ÷ 假題池的 forced_cost」。\n\n評估池上的分布（最小、中位數、最大）：\n\n| 特徵 | 統計量 | o2o | u390 | wr |\n|---|---|---|---|---|\n| base | forced_cost | 0.024 / 0.056 / 0.072 | 0.119 / 0.145 / 0.209 | 1.00 / 1.17 / 1.27 |\n| v2 | forced_cost | 0.002 / 0.005 / 0.012 | 0.054 / 0.070 / 0.110 | 0.63 / 0.72 / 0.84 |\n| base | r_forced_cost | 0.43 / 0.74 / 1.34 | 1.65 / 2.23 / 3.20 | 12.6 / 17.1 / 23.6 |\n| proxyA | r_forced_cost | 0.30 / 0.79 / 1.17 | 2.45 / 3.44 / 5.67 | 22.2 / 31.8 / 40.5 |\n| v2 | r_forced_cost | 0.26 / 0.60 / 2.61 | 4.96 / 9.55 / 16.7 | 54.5 / 89.2 / 179 |\n\n**門檻怎麼定**：在選門檻的 seed 上，只考慮「每個情境平均都不虧、任一個非一對一池最多虧 0.005」的門檻，再挑 7 個情境平均增益最大的。\n\n**錯誤率**（評估池，每種情境 20 個池；一對一池應該開，非一對一池應該關）：\n\n| 特徵 | 門檻 r_forced_cost ≤ | o2o 開啟 | 非一對一池誤開 |\n|---|---|---|---|\n| base | 1.301 | 19/20 | 0/120 |\n| proxyA | 1.598 | 20/20 | 0/120 |\n| v2 | 1.582 | 19/20 | 0/120 |\n\n選門檻的池：三種特徵都是 o2o 30/30 開、非一對一 0/180 開。\n\n**門檻能不能換特徵沿用**（評估池）：\n- 絕對門檻不行：\n  - base 的 forced_cost 門檻拿到 v2 用，u390 有 95% 誤開，平均 −0.0082。\n  - v2 的門檻拿到 base 用，o2o 一次都不開。\n- 比值門檻可以：\n  - base→v2：o2o 開 85%，誤開 0。\n  - v2→base：o2o 開 100%，誤開 0。\n  - proxyA→v2：o2o 開 95%，誤開 0。\n- 所以測試日加進 CNN 後，r_forced_cost 的門檻仍然有效；絕對門檻不能用。\n- 如果真題和候選棋來自不同時期，真題池的 forced cost 會變大，開關會傾向「關」，這是安全的方向。\n\n### 4. 建議規則\n\n1. 算出最終的融合分數 F（測試日是 Q04＋v2 項）。\n2. 用候選棋另切假題池，算 r_forced_cost。\n3. r_forced_cost ≤ 1.58 時：Hungarian 定第 1 名，第 2–5 名照 CSLS3。\n4. 否則：CSLS10。\n\nv2 特徵下的評估池結果（gate `hcsls3|csls10|r_forced_cost`）：\n\n| | o2o | u390 | u375 | u350 | d80 | u300 | wr |\n|---|---|---|---|---|---|---|---|\n| 分數 | **0.9980** | 0.9876 | 0.9865 | 0.9857 | 0.9870 | 0.9852 | 0.9817 |\n| 比不修正的 v2 | +0.0160 [0.0127, 0.0194] | +0.0053 | +0.0033 | +0.0041 | +0.0029 | +0.0023 | +0.0000 |\n\n- 沒有任何一個評估池比只用 CSLS10 差。\n- 換成 Q04 替身（proxyA，門檻 1.598）：o2o 0.9931（+0.0389），u390 0.9727，wr 0.9569（+0.0013）。\n\n### 5. 和兄弟主題對帳（`s10_reconcile_dsm.json`，`prior_art/sim_c1_assignment.json`）\n\n- **同一批 o2o 池（seed 0–4）**：Hungarian +0.0538、CSLS10 +0.0179、dual softmax τ=0.02 +0.0313、τ=0.05 +0.0103，和兄弟主題逐位相同；逐 seed 也相同（seed 0 Hungarian 0.99、CSLS10 0.9425）。\n- **d80**：我們 −0.0949，兄弟的 dup80 −0.0965；抽法細節不同，數字相近。\n- **τ 改在選門檻的 seed 上挑**：選中 τ=0.03。評估池結果：o2o +0.0263 [0.0234, 0.0292]、d80 +0.0180、wr +0.0049。\n  - 兄弟用的 τ=0.02 在 wr 是 −0.0034 [−0.0076, +0.0009]。\n  - CSLS 在非一對一時比 dual softmax 穩：CSLS10 o2o +0.0212、d80 +0.0203、wr +0.0139；base 上的 CSLS3 o2o 是 +0.0326。\n- 兄弟主題沒有 wr 情境，τ 也沒有在樣本外挑；結論方向一致，這裡補上樣本外的版本。\n\n## (c) 比前 10 手 token 更強的訊號\n\n來源：`s5_combine.json`（上一輪）、`s5b_combine_v2.json`（這一輪）。都是在 o2o 池上：權重在調參 seed 選，報評估 seed。\n\n### 各項加在開局上（權重在調參池選）的評估差值\n\n| 項目 | 內容 | 差值 |\n|---|---|---|\n| n20／n30 | 前 20／30 手 token | +0.0117／+0.0156 [0.0121, 0.0192] |\n| deep | 第 11–30 手、11–40 手的 bigram | +0.0083 |\n| joseki | 各角前 80 手內的定式序列前綴 | +0.0337 [0.0299, 0.0374] |\n| joseki_own | 只看自己在角上的著手順序 | +0.0348 [0.0317, 0.0379] |\n| style | 34 個逐盤風格比例，Gaussian NB | +0.0263 [0.0213, 0.0314] |\n| style2 | 66 個，分 5 個階段 | +0.0243 [0.0196, 0.0289] |\n| **lda64** | style2＋整盤應手關係 token（共 286 維）的玩家判別投影，只用池外約 680 位 fit 玩家、約 14 萬盤學；單獨就有 0.7563 | **+0.0452** [0.0405, 0.0499] |\n| lda32 | 同上，32 維 | +0.0452 |\n| 逐盤 kNN | — | +0.0064 |\n| 前綴整段比對、對手前 10 手、整盤應手 token 單用、逐盤 log-softmax | — | 0 或為負 |\n\n### 組合（貪婪前向選擇，在調參池選）\n\n**v1（上一輪）**：開局＋joseki_own 0.75＋style 2＋n30 0.75＋joseki 0.33。\n- 不修正：+0.0529 [0.0492, 0.0567]。\n- 加 CSLS10：0.9854（+0.0602）。\n\n**v2（這一輪）**：開局 1＋lda64 2.66＋joseki_own 0.5＋style2 0.5（`fused_v2_nopost.json`）。\n\n| | 分數 | 比只用開局 |\n|---|---|---|\n| 不修正 | 0.9819 | +0.0566 [0.0522, 0.0611] |\n| 加 CSLS3（在調參池選） | **0.9911** [0.9889, 0.9934] | +0.0659 [0.0612, 0.0706] |\n| 加 CSLS10（非一對一時較安全） | 0.9869 | +0.0616 |\n\n- v2＋CSLS3：Top-1 0.9883，Top-5 0.9988。\n- 依盤數：5 盤 0.9683（+0.1587），10 盤 0.9976（+0.0616），15 盤 0.9993，20 盤 0.9994。\n- v2 比 v1：不修正 +0.0037 [0.0012, 0.0062]；v2＋CSLS3 比 v1＋CSLS10 +0.0057 [0.0035, 0.0079]。\n\n### hubness 修正單用在開局上\n\n- CSLS5 +0.0289、CSLS10 +0.0216。\n- 減去欄平均（column centring）−0.0275，不要用。\n\n### 穩健性\n\n- **切法**（`s9_split_check.json`，同樣 20 個評估池）：照檔案順序切時，v2＋CSLS3 是 0.9911（+0.0645）；增益和隨機切的差 −0.0014 [−0.0070, +0.0042]。\n- **等級**（`s7_level_check.json`，90 人的小池）：\n  - 全同一級：v2 增益 +0.0295 [0.023, 0.036]；9 級混合：+0.0221 [0.0174, 0.0268]。增益不是靠分辨等級得來的。\n  - LDA 單用：同一級 0.8419、混合 0.8669。依等級從 D 0.930 降到 5D 0.756：弱的玩家風格比較好認。\n- **更多參考棋**（`s6_more_refs.json`，只用開局，332 人的池）：200 盤對 100 盤 +0.0242 [0.0179, 0.0305]，50 盤對 100 盤 −0.0404。\n  - 只有在官方候選剛好是訓練玩家、可以合法補棋時才有意義，要等 11/04 的 T2／T3 判斷。\n\n## (d) 疊在完整 Q04（CNN＋開局）上還剩多少\n\nCNN 那一半在本機算不出來，用兩種替身代替 z(CNN)，照 Q04 的 1:1 融合（`s5b_combine_v2.json` proxy）：\n\n| 替身 | 替身版 Q04 | 疊上新項（在調參池重選）＋CSLS3 | 不修正 | v2 的項照原權重直接加上去 |\n|---|---|---|---|---|\n| A：style NB（單用 0.38，強度接近 CNN 單用的 0.40） | 0.9542 | **+0.0383** [0.0338, 0.0429] | +0.0288 | ＋CSLS10 +0.0300 [0.026, 0.034]；＋CSLS3 +0.0346 [0.0303, 0.0390]（s9） |\n| B：lda64（偏悲觀：假設 CNN 已含 LDA 的資訊） | 0.9631 | **+0.0296** [0.0265, 0.0327] | +0.0188 | — |\n\n- 依盤數（替身 A）：5 盤 +0.109，10 盤 +0.028，15 盤 +0.010，20 盤 +0.006。替身 B 的 5 盤題 +0.084。\n- 小池（90 人，s7）：替身 A 疊上 v2 項＋CSLS3 的增益比替身 A 本身多 +0.0124（9 級混合）；池小、基準高，所以增益較小。\n- 參照：prereg02 在本機驗證候選池做的自我檢索（`results/prereg02/player/sr_report.json`）：CNN 單用 0.4006，只用開局 0.8760，Q04 0.8998。CNN 對開局的貢獻是 +0.024，和 style NB 在這裡的 +0.026～+0.029 同一個量級。替身 A 比較貼近 CNN 實際的強度。\n\n**估計**：疊在 Q04 上約 **+0.03～+0.04**（不用一對一）；若用一對一開關，o2o 時再多約 +0.011～+0.016。\n\n**不確定性**：\n- CNN 和 LDA、定式 token 的真實重疊沒有量過。最壞的情況是 CNN 已經含有所有新資訊，那時只剩 hubness 修正：替身 A 單加 CSLS10 是 +0.0128 [0.0106, 0.0149]。\n- 所以合理的範圍是 **+0.01～+0.04，中間值約 +0.03**。\n- 在 CPU 上做不出更準的 CNN 融合模擬。\n- 測試日可以直接量：在官方候選池做自我檢索（PREREG_02 的機制，不需要答案），讓 CNN＋v2 的幾個組合在同一池上比。\n\n## (e) 需要 GPU 的選項（集中在 5 盤題）\n\n模擬中，v2＋CSLS3 之後 5 盤題剩 0.032 分可拿，換算全體最多約 **+0.008**。若官方是一對一、開關有開，全體已經 0.998，幾乎沒有空間。\n\n| 選項 | 工作量 | 合理的增益（估計） | 說明 |\n|---|---|---|---|\n| GE2E＋Transformer 逐手風格 embedding（McIlroy-Young 等 2021） | 約 5–7 天＋Colab 2–3 次 | +0.000～+0.008 | 文獻：每人 100 盤參考與查詢，400 人、去掉前 15 手 0.953；2,844 人、保留開局 0.979；約 50 盤飽和（數字轉引自 `prior_art` 的 REPORT，非本主題查核）。我們 400 人、5 盤題的 Top-1 已是 0.9585。用途主要是保險：若官方題目和候選棋的時期不同、開局訊號變弱，風格 embedding 比較穩。 |\n| 用 GE2E／ArcFace 微調 prereg01 的玩家 CNN（只用黑棋） | 2–3 天＋Colab 1–2 次 | +0.000～+0.005 | 改的是 Q04 已有的 CNN 那一半，和 LDA 會重疊。 |\n| CPU 替代：小型 MLP＋GE2E，用同樣的 286 維或更多手工特徵 | 1–2 天，CPU | +0.000～+0.005 | 不用 GPU，是 LDA 的非線性版本，值得排在 GPU 方案之前。 |\n| KataGo／HumanSL 逐手特徵 | 見 katago 主題 | 未知 | 規則尚未定（rules 主題）。對競賽一的幫助大概小於競賽二。 |\n\n文獻參照另見 Lin、Chiu、Wu 2024（圍棋，200 人、只看前 10 手、5 盤題 Top-1 48.5～57.5%）。\n\n## 給總部／整合的建議\n\n- **要登記的東西（PREREG_06，11/04 前 commit）**：\n  - v2 的特徵和權重（`fused_v2_nopost.json`）。\n  - LDA 只用訓練玩家學。若要在本機驗證集打分，訓練時要排除驗證玩家。\n  - 和 CNN 怎麼合：固定 1:1，或測試日用候選池自我檢索從幾個組合裡挑。\n  - CSLS 的 k。\n  - 一對一開關：r_forced_cost ≤ 1.58 才用 Hungarian＋CSLS3，否則 CSLS10。\n- **一對一的規則問題**：`docs/DATA.md`「11/04 後要先做的」第 7 條寫「確認官方是一題對一人之前，不採用任何利用一一對應的做法」。偵測器算不算「確認」要總部決定；建議同時保留第 5、6 條的人工檢查（同一盤棋出現在不同題目）。\n- **工具**：`tools/t02_player.py`、`colab/test02_player.ipynb`、`colab/build_test02_player_nb.py` 都在 R20 指紋裡（`results/prereg04/design/r20_path_fingerprint.json`）。新做法要另寫一支工具，讀同樣的 CSV 和 test02_player notebook 產出的 CNN dumps，做法比照競賽二的 t04。全部在 CPU 上跑：LDA 每池約 4–7 秒，特徵每池約 1 分鐘以內。\n- **本機驗證集**：是黑白混合，不是官方形狀，打分只能當「沒有變差」的檢查。競賽一已用 2 次打分機會。\n\n## 這一輪新增或修改的檔案\n\n都在 `D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\c1_headroom\\`。\n\n- **新增**：\n  - 程式：`c1h_lda.py`、`s5b_combine_v2.py`、`s8_switch.py`、`s9_split_check.py`、`s10_reconcile_dsm.py`、`s11_summary.py`。\n  - 結果：`s5b_combine_v2.json`、`s8_switch.json`、`s9_split_check.json`、`s10_reconcile_dsm.json`、`s7_level_check.json`、`s6_more_refs.json`、`s4_terms_timing_lda.json`、`c1h_summary.json`。\n  - 融合設定：`fused_v2_best.json`、`fused_v2_nopost.json`。\n- **修改**（本資料夾、上一輪寫的）：`c1h_lib.py`、`c1h_fused.py`、`s7_level_check.py`、`s3b_switch.py`（標為作廢）、`s1_families.json`（多 style2 一列）、`s4_terms_timing.json`（還原成上一輪的內容）。\n- **暫存區的大檔**（不進 repo）：`C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\D--AI-Portfolio-competitions-aicup2026-go\\a8d08794-7564-42a1-933e-30b4ef8b21ce\\scratchpad\\c1_headroom\\`（`dense_style2.npy`、`dense_ldain.npy`、`terms_o2o_*.npz`、`s8_rows.json`）。這個對話結束後可能會被清掉，要重算時從 `s0_build_cache.py`、`s1_families.py`、`c1h_lda.build_ldain()` 開始。\n",
+ "verdicts": [
+  {
+   "item": "(a) 官方形狀的基準（只用開局，fit 玩家沒有 CNN embedding）",
+   "verdict": "0.9253 [0.9201, 0.9305]；Top-1 0.9089、Top-5 0.975；依盤數 5／10／15／20 是 0.810／0.936／0.973／0.983。每題失 0.0747 分，其中 64% 在 5 盤題、57% 在自我一致度最低的那 1/5 玩家；等級影響小（B 0.8945 最差）",
+   "evidence": "results/prereg06/explore/c1_headroom/s2_baseline.json（seed 0–4 逐位重現 official_c1_blackonly_sim.json）、s9_split_check.json miss_analysis_random"
+  },
+  {
+   "item": "(b) 一對一的增益與損失",
+   "verdict": "Hungarian 在 o2o：只用開局 +0.0562、Q04 替身 +0.0385、v2 +0.0169（v2 達 0.9988）；不是一對一時從 u375 開始變負，d80 −0.09～−0.12，wr −0.19～−0.22",
+   "evidence": "s8_switch.json levels.*.eval_by_method.hung（評估 seed 0–19，7 種情境）"
+  },
+  {
+   "item": "(b) 不需要答案的偵測器和安全開關",
+   "verdict": "自我校準的 r_forced_cost（真題池÷候選棋切出的假題池）門檻約 1.3～1.6：評估池 o2o 開 19–20/20，非一對一池誤開 0/120（三種特徵都是）；門檻換特徵仍有效，絕對門檻則不行。建議規則：r≤1.58 用 Hungarian＋CSLS3，否則 CSLS10；v2 下 o2o 0.9980、非一對一 0.982～0.988，沒有任何池比只用 CSLS10 差",
+   "evidence": "s8_switch.json gates、detector_eval、threshold_transfer_eval（門檻在 seed 100–109、200–219 選，報 seed 0–19）"
+  },
+  {
+   "item": "(b)(c) hubness 軟修正，k 和 τ 在樣本外選",
+   "verdict": "CSLS 在非一對一時比 dual softmax 穩。開局上 CSLS3 o2o +0.0326、wr +0.0057；在 v2 上安全的是 CSLS10（o2o +0.0050、wr 0.0000）。dual softmax 原始 τ 在樣本外選中 0.03：o2o +0.0263、wr +0.0049；兄弟用的 τ=0.02 在 wr −0.0034",
+   "evidence": "s8_switch.json chosen_on_selection、s10_reconcile_dsm.json（seed 0–4 和兄弟 sim_c1_assignment.json 逐位相同）"
+  },
+  {
+   "item": "(c) 比前 10 手 token 更強的訊號",
+   "verdict": "最強的是 LDA 玩家判別投影（在池外訓練玩家上學，CPU）：加在開局上 +0.0452；角落定式 token +0.034；style NB +0.026；n30 +0.016。v2＝開局＋lda64＋joseki_own＋style2，加 CSLS3 後 0.9911（+0.0659 [0.0612, 0.0706]），5 盤題 0.81→0.97。照檔案順序切、或只有同一級時增益不變",
+   "evidence": "s5_combine.json、s5b_combine_v2.json、s9_split_check.json（ord 減 random −0.0014 [−0.0070, +0.0042]）、s7_level_check.json（同一級 +0.0295、9 級混合 +0.0221）"
+  },
+  {
+   "item": "(d) 疊在完整 Q04 上",
+   "verdict": "估計 +0.03～+0.04（替身 A：style NB +0.0383；替身 B：LDA +0.0296；v2 的項照原權重直接加 +0.0346），多半在 5 盤題（+0.08～+0.11）。CNN 的真實重疊沒有量過，合理範圍 +0.01～+0.04",
+   "evidence": "s5b_combine_v2.json proxy、s9_split_check.json proxyA_v2_csls3；CNN 參照 results/prereg02/player/sr_report.json（Q00 0.4006、Q22 0.8760、Q04 0.8998）"
+  },
+  {
+   "item": "(e) GPU 選項",
+   "verdict": "模擬中 v2＋CSLS 之後 5 盤題只剩 0.032 分（全體最多 +0.008），一對一時幾乎 0。GE2E＋Transformer 約 5–7 天、Colab 2–3 次，預期 +0.000～+0.008；11/04 前不建議投入，CPU 的 MLP＋GE2E 可以排在它前面",
+   "evidence": "s5b_combine_v2.json v2.selected_by_k_vs_ref；文獻數字轉引自 results/prereg06/explore/prior_art/REPORT.md"
+  },
+  {
+   "item": "上一輪留下的檔案",
+   "verdict": "s0–s5 的結果沿用（沒有找到影響數字的 bug）；s3b_switch.py 沒跑完、安全邊際公式有方向錯誤，已作廢並由 s8 取代；s4_terms_timing.json 被覆寫後已還原",
+   "evidence": "s3b_switch.py 檔頭註記；s4_terms_timing.json 和 s4_terms_timing_lda.json"
+  }
+ ],
+ "opportunities": [
+  {
+   "name": "v2 檢索特徵（LDA 玩家投影＋自己的角落定式 token＋style2）融進 Q04，加 CSLS 修正",
+   "competition": "comp1",
+   "expected_gain": "相對 Q04 估計 +0.030～+0.038（模擬，替身估；合理範圍 +0.01～+0.04），5 盤題 +0.08～+0.11",
+   "basis": "s5b_combine_v2.json（v2＋CSLS3 0.9911，比只用開局 +0.0659）、proxy 段；s9（換切法仍穩）、s7（換等級組成仍穩）",
+   "confidence": "medium",
+   "effort_days": 3,
+   "colab_runs": 0,
+   "user_actions": "沒有操作；只要同意寫 PREREG_06 競賽一的部分。測試日照常本人上傳、每份先說 OK",
+   "main_risks": "CNN 和新特徵的重疊沒量過；官方題目和候選若來自不同時期，訊號會變弱；R20 指紋擋住 t02_player.py，要另寫新工具；11/03 前要做完並登記"
+  },
+  {
+   "name": "一對一自我校準開關（r_forced_cost ≤ 1.58 才用 Hungarian＋CSLS3，否則 CSLS10）",
+   "competition": "comp1",
+   "expected_gain": "官方一題對一人時，在 v2 之上 +0.011～+0.016（到 0.998）；只有 Q04 時 +0.023～+0.039；不是一對一時約 0（評估池誤開 0/120）",
+   "basis": "s8_switch.json 的 gates 和 threshold_transfer_eval（門檻在 30 個 seed 選、20 個 seed 評估）",
+   "confidence": "medium",
+   "effort_days": 1.5,
+   "colab_runs": 0,
+   "user_actions": "沒有；要總部判斷這是否符合 DATA.md 第 7 條的「確認」",
+   "main_risks": "介於 o2o 和 u390 之間的情況（只重複幾位）沒有模擬；規則面要登記；官方若同一人出很多題，開關會關掉，只剩 CSLS 的增益"
+  },
+  {
+   "name": "最小版：只在 Q04 融合分數上加 CSLS（k=5 或 10）",
+   "competition": "comp1",
+   "expected_gain": "Q04 替身上 o2o +0.013～+0.016，非一對一 +0.001～+0.018",
+   "basis": "s8_switch.json levels.proxyA（CSLS5、CSLS10）；s5b 的 q04proxy_csls10_gain +0.0128",
+   "confidence": "medium",
+   "effort_days": 0.5,
+   "colab_runs": 0,
+   "user_actions": "沒有",
+   "main_risks": "和 v2 一起做時大部分會被吸收；同樣要新工具和登記"
+  },
+  {
+   "name": "5 盤題專用的學習式風格 embedding（GE2E＋Transformer，GPU）",
+   "competition": "comp1",
+   "expected_gain": "模擬中在 v2＋CSLS 之上 +0.000～+0.008，一對一時約 0",
+   "basis": "s5b_combine_v2.json：5 盤題剩 0.032；文獻轉引自 prior_art REPORT.md",
+   "confidence": "low",
+   "effort_days": 6,
+   "colab_runs": 3,
+   "user_actions": "Colab 訓練和推論、Drive 上傳和截圖回報",
+   "main_risks": "工程量大、期限緊；增益空間小；和 LDA、CNN 重疊"
+  },
+  {
+   "name": "官方候選若是訓練玩家：用訓練集裡他們的其他棋補參考",
+   "competition": "comp1",
+   "expected_gain": "只用開局時 200 盤對 100 盤 +0.024 [0.018, 0.031]（條件式）",
+   "basis": "s6_more_refs.json",
+   "confidence": "low",
+   "effort_days": 1,
+   "colab_runs": 0,
+   "user_actions": "沒有",
+   "main_risks": "要 11/04 的 T2／T3 顯示候選和訓練玩家重疊才成立；規則面要另外確認"
+  }
+ ],
+ "open_questions": [
+  "官方是不是一題對一人：11/04 用 r_forced_cost 偵測器，加上 DATA.md 第 5、6 條（同一盤棋出現在不同題目）檢查。偵測器算不算第 7 條說的「確認」，要總部決定。",
+  "CNN（Q04 的 E0）和 LDA、定式 token 的真實重疊：本機沒有 fit 玩家的 CNN embedding。測試日可以在官方候選池做自我檢索（不需要答案），直接比 CNN＋v2 的幾種組合；或在 Colab 為 fit 玩家算 CNN embedding 再模擬。",
+  "官方題目和候選棋是不是同一時期：照檔案順序切的模擬只是近似（增益不變）；真正的時間漂移量不到。",
+  "官方候選池的等級組成：s7 顯示全同一級或混合時增益都在，但池子大小和等級比例仍未知。",
+  "要不要用一次競賽一的本機驗證集打分機會做「沒有變差」的檢查：驗證集黑白混合，不是官方形狀，代表性有限。",
+  "這個 subagent 不能寫 .md，請上層把 report_md 存成 results/prereg06/explore/c1_headroom/REPORT.md。"
+ ],
+ "files_written": [
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\c1_headroom\\c1h_lda.py",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\c1_headroom\\s5b_combine_v2.py",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\c1_headroom\\s5b_combine_v2.json",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\c1_headroom\\fused_v2_best.json",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\c1_headroom\\fused_v2_nopost.json",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\c1_headroom\\s8_switch.py",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\c1_headroom\\s8_switch.json",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\c1_headroom\\s9_split_check.py",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\c1_headroom\\s9_split_check.json",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\c1_headroom\\s10_reconcile_dsm.py",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\c1_headroom\\s10_reconcile_dsm.json",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\c1_headroom\\s11_summary.py",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\c1_headroom\\c1h_summary.json",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\c1_headroom\\s7_level_check.json",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\c1_headroom\\s6_more_refs.json",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\c1_headroom\\s4_terms_timing_lda.json",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\c1_headroom\\c1h_lib.py (modified: d<m> scenario, split='ord')",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\c1_headroom\\c1h_fused.py (modified: lda<d> term)",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\c1_headroom\\s7_level_check.py (modified: v2)",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\c1_headroom\\s3b_switch.py (modified: superseded note)",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\c1_headroom\\s1_families.json (style2 entry appended)",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\c1_headroom\\s4_terms_timing.json (restored to first-run content)"
+ ]
+}

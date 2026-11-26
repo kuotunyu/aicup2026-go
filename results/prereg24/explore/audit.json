@@ -1,0 +1,555 @@
+{
+ "format": "c10-prereg24 explore audit v1",
+ "what": "read-only counts: fit rows of split v1 minus the S19 probe; no model, no score, no data/local",
+ "split_v1_players_by_split": {
+  "train": 6407,
+  "val": 1600
+ },
+ "fit": {
+  "players": 5767,
+  "games": 720307
+ },
+ "inner": {
+  "players": 640,
+  "games": 73556,
+  "players_in_fit": 0
+ },
+ "probe": {
+  "games": 270000,
+  "games_per_set": {
+   "p1_probe": 30000,
+   "p2_probe": 120000,
+   "p3_probe": 120000
+  },
+  "players": 5767,
+  "probe_meta_rows": 270000,
+  "probe_meta_players": 5767,
+  "probe_games_not_in_fit": 0
+ },
+ "extra": {
+  "games": 450307,
+  "players": 2504,
+  "players_not_in_probe": 0,
+  "moves": 100109818,
+  "mean_moves": 222.31459426568986,
+  "games_per_player": {
+   "min": 1,
+   "median": 111.0,
+   "max": 1710,
+   "p90": 432.7000000000003,
+   "players_ge_20": 2207,
+   "players_ge_100": 1345
+  },
+  "top10pct_players_share": 0.36829318664822,
+  "on_S19_split": {
+   "A": {
+    "games": 406950,
+    "players": 2259,
+    "moves": 90406141
+   },
+   "H": {
+    "games": 43357,
+    "players": 245,
+    "moves": 9703677
+   }
+  },
+  "move_duplicates": {
+   "vs_probe": 0,
+   "vs_inner": 0,
+   "within_extra": 0,
+   "method": "sha256 of the ';B[..]' / ';W[..]' token sequence, original orientation"
+  }
+ },
+ "per_level": {
+  "D": {
+   "fit_games": 69748,
+   "fit_players": 641,
+   "probe_games": 27000,
+   "extra_games": 42748,
+   "extra_games_B": 21297,
+   "extra_games_W": 21451,
+   "extra_players": 268,
+   "extra_moves": 9798691,
+   "extra_A_games": 38163,
+   "extra_H_games": 4585
+  },
+  "C": {
+   "fit_games": 75315,
+   "fit_players": 589,
+   "probe_games": 27000,
+   "extra_games": 48315,
+   "extra_games_B": 24360,
+   "extra_games_W": 23955,
+   "extra_players": 260,
+   "extra_moves": 10983225,
+   "extra_A_games": 43244,
+   "extra_H_games": 5071
+  },
+  "B": {
+   "fit_games": 72264,
+   "fit_players": 755,
+   "probe_games": 27000,
+   "extra_games": 45264,
+   "extra_games_B": 22829,
+   "extra_games_W": 22435,
+   "extra_players": 320,
+   "extra_moves": 10261540,
+   "extra_A_games": 41660,
+   "extra_H_games": 3604
+  },
+  "A": {
+   "fit_games": 71255,
+   "fit_players": 1140,
+   "probe_games": 27000,
+   "extra_games": 44255,
+   "extra_games_B": 22182,
+   "extra_games_W": 22073,
+   "extra_players": 481,
+   "extra_moves": 9923734,
+   "extra_A_games": 41209,
+   "extra_H_games": 3046
+  },
+  "1D": {
+   "fit_games": 71538,
+   "fit_players": 312,
+   "probe_games": 27000,
+   "extra_games": 44538,
+   "extra_games_B": 22359,
+   "extra_games_W": 22179,
+   "extra_players": 140,
+   "extra_moves": 10039639,
+   "extra_A_games": 41081,
+   "extra_H_games": 3457
+  },
+  "2D": {
+   "fit_games": 73011,
+   "fit_players": 439,
+   "probe_games": 27000,
+   "extra_games": 46011,
+   "extra_games_B": 23735,
+   "extra_games_W": 22276,
+   "extra_players": 208,
+   "extra_moves": 10151202,
+   "extra_A_games": 40663,
+   "extra_H_games": 5348
+  },
+  "3D": {
+   "fit_games": 73725,
+   "fit_players": 445,
+   "probe_games": 27000,
+   "extra_games": 46725,
+   "extra_games_B": 23542,
+   "extra_games_W": 23183,
+   "extra_players": 199,
+   "extra_moves": 10162775,
+   "extra_A_games": 40409,
+   "extra_H_games": 6316
+  },
+  "4D": {
+   "fit_games": 71135,
+   "fit_players": 460,
+   "probe_games": 27000,
+   "extra_games": 44135,
+   "extra_games_B": 21562,
+   "extra_games_W": 22573,
+   "extra_players": 189,
+   "extra_moves": 9629810,
+   "extra_A_games": 40569,
+   "extra_H_games": 3566
+  },
+  "5D": {
+   "fit_games": 73840,
+   "fit_players": 474,
+   "probe_games": 27000,
+   "extra_games": 46840,
+   "extra_games_B": 23235,
+   "extra_games_W": 23605,
+   "extra_players": 210,
+   "extra_moves": 10311496,
+   "extra_A_games": 42528,
+   "extra_H_games": 4312
+  },
+  "6D": {
+   "fit_games": 68476,
+   "fit_players": 512,
+   "probe_games": 27000,
+   "extra_games": 41476,
+   "extra_games_B": 21158,
+   "extra_games_W": 20318,
+   "extra_players": 229,
+   "extra_moves": 8847706,
+   "extra_A_games": 37424,
+   "extra_H_games": 4052
+  }
+ },
+ "eligible_players_n_level_colour": {
+  "5": {
+   "probe": [
+    [
+     610,
+     601
+    ],
+    [
+     545,
+     547
+    ],
+    [
+     667,
+     671
+    ],
+    [
+     905,
+     911
+    ],
+    [
+     309,
+     302
+    ],
+    [
+     434,
+     427
+    ],
+    [
+     426,
+     424
+    ],
+    [
+     444,
+     442
+    ],
+    [
+     462,
+     457
+    ],
+    [
+     479,
+     494
+    ]
+   ],
+   "probe_plus_extra": [
+    [
+     610,
+     604
+    ],
+    [
+     545,
+     549
+    ],
+    [
+     667,
+     673
+    ],
+    [
+     908,
+     919
+    ],
+    [
+     310,
+     303
+    ],
+    [
+     435,
+     429
+    ],
+    [
+     428,
+     424
+    ],
+    [
+     444,
+     442
+    ],
+    [
+     462,
+     460
+    ],
+    [
+     480,
+     494
+    ]
+   ]
+  },
+  "10": {
+   "probe": [
+    [
+     496,
+     507
+    ],
+    [
+     434,
+     452
+    ],
+    [
+     509,
+     513
+    ],
+    [
+     631,
+     649
+    ],
+    [
+     301,
+     295
+    ],
+    [
+     391,
+     397
+    ],
+    [
+     384,
+     396
+    ],
+    [
+     407,
+     388
+    ],
+    [
+     424,
+     423
+    ],
+    [
+     441,
+     473
+    ]
+   ],
+   "probe_plus_extra": [
+    [
+     498,
+     509
+    ],
+    [
+     434,
+     458
+    ],
+    [
+     510,
+     518
+    ],
+    [
+     637,
+     670
+    ],
+    [
+     302,
+     295
+    ],
+    [
+     393,
+     399
+    ],
+    [
+     386,
+     398
+    ],
+    [
+     407,
+     389
+    ],
+    [
+     424,
+     427
+    ],
+    [
+     444,
+     474
+    ]
+   ]
+  },
+  "15": {
+   "probe": [
+    [
+     384,
+     403
+    ],
+    [
+     336,
+     356
+    ],
+    [
+     415,
+     395
+    ],
+    [
+     443,
+     466
+    ],
+    [
+     273,
+     271
+    ],
+    [
+     347,
+     354
+    ],
+    [
+     341,
+     355
+    ],
+    [
+     341,
+     333
+    ],
+    [
+     376,
+     377
+    ],
+    [
+     372,
+     413
+    ]
+   ],
+   "probe_plus_extra": [
+    [
+     387,
+     411
+    ],
+    [
+     337,
+     364
+    ],
+    [
+     422,
+     410
+    ],
+    [
+     525,
+     525
+    ],
+    [
+     274,
+     271
+    ],
+    [
+     348,
+     357
+    ],
+    [
+     342,
+     356
+    ],
+    [
+     341,
+     334
+    ],
+    [
+     378,
+     382
+    ],
+    [
+     379,
+     418
+    ]
+   ]
+  },
+  "20": {
+   "probe": [
+    [
+     327,
+     327
+    ],
+    [
+     298,
+     304
+    ],
+    [
+     348,
+     330
+    ],
+    [
+     165,
+     206
+    ],
+    [
+     239,
+     243
+    ],
+    [
+     293,
+     300
+    ],
+    [
+     299,
+     306
+    ],
+    [
+     290,
+     287
+    ],
+    [
+     314,
+     334
+    ],
+    [
+     311,
+     340
+    ]
+   ],
+   "probe_plus_extra": [
+    [
+     337,
+     344
+    ],
+    [
+     302,
+     316
+    ],
+    [
+     371,
+     361
+    ],
+    [
+     458,
+     462
+    ],
+    [
+     240,
+     244
+    ],
+    [
+     294,
+     303
+    ],
+    [
+     300,
+     307
+    ],
+    [
+     290,
+     289
+    ],
+    [
+     317,
+     340
+    ],
+    [
+     322,
+     347
+    ]
+   ]
+  }
+ },
+ "gpu_estimate": {
+  "throughput_runs": {
+   "p3": {
+    "positions": 26604604,
+    "seconds": 21458.2,
+    "positions_per_s": 1239.8339096475938
+   },
+   "p2": {
+    "positions": 13827992,
+    "seconds": 12419.3,
+    "positions_per_s": 1113.4276489013068
+   }
+  },
+  "hours_4090_all_extra": {
+   "p3": 22.429038729616543,
+   "p2": 24.975383721805418
+  },
+  "hours_4090_extra_of_A_players": {
+   "p3": 20.254984759678358,
+   "p2": 22.554511709157694
+  },
+  "note": "same code (results/prereg08/p1/p1_extract.py run, fp16, batch 1024) on fit games; positions = moves; P3 used --workers 12, P2 --workers 20"
+ },
+ "seconds": 110.2
+}

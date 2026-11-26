@@ -1,0 +1,91 @@
+{
+ "format": "c10-rev11 root props verify v1",
+ "registration": "docs/PREREG_22_ROOT_PROPS.md",
+ "created": "2026-11-04T14:26:41+0800",
+ "mode": "real",
+ "passed": true,
+ "problems": [],
+ "prepare_sha256": "d217527d140eb6165344ac4e7ba2a9851a6199b56b96dcf426e4f7297e6fde4c",
+ "applied_comps": [
+  "rank",
+  "player"
+ ],
+ "t1": {
+  "rank": {
+   "verdict": "PASS",
+   "sha256": "9ddf1cc98c4085493c7ec81f539acaba5e8a2701ba849d41bf168368a8bcfb2c",
+   "rerun_reason": "PREREG_02 rev 11: root properties removed (results/test02/checks/root_props/prepare.json)"
+  },
+  "player": {
+   "verdict": "PASS",
+   "sha256": "cc0ddcf72f857ed4c5ab335cf14e17a4747fe0c82e4fa6db73ffca76ec0c42cd",
+   "rerun_reason": "PREREG_02 rev 11: root properties removed (results/test02/checks/root_props/prepare.json)"
+  }
+ },
+ "sha256": {
+  "rank_prediction_test_public.csv": {
+   "original": "4691803a8306ccd65d93a90bd6d7ba767d57abe96c0660b262f1a2b756b84fef",
+   "normalised": "75baefaded49ad40584bc52d8bd345410a5c6601c4034ff903746e0d92252bb4",
+   "raw": "75baefaded49ad40584bc52d8bd345410a5c6601c4034ff903746e0d92252bb4"
+  },
+  "rank_prediction_test_private.csv": {
+   "original": "d59865e24fe2f5ad742db68108a7f59c2e41138f18c4dc2eea1aa364f3e73c73",
+   "normalised": "c8a6a1923af7324fcae6b22987711d1e57b5efe9f882a2a7b42604399d3e2edc",
+   "raw": "c8a6a1923af7324fcae6b22987711d1e57b5efe9f882a2a7b42604399d3e2edc"
+  },
+  "player_identification_test_public.csv": {
+   "original": "fbf6f14de57bc37bbec6e3d732143a2561887d37b1f36271223ad1a14810ac74",
+   "normalised": "0e59f7f72376cfa2e81ae913d61092caeb1240d95abb43a581207ed29f1647a8",
+   "raw": "0e59f7f72376cfa2e81ae913d61092caeb1240d95abb43a581207ed29f1647a8"
+  },
+  "player_identification_candidates_public.csv": {
+   "original": "e662242cb0f0b2be2009c129abd291c9c852af7fae25d8f1e1c00208785ee24d",
+   "normalised": "8175aeb08235536a1435bb6ba4c55088f906096cc14e7048e8898e3d7a3597a6",
+   "raw": "8175aeb08235536a1435bb6ba4c55088f906096cc14e7048e8898e3d7a3597a6"
+  },
+  "player_identification_test_private.csv": {
+   "original": "eedd2630731070633dfa264897ac739aec03879f90ac57149bba033d9bd53dee",
+   "normalised": "4b07a403b36875f44007adb22aaa8da3c75ec3994e165f36c29a9400e6efcd11",
+   "raw": "4b07a403b36875f44007adb22aaa8da3c75ec3994e165f36c29a9400e6efcd11"
+  },
+  "player_identification_candidates_private.csv": {
+   "original": "db2cfe33be9c1e36355fac5664b758909ef80bce1be257e55bae056fba40d963",
+   "normalised": "7a8926ca83b43b1dca0e32c23513cbbff2731d623be151cf80ed912a91d91e57",
+   "raw": "7a8926ca83b43b1dca0e32c23513cbbff2731d623be151cf80ed912a91d91e57"
+  }
+ },
+ "mapping": {
+  "rank_prediction_test_public.csv": {
+   "original": "4691803a8306ccd65d93a90bd6d7ba767d57abe96c0660b262f1a2b756b84fef",
+   "copy": "75baefaded49ad40584bc52d8bd345410a5c6601c4034ff903746e0d92252bb4",
+   "edited": true
+  },
+  "rank_prediction_test_private.csv": {
+   "original": "d59865e24fe2f5ad742db68108a7f59c2e41138f18c4dc2eea1aa364f3e73c73",
+   "copy": "c8a6a1923af7324fcae6b22987711d1e57b5efe9f882a2a7b42604399d3e2edc",
+   "edited": true
+  },
+  "player_identification_test_public.csv": {
+   "original": "fbf6f14de57bc37bbec6e3d732143a2561887d37b1f36271223ad1a14810ac74",
+   "copy": "0e59f7f72376cfa2e81ae913d61092caeb1240d95abb43a581207ed29f1647a8",
+   "edited": true
+  },
+  "player_identification_candidates_public.csv": {
+   "original": "e662242cb0f0b2be2009c129abd291c9c852af7fae25d8f1e1c00208785ee24d",
+   "copy": "8175aeb08235536a1435bb6ba4c55088f906096cc14e7048e8898e3d7a3597a6",
+   "edited": true
+  },
+  "player_identification_test_private.csv": {
+   "original": "eedd2630731070633dfa264897ac739aec03879f90ac57149bba033d9bd53dee",
+   "copy": "4b07a403b36875f44007adb22aaa8da3c75ec3994e165f36c29a9400e6efcd11",
+   "edited": true
+  },
+  "player_identification_candidates_private.csv": {
+   "original": "db2cfe33be9c1e36355fac5664b758909ef80bce1be257e55bae056fba40d963",
+   "copy": "7a8926ca83b43b1dca0e32c23513cbbff2731d623be151cf80ed912a91d91e57",
+   "edited": true
+  }
+ },
+ "build_already_present": false,
+ "rerun_reason": null
+}

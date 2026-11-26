@@ -1,0 +1,44 @@
+{
+ "c1_noise": {
+  "t_0975_19": 2.0930240544083087,
+  "base_o2o_score_ci": [
+   0.9253,
+   0.9201,
+   0.9305
+  ],
+  "base_o2o_pool_sd": 0.011110769088877901,
+  "proxyA_o2o_pool_sd": 0.010256094543579574,
+  "v2_nopost_o2o_pool_sd": 0.007157899316873211,
+  "v2_csls10_wr_pool_sd": 0.0063032247715750014,
+  "paired_sd_v2csls3_minus_base": 0.010042425907255058,
+  "paired_sd_proxyA_v2terms_csls10": 0.008546745452983033
+ },
+ "kuboki_vs_ours": {
+  "5": {
+   "kuboki_player_specific": 0.7179,
+   "kuboki_random": 0.8111,
+   "kuboki_ratio": 0.8850943163604981,
+   "ours_player_specific_mono": 0.5544,
+   "ours_random_mono": 0.6136413216619996,
+   "ours_ratio": 0.9034593669449296
+  },
+  "10": {
+   "kuboki_player_specific": 0.7395,
+   "kuboki_random": 0.8909,
+   "kuboki_ratio": 0.8300594904029633,
+   "ours_player_specific_mono": 0.6114,
+   "ours_random_mono": 0.719535023232244,
+   "ours_ratio": 0.8497154137869655
+  },
+  "15": {
+   "kuboki_player_specific": 0.7549,
+   "kuboki_random": 0.933,
+   "kuboki_ratio": 0.8091103965702037,
+   "ours_player_specific_mono": 0.6473,
+   "ours_random_mono": 0.7740846111311201,
+   "ours_ratio": 0.8362134974549384
+  },
+  "ours_random_k20": 0.8117919815985868,
+  "note": "Kuboki random 5 games 0.811 vs ours random 20 games: per-game evidence in the paper's setting (Fox, SE + HumanSL, both trained on Fox) is about 4x ours; the player-specific/random ratios agree"
+ }
+}

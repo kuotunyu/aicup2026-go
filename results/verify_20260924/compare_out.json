@@ -1,0 +1,2030 @@
+[
+ [
+  "D header",
+  [
+   "player_id",
+   "game_id",
+   "rank",
+   "color",
+   "sgf_content"
+  ],
+  [
+   "player_id",
+   "game_id",
+   "rank",
+   "color",
+   "sgf_content"
+  ],
+  true
+ ],
+ [
+  "D rows",
+  100000,
+  100000,
+  true
+ ],
+ [
+  "D rank_mismatch",
+  0,
+  0,
+  true
+ ],
+ [
+  "D bad_colour",
+  0,
+  0,
+  true
+ ],
+ [
+  "D colour_counts",
+  {
+   "B": 50000,
+   "W": 50000
+  },
+  {
+   "B": 50000,
+   "W": 50000
+  },
+  true
+ ],
+ [
+  "D unique_players",
+  890,
+  890,
+  true
+ ],
+ [
+  "D players_both_colours",
+  881,
+  881,
+  true
+ ],
+ [
+  "D games_per_player quantiles",
+  {
+   "p0": 5,
+   "p10": 15,
+   "p25": 22,
+   "p50": 44,
+   "p75": 132,
+   "p90": 298,
+   "p100": 965
+  },
+  {
+   "p0": 5,
+   "p10": 15,
+   "p25": 22,
+   "p50": 44,
+   "p75": 132,
+   "p90": 298,
+   "p100": 965
+  },
+  true
+ ],
+ [
+  "D players_with_at_least",
+  {
+   "5": 890,
+   "20": 719,
+   "100": 278,
+   "200": 159
+  },
+  {
+   "5": 890,
+   "20": 719,
+   "100": 278,
+   "200": 159
+  },
+  true
+ ],
+ [
+  "D moves quantiles",
+  {
+   "p0": 100,
+   "p10": 156,
+   "p25": 198,
+   "p50": 235,
+   "p75": 263,
+   "p90": 284,
+   "p100": 445
+  },
+  {
+   "p0": 100,
+   "p10": 156,
+   "p25": 198,
+   "p50": 235,
+   "p75": 263,
+   "p90": 284,
+   "p100": 445
+  },
+  true
+ ],
+ [
+  "D pass_moves_total",
+  0,
+  0,
+  true
+ ],
+ [
+  "D non_alternating",
+  0,
+  0,
+  true
+ ],
+ [
+  "D first_move_colour",
+  {
+   "B": 100000
+  },
+  {
+   "B": 100000
+  },
+  true
+ ],
+ [
+  "D board_sizes",
+  {
+   "19": 100000
+  },
+  {
+   "19": 100000
+  },
+  true
+ ],
+ [
+  "D props",
+  [
+   [
+    "B",
+    1.0
+   ],
+   [
+    "SZ",
+    1.0
+   ],
+   [
+    "W",
+    1.0
+   ]
+  ],
+  [
+   [
+    "B",
+    1.0
+   ],
+   [
+    "SZ",
+    1.0
+   ],
+   [
+    "W",
+    1.0
+   ]
+  ],
+  true
+ ],
+ [
+  "D duplicate_game_ids(in-file)",
+  0,
+  0,
+  true
+ ],
+ [
+  "D games_under_20_moves",
+  0,
+  0,
+  true
+ ],
+ [
+  "C header",
+  [
+   "player_id",
+   "game_id",
+   "rank",
+   "color",
+   "sgf_content"
+  ],
+  [
+   "player_id",
+   "game_id",
+   "rank",
+   "color",
+   "sgf_content"
+  ],
+  true
+ ],
+ [
+  "C rows",
+  100000,
+  100000,
+  true
+ ],
+ [
+  "C rank_mismatch",
+  0,
+  0,
+  true
+ ],
+ [
+  "C bad_colour",
+  0,
+  0,
+  true
+ ],
+ [
+  "C colour_counts",
+  {
+   "B": 50000,
+   "W": 50000
+  },
+  {
+   "B": 50000,
+   "W": 50000
+  },
+  true
+ ],
+ [
+  "C unique_players",
+  817,
+  817,
+  true
+ ],
+ [
+  "C players_both_colours",
+  809,
+  809,
+  true
+ ],
+ [
+  "C games_per_player quantiles",
+  {
+   "p0": 5,
+   "p10": 13,
+   "p25": 20,
+   "p50": 45,
+   "p75": 163,
+   "p90": 317,
+   "p100": 1545
+  },
+  {
+   "p0": 5,
+   "p10": 13,
+   "p25": 20,
+   "p50": 45,
+   "p75": 163,
+   "p90": 317,
+   "p100": 1545
+  },
+  true
+ ],
+ [
+  "C players_with_at_least",
+  {
+   "5": 817,
+   "20": 624,
+   "100": 297,
+   "200": 174
+  },
+  {
+   "5": 817,
+   "20": 624,
+   "100": 297,
+   "200": 174
+  },
+  true
+ ],
+ [
+  "C moves quantiles",
+  {
+   "p0": 100,
+   "p10": 157,
+   "p25": 198,
+   "p50": 234,
+   "p75": 262,
+   "p90": 284,
+   "p100": 445
+  },
+  {
+   "p0": 100,
+   "p10": 157,
+   "p25": 198,
+   "p50": 234,
+   "p75": 262,
+   "p90": 284,
+   "p100": 445
+  },
+  true
+ ],
+ [
+  "C pass_moves_total",
+  0,
+  0,
+  true
+ ],
+ [
+  "C non_alternating",
+  0,
+  0,
+  true
+ ],
+ [
+  "C first_move_colour",
+  {
+   "B": 100000
+  },
+  {
+   "B": 100000
+  },
+  true
+ ],
+ [
+  "C board_sizes",
+  {
+   "19": 100000
+  },
+  {
+   "19": 100000
+  },
+  true
+ ],
+ [
+  "C props",
+  [
+   [
+    "B",
+    1.0
+   ],
+   [
+    "SZ",
+    1.0
+   ],
+   [
+    "W",
+    1.0
+   ]
+  ],
+  [
+   [
+    "B",
+    1.0
+   ],
+   [
+    "SZ",
+    1.0
+   ],
+   [
+    "W",
+    1.0
+   ]
+  ],
+  true
+ ],
+ [
+  "C duplicate_game_ids(in-file)",
+  0,
+  0,
+  true
+ ],
+ [
+  "C games_under_20_moves",
+  0,
+  0,
+  true
+ ],
+ [
+  "B header",
+  [
+   "player_id",
+   "game_id",
+   "rank",
+   "color",
+   "sgf_content"
+  ],
+  [
+   "player_id",
+   "game_id",
+   "rank",
+   "color",
+   "sgf_content"
+  ],
+  true
+ ],
+ [
+  "B rows",
+  100000,
+  100000,
+  true
+ ],
+ [
+  "B rank_mismatch",
+  0,
+  0,
+  true
+ ],
+ [
+  "B bad_colour",
+  0,
+  0,
+  true
+ ],
+ [
+  "B colour_counts",
+  {
+   "B": 50000,
+   "W": 50000
+  },
+  {
+   "B": 50000,
+   "W": 50000
+  },
+  true
+ ],
+ [
+  "B unique_players",
+  1048,
+  1048,
+  true
+ ],
+ [
+  "B players_both_colours",
+  1030,
+  1030,
+  true
+ ],
+ [
+  "B games_per_player quantiles",
+  {
+   "p0": 1,
+   "p10": 10,
+   "p25": 16,
+   "p50": 37,
+   "p75": 138,
+   "p90": 263,
+   "p100": 674
+  },
+  {
+   "p0": 1,
+   "p10": 10,
+   "p25": 16,
+   "p50": 37,
+   "p75": 138,
+   "p90": 263,
+   "p100": 674
+  },
+  true
+ ],
+ [
+  "B players_with_at_least",
+  {
+   "5": 1037,
+   "20": 706,
+   "100": 324,
+   "200": 172
+  },
+  {
+   "5": 1037,
+   "20": 706,
+   "100": 324,
+   "200": 172
+  },
+  true
+ ],
+ [
+  "B moves quantiles",
+  {
+   "p0": 100,
+   "p10": 154,
+   "p25": 195,
+   "p50": 234,
+   "p75": 263,
+   "p90": 285,
+   "p100": 380
+  },
+  {
+   "p0": 100,
+   "p10": 154,
+   "p25": 195,
+   "p50": 234,
+   "p75": 263,
+   "p90": 285,
+   "p100": 380
+  },
+  true
+ ],
+ [
+  "B pass_moves_total",
+  0,
+  0,
+  true
+ ],
+ [
+  "B non_alternating",
+  0,
+  0,
+  true
+ ],
+ [
+  "B first_move_colour",
+  {
+   "B": 100000
+  },
+  {
+   "B": 100000
+  },
+  true
+ ],
+ [
+  "B board_sizes",
+  {
+   "19": 100000
+  },
+  {
+   "19": 100000
+  },
+  true
+ ],
+ [
+  "B props",
+  [
+   [
+    "B",
+    1.0
+   ],
+   [
+    "SZ",
+    1.0
+   ],
+   [
+    "W",
+    1.0
+   ]
+  ],
+  [
+   [
+    "B",
+    1.0
+   ],
+   [
+    "SZ",
+    1.0
+   ],
+   [
+    "W",
+    1.0
+   ]
+  ],
+  true
+ ],
+ [
+  "B duplicate_game_ids(in-file)",
+  0,
+  0,
+  true
+ ],
+ [
+  "B games_under_20_moves",
+  0,
+  0,
+  true
+ ],
+ [
+  "A header",
+  [
+   "player_id",
+   "game_id",
+   "rank",
+   "color",
+   "sgf_content"
+  ],
+  [
+   "player_id",
+   "game_id",
+   "rank",
+   "color",
+   "sgf_content"
+  ],
+  true
+ ],
+ [
+  "A rows",
+  100000,
+  100000,
+  true
+ ],
+ [
+  "A rank_mismatch",
+  0,
+  0,
+  true
+ ],
+ [
+  "A bad_colour",
+  0,
+  0,
+  true
+ ],
+ [
+  "A colour_counts",
+  {
+   "B": 50000,
+   "W": 50000
+  },
+  {
+   "B": 50000,
+   "W": 50000
+  },
+  true
+ ],
+ [
+  "A unique_players",
+  1582,
+  1582,
+  true
+ ],
+ [
+  "A players_both_colours",
+  1539,
+  1539,
+  true
+ ],
+ [
+  "A games_per_player quantiles",
+  {
+   "p0": 1,
+   "p10": 7,
+   "p25": 12,
+   "p50": 24,
+   "p75": 83,
+   "p90": 172,
+   "p100": 924
+  },
+  {
+   "p0": 1,
+   "p10": 7,
+   "p25": 12,
+   "p50": 24,
+   "p75": 83,
+   "p90": 172,
+   "p100": 924
+  },
+  true
+ ],
+ [
+  "A players_with_at_least",
+  {
+   "5": 1541,
+   "20": 881,
+   "100": 340,
+   "200": 116
+  },
+  {
+   "5": 1541,
+   "20": 881,
+   "100": 340,
+   "200": 116
+  },
+  true
+ ],
+ [
+  "A moves quantiles",
+  {
+   "p0": 100,
+   "p10": 151,
+   "p25": 189,
+   "p50": 230,
+   "p75": 261,
+   "p90": 285,
+   "p100": 417
+  },
+  {
+   "p0": 100,
+   "p10": 151,
+   "p25": 189,
+   "p50": 230,
+   "p75": 261,
+   "p90": 285,
+   "p100": 417
+  },
+  true
+ ],
+ [
+  "A pass_moves_total",
+  0,
+  0,
+  true
+ ],
+ [
+  "A non_alternating",
+  0,
+  0,
+  true
+ ],
+ [
+  "A first_move_colour",
+  {
+   "B": 100000
+  },
+  {
+   "B": 100000
+  },
+  true
+ ],
+ [
+  "A board_sizes",
+  {
+   "19": 100000
+  },
+  {
+   "19": 100000
+  },
+  true
+ ],
+ [
+  "A props",
+  [
+   [
+    "B",
+    1.0
+   ],
+   [
+    "SZ",
+    1.0
+   ],
+   [
+    "W",
+    1.0
+   ]
+  ],
+  [
+   [
+    "B",
+    1.0
+   ],
+   [
+    "SZ",
+    1.0
+   ],
+   [
+    "W",
+    1.0
+   ]
+  ],
+  true
+ ],
+ [
+  "A duplicate_game_ids(in-file)",
+  0,
+  0,
+  true
+ ],
+ [
+  "A games_under_20_moves",
+  0,
+  0,
+  true
+ ],
+ [
+  "1D header",
+  [
+   "player_id",
+   "game_id",
+   "rank",
+   "color",
+   "sgf_content"
+  ],
+  [
+   "player_id",
+   "game_id",
+   "rank",
+   "color",
+   "sgf_content"
+  ],
+  true
+ ],
+ [
+  "1D rows",
+  100000,
+  100000,
+  true
+ ],
+ [
+  "1D rank_mismatch",
+  0,
+  0,
+  true
+ ],
+ [
+  "1D bad_colour",
+  0,
+  0,
+  true
+ ],
+ [
+  "1D colour_counts",
+  {
+   "B": 50000,
+   "W": 50000
+  },
+  {
+   "B": 50000,
+   "W": 50000
+  },
+  true
+ ],
+ [
+  "1D unique_players",
+  433,
+  433,
+  true
+ ],
+ [
+  "1D players_both_colours",
+  423,
+  423,
+  true
+ ],
+ [
+  "1D games_per_player quantiles",
+  {
+   "p0": 1,
+   "p10": 30,
+   "p25": 47,
+   "p50": 87,
+   "p75": 319,
+   "p90": 636,
+   "p100": 1505
+  },
+  {
+   "p0": 1,
+   "p10": 30,
+   "p25": 47,
+   "p50": 87,
+   "p75": 319,
+   "p90": 636,
+   "p100": 1505
+  },
+  true
+ ],
+ [
+  "1D players_with_at_least",
+  {
+   "5": 432,
+   "20": 430,
+   "100": 205,
+   "200": 152
+  },
+  {
+   "5": 432,
+   "20": 430,
+   "100": 205,
+   "200": 152
+  },
+  true
+ ],
+ [
+  "1D moves quantiles",
+  {
+   "p0": 100,
+   "p10": 151,
+   "p25": 187,
+   "p50": 230,
+   "p75": 262,
+   "p90": 286,
+   "p100": 382
+  },
+  {
+   "p0": 100,
+   "p10": 151,
+   "p25": 187,
+   "p50": 230,
+   "p75": 262,
+   "p90": 286,
+   "p100": 382
+  },
+  true
+ ],
+ [
+  "1D pass_moves_total",
+  0,
+  0,
+  true
+ ],
+ [
+  "1D non_alternating",
+  0,
+  0,
+  true
+ ],
+ [
+  "1D first_move_colour",
+  {
+   "B": 100000
+  },
+  {
+   "B": 100000
+  },
+  true
+ ],
+ [
+  "1D board_sizes",
+  {
+   "19": 100000
+  },
+  {
+   "19": 100000
+  },
+  true
+ ],
+ [
+  "1D props",
+  [
+   [
+    "B",
+    1.0
+   ],
+   [
+    "SZ",
+    1.0
+   ],
+   [
+    "W",
+    1.0
+   ]
+  ],
+  [
+   [
+    "B",
+    1.0
+   ],
+   [
+    "SZ",
+    1.0
+   ],
+   [
+    "W",
+    1.0
+   ]
+  ],
+  true
+ ],
+ [
+  "1D duplicate_game_ids(in-file)",
+  0,
+  0,
+  true
+ ],
+ [
+  "1D games_under_20_moves",
+  0,
+  0,
+  true
+ ],
+ [
+  "2D header",
+  [
+   "player_id",
+   "game_id",
+   "rank",
+   "color",
+   "sgf_content"
+  ],
+  [
+   "player_id",
+   "game_id",
+   "rank",
+   "color",
+   "sgf_content"
+  ],
+  true
+ ],
+ [
+  "2D rows",
+  100000,
+  100000,
+  true
+ ],
+ [
+  "2D rank_mismatch",
+  0,
+  0,
+  true
+ ],
+ [
+  "2D bad_colour",
+  0,
+  0,
+  true
+ ],
+ [
+  "2D colour_counts",
+  {
+   "B": 50000,
+   "W": 50000
+  },
+  {
+   "B": 50000,
+   "W": 50000
+  },
+  true
+ ],
+ [
+  "2D unique_players",
+  610,
+  610,
+  true
+ ],
+ [
+  "2D players_both_colours",
+  601,
+  601,
+  true
+ ],
+ [
+  "2D games_per_player quantiles",
+  {
+   "p0": 6,
+   "p10": 23,
+   "p25": 34,
+   "p50": 76,
+   "p75": 221,
+   "p90": 410,
+   "p100": 1467
+  },
+  {
+   "p0": 6,
+   "p10": 23,
+   "p25": 34,
+   "p50": 76,
+   "p75": 221,
+   "p90": 410,
+   "p100": 1467
+  },
+  true
+ ],
+ [
+  "2D players_with_at_least",
+  {
+   "5": 610,
+   "20": 572,
+   "100": 265,
+   "200": 171
+  },
+  {
+   "5": 610,
+   "20": 572,
+   "100": 265,
+   "200": 171
+  },
+  true
+ ],
+ [
+  "2D moves quantiles",
+  {
+   "p0": 100,
+   "p10": 148,
+   "p25": 184,
+   "p50": 227,
+   "p75": 261,
+   "p90": 285,
+   "p100": 426
+  },
+  {
+   "p0": 100,
+   "p10": 148,
+   "p25": 184,
+   "p50": 227,
+   "p75": 261,
+   "p90": 285,
+   "p100": 426
+  },
+  true
+ ],
+ [
+  "2D pass_moves_total",
+  0,
+  0,
+  true
+ ],
+ [
+  "2D non_alternating",
+  0,
+  0,
+  true
+ ],
+ [
+  "2D first_move_colour",
+  {
+   "B": 100000
+  },
+  {
+   "B": 100000
+  },
+  true
+ ],
+ [
+  "2D board_sizes",
+  {
+   "19": 100000
+  },
+  {
+   "19": 100000
+  },
+  true
+ ],
+ [
+  "2D props",
+  [
+   [
+    "B",
+    1.0
+   ],
+   [
+    "SZ",
+    1.0
+   ],
+   [
+    "W",
+    1.0
+   ]
+  ],
+  [
+   [
+    "B",
+    1.0
+   ],
+   [
+    "SZ",
+    1.0
+   ],
+   [
+    "W",
+    1.0
+   ]
+  ],
+  true
+ ],
+ [
+  "2D duplicate_game_ids(in-file)",
+  0,
+  0,
+  true
+ ],
+ [
+  "2D games_under_20_moves",
+  0,
+  0,
+  true
+ ],
+ [
+  "3D header",
+  [
+   "player_id",
+   "game_id",
+   "rank",
+   "color",
+   "sgf_content"
+  ],
+  [
+   "player_id",
+   "game_id",
+   "rank",
+   "color",
+   "sgf_content"
+  ],
+  true
+ ],
+ [
+  "3D rows",
+  100000,
+  100000,
+  true
+ ],
+ [
+  "3D rank_mismatch",
+  0,
+  0,
+  true
+ ],
+ [
+  "3D bad_colour",
+  0,
+  0,
+  true
+ ],
+ [
+  "3D colour_counts",
+  {
+   "B": 50000,
+   "W": 50000
+  },
+  {
+   "B": 50000,
+   "W": 50000
+  },
+  true
+ ],
+ [
+  "3D unique_players",
+  618,
+  618,
+  true
+ ],
+ [
+  "3D players_both_colours",
+  602,
+  602,
+  true
+ ],
+ [
+  "3D games_per_player quantiles",
+  {
+   "p0": 2,
+   "p10": 22,
+   "p25": 34,
+   "p50": 65,
+   "p75": 203,
+   "p90": 418,
+   "p100": 1416
+  },
+  {
+   "p0": 2,
+   "p10": 22,
+   "p25": 34,
+   "p50": 65,
+   "p75": 203,
+   "p90": 418,
+   "p100": 1416
+  },
+  true
+ ],
+ [
+  "3D players_with_at_least",
+  {
+   "5": 617,
+   "20": 568,
+   "100": 267,
+   "200": 157
+  },
+  {
+   "5": 617,
+   "20": 568,
+   "100": 267,
+   "200": 157
+  },
+  true
+ ],
+ [
+  "3D moves quantiles",
+  {
+   "p0": 100,
+   "p10": 144,
+   "p25": 179,
+   "p50": 222,
+   "p75": 258,
+   "p90": 284,
+   "p100": 398
+  },
+  {
+   "p0": 100,
+   "p10": 144,
+   "p25": 179,
+   "p50": 222,
+   "p75": 258,
+   "p90": 284,
+   "p100": 398
+  },
+  true
+ ],
+ [
+  "3D pass_moves_total",
+  0,
+  0,
+  true
+ ],
+ [
+  "3D non_alternating",
+  0,
+  0,
+  true
+ ],
+ [
+  "3D first_move_colour",
+  {
+   "B": 100000
+  },
+  {
+   "B": 100000
+  },
+  true
+ ],
+ [
+  "3D board_sizes",
+  {
+   "19": 100000
+  },
+  {
+   "19": 100000
+  },
+  true
+ ],
+ [
+  "3D props",
+  [
+   [
+    "B",
+    1.0
+   ],
+   [
+    "SZ",
+    1.0
+   ],
+   [
+    "W",
+    1.0
+   ]
+  ],
+  [
+   [
+    "B",
+    1.0
+   ],
+   [
+    "SZ",
+    1.0
+   ],
+   [
+    "W",
+    1.0
+   ]
+  ],
+  true
+ ],
+ [
+  "3D duplicate_game_ids(in-file)",
+  0,
+  0,
+  true
+ ],
+ [
+  "3D games_under_20_moves",
+  0,
+  0,
+  true
+ ],
+ [
+  "4D header",
+  [
+   "player_id",
+   "game_id",
+   "rank",
+   "color",
+   "sgf_content"
+  ],
+  [
+   "player_id",
+   "game_id",
+   "rank",
+   "color",
+   "sgf_content"
+  ],
+  true
+ ],
+ [
+  "4D rows",
+  100000,
+  100000,
+  true
+ ],
+ [
+  "4D rank_mismatch",
+  0,
+  0,
+  true
+ ],
+ [
+  "4D bad_colour",
+  0,
+  0,
+  true
+ ],
+ [
+  "4D colour_counts",
+  {
+   "B": 50000,
+   "W": 50000
+  },
+  {
+   "B": 50000,
+   "W": 50000
+  },
+  true
+ ],
+ [
+  "4D unique_players",
+  640,
+  640,
+  true
+ ],
+ [
+  "4D players_both_colours",
+  629,
+  629,
+  true
+ ],
+ [
+  "4D games_per_player quantiles",
+  {
+   "p0": 9,
+   "p10": 20,
+   "p25": 31,
+   "p50": 61,
+   "p75": 190,
+   "p90": 433,
+   "p100": 1800
+  },
+  {
+   "p0": 9,
+   "p10": 20,
+   "p25": 31,
+   "p50": 61,
+   "p75": 190,
+   "p90": 433,
+   "p100": 1800
+  },
+  true
+ ],
+ [
+  "4D players_with_at_least",
+  {
+   "5": 640,
+   "20": 576,
+   "100": 253,
+   "200": 152
+  },
+  {
+   "5": 640,
+   "20": 576,
+   "100": 253,
+   "200": 152
+  },
+  true
+ ],
+ [
+  "4D moves quantiles",
+  {
+   "p0": 100,
+   "p10": 142,
+   "p25": 177,
+   "p50": 221,
+   "p75": 259,
+   "p90": 285,
+   "p100": 396
+  },
+  {
+   "p0": 100,
+   "p10": 142,
+   "p25": 177,
+   "p50": 221,
+   "p75": 259,
+   "p90": 285,
+   "p100": 396
+  },
+  true
+ ],
+ [
+  "4D pass_moves_total",
+  0,
+  0,
+  true
+ ],
+ [
+  "4D non_alternating",
+  0,
+  0,
+  true
+ ],
+ [
+  "4D first_move_colour",
+  {
+   "B": 100000
+  },
+  {
+   "B": 100000
+  },
+  true
+ ],
+ [
+  "4D board_sizes",
+  {
+   "19": 100000
+  },
+  {
+   "19": 100000
+  },
+  true
+ ],
+ [
+  "4D props",
+  [
+   [
+    "B",
+    1.0
+   ],
+   [
+    "SZ",
+    1.0
+   ],
+   [
+    "W",
+    1.0
+   ]
+  ],
+  [
+   [
+    "B",
+    1.0
+   ],
+   [
+    "SZ",
+    1.0
+   ],
+   [
+    "W",
+    1.0
+   ]
+  ],
+  true
+ ],
+ [
+  "4D duplicate_game_ids(in-file)",
+  0,
+  0,
+  true
+ ],
+ [
+  "4D games_under_20_moves",
+  0,
+  0,
+  true
+ ],
+ [
+  "5D header",
+  [
+   "player_id",
+   "game_id",
+   "rank",
+   "color",
+   "sgf_content"
+  ],
+  [
+   "player_id",
+   "game_id",
+   "rank",
+   "color",
+   "sgf_content"
+  ],
+  true
+ ],
+ [
+  "5D rows",
+  100000,
+  100000,
+  true
+ ],
+ [
+  "5D rank_mismatch",
+  0,
+  0,
+  true
+ ],
+ [
+  "5D bad_colour",
+  0,
+  0,
+  true
+ ],
+ [
+  "5D colour_counts",
+  {
+   "B": 50000,
+   "W": 50000
+  },
+  {
+   "B": 50000,
+   "W": 50000
+  },
+  true
+ ],
+ [
+  "5D unique_players",
+  658,
+  658,
+  true
+ ],
+ [
+  "5D players_both_colours",
+  649,
+  649,
+  true
+ ],
+ [
+  "5D games_per_player quantiles",
+  {
+   "p0": 3,
+   "p10": 23,
+   "p25": 36,
+   "p50": 64,
+   "p75": 201,
+   "p90": 407,
+   "p100": 1275
+  },
+  {
+   "p0": 3,
+   "p10": 23,
+   "p25": 36,
+   "p50": 64,
+   "p75": 201,
+   "p90": 407,
+   "p100": 1275
+  },
+  true
+ ],
+ [
+  "5D players_with_at_least",
+  {
+   "5": 656,
+   "20": 619,
+   "100": 269,
+   "200": 166
+  },
+  {
+   "5": 656,
+   "20": 619,
+   "100": 269,
+   "200": 166
+  },
+  true
+ ],
+ [
+  "5D moves quantiles",
+  {
+   "p0": 100,
+   "p10": 143,
+   "p25": 176,
+   "p50": 221,
+   "p75": 261,
+   "p90": 289,
+   "p100": 397
+  },
+  {
+   "p0": 100,
+   "p10": 143,
+   "p25": 176,
+   "p50": 221,
+   "p75": 261,
+   "p90": 289,
+   "p100": 397
+  },
+  true
+ ],
+ [
+  "5D pass_moves_total",
+  0,
+  0,
+  true
+ ],
+ [
+  "5D non_alternating",
+  0,
+  0,
+  true
+ ],
+ [
+  "5D first_move_colour",
+  {
+   "B": 100000
+  },
+  {
+   "B": 100000
+  },
+  true
+ ],
+ [
+  "5D board_sizes",
+  {
+   "19": 100000
+  },
+  {
+   "19": 100000
+  },
+  true
+ ],
+ [
+  "5D props",
+  [
+   [
+    "B",
+    1.0
+   ],
+   [
+    "SZ",
+    1.0
+   ],
+   [
+    "W",
+    1.0
+   ]
+  ],
+  [
+   [
+    "B",
+    1.0
+   ],
+   [
+    "SZ",
+    1.0
+   ],
+   [
+    "W",
+    1.0
+   ]
+  ],
+  true
+ ],
+ [
+  "5D duplicate_game_ids(in-file)",
+  0,
+  0,
+  true
+ ],
+ [
+  "5D games_under_20_moves",
+  0,
+  0,
+  true
+ ],
+ [
+  "6D header",
+  [
+   "player_id",
+   "game_id",
+   "rank",
+   "color",
+   "sgf_content"
+  ],
+  [
+   "player_id",
+   "game_id",
+   "rank",
+   "color",
+   "sgf_content"
+  ],
+  true
+ ],
+ [
+  "6D rows",
+  100000,
+  100000,
+  true
+ ],
+ [
+  "6D rank_mismatch",
+  0,
+  0,
+  true
+ ],
+ [
+  "6D bad_colour",
+  0,
+  0,
+  true
+ ],
+ [
+  "6D colour_counts",
+  {
+   "B": 50000,
+   "W": 50000
+  },
+  {
+   "B": 50000,
+   "W": 50000
+  },
+  true
+ ],
+ [
+  "6D unique_players",
+  711,
+  711,
+  true
+ ],
+ [
+  "6D players_both_colours",
+  690,
+  690,
+  true
+ ],
+ [
+  "6D games_per_player quantiles",
+  {
+   "p0": 2,
+   "p10": 24,
+   "p25": 34,
+   "p50": 63,
+   "p75": 174,
+   "p90": 364,
+   "p100": 1442
+  },
+  {
+   "p0": 2,
+   "p10": 24,
+   "p25": 34,
+   "p50": 63,
+   "p75": 174,
+   "p90": 364,
+   "p100": 1442
+  },
+  true
+ ],
+ [
+  "6D players_with_at_least",
+  {
+   "5": 708,
+   "20": 676,
+   "100": 268,
+   "200": 157
+  },
+  {
+   "5": 708,
+   "20": 676,
+   "100": 268,
+   "200": 157
+  },
+  true
+ ],
+ [
+  "6D moves quantiles",
+  {
+   "p0": 100,
+   "p10": 138,
+   "p25": 170,
+   "p50": 213,
+   "p75": 258,
+   "p90": 287,
+   "p100": 383
+  },
+  {
+   "p0": 100,
+   "p10": 138,
+   "p25": 170,
+   "p50": 213,
+   "p75": 258,
+   "p90": 287,
+   "p100": 383
+  },
+  true
+ ],
+ [
+  "6D pass_moves_total",
+  0,
+  0,
+  true
+ ],
+ [
+  "6D non_alternating",
+  0,
+  0,
+  true
+ ],
+ [
+  "6D first_move_colour",
+  {
+   "B": 100000
+  },
+  {
+   "B": 100000
+  },
+  true
+ ],
+ [
+  "6D board_sizes",
+  {
+   "19": 100000
+  },
+  {
+   "19": 100000
+  },
+  true
+ ],
+ [
+  "6D props",
+  [
+   [
+    "B",
+    1.0
+   ],
+   [
+    "SZ",
+    1.0
+   ],
+   [
+    "W",
+    1.0
+   ]
+  ],
+  [
+   [
+    "B",
+    1.0
+   ],
+   [
+    "SZ",
+    1.0
+   ],
+   [
+    "W",
+    1.0
+   ]
+  ],
+  true
+ ],
+ [
+  "6D duplicate_game_ids(in-file)",
+  0,
+  0,
+  true
+ ],
+ [
+  "6D games_under_20_moves",
+  0,
+  0,
+  true
+ ],
+ [
+  "overall total_rows",
+  1000000,
+  1000000,
+  true
+ ],
+ [
+  "overall unique_players",
+  8007,
+  8007,
+  true
+ ],
+ [
+  "overall players_in_more_than_one_rank",
+  0,
+  0,
+  true
+ ],
+ [
+  "overall games_per_player",
+  {
+   "p0": 1,
+   "p10": 13,
+   "p25": 23,
+   "p50": 51,
+   "p75": 155,
+   "p90": 327,
+   "p100": 1800
+  },
+  {
+   "p0": 1,
+   "p10": 13,
+   "p25": 23,
+   "p50": 51,
+   "p75": 155,
+   "p90": 327,
+   "p100": 1800
+  },
+  true
+ ],
+ [
+  "overall players_with_at_least",
+  {
+   "5": 7948,
+   "20": 6371,
+   "100": 2766,
+   "200": 1576
+  },
+  {
+   "5": 7948,
+   "20": 6371,
+   "100": 2766,
+   "200": 1576
+  },
+  true
+ ],
+ [
+  "overall unique_sgf",
+  1000000,
+  1000000,
+  true
+ ],
+ [
+  "overall duplicate_sgf_groups",
+  0,
+  0,
+  true
+ ]
+]

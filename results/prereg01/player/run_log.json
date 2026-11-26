@@ -1,0 +1,89 @@
+{
+ "runs": [
+  {
+   "run": 1,
+   "started_utc": "2026-09-25T18:38:32+00:00",
+   "status": "completed",
+   "smoke": false,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "cpu_count": 48,
+   "seconds_so_far": 3074.008045196533,
+   "nproc": 48,
+   "num_workers": 48,
+   "features_reextracted": true,
+   "train_state_found": false,
+   "inference_only": false,
+   "start_epoch": 0,
+   "sampling_env": {
+    "nproc": 48,
+    "num_workers": 48,
+    "cpu_count": 48,
+    "index_sha256": "d1cda8ccf4a35ef0c8e320cad53f3ec7f4241864f5bcd955dafa9219aded279e"
+   },
+   "saved_sampling_env": null,
+   "sampling_env_same_as_saved": null,
+   "index_sha256": "d1cda8ccf4a35ef0c8e320cad53f3ec7f4241864f5bcd955dafa9219aded279e",
+   "index_order_same_as_saved": null,
+   "resumed": false,
+   "epochs": [
+    {
+     "epoch": 1,
+     "steps": 14976,
+     "loss": 0.4712430384153357,
+     "minutes": 8.410631847381591,
+     "nproc": 48,
+     "num_workers": 48,
+     "finished_utc": "2026-09-25T18:51:55+00:00"
+    },
+    {
+     "epoch": 2,
+     "steps": 14976,
+     "loss": 0.39474649833411807,
+     "minutes": 8.38378134171168,
+     "nproc": 48,
+     "num_workers": 48,
+     "finished_utc": "2026-09-25T19:00:18+00:00"
+    },
+    {
+     "epoch": 3,
+     "steps": 14976,
+     "loss": 0.37169007618879724,
+     "minutes": 8.388292070229848,
+     "nproc": 48,
+     "num_workers": 48,
+     "finished_utc": "2026-09-25T19:08:42+00:00"
+    },
+    {
+     "epoch": 4,
+     "steps": 14976,
+     "loss": 0.36364450284407246,
+     "minutes": 8.381413765748341,
+     "nproc": 48,
+     "num_workers": 48,
+     "finished_utc": "2026-09-25T19:17:05+00:00"
+    },
+    {
+     "epoch": 5,
+     "steps": 14976,
+     "loss": 0.3565853779685771,
+     "minutes": 8.385921994845072,
+     "nproc": 48,
+     "num_workers": 48,
+     "finished_utc": "2026-09-25T19:25:28+00:00"
+    }
+   ],
+   "epochs_done": 5,
+   "best_checks": [
+    {
+     "when": "訓練結束時",
+     "best_epoch": 5,
+     "result": "ok"
+    }
+   ],
+   "finished_utc": "2026-09-25T19:29:46+00:00",
+   "seconds": 3074.0080428123474
+  }
+ ],
+ "n_runs": 1,
+ "n_resumes": 0
+}

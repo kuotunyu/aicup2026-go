@@ -1,0 +1,63 @@
+{
+ "format": "c10-test07 seam_local v1",
+ "what": "test07 local Q02H seam (PREREG_07 5.2): Q02H on the seam_val inputs + val_hs.npz vs results/prereg07/rank",
+ "mode": "real",
+ "created": "2026-11-04T10:16:24+00:00",
+ "passed": true,
+ "questions": 1589,
+ "max_abs_diff": 0.0,
+ "tol": 0.0001,
+ "rule_b_differences": 0,
+ "rule_b_max": 4,
+ "rule_b_differing_questions": [],
+ "count_mismatch_questions": [],
+ "problems": [],
+ "byte_identical_probs": true,
+ "byte_identical_pred_B": true,
+ "byte_identical_pred_A": true,
+ "t04_seam_inputs_byte_identical": true,
+ "required_byte_identical": true,
+ "verdict": "passed",
+ "tol_source": "test04 seam_local.json tol",
+ "set": {
+  "questions": 1589,
+  "questions_without_parsed_game": 0,
+  "questions_without_parsed_game_ids": [],
+  "games": 19156,
+  "games_parsed": 19156,
+  "o4_mask_games": 19156,
+  "o4_replay_failed": 0,
+  "questions_with_empty_o4_mask": 0,
+  "masked_E_HS": {
+   "games_in_questions": 19156,
+   "unusable_slots_in_questions": 0,
+   "path": "pooled"
+  },
+  "hs_failed": 0,
+  "hs_failed_or_no_move": 0,
+  "unusable_games": 0,
+  "questions_without_usable_hs_game": 0,
+  "rule_B_differs_from_Q02": 229
+ },
+ "direction": {
+  "rho": 0.9482508617162649,
+  "questions": 1589,
+  "reference": 0.9470086182502414,
+  "floor": 0.078,
+  "threshold": 0.4735043091251207,
+  "passed": true,
+  "rule": "rho >= max(0.5 x reference, floor) (spec 4.6)",
+  "equal_to_prereg07_apply": true
+ },
+ "reference_sha256": {
+  "rank_val_probs.csv": "6ae2db6025a903eb5c58af9418dc203c0b6e84dd664049f85dfa850e57dc28c1",
+  "pred_B.csv": "51d7dbf82d50c3848acadb6934069580bd3ade7e6ca71ad5d1023633a18a26fa",
+  "pred_A.csv": "b229be2c414f7af22310bc304d6da9de5b6406698ec8ce9c0d40e7c146b40a41"
+ },
+ "outputs_sha256": {
+  "rank_val_probs.csv": "6ae2db6025a903eb5c58af9418dc203c0b6e84dd664049f85dfa850e57dc28c1",
+  "pred_A.csv": "b229be2c414f7af22310bc304d6da9de5b6406698ec8ce9c0d40e7c146b40a41",
+  "pred_B.csv": "51d7dbf82d50c3848acadb6934069580bd3ade7e6ca71ad5d1023633a18a26fa",
+  "decide_summary.json": "d7c69425cdab7b448e030ae0da61a3fb5b113f313830b99a68d63b3a40219d81"
+ }
+}

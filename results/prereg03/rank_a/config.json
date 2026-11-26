@@ -1,0 +1,381 @@
+{
+ "layout": "頂層：固定說明與跨執行的累計狀態；runs：每次執行各一筆的實際設定",
+ "smoke": false,
+ "smoke_cfg": null,
+ "prereg": "docs/PREREG_03_RECIPE_V2.md 第 1 節（競賽二；實作規格 results/prereg03/design/plan.md 第 3 節）",
+ "arm": "A",
+ "base_notebook": {
+  "path": "colab/prereg02_rank.ipynb",
+  "sha256": "9fb1f9d06ba5ee5fbebfb6dfe022246888c93e7762e9a89e1adc99c9f1c12b0c"
+ },
+ "changes_from_prereg02": [
+  "[新增] 第一格 markdown：用途、兩臂、步驟、會停下的情況、輸出清單、接續方式、這張差異表。A、B 兩份 notebook 共用。",
+  "[設定] 開頭加一行 `ARM`（A 臂的 notebook 是 `'A'`、B 臂是 `'B'`；兩份只差這一行）。結果目錄改成 `prereg03/rank_a` 或 `rank_b`（SMOKE 是 `prereg03_smoke`），分片備份 `FEAT_BACKUP` 改到 `prereg03/features_rank`（兩臂共用、只有 A 寫）。只讀目錄改成三個：`prereg01`、`prereg02`、`test02`（SMOKE 是 `_smoke`），`guard_write()` 三個都擋，`readonly_fingerprint()` 記檔名、大小、mtime。`sha256_path()`、`gpu_name_of()` 從 prereg02 的 preflight 格搬來（本版的 preflight 在 GPU 關卡之後），另加 `json_sha256()`。拿掉收尾開關 `FINISH_WITHOUT_TRAINING` 和 `SMOKE_CFG_P02`；本版的 SMOKE 設定另放 `SMOKE_CFG_P03`（`SMOKE_CFG` 不動，分片備份的指紋含它）。`RUN` 改記輪次（pass）和狀態。`config.json` 的 `prereg` 改指 PREREG_03，另記 ARM、只讀目錄、底稿 notebook 的 SHA-256 和這張表。",
+  "[底稿官方 2] 拿掉 prereg02 的接著訓練設定，改成 recipe v2 的寫死值：`IN_CHANNELS`＝501、`PEAK_LR`＝1e-3、`WEIGHT_DECAY`＝0.01、`WARMUP_STEPS`＝1,000、`T_TOTAL`＝33,768、`TIME_CHECK_STEP`＝300、時間上限（G4 150 分、A100 180 分）、`SHUFFLE_BUFFER`＝1,000（SMOKE 只縮小步數和上限），正式執行 assert 這些值。沒有 GPU、或型號不是 G4／A100 就停（沒有收尾開關的例外）。新增 `GPU_CLASS`（G4／A100／cpu-smoke）、`LOADER_WORKERS`（G4：A 16、B 32；A100：兩臂各 10；SMOKE 0）、`AMP`（正式 bf16，SMOKE 關）。有 GPU 但查不到型號時，停下的訊息和 `device` 那一行寫「查不到 GPU 型號」（`GPU_MODEL_SHOWN`），不寫 None。最後的 `print` 印 `device … | GPU … | ARM … | workers … | vCPU … | RAM …`。",
+  "[新增 preflight] 在 GPU 關卡之後：這一臂有 `STOPPED.json`（之前在訓練後停下）就停；打包檔的檔案清單和 SHA-256 必須等於 prereg01／prereg02 用的那一份（產生器從 repo 讀出）；Drive 剩餘空間 ≥ 3 GB（`MIN_PASS_FREE_BYTES`，和每一輪開始前的門檻相同）；A 臂這次要重抽特徵、把分片備份寫到 Drive 時（三個還原來源都沒有設定相符的完成標記）另加 2 GB（備份約 1.3 GB，本機冒煙的分片推估 1.34 GB；prereg01 一節估 1–2 GB），也就是 ≥ 5 GB；查不到剩餘空間也停。記三個只讀目錄的指紋 `readonly_before.json`，重跑時和第一次記的不同就停。",
+  "[底稿分片工具] 只改註解：備份只寫到 prereg03 的 `FEAT_BACKUP`（只有 A 臂會呼叫），還原來源可以是 prereg03、prereg02 或 prereg01。",
+  "[底稿官方 9] 正式執行時特徵指紋的 SHA-256 必須等於產生器算出的 prereg01 指紋（不同就停，不重抽）。A 臂依序試 `prereg03`、`prereg02`、`prereg01` 的 `features_rank` 還原分片，B 臂只試 `prereg02`、`prereg01`（不用 A 臂寫的 prereg03 備份：B 臂要嘛和 A 臂用同一份唯讀備份，要嘛每次都自己重抽，接續前後的分片排列才相同）；都不能用才重抽，只有 A 臂把重抽的分片備份到 `prereg03/features_rank`，B 臂只抽到本機。",
+  "[新增視角與 D4] `d4()` 和它的自我檢查從 dump 工具搬來（一字不改）；`D4_PERM`（[8, 361] 排列表）、`d4_gather()`（每筆一種對稱）、`to_target_view()`（每個盤面兩層改成「目標玩家的子／對手的子」，接上第 500 層「目標玩家執黑＝1」）、`model_input()`（訓練：視角 → D4 gather → float32 → channels_last）、`dump_input()`（最後輸出：視角 → float32 → `d4()` → channels_last）。單元檢查：人工棋盤的視角轉換（執黑不變、執白每個盤面兩層對調、第 500 層是常數）、8 種對稱 `gather` 等於 `d4()`、執色層在 D4 下不變、訓練和最後輸出的輸入相同。",
+  "[新增執色表] `COLOR_IS_BLACK`：鍵是分片的 `__key__`＝`等級_game_id`，值取 `df_train`／`df_val` 的 `color` 欄（不從 game_id 推）。檢查：鍵不重複、只有 B／W、fit 執黑筆數等於 `df_train` 算出的值、執黑比例在 0.50 ± 0.01（SMOKE ± 0.05）。另外用 `c10data.read_split` 確認 fit、inner、本機驗證三組玩家兩兩不相交，記進 `leak_check.json`。",
+  "[新增 B 臂取樣] 只有 B 臂生效：用 `df_train` 重算每級「每人最多 200 盤」的總盤數 E_L，必須和登記值完全相同；每盤收下的機率 q＝min(1, 200/n_p)×35,845/E_L；每一輪用 `sha256(\"c10-prereg03|acc|{pass}|{rank}|{game_id}\")` 前 16 個十六進位字 ÷ 2^64 < q 決定收不收（先看 key，不收的不解碼）。SMOKE 的上限和目標值另用 `SMOKE_CFG_P03`。A 臂只印一行。",
+  "[底稿官方 11（改寫）] 官方的 `decode_sample`／`make_loader`／`pick_workers` 換掉。worker 傳 uint8 特徵、label、執色（查執色表，查不到就停）和 key；`make_train_loader(pass, accepted)`：分片先排序、再用 `random.Random(42·1000＋pass)` 洗，依 worker 切（`islice(w, None, workers)`），B 臂先依 key 篩選，worker 內 shuffle buffer 1,000、rng 種子 (42·1000＋pass)·1000＋worker，批次在 worker 內組成（最後一批不滿也算一步）。`make_eval_loader()`：照分片順序、不打散。`scan_keys()`：只讀 key、不解碼特徵，另回傳每個分片裡 key 的順序；`shard_layout_sha256()`：分片排列（依檔名排序的每個分片和它裡面 key 的順序）的 SHA-256，和壓縮位元組無關。`iterate()`：把 worker 的執色錯誤轉成中文說明後停下。",
+  "[底稿官方 12（改寫）] worker 數用 recipe 設定、不照官方退回 0。訓練前把訓練、inner 分片的 key 各讀一遍：數量等於實際寫入的盤數、不重複、每盤都查得到執色、沒有解析失敗時和 fit／inner 的盤完全相同、執黑盤數相同，任一不符就停；另記兩組分片排列的 SHA-256（訓練分片的那一個寫進 recipe 設定，接續時必須相同）。建立 inner 監看用的 `val_loader`。",
+  "[底稿官方 14] `GoRankResNet(in_channels=501)`，其他和官方相同；建模型前 `torch.manual_seed(SEED)`（兩臂同一個初始化，並記下初始權重的 SHA-256）；模型用 channels_last（`channels_last()`：官方 forward 在 `bn_in2` 之後用 `view` 攤平，channels_last 的張量不能 `view`，所以用 forward hook 把 `bn_in2` 的輸出轉回 NCHW，數值不變、`network.py` 不改）；AdamW 明寫 `lr=PEAK_LR`、`weight_decay=0.01`。",
+  "[底稿官方 15（改寫）] `validate()`：inner 監看（只記錄），原方向、fp32（不開 autocast）、目標玩家視角（執色查執色表）。",
+  "[底稿 dump 工具] `d4()` 搬到視角與 D4 的格子；`load_net()` 用 501 層、`channels_last()`；inner 的 loader 改用 `val_loader`（已含 key 和執色）；`record_p01_after()` 換成三個只讀目錄的 `record_readonly_after()`；`dump_inner`／`dump_val` 換成 `dump_inner_p03`／`dump_val_p03`：fp32、先視角再 D4，一次存 8 種對稱（`<名稱>_d4`，[盤數, 8, 10]）和「原方向、執色對調」（`<名稱>_s0_swap`，[盤數, 10]）；inner 的執色用 `INNER_KEYS` 的 color 欄並和執色表核對，驗證題的執色用題目檔的 `color_i`。拿掉用不到的規則 B 函式。",
+  "[新增 key 檔] `inner_keys`、`val_keys` 的內容摘要（逐陣列的 dtype、形狀、位元組）必須和 prereg02 的 key 檔相同：正式執行比對產生器從 repo 讀出的值，SMOKE 比對 `prereg02_smoke` 的檔。不同就在訓練前停。",
+  "[新增訓練] 從零訓練到 T 步（以 global step 計，不管是不是一輪的中間）。每一輪開始時 random／numpy／torch 的種子設為 42·1000＋pass、D4 的 GPU generator 種子設為 42＋pass；B 臂先算這一輪收下的盤。`LambdaLR`：t＜1,000 時 (t＋1)/1,000，之後 0.5·(1＋cos(π·(t−1,000)/(T−1,000)))。bf16 autocast（SMOKE 關）、不用 GradScaler。每一輪開始前 Drive 剩不到 3 GB 就先停下（不是登記的停止：這一輪還沒開始，上一輪的 `state.pt` 已存好；狀態記 `drive_space_pause`，清出空間後「全部執行」從這一輪的開頭接續；Colab 刪掉或覆寫的檔會進 Drive 的垃圾桶，照樣占空間）。每一輪結束：核對盤數、收到的 key、執黑盤數（和訓練前讀到的分片 key 比）、學習率，inner 監看，存 `pass_N.pth`（只存在 Colab 的本機磁碟、只留最後兩輪，不寫進 Drive）、`state.pt`（含 recipe 設定、各 RNG 狀態；recipe 含訓練分片排列的 SHA-256）、`history.csv`（含資料順序和 D4 抽法的 SHA-256）。第 T 步存 `final.pth`。接續：有 `state.pt` 就從下一輪的開頭重跑，recipe 設定不同就停。停止：第 300 步推估的訓練時間超過上限、loss 非有限值、每一輪的核對（含學習率）不符 → 寫 `STOPPED.json`、打包 `*_results_failed.zip`、送出 Drive 的寫入。",
+  "[新增最後輸出] 只用第 T 步的 `final.pth`（核對 SHA-256）：inner 和本機驗證題的 8 種對稱、原方向執色對調，全部 fp32。inner 原方向的 accuracy 和最後一輪的監看值相差超過 0.05 個百分點時只提醒。",
+  "[底稿結尾（改寫）] 核對 6 個 dump 的完成標記、SHA-256、列數、形狀、權重 SHA-256、NaN 位置和 key 檔摘要；Drive 上的 `history.csv` 和記憶體裡的 history（這次訓練的，或從 `state.pt` 讀回的）逐列相同而且記到第 T 步，不同就先照記憶體裡的重寫再核對（接續時 `state.pt` 已記訓練完成，訓練格不會再寫 `history.csv`）；三個只讀目錄前後指紋相同；不符就照停止條件處理（`*_results_failed.zip`）。通過才打包 `prereg03/prereg03_rank_<臂>_results.zip`（不含權重、< 100 MB），最後 `drive.flush_and_unmount()`。",
+  "[拿掉] prereg02 的 preflight（prereg01 的檔案核對）、P1 逐盤輸出與重現核對、接著訓練、P2 逐盤輸出。",
+  "[metadata] notebook metadata 和 prereg02 相同。每格 cell id 是 `c10-rank03-NN`，cell metadata `c10` 記底稿的格號、底稿的 `c10` 和是否改動。A、B 兩份的 cell id 和 metadata 相同。"
+ ],
+ "smoke_cfg_p03": null,
+ "readonly_roots": {
+  "prereg01": "/content/drive/MyDrive/C10/results/prereg01",
+  "prereg02": "/content/drive/MyDrive/C10/results/prereg02",
+  "test02": "/content/drive/MyDrive/C10/results/test02"
+ },
+ "official_notebook": "third_party/aicup2026_tutorial/rank-prediction.ipynb",
+ "deviations_from_official": [
+  "[①] 官方 cell 4：改用 `c10data.load_rows(..., part=\"fit\")` 讀訓練資料（5,767 人、720,307 盤），`part=\"inner\"` 讀內部驗證（640 人、73,556 盤），各自轉成 DataFrame。`load_rows` 會 assert 人數、盤數，並確認沒有任何一盤出現在本機驗證檔。結果存 `leak_check.json`（每次執行各記一筆）。SMOKE 時等 `load_rows` 全部通過，才用固定 seed 縮小資料。",
+  "[②] 官方 cell 4：取代 `df.iloc[:VAL_SIZE]` 的切法：`df_train`、`df_val` 各自 `sample(frac=1.0, random_state=42)` 打散之後，才寫分片。",
+  "[③] 官方 cell 2、8、9：`VAL_SIZE` 改成內部驗證實際寫入的盤數：每個抽特徵的 worker 寫完後，把 `rows`、`written`、`bad` 寫進分片目錄的 `_count_w<N>.json`；`extract_split` 加總、核對後回傳；cell 9 設定 `VAL_SIZE` 並印出。cell 2 先設成 `None`。",
+  "[④] 官方 cell 20、21：`predict()` 改讀打包檔的 `local/rank_val_questions.csv`，拿掉 public／private 迴圈（內層程式因此少一層縮排，進度訊息不印 split 名稱）。每題另存 10 維平均機率到 `rank_val_probs.csv`（完整 float；沒有可解析棋譜的題 `n_parsed=0`、機率欄留空）。官方的 argmax 結果改存成 `pred_official_argmax.csv`（官方是 `./submission_rank.csv`）。`predict()` 因此多了題目檔、機率檔路徑和 `limit` 三個參數；SMOKE 時只推論前 12 題。",
+  "[營運性] 新增：最前面兩格 markdown：這份 notebook 的用途與操作說明，以及這張差異表。",
+  "[營運性] 新增：新增的程式格：設定（Colab 或本機、Drive 路徑、SMOKE 縮小設定、結果紀錄工具）、準備（解壓打包檔並逐檔核對 SHA-256、確認沒有答案檔、解開訓練資料、把打包檔的 `tools/`、`tutorial/` 加進 import 路徑）、環境紀錄（`env.json`）、分片備份工具、設定紀錄與接續工具、結尾核對，以及把結果目錄裡權重以外的檔案打成 `rank_results.zip`（放在結果目錄旁，方便下載）。",
+  "[營運性] 新增（準備格）：缺 `sgfmill` 或 `webdataset` 時才用 pip 安裝，版本固定為 `sgfmill==1.1.1`、`webdataset==1.0.2`（本機冒煙測試用的版本）。官方 notebook 只列出需要的套件，不安裝也不固定版本。Colab 內建的 torch、pandas、numpy、matplotlib 不動，實際版本記在 `env.json`。",
+  "[營運性] 新增（設定格）：在 Linux 上明確指定 multiprocessing 用 `fork`。官方的 worker 函式定義在 notebook 內，依賴 fork；Python 3.14 起 Linux 預設改成 forkserver。3.13 以前本來就是 fork，行為不變。實際的啟動方式記在 `config.json`。",
+  "[營運性] metadata：notebook metadata 加上 Colab 設定（GPU、A100、高 RAM），其餘沿用官方。官方格沿用官方的 cell id，新增的格用 `c10-rank-NN`；每格的 cell metadata 加 `c10` 對照欄（對應的官方格、是否改動）。官方原本就沒有存輸出。",
+  "[營運性] 官方 cell markdown 0、3、5、19、22：官方的說明原文不動，在後面附加一段「**本版**」說明：路徑由設定格決定（0）、① ② 的讀法（3）、分片會備份到 Drive（5）、④ 只預測本機驗證題（19）、分數不在這裡算（22）。",
+  "[營運性] 全部：工作目錄切到 `WORK`（Colab 是 `/content/c10`），官方的相對路徑 `./training`、`./rank-features` 照用。webdataset 會把 Windows 路徑的 `C:` 當成網址格式，本機冒煙測試只能用相對路徑。",
+  "[營運性] 全部：改過的格在開頭或行內加了說明註解（標 ①–④ 或「本版」）。",
+  "[營運性] 全部：紀錄檔都是每次執行各記一筆、不覆蓋前幾次：`timings.json`（各階段秒數）、`run_log.json`（每次執行與接續）、`env.json`、`leak_check.json`、`config.json`（頂層是固定說明與跨執行的累計狀態，每次執行的實際設定在 `runs`）。JSON 和 CSV 的 float 都寫完整精度。原生 Windows 的正式執行會直接報錯，因為官方的多進程依賴 Linux 的 fork。",
+  "[營運性] 官方 cell 2：`CKPT_DIR` 改到 Drive 的結果目錄 `ckpt/`，拿掉 `TEST_DIR`。`NPROC` 從寫死的 8 改成 `os.cpu_count()`（官方註解寫「設成 CPU 核數」）。加上 SMOKE 縮小設定（只在 SMOKE 生效）。最後的 `print` 多印 `NPROC`、batch、epoch 數。",
+  "[營運性] 官方 cell 4：不印官方的「全量 N 局」和全量的等級分布；改成逐一印 `fit`、`inner` 的人數與盤數，等級分布只印訓練集（`df_train`）。顯示前 3 列時不印棋譜欄，不讓棋譜內容進 notebook 輸出。",
+  "[營運性] 官方 cell 6：示範用的第一盤改取 `df_train`（本版沒有合併的 `df`）。",
+  "[營運性] 官方 cell 9：分片特徵抽完後備份到 Drive 的 `features_rank/`，全部核對後才寫完成標記。重跑時有完整且設定相符的備份，就複製回來、核對 SHA-256，不重抽；備份缺檔、大小或 SHA-256 不符時改成重抽。重抽前先清掉不完整的舊分片。",
+  "[營運性] 官方 cell 11、12：`pick_workers` 另外記下讀出的筆數（寫進 `config.json`）。本機冒煙測試的 worker 候選數是 0（Windows 的 spawn 無法 pickle notebook 內定義的函式）。多 worker 對不上時照官方退回 0，並用 0 個 worker 再數一次；還是對不上 `VAL_SIZE` 就停下來，因為這表示 ③ 沒有成立。",
+  "[營運性] 官方 cell 16：每個 epoch 結束，把 model、optimizer、epoch、最佳分數、history 存成 `ckpt/state.pt`。重跑時從最後完成的 epoch 接續；`state.pt` 讀不進來、或設定和上次不同，就停下來並說明處理方式。另外記最佳 epoch 的編號，結束時一併印出。history 多記 loss、步數、樣本數、秒數和第幾次執行。官方的 `epoch_N.pth`、`best_model.pth`、`history.csv` 照樣存在 `ckpt/`。",
+  "[營運性] 官方 cell 16：`sync_best()` 把最佳 epoch 的 `epoch_N.pth` 複製成 `best_model.pth`：接續時做一次（中斷時可能留下寫一半的 `best_model.pth`），正常訓練結束時也做一次。複製來源和官方存的 `best_model.pth` 是同一個 epoch 結束時的同一份權重。找不到那個 `epoch_N.pth` 就停下來並說明處理方式。",
+  "[營運性] 官方 cell 16：每次執行記下有沒有讀 `state.pt`、是否接續訓練、實際訓練了哪些 epoch（`run_log.json`、`config.json` 的 `runs`），頂層的 `resumed` 表示是否曾經接續訓練。",
+  "[營運性] 官方 cell 18：訓練曲線另存 `ckpt/history.png`。非 Colab 時用不開視窗的 Agg 後端，不 `show()`，畫完就 `close()`。",
+  "[營運性] 官方 cell 20：`predict()` 讀題目檔時 `question_id` 以字串讀入（`dtype={'question_id': str}`），代號原樣照抄，不會被轉成數字。每題 assert 非空的 `sgf_` 欄數等於 `num_games`，題目檔格式不對就停。兩者都不改變預測。",
+  "[營運性] 官方 cell 21：推論用的權重、題目檔、題數寫進 `config.json`，秒數寫進 `timings.json`；輸出路徑指向 Drive 的結果目錄。"
+ ],
+ "resumed": false,
+ "resume_count": 0,
+ "runs": [
+  {
+   "run": 1,
+   "start": "2026-09-28T15:40:36+00:00",
+   "end": "2026-09-28T16:23:13+00:00",
+   "in_colab": true,
+   "mp_start_method": "fork",
+   "preflight": {
+    "arm": "A",
+    "gpu_class": "G4",
+    "loader_workers": 16,
+    "amp": true,
+    "bundle_files_match_pin": true,
+    "drive_free_bytes": 189972316160,
+    "min_drive_free_bytes": 3000000000,
+    "min_pass_free_bytes": 3000000000,
+    "will_write_feature_backup": false,
+    "cpu_count": 48,
+    "ram_bytes": 189928599552,
+    "readonly_files_fingerprinted": {
+     "prereg01": 996,
+     "prereg02": 54,
+     "test02": 0
+    }
+   },
+   "view_d4_check": {
+    "view_black_unchanged": true,
+    "view_white_swapped": true,
+    "colour_plane_constant": true,
+    "d4_gather_equals_d4": 8,
+    "colour_plane_d4_invariant": true,
+    "train_input_equals_dump_input": true,
+    "device": "cuda"
+   },
+   "colour_check": {
+    "keys": 793863,
+    "fit_games": 720307,
+    "inner_games": 73556,
+    "fit_black": 360581,
+    "fit_black_ratio": 0.5005934969394994,
+    "ratio_tolerance": 0.01,
+    "inner_black": 35871,
+    "inner_black_ratio": 0.48766925879601936,
+    "three_way_disjoint": {
+     "fit_players": 5767,
+     "inner_players": 640,
+     "validation_players": 1600,
+     "fit_inner": 0,
+     "fit_validation": 0,
+     "inner_validation": 0,
+     "unknown_players": 0
+    },
+    "problems": []
+   },
+   "sampling": {
+    "arm": "A",
+    "rule": "every pass uses every fit game"
+   },
+   "shard_key_check": {
+    "train": {
+     "shards": 768,
+     "keys": 720307,
+     "distinct": 720307,
+     "written": 720307,
+     "bad": 0,
+     "missing_colour": 0,
+     "not_in_part": 0,
+     "part_games_not_in_shards": 0,
+     "black": 360581,
+     "black_expected": 360581,
+     "layout_sha256": "9a214a7b4509ebf05d298c92b411897477a4f31968b9c9dd7c2db840e86ddaa3",
+     "shards_with_keys": 768
+    },
+    "val": {
+     "shards": 96,
+     "keys": 73556,
+     "distinct": 73556,
+     "written": 73556,
+     "bad": 0,
+     "missing_colour": 0,
+     "not_in_part": 0,
+     "part_games_not_in_shards": 0,
+     "black": 35871,
+     "black_expected": 35871,
+     "layout_sha256": "fa9950e772c03152fd88c73e08c38b1f0c0693f8f3898e5bc5d2215c2554264c",
+     "shards_with_keys": 96
+    }
+   },
+   "model": {
+    "class": "GoRankResNet",
+    "in_channels": 501,
+    "num_classes": 10,
+    "parameters": 26352110,
+    "init_weights_sha256": "ed6e8c083936f90de234966380e0f11d0c3978e5cfaf723a812176bcbbe6d10b",
+    "memory_format": "channels_last; bn_in2 output hooked back to NCHW before the official view()"
+   },
+   "keys_check": {
+    "inner_keys": {
+     "digest": "d53cb54006141d216b0840b767401a32d9f9bbddb4e82826df077a7397b1e302",
+     "reference_digest": "d53cb54006141d216b0840b767401a32d9f9bbddb4e82826df077a7397b1e302",
+     "reference": "results/prereg02/rank/dumps/inner_keys.npz（產生器讀出）",
+     "rows": 73556,
+     "same": true
+    },
+    "val_keys": {
+     "digest": "05c8031a9153c6e088b9553ccbd2cb950427a5ffd80d36bddc1347ddf1bef6a5",
+     "reference_digest": "05c8031a9153c6e088b9553ccbd2cb950427a5ffd80d36bddc1347ddf1bef6a5",
+     "reference": "results/prereg02/rank/dumps/val_keys.npz（產生器讀出）",
+     "rows": 19156,
+     "same": true
+    }
+   },
+   "training": {
+    "recipe": {
+     "format": "c10-prereg03 recipe v1",
+     "ARM": "A",
+     "SEED": 42,
+     "IN_CHANNELS": 501,
+     "BATCH_SIZE": 256,
+     "T": 33768,
+     "WARMUP": 1000,
+     "LR": 0.001,
+     "WD": 0.01,
+     "optimizer": "AdamW(betas=(0.9, 0.999), eps=1e-8)",
+     "loss": "CrossEntropyLoss (no label smoothing)",
+     "schedule": "LambdaLR: lambda(t) = (t+1)/WARMUP if t < WARMUP else 0.5*(1+cos(pi*(t-WARMUP)/(T-WARMUP))); t = optimizer steps done; scheduler.step() after every optimizer.step()",
+     "AMP": "bf16 autocast for the training forward/loss only, no GradScaler",
+     "channels_last": true,
+     "TF32": "torch defaults (as prereg02)",
+     "augment": "D4 in training only: s ~ U{0..7} per sample, torch.randint on DEVICE with a generator seeded SEED+pass; [8, 361] permutation gather; colour plane invariant",
+     "data_order": "shards sorted, then random.Random(SEED*1000+pass).shuffle; split_by_worker (islice w::workers); per-worker shuffle buffer 1000 (initial 100) with random.Random((SEED*1000+pass)*1000+worker); batched in the worker, partial last batch is a step; pass numbers start at 1",
+     "pass_seeds": "random / numpy / torch seeded SEED*1000+pass at every pass start",
+     "CAP": null,
+     "E_L": null,
+     "TARGET_PER_LEVEL": null,
+     "acceptance": "every pass uses every fit game",
+     "WORKERS": 16,
+     "GPU_CLASS": "G4",
+     "features_sha256": "5d29cf517565c57b34dd2f8730faae165e9ebc84ef6ca1765f37feaa6c728335",
+     "fit_games": 720307,
+     "train_written": 720307,
+     "train_shard_layout_sha256": "9a214a7b4509ebf05d298c92b411897477a4f31968b9c9dd7c2db840e86ddaa3",
+     "smoke_cfg_p03": null
+    },
+    "init_weights_sha256": "ed6e8c083936f90de234966380e0f11d0c3978e5cfaf723a812176bcbbe6d10b",
+    "loaded_state": false,
+    "start_pass": 1,
+    "global_step_at_start": 0,
+    "train_done_at_start": false,
+    "optimizer": {
+     "class": "AdamW",
+     "lr": 0.001,
+     "betas": [
+      0.9,
+      0.999
+     ],
+     "eps": 1e-08,
+     "weight_decay": 0.01,
+     "amsgrad": false,
+     "maximize": false,
+     "foreach": null,
+     "capturable": false,
+     "differentiable": false,
+     "fused": null,
+     "decoupled_weight_decay": true
+    },
+    "device": "cuda",
+    "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "tf32": {
+     "cudnn": true,
+     "matmul": false
+    },
+    "checkpoint_rule": "指定第 T 步的 final.pth，不另選 best；inner 監看只記錄"
+   },
+   "time_estimate": {
+    "step": 300,
+    "elapsed_seconds": 20.190098524093628,
+    "ms_per_step": 67.30032841364543,
+    "estimated_train_minutes": 37.87662483119964,
+    "limit_minutes": 150,
+    "gpu_class": "G4",
+    "amp": true
+   },
+   "dumps_final": {
+    "name": "p03a",
+    "weights": "prereg03/rank_a/ckpt/final.pth",
+    "weights_sha256": "790b767c5425e262130d6c103c71e89238edb17f927fa48e2a2770db788e50ac",
+    "inner": "written",
+    "val": "written",
+    "inner_acc_s0_pct": 27.391375278699222,
+    "inner_acc_s0_colour_swapped_pct": 26.719778128228832,
+    "inner_acc_from_history_pct": 27.391375278699222,
+    "abs_diff_pp": 0.0
+   },
+   "outputs": {
+    "arm": "A",
+    "dumps": {
+     "inner_keys": {
+      "rows": 73556,
+      "bytes": 8313070,
+      "sha256": "b686872d459161330af26132fc0ec2617d104be6cd72eae509250ffef0c03ab6",
+      "weights": null,
+      "weights_sha256": null
+     },
+     "val_keys": {
+      "rows": 19156,
+      "bytes": 939646,
+      "sha256": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+      "weights": null,
+      "weights_sha256": null
+     },
+     "inner_p03a_d4": {
+      "rows": 73556,
+      "bytes": 23538950,
+      "sha256": "3b26a39952bfe8dc2df9676ff9b15cab472861a66b628c3a4ee49c4010626cab",
+      "weights": "prereg03/rank_a/ckpt/final.pth",
+      "weights_sha256": "790b767c5425e262130d6c103c71e89238edb17f927fa48e2a2770db788e50ac"
+     },
+     "inner_p03a_s0_swap": {
+      "rows": 73556,
+      "bytes": 2943330,
+      "sha256": "743825209569aeb922b0246587ec5801f3c2e0a10083bfb6111a327dd5ff1071",
+      "weights": "prereg03/rank_a/ckpt/final.pth",
+      "weights_sha256": "790b767c5425e262130d6c103c71e89238edb17f927fa48e2a2770db788e50ac"
+     },
+     "val_p03a_d4": {
+      "rows": 19156,
+      "bytes": 6130950,
+      "sha256": "1e4e5957442596358b087e5f4e69c1fcf9f22f2c7933cc2049066bfab3075ecd",
+      "weights": "prereg03/rank_a/ckpt/final.pth",
+      "weights_sha256": "790b767c5425e262130d6c103c71e89238edb17f927fa48e2a2770db788e50ac"
+     },
+     "val_p03a_s0_swap": {
+      "rows": 19156,
+      "bytes": 767330,
+      "sha256": "b355c26bf68069feb0e48ee95c46bd211c2bdbc6b5a48416c8408a210aec3848",
+      "weights": "prereg03/rank_a/ckpt/final.pth",
+      "weights_sha256": "790b767c5425e262130d6c103c71e89238edb17f927fa48e2a2770db788e50ac"
+     }
+    },
+    "inner_games": 73556,
+    "val_questions": 1589,
+    "val_games": 19156,
+    "val_games_unparsed": 0,
+    "training_complete": true,
+    "global_step": 33768,
+    "passes": 12,
+    "history_file": {
+     "problems_before_rewrite": [],
+     "rewritten": false,
+     "problems": [],
+     "rows": 12
+    },
+    "final_sha256": "790b767c5425e262130d6c103c71e89238edb17f927fa48e2a2770db788e50ac",
+    "final_weights": "prereg03/rank_a/ckpt/final.pth",
+    "readonly_unchanged": true,
+    "readonly_files_fingerprinted": {
+     "prereg01": 996,
+     "prereg02": 54,
+     "test02": 0
+    },
+    "problems": [],
+    "files": {
+     "config.json": 26668,
+     "env.json": 1626,
+     "leak_check.json": 1536,
+     "readonly_after.json": 104716,
+     "readonly_before.json": 104665,
+     "run_log.json": 619,
+     "timings.json": 1542
+    }
+   }
+  }
+ ],
+ "recipe": {
+  "format": "c10-prereg03 recipe v1",
+  "ARM": "A",
+  "SEED": 42,
+  "IN_CHANNELS": 501,
+  "BATCH_SIZE": 256,
+  "T": 33768,
+  "WARMUP": 1000,
+  "LR": 0.001,
+  "WD": 0.01,
+  "optimizer": "AdamW(betas=(0.9, 0.999), eps=1e-8)",
+  "loss": "CrossEntropyLoss (no label smoothing)",
+  "schedule": "LambdaLR: lambda(t) = (t+1)/WARMUP if t < WARMUP else 0.5*(1+cos(pi*(t-WARMUP)/(T-WARMUP))); t = optimizer steps done; scheduler.step() after every optimizer.step()",
+  "AMP": "bf16 autocast for the training forward/loss only, no GradScaler",
+  "channels_last": true,
+  "TF32": "torch defaults (as prereg02)",
+  "augment": "D4 in training only: s ~ U{0..7} per sample, torch.randint on DEVICE with a generator seeded SEED+pass; [8, 361] permutation gather; colour plane invariant",
+  "data_order": "shards sorted, then random.Random(SEED*1000+pass).shuffle; split_by_worker (islice w::workers); per-worker shuffle buffer 1000 (initial 100) with random.Random((SEED*1000+pass)*1000+worker); batched in the worker, partial last batch is a step; pass numbers start at 1",
+  "pass_seeds": "random / numpy / torch seeded SEED*1000+pass at every pass start",
+  "CAP": null,
+  "E_L": null,
+  "TARGET_PER_LEVEL": null,
+  "acceptance": "every pass uses every fit game",
+  "WORKERS": 16,
+  "GPU_CLASS": "G4",
+  "features_sha256": "5d29cf517565c57b34dd2f8730faae165e9ebc84ef6ca1765f37feaa6c728335",
+  "fit_games": 720307,
+  "train_written": 720307,
+  "train_shard_layout_sha256": "9a214a7b4509ebf05d298c92b411897477a4f31968b9c9dd7c2db840e86ddaa3",
+  "smoke_cfg_p03": null
+ },
+ "passes_completed": 12,
+ "global_step": 33768,
+ "final_sha256": "790b767c5425e262130d6c103c71e89238edb17f927fa48e2a2770db788e50ac",
+ "training_complete": true,
+ "passes": 12,
+ "trained_in_runs": [
+  1
+ ]
+}

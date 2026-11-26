@@ -1,0 +1,37 @@
+{
+ "format": "c10-prereg35 apply v1",
+ "pool": "private",
+ "weights_O_L_JO_S2_PA": [
+  1,
+  2,
+  0.5,
+  0,
+  1
+ ],
+ "csls_k": 40,
+ "questions": 400,
+ "candidates": 600,
+ "games": 7100,
+ "not_alternating": 0,
+ "no_move": 0,
+ "terms_rows_without_signal": {
+  "O": 0,
+  "L": 0,
+  "JO": 0,
+  "S2": 0,
+  "PA": 0
+ },
+ "lda_train": {
+  "B": [
+   1082,
+   232165
+  ],
+  "W": [
+   1077,
+   229761
+  ]
+ },
+ "eval_sha256": "c48c57fffd123ec1bdb5ddc4b20d44df65579388255dc0a8c3d8b938e7ef89ca",
+ "top5_sha256": "80122d1a39fbedee399bf7a9b40143e869750b4a7655331a30add5d1cf57ff6f",
+ "seconds": 7.7
+}

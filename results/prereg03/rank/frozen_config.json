@@ -1,0 +1,821 @@
+{
+ "format": "c10-prereg03 rank frozen_config v1",
+ "what": "PREREG_03 competition 2 frozen configuration (selected on inner; commit before apply)",
+ "created": "2026-09-29T02:00:08+08:00",
+ "smoke": false,
+ "combo": {
+  "id": "P01",
+  "sources": [
+   "C5",
+   "C6A"
+  ],
+  "pool": "log",
+  "calibrated": true,
+  "opening": true
+ },
+ "source_definitions": {
+  "C5": "prereg02 epoch 9, 8 symmetries (committed; R20's source)",
+  "C6A": "prereg03 arm A final.pth (step T), 8 symmetries"
+ },
+ "dumps": {
+  "p02e9_d4": {
+   "weights_sha256": "423581b4fddd5c2c160ebf691f4e86b9e00c4fe743d5cfb23df7891f4a2ca939",
+   "syms": 8,
+   "inner_sha256": "d042fca41e04a365dd9f7f4ebc31d244d39b24e803a1191cb06ecaaf3d056de5",
+   "folder": "prereg02 dumps"
+  },
+  "p03a_d4": {
+   "weights_sha256": "790b767c5425e262130d6c103c71e89238edb17f927fa48e2a2770db788e50ac",
+   "syms": 8,
+   "inner_sha256": "3b26a39952bfe8dc2df9676ff9b15cab472861a66b628c3a4ee49c4010626cab",
+   "folder": "prereg03 rank_a dumps"
+  }
+ },
+ "params": {
+  "a": 1.2517560085323471,
+  "gamma": 0.38222140520128767,
+  "w": 0.10059462598205321,
+  "beta": [
+   0.13862955563537602,
+   0.11884727782960357,
+   0.16053372337623695,
+   0.12167507827333235,
+   0.17002595681071003,
+   0.1038128247136447,
+   0.09187862359327999,
+   0.028174532822958277,
+   -0.2058248283344253
+  ],
+  "b": [
+   0.26105793911642894,
+   0.06500614139112475,
+   0.01747444625311858,
+   -0.07085553455700921,
+   -0.06786612504247366,
+   -0.14529073038101212,
+   -0.10220964355970355,
+   -0.10432002401262336,
+   -0.048259046172833844,
+   0.19526257696498345
+  ]
+ },
+ "basis": [
+  [
+   0.7071067811865475,
+   0.4082482904638631,
+   0.2886751345948129,
+   0.22360679774997896,
+   0.18257418583505536,
+   0.1543033499620919,
+   0.1336306209562122,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   -0.7071067811865475,
+   0.4082482904638631,
+   0.2886751345948129,
+   0.22360679774997896,
+   0.18257418583505536,
+   0.1543033499620919,
+   0.1336306209562122,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   -0.8164965809277261,
+   0.2886751345948129,
+   0.22360679774997896,
+   0.18257418583505536,
+   0.1543033499620919,
+   0.1336306209562122,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   0.0,
+   -0.8660254037844387,
+   0.22360679774997896,
+   0.18257418583505536,
+   0.1543033499620919,
+   0.1336306209562122,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   -0.8944271909999159,
+   0.18257418583505536,
+   0.1543033499620919,
+   0.1336306209562122,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   -0.9128709291752769,
+   0.1543033499620919,
+   0.1336306209562122,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   -0.9258200997725514,
+   0.1336306209562122,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   -0.9354143466934853,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   -0.9428090415820635,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   -0.9486832980505138
+  ]
+ ],
+ "formula": "p = softmax(e^a (n/12)^gamma (m + w m_op + b)), log pooling, b = B beta",
+ "decision_rule": "B, tools/decide.py (argmax p_k + e^-1 (p_{k-1} + p_{k+1}))",
+ "opening_build_id": "c0cb86b47cd3f95c75940cc71b3b7ca24d43c3390c1a510bf96c6ae68e0f93a6",
+ "selection": {
+  "rule": "highest OOF rank-balanced mean (rule B); within 0.003 of the best -> the earliest in the list P00..P06 (compared with 1e-12 float slack)",
+  "best_id": "P06",
+  "best_rank_balanced": 0.5891004877092806,
+  "selected": "P01",
+  "selected_rank_balanced": 0.5868915844011394,
+  "within_tolerance": [
+   "P01",
+   "P02",
+   "P03",
+   "P05",
+   "P06"
+  ]
+ },
+ "gates": {
+  "selected": "P01",
+  "G1": {
+   "threshold": 0.01,
+   "delta": 0.0014213322955577423,
+   "passed": false
+  },
+  "G2": {
+   "ci95": [
+    -0.005331780666866534,
+    0.008098626478112875
+   ],
+   "se": 0.0032712557280763837,
+   "passed": false,
+   "bootstrap": "players within each level, 1000 draws, default_rng(0), paired"
+  },
+  "G3": {
+   "question_mean_difference": 0.0038580721827529392,
+   "passed": true,
+   "note": "mean of the per-question score differences on the inner eval rounds, >= 0 with 1e-12 slack"
+  },
+  "passed": false,
+  "reason": "a gate failed: not submitted, R20 unchanged"
+ },
+ "score_allowed": false,
+ "score_blocked_single_colour": [],
+ "se_val": {
+  "se_val": 0.005109208344122996,
+  "adoption_probability": 0.046302875366163676,
+  "delta": 0.0014213322955577423,
+  "N_l": {
+   "D": 178,
+   "C": 163,
+   "B": 207,
+   "A": 308,
+   "1D": 87,
+   "2D": 122,
+   "3D": 124,
+   "4D": 128,
+   "5D": 131,
+   "6D": 141
+  },
+  "per_level_var_over_N": {
+   "D": 0.00017363895255373136,
+   "C": 0.0002286760905766717,
+   "B": 0.0001514632507917556,
+   "A": 0.00010828199237816055,
+   "1D": 0.0004937310859263394,
+   "2D": 0.0003324053313776087,
+   "3D": 0.0002968131396195543,
+   "4D": 0.00035692917265435243,
+   "5D": 0.00033352316885264336,
+   "6D": 0.00013493880563478724
+  },
+  "formula": "sqrt(sum_l Var_l(d, ddof 1) / N_l) / 10; Phi(delta / SE_val - 1.96)"
+ },
+ "oof": {
+  "rank_balanced": 0.5868915844011394,
+  "question_mean": 0.5944152338374201,
+  "per_level": {
+   "D": 0.7510873393647646,
+   "C": 0.6047490109253468,
+   "B": 0.6022259435062978,
+   "A": 0.544708434146582,
+   "1D": 0.4553150260918261,
+   "2D": 0.47160328244056055,
+   "3D": 0.48096276054944204,
+   "4D": 0.5535469781453167,
+   "5D": 0.6453628941598336,
+   "6D": 0.7593541746814244
+  },
+  "per_n_bin": {
+   "5-7": {
+    "n_questions": 26849,
+    "rank_balanced": 0.5606780146964373,
+    "levels_present": 10,
+    "question_mean": 0.5563360135761546,
+    "pred_distribution": {
+     "D": 2298,
+     "C": 3349,
+     "B": 3737,
+     "A": 3416,
+     "1D": 2957,
+     "2D": 2334,
+     "3D": 2067,
+     "4D": 2006,
+     "5D": 2055,
+     "6D": 2630
+    },
+    "true_distribution": {
+     "D": 2649,
+     "C": 2428,
+     "B": 4237,
+     "A": 6446,
+     "1D": 1254,
+     "2D": 2032,
+     "3D": 1798,
+     "4D": 1929,
+     "5D": 1962,
+     "6D": 2114
+    }
+   },
+   "8-12": {
+    "n_questions": 42850,
+    "rank_balanced": 0.5833906109323103,
+    "levels_present": 10,
+    "question_mean": 0.5904983563456521,
+    "pred_distribution": {
+     "D": 4071,
+     "C": 5075,
+     "B": 5669,
+     "A": 5668,
+     "1D": 5068,
+     "2D": 3773,
+     "3D": 3127,
+     "4D": 3339,
+     "5D": 3458,
+     "6D": 3602
+    },
+    "true_distribution": {
+     "D": 4640,
+     "C": 4702,
+     "B": 5719,
+     "A": 9227,
+     "1D": 2119,
+     "2D": 2990,
+     "3D": 3068,
+     "4D": 3319,
+     "5D": 3374,
+     "6D": 3692
+    }
+   },
+   "13-20": {
+    "n_questions": 57501,
+    "rank_balanced": 0.6025334420587865,
+    "levels_present": 10,
+    "question_mean": 0.6151144770734853,
+    "pred_distribution": {
+     "D": 6230,
+     "C": 6168,
+     "B": 7007,
+     "A": 6840,
+     "1D": 5228,
+     "2D": 5156,
+     "3D": 4900,
+     "4D": 5015,
+     "5D": 5518,
+     "6D": 5439
+    },
+    "true_distribution": {
+     "D": 6911,
+     "C": 5870,
+     "B": 6644,
+     "A": 8927,
+     "1D": 3427,
+     "2D": 4778,
+     "3D": 4934,
+     "4D": 5152,
+     "5D": 5264,
+     "6D": 5594
+    }
+   }
+  },
+  "pred_distribution": {
+   "D": 12599,
+   "C": 14592,
+   "B": 16413,
+   "A": 15924,
+   "1D": 13253,
+   "2D": 11263,
+   "3D": 10094,
+   "4D": 10360,
+   "5D": 11031,
+   "6D": 11671
+  }
+ },
+ "P00_oof_rank_balanced": 0.5854702521055817,
+ "per_level_diff_vs_P00": {
+  "D": 0.008632777937038316,
+  "C": -0.013300935667395763,
+  "B": 0.02541068383603584,
+  "A": 0.008842262435355575,
+  "1D": -0.011664883174747898,
+  "2D": -0.016440684507865844,
+  "3D": 0.008904026722635683,
+  "4D": -0.022349921309546383,
+  "5D": 0.013869797083905344,
+  "6D": 0.012310199600162774
+ },
+ "no_opening": {
+  "combo": {
+   "id": "P01-noopen",
+   "sources": [
+    "C5",
+    "C6A"
+   ],
+   "pool": "log",
+   "calibrated": true,
+   "opening": false
+  },
+  "params": {
+   "a": 1.3124467480369404,
+   "gamma": 0.366341726607219,
+   "w": 0.0,
+   "beta": [
+    0.13726699367342124,
+    0.11664105393207508,
+    0.14892459615599737,
+    0.12259743512547061,
+    0.15675113495835022,
+    0.10242027032042612,
+    0.07400641748820916,
+    -0.0022149555031726314,
+    -0.24422516174447156
+   ],
+   "b": [
+    0.24339277838381343,
+    0.04926793426467931,
+    0.0034748237272276745,
+    -0.07325146590066933,
+    -0.0813470817850736,
+    -0.14340486732445457,
+    -0.11093784880699956,
+    -0.09523129210976353,
+    -0.02365531235942528,
+    0.23169233191066546
+   ]
+  },
+  "oof_rank_balanced": 0.5727370297449568,
+  "oof_question_mean": 0.5799377941134675
+ },
+ "fail_opening": {
+  "use": "noopen",
+  "reason": "its inner OOF is higher than R10's",
+  "noopen_inner_oof_rank_balanced": 0.5727370297449568,
+  "R10": {
+   "path": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\test02\\rank\\fallback_R10.json",
+   "sha256": "d22bef07c3ab0c1e87e263d5cd90fc53446f24563812cd0b5fa804e37394cd5d",
+   "inner_oof_rank_balanced": 0.5686757203001245,
+   "params": {
+    "a": 1.2235994658708127,
+    "gamma": 0.43313317341817686,
+    "w": 0.0,
+    "beta": [
+     0.18217704465338916,
+     0.1719279444392872,
+     0.22196156021985375,
+     0.156587385516264,
+     0.19802389156361527,
+     0.09079919928987129,
+     0.07706539890812072,
+     -0.12497723950871323,
+     -0.49930731109502835
+    ],
+    "b": [
+     0.2911993479057485,
+     0.03356210060387661,
+     -0.048187143946102504,
+     -0.16410769823085627,
+     -0.14695336763349956,
+     -0.22382165692886474,
+     -0.14112574740840217,
+     -0.1394484005452287,
+     0.06519805955296354,
+     0.4736845066303654
+    ]
+   },
+   "commit_check": {
+    "files": 1,
+    "git_head": "d12ccd04e9864e394935356cedca73cdb2f5589c"
+   }
+  },
+  "rule": "PREREG_03 2.3: on test day T1 = FAIL_OPENING use the higher inner OOF of the selected combination's no-opening version and R10 (fixed now)"
+ },
+ "single_colour": {
+  "what": "PREREG_03 rev 3, recorded only: 5-fold OOF on the single-colour inner pseudo-questions (fold f's players scored with the parameters fitted on the other folds' registered mixed-colour fit questions); never used for the selection, the gates, the refit, the FAIL_OPENING choice or H3R",
+  "questions_sha256": "45d0f14acd98786adfd7cae040edc551420f095aaf6118d52edb47ddf91a5622",
+  "counts": {
+   "questions": 120544,
+   "players": 623,
+   "player_colour_pairs": 1170,
+   "player_colour_pairs_by_level": {
+    "D": {
+     "B": 68,
+     "W": 67
+    },
+    "C": {
+     "B": 61,
+     "W": 57
+    },
+    "B": {
+     "B": 71,
+     "W": 70
+    },
+    "A": {
+     "B": 100,
+     "W": 100
+    },
+    "1D": {
+     "B": 34,
+     "W": 32
+    },
+    "2D": {
+     "B": 48,
+     "W": 47
+    },
+    "3D": {
+     "B": 49,
+     "W": 48
+    },
+    "4D": {
+     "B": 52,
+     "W": 52
+    },
+    "5D": {
+     "B": 53,
+     "W": 52
+    },
+    "6D": {
+     "B": 52,
+     "W": 57
+    }
+   },
+   "questions_by_colour": {
+    "B": 59744,
+    "W": 60800
+   },
+   "questions_by_k": {
+    "5": 37440,
+    "10": 32288,
+    "15": 27296,
+    "20": 23520
+   },
+   "games_per_question_mean": 11.530395540217679
+  },
+  "status": "ok",
+  "selected": {
+   "id": "P01",
+   "rank_balanced": 0.5868944423702478,
+   "question_mean": 0.5944000574001924,
+   "se": 0.009420334594950995,
+   "n_questions": 120544,
+   "per_level": {
+    "D": 0.7470987592027266,
+    "C": 0.603473486138339,
+    "B": 0.5892191802405011,
+    "A": 0.5560047817898248,
+    "1D": 0.4870062064363042,
+    "2D": 0.45356911651818493,
+    "3D": 0.4939782769397083,
+    "4D": 0.5534161306636157,
+    "5D": 0.6366283327585073,
+    "6D": 0.7485501530147665
+   },
+   "by_colour": {
+    "B": {
+     "rank_balanced": 0.570640873431543,
+     "question_mean": 0.5769381615144562,
+     "n_questions": 59744
+    },
+    "W": {
+     "rank_balanced": 0.6029825641519421,
+     "question_mean": 0.6115586677258078,
+     "n_questions": 60800
+    }
+   },
+   "by_k": {
+    "5": {
+     "rank_balanced": 0.5402629278396638,
+     "question_mean": 0.5467265559061939,
+     "n_questions": 37440
+    },
+    "10": {
+     "rank_balanced": 0.5887485717521733,
+     "question_mean": 0.5982390392876844,
+     "n_questions": 32288
+    },
+    "15": {
+     "rank_balanced": 0.6159952824073534,
+     "question_mean": 0.6230075044448087,
+     "n_questions": 27296
+    },
+    "20": {
+     "rank_balanced": 0.6239814109485596,
+     "question_mean": 0.6318181685490911,
+     "n_questions": 23520
+    }
+   }
+  },
+  "P00": {
+   "rank_balanced": 0.5832555518010033,
+   "question_mean": 0.5901676426238993,
+   "se": 0.008980286076752867,
+   "n_questions": 120544,
+   "per_level": {
+    "D": 0.7331853513718004,
+    "C": 0.6050653721352892,
+    "B": 0.580824600245356,
+    "A": 0.548219355898549,
+    "1D": 0.4836286034119141,
+    "2D": 0.46197791317745907,
+    "3D": 0.48948446977420734,
+    "4D": 0.5507523426239923,
+    "5D": 0.6365108948088859,
+    "6D": 0.7429066145625792
+   },
+   "by_colour": {
+    "B": {
+     "rank_balanced": 0.564653307902876,
+     "question_mean": 0.5701725990267568,
+     "n_questions": 59744
+    },
+    "W": {
+     "rank_balanced": 0.6017342113039106,
+     "question_mean": 0.6098154038848811,
+     "n_questions": 60800
+    }
+   },
+   "by_k": {
+    "5": {
+     "rank_balanced": 0.5343177993037568,
+     "question_mean": 0.5402205148043768,
+     "n_questions": 37440
+    },
+    "10": {
+     "rank_balanced": 0.5831440219206478,
+     "question_mean": 0.5919388865210254,
+     "n_questions": 32288
+    },
+    "15": {
+     "rank_balanced": 0.6145364119429145,
+     "question_mean": 0.6214397757170476,
+     "n_questions": 27296
+    },
+    "20": {
+     "rank_balanced": 0.6239642174615407,
+     "question_mean": 0.6309510779003422,
+     "n_questions": 23520
+    }
+   }
+  },
+  "selected_minus_P00": {
+   "rank_balanced": 0.0036388905692444906,
+   "question_mean": 0.004232414776293103,
+   "ci95": [
+    0.0003077659654496663,
+    0.007362641293804875
+   ],
+   "se": 0.001831610959865546,
+   "n_questions": 120544,
+   "by_colour": {
+    "B": {
+     "rank_balanced": 0.0059875655286669716,
+     "question_mean": 0.006765562487699439,
+     "ci95": [
+      0.0013738183481705635,
+      0.010427897970971184
+     ],
+     "se": 0.0022878505047425057,
+     "n_questions": 59744
+    },
+    "W": {
+     "rank_balanced": 0.0012483528480314865,
+     "question_mean": 0.001743263840926712,
+     "ci95": [
+      -0.003120588421845899,
+      0.005528284312102582
+     ],
+     "se": 0.002178622603841809,
+     "n_questions": 60800
+    }
+   },
+   "by_k": {
+    "5": {
+     "rank_balanced": 0.005945128535907007
+    },
+    "10": {
+     "rank_balanced": 0.005604549831525474
+    },
+    "15": {
+     "rank_balanced": 0.0014588704644388217
+    },
+    "20": {
+     "rank_balanced": 1.7193487018896114e-05
+    }
+   },
+   "bootstrap": "paired, players within each level, 1000 draws, default_rng(0); the colour splits draw their own players"
+  },
+  "kappa_reference": {
+   "C6A": {
+    "dacc_points": 0.6715971504703901,
+    "kappa_mixed_inner_dkappa": 0.03542660994532633,
+    "kappa_mixed_val_dkappa": 0.03775683004383566,
+    "kappa_single_colour": {
+     "status": "recorded only (PREREG_03 rev 3): reference for the test-day kappa check on the official single-colour questions; the check-time rule (item 4, mixed-colour) is unchanged",
+     "inner": {
+      "correct": -2.201407185187655,
+      "swapped": -2.22879327936768,
+      "dkappa": 0.027386094180024707,
+      "ci95": [
+       0.02202004938420615,
+       0.032455503780070574
+      ],
+      "questions": 120544,
+      "players": 623,
+      "questions_sha256": "45d0f14acd98786adfd7cae040edc551420f095aaf6118d52edb47ddf91a5622",
+      "bootstrap": "PlayerBootstrap draws (players within each level, 1000, default_rng(0)) of the plain question mean; the colour splits draw their own players",
+      "by_colour": {
+       "B": {
+        "dkappa": 0.033606405275047546,
+        "correct": -2.2045437272189607,
+        "swapped": -2.238150132494008,
+        "ci95": [
+         0.02635646159336034,
+         0.0410191613309154
+        ],
+        "questions": 59744
+       },
+       "W": {
+        "dkappa": 0.021273820067178578,
+        "correct": -2.1983251199389993,
+        "swapped": -2.2195989400061777,
+        "ci95": [
+         0.01460950305273679,
+         0.028202367155978153
+        ],
+        "questions": 60800
+       }
+      },
+      "by_k": {
+       "5": {
+        "dkappa": 0.03052059791204529,
+        "questions": 37440
+       },
+       "10": {
+        "dkappa": 0.026967739373500613,
+        "questions": 32288
+       },
+       "15": {
+        "dkappa": 0.02553615259605779,
+        "questions": 27296
+       },
+       "20": {
+        "dkappa": 0.025117727927565527,
+        "questions": 23520
+       }
+      }
+     },
+     "val_sub_questions": {
+      "correct": -2.2593724671800923,
+      "swapped": -2.2956842255766543,
+      "dkappa": 0.03631175839656169,
+      "sub_questions": 2986,
+      "questions_with_a_sub_question": 1589,
+      "question_bootstrap_ci95_recorded_only": [
+       0.02654678947797059,
+       0.04676403909506975
+      ],
+      "definition": "each validation question's parsed games split by their colour (color_i of the question file, via val_keys.npz; no label); sub-questions with >= 2 parsed games; plain mean over sub-questions",
+      "by_colour": {
+       "B": {
+        "dkappa": 0.043956558286033766,
+        "sub_questions": 1492,
+        "question_bootstrap_ci95_recorded_only": [
+         0.02919649068629778,
+         0.05746014556842334
+        ]
+       },
+       "W": {
+        "dkappa": 0.02867719250961903,
+        "sub_questions": 1494,
+        "question_bootstrap_ci95_recorded_only": [
+         0.017650099679445544,
+         0.040091748926338315
+        ]
+       }
+      }
+     },
+     "test_day_reference": {
+      "single_colour_condition": true,
+      "dacc_points": 0.6715971504703901,
+      "inner_dkappa_ci95_lower": 0.02202004938420615,
+      "val_sub_question_dkappa": 0.03631175839656169,
+      "val_sub_question_dkappa_positive": true,
+      "rule": "condition = dacc >= 0.5 points and the single-colour inner dkappa CI lower bound > 0; recorded here, applied as PREREG_03 rev 3 11(c) says (test day; condition true with the validation sub-question dkappa not > 0 also withholds H3R at tune)"
+     }
+    }
+   }
+  }
+ },
+ "check": {
+  "usable_sources": [
+   "C5",
+   "C6A",
+   "C6B"
+  ],
+  "check_report_sha256": "72d9760b206f159e7d8d429d33ebe3d33ff8028e4641ce5d1b03cd228b41555e",
+  "selfcheck_sha256": "5d264f560a1dba67f8e084e316f8376306d2f706a12b364ba8905f726943cf48"
+ },
+ "inputs_sha256": {
+  "inner_keys.npz": "b686872d459161330af26132fc0ec2617d104be6cd72eae509250ffef0c03ab6",
+  "pseudo_inner.json": "3a51b3dd4edf8e5745f6a7ff52ca925d4a0eacd6a24950ee1b6e3b48fd0b7923",
+  "opening_inner.npz": "054689536524f7d8ea41a19d19b49ae47e7eedd128bd9cad98c429e5f80fdee5",
+  "players_split.csv": "69554875064ecbd83d790b3215c8ba8f9540f217ec4af3e4a8c43228ac2a3dfc",
+  "inner_p02e9_d4.npz": "d042fca41e04a365dd9f7f4ebc31d244d39b24e803a1191cb06ecaaf3d056de5",
+  "inner_p03a_d4.npz": "3b26a39952bfe8dc2df9676ff9b15cab472861a66b628c3a4ee49c4010626cab",
+  "inner_p03b_d4.npz": "a9c9b1509328d2c77c74ad09bcd63424c1be1979a85f372e755e3931a414ca54",
+  "check_report.json": "72d9760b206f159e7d8d429d33ebe3d33ff8028e4641ce5d1b03cd228b41555e",
+  "selfcheck.json": "5d264f560a1dba67f8e084e316f8376306d2f706a12b364ba8905f726943cf48"
+ },
+ "tool": {
+  "git_head": "d12ccd04e9864e394935356cedca73cdb2f5589c",
+  "dirty_or_untracked": [],
+  "files_sha256_rule": "sha256 of the file with CRLF folded to LF",
+  "files_sha256": {
+   "p03_rank_fuse.py": "77abd7479d26f0f647a258b4a6d5d2e517808b4c187184f14ff599d70b8aca2f",
+   "p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+   "p02_rank_pseudo.py": "16e5bfdfb2995874ddb11bde1f7a9e786a478b14443453f675a4fb3a480bb098",
+   "p02_rank_opening.py": "a4195fece41aa3d50ecda82d1af93d9c04f49df5fd2157d69dd8a488dea93463",
+   "p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "decide.py": "cf66daf1231b3c2bd60c5b6484245627e133bd0f1cd7ff5557e978da3801d0e3"
+  }
+ },
+ "environment": {
+  "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1"
+ }
+}

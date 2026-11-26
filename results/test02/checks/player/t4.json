@@ -1,0 +1,231 @@
+{
+ "verdict": "PASS",
+ "consequence": "none (the rest of T4 is record-only)",
+ "files": {
+  "player_identification_test_public.csv": {
+   "pool": "public",
+   "kind": "questions",
+   "games": 5000,
+   "games_without_moves": 0,
+   "black_share": 1.0,
+   "black_share_null_range": "not applicable",
+   "black_share_inside_null_range": "not applicable",
+   "first_move_point_tvd_vs_train": 0.07424606789836533,
+   "first_move_point_tvd_null_max": "not applicable",
+   "first_move_class_tvd_vs_train_record_only": 0.047895305109319906,
+   "upper_right_share": 0.8,
+   "upper_right_null_range": "not applicable",
+   "rotation_flag": false,
+   "null_ranges_applicable": false,
+   "mixed_colour_null_ranges_record_only": {
+    "black_share_null_range": [
+     0.4716859716859717,
+     0.5171751653509707
+    ],
+    "black_share_inside_null_range": false,
+    "first_move_point_tvd_null_max": 0.0730216373204756,
+    "upper_right_null_range": [
+     0.748792270531401,
+     0.8061329491664951
+    ]
+   },
+   "null_ranges_note": "not applicable: black-only file (official competition-1 design); the null ranges were simulated on mixed-colour pools (PREREG_02 rev 8)"
+  },
+  "player_identification_candidates_public.csv": {
+   "pool": "public",
+   "kind": "candidates",
+   "games": 40000,
+   "games_without_moves": 0,
+   "black_share": 1.0,
+   "black_share_null_range": "not applicable",
+   "black_share_inside_null_range": "not applicable",
+   "first_move_point_tvd_vs_train": 0.07257944031274921,
+   "first_move_point_tvd_null_max": "not applicable",
+   "first_move_class_tvd_vs_train_record_only": 0.05110853686341347,
+   "upper_right_share": 0.798375,
+   "upper_right_null_range": "not applicable",
+   "rotation_flag": false,
+   "null_ranges_applicable": false,
+   "mixed_colour_null_ranges_record_only": {
+    "black_share_null_range": [
+     0.490225,
+     0.52125
+    ],
+    "black_share_inside_null_range": false,
+    "first_move_point_tvd_null_max": 0.047678663773940574,
+    "upper_right_null_range": [
+     0.79095,
+     0.8394
+    ]
+   },
+   "null_ranges_note": "not applicable: black-only file (official competition-1 design); the null ranges were simulated on mixed-colour pools (PREREG_02 rev 8)"
+  },
+  "player_identification_test_private.csv": {
+   "pool": "private",
+   "kind": "questions",
+   "games": 5000,
+   "games_without_moves": 0,
+   "black_share": 1.0,
+   "black_share_null_range": "not applicable",
+   "black_share_inside_null_range": "not applicable",
+   "first_move_point_tvd_vs_train": 0.0603011829497029,
+   "first_move_point_tvd_null_max": "not applicable",
+   "first_move_class_tvd_vs_train_record_only": 0.03427963666274908,
+   "upper_right_share": 0.8422,
+   "upper_right_null_range": "not applicable",
+   "rotation_flag": false,
+   "null_ranges_applicable": false,
+   "mixed_colour_null_ranges_record_only": {
+    "black_share_null_range": [
+     0.4716859716859717,
+     0.5171751653509707
+    ],
+    "black_share_inside_null_range": false,
+    "first_move_point_tvd_null_max": 0.0730216373204756,
+    "upper_right_null_range": [
+     0.748792270531401,
+     0.8061329491664951
+    ]
+   },
+   "null_ranges_note": "not applicable: black-only file (official competition-1 design); the null ranges were simulated on mixed-colour pools (PREREG_02 rev 8)"
+  },
+  "player_identification_candidates_private.csv": {
+   "pool": "private",
+   "kind": "candidates",
+   "games": 40000,
+   "games_without_moves": 0,
+   "black_share": 1.0,
+   "black_share_null_range": "not applicable",
+   "black_share_inside_null_range": "not applicable",
+   "first_move_point_tvd_vs_train": 0.058660162899643875,
+   "first_move_point_tvd_null_max": "not applicable",
+   "first_move_class_tvd_vs_train_record_only": 0.031860003300317546,
+   "upper_right_share": 0.836475,
+   "upper_right_null_range": "not applicable",
+   "rotation_flag": false,
+   "null_ranges_applicable": false,
+   "mixed_colour_null_ranges_record_only": {
+    "black_share_null_range": [
+     0.490225,
+     0.52125
+    ],
+    "black_share_inside_null_range": false,
+    "first_move_point_tvd_null_max": 0.047678663773940574,
+    "upper_right_null_range": [
+     0.79095,
+     0.8394
+    ]
+   },
+   "null_ranges_note": "not applicable: black-only file (official competition-1 design); the null ranges were simulated on mixed-colour pools (PREREG_02 rev 8)"
+  }
+ },
+ "pools": {
+  "public": {
+   "b_c": 1.0,
+   "b_q": 1.0,
+   "abs_diff": 0.0,
+   "guard_level3_colour": false,
+   "black_only_pool": true
+  },
+  "private": {
+   "b_c": 1.0,
+   "b_q": 1.0,
+   "abs_diff": 0.0,
+   "guard_level3_colour": false,
+   "black_only_pool": true
+  }
+ },
+ "training": {
+  "black_share": {
+   "fit": 0.5005934969394994,
+   "train": 0.4993959914997928
+  },
+  "upper_right_share": {
+   "definition": "first move x > 'j' and y < 'j' (SGF letters)",
+   "fit": 0.8165532196688357,
+   "train": 0.8155336626092915
+  }
+ },
+ "rules": {
+  "decision": "|b_c - b_q| > 0.5 -> player guard level 3 for that pool (enforced in p02_player_fuse.guard_decision)",
+  "record_only": "first-move point TVD vs training, class TVD, upper-right share (rotation flag < 0.60)",
+  "black_only_files": "a file whose black share is 1 has its mixed-colour null ranges marked 'not applicable' (PREREG_02 rev 8); the values are kept under mixed_colour_null_ranges_record_only"
+ },
+ "format": "c10-test02 t4 v1",
+ "comp": "player",
+ "t1_verdict": "PASS",
+ "provenance": {
+  "tool": "tools/t02_checks.py",
+  "tool_sha256": "a6fb40f99e7af19bfe4eef3f5cbb1d0049a8f0c14a7cc95cddfac73884f99cc8",
+  "tool_committed_clean": true,
+  "c10data_sha256": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+  "p02_moves_sha256": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+  "p02_player_open_sha256": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+  "git_head": "7cdb60ab8d21a33ea0ffe3c3fd08d5b5569e3b44",
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "mode": "real",
+  "argv": [
+   "run",
+   "--comp",
+   "player"
+  ],
+  "created": "2026-11-04T14:36:34+0800",
+  "inputs": {
+   "results/test02/checks/player/t1.json": "cc0ddcf72f857ed4c5ab335cf14e17a4747fe0c82e4fa6db73ffca76ec0c42cd",
+   "manifest": {
+    "manifest_sha256": "b9e9e8a6a7fc8b7b696d2d4501563cb99aeac6a95e327f3a5e686d04bbdd0bbe",
+    "files": {
+     "player_identification_test_public.csv": "0e59f7f72376cfa2e81ae913d61092caeb1240d95abb43a581207ed29f1647a8",
+     "player_identification_candidates_public.csv": "8175aeb08235536a1435bb6ba4c55088f906096cc14e7048e8898e3d7a3597a6",
+     "player_identification_test_private.csv": "4b07a403b36875f44007adb22aaa8da3c75ec3994e165f36c29a9400e6efcd11",
+     "player_identification_candidates_private.csv": "7a8926ca83b43b1dca0e32c23513cbbff2731d623be151cf80ed912a91d91e57"
+    }
+   },
+   "player_identification_test_public.csv": "0e59f7f72376cfa2e81ae913d61092caeb1240d95abb43a581207ed29f1647a8",
+   "player_identification_candidates_public.csv": "8175aeb08235536a1435bb6ba4c55088f906096cc14e7048e8898e3d7a3597a6",
+   "player_identification_test_private.csv": "4b07a403b36875f44007adb22aaa8da3c75ec3994e165f36c29a9400e6efcd11",
+   "player_identification_candidates_private.csv": "7a8926ca83b43b1dca0e32c23513cbbff2731d623be151cf80ed912a91d91e57",
+   "results/test02/null/t3_null.json": "1950e9a8af5543dc95f6dd9d28664278ba145fafef153b785905264a6e934dd4",
+   "results/test02/null/t3_null_raw.npz": "4eb9cf053b3ae296df6de020e7f1ecf4caa3e3bc53ed477e0e749a4f4d4da714",
+   "results/test02/null/t3_null_canon.npz": "5312a18c34e71d4a254b5239b508612265be0b38a543b2f65dbd458159fcf69e",
+   "results/test02/null/t3b_null.json": "a8cf38347b326b024a464b84b193846a9ce1c0205df3be072c95f7b107f5e58c",
+   "results/test02/null/t3b_null_raw.npz": "e42318ca89298213175920b0600bc93ec9ed0707d6ea7a063100f7f49c988db7",
+   "results/test02/null/t3b_null_canon.npz": "46589ca3a1d0fadbed9c5831959fbd3f237ade1b18842dbcf340e64c434279fc",
+   "results/test02/null/train_refs.json": "380a0a7fa6e4cb7751e8ee3404a1ccba645ca73dd919a6a5e9a8451636988203"
+  },
+  "rerun_reason": null,
+  "validation_hash_guard": {
+   "available": true,
+   "rule": "real mode: hits are recorded; a file with share >= 0.50 of local validation games is refused (validation-derived tree)",
+   "games_checked": 90000,
+   "validation_hashes": 61558,
+   "hits": 0,
+   "files": {
+    "player_identification_test_public.csv": {
+     "games": 5000,
+     "validation_hits": 0,
+     "share": 0.0
+    },
+    "player_identification_candidates_public.csv": {
+     "games": 40000,
+     "validation_hits": 0,
+     "share": 0.0
+    },
+    "player_identification_test_private.csv": {
+     "games": 5000,
+     "validation_hits": 0,
+     "share": 0.0
+    },
+    "player_identification_candidates_private.csv": {
+     "games": 40000,
+     "validation_hits": 0,
+     "share": 0.0
+    }
+   }
+  },
+  "missing_files_skipped": [],
+  "runtime_s": 277.2
+ }
+}

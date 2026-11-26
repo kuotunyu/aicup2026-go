@@ -1,0 +1,231 @@
+{
+ "verdict": "PASS",
+ "consequence": "none",
+ "units": [
+  {
+   "unit": "a",
+   "what": "player_identification_test_public.csv vs training players (train)",
+   "games_in_file": 5000,
+   "threshold": 10,
+   "copies": 0,
+   "verdict": "PASS",
+   "file": "player_identification_test_public.csv",
+   "k60_matches_record_only": 0,
+   "games_under_100_moves": 0,
+   "games_without_moves": 0,
+   "same_side_copies_record_only": 0,
+   "opposite_side_copies_record_only": 0,
+   "copies_matching_both_sides_record_only": 0,
+   "copies_side_unknown_record_only": 0,
+   "questions_with_copy": 0,
+   "questions_whose_copies_map_to_one_training_player": 0,
+   "copies_per_question_histogram": {}
+  },
+  {
+   "unit": "a",
+   "what": "player_identification_candidates_public.csv vs training players (train)",
+   "games_in_file": 40000,
+   "threshold": 40,
+   "copies": 0,
+   "verdict": "PASS",
+   "file": "player_identification_candidates_public.csv",
+   "k60_matches_record_only": 0,
+   "games_under_100_moves": 0,
+   "games_without_moves": 0,
+   "same_side_copies_record_only": 0,
+   "opposite_side_copies_record_only": 0,
+   "copies_matching_both_sides_record_only": 0,
+   "copies_side_unknown_record_only": 0,
+   "candidates_with_copy": 0,
+   "candidates_whose_copies_map_to_one_training_player": 0,
+   "copies_per_candidate_histogram": {}
+  },
+  {
+   "unit": "a",
+   "what": "player_identification_test_private.csv vs training players (train)",
+   "games_in_file": 5000,
+   "threshold": 10,
+   "copies": 0,
+   "verdict": "PASS",
+   "file": "player_identification_test_private.csv",
+   "k60_matches_record_only": 0,
+   "games_under_100_moves": 0,
+   "games_without_moves": 0,
+   "same_side_copies_record_only": 0,
+   "opposite_side_copies_record_only": 0,
+   "copies_matching_both_sides_record_only": 0,
+   "copies_side_unknown_record_only": 0,
+   "questions_with_copy": 0,
+   "questions_whose_copies_map_to_one_training_player": 0,
+   "copies_per_question_histogram": {}
+  },
+  {
+   "unit": "a",
+   "what": "player_identification_candidates_private.csv vs training players (train)",
+   "games_in_file": 40000,
+   "threshold": 40,
+   "copies": 0,
+   "verdict": "PASS",
+   "file": "player_identification_candidates_private.csv",
+   "k60_matches_record_only": 0,
+   "games_under_100_moves": 0,
+   "games_without_moves": 0,
+   "same_side_copies_record_only": 0,
+   "opposite_side_copies_record_only": 0,
+   "copies_matching_both_sides_record_only": 0,
+   "copies_side_unknown_record_only": 0,
+   "candidates_with_copy": 0,
+   "candidates_whose_copies_map_to_one_training_player": 0,
+   "copies_per_candidate_histogram": {}
+  },
+  {
+   "unit": "b",
+   "what": "player_identification_test_public.csv vs player_identification_candidates_public.csv (full game)",
+   "games_in_file": 5000,
+   "threshold": 10,
+   "copies": 0,
+   "verdict": "PASS",
+   "pool": "public",
+   "k100_only_matches_record_only": 0,
+   "candidate_games_shared_by_two_candidates_record_only": 0,
+   "candidate_games_repeated_within_one_candidate_record_only": 0
+  },
+  {
+   "unit": "b",
+   "what": "player_identification_test_private.csv vs player_identification_candidates_private.csv (full game)",
+   "games_in_file": 5000,
+   "threshold": 10,
+   "copies": 0,
+   "verdict": "PASS",
+   "pool": "private",
+   "k100_only_matches_record_only": 0,
+   "candidate_games_shared_by_two_candidates_record_only": 0,
+   "candidate_games_repeated_within_one_candidate_record_only": 0
+  },
+  {
+   "unit": "c",
+   "what": "player_identification_test_public.csv: games shared by two or more questions (full game)",
+   "games_in_file": 5000,
+   "threshold": 10,
+   "copies": 0,
+   "verdict": "PASS",
+   "file": "player_identification_test_public.csv",
+   "games_shared_with_same_colour": 0,
+   "games_shared_with_opposite_colour": 0,
+   "extra_copies_within_one_question_record_only": 0
+  },
+  {
+   "unit": "c",
+   "what": "player_identification_test_private.csv: games shared by two or more questions (full game)",
+   "games_in_file": 5000,
+   "threshold": 10,
+   "copies": 0,
+   "verdict": "PASS",
+   "file": "player_identification_test_private.csv",
+   "games_shared_with_same_colour": 0,
+   "games_shared_with_opposite_colour": 0,
+   "extra_copies_within_one_question_record_only": 0
+  },
+  {
+   "unit": "d",
+   "what": "private games found among the public games (questions + candidates; full game)",
+   "games_in_file": 45000,
+   "threshold": 45,
+   "copies": 0,
+   "verdict": "PASS",
+   "public_games_found_among_private": 0,
+   "note": "threshold on the private side's game count"
+  }
+ ],
+ "index": {
+  "part": "train",
+  "games": 793863,
+  "players": 6407,
+  "short_lengths": []
+ },
+ "definitions": {
+  "key": "c10-t02 game key v1: sha1(D4-min point string)[:12 bytes]; ties on the first 12 moves; moves = all ;B[xy]/;W[xy] matches, colour letters left out",
+  "copy": "K100 keys equal; a test game under 100 moves: its full key equals the training key of the same length (K_n)",
+  "threshold": "FAIL iff copies >= max(10, ceil(0.001 x games in the unit's test file))",
+  "sides": "unit (a), record only (PREREG_02 rev 8): a copy is same_side when a matching training row has the test game's colour (the same player's side of that game can be in training), opposite_side when every matching row has the other colour (training holds the game from the opponent's side: not a leak of the same player); same_side + opposite_side + unknown = copies; the FAIL threshold stays on all copies",
+  "separation": "rank files are never compared with player files"
+ },
+ "seconds": 3.1,
+ "format": "c10-test02 t2 v1",
+ "comp": "player",
+ "t1_verdict": "PASS",
+ "provenance": {
+  "tool": "tools/t02_checks.py",
+  "tool_sha256": "a6fb40f99e7af19bfe4eef3f5cbb1d0049a8f0c14a7cc95cddfac73884f99cc8",
+  "tool_committed_clean": true,
+  "c10data_sha256": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+  "p02_moves_sha256": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+  "p02_player_open_sha256": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+  "git_head": "7cdb60ab8d21a33ea0ffe3c3fd08d5b5569e3b44",
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "mode": "real",
+  "argv": [
+   "run",
+   "--comp",
+   "player"
+  ],
+  "created": "2026-11-04T14:36:34+0800",
+  "inputs": {
+   "results/test02/checks/player/t1.json": "cc0ddcf72f857ed4c5ab335cf14e17a4747fe0c82e4fa6db73ffca76ec0c42cd",
+   "manifest": {
+    "manifest_sha256": "b9e9e8a6a7fc8b7b696d2d4501563cb99aeac6a95e327f3a5e686d04bbdd0bbe",
+    "files": {
+     "player_identification_test_public.csv": "0e59f7f72376cfa2e81ae913d61092caeb1240d95abb43a581207ed29f1647a8",
+     "player_identification_candidates_public.csv": "8175aeb08235536a1435bb6ba4c55088f906096cc14e7048e8898e3d7a3597a6",
+     "player_identification_test_private.csv": "4b07a403b36875f44007adb22aaa8da3c75ec3994e165f36c29a9400e6efcd11",
+     "player_identification_candidates_private.csv": "7a8926ca83b43b1dca0e32c23513cbbff2731d623be151cf80ed912a91d91e57"
+    }
+   },
+   "player_identification_test_public.csv": "0e59f7f72376cfa2e81ae913d61092caeb1240d95abb43a581207ed29f1647a8",
+   "player_identification_candidates_public.csv": "8175aeb08235536a1435bb6ba4c55088f906096cc14e7048e8898e3d7a3597a6",
+   "player_identification_test_private.csv": "4b07a403b36875f44007adb22aaa8da3c75ec3994e165f36c29a9400e6efcd11",
+   "player_identification_candidates_private.csv": "7a8926ca83b43b1dca0e32c23513cbbff2731d623be151cf80ed912a91d91e57",
+   "results/test02/null/t3_null.json": "1950e9a8af5543dc95f6dd9d28664278ba145fafef153b785905264a6e934dd4",
+   "results/test02/null/t3_null_raw.npz": "4eb9cf053b3ae296df6de020e7f1ecf4caa3e3bc53ed477e0e749a4f4d4da714",
+   "results/test02/null/t3_null_canon.npz": "5312a18c34e71d4a254b5239b508612265be0b38a543b2f65dbd458159fcf69e",
+   "results/test02/null/t3b_null.json": "a8cf38347b326b024a464b84b193846a9ce1c0205df3be072c95f7b107f5e58c",
+   "results/test02/null/t3b_null_raw.npz": "e42318ca89298213175920b0600bc93ec9ed0707d6ea7a063100f7f49c988db7",
+   "results/test02/null/t3b_null_canon.npz": "46589ca3a1d0fadbed9c5831959fbd3f237ade1b18842dbcf340e64c434279fc",
+   "results/test02/null/train_refs.json": "380a0a7fa6e4cb7751e8ee3404a1ccba645ca73dd919a6a5e9a8451636988203"
+  },
+  "rerun_reason": null,
+  "validation_hash_guard": {
+   "available": true,
+   "rule": "real mode: hits are recorded; a file with share >= 0.50 of local validation games is refused (validation-derived tree)",
+   "games_checked": 90000,
+   "validation_hashes": 61558,
+   "hits": 0,
+   "files": {
+    "player_identification_test_public.csv": {
+     "games": 5000,
+     "validation_hits": 0,
+     "share": 0.0
+    },
+    "player_identification_candidates_public.csv": {
+     "games": 40000,
+     "validation_hits": 0,
+     "share": 0.0
+    },
+    "player_identification_test_private.csv": {
+     "games": 5000,
+     "validation_hits": 0,
+     "share": 0.0
+    },
+    "player_identification_candidates_private.csv": {
+     "games": 40000,
+     "validation_hits": 0,
+     "share": 0.0
+    }
+   }
+  },
+  "missing_files_skipped": [],
+  "runtime_s": 277.2
+ }
+}

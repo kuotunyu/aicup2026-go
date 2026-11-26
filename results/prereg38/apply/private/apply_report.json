@@ -1,0 +1,47 @@
+{
+ "format": "c10-prereg38 apply v1",
+ "pool": "private",
+ "cfg": {
+  "gnorm": true,
+  "pool_w": "mean",
+  "centre_colour": false,
+  "whiten": {
+   "lam": 0.02,
+   "lda": 32
+  },
+  "sim": "proto",
+  "alpha": null,
+  "pair": null,
+  "krecip": null,
+  "aqe": null,
+  "qsmooth": null,
+  "wE": 4,
+  "gmul": null,
+  "rowz": false,
+  "norm": [
+   "csls",
+   10
+  ]
+ },
+ "checkpoint": {
+  "ckpt": "step_40000",
+  "ckpt_sha256": "a2c8e03ac5ee780bcd977dd85fdeca875c1df278b9b1d34d68e94e4546f9db67"
+ },
+ "questions": 400,
+ "candidates": 600,
+ "games": 7100,
+ "games_without_vector": 0,
+ "candidates_without_vector": 0,
+ "questions_without_vector": 0,
+ "terms_rows_without_signal": {
+  "O": 0,
+  "L": 0,
+  "JO": 0,
+  "S2": 0,
+  "PA": 0
+ },
+ "tune_sha256": "b0192e478993e85626b029eac4f101d92523e64e5238776a9885a187f547ad46",
+ "eval_sha256": "013ecd3a47a1b8dd0b45214d7a3072dcba409a5a49c524fe66ac6daee1652785",
+ "top5_sha256": "f65744c4a584616d1201da7365d51defaad0d442ca5c28b9efd1edb0205f5973",
+ "seconds": 22.1
+}

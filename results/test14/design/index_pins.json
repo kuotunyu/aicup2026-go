@@ -1,0 +1,70 @@
+{
+ "format": "c10-test14 index pins v1",
+ "registration": "docs/PREREG_14_RANK_EXACT_COPY.md section 3",
+ "min_moves": 100,
+ "key": "c10-t02 game key v1: sha1(D4-min point string)[:12 bytes]; ties on the first 12 moves",
+ "parts": {
+  "all": {
+   "part": "all",
+   "rows": 1000000,
+   "players": 8007,
+   "rows_per_level": {
+    "D": 100000,
+    "C": 100000,
+    "B": 100000,
+    "A": 100000,
+    "1D": 100000,
+    "2D": 100000,
+    "3D": 100000,
+    "4D": 100000,
+    "5D": 100000,
+    "6D": 100000
+   },
+   "distinct_full_keys": 1000000,
+   "keys_with_two_or_more_rows": 0,
+   "keys_with_two_or_more_players": 0,
+   "keys_with_two_or_more_levels": 0,
+   "rows_not_alternating_from_black": 0,
+   "rows_under_min_moves": 0,
+   "excluded_rows": 0,
+   "sha256_sorted_key_moves_colour_level_player": "be17ab209a13174040579ddd1d16cd11294a931f0be57012171fd57a9371fbac",
+   "seconds": 71.9
+  },
+  "fit": {
+   "part": "fit",
+   "rows": 720307,
+   "players": 5767,
+   "rows_per_level": {
+    "D": 69748,
+    "C": 75315,
+    "B": 72264,
+    "A": 71255,
+    "1D": 71538,
+    "2D": 73011,
+    "3D": 73725,
+    "4D": 71135,
+    "5D": 73840,
+    "6D": 68476
+   },
+   "distinct_full_keys": 720307,
+   "keys_with_two_or_more_rows": 0,
+   "keys_with_two_or_more_players": 0,
+   "keys_with_two_or_more_levels": 0,
+   "rows_not_alternating_from_black": 0,
+   "rows_under_min_moves": 0,
+   "excluded_rows": 0,
+   "sha256_sorted_key_moves_colour_level_player": "ba5376db3ba4bb500c083a8092dbf9f78e924fe77bd1610e5a31ddffe4e81705",
+   "seconds": 51.3
+  }
+ },
+ "rerun_reason": "PREREG_19 4.1: t14_copy.py gained one line (results/test19/rank as a base folder); the pins are recomputed by the new tool, content unchanged",
+ "provenance": {
+  "tool": "tools/t14_copy.py",
+  "tool_sha256_lf": "b8bc029a5688f1e937a9f625dc17a62cbd4ad8e436a23b633a2c7841537654ae",
+  "t02_checks_sha256_lf": "a6fb40f99e7af19bfe4eef3f5cbb1d0049a8f0c14a7cc95cddfac73884f99cc8",
+  "mode": "real",
+  "git_head": "42a0945657d6278a98a30bbbb7a55785c21b52d4",
+  "python": "3.12.13",
+  "created_utc": "2026-10-20T08:14:32+00:00"
+ }
+}

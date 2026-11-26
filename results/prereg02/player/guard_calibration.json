@@ -1,0 +1,354 @@
+{
+ "what": "PREREG_02 rev 2 2.2 split-guard calibration (切法防護 theta1 / theta2) on simulated pools of FIT players; training data only via tools/c10data.load_rows(part='fit'); no validation games, no answer files, no CNN",
+ "smoke": false,
+ "data": {
+  "part": "fit",
+  "games": 720307,
+  "players": 5767,
+  "eligible_rule": "fit players with >= 105 games",
+  "eligible_players_by_level": {
+   "D": 192,
+   "C": 210,
+   "B": 229,
+   "A": 232,
+   "1D": 146,
+   "2D": 187,
+   "3D": 189,
+   "4D": 178,
+   "5D": 189,
+   "6D": 185
+  }
+ },
+ "setup": {
+  "pools": "3 splits x 3 seeds; 40 players per level; candidates = first 100 games of the split's order; real query = next k = rng.randint(5, 20) games (R, F) or the last min(k, n - 100) games (X) (make_pool of results/prereg02/explore/opening_player_sim.py)",
+  "splits": {
+   "random (R)": "games shuffled with rng = random.Random('pool|<seed>')",
+   "fileorder (F)": "games in file order (each player's black games first)",
+   "colour_separated (X)": "black games then white games, each in file order; query = the last games (almost all white)"
+  },
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "players_chosen_by": "per level, sort eligible players by sha256('<seed>|<player_id>'), take the first 40",
+  "tokens": "own first 10 moves + whole-game first 10 moves; colour-prefixed and colour-free sets together; orientations ['raw', 'canon']",
+  "vector": "1 + ln(count) x IDF (df over candidate vectors, P = candidates), L2, cosine",
+  "self_retrieval": "sha256('c10-prereg02|sr|<player_id>|<game_id>') order, 5 parts of 20, round r uses part r mod 5, rng seeded sha256('c10-prereg02|sr-k|<r>')[:16], k = randint(5, 20), references = other 80 games, IDF from references; 10 rounds",
+  "rho": "median over real queries of max_c cosO / median over self-retrieval pseudo-queries of max_c cosO (queries without any token are left out)",
+  "colour_shares": "b_c = share of candidate games with the target player black, b_q = the same over query games (pool level)"
+ },
+ "pools": [
+  {
+   "split": "random",
+   "seed": 0,
+   "n_candidates": 400,
+   "mean_query_games": 11.94,
+   "b_c": 0.503125,
+   "b_q": 0.5087939698492462,
+   "stats": {
+    "raw": {
+     "real_max_cos_median": 0.23044469458100525,
+     "sr_max_cos_median": 0.22704399613624493,
+     "rho": 1.0149781474191444,
+     "n_real_queries": 400,
+     "n_real_queries_with_tokens": 400,
+     "n_sr_queries_with_tokens": 4000,
+     "real_open_score": 0.8804109722834607,
+     "sr_open_score": 0.8868193035513566
+    },
+    "canon": {
+     "real_max_cos_median": 0.2236752993602628,
+     "sr_max_cos_median": 0.2238695228709059,
+     "rho": 0.9991324254049754,
+     "n_real_queries": 400,
+     "n_real_queries_with_tokens": 400,
+     "n_sr_queries_with_tokens": 4000,
+     "real_open_score": 0.8369667291280487,
+     "sr_open_score": 0.8502568933591549
+    }
+   }
+  },
+  {
+   "split": "random",
+   "seed": 1,
+   "n_candidates": 400,
+   "mean_query_games": 12.41,
+   "b_c": 0.512775,
+   "b_q": 0.5203464947622884,
+   "stats": {
+    "raw": {
+     "real_max_cos_median": 0.2341023923762499,
+     "sr_max_cos_median": 0.2272704295019239,
+     "rho": 1.0300609405689014,
+     "n_real_queries": 400,
+     "n_real_queries_with_tokens": 400,
+     "n_sr_queries_with_tokens": 4000,
+     "real_open_score": 0.8975359321345355,
+     "sr_open_score": 0.8883806346389219
+    },
+    "canon": {
+     "real_max_cos_median": 0.22875925017603918,
+     "sr_max_cos_median": 0.22157302508846022,
+     "rho": 1.032432761545364,
+     "n_real_queries": 400,
+     "n_real_queries_with_tokens": 400,
+     "n_sr_queries_with_tokens": 4000,
+     "real_open_score": 0.8627329868172717,
+     "sr_open_score": 0.8692947144770108
+    }
+   }
+  },
+  {
+   "split": "random",
+   "seed": 2,
+   "n_candidates": 400,
+   "mean_query_games": 12.595,
+   "b_c": 0.50225,
+   "b_q": 0.4972211194918619,
+   "stats": {
+    "raw": {
+     "real_max_cos_median": 0.23542222481834624,
+     "sr_max_cos_median": 0.2321392275777645,
+     "rho": 1.0141423630759776,
+     "n_real_queries": 400,
+     "n_real_queries_with_tokens": 400,
+     "n_sr_queries_with_tokens": 4000,
+     "real_open_score": 0.925042103670657,
+     "sr_open_score": 0.8984904255220307
+    },
+    "canon": {
+     "real_max_cos_median": 0.22946459609779157,
+     "sr_max_cos_median": 0.22697400663285588,
+     "rho": 1.010973016258044,
+     "n_real_queries": 400,
+     "n_real_queries_with_tokens": 400,
+     "n_sr_queries_with_tokens": 4000,
+     "real_open_score": 0.8978200122552823,
+     "sr_open_score": 0.8703100303932495
+    }
+   }
+  },
+  {
+   "split": "fileorder",
+   "seed": 0,
+   "n_candidates": 400,
+   "mean_query_games": 12.005,
+   "b_c": 0.86895,
+   "b_q": 0.5847563515201999,
+   "stats": {
+    "raw": {
+     "real_max_cos_median": 0.2572091807304233,
+     "sr_max_cos_median": 0.2841343304015018,
+     "rho": 0.9052379568740202,
+     "n_real_queries": 400,
+     "n_real_queries_with_tokens": 400,
+     "n_sr_queries_with_tokens": 4000,
+     "real_open_score": 0.7670080895349676,
+     "sr_open_score": 0.9209436642084474
+    },
+    "canon": {
+     "real_max_cos_median": 0.2496356910685305,
+     "sr_max_cos_median": 0.2711183266288246,
+     "rho": 0.9207628793397468,
+     "n_real_queries": 400,
+     "n_real_queries_with_tokens": 400,
+     "n_sr_queries_with_tokens": 4000,
+     "real_open_score": 0.7388692951111716,
+     "sr_open_score": 0.894757312935267
+    }
+   }
+  },
+  {
+   "split": "fileorder",
+   "seed": 1,
+   "n_candidates": 400,
+   "mean_query_games": 12.5625,
+   "b_c": 0.8906,
+   "b_q": 0.6290547263681592,
+   "stats": {
+    "raw": {
+     "real_max_cos_median": 0.25763887741752334,
+     "sr_max_cos_median": 0.2821011939874407,
+     "rho": 0.9132853135991815,
+     "n_real_queries": 400,
+     "n_real_queries_with_tokens": 400,
+     "n_sr_queries_with_tokens": 4000,
+     "real_open_score": 0.7651157383594491,
+     "sr_open_score": 0.9401373375319804
+    },
+    "canon": {
+     "real_max_cos_median": 0.25298936003115896,
+     "sr_max_cos_median": 0.27096388498148016,
+     "rho": 0.9336644994164085,
+     "n_real_queries": 400,
+     "n_real_queries_with_tokens": 400,
+     "n_sr_queries_with_tokens": 4000,
+     "real_open_score": 0.7456344938026287,
+     "sr_open_score": 0.9063927166680309
+    }
+   }
+  },
+  {
+   "split": "fileorder",
+   "seed": 2,
+   "n_candidates": 400,
+   "mean_query_games": 12.65,
+   "b_c": 0.871725,
+   "b_q": 0.5650197628458498,
+   "stats": {
+    "raw": {
+     "real_max_cos_median": 0.257234609046716,
+     "sr_max_cos_median": 0.2857104868304477,
+     "rho": 0.9003331025765589,
+     "n_real_queries": 400,
+     "n_real_queries_with_tokens": 400,
+     "n_sr_queries_with_tokens": 4000,
+     "real_open_score": 0.7368758931660006,
+     "sr_open_score": 0.9263617712924682
+    },
+    "canon": {
+     "real_max_cos_median": 0.25452686931683277,
+     "sr_max_cos_median": 0.27464651475957563,
+     "rho": 0.9267434889521335,
+     "n_real_queries": 400,
+     "n_real_queries_with_tokens": 400,
+     "n_sr_queries_with_tokens": 4000,
+     "real_open_score": 0.7323700260227768,
+     "sr_open_score": 0.9010413777526822
+    }
+   }
+  },
+  {
+   "split": "colour_separated",
+   "seed": 0,
+   "n_candidates": 400,
+   "mean_query_games": 12.005,
+   "b_c": 0.86895,
+   "b_q": 0.01790920449812578,
+   "stats": {
+    "raw": {
+     "real_max_cos_median": 0.20985114428595555,
+     "sr_max_cos_median": 0.2841343304015018,
+     "rho": 0.7385631436701827,
+     "n_real_queries": 400,
+     "n_real_queries_with_tokens": 400,
+     "n_sr_queries_with_tokens": 4000,
+     "real_open_score": 0.22965692335158308,
+     "sr_open_score": 0.9209436642084474
+    },
+    "canon": {
+     "real_max_cos_median": 0.215594209014847,
+     "sr_max_cos_median": 0.2711183266288246,
+     "rho": 0.7952033774168535,
+     "n_real_queries": 400,
+     "n_real_queries_with_tokens": 400,
+     "n_sr_queries_with_tokens": 4000,
+     "real_open_score": 0.22695326762201518,
+     "sr_open_score": 0.894757312935267
+    }
+   }
+  },
+  {
+   "split": "colour_separated",
+   "seed": 1,
+   "n_candidates": 400,
+   "mean_query_games": 12.5625,
+   "b_c": 0.8906,
+   "b_q": 0.023880597014925373,
+   "stats": {
+    "raw": {
+     "real_max_cos_median": 0.21359015045008986,
+     "sr_max_cos_median": 0.2821011939874407,
+     "rho": 0.7571401858710283,
+     "n_real_queries": 400,
+     "n_real_queries_with_tokens": 400,
+     "n_sr_queries_with_tokens": 4000,
+     "real_open_score": 0.1842683703276294,
+     "sr_open_score": 0.9401373375319804
+    },
+    "canon": {
+     "real_max_cos_median": 0.2213093871709672,
+     "sr_max_cos_median": 0.27096388498148016,
+     "rho": 0.8167486496810941,
+     "n_real_queries": 400,
+     "n_real_queries_with_tokens": 400,
+     "n_sr_queries_with_tokens": 4000,
+     "real_open_score": 0.18556359826763574,
+     "sr_open_score": 0.9063927166680309
+    }
+   }
+  },
+  {
+   "split": "colour_separated",
+   "seed": 2,
+   "n_candidates": 400,
+   "mean_query_games": 12.65,
+   "b_c": 0.871725,
+   "b_q": 0.016205533596837945,
+   "stats": {
+    "raw": {
+     "real_max_cos_median": 0.2131264698419157,
+     "sr_max_cos_median": 0.28571048683044764,
+     "rho": 0.7459525627016753,
+     "n_real_queries": 400,
+     "n_real_queries_with_tokens": 400,
+     "n_sr_queries_with_tokens": 4000,
+     "real_open_score": 0.20879914180857406,
+     "sr_open_score": 0.9263617712924682
+    },
+    "canon": {
+     "real_max_cos_median": 0.21666483751679766,
+     "sr_max_cos_median": 0.2746465147595757,
+     "rho": 0.7888861713991349,
+     "n_real_queries": 400,
+     "n_real_queries_with_tokens": 400,
+     "n_sr_queries_with_tokens": 4000,
+     "real_open_score": 0.21130287963547636,
+     "sr_open_score": 0.9010413777526822
+    }
+   }
+  }
+ ],
+ "guard": {
+  "raw": {
+   "rho_R": 1.0197271503546743,
+   "rho_F": 0.9062854576832535,
+   "rho_X": 0.7472186307476288,
+   "theta1": 0.9630063040189639,
+   "theta2": 0.8267520442154412,
+   "theta_RX": 0.8834728905511515,
+   "gap1_R_minus_F": 0.11344169267142079,
+   "gap2_F_minus_X": 0.15906682693562468,
+   "gap_R_minus_X": 0.2725085196070455,
+   "theta1_enabled": true,
+   "theta2_enabled": true
+  },
+  "canon": {
+   "rho_R": 1.014179401069461,
+   "rho_F": 0.9270569559027629,
+   "rho_X": 0.8002793994990274,
+   "theta1": 0.9706181784861119,
+   "theta2": 0.8636681777008952,
+   "theta_RX": 0.9072294002842441,
+   "gap1_R_minus_F": 0.08712244516669798,
+   "gap2_F_minus_X": 0.12677755640373556,
+   "gap_R_minus_X": 0.21390000157043354,
+   "theta1_enabled": true,
+   "theta2_enabled": true
+  }
+ },
+ "min_gap": 0.05,
+ "colour_max_diff": 0.5,
+ "rule": "not applied to CNN-only combinations (Q00, Q01). Orientation = that of the selected combination. level 3 if rho < theta2 or |b_c - b_q| > 0.5: CNN only (E part of the combination; Q22 / Q23 -> Q00). level 2 if theta2 <= rho < theta1: w = min(w, 1); Q22 -> Q04, Q23 -> Q14 (E0 + same orientation, w = 1). level 1 otherwise: the selected combination. theta1 disabled (gap1 < 0.05): level 2 never fires. theta2 disabled (gap2 < 0.05): theta_RX is the only threshold, level 3 iff rho < theta_RX or the colour condition, else level 1",
+ "tools_sha256": {
+  "p02_player_open.py": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+  "p02_player_fuse.py": "cb1cc1a2ba626a80ed49e7ae8269715f1e123f33777b6ed135380dbd07b35d5b",
+  "p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+  "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495"
+ },
+ "runtime_s": {
+  "load": 13.9,
+  "total": 106.6
+ }
+}

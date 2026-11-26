@@ -1,0 +1,590 @@
+{
+ "format": "c10-prereg04 rank check_report v1",
+ "what": "PREREG_04 2.2: can O4, SWA, SWB be used (before any fitting)",
+ "created": "2026-09-29T17:06:57+08:00",
+ "seconds": 21.6,
+ "smoke": false,
+ "preview": false,
+ "design_input": false,
+ "status": "ok",
+ "stops": [],
+ "usable_sources": [
+  "C5",
+  "OP",
+  "O4",
+  "SWA",
+  "SWB"
+ ],
+ "sources": {
+  "C5": {
+   "status": "usable",
+   "text": "prereg02 epoch 9, 8 symmetries (committed; R20's source)",
+   "inner_accuracy_percent": 25.671597150470387,
+   "weights_sha256": "423581b4fddd5c2c160ebf691f4e86b9e00c4fe743d5cfb23df7891f4a2ca939",
+   "note": "committed prereg02 source (R20); usable by registration"
+  },
+  "OP": {
+   "status": "usable",
+   "text": "opening term, prereg02 opening_{inner,val}.npz (M = 12, alpha = 20, fit counts only)",
+   "note": "committed prereg02 opening term"
+  },
+  "O4": {
+   "status": "usable",
+   "text": "opponent's moves scored with the target level's pattern-count tables (p04_opp.py, fit counts)",
+   "problems": [],
+   "file": {
+    "file": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg04\\opp\\inner_o4.npz",
+    "sha256": "100a889367e147696a056d6cd70fab583926062a9b4fbbedd49acc42a2da9ce7",
+    "layout": "o4/t4",
+    "key_arrays_equal_inner_keys": true,
+    "report": {
+     "file": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg04\\opp\\inner_report.json",
+     "sha256": "09415ca0872bf5ce6da5995972ab695cad5750f8b7d29219d91793567927fbb0",
+     "status": "ok",
+     "preview": false,
+     "output_sha256": "100a889367e147696a056d6cd70fab583926062a9b4fbbedd49acc42a2da9ce7",
+     "tables_sha256": "f380e0d720edd4429e4858ab87a3e1a5efbbd9de84982c002ab214f19f120de5",
+     "p04_opp_sha256": "b594e0eff135b539616d60f26403ca1a1a37ac3f44855785c36e2cc6be9768fa",
+     "frozen_config_sha256": null
+    },
+    "rows": 73556,
+    "finite": true
+   },
+   "pinned_numbers": {
+    "count_report": {
+     "file": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg04\\opp\\count_report.json",
+     "sha256": "adfdd2ac59ca508098e63eb17e499cc485402157699425452263d83299869ad4",
+     "facts": {
+      "games": 720307,
+      "target_moves": 79985811,
+      "opponent_moves": 79985352,
+      "anomalies": 0,
+      "n_cells": 557928
+     },
+     "status": "ok",
+     "preview": false,
+     "counts_sha256": "f6c6debe90639585763b9812c235743a6b7f89d8db1c6422ece7bccd550a08a5"
+    },
+    "counts_npz": {
+     "file": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\data\\prereg04\\counts_fit.npz",
+     "sha256": "f6c6debe90639585763b9812c235743a6b7f89d8db1c6422ece7bccd550a08a5",
+     "via": "recomputed here",
+     "equal_to_count_report_counts_sha256": true,
+     "equal_to_design_array_by_array": true,
+     "arrays": [
+      "A_o",
+      "A_t",
+      "C_o",
+      "C_t"
+     ],
+     "differing": [],
+     "extra_arrays": [],
+     "cells": 557928
+    },
+    "inner_vs_design_max_abs_diff": {
+     "O4": 0.0,
+     "T4": 0.0
+    }
+   },
+   "dupcheck": {
+    "file": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg04\\opp\\dupcheck.json",
+    "present": true,
+    "sha256": "62019d61a304b966e44cfcc5447273c7d0576daa85d14a970134bc1d2c6bcd4d",
+    "status": "ok",
+    "preview": false,
+    "slots": 19156,
+    "slots_in_fit_any": 0,
+    "slots_in_fit_same_target_colour": 0,
+    "slots_in_fit_other_target_colour": 0,
+    "inner_vs_fit_record_only": {
+     "games": 73556,
+     "also_in_fit": 0,
+     "also_in_fit_same_colour": 0,
+     "also_in_fit_other_colour": 0,
+     "without_moves": 0,
+     "design": "dupcheck.py all: games 73,556, also_in_fit 0, also_in_fit_other_colour 0"
+    },
+    "stop_fraction": 0.01,
+    "fraction": 0.0
+   },
+   "selftest": {
+    "file": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg04\\opp\\selftest.json",
+    "present": true,
+    "sha256": "ed12e591f057423ee5fe97e6fef2ea287eb9484e85903f1d0bdf07b1c2a76cdd",
+    "format": "c10-prereg04 opp selftest v1",
+    "passed": true,
+    "preview": false,
+    "problems": [],
+    "capture_games_with_mismatch": 0,
+    "feature_positions": 379,
+    "feature_mismatches": 0
+   },
+   "inner_accuracy_percent_recorded": {
+    "O4": 19.90184349339279,
+    "T4": 20.42661373647289
+   },
+   "colour": {
+    "inner": {
+     "reference": -2.56319283464963,
+     "source": -2.660234834891537,
+     "dkappa": 0.09704200024190619,
+     "ci95": [
+      0.07589691247576799,
+      0.11771567270294893
+     ],
+     "questions": 120544,
+     "questions_sha256": "45d0f14acd98786adfd7cae040edc551420f095aaf6118d52edb47ddf91a5622",
+     "bootstrap": "PlayerBootstrap draws (players within each level, 1000, default_rng(0)) of the plain question mean; colour splits draw their own",
+     "by_colour": {
+      "B": {
+       "dkappa": 0.10234238322172168,
+       "questions": 59744,
+       "ci95": [
+        0.07691252401779168,
+        0.1269019250543247
+       ]
+      },
+      "W": {
+       "dkappa": 0.09183367654542435,
+       "questions": 60800,
+       "ci95": [
+        0.06777205065080812,
+        0.11333375274227886
+       ]
+      }
+     },
+     "by_k": {
+      "5": {
+       "dkappa": 0.09834853003649024,
+       "questions": 37440
+      },
+      "10": {
+       "dkappa": 0.09566534711206162,
+       "questions": 32288
+      },
+      "15": {
+       "dkappa": 0.09763741855201469,
+       "questions": 27296
+      },
+      "20": {
+       "dkappa": 0.09616106327568484,
+       "questions": 23520
+      }
+     }
+    },
+    "val_sub_questions": "deferred to apply (needs the validation O4, PREREG_04 2.2 item 2 / 2.6)",
+    "reference": "T4",
+    "reasons_not_usable": [],
+    "rule": "usable when the single-colour inner dkappa CI lower bound > 0 and (SWA, SWB) the validation sub-question dkappa > 0; O4's validation dkappa is required at apply"
+   }
+  },
+  "SWA": {
+   "inner_keys_equal_to_prereg02": true,
+   "val_keys_equal_to_prereg02": true,
+   "sha256": {
+    "inner_p03a_s0_swap.npz": "743825209569aeb922b0246587ec5801f3c2e0a10083bfb6111a327dd5ff1071",
+    "val_p03a_s0_swap.npz": "b355c26bf68069feb0e48ee95c46bd211c2bdbc6b5a48416c8408a210aec3848",
+    "inner_p03a_d4.npz": "3b26a39952bfe8dc2df9676ff9b15cab472861a66b628c3a4ee49c4010626cab",
+    "val_p03a_d4.npz": "1e4e5957442596358b087e5f4e69c1fcf9f22f2c7933cc2049066bfab3075ecd"
+   },
+   "weights_sha256": "790b767c5425e262130d6c103c71e89238edb17f927fa48e2a2770db788e50ac",
+   "equal_to_prereg03_check_record": true,
+   "val_nan_rows": 0,
+   "text": "prereg03 arm A final.pth, original orientation, whole question colour swapped (committed dump)",
+   "problems": [],
+   "status": "usable",
+   "inner_accuracy_percent_recorded": {
+    "SWA": 26.719778128228832,
+    "A0": 27.391375278699222
+   },
+   "colour": {
+    "inner": {
+     "reference": -2.201407185187655,
+     "source": -2.22879327936768,
+     "dkappa": 0.027386094180024707,
+     "ci95": [
+      0.02202004938420615,
+      0.032455503780070574
+     ],
+     "questions": 120544,
+     "questions_sha256": "45d0f14acd98786adfd7cae040edc551420f095aaf6118d52edb47ddf91a5622",
+     "bootstrap": "PlayerBootstrap draws (players within each level, 1000, default_rng(0)) of the plain question mean; colour splits draw their own",
+     "by_colour": {
+      "B": {
+       "dkappa": 0.033606405275047546,
+       "questions": 59744,
+       "ci95": [
+        0.02635646159336034,
+        0.0410191613309154
+       ]
+      },
+      "W": {
+       "dkappa": 0.021273820067178578,
+       "questions": 60800,
+       "ci95": [
+        0.01460950305273679,
+        0.028202367155978153
+       ]
+      }
+     },
+     "by_k": {
+      "5": {
+       "dkappa": 0.03052059791204529,
+       "questions": 37440
+      },
+      "10": {
+       "dkappa": 0.026967739373500613,
+       "questions": 32288
+      },
+      "15": {
+       "dkappa": 0.02553615259605779,
+       "questions": 27296
+      },
+      "20": {
+       "dkappa": 0.025117727927565527,
+       "questions": 23520
+      }
+     }
+    },
+    "val_sub_questions": {
+     "reference": -2.2593724671800923,
+     "source": -2.2956842255766543,
+     "dkappa": 0.03631175839656169,
+     "sub_questions": 2986,
+     "questions_with_a_sub_question": 1589,
+     "question_bootstrap_ci95_recorded_only": [
+      0.02654678947797059,
+      0.04676403909506975
+     ],
+     "definition": "each validation question's parsed games split by the question file's colour (val_keys.npz; no label); sub-questions with >= 2 parsed games; plain mean over sub-questions",
+     "by_colour": {
+      "B": {
+       "dkappa": 0.043956558286033766,
+       "sub_questions": 1492
+      },
+      "W": {
+       "dkappa": 0.02867719250961903,
+       "sub_questions": 1494
+      }
+     }
+    },
+    "prereg03_record_abs_diff": {
+     "inner_dkappa": 0.0,
+     "val_dkappa": 0.0
+    },
+    "reference": "A0",
+    "reasons_not_usable": [],
+    "rule": "usable when the single-colour inner dkappa CI lower bound > 0 and (SWA, SWB) the validation sub-question dkappa > 0; O4's validation dkappa is required at apply"
+   }
+  },
+  "SWB": {
+   "inner_keys_equal_to_prereg02": true,
+   "val_keys_equal_to_prereg02": true,
+   "sha256": {
+    "inner_p03b_s0_swap.npz": "106887321cc9d54316e0d7d96e776c2060dc309c54720a8c7345f280056d2056",
+    "val_p03b_s0_swap.npz": "0cadff4bae36b2a41f02fddf4366a2081d9912ede4a3063c8b50fd28a2647527",
+    "inner_p03b_d4.npz": "a9c9b1509328d2c77c74ad09bcd63424c1be1979a85f372e755e3931a414ca54",
+    "val_p03b_d4.npz": "bad2277dd20bf832c02213be781768ba9d8a304922693bee383a28aa3531a627"
+   },
+   "weights_sha256": "8e88f6ec6cbaad5372e5d62607b99ece3d77dc7a20af86a9197553f1a6c59a42",
+   "equal_to_prereg03_check_record": true,
+   "val_nan_rows": 0,
+   "text": "prereg03 arm B final.pth, original orientation, whole question colour swapped (committed dump)",
+   "problems": [],
+   "status": "usable",
+   "inner_accuracy_percent_recorded": {
+    "SWB": 26.678992876175972,
+    "B0": 27.30164772418294
+   },
+   "colour": {
+    "inner": {
+     "reference": -2.2054795704669896,
+     "source": -2.2304155206723526,
+     "dkappa": 0.024935950205362854,
+     "ci95": [
+      0.02057552378726974,
+      0.030183097876318746
+     ],
+     "questions": 120544,
+     "questions_sha256": "45d0f14acd98786adfd7cae040edc551420f095aaf6118d52edb47ddf91a5622",
+     "bootstrap": "PlayerBootstrap draws (players within each level, 1000, default_rng(0)) of the plain question mean; colour splits draw their own",
+     "by_colour": {
+      "B": {
+       "dkappa": 0.031016916640869217,
+       "questions": 59744,
+       "ci95": [
+        0.023626754305674857,
+        0.038248932495079095
+       ]
+      },
+      "W": {
+       "dkappa": 0.018960600555315284,
+       "questions": 60800,
+       "ci95": [
+        0.012311974443811654,
+        0.025662236377935316
+       ]
+      }
+     },
+     "by_k": {
+      "5": {
+       "dkappa": 0.025437633483279844,
+       "questions": 37440
+      },
+      "10": {
+       "dkappa": 0.02479638214021003,
+       "questions": 32288
+      },
+      "15": {
+       "dkappa": 0.024840617310774502,
+       "questions": 27296
+      },
+      "20": {
+       "dkappa": 0.024439587894696444,
+       "questions": 23520
+      }
+     }
+    },
+    "val_sub_questions": {
+     "reference": -2.2684751118276982,
+     "source": -2.3028317289806655,
+     "dkappa": 0.034356617152967346,
+     "sub_questions": 2986,
+     "questions_with_a_sub_question": 1589,
+     "question_bootstrap_ci95_recorded_only": [
+      0.02612958510174813,
+      0.04300622636804331
+     ],
+     "definition": "each validation question's parsed games split by the question file's colour (val_keys.npz; no label); sub-questions with >= 2 parsed games; plain mean over sub-questions",
+     "by_colour": {
+      "B": {
+       "dkappa": 0.03763988300203986,
+       "sub_questions": 1492
+      },
+      "W": {
+       "dkappa": 0.03107774657276909,
+       "sub_questions": 1494
+      }
+     }
+    },
+    "prereg03_record_abs_diff": {
+     "inner_dkappa": 0.0,
+     "val_dkappa": 0.0
+    },
+    "reference": "B0",
+    "reasons_not_usable": [],
+    "rule": "usable when the single-colour inner dkappa CI lower bound > 0 and (SWA, SWB) the validation sub-question dkappa > 0; O4's validation dkappa is required at apply"
+   }
+  }
+ },
+ "combinations": [
+  {
+   "id": "Q00",
+   "sources": [
+    "C5",
+    "OP"
+   ],
+   "status": "ok",
+   "reason": null
+  },
+  {
+   "id": "Q01",
+   "sources": [
+    "C5",
+    "OP",
+    "O4"
+   ],
+   "status": "ok",
+   "reason": null
+  },
+  {
+   "id": "Q02",
+   "sources": [
+    "C5",
+    "OP",
+    "O4",
+    "SWA",
+    "SWB"
+   ],
+   "status": "ok",
+   "reason": null
+  }
+ ],
+ "colour_pairs": [
+  [
+   "O4",
+   "T4"
+  ],
+  [
+   "SWA",
+   "A0"
+  ],
+  [
+   "SWB",
+   "B0"
+  ]
+ ],
+ "single_colour_questions": {
+  "questions_sha256": "45d0f14acd98786adfd7cae040edc551420f095aaf6118d52edb47ddf91a5622",
+  "counts": {
+   "questions": 120544,
+   "players": 623,
+   "player_colour_pairs": 1170,
+   "player_colour_pairs_by_level": {
+    "D": {
+     "B": 68,
+     "W": 67
+    },
+    "C": {
+     "B": 61,
+     "W": 57
+    },
+    "B": {
+     "B": 71,
+     "W": 70
+    },
+    "A": {
+     "B": 100,
+     "W": 100
+    },
+    "1D": {
+     "B": 34,
+     "W": 32
+    },
+    "2D": {
+     "B": 48,
+     "W": 47
+    },
+    "3D": {
+     "B": 49,
+     "W": 48
+    },
+    "4D": {
+     "B": 52,
+     "W": 52
+    },
+    "5D": {
+     "B": 53,
+     "W": 52
+    },
+    "6D": {
+     "B": 52,
+     "W": 57
+    }
+   },
+   "questions_by_colour": {
+    "B": 59744,
+    "W": 60800
+   },
+   "questions_by_k": {
+    "5": 37440,
+    "10": 32288,
+    "15": 27296,
+    "20": 23520
+   },
+   "games_per_question_mean": 11.530395540217679
+  },
+  "definition": {
+   "format": "c10-prereg03 single-colour inner pseudo-questions v1",
+   "players": "pseudo_inner.json's bank players (split v1 inner, >= 5 inner games) with their folds",
+   "pool": "(player, colour): every dumped inner game of that player with that colour (inner_keys.npz colour), ordered by sha256('c10-prereg03|mono|order|{rank}|{game_id}') hex",
+   "questions": "rounds [0, 31] (32 rounds); every player in player order, colour B then W, k in [5, 10, 15, 20] with k <= pool size: random.Random(int(sha256('c10-prereg03|mono|q|{r}|{player_id}|{colour}|{k}')[:16], 16)).sample(range(pool), k)",
+   "why": "official competition 2 questions hold 5/10/15/20 games of one colour each (AIdea data page, docs/DATA.md); the registered inner pseudo-questions and the local validation are mixed-colour"
+  }
+ },
+ "val_sub_questions": {
+  "sub_questions": 2986,
+  "val_questions": 1589
+ },
+ "inputs_sha256": {
+  "inner_p02e9_d4.npz": "d042fca41e04a365dd9f7f4ebc31d244d39b24e803a1191cb06ecaaf3d056de5",
+  "O4_inner": "100a889367e147696a056d6cd70fab583926062a9b4fbbedd49acc42a2da9ce7",
+  "inner_p03a_d4.npz": "3b26a39952bfe8dc2df9676ff9b15cab472861a66b628c3a4ee49c4010626cab",
+  "inner_p03a_s0_swap.npz": "743825209569aeb922b0246587ec5801f3c2e0a10083bfb6111a327dd5ff1071",
+  "inner_p03b_d4.npz": "a9c9b1509328d2c77c74ad09bcd63424c1be1979a85f372e755e3931a414ca54",
+  "inner_p03b_s0_swap.npz": "106887321cc9d54316e0d7d96e776c2060dc309c54720a8c7345f280056d2056",
+  "val_keys.npz": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c"
+ },
+ "inner_inputs_sha256": {
+  "inner_keys.npz": "b686872d459161330af26132fc0ec2617d104be6cd72eae509250ffef0c03ab6",
+  "pseudo_inner.json": "3a51b3dd4edf8e5745f6a7ff52ca925d4a0eacd6a24950ee1b6e3b48fd0b7923",
+  "opening_inner.npz": "054689536524f7d8ea41a19d19b49ae47e7eedd128bd9cad98c429e5f80fdee5",
+  "players_split.csv": "69554875064ecbd83d790b3215c8ba8f9540f217ec4af3e4a8c43228ac2a3dfc"
+ },
+ "p02_inputs": {
+  "sha256": {
+   "inner_keys.npz": "b686872d459161330af26132fc0ec2617d104be6cd72eae509250ffef0c03ab6",
+   "pseudo_inner.json": "3a51b3dd4edf8e5745f6a7ff52ca925d4a0eacd6a24950ee1b6e3b48fd0b7923",
+   "opening_inner.npz": "054689536524f7d8ea41a19d19b49ae47e7eedd128bd9cad98c429e5f80fdee5",
+   "players_split.csv": "69554875064ecbd83d790b3215c8ba8f9540f217ec4af3e4a8c43228ac2a3dfc",
+   "inner_p02e9_d4.npz": "d042fca41e04a365dd9f7f4ebc31d244d39b24e803a1191cb06ecaaf3d056de5",
+   "val_p02e9_d4.npz": "ec0b729d805eb9f3458f7a497444b099b8ec47e5cec73703ae4b8bf9cf0a11b2",
+   "val_keys.npz": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+   "opening_val.npz": "75ffec64f9e949ac0be52ce9e72a4a19bb978a25de2b6ed9d355aac7a1a5ae85"
+  },
+  "equal_to_prereg02_records": true,
+  "commit_check": {
+   "files": 8,
+   "git_head": "bce176cc0a3e16a575c4402f4ecef446b0c60b4c"
+  }
+ },
+ "inputs_commit_check": {
+  "files": 17,
+  "git_head": "bce176cc0a3e16a575c4402f4ecef446b0c60b4c"
+ },
+ "tool": {
+  "git_head": "bce176cc0a3e16a575c4402f4ecef446b0c60b4c",
+  "dirty_or_untracked": [],
+  "files_sha256_rule": "sha256 of the file with CRLF folded to LF",
+  "files_sha256": {
+   "p04_rank_fuse.py": "c3a647b09c46760239d5b2ee274d56f7231987354fc1c1f6c3ff40102f4b26a2",
+   "p04_opp.py": "b594e0eff135b539616d60f26403ca1a1a37ac3f44855785c36e2cc6be9768fa",
+   "p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "p02_player_fuse.py": "cb1cc1a2ba626a80ed49e7ae8269715f1e123f33777b6ed135380dbd07b35d5b",
+   "p02_player_open.py": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+   "p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+   "p02_rank_opening.py": "a4195fece41aa3d50ecda82d1af93d9c04f49df5fd2157d69dd8a488dea93463",
+   "p02_rank_pseudo.py": "16e5bfdfb2995874ddb11bde1f7a9e786a478b14443453f675a4fb3a480bb098",
+   "p03_rank_fuse.py": "77abd7479d26f0f647a258b4a6d5d2e517808b4c187184f14ff599d70b8aca2f",
+   "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "decide.py": "cf66daf1231b3c2bd60c5b6484245627e133bd0f1cd7ff5557e978da3801d0e3"
+  }
+ },
+ "frozen_tools": {
+  "rule": "sha256 with CRLF folded to LF, working file == HEAD blob",
+  "files_sha256": {
+   "p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "p02_player_fuse.py": "cb1cc1a2ba626a80ed49e7ae8269715f1e123f33777b6ed135380dbd07b35d5b",
+   "p02_player_open.py": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+   "p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+   "p02_rank_opening.py": "a4195fece41aa3d50ecda82d1af93d9c04f49df5fd2157d69dd8a488dea93463",
+   "p02_rank_pseudo.py": "16e5bfdfb2995874ddb11bde1f7a9e786a478b14443453f675a4fb3a480bb098",
+   "p03_rank_fuse.py": "77abd7479d26f0f647a258b4a6d5d2e517808b4c187184f14ff599d70b8aca2f",
+   "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "decide.py": "cf66daf1231b3c2bd60c5b6484245627e133bd0f1cd7ff5557e978da3801d0e3"
+  },
+  "equal_to_prereg02_frozen_config_record": [
+   "c10data.py",
+   "decide.py",
+   "p02_moves.py",
+   "p02_rank_fuse.py",
+   "p02_rank_opening.py",
+   "p02_rank_pseudo.py"
+  ],
+  "equal_to_prereg03_frozen_config_record": [
+   "c10data.py",
+   "decide.py",
+   "p02_moves.py",
+   "p02_rank_fuse.py",
+   "p02_rank_opening.py",
+   "p02_rank_pseudo.py",
+   "p03_rank_fuse.py"
+  ]
+ },
+ "environment": {
+  "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1"
+ }
+}

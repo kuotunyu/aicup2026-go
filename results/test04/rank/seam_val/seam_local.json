@@ -1,0 +1,452 @@
+{
+ "format": "c10-test04 rank seam_local v1",
+ "what": "test04 local Q02 seam (PREREG_04 5.2, rev 3 item 5): Q02 on the seam_val inputs vs results/prereg04/rank",
+ "mode": "real",
+ "created": "2026-11-04T15:52:44+08:00",
+ "passed": true,
+ "questions": 1589,
+ "max_abs_diff": 0.0,
+ "tol": 0.0001,
+ "rule_b_differences": 0,
+ "rule_b_max": 4,
+ "rule_b_differing_questions": [],
+ "count_mismatch_questions": [],
+ "problems": [],
+ "byte_identical_probs": true,
+ "byte_identical_pred_B": true,
+ "required": true,
+ "warnings": [],
+ "byte_identical_pred_A": true,
+ "reference_sha256": {
+  "rank_val_probs.csv": "3c7ab658dc558ce8c6aefdd7b0747de1a60de575d151e9eee96ca6775f442e5c",
+  "pred_B.csv": "27b6d225d0afc8db9183ae970ee19946ff819ec5ccb2be6a1816ef4338efff79",
+  "pred_A.csv": "6a6bb3c2e63761bc7196661c99999cec499fae1b38bbb3a7bb9d512e26487739"
+ },
+ "set": {
+  "questions": 1589,
+  "questions_without_parsed_game": 0,
+  "questions_without_parsed_game_ids": [],
+  "games": 19156,
+  "games_parsed": 19156,
+  "o4_mask_games": 19156,
+  "o4_replay_failed": 0,
+  "questions_with_empty_o4_mask": 0
+ },
+ "tol_check": {
+  "tol": 0.0001,
+  "c5": {
+   "test02_seam_tol": 0.0001,
+   "seam_dump_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "prereg02_dump_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+  },
+  "sw": {
+   "notebook_tol": 0.0001,
+   "recomputed_tol": 0.0001,
+   "seam_dump_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "prereg03_dump_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "same_gpu": true,
+   "arms": {
+    "a": {
+     "seam_dump_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+     "prereg03_dump_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+     "same_gpu": true,
+     "tol": 0.0001
+    },
+    "b": {
+     "seam_dump_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+     "prereg03_dump_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+     "same_gpu": true,
+     "tol": 0.0001
+    }
+   }
+  },
+  "rule": "max of the two"
+ },
+ "dkappa_seam_val": {
+  "O4": {
+   "dkappa": 0.1050265798301427,
+   "opp_value": 0.1050265798301427,
+   "equal_to_opp": true,
+   "reference": 0.1050265798301427,
+   "record": {
+    "reference": -2.6210633635554172,
+    "source": -2.7260899433855603,
+    "dkappa": 0.1050265798301427,
+    "sub_questions": 2986,
+    "questions_with_a_sub_question": 1589,
+    "question_bootstrap_ci95_recorded_only": [
+     0.07601177046419677,
+     0.13528668686095835
+    ],
+    "definition": "each validation question's parsed games split by the question file's colour (val_keys.npz; no label); sub-questions with >= 2 parsed games; plain mean over sub-questions",
+    "by_colour": {
+     "B": {
+      "dkappa": 0.08983153211435857,
+      "sub_questions": 1492
+     },
+     "W": {
+      "dkappa": 0.12020128611658841,
+      "sub_questions": 1494
+     }
+    },
+    "questions": 1589,
+    "questions_without_sub_question": 0,
+    "per_k_record_only": {
+     "5": {
+      "dkappa": 0.23503430805783726,
+      "sub_questions": 188
+     },
+     "6": {
+      "dkappa": 0.1564866055294701,
+      "sub_questions": 197
+     },
+     "7": {
+      "dkappa": 0.1864341111827544,
+      "sub_questions": 197
+     },
+     "8": {
+      "dkappa": 0.0956910799009485,
+      "sub_questions": 210
+     },
+     "9": {
+      "dkappa": 0.11760752220852262,
+      "sub_questions": 225
+     },
+     "10": {
+      "dkappa": 0.05430928055605519,
+      "sub_questions": 179
+     },
+     "11": {
+      "dkappa": -0.02046657350699516,
+      "sub_questions": 178
+     },
+     "12": {
+      "dkappa": 0.1638926484881767,
+      "sub_questions": 146
+     },
+     "13": {
+      "dkappa": 0.03286082474908161,
+      "sub_questions": 194
+     },
+     "14": {
+      "dkappa": 0.05371041155819789,
+      "sub_questions": 200
+     },
+     "15": {
+      "dkappa": 0.11729120592703922,
+      "sub_questions": 167
+     },
+     "16": {
+      "dkappa": 0.0734223375716427,
+      "sub_questions": 209
+     },
+     "17": {
+      "dkappa": 0.0643157638209182,
+      "sub_questions": 164
+     },
+     "18": {
+      "dkappa": 0.12039716026495925,
+      "sub_questions": 222
+     },
+     "19": {
+      "dkappa": 0.07891316728679217,
+      "sub_questions": 158
+     },
+     "20": {
+      "dkappa": 0.15467014238769827,
+      "sub_questions": 152
+     }
+    }
+   }
+  },
+  "SWA": {
+   "dkappa": 0.03631175839656169,
+   "prereg04_record": 0.03631175839656169,
+   "prereg04_record_pinned": 0.03631175839656169,
+   "prereg04_record_file": "results/prereg04/rank/check_report.json sources.SWA.colour.val_sub_questions.dkappa",
+   "difference_record_only": 0.0,
+   "record": {
+    "reference": -2.2593724671800923,
+    "source": -2.2956842255766543,
+    "dkappa": 0.03631175839656169,
+    "sub_questions": 2986,
+    "questions_with_a_sub_question": 1589,
+    "question_bootstrap_ci95_recorded_only": [
+     0.02654678947797059,
+     0.04676403909506975
+    ],
+    "definition": "each validation question's parsed games split by the question file's colour (val_keys.npz; no label); sub-questions with >= 2 parsed games; plain mean over sub-questions",
+    "by_colour": {
+     "B": {
+      "dkappa": 0.043956558286033766,
+      "sub_questions": 1492
+     },
+     "W": {
+      "dkappa": 0.02867719250961903,
+      "sub_questions": 1494
+     }
+    },
+    "questions": 1589,
+    "questions_without_sub_question": 0,
+    "per_k_record_only": {
+     "5": {
+      "dkappa": 0.08977349376228758,
+      "sub_questions": 188
+     },
+     "6": {
+      "dkappa": 0.023749088780484325,
+      "sub_questions": 197
+     },
+     "7": {
+      "dkappa": 0.052062254734048956,
+      "sub_questions": 197
+     },
+     "8": {
+      "dkappa": 0.011098885778827373,
+      "sub_questions": 210
+     },
+     "9": {
+      "dkappa": 0.008807542715927714,
+      "sub_questions": 225
+     },
+     "10": {
+      "dkappa": 0.043995261287026396,
+      "sub_questions": 179
+     },
+     "11": {
+      "dkappa": 0.025661800368561003,
+      "sub_questions": 178
+     },
+     "12": {
+      "dkappa": 0.05627538401245095,
+      "sub_questions": 146
+     },
+     "13": {
+      "dkappa": 0.03965297622351043,
+      "sub_questions": 194
+     },
+     "14": {
+      "dkappa": 0.05076278123670323,
+      "sub_questions": 200
+     },
+     "15": {
+      "dkappa": 0.018985089866155064,
+      "sub_questions": 167
+     },
+     "16": {
+      "dkappa": 0.05346000522838802,
+      "sub_questions": 209
+     },
+     "17": {
+      "dkappa": 0.022467912737447693,
+      "sub_questions": 164
+     },
+     "18": {
+      "dkappa": 0.045703855652799684,
+      "sub_questions": 222
+     },
+     "19": {
+      "dkappa": 0.0016967446569308771,
+      "sub_questions": 158
+     },
+     "20": {
+      "dkappa": 0.035230747442647925,
+      "sub_questions": 152
+     }
+    }
+   }
+  },
+  "SWB": {
+   "dkappa": 0.034356617152967346,
+   "prereg04_record": 0.034356617152967346,
+   "prereg04_record_pinned": 0.034356617152967346,
+   "prereg04_record_file": "results/prereg04/rank/check_report.json sources.SWB.colour.val_sub_questions.dkappa",
+   "difference_record_only": 0.0,
+   "record": {
+    "reference": -2.2684751118276982,
+    "source": -2.3028317289806655,
+    "dkappa": 0.034356617152967346,
+    "sub_questions": 2986,
+    "questions_with_a_sub_question": 1589,
+    "question_bootstrap_ci95_recorded_only": [
+     0.02612958510174813,
+     0.04300622636804331
+    ],
+    "definition": "each validation question's parsed games split by the question file's colour (val_keys.npz; no label); sub-questions with >= 2 parsed games; plain mean over sub-questions",
+    "by_colour": {
+     "B": {
+      "dkappa": 0.03763988300203986,
+      "sub_questions": 1492
+     },
+     "W": {
+      "dkappa": 0.03107774657276909,
+      "sub_questions": 1494
+     }
+    },
+    "questions": 1589,
+    "questions_without_sub_question": 0,
+    "per_k_record_only": {
+     "5": {
+      "dkappa": 0.013077976593953497,
+      "sub_questions": 188
+     },
+     "6": {
+      "dkappa": 0.061842021441421986,
+      "sub_questions": 197
+     },
+     "7": {
+      "dkappa": 0.057409795451976,
+      "sub_questions": 197
+     },
+     "8": {
+      "dkappa": 0.008097476823768868,
+      "sub_questions": 210
+     },
+     "9": {
+      "dkappa": 0.021883525849361714,
+      "sub_questions": 225
+     },
+     "10": {
+      "dkappa": 0.08153889330052244,
+      "sub_questions": 179
+     },
+     "11": {
+      "dkappa": 0.0010870594365605338,
+      "sub_questions": 178
+     },
+     "12": {
+      "dkappa": 0.055470510655166644,
+      "sub_questions": 146
+     },
+     "13": {
+      "dkappa": 0.045220029370823055,
+      "sub_questions": 194
+     },
+     "14": {
+      "dkappa": 0.030030142206148955,
+      "sub_questions": 200
+     },
+     "15": {
+      "dkappa": 0.02453259933604436,
+      "sub_questions": 167
+     },
+     "16": {
+      "dkappa": 0.04430673021305717,
+      "sub_questions": 209
+     },
+     "17": {
+      "dkappa": 0.013306113666823782,
+      "sub_questions": 164
+     },
+     "18": {
+      "dkappa": 0.033367471985074025,
+      "sub_questions": 222
+     },
+     "19": {
+      "dkappa": 0.02746888513246221,
+      "sub_questions": 158
+     },
+     "20": {
+      "dkappa": 0.03328976769771038,
+      "sub_questions": 152
+     }
+    }
+   }
+  }
+ },
+ "notebook_seam_local_recompute": {
+  "passed": true,
+  "tol": 0.0001,
+  "notebook_passed": true,
+  "notebook_tol": 0.0001,
+  "arms": {
+   "a": {
+    "keys_equal": true,
+    "tol": 0.0001,
+    "seam_dump_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "prereg03_dump_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "same_gpu": true,
+    "c0_s0_max_abs_diff": 0.0,
+    "c0_swap_max_abs_diff": 0.0,
+    "bitwise_equal_d4": true,
+    "bitwise_equal_swap": true,
+    "passed": true,
+    "notebook": {
+     "c0_s0_max_abs_diff": 0.0,
+     "c0_swap_max_abs_diff": 0.0,
+     "passed": true
+    },
+    "difference_to_notebook_record_only": {
+     "c0_s0_max_abs_diff": 0.0,
+     "c0_swap_max_abs_diff": 0.0
+    }
+   },
+   "b": {
+    "keys_equal": true,
+    "tol": 0.0001,
+    "seam_dump_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "prereg03_dump_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "same_gpu": true,
+    "c0_s0_max_abs_diff": 0.0,
+    "c0_swap_max_abs_diff": 0.0,
+    "bitwise_equal_d4": true,
+    "bitwise_equal_swap": true,
+    "passed": true,
+    "notebook": {
+     "c0_s0_max_abs_diff": 0.0,
+     "c0_swap_max_abs_diff": 0.0,
+     "passed": true
+    },
+    "difference_to_notebook_record_only": {
+     "c0_s0_max_abs_diff": 0.0,
+     "c0_swap_max_abs_diff": 0.0
+    }
+   }
+  },
+  "source_notebook": "colab/test04_rank.ipynb",
+  "source_sha256": {
+   "question_spans": "715c9262a72be1f8bca1c53b4e1fa00c156487f6880ffa153d74d6f41c2ba238",
+   "c0_of": "7650952b039c385ac56d41b2b433ef217dbe04c4babc089d1a13a55bd25d1080"
+  },
+  "rule": "c0_of / question_spans exec'd from the notebook (torch CPU float32); per arm C0 (s0, swap) max difference <= tol; tol 1e-4 when the seam_val dump GPU equals prereg03's, else 1e-3",
+  "equal_to_notebook": true
+ },
+ "notebook_seam_bitwise_equal": {
+  "test04": true,
+  "test02": true
+ },
+ "outputs_sha256": {
+  "rank_val_probs.csv": "3c7ab658dc558ce8c6aefdd7b0747de1a60de575d151e9eee96ca6775f442e5c",
+  "pred_A.csv": "6a6bb3c2e63761bc7196661c99999cec499fae1b38bbb3a7bb9d512e26487739",
+  "pred_B.csv": "27b6d225d0afc8db9183ae970ee19946ff819ec5ccb2be6a1816ef4338efff79",
+  "decide_summary.json": "f5810cf7b993e87c0040fc9e20f185cfff4d54405ad533b28904d8aee5d983dd"
+ },
+ "tool": {
+  "git_head": "dbb133f92ac7bd51db2a0a1d07cbd34eaaeef2ac",
+  "files_sha256_rule": "sha256 of the file with CRLF folded to LF",
+  "files_sha256": {
+   "t04_rank.py": "f212879e5aaf6fe90060e2b8f03a5e61e8d8704c9dd8204e9c42e65b589940e4",
+   "check_submission.py": "b5c7c300cca4fcd5b243e4579417453699777e99bd4aff88dcbf6805e9346144",
+   "official_log.py": "a2c4f55f4a750b1b9cdf6fe37f4e89a69b6f8aaa64f0a4f0eb6be63aa61a4746",
+   "t02_rank.py": "e3485e073a20843654f622828283af4ae3985141e08378cefb59d6c6f2495874",
+   "t02_test_bundle.py": "18e41e952da39a68bc901bda5f5b9f0173848379a31056da6139382ac038e796",
+   "p04_opp.py": "b594e0eff135b539616d60f26403ca1a1a37ac3f44855785c36e2cc6be9768fa",
+   "p04_rank_fuse.py": "c3a647b09c46760239d5b2ee274d56f7231987354fc1c1f6c3ff40102f4b26a2",
+   "p03_rank_fuse.py": "77abd7479d26f0f647a258b4a6d5d2e517808b4c187184f14ff599d70b8aca2f",
+   "p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+   "p02_rank_opening.py": "a4195fece41aa3d50ecda82d1af93d9c04f49df5fd2157d69dd8a488dea93463",
+   "p02_rank_pseudo.py": "16e5bfdfb2995874ddb11bde1f7a9e786a478b14443453f675a4fb3a480bb098",
+   "p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "decide.py": "cf66daf1231b3c2bd60c5b6484245627e133bd0f1cd7ff5557e978da3801d0e3"
+  }
+ },
+ "environment": {
+  "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "executable": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\.venv\\Scripts\\python.exe",
+  "zlib": "1.3.1"
+ }
+}

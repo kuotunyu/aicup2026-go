@@ -1,0 +1,60 @@
+{
+ "format": "c10-prereg03 unpack v1",
+ "created": "2026-09-29T01:57:07+08:00",
+ "arm": "b",
+ "smoke": false,
+ "zip": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg03\\prereg03_rank_b_results.zip",
+ "zip_name": "prereg03_rank_b_results.zip",
+ "zip_sha256": "d5daaca09ba7502558ec423308dd728ab6dddec1252a19a531cd34545d8da6b3",
+ "zip_bytes": 32220578,
+ "dest": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg03\\rank_b",
+ "members": {
+  "config.json": "284bb0cf8cc75c20460b660f6c1cb6966e7990386dd50521c4815dd1c059af8b",
+  "env.json": "30ac601efef4538a827853d337991e8a57c31672e4ce99b42ab4a048d71926d1",
+  "leak_check.json": "f27b3ae7ad3de622782e6ebcbfa3f967521544b824864bad8ad94bcdfdd794ae",
+  "readonly_after.json": "e04ea45abe42670aa566784863192de46442a0accea8c4b49caeb34410979f8a",
+  "readonly_before.json": "da68da0bcc2c5c9fb003e13c777550c63500341655d162d2dc110b72aa24e0f1",
+  "run_log.json": "2e3b7524fe9fbadc8dcf7d28edb68ba9957920e4927dc8cf8c1306ebfc5c4a76",
+  "timings.json": "170234eca61d33fa48be1841a372afe9383f44365eb0dd35ce80965ab774ea59",
+  "ckpt/history.csv": "49d65684e4146ebac2cd855aea2572d4c0c290daf6f4c1e2f64b78c91879af3c",
+  "dumps/_DONE_inner_keys.json": "2bdcc459c92c2f09db799cf68b8c7c60f3ef8100d15a3e7a8d49cb6958b6cd64",
+  "dumps/_DONE_inner_p03b_d4.json": "1df64509e048b3561b9a98a073d97bd2f3b1e21243002071b7df85a947f64352",
+  "dumps/_DONE_inner_p03b_s0_swap.json": "b6dfa7df246f66b5f80f83f3ee83968e72b228671079a3804ff5809e5071f684",
+  "dumps/_DONE_val_keys.json": "5bc0f2780831859d126d4eda155fa8b1ca2e90f382bdb7fbda4bb7794aacaa6b",
+  "dumps/_DONE_val_p03b_d4.json": "3cd55950fa0ad429fd4b0123c17cb6dee5da641a3e6e484a3ef4b983002f8750",
+  "dumps/_DONE_val_p03b_s0_swap.json": "71fdc96f65c64d020c0831ebedf654314e0fff16e1db34d948ebc8fcc4ee354d",
+  "dumps/inner_keys.npz": "b686872d459161330af26132fc0ec2617d104be6cd72eae509250ffef0c03ab6",
+  "dumps/inner_p03b_d4.npz": "a9c9b1509328d2c77c74ad09bcd63424c1be1979a85f372e755e3931a414ca54",
+  "dumps/inner_p03b_s0_swap.npz": "106887321cc9d54316e0d7d96e776c2060dc309c54720a8c7345f280056d2056",
+  "dumps/val_keys.npz": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+  "dumps/val_p03b_d4.npz": "bad2277dd20bf832c02213be781768ba9d8a304922693bee383a28aa3531a627",
+  "dumps/val_p03b_s0_swap.npz": "0cadff4bae36b2a41f02fddf4366a2081d9912ede4a3063c8b50fd28a2647527"
+ },
+ "run_status": "completed",
+ "config_smoke": false,
+ "tool": {
+  "git_head": "1c49db7de1d5cfc5b1c02319d06b94ec03ca813a",
+  "dirty_or_untracked": [],
+  "files_sha256_rule": "sha256 of the file with CRLF folded to LF",
+  "files_sha256": {
+   "p03_rank_fuse.py": "77abd7479d26f0f647a258b4a6d5d2e517808b4c187184f14ff599d70b8aca2f",
+   "p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+   "p02_rank_pseudo.py": "16e5bfdfb2995874ddb11bde1f7a9e786a478b14443453f675a4fb3a480bb098",
+   "p02_rank_opening.py": "a4195fece41aa3d50ecda82d1af93d9c04f49df5fd2157d69dd8a488dea93463",
+   "p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "decide.py": "cf66daf1231b3c2bd60c5b6484245627e133bd0f1cd7ff5557e978da3801d0e3"
+  }
+ },
+ "frozen_tools": {
+  "rule": "sha256 with CRLF folded to LF, working file == HEAD blob",
+  "files_sha256": {
+   "p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+   "p02_rank_pseudo.py": "16e5bfdfb2995874ddb11bde1f7a9e786a478b14443453f675a4fb3a480bb098",
+   "p02_rank_opening.py": "a4195fece41aa3d50ecda82d1af93d9c04f49df5fd2157d69dd8a488dea93463",
+   "p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "decide.py": "cf66daf1231b3c2bd60c5b6484245627e133bd0f1cd7ff5557e978da3801d0e3"
+  }
+ }
+}

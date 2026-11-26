@@ -1,0 +1,163 @@
+{
+ "what": "prereg08 P1 smoke evidence (2026-10-06): GPU smoke (probe games only, separate folder), GPU fp16 vs CPU fp32 per-game means, synthetic mechanics of p1_fuse (random features; inner pseudo-questions; no real P1 feature of any inner game existed)",
+ "gpu": {
+  "device": "RTX 4090 (desktop apps on the same GPU; nvidia-smi listed no other compute process)",
+  "precision": "fp16",
+  "batch": 1024,
+  "channels_last": true,
+  "run_20_workers_1000_games": [
+   {
+    "chunk": 0,
+    "positions": 45731,
+    "seconds": 110.5,
+    "positions_per_s": 414.0,
+    "gpu_busy_frac": 0.82
+   },
+   {
+    "chunk": 1,
+    "positions": 45883,
+    "seconds": 42.5,
+    "positions_per_s": 1079.5,
+    "gpu_busy_frac": 0.826
+   },
+   {
+    "chunk": 2,
+    "positions": 45650,
+    "seconds": 43.4,
+    "positions_per_s": 1052.0,
+    "gpu_busy_frac": 0.816
+   },
+   {
+    "chunk": 3,
+    "positions": 44450,
+    "seconds": 37.2,
+    "positions_per_s": 1194.1,
+    "gpu_busy_frac": 0.905
+   },
+   {
+    "chunk": 4,
+    "positions": 46051,
+    "seconds": 41.1,
+    "positions_per_s": 1121.8,
+    "gpu_busy_frac": 0.856
+   }
+  ],
+  "run_10_workers_600_games": [
+   {
+    "chunk": 0,
+    "positions": 45731,
+    "seconds": 56.3,
+    "positions_per_s": 812.9,
+    "gpu_busy_frac": 0.839
+   },
+   {
+    "chunk": 1,
+    "positions": 45883,
+    "seconds": 38.6,
+    "positions_per_s": 1188.5,
+    "gpu_busy_frac": 0.905
+   },
+   {
+    "chunk": 2,
+    "positions": 45650,
+    "seconds": 39.5,
+    "positions_per_s": 1155.7,
+    "gpu_busy_frac": 0.892
+   }
+  ],
+  "note": "first chunk includes cuDNN autotune and worker start; steady 1,050-1,190 positions/s, GPU-bound (gpu_busy_frac 0.82-0.91)"
+ },
+ "featurisation_cpu": {
+  "memoised_ladders_bitwise_equal_to_hs_lib": true,
+  "single_worker_positions_per_s": {
+   "hs_lib": 105.6,
+   "p1_lib": 255.5
+  },
+  "games": 8
+ },
+ "gpu_vs_cpu_fp32": {
+  "games": 6,
+  "max_abs_diff": {
+   "trunk_at_move": 0.000789492516152901,
+   "board_mean": 0.0003459433415778923,
+   "logp": 0.0002485113560282137,
+   "entropy": 0.0001225004061347068,
+   "rel_trunk": 0.00010942060009499935
+  }
+ },
+ "synthetic_fuse": {
+  "probe_games": 3000,
+  "bank_games": 11813,
+  "mono": "not generated (G4 partial by design)",
+  "maxiter": 100,
+  "null": {
+   "seam": {
+    "Q02_eval_P_equal_u1": true,
+    "Q02_mono_P_equal_u1": true,
+    "Q02H_rank_balanced": 0.6242752597994481,
+    "Q02H_pilot": 0.6242752597994481,
+    "Q02H_equal_pilot": true
+   },
+   "mapping_lambda": {
+    "T": 1.0,
+    "O": 1.0,
+    "TO": 1.0
+   },
+   "rank_balanced": {
+    "Q02H": 0.6242752597994481,
+    "Q02H+P1TO": 0.6236059096192028,
+    "Q02H+P1T": 0.6241824191278396,
+    "Q02H+P1T+P1O": 0.623629202020217,
+    "Q02+P1TO": 0.6102742541744598,
+    "R20+P1TO": 0.5860288503344405
+   },
+   "primary_gate": {
+    "G1_delta": -0.0006693501802452761,
+    "G2_ci95": [
+     -0.0011405724469398721,
+     -0.00019170898642771896
+    ]
+   }
+  },
+  "planted_signal_0.5": {
+   "seam": {
+    "Q02_eval_P_equal_u1": true,
+    "Q02_mono_P_equal_u1": true,
+    "Q02H_rank_balanced": 0.6242752597994481,
+    "Q02H_pilot": 0.6242752597994481,
+    "Q02H_equal_pilot": true
+   },
+   "mapping_lambda": {
+    "T": 0.1,
+    "O": 1.0,
+    "TO": 0.3
+   },
+   "rank_balanced": {
+    "Q02H": 0.6242752597994481,
+    "Q02H+P1TO": 0.6369926211758771,
+    "Q02H+P1T": 0.640775197365649,
+    "Q02H+P1T+P1O": 0.6401522218258717,
+    "Q02+P1TO": 0.6206100344619545,
+    "R20+P1TO": 0.5990617346372873
+   },
+   "primary_gate": {
+    "G1_delta": 0.012717361376428982,
+    "G2_ci95": [
+     0.001935397428123728,
+     0.022806137564204614
+    ]
+   }
+  },
+  "lambdas": [
+   1.0,
+   0.3,
+   0.1,
+   0.03,
+   0.01,
+   0.003,
+   0.001,
+   0.0003,
+   0.0001
+  ]
+ }
+}

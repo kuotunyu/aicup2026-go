@@ -1,0 +1,16 @@
+{
+ "file": "dumps/val_keys.npz",
+ "rows": 5000,
+ "syms": null,
+ "bytes": 246002,
+ "sha256": "01fc5858d1607d56fc1b72cfc5aac658c85cef7704c05b39e3ac7220732208fa",
+ "weights": null,
+ "weights_sha256": null,
+ "seconds": 7.152557373046875e-07,
+ "time": "2026-11-04T07:49:02+00:00",
+ "run": 1,
+ "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "torch": "2.11.0+cu128",
+ "cudnn": 91900,
+ "device": "cuda"
+}

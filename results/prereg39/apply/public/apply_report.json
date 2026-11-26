@@ -1,0 +1,66 @@
+{
+ "format": "c10-prereg39 apply v2",
+ "pool": "public",
+ "base": {
+  "name": "p38",
+  "tune": "results/prereg37/explore/tune_D_B4_M37.json",
+  "eval": "results/prereg37/explore/eval_backend.json",
+  "emb_dir": "data/prereg37/emb/step_160000",
+  "tune_sha256_lf": "114382765724c1f9af4cba67c9f7612dea993d26bf4f765b15cbb3731e4ae10a",
+  "eval_sha256_lf": "a82b1febbdbaa381c82ba664f442bcedf3818b169696e8c0e3870934298e8bb6",
+  "cfg": {
+   "gnorm": true,
+   "pool_w": "mean",
+   "centre_colour": false,
+   "whiten": {
+    "lam": 0.7,
+    "lda": 128
+   },
+   "sim": "proto",
+   "alpha": null,
+   "pair": null,
+   "krecip": null,
+   "aqe": null,
+   "qsmooth": null,
+   "wE": 8,
+   "gmul": null,
+   "rowz": false,
+   "norm": [
+    "csls",
+    20
+   ]
+  },
+  "emb": {
+   "ckpt": "step_160000",
+   "ckpt_sha256": "c97b3507924b28717cd97cd95c6b18a04d3a131d5e51f318a86f08ef64f0f016"
+  },
+  "csls_k": 20,
+  "tune_mean": 0.6655350985215651,
+  "e_mean": 0.5856450890595781,
+  "seam_D_identical": true
+ },
+ "M39": {
+  "variant": "joint",
+  "pw": "b4",
+  "wP": 8,
+  "csls_k": 10,
+  "tune_mean": 0.7244595631236577
+ },
+ "base_top5_equals_prereg38_apply": true,
+ "questions": 400,
+ "candidates": 600,
+ "games": 7100,
+ "games_without_P1": 0,
+ "questions_without_P1": 0,
+ "terms_rows_without_signal": {
+  "O": 0,
+  "L": 0,
+  "JO": 0,
+  "S2": 0,
+  "PA": 0
+ },
+ "tune_sha256": "f390b58598cbaeabf6ae18c67b19130d9baccb844ee590e1ba5f40ce0f7e2bea",
+ "eval_sha256": "a9bd552dd94f34fe9c147ae0fdf917151bd99730815d6de920e00b5db10a7bf0",
+ "top5_sha256": "70a679ee353c6e7cea12b1998ebd79b8248223473d9b081720939ebae58d0826",
+ "seconds": 221.8
+}

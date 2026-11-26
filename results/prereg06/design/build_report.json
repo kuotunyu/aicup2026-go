@@ -1,0 +1,159 @@
+{
+ "what": "PREREG_06 S1: per-game features (O_raw tokens, JO tokens, resp tokens, S2, style34) of every game of the fit players with >= 105 games (both colours), file order",
+ "sets": {
+  "black_ge105": {
+   "players": 1082,
+   "games": 232165,
+   "not_alternating": 0,
+   "no_move": 0
+  },
+  "black_ge120": {
+   "players": 926,
+   "games": 214767,
+   "not_alternating": 0,
+   "no_move": 0
+  },
+  "white_ge105": {
+   "players": 1077,
+   "games": 229761,
+   "not_alternating": 0,
+   "no_move": 0
+  },
+  "both_ge105": {
+   "players": 1937,
+   "games": 581338,
+   "not_alternating": 0,
+   "not_alternating_black": 0,
+   "not_alternating_white": 0,
+   "no_move": 0
+  }
+ },
+ "expected": {
+  "black_ge105": [
+   1082,
+   232165
+  ],
+  "black_ge120": [
+   926,
+   214767
+  ],
+  "white_ge105": [
+   1077,
+   229761
+  ],
+  "both_ge105_players": 1937
+ },
+ "checks": {
+  "black_ge105": true,
+  "black_ge120": true,
+  "white_ge105": true,
+  "both_ge105_players": true
+ },
+ "passed": true,
+ "black_ge120_by_level": {
+  "D": 92,
+  "C": 103,
+  "B": 100,
+  "A": 57,
+  "1D": 95,
+  "2D": 105,
+  "3D": 99,
+  "4D": 93,
+  "5D": 96,
+  "6D": 86
+ },
+ "matrices": {
+  "resp": {
+   "shape": [
+    581338,
+    228
+   ],
+   "nnz": 62056024,
+   "vocab": 228
+  },
+  "jo": {
+   "shape": [
+    581338,
+    472964
+   ],
+   "nnz": 7434010,
+   "vocab": 472964
+  },
+  "oraw": {
+   "shape": [
+    581338,
+    134763
+   ],
+   "nnz": 33716350,
+   "vocab": 134763
+  }
+ },
+ "leakcheck_report": {
+  "exists": true,
+  "sha256": "5170de47df21aaacd97c13944ab3297683110055a08644fa9d33b8343b7ac4b9",
+  "committed": true
+ },
+ "feat_dir": "data/prereg06/feats",
+ "files_sha256": {
+  "meta.npz": "b1b5def7312dc6321ab08dd7e74e9b9069c49e9efb8caf7133b9869bf7338df5",
+  "s2.npy": "ce54ee94c0506963f2272fd623a3b61a7287168cde88eac3518489f56bea8917",
+  "s34.npy": "38aafd53388152a3dbaba6ce25fe63f059ded36307830bf52b850686e4c30c73",
+  "jo/data.npy": "69e29110b37bc12101edfdb2ea8df86eaac2ae1321f19b65c3b4a85c803d3605",
+  "jo/indices.npy": "0dc87e9883553053c5e512e260d508bccfd9532121924d8ffaee0a177779b504",
+  "jo/indptr.npy": "f2f47670e6950bdc2253fec52954a93b429cc80bc8b63b8cc2f2e98707d5da51",
+  "jo/vocab.json": "219a7ede8a64017ab48c4676d223b0a6e25dc286ddc29e35451adbb3d5c02ef7",
+  "oraw/data.npy": "517eb67ef3574e4f4456e7bb76362db1a46fbc9e6e8d58db31babd77b95a7cb8",
+  "oraw/indices.npy": "002373a093bdb08edb1fa8d6dac27efbddcea2c6b40146bf5d94e41ef12d4d80",
+  "oraw/indptr.npy": "d36ecc92e0e2ad250a18a008ab1a9ae58d3d037a7c4fca938edfc9b5380eafa5",
+  "oraw/vocab.json": "3a21421e6598a5dbb08c242393ab070b47425887cfebb60b1e38eb8d9e403eef",
+  "resp/data.npy": "d70b7e2acbc74076104058dcfd42f80667a32977a8c6a3a146a808460db93977",
+  "resp/indices.npy": "9d8fbccdaf234a816b7cc717fe092d65f856d0ce5c6ccebc80f5ba8a3bd1552e",
+  "resp/indptr.npy": "8665277e914c0b97eeffd86a950d8ef19e682d2f06e2b830607e282836ca674a",
+  "resp/vocab.json": "fa7291180eff903b083e2874269715741b06657dd63091907955ffefb0873f49"
+ },
+ "workers": 6,
+ "thread_env": {
+  "OMP_NUM_THREADS": "1",
+  "MKL_NUM_THREADS": "1",
+  "OPENBLAS_NUM_THREADS": "1"
+ },
+ "command": "build",
+ "mode": "real",
+ "precommit": false,
+ "created": "2026-10-03T11:30:16+08:00",
+ "git_head": "ad0597900e00860410ef70a7f1597e0b0ef71f90",
+ "tools": {
+  "tools/p06_style.py": {
+   "sha256_lf": "78beb8138c27853da70081e469e534508174265852a64ebada21e354ae72058a",
+   "committed_and_clean": true
+  },
+  "tools/p06_sim.py": {
+   "sha256_lf": "21deeea1eb08b1d6580ba78c47505789f66dbdd10c8891973e14f523ef443eeb",
+   "committed_and_clean": true
+  },
+  "tools/p06_player.py": {
+   "sha256_lf": "b25636878ee87ca828a9c65177965dc60466ac4e9aa348acd88785ca11075590",
+   "committed_and_clean": true
+  }
+ },
+ "env": {
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "executable": ".venv/Scripts/python.exe"
+ },
+ "inputs": {
+  "split_csv": "69554875064ecbd83d790b3215c8ba8f9540f217ec4af3e4a8c43228ac2a3dfc",
+  "train_D.csv": "2ac3b7684be1ead82ea3839243eb7510249e55457f536df910d99619ae0a6d22",
+  "train_C.csv": "d66c5ade7775dd1596f1d7c1a6e0aa49d32557f5073188ba79e68063f6de69f7",
+  "train_B.csv": "05ea3b278d4ca6043b9153c83fc62920f68bfd1aa2b424f05f28dfa4f9651c06",
+  "train_A.csv": "0915826dfeadb32fa6fc5f5a08b1ef90a5ed0e3cc7868452e8158c887e3ccbca",
+  "train_1D.csv": "879536c2b7f8fdeacf7d2ddd0b2ffab0f36b40862b7dcec48a4250cf8dea618b",
+  "train_2D.csv": "167eae9e4872c96be2bcbdddcee0ef37eff249dfe00bf8dce20c4ceb468628bc",
+  "train_3D.csv": "8954844760b0cd072aeb68ef1390e0c8a19055d900d31b554ab62fe3b25f455b",
+  "train_4D.csv": "96fccefca0d037aac2ba56f63d547ebbe4c321b0e60941457c508d1e25ff1867",
+  "train_5D.csv": "8b2bce946f10cd93f4be77469ac84b44f02f799467b717969e0ee350a10b7c85",
+  "train_6D.csv": "171a3083f1d49bf138cad71ae8b1122bdfb37ad6568f5d4c42321754e3969ee3"
+ },
+ "seconds": 111.6
+}

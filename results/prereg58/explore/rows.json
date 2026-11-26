@@ -1,0 +1,32 @@
+{
+ "format": "c10-prereg58 rows v1",
+ "created": "2026-11-20T15:24:41",
+ "what": "the inner games that appear in at least one inner question (fit / eval / single-colour); their rows in data/prereg44/cache/inner (prereg36 cache format, inner_keys order)",
+ "n_inner": 73556,
+ "used_rows": 73169,
+ "per_set": {
+  "S_fit": {
+   "questions": 25400,
+   "games": 10160
+  },
+  "S_eval": {
+   "questions": 127200,
+   "games": 11813
+  },
+  "S_mono": {
+   "questions": 120544,
+   "games": 72908
+  }
+ },
+ "inner_players": 640,
+ "inner_keys_equal_harness_keys": true,
+ "inner_cache_equals_inner_keys": true,
+ "inner_cache_codes_sha256": "288148d0c936b281aabbc8c839cf214eae5fcf9f03105fc6dea998cfb49d69cd",
+ "inner_rows_sha256": "b2f97033e16cf0b23bec4bfa36c93b6bf2c2f8a87f052024611c314386d8583c",
+ "sanity": {
+  "games": 64,
+  "source": "data/prereg43/emb_S0/V2_step_320000_raw_tta1/store_D.npz",
+  "rows_sha256": "61f16b8caa174af68b65676bd5c022b0b96883e47bbb9caaca01e398f119190a"
+ },
+ "peak_working_set_gb": 0.65
+}

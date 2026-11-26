@@ -1,0 +1,17 @@
+{
+ "bank": {
+  "games": 11813,
+  "chunks": 60,
+  "chunks_present": 60
+ },
+ "mono": {
+  "games": 61356,
+  "chunks": 307,
+  "chunks_present": 307
+ },
+ "fitmap": {
+  "games": 3000,
+  "chunks": 15,
+  "chunks_present": 15
+ }
+}

@@ -1,0 +1,65 @@
+{
+ "what": "PREREG_09 rev 3 section 13: the 09 fake-test dry run's outputs (tests/test_t09_dryrun.py T09DryRun.test_golden), recorded from the first dry run that passed every other check (as t07 / t08 recorded theirs). r20 / t04 / t07 / t08 are the PREREG_09 5.1 step 3 baseline (results/test09/design/baseline_pre09.json), unchanged by the 09 kit.",
+ "recorded": "2026-10-09",
+ "git_head": "767210da90e10a7ab8e30b03d07356196b5e890b",
+ "command": "C10_SLOW=1 C10_KEEP=1 C10_T09_TREE=<a tree with the test07 dry run> PYTHONDONTWRITEBYTECODE=1 .venv/Scripts/python.exe -m pytest -q -p no:cacheprovider tests/test_t09_dryrun.py",
+ "tree": "D:/c10_t09_reh (a copy of the 07 dry-run tree D:/c10_t08_reh without test08; results/test08 and results/test09 rebuilt by the test)",
+ "files_sha256": {
+  "r20": {
+   "out/rank/rank_test_probs.csv": "bb76e6cf7b2bbed94113c536d1b7d4596230125d987c46ffd01eeb9b354d5b59",
+   "out/rank/pred_A.csv": "e04031de197e4ec603e6cc90e949e227b293b2528d823f1402d2a25230776553",
+   "out/rank/pred_B.csv": "d9b9801b3df85c75e5932ce228eebbeb8a76c43b40d2efd02700ce8807490d97",
+   "out/rank/submission_rank.csv": "d9b9801b3df85c75e5932ce228eebbeb8a76c43b40d2efd02700ce8807490d97",
+   "out/rank/seam_val/rank_val_probs.csv": "a83700432fce5d7d26653fdaee345b0c894729fdff0029a244ed94e06c803b63",
+   "out/rank/seam_val/pred_A.csv": "6729fe1dd62eda19a46d05daa9a0abd522e73bf9bcb412e72888c839fbe7f8b2",
+   "out/rank/seam_val/pred_B.csv": "863a62582424adddc9c2e1821fcc056008bd651e103c19ec8ada98a14f87a2fd"
+  },
+  "t04": {
+   "results/test04/opp/o4_seam_val.npz": "30d312c02c357f6761567099003885be5e08635b6e6c0b49d71baac137cd9cd4",
+   "results/test04/opp/o4_public.npz": "2d54353ce03370c4ccae46a9917d5b8a180c68b5f6799c953c005dfe9f929fb4",
+   "results/test04/opp/o4_private.npz": "2edfd1cdb27c9da116b97b34fbe79a13683019456a6ed6adfd66fca4a2bca036",
+   "results/test04/rank/rank_test_probs.csv": "0324e141f3e296e3178a8f3581e262cb5522e38e3e3f8b1fc355ed2413d1252e",
+   "results/test04/rank/pred_A.csv": "8fa9c69dff3c1d99809141bbc6ea0135607186ac20c0bf53709fa09825836b57",
+   "results/test04/rank/pred_B.csv": "a42c09fa99f4c570dcb95270d73f3cacd2ee47bad0ea886fa5f574f6451a7dce",
+   "results/test04/rank/submission_rank.csv": "a42c09fa99f4c570dcb95270d73f3cacd2ee47bad0ea886fa5f574f6451a7dce",
+   "results/test04/rank/seam_val/rank_val_probs.csv": "3c7ab658dc558ce8c6aefdd7b0747de1a60de575d151e9eee96ca6775f442e5c",
+   "results/test04/rank/seam_val/pred_A.csv": "6a6bb3c2e63761bc7196661c99999cec499fae1b38bbb3a7bb9d512e26487739",
+   "results/test04/rank/seam_val/pred_B.csv": "27b6d225d0afc8db9183ae970ee19946ff819ec5ccb2be6a1816ef4338efff79"
+  },
+  "t07": {
+   "results/test07/hs/seam_hs.npz": "ae65b55bfa9538769198bff884765faa82e6ec74ca98d1e83f73d746af069340",
+   "results/test07/hs/public_hs.npz": "571cfd730bafd4150eae62dc41763423ab520e03386677d958eac3754e811e82",
+   "results/test07/hs/private_hs.npz": "26a8910c4f1e03a246ba5ed3fecf3d8cce3f192024433667a01a1f2f40489f1e",
+   "results/test07/rank/rank_test_probs.csv": "ede52634862ed421b0fd76a0b163e39a6596ad7e4e321d59b8f9ad9cf8ebe44c",
+   "results/test07/rank/pred_A.csv": "605e64fd4eb52e2be4685cd967157b85decfe7ced7b3fead9bf3b88cf6154585",
+   "results/test07/rank/pred_B.csv": "d3bcad47e43d41c7106fd4f98260ad881b1165b843ef5e81370d5c26327cb7c6",
+   "results/test07/rank/submission_rank.csv": "d3bcad47e43d41c7106fd4f98260ad881b1165b843ef5e81370d5c26327cb7c6",
+   "results/test07/rank/seam_val/rank_val_probs.csv": "6ae2db6025a903eb5c58af9418dc203c0b6e84dd664049f85dfa850e57dc28c1",
+   "results/test07/rank/seam_val/pred_A.csv": "b229be2c414f7af22310bc304d6da9de5b6406698ec8ce9c0d40e7c146b40a41",
+   "results/test07/rank/seam_val/pred_B.csv": "51d7dbf82d50c3848acadb6934069580bd3ade7e6ca71ad5d1023633a18a26fa"
+  },
+  "t08": {
+   "results/test08/p1/seam_p1.npz": "572eeda45d3dfb1da5d4528654065f0d202693ef0480b5252dc6a5b1f5a953a0",
+   "results/test08/p1/public_p1.npz": "d86d15bf80d5c8e6d52225cbbd6961d330e716352c39fb2d98323f2d295c3b00",
+   "results/test08/p1/private_p1.npz": "5ceef68ef3959255fb91beee45f78dc94b37ec833c871f82054046512decb621",
+   "results/test08/rank/rank_test_probs.csv": "3454356ed985701ea3ffc915156d9e87365ff880357a5dd93afd6eb6cb527eee",
+   "results/test08/rank/pred_A.csv": "a3aed84c405ef5183825a64ac3fff9e8fd772b1d8984dec2f8e42951088ef205",
+   "results/test08/rank/pred_B.csv": "457c85428cb3fc85ffdcf01bfd08bbc5a4200f44ba0acf8577545203ac52433a",
+   "results/test08/rank/submission_rank.csv": "457c85428cb3fc85ffdcf01bfd08bbc5a4200f44ba0acf8577545203ac52433a",
+   "results/test08/rank/test_lp_p1.npz": "350b915e4cf8a6935f3ba39b282cc05251940ca3dfb8264a3ce28e66bdbff03b",
+   "results/test08/rank/seam_val/rank_val_probs.csv": "7a513367147227e3631bfb7bad36064f3e90fffb6ee358716e389698ce1ccd97",
+   "results/test08/rank/seam_val/pred_A.csv": "e24699e989543bfbfc73b1b710677c93f018747193a9ba18d89fc004cdd17753",
+   "results/test08/rank/seam_val/pred_B.csv": "b02d4f947910726fa25c292e9798e7407b1e802e2fed080d843f56b9beb48872"
+  },
+  "t09": {
+   "results/test09/rank/rank_test_probs.csv": "f375361e3dc4a83dee1bab7af4697db90934a4177855a0d6630ea5b8b411cd0b",
+   "results/test09/rank/pred_A.csv": "dedcfbd67e6f87cfad4fcc76307c05b81ab74bf38bfb681bf4a0d9bb3f4d2c08",
+   "results/test09/rank/pred_B.csv": "eabba882a04d4bf03dd43e2f576b53e5b75baedf5fc17c3b301d2c8f5af26f56",
+   "results/test09/rank/submission_rank.csv": "eabba882a04d4bf03dd43e2f576b53e5b75baedf5fc17c3b301d2c8f5af26f56",
+   "results/test09/rank/test_lp_p1e.npz": "60526f904bf8cd03370cfcd9a42dc35a7aab8bfcdaf547d2c0387121dc24db9a",
+   "results/test09/rank/seam_val/rank_val_probs.csv": "3f8d32f4b5b0431c9f4407199ae2c074595428ef9053ab807a5cf3b129e3b4fb",
+   "results/test09/rank/seam_val/pred_A.csv": "5c412993c6f72a7169327c8a2575cc7b3be44195ad3e198d30712d73d62432e0",
+   "results/test09/rank/seam_val/pred_B.csv": "d1a2f1d673a8b95425dfdc6b392a64a3e7484509d8bbaa3eb3c72f5ee283333b"
+  }
+ }
+}

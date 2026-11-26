@@ -1,0 +1,414 @@
+{
+ "reference_check": {
+  "fit_reference": {
+   "rebuilt": {
+    "players": 5767,
+    "games": 720307,
+    "sha256_sorted_player_ids": "9940feed82f435a770030a17b32b5bbf7dc1002daa61616a989b24580bdf664f"
+   },
+   "committed": {
+    "players": 5767,
+    "games": 720307,
+    "sha256_sorted_player_ids": "9940feed82f435a770030a17b32b5bbf7dc1002daa61616a989b24580bdf664f"
+   },
+   "passed": true
+  },
+  "t3b_fit_reference": {
+   "rebuilt": {
+    "players": 5767,
+    "black_games": 360581,
+    "sha256_sorted_player_ids": "9940feed82f435a770030a17b32b5bbf7dc1002daa61616a989b24580bdf664f"
+   },
+   "committed": {
+    "players": 5767,
+    "black_games": 360581,
+    "sha256_sorted_player_ids": "9940feed82f435a770030a17b32b5bbf7dc1002daa61616a989b24580bdf664f"
+   },
+   "passed": true
+  },
+  "raw": {
+   "vocab": [
+    146421,
+    146421
+   ],
+   "vocab_sha256": [
+    "63974765eeed627eaaaaabbdb47ff3e04621092696564dd87ca834ae486f4cb3",
+    "63974765eeed627eaaaaabbdb47ff3e04621092696564dd87ca834ae486f4cb3"
+   ],
+   "idf_sha256": [
+    "2523d83ca8eed86b7edfa157efbfbbe968ee207263b32f325d5baaff55c4016d",
+    "2523d83ca8eed86b7edfa157efbfbbe968ee207263b32f325d5baaff55c4016d"
+   ],
+   "q99": [
+    0.1004267242871777,
+    0.1004267242871777
+   ],
+   "null_player_ids_equal": true,
+   "null_S2_equal": true,
+   "idf_equal_npz": true,
+   "passed": true
+  },
+  "t3b_raw": {
+   "vocab": [
+    146421,
+    146421
+   ],
+   "vocab_sha256": [
+    "63974765eeed627eaaaaabbdb47ff3e04621092696564dd87ca834ae486f4cb3",
+    "63974765eeed627eaaaaabbdb47ff3e04621092696564dd87ca834ae486f4cb3"
+   ],
+   "idf_sha256": [
+    "660f78032ebf7e8296c6e2b9f55ec5d72b29f410fc8deb832836bdaf321c92b3",
+    "660f78032ebf7e8296c6e2b9f55ec5d72b29f410fc8deb832836bdaf321c92b3"
+   ],
+   "q99": [
+    0.11054835109258787,
+    0.11054835109258787
+   ],
+   "null_player_ids_equal": true,
+   "null_S2_equal": true,
+   "idf_equal_npz": true,
+   "passed": true
+  },
+  "canon": {
+   "vocab": [
+    144097,
+    144097
+   ],
+   "vocab_sha256": [
+    "7715531569bdf0e87f2c0d7dc632641e377da1dd8e2850504e3f17fb29dac055",
+    "7715531569bdf0e87f2c0d7dc632641e377da1dd8e2850504e3f17fb29dac055"
+   ],
+   "idf_sha256": [
+    "0214853fa9a080b519b87bdf4302e4cd9045855e0465ed37e514bdd12682b3fb",
+    "0214853fa9a080b519b87bdf4302e4cd9045855e0465ed37e514bdd12682b3fb"
+   ],
+   "q99": [
+    0.08085695648061325,
+    0.08085695648061325
+   ],
+   "null_player_ids_equal": true,
+   "null_S2_equal": true,
+   "idf_equal_npz": true,
+   "passed": true
+  },
+  "t3b_canon": {
+   "vocab": [
+    144097,
+    144097
+   ],
+   "vocab_sha256": [
+    "7715531569bdf0e87f2c0d7dc632641e377da1dd8e2850504e3f17fb29dac055",
+    "7715531569bdf0e87f2c0d7dc632641e377da1dd8e2850504e3f17fb29dac055"
+   ],
+   "idf_sha256": [
+    "ab64b00fb5fc0ee3dc288f8a412df3824a48cd1031ac88d8f266f3b030118d23",
+    "ab64b00fb5fc0ee3dc288f8a412df3824a48cd1031ac88d8f266f3b030118d23"
+   ],
+   "q99": [
+    0.08269886422035472,
+    0.08269886422035472
+   ],
+   "null_player_ids_equal": true,
+   "null_S2_equal": true,
+   "idf_equal_npz": true,
+   "passed": true
+  }
+ },
+ "pools": {
+  "public": {
+   "n_candidates": 400,
+   "needed": 40,
+   "b_c": 1.0,
+   "variant": "T3b",
+   "registered_T3_record_only": {
+    "raw": {
+     "q99": 0.1004267242871777,
+     "n_above": 4,
+     "share_above": 0.01,
+     "S2_quantiles": {
+      "0.0": 2.3806170500795254e-05,
+      "0.01": 0.000152589466302443,
+      "0.5": 0.011537006761692947,
+      "0.9": 0.03618764355056565,
+      "0.99": 0.09454696772184544,
+      "1.0": 0.11490847162073381
+     },
+     "tokens_unseen_in_training": 1446
+    },
+    "canon": {
+     "q99": 0.08085695648061325,
+     "n_above": 1,
+     "share_above": 0.0025,
+     "S2_quantiles": {
+      "0.0": 2.3224151588840947e-05,
+      "0.01": 0.00012249504457615247,
+      "0.5": 0.00887897043572658,
+      "0.9": 0.03480784332591475,
+      "0.99": 0.06500300295972658,
+      "1.0": 0.08654038775493722
+     },
+     "tokens_unseen_in_training": 1457
+    }
+   },
+   "raw": {
+    "q99": 0.11054835109258787,
+    "n_above": 2,
+    "share_above": 0.005,
+    "S2_quantiles": {
+     "0.0": 8.860921738246264e-05,
+     "0.01": 0.00017435597698182482,
+     "0.5": 0.00937770540226715,
+     "0.9": 0.030961115713732754,
+     "0.99": 0.08952206220038975,
+     "1.0": 0.12352982044912025
+    },
+    "tokens_unseen_in_training": 1446
+   },
+   "canon": {
+    "q99": 0.08269886422035472,
+    "n_above": 2,
+    "share_above": 0.005,
+    "S2_quantiles": {
+     "0.0": 0.00012073486621405616,
+     "0.01": 0.0003271059423356959,
+     "0.5": 0.008322116285141484,
+     "0.9": 0.028930070177233886,
+     "0.99": 0.07514128869669588,
+     "1.0": 0.10729135368096482
+    },
+    "tokens_unseen_in_training": 1457
+   },
+   "overlap": false,
+   "low_power": false,
+   "conclusion": "no overlap declared"
+  },
+  "private": {
+   "n_candidates": 400,
+   "needed": 40,
+   "b_c": 1.0,
+   "variant": "T3b",
+   "registered_T3_record_only": {
+    "raw": {
+     "q99": 0.1004267242871777,
+     "n_above": 2,
+     "share_above": 0.005,
+     "S2_quantiles": {
+      "0.0": 2.8740314836406267e-05,
+      "0.01": 0.00022795766506698902,
+      "0.5": 0.010025799552445008,
+      "0.9": 0.035821872145994964,
+      "0.99": 0.06882095200521475,
+      "1.0": 0.1340085816335106
+     },
+     "tokens_unseen_in_training": 1476
+    },
+    "canon": {
+     "q99": 0.08085695648061325,
+     "n_above": 2,
+     "share_above": 0.005,
+     "S2_quantiles": {
+      "0.0": 7.646967508434521e-06,
+      "0.01": 8.428946870954246e-05,
+      "0.5": 0.010569120300485013,
+      "0.9": 0.035166962505121226,
+      "0.99": 0.06322501167107444,
+      "1.0": 0.14286203372213008
+     },
+     "tokens_unseen_in_training": 1490
+    }
+   },
+   "raw": {
+    "q99": 0.11054835109258787,
+    "n_above": 2,
+    "share_above": 0.005,
+    "S2_quantiles": {
+     "0.0": 4.85422190633078e-05,
+     "0.01": 0.0001746996319666655,
+     "0.5": 0.009007153615493757,
+     "0.9": 0.03262879781664871,
+     "0.99": 0.0785280081587613,
+     "1.0": 0.13041311578048698
+    },
+    "tokens_unseen_in_training": 1476
+   },
+   "canon": {
+    "q99": 0.08269886422035472,
+    "n_above": 3,
+    "share_above": 0.0075,
+    "S2_quantiles": {
+     "0.0": 4.118969978206266e-06,
+     "0.01": 0.0002403088031721551,
+     "0.5": 0.008859097837440683,
+     "0.9": 0.027458704226115835,
+     "0.99": 0.0639811813365064,
+     "1.0": 0.12357973990859017
+    },
+    "tokens_unseen_in_training": 1490
+   },
+   "overlap": false,
+   "low_power": false,
+   "conclusion": "no overlap declared"
+  }
+ },
+ "t3q": {
+  "player_identification_test_public.csv": {
+   "raw": {
+    "questions": 400,
+    "n_above_q99_of_k": 9,
+    "share_above": 0.0225,
+    "expected_null_share": 0.01,
+    "questions_with_k_outside_5_20": 0,
+    "S2_quantiles": {
+     "0.0": 2.4255387061411504e-05,
+     "0.01": 0.00023466886113044733,
+     "0.5": 0.009833135491530101,
+     "0.9": 0.03691249249861858,
+     "0.99": 0.08272711223141511,
+     "1.0": 0.1322306028166936
+    }
+   },
+   "canon": {
+    "questions": 400,
+    "n_above_q99_of_k": 4,
+    "share_above": 0.01,
+    "expected_null_share": 0.01,
+    "questions_with_k_outside_5_20": 0,
+    "S2_quantiles": {
+     "0.0": 3.2899865309493626e-05,
+     "0.01": 0.0001299242529548597,
+     "0.5": 0.009747951554938988,
+     "0.9": 0.0299967048731232,
+     "0.99": 0.06665898486715835,
+     "1.0": 0.10007847319750235
+    }
+   }
+  },
+  "player_identification_test_private.csv": {
+   "raw": {
+    "questions": 400,
+    "n_above_q99_of_k": 3,
+    "share_above": 0.0075,
+    "expected_null_share": 0.01,
+    "questions_with_k_outside_5_20": 0,
+    "S2_quantiles": {
+     "0.0": 1.551645928243861e-06,
+     "0.01": 0.00012187661342864227,
+     "0.5": 0.009123282080111816,
+     "0.9": 0.036544131428036086,
+     "0.99": 0.06715751312895392,
+     "1.0": 0.09440062557851564
+    }
+   },
+   "canon": {
+    "questions": 400,
+    "n_above_q99_of_k": 3,
+    "share_above": 0.0075,
+    "expected_null_share": 0.01,
+    "questions_with_k_outside_5_20": 0,
+    "S2_quantiles": {
+     "0.0": 4.486324534008768e-06,
+     "0.01": 9.060949516809109e-05,
+     "0.5": 0.007942632183002049,
+     "0.9": 0.026225880471475758,
+     "0.99": 0.06901219849040156,
+     "1.0": 0.12372856057298254
+    }
+   }
+  }
+ },
+ "verdict": "PASS",
+ "consequence": "none: no overlap declared (overlap of about 20% of the candidates or less is not detectable)",
+ "t1_verdict": "PASS",
+ "t2a_fired": false,
+ "t2a_note": null,
+ "rule": "n_raw = #{S2_raw > q99_raw}, n_canon = #{S2_canon > q99_canon}; overlap iff n_raw >= ceil(0.10 x candidates) OR n_canon >= ceil(0.10 x candidates) (40 of 400)",
+ "black_only_rule": "a pool whose candidate black share b_c is exactly 1 uses T3b (PREREG_02 rev 8; results/test02/null/t3b_null.json); the registered T3 numbers of that pool are recorded only",
+ "low_power_rule": "a pool on the registered T3 with max(b_c, 1 - b_c) >= 0.9 (b_c not exactly 1) is flagged low_power: without a declared overlap its conclusion is 'not determinable (low power)' and T3's verdict LOW_POWER instead of PASS (PREREG_02 rev 8); a declared overlap stays OVERLAP",
+ "low_power_pools": [],
+ "variants": {
+  "public": "T3b",
+  "private": "T3b"
+ },
+ "reference": {
+  "players": 5767,
+  "games": 720307,
+  "sha256_sorted_player_ids": "9940feed82f435a770030a17b32b5bbf7dc1002daa61616a989b24580bdf664f"
+ },
+ "format": "c10-test02 t3 v1",
+ "comp": "player",
+ "provenance": {
+  "tool": "tools/t02_checks.py",
+  "tool_sha256": "a6fb40f99e7af19bfe4eef3f5cbb1d0049a8f0c14a7cc95cddfac73884f99cc8",
+  "tool_committed_clean": true,
+  "c10data_sha256": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+  "p02_moves_sha256": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+  "p02_player_open_sha256": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+  "git_head": "7cdb60ab8d21a33ea0ffe3c3fd08d5b5569e3b44",
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "mode": "real",
+  "argv": [
+   "run",
+   "--comp",
+   "player"
+  ],
+  "created": "2026-11-04T14:36:34+0800",
+  "inputs": {
+   "results/test02/checks/player/t1.json": "cc0ddcf72f857ed4c5ab335cf14e17a4747fe0c82e4fa6db73ffca76ec0c42cd",
+   "manifest": {
+    "manifest_sha256": "b9e9e8a6a7fc8b7b696d2d4501563cb99aeac6a95e327f3a5e686d04bbdd0bbe",
+    "files": {
+     "player_identification_test_public.csv": "0e59f7f72376cfa2e81ae913d61092caeb1240d95abb43a581207ed29f1647a8",
+     "player_identification_candidates_public.csv": "8175aeb08235536a1435bb6ba4c55088f906096cc14e7048e8898e3d7a3597a6",
+     "player_identification_test_private.csv": "4b07a403b36875f44007adb22aaa8da3c75ec3994e165f36c29a9400e6efcd11",
+     "player_identification_candidates_private.csv": "7a8926ca83b43b1dca0e32c23513cbbff2731d623be151cf80ed912a91d91e57"
+    }
+   },
+   "player_identification_test_public.csv": "0e59f7f72376cfa2e81ae913d61092caeb1240d95abb43a581207ed29f1647a8",
+   "player_identification_candidates_public.csv": "8175aeb08235536a1435bb6ba4c55088f906096cc14e7048e8898e3d7a3597a6",
+   "player_identification_test_private.csv": "4b07a403b36875f44007adb22aaa8da3c75ec3994e165f36c29a9400e6efcd11",
+   "player_identification_candidates_private.csv": "7a8926ca83b43b1dca0e32c23513cbbff2731d623be151cf80ed912a91d91e57",
+   "results/test02/null/t3_null.json": "1950e9a8af5543dc95f6dd9d28664278ba145fafef153b785905264a6e934dd4",
+   "results/test02/null/t3_null_raw.npz": "4eb9cf053b3ae296df6de020e7f1ecf4caa3e3bc53ed477e0e749a4f4d4da714",
+   "results/test02/null/t3_null_canon.npz": "5312a18c34e71d4a254b5239b508612265be0b38a543b2f65dbd458159fcf69e",
+   "results/test02/null/t3b_null.json": "a8cf38347b326b024a464b84b193846a9ce1c0205df3be072c95f7b107f5e58c",
+   "results/test02/null/t3b_null_raw.npz": "e42318ca89298213175920b0600bc93ec9ed0707d6ea7a063100f7f49c988db7",
+   "results/test02/null/t3b_null_canon.npz": "46589ca3a1d0fadbed9c5831959fbd3f237ade1b18842dbcf340e64c434279fc",
+   "results/test02/null/train_refs.json": "380a0a7fa6e4cb7751e8ee3404a1ccba645ca73dd919a6a5e9a8451636988203"
+  },
+  "rerun_reason": null,
+  "validation_hash_guard": {
+   "available": true,
+   "rule": "real mode: hits are recorded; a file with share >= 0.50 of local validation games is refused (validation-derived tree)",
+   "games_checked": 90000,
+   "validation_hashes": 61558,
+   "hits": 0,
+   "files": {
+    "player_identification_test_public.csv": {
+     "games": 5000,
+     "validation_hits": 0,
+     "share": 0.0
+    },
+    "player_identification_candidates_public.csv": {
+     "games": 40000,
+     "validation_hits": 0,
+     "share": 0.0
+    },
+    "player_identification_test_private.csv": {
+     "games": 5000,
+     "validation_hits": 0,
+     "share": 0.0
+    },
+    "player_identification_candidates_private.csv": {
+     "games": 40000,
+     "validation_hits": 0,
+     "share": 0.0
+    }
+   }
+  },
+  "missing_files_skipped": [],
+  "runtime_s": 277.2
+ }
+}

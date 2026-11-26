@@ -1,0 +1,388 @@
+{
+ "format": "c10-prereg10 player selfcheck v1",
+ "what": "PREREG_10 2.3 selfcheck: formal T_P1 / 10B fusion vs the x3 pilot (pilot recipe: LDA on the PREREG_08 probe, port check only, feeds no selection)",
+ "passed": true,
+ "only_numeric_path": false,
+ "tolerance": 1e-09,
+ "numeric_path_tolerance": 1e-06,
+ "max_abs_diff": 0.0,
+ "four_decimal_equal_record_only": true,
+ "rows": [
+  {
+   "scenario": "c30",
+   "name": "V2",
+   "formal": 0.9510184171277541,
+   "x3_unrounded": 0.9510184171277541,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.951,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30",
+   "name": "V2+P1ldaBW@0.5",
+   "formal": 0.9544008576500704,
+   "x3_unrounded": 0.9544008576500704,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.9544,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30",
+   "name": "V2+P1ldaBW@1",
+   "formal": 0.9572593924774683,
+   "x3_unrounded": 0.9572593924774683,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.9573,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30",
+   "name": "V2+P1ldaBW@2",
+   "formal": 0.9636743512144483,
+   "x3_unrounded": 0.9636743512144483,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.9637,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30",
+   "name": "V2+P1ldaBW@3",
+   "formal": 0.9681219585778607,
+   "x3_unrounded": 0.9681219585778607,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.9681,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30",
+   "name": "V2+P1ldaBW@4",
+   "formal": 0.9709053800740974,
+   "x3_unrounded": 0.9709053800740974,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.9709,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30",
+   "name": "V2+P1ldaBW@6",
+   "formal": 0.9752667252987552,
+   "x3_unrounded": 0.9752667252987552,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.9753,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30",
+   "name": "V2+P1ldaBW@8",
+   "formal": 0.9783727187438861,
+   "x3_unrounded": 0.9783727187438861,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.9784,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30",
+   "name": "V2+P1ldaBW@12",
+   "formal": 0.9823255472810248,
+   "x3_unrounded": 0.9823255472810248,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.9823,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30",
+   "name": "V2+P1ldaBW@16",
+   "formal": 0.9839695796739967,
+   "x3_unrounded": 0.9839695796739967,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.984,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30",
+   "name": "V2+P1ldaBW@24",
+   "formal": 0.9855078490949485,
+   "x3_unrounded": 0.9855078490949485,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.9855,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30",
+   "name": "V2+P1ldaBW@48",
+   "formal": 0.9818168760093923,
+   "x3_unrounded": 0.9818168760093923,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.9818,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30k2",
+   "name": "V2",
+   "formal": 0.7250605572036922,
+   "x3_unrounded": 0.7250605572036922,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.7251,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30k2",
+   "name": "V2+P1ldaBW@0.5",
+   "formal": 0.7383242846657626,
+   "x3_unrounded": 0.7383242846657626,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.7383,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30k2",
+   "name": "V2+P1ldaBW@1",
+   "formal": 0.7512201054840356,
+   "x3_unrounded": 0.7512201054840356,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.7512,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30k2",
+   "name": "V2+P1ldaBW@2",
+   "formal": 0.7696998932902426,
+   "x3_unrounded": 0.7696998932902426,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.7697,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30k2",
+   "name": "V2+P1ldaBW@3",
+   "formal": 0.7845648849107437,
+   "x3_unrounded": 0.7845648849107437,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.7846,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30k2",
+   "name": "V2+P1ldaBW@4",
+   "formal": 0.7964208136685403,
+   "x3_unrounded": 0.7964208136685403,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.7964,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30k2",
+   "name": "V2+P1ldaBW@6",
+   "formal": 0.8118928800341767,
+   "x3_unrounded": 0.8118928800341767,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.8119,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30k2",
+   "name": "V2+P1ldaBW@8",
+   "formal": 0.8232054596712272,
+   "x3_unrounded": 0.8232054596712272,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.8232,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30k2",
+   "name": "V2+P1ldaBW@12",
+   "formal": 0.8376191804296872,
+   "x3_unrounded": 0.8376191804296872,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.8376,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30k2",
+   "name": "V2+P1ldaBW@16",
+   "formal": 0.843841788167141,
+   "x3_unrounded": 0.843841788167141,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.8438,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30k2",
+   "name": "V2+P1ldaBW@24",
+   "formal": 0.842740375661412,
+   "x3_unrounded": 0.842740375661412,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.8427,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30k2",
+   "name": "V2+P1ldaBW@48",
+   "formal": 0.8171481833962696,
+   "x3_unrounded": 0.8171481833962696,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.8171,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30nov",
+   "name": "V2",
+   "formal": 0.9271949179979663,
+   "x3_unrounded": 0.9271949179979663,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.9272,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30nov",
+   "name": "V2+P1ldaBW@0.5",
+   "formal": 0.9324865174718059,
+   "x3_unrounded": 0.9324865174718059,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.9325,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30nov",
+   "name": "V2+P1ldaBW@1",
+   "formal": 0.9386441047424827,
+   "x3_unrounded": 0.9386441047424827,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.9386,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30nov",
+   "name": "V2+P1ldaBW@2",
+   "formal": 0.9473189437538955,
+   "x3_unrounded": 0.9473189437538955,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.9473,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30nov",
+   "name": "V2+P1ldaBW@3",
+   "formal": 0.9531863803260365,
+   "x3_unrounded": 0.9531863803260365,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.9532,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30nov",
+   "name": "V2+P1ldaBW@4",
+   "formal": 0.9574545141134636,
+   "x3_unrounded": 0.9574545141134636,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.9575,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30nov",
+   "name": "V2+P1ldaBW@6",
+   "formal": 0.9638296702905274,
+   "x3_unrounded": 0.9638296702905274,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.9638,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30nov",
+   "name": "V2+P1ldaBW@8",
+   "formal": 0.9689358942087689,
+   "x3_unrounded": 0.9689358942087689,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.9689,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30nov",
+   "name": "V2+P1ldaBW@12",
+   "formal": 0.9740717206430384,
+   "x3_unrounded": 0.9740717206430384,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.9741,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30nov",
+   "name": "V2+P1ldaBW@16",
+   "formal": 0.9764096056051664,
+   "x3_unrounded": 0.9764096056051664,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.9764,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30nov",
+   "name": "V2+P1ldaBW@24",
+   "formal": 0.9770918994216661,
+   "x3_unrounded": 0.9770918994216661,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.9771,
+   "formal_4dp_equal_record_only": true
+  },
+  {
+   "scenario": "c30nov",
+   "name": "V2+P1ldaBW@48",
+   "formal": 0.9732954936620304,
+   "x3_unrounded": 0.9732954936620304,
+   "abs_diff": 0.0,
+   "x3_committed_4dp": 0.9733,
+   "formal_4dp_equal_record_only": true
+  }
+ ],
+ "probe": {
+  "probe_games": 30000,
+  "probe_ok": 30000,
+  "probe_usable": 30000,
+  "x3_mask_equals_formal_mask": true,
+  "lda_players": 5564,
+  "lda_games": 28833,
+  "probe_sets_sha256": "f0c494962788615d76080b5481de5b762d71f3ad37f8add55a09efef82acb7c7"
+ },
+ "pilot": {
+  "pilot_games": 8000,
+  "pilot_ok": 8000,
+  "pilot_usable": 8000,
+  "players": 200,
+  "sets_sha256": "c0e1709cd02454408f56e9f6d09a51090e0e67280a5776f4b461c4dd57943607"
+ },
+ "x3_unrounded_json": {
+  "path": "data/prereg10/tmp/selfcheck_x3_unrounded.json",
+  "sha256": "1bee2cbd7ac53aebfe7818aedac9cee3c4a04fc255677531b67740529c5a9918"
+ },
+ "x3_committed_json_sha256": "6e3065f560cf93cff6f8531498fbdb454a1e8241400f5ae770191761c8629809",
+ "x3_script_sha256": "26f47619625f279d6c22998f27fa7af10ab616425b8cbbb9885e5a193bf90cfe",
+ "rerun": null,
+ "preview": false,
+ "created": "2026-10-10T08:56:15+00:00",
+ "tools": {
+  "git_head": "fdb48039b0388f0499e0df8c0e87f5d2dc0cab4e",
+  "dirty_or_untracked": [],
+  "files_sha256_rule": "sha256, CRLF folded to LF",
+  "files_sha256": {
+   "tools/p10_fuse.py": "63878050e5c59c79778db613af41773a460834cd122b1e5ef384a31acfb72e9a",
+   "tools/p06_style.py": "78beb8138c27853da70081e469e534508174265852a64ebada21e354ae72058a",
+   "tools/p06_sim.py": "21deeea1eb08b1d6580ba78c47505789f66dbdd10c8891973e14f523ef443eeb",
+   "tools/p02_player_fuse.py": "cb1cc1a2ba626a80ed49e7ae8269715f1e123f33777b6ed135380dbd07b35d5b",
+   "tools/p02_player_open.py": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+   "tools/p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "tools/c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495"
+  }
+ },
+ "env": {
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "executable": ".venv/Scripts/python.exe"
+ },
+ "blas_env": {
+  "OMP_NUM_THREADS": null,
+  "OPENBLAS_NUM_THREADS": null,
+  "MKL_NUM_THREADS": null
+ },
+ "inputs": {},
+ "seconds": 114.4
+}

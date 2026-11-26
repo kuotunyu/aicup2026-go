@@ -1,0 +1,48 @@
+{
+ "format": "c10-prereg45 lists record v1",
+ "split": {
+  "E": 600,
+  "D": 300,
+  "T": 3685
+ },
+ "L_prereg39": {
+  "games": 34630,
+  "players": 1200,
+  "black": 17523,
+  "white": 17107,
+  "est_hours_4090": 2.11,
+  "chunks": 174
+ },
+ "sets": {
+  "M1": {
+   "games": 71546,
+   "players": 2485,
+   "black": 35490,
+   "white": 36056,
+   "est_hours_4090": 4.36,
+   "chunks": 358
+  },
+  "M2": {
+   "games": 66837,
+   "players": 2839,
+   "black": 33224,
+   "white": 33613,
+   "est_hours_4090": 4.07,
+   "chunks": 335
+  }
+ },
+ "pos_per_game": 222.0,
+ "pos_per_s": 1012.0,
+ "players_with_games": {
+  "L+M1+M2": 3685
+ },
+ "total_new": {
+  "games": 138383,
+  "est_hours_4090": 8.43
+ },
+ "lists_sha256": {
+  "M1": "3d6d3d66c5d89b98bb687fb064f1d728a1268c1c743dba8550e30edd3ee1046e",
+  "M2": "ec8cee9edb839b11485264030eb5f741862842a46e4af9de80aa99c6263aae67"
+ },
+ "tool_sha256": "05c536f8f04ca0c7bb85e6e4406a2114273914e8294e135fa058c63c8a7c07d1"
+}

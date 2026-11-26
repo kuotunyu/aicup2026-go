@@ -1,0 +1,612 @@
+{
+ "format": "c10-test07 rank apply v1",
+ "what": "test07 competition 2 apply (PREREG_07 5.2): frozen Q02H per set, rule B, submission_rank.csv = pred_B.csv (public then private)",
+ "mode": "real",
+ "created": "2026-11-04T10:16:24+00:00",
+ "exit_code": 0,
+ "usable": true,
+ "unusable_reasons": [],
+ "combo": {
+  "id": "Q02H",
+  "sources": [
+   "C5",
+   "OP",
+   "O4",
+   "SWA",
+   "SWB",
+   "HS"
+  ],
+  "terms": [
+   "OP",
+   "O4",
+   "SWA",
+   "SWB",
+   "HS"
+  ]
+ },
+ "method": "prereg07 Q02H = Q02 + HumanSL, rule B (甲)",
+ "theta": [
+  -0.19650453639586893,
+  0.37263474490817533,
+  0.4317841979591842,
+  1.476496233033832,
+  1.6414243589798176,
+  0.1634058214743324,
+  1.2874662916407618,
+  0.3592931781687063,
+  0.09754165199855941,
+  0.12678595826073427,
+  0.0760815920175638,
+  0.22805188285945202,
+  0.14604215904544557,
+  0.13412548875448055,
+  0.043613326196298596,
+  -0.36008682370367834
+ ],
+ "h7r": {
+  "A_rank_balanced": 0.6236017652948923,
+  "A_mean": 0.6245054776753989,
+  "B_rank_balanced": 0.632702198843505,
+  "questions": 1589,
+  "rule": "PREREG_07 rev 3: H7R scored, Q02H >= 0.57, reference re-read equal (|A - H4R| <= 1e-12)",
+  "B_minus_A_rank_balanced": {
+   "n": 1589,
+   "strata": 10,
+   "mean_diff": 0.009100433548612638,
+   "ci95": [
+    -0.0017358146176694208,
+    0.020036739728021998
+   ],
+   "share_resamples_leq_0": 0.0507
+  },
+  "holds": true
+ },
+ "t1_verdict": "PASS",
+ "test02": {
+  "fallback_used": false,
+  "apply_test_report_sha256": "1479233446b99c2cacc6c4bf95de3ab6f697990296cb50334a8c9b5974e84468",
+  "r20_first_upload_id": 1,
+  "r20_first_uploaded_at": "2026-11-04T15:30:35+08:00"
+ },
+ "test04": {
+  "t04_apply_report_sha256": "fac8aced89bf38f030270f4959899b5022ad5b125449b0af9e9650d309250297",
+  "exit_code": 0,
+  "usable": true,
+  "seam_local_tol": 0.0001,
+  "inputs_bound_checked": 33
+ },
+ "hs_sets": {
+  "seam": {
+   "report_sha256": "098170428515cf25c814fa3469feab878f0ae1ac8fef68ed52d075ff73fec09a",
+   "npz_sha256": "81d774ca73b1bf4df766499184d602a454457f0bbf2551dd801c9a873b0a5b7a",
+   "games": 400,
+   "failed_or_no_move": 0,
+   "earliest_chunk_created_utc": "2026-11-04T07:41:26+00:00",
+   "fake_from_val": false,
+   "evals_per_s": 1600.9
+  },
+  "public": {
+   "report_sha256": "4200813b2365eacfa6510530eb45295fff7705cb5c429c4a19878413da4c856b",
+   "npz_sha256": "b413e51086f96fbf8a44ac6b2d60bed0725af6ddf3c0d9569b8e2876d793d0ce",
+   "games": 5000,
+   "failed_or_no_move": 0,
+   "earliest_chunk_created_utc": "2026-11-04T07:48:07+00:00",
+   "fake_from_val": false,
+   "evals_per_s": 1734.3
+  },
+  "private": {
+   "report_sha256": "d0f0856b1f1c40e6efdc168768c76c84e639d992bd432fb80fa8a1ffe3e7db89",
+   "npz_sha256": "ff557320a8ea7e916f9cc4c64677be28d55e2f72826b992cc797bbdbc124fe4a",
+   "games": 5000,
+   "failed_or_no_move": 0,
+   "earliest_chunk_created_utc": "2026-11-04T09:03:03+00:00",
+   "fake_from_val": false,
+   "evals_per_s": 1748.2
+  }
+ },
+ "hs_environment": {
+  "torch": "2.11.0+cu128",
+  "cudnn": "91900",
+  "gpu": "NVIDIA GeForce RTX 4090"
+ },
+ "earliest_hs_chunk_created_utc": "2026-11-04T07:41:26+00:00",
+ "gpu_seam": {
+  "passed": true,
+  "counts_equal": true,
+  "max_abs_move": 0.01823139190673828,
+  "max_abs_profile_mean": 0.0005971711402068536,
+  "max_abs_lp_hs": 0.007693472339934004,
+  "bitwise_equal_sums": false,
+  "bitwise_equal_moves": false
+ },
+ "gpu_seam_tolerances": {
+  "move": 0.05,
+  "profile_mean": 0.002,
+  "lp_hs": 0.02
+ },
+ "q02_vs_04": {
+  "equal": true,
+  "computed_sha256": "e52a69e419c518cc03c3e9886ff9cf531109f491e8f28a20b790a1944357774e",
+  "t04_rank_test_probs_sha256": "e52a69e419c518cc03c3e9886ff9cf531109f491e8f28a20b790a1944357774e",
+  "port_c5_equal": {
+   "seam_val": true,
+   "public": true,
+   "private": true
+  }
+ },
+ "move_cross_check": {
+  "public": {
+   "compared": 5000,
+   "mismatches": 0,
+   "first_mismatches": [],
+   "only_hs_failed": 0,
+   "only_o4_failed": 0,
+   "both_failed": 0
+  },
+  "private": {
+   "compared": 5000,
+   "mismatches": 0,
+   "first_mismatches": [],
+   "only_hs_failed": 0,
+   "only_o4_failed": 0,
+   "both_failed": 0
+  }
+ },
+ "seam_local": {
+  "verdict": "passed",
+  "passed": true,
+  "max_abs_diff": 0.0,
+  "tol": 0.0001,
+  "rule_b_differences": 0,
+  "byte_identical_probs": true,
+  "byte_identical_pred_B": true,
+  "required_byte_identical": true
+ },
+ "hs_failures": {
+  "public": {
+   "failed_or_no_move": 0,
+   "games": 5000,
+   "ok": true
+  },
+  "private": {
+   "failed_or_no_move": 0,
+   "games": 5000,
+   "ok": true
+  }
+ },
+ "hs_direction": {
+  "public": {
+   "rho": 0.9206718166988543,
+   "questions": 400,
+   "reference": 0.9502568925299116,
+   "floor": 0.155,
+   "threshold": 0.4751284462649558,
+   "passed": true,
+   "rule": "rho >= max(0.5 x reference, floor) (spec 4.6)"
+  },
+  "private": {
+   "rho": 0.9095964974781092,
+   "questions": 400,
+   "reference": 0.9502568925299116,
+   "floor": 0.155,
+   "threshold": 0.4751284462649558,
+   "passed": true,
+   "rule": "rho >= max(0.5 x reference, floor) (spec 4.6)"
+  },
+  "seam_val_record_only": {
+   "rho": 0.9482508617162649,
+   "questions": 1589,
+   "reference": 0.9470086182502414,
+   "floor": 0.078,
+   "threshold": 0.4735043091251207,
+   "passed": true,
+   "rule": "rho >= max(0.5 x reference, floor) (spec 4.6)",
+   "equal_to_prereg07_apply": true
+  }
+ },
+ "rho_mono": 0.9502568925299116,
+ "rho_floor": 0.155,
+ "sets": {
+  "public": {
+   "questions": 400,
+   "questions_without_parsed_game": 0,
+   "questions_without_parsed_game_ids": [],
+   "games": 5000,
+   "games_parsed": 5000,
+   "o4_mask_games": 5000,
+   "o4_replay_failed": 0,
+   "questions_with_empty_o4_mask": 0,
+   "masked_E_HS": {
+    "games_in_questions": 5000,
+    "unusable_slots_in_questions": 0,
+    "path": "pooled"
+   },
+   "hs_failed": 0,
+   "hs_failed_or_no_move": 0,
+   "unusable_games": 0,
+   "questions_without_usable_hs_game": 0,
+   "rule_B_differs_from_Q02": 72
+  },
+  "private": {
+   "questions": 400,
+   "questions_without_parsed_game": 0,
+   "questions_without_parsed_game_ids": [],
+   "games": 5000,
+   "games_parsed": 5000,
+   "o4_mask_games": 5000,
+   "o4_replay_failed": 0,
+   "questions_with_empty_o4_mask": 0,
+   "masked_E_HS": {
+    "games_in_questions": 5000,
+    "unusable_slots_in_questions": 0,
+    "path": "pooled"
+   },
+   "hs_failed": 0,
+   "hs_failed_or_no_move": 0,
+   "unusable_games": 0,
+   "questions_without_usable_hs_game": 0,
+   "rule_B_differs_from_Q02": 77
+  }
+ },
+ "rule_b_differences": {
+  "04": {
+   "public": 72,
+   "all": 149,
+   "file_sha256": "6fea3ed27f6251494f8934fd2b8a85f423e3cfe53ae3ffd7ffc2d120e19ee3ce"
+  },
+  "R20": {
+   "public": 119,
+   "all": 245,
+   "file_sha256": "711b3d1b73a31d50e243df03458e70970d0f7d50faf7b6e1e2d9eaae60b9558a"
+  }
+ },
+ "questions_without_parsed_game": {
+  "public": [],
+  "private": []
+ },
+ "check_submission": {
+  "mode": "official",
+  "questions": [
+   "data/test/rank_prediction_test_public.csv",
+   "data/test/rank_prediction_test_private.csv"
+  ],
+  "errors": []
+ },
+ "outputs_sha256": {
+  "rank_test_probs.csv": "a3a65246280d8980a57ad41b075afe314a39bcd6d07020cd4981363caae0ecc0",
+  "pred_A.csv": "a86fb3b388cdc7b8e2b4e142695d1adf4a263693d41dcdcf7bcfb311a9cd0737",
+  "pred_B.csv": "ee2ea02bfb2e4bdbce5e2e0725de883b25a3184916b829a1a3c1259befc7aaeb",
+  "decide_summary.json": "9481fc196a7dfe81fe6218cfebd67963e5b220f0f5978f8436b4a68a76794bdf",
+  "submission_rank.csv": "ee2ea02bfb2e4bdbce5e2e0725de883b25a3184916b829a1a3c1259befc7aaeb"
+ },
+ "decide_summary": {
+  "n_questions": 800,
+  "n_missing": 0,
+  "missing_question_ids": [],
+  "n_A_ne_B": 78,
+  "distribution_B": {
+   "D": 70,
+   "C": 94,
+   "B": 109,
+   "A": 70,
+   "1D": 93,
+   "2D": 68,
+   "3D": 61,
+   "4D": 88,
+   "5D": 80,
+   "6D": 67
+  }
+ },
+ "level_summary": {
+  "public": {
+   "rule_b_distribution": {
+    "D": 44,
+    "C": 45,
+    "B": 54,
+    "A": 36,
+    "1D": 49,
+    "2D": 32,
+    "3D": 33,
+    "4D": 42,
+    "5D": 34,
+    "6D": 31
+   },
+   "mean_probability_per_level": {
+    "D": 0.1106612183017631,
+    "C": 0.11198952901150391,
+    "B": 0.12331941800305116,
+    "A": 0.10579924867706814,
+    "1D": 0.11231199669648666,
+    "2D": 0.0918420929393443,
+    "3D": 0.0874578915787477,
+    "4D": 0.08457064948399821,
+    "5D": 0.089902257079491,
+    "6D": 0.0821456982285459
+   }
+  },
+  "private": {
+   "rule_b_distribution": {
+    "D": 26,
+    "C": 49,
+    "B": 55,
+    "A": 34,
+    "1D": 44,
+    "2D": 36,
+    "3D": 28,
+    "4D": 46,
+    "5D": 46,
+    "6D": 36
+   },
+   "mean_probability_per_level": {
+    "D": 0.08139261731351857,
+    "C": 0.11176062129612334,
+    "B": 0.12070002299439977,
+    "A": 0.09705420688057895,
+    "1D": 0.10051971974647678,
+    "2D": 0.09356176222276055,
+    "3D": 0.09427644928510466,
+    "4D": 0.10222343567990881,
+    "5D": 0.10964999697635132,
+    "6D": 0.08886116760477707
+   }
+  }
+ },
+ "inputs_bound": {
+  "results/test02/rank/apply_test_report.json": "1479233446b99c2cacc6c4bf95de3ab6f697990296cb50334a8c9b5974e84468",
+  "results/test02/rank/opening_test.npz": "6863ccd053837d30be070a2e0d0d3e3968b69636936dd33414221513886d0e07",
+  "results/test02/checks/rank/t1.json": "9ddf1cc98c4085493c7ec81f539acaba5e8a2701ba849d41bf168368a8bcfb2c",
+  "results/test04/opp/opp_report.json": "750016f47b69e19951cf45254af9c2817d1418c2f7a4ab39dee18282ed568e60",
+  "results/test04/unpack_sw.json": "62d950d3114cfb0b873490f77eae7e7a1ea91af656217bd753ef4adb0644aeab",
+  "results/test04/sw/config.json": "92156befa3e72942e6d09a511bd99cc1a82999e8e3e183ee3ce528d97f4a93de",
+  "results/test04/sw/seam_check.json": "1cab988c0f5bee572b9b1af26662426ae874ecfed5254db2e37d899690b56112",
+  "results/test04/rank/seam_val/seam_local.json": "7d012bcb8954a29d80d71995097902b7d5653357d33434276ae13f4afc5048fd",
+  "results/test04/rank/t04_apply_report.json": "fac8aced89bf38f030270f4959899b5022ad5b125449b0af9e9650d309250297",
+  "results/test04/rank/rank_test_probs.csv": "e52a69e419c518cc03c3e9886ff9cf531109f491e8f28a20b790a1944357774e",
+  "results/test04/rank/submission_rank.csv": "6fea3ed27f6251494f8934fd2b8a85f423e3cfe53ae3ffd7ffc2d120e19ee3ce",
+  "results/prereg04/rank/frozen_config.json": "ae728e9c936a55dfeced255e9b05b5ac6a4955a7101f108e78c53c679e162661",
+  "results/test07/hs/gpu_seam.json": "02d2bf2699e94de565873a14a242c52ce7456c15a02233dc7c9d8961e4c6d22e",
+  "results/test07/rank/seam_val/seam_local.json": "2bbf7bb1c158610bfdf7e414441a597e0e6e26c770c54a879f7e73203d362bc1",
+  "results/prereg07/rank/frozen_config.json": "93a0ac29615260865d554ee61aec258c633820a87aeb7dfcf8047a5dfd200c0b",
+  "results/prereg07/rank/hs_map.npz": "a4334e79c490e4d8102dd5136ac08c0de1060315981f4ccc527ebffa1b84a3e4",
+  "results/prereg07/hs/val_hs.npz": "ef2067e8cb633f521c205a09aa4638c79fef3ba0b4e90e6a54bdc046e5a5550f",
+  "results/prereg07/hs/val_seam_moves.npz": "3e55fbfa70b43c36c2ebe30bdbca63ea6c68968a1521ec6d63fd2b698f6598ab",
+  "results/prereg07/hs/val_report.json": "11745c5c6e8fedd7c01611331b4f4c69ec1c00f423d3c39e267823bc3c56c7ca",
+  "results/prereg07/rank/rank_val_probs.csv": "6ae2db6025a903eb5c58af9418dc203c0b6e84dd664049f85dfa850e57dc28c1",
+  "results/prereg07/rank/pred_B.csv": "51d7dbf82d50c3848acadb6934069580bd3ade7e6ca71ad5d1023633a18a26fa",
+  "results/prereg07/rank/pred_A.csv": "b229be2c414f7af22310bc304d6da9de5b6406698ec8ce9c0d40e7c146b40a41",
+  "results/prereg07/rank/apply_report.json": "3ed7f7b0580f02d9c4c9c9255634a689213017e65190dce492465aad332fad6b",
+  "results/prereg07/rank/score_H7R.json": "32686f6c91fb0a14301c85ecc1c299844d9346fb2efb8f0fd0b5891f5609cbf5",
+  "results/test07/hs/seam_hs.npz": "81d774ca73b1bf4df766499184d602a454457f0bbf2551dd801c9a873b0a5b7a",
+  "results/test07/hs/hs_seam_report.json": "098170428515cf25c814fa3469feab878f0ae1ac8fef68ed52d075ff73fec09a",
+  "results/test07/hs/public_hs.npz": "b413e51086f96fbf8a44ac6b2d60bed0725af6ddf3c0d9569b8e2876d793d0ce",
+  "results/test07/hs/hs_public_report.json": "4200813b2365eacfa6510530eb45295fff7705cb5c429c4a19878413da4c856b",
+  "results/test07/hs/private_hs.npz": "ff557320a8ea7e916f9cc4c64677be28d55e2f72826b992cc797bbdbc124fe4a",
+  "results/test07/hs/hs_private_report.json": "d0f0856b1f1c40e6efdc168768c76c84e639d992bd432fb80fa8a1ffe3e7db89",
+  "results/test02/rank/seam_val/dumps/val_keys.npz": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+  "results/test02/rank/seam_val/dumps/val_p02e9_d4.npz": "ec0b729d805eb9f3458f7a497444b099b8ec47e5cec73703ae4b8bf9cf0a11b2",
+  "results/test04/opp/o4_seam_val.npz": "30d312c02c357f6761567099003885be5e08635b6e6c0b49d71baac137cd9cd4",
+  "results/test04/sw/seam_val/dumps/val_keys.npz": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+  "results/test04/sw/seam_val/dumps/val_p03a_d4.npz": "1e4e5957442596358b087e5f4e69c1fcf9f22f2c7933cc2049066bfab3075ecd",
+  "results/test04/sw/seam_val/dumps/val_p03a_s0_swap.npz": "b355c26bf68069feb0e48ee95c46bd211c2bdbc6b5a48416c8408a210aec3848",
+  "results/test04/sw/seam_val/dumps/val_p03b_d4.npz": "bad2277dd20bf832c02213be781768ba9d8a304922693bee383a28aa3531a627",
+  "results/test04/sw/seam_val/dumps/val_p03b_s0_swap.npz": "0cadff4bae36b2a41f02fddf4366a2081d9912ede4a3063c8b50fd28a2647527",
+  "results/test02/rank/public/dumps/val_keys.npz": "01fc5858d1607d56fc1b72cfc5aac658c85cef7704c05b39e3ac7220732208fa",
+  "results/test02/rank/public/dumps/val_p02e9_d4.npz": "5f6159946fa0277aea3f44b409811b16374e5238da276147fc4f23d37f8473db",
+  "results/test04/opp/o4_public.npz": "1ace66d5a42745086430dfccd47d58d2ee9ccd3cb871818c1e920725891b7b24",
+  "results/test04/sw/public/dumps/val_keys.npz": "01fc5858d1607d56fc1b72cfc5aac658c85cef7704c05b39e3ac7220732208fa",
+  "results/test04/sw/public/dumps/val_p03a_d4.npz": "a88d21a1046b05c6e3cb7c35d403c4bcbd54fcf81f166cac2d19434ca97e9659",
+  "results/test04/sw/public/dumps/val_p03a_s0_swap.npz": "5301c80d1b2a84389aa26b62fc6e7786108b4cf2642a2b156bb53c6f33e5e67c",
+  "results/test04/sw/public/dumps/val_p03b_d4.npz": "9810e25a2683300a1e6d0d98c86a5fc1a3bc6fcf6d86b13db8c98c6cc90e0adf",
+  "results/test04/sw/public/dumps/val_p03b_s0_swap.npz": "3bcf1ee59038c714706cb539b4bb9594afb4de2e12c38422aef1da3e192dd988",
+  "results/test02/rank/private/dumps/val_keys.npz": "94037ca1d286480aeb32c535af7fab53407017f052ed23b0b9f87cebebb1eede",
+  "results/test02/rank/private/dumps/val_p02e9_d4.npz": "63b782f98e8d294d7ab3d4f1f016399658778ef4b550a61920169319dbc9bb39",
+  "results/test04/opp/o4_private.npz": "5d1b50fbb00855da597d43134ab09f6df942464f3640cefcd9538d873a11dcb9",
+  "results/test04/sw/private/dumps/val_keys.npz": "94037ca1d286480aeb32c535af7fab53407017f052ed23b0b9f87cebebb1eede",
+  "results/test04/sw/private/dumps/val_p03a_d4.npz": "9f4260bf830c871d27ac18cfd4ddcff556289c321f49f98f1b4d3ed510525d50",
+  "results/test04/sw/private/dumps/val_p03a_s0_swap.npz": "6e03331969fefda6bc704906b4a354bdc347ad2bc9a3bdec52cf8df3877b143d",
+  "results/test04/sw/private/dumps/val_p03b_d4.npz": "9768f041b0acd9c640bbc447785a7d474a381e2ff1e7f83cd5913821fc1a62d9",
+  "results/test04/sw/private/dumps/val_p03b_s0_swap.npz": "50469cf3335fc6030228153c83630b8ffa698505d93611d72cc35e3d153012c5"
+ },
+ "inputs_bound_paths": {
+  "results/test02/rank/apply_test_report.json": "results/test02/rank/apply_test_report.json",
+  "results/test02/rank/opening_test.npz": "results/test02/rank/opening_test.npz",
+  "results/test02/checks/rank/t1.json": "results/test02/checks/rank/t1.json",
+  "results/test04/opp/opp_report.json": "results/test04/opp/opp_report.json",
+  "results/test04/unpack_sw.json": "results/test04/unpack_sw.json",
+  "results/test04/sw/config.json": "results/test04/sw/config.json",
+  "results/test04/sw/seam_check.json": "results/test04/sw/seam_check.json",
+  "results/test04/rank/seam_val/seam_local.json": "results/test04/rank/seam_val/seam_local.json",
+  "results/test04/rank/t04_apply_report.json": "results/test04/rank/t04_apply_report.json",
+  "results/test04/rank/rank_test_probs.csv": "results/test04/rank/rank_test_probs.csv",
+  "results/test04/rank/submission_rank.csv": "results/test04/rank/submission_rank.csv",
+  "results/prereg04/rank/frozen_config.json": "results/prereg04/rank/frozen_config.json",
+  "results/test07/hs/gpu_seam.json": "results/test07/hs/gpu_seam.json",
+  "results/test07/rank/seam_val/seam_local.json": "results/test07/rank/seam_val/seam_local.json",
+  "results/prereg07/rank/frozen_config.json": "results/prereg07/rank/frozen_config.json",
+  "results/prereg07/rank/hs_map.npz": "results/prereg07/rank/hs_map.npz",
+  "results/prereg07/hs/val_hs.npz": "results/prereg07/hs/val_hs.npz",
+  "results/prereg07/hs/val_seam_moves.npz": "results/prereg07/hs/val_seam_moves.npz",
+  "results/prereg07/hs/val_report.json": "results/prereg07/hs/val_report.json",
+  "results/prereg07/rank/rank_val_probs.csv": "results/prereg07/rank/rank_val_probs.csv",
+  "results/prereg07/rank/pred_B.csv": "results/prereg07/rank/pred_B.csv",
+  "results/prereg07/rank/pred_A.csv": "results/prereg07/rank/pred_A.csv",
+  "results/prereg07/rank/apply_report.json": "results/prereg07/rank/apply_report.json",
+  "results/prereg07/rank/score_H7R.json": "results/prereg07/rank/score_H7R.json",
+  "results/test07/hs/seam_hs.npz": "results/test07/hs/seam_hs.npz",
+  "results/test07/hs/hs_seam_report.json": "results/test07/hs/hs_seam_report.json",
+  "results/test07/hs/public_hs.npz": "results/test07/hs/public_hs.npz",
+  "results/test07/hs/hs_public_report.json": "results/test07/hs/hs_public_report.json",
+  "results/test07/hs/private_hs.npz": "results/test07/hs/private_hs.npz",
+  "results/test07/hs/hs_private_report.json": "results/test07/hs/hs_private_report.json",
+  "results/test02/rank/seam_val/dumps/val_keys.npz": "results/test02/rank/seam_val/dumps/val_keys.npz",
+  "results/test02/rank/seam_val/dumps/val_p02e9_d4.npz": "results/test02/rank/seam_val/dumps/val_p02e9_d4.npz",
+  "results/test04/opp/o4_seam_val.npz": "results/test04/opp/o4_seam_val.npz",
+  "results/test04/sw/seam_val/dumps/val_keys.npz": "results/test04/sw/seam_val/dumps/val_keys.npz",
+  "results/test04/sw/seam_val/dumps/val_p03a_d4.npz": "results/test04/sw/seam_val/dumps/val_p03a_d4.npz",
+  "results/test04/sw/seam_val/dumps/val_p03a_s0_swap.npz": "results/test04/sw/seam_val/dumps/val_p03a_s0_swap.npz",
+  "results/test04/sw/seam_val/dumps/val_p03b_d4.npz": "results/test04/sw/seam_val/dumps/val_p03b_d4.npz",
+  "results/test04/sw/seam_val/dumps/val_p03b_s0_swap.npz": "results/test04/sw/seam_val/dumps/val_p03b_s0_swap.npz",
+  "results/test02/rank/public/dumps/val_keys.npz": "results/test02/rank/public/dumps/val_keys.npz",
+  "results/test02/rank/public/dumps/val_p02e9_d4.npz": "results/test02/rank/public/dumps/val_p02e9_d4.npz",
+  "results/test04/opp/o4_public.npz": "results/test04/opp/o4_public.npz",
+  "results/test04/sw/public/dumps/val_keys.npz": "results/test04/sw/public/dumps/val_keys.npz",
+  "results/test04/sw/public/dumps/val_p03a_d4.npz": "results/test04/sw/public/dumps/val_p03a_d4.npz",
+  "results/test04/sw/public/dumps/val_p03a_s0_swap.npz": "results/test04/sw/public/dumps/val_p03a_s0_swap.npz",
+  "results/test04/sw/public/dumps/val_p03b_d4.npz": "results/test04/sw/public/dumps/val_p03b_d4.npz",
+  "results/test04/sw/public/dumps/val_p03b_s0_swap.npz": "results/test04/sw/public/dumps/val_p03b_s0_swap.npz",
+  "results/test02/rank/private/dumps/val_keys.npz": "results/test02/rank/private/dumps/val_keys.npz",
+  "results/test02/rank/private/dumps/val_p02e9_d4.npz": "results/test02/rank/private/dumps/val_p02e9_d4.npz",
+  "results/test04/opp/o4_private.npz": "results/test04/opp/o4_private.npz",
+  "results/test04/sw/private/dumps/val_keys.npz": "results/test04/sw/private/dumps/val_keys.npz",
+  "results/test04/sw/private/dumps/val_p03a_d4.npz": "results/test04/sw/private/dumps/val_p03a_d4.npz",
+  "results/test04/sw/private/dumps/val_p03a_s0_swap.npz": "results/test04/sw/private/dumps/val_p03a_s0_swap.npz",
+  "results/test04/sw/private/dumps/val_p03b_d4.npz": "results/test04/sw/private/dumps/val_p03b_d4.npz",
+  "results/test04/sw/private/dumps/val_p03b_s0_swap.npz": "results/test04/sw/private/dumps/val_p03b_s0_swap.npz"
+ },
+ "inputs_bound_rule": ".csv / .json: sha256 with CRLF folded to LF; other files (.npz): raw bytes",
+ "checks": {
+  "git": {
+   "clean": true,
+   "head": "d0a83493a0da04be656308c8af5cf76cdedfe329",
+   "own_files": {
+    "committed": [
+     "tools/t07_rank.py",
+     "tools/t04_rank.py",
+     "tools/p07_rank_fuse.py",
+     "tools/check_submission.py",
+     "tools/official_log.py"
+    ]
+   }
+  },
+  "venv": {
+   "equal": true,
+   "versions": {
+    "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "zlib": "1.3.1"
+   },
+   "rule": "python / numpy / scipy = val_report.json environment; zlib = 1.3.1 (design-time measurement)"
+  },
+  "prereg07": {
+   "prereg07_sha256": {
+    "results/prereg07/rank/frozen_config.json": "93a0ac29615260865d554ee61aec258c633820a87aeb7dfcf8047a5dfd200c0b",
+    "results/prereg07/rank/hs_map.npz": "a4334e79c490e4d8102dd5136ac08c0de1060315981f4ccc527ebffa1b84a3e4",
+    "results/prereg07/hs/val_hs.npz": "ef2067e8cb633f521c205a09aa4638c79fef3ba0b4e90e6a54bdc046e5a5550f",
+    "results/prereg07/hs/val_seam_moves.npz": "3e55fbfa70b43c36c2ebe30bdbca63ea6c68968a1521ec6d63fd2b698f6598ab",
+    "results/prereg07/hs/val_report.json": "11745c5c6e8fedd7c01611331b4f4c69ec1c00f423d3c39e267823bc3c56c7ca",
+    "results/prereg07/rank/rank_val_probs.csv": "6ae2db6025a903eb5c58af9418dc203c0b6e84dd664049f85dfa850e57dc28c1",
+    "results/prereg07/rank/pred_B.csv": "51d7dbf82d50c3848acadb6934069580bd3ade7e6ca71ad5d1023633a18a26fa",
+    "results/prereg07/rank/pred_A.csv": "b229be2c414f7af22310bc304d6da9de5b6406698ec8ce9c0d40e7c146b40a41",
+    "results/prereg07/rank/apply_report.json": "3ed7f7b0580f02d9c4c9c9255634a689213017e65190dce492465aad332fad6b",
+    "results/prereg07/rank/score_H7R.json": "32686f6c91fb0a14301c85ecc1c299844d9346fb2efb8f0fd0b5891f5609cbf5"
+   },
+   "pinned_files": {
+    "results/prereg07/explore/pilot_humansl/hs_lib.py": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+    "results/prereg07/explore/pilot_humansl/pilot_run.py": "b0d127fd1d5a83af5b17ec3df1dccc85d94b11c3479d33cac07448a3796a3936",
+    "results/prereg07/explore/pilot_humansl/pilot_fuse.py": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+    "results/prereg05/explore/u1/u1_lib.py": "225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7"
+   },
+   "katago": {
+    "source_txt_sha256": "039d5a1cbc815b4d69b68dc8c01163354820ac00b5070ef136c14a040b5ba20b",
+    "files": 15,
+    "differing": []
+   }
+  },
+  "prereg04_frozen": {
+   "path": "results/prereg04/rank/frozen_config.json",
+   "sha256": "ae728e9c936a55dfeced255e9b05b5ac6a4955a7101f108e78c53c679e162661",
+   "commit_check": {
+    "path": "results/prereg04/rank/frozen_config.json",
+    "sha256": "ae728e9c936a55dfeced255e9b05b5ac6a4955a7101f108e78c53c679e162661",
+    "git_head": "d0a83493a0da04be656308c8af5cf76cdedfe329",
+    "state": "committed and unchanged",
+    "combo": "Q02"
+   }
+  },
+  "h7r": {
+   "A_rank_balanced": 0.6236017652948923,
+   "A_mean": 0.6245054776753989,
+   "B_rank_balanced": 0.632702198843505,
+   "questions": 1589,
+   "rule": "PREREG_07 rev 3: H7R scored, Q02H >= 0.57, reference re-read equal (|A - H4R| <= 1e-12)",
+   "B_minus_A_rank_balanced": {
+    "n": 1589,
+    "strata": 10,
+    "mean_diff": 0.009100433548612638,
+    "ci95": [
+     -0.0017358146176694208,
+     0.020036739728021998
+    ],
+    "share_resamples_leq_0": 0.0507
+   },
+   "holds": true
+  },
+  "k6_07": {
+   "now": "2026-11-04T18:16:11.441220+08:00",
+   "k6_07": "2026-11-19T23:59:59+08:00",
+   "passed": false
+  },
+  "t1": {
+   "path": "results/test02/checks/rank/t1.json",
+   "sha256": "9ddf1cc98c4085493c7ec81f539acaba5e8a2701ba849d41bf168368a8bcfb2c",
+   "verdict": "PASS"
+  },
+  "test02": {
+   "report_sha256": "1479233446b99c2cacc6c4bf95de3ab6f697990296cb50334a8c9b5974e84468",
+   "fallback_used": false
+  },
+  "r20_first_upload": {
+   "id": 1,
+   "uploaded_at": "2026-11-04T15:30:35+08:00",
+   "sha256": "711b3d1b73a31d50e243df03458e70970d0f7d50faf7b6e1e2d9eaae60b9558a",
+   "log_sha256": "217cb50671b2a48c032fc3375183ec252c5949b396482bca984e27448f862a38"
+  },
+  "t04_apply_report": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\test04\\rank\\t04_apply_report.json"
+ },
+ "rerun": {
+  "reason": null,
+  "replaced": {},
+  "bug_revision": null
+ },
+ "paths": {
+  "R7": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\test07",
+  "H": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\data\\test07\\hs",
+  "R4": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\test04",
+  "D2": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\test02",
+  "O2": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\test02\\rank",
+  "T": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\data\\test",
+  "C": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\test02\\checks"
+ },
+ "tool": {
+  "git_head": "d0a83493a0da04be656308c8af5cf76cdedfe329",
+  "files_sha256_rule": "sha256 of the file with CRLF folded to LF",
+  "files_sha256": {
+   "t07_rank.py": "2c02e5c5d462c58393856bb286ca910881fb9677a5d15bf49e767909174f9f27",
+   "t04_rank.py": "f212879e5aaf6fe90060e2b8f03a5e61e8d8704c9dd8204e9c42e65b589940e4",
+   "p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142",
+   "p07_hs.py": "b27ea371bdc1477558effb9ca86c540805dcced971d983226e15fb5e19b7b8dc",
+   "check_submission.py": "b5c7c300cca4fcd5b243e4579417453699777e99bd4aff88dcbf6805e9346144",
+   "official_log.py": "a2c4f55f4a750b1b9cdf6fe37f4e89a69b6f8aaa64f0a4f0eb6be63aa61a4746",
+   "t02_rank.py": "e3485e073a20843654f622828283af4ae3985141e08378cefb59d6c6f2495874",
+   "t02_test_bundle.py": "18e41e952da39a68bc901bda5f5b9f0173848379a31056da6139382ac038e796",
+   "p04_opp.py": "b594e0eff135b539616d60f26403ca1a1a37ac3f44855785c36e2cc6be9768fa",
+   "p04_rank_fuse.py": "c3a647b09c46760239d5b2ee274d56f7231987354fc1c1f6c3ff40102f4b26a2",
+   "p03_rank_fuse.py": "77abd7479d26f0f647a258b4a6d5d2e517808b4c187184f14ff599d70b8aca2f",
+   "p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+   "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "decide.py": "cf66daf1231b3c2bd60c5b6484245627e133bd0f1cd7ff5557e978da3801d0e3"
+  }
+ },
+ "environment": {
+  "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "executable": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\.venv\\Scripts\\python.exe",
+  "zlib": "1.3.1"
+ },
+ "git_head": "d0a83493a0da04be656308c8af5cf76cdedfe329",
+ "record_only": "level_summary, rule_b_differences (all 800) and the seam_val direction are recorded; nothing is chosen from them",
+ "seconds": 14.1
+}

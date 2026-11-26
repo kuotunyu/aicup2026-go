@@ -1,0 +1,22 @@
+{
+ "rows": 1600,
+ "problems": [],
+ "ok": true,
+ "v1_file": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\test06\\player\\on\\submission_player.csv",
+ "v1_sha256": "94cc82650dd451d95336ad9d3951519ecfb84482a5bad0f52667089a25ac2cbf",
+ "v1_rows_kept": 800,
+ "sha256": "36b222d866267abffda03d126d94db9ed5bea3406b2f8b47323622fd5329a026",
+ "by_prefix": {
+  "pub_": 400,
+  "priv_": 400,
+  "pub2_": 400,
+  "priv2_": 400
+ },
+ "original_800_identical_to_v28": true,
+ "header_identical_to_v28": true,
+ "rows_1600": true,
+ "new_top1_changed_vs_v28": {
+  "pub2_": 42,
+  "priv2_": 42
+ }
+}

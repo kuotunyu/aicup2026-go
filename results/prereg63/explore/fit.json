@@ -1,0 +1,49 @@
+{
+ "format": "c10-prereg63 fit v1",
+ "file": "data/prereg63/p1multi.npz",
+ "sha256": "7e2848fa98aadca319f684551b6c8562bfe503176ce5e483145ccc62f5162762",
+ "games": {
+  "L": 34630,
+  "M1": 71546
+ },
+ "usable": 106176,
+ "players": 3685,
+ "lda": {
+  "full": {
+   "cols": [
+    0,
+    770
+   ],
+   "out_dim": 128,
+   "W_shape": [
+    770,
+    128
+   ]
+  },
+  "move": {
+   "cols": [
+    0,
+    384
+   ],
+   "out_dim": 64,
+   "W_shape": [
+    384,
+    64
+   ]
+  },
+  "board": {
+   "cols": [
+    384,
+    768
+   ],
+   "out_dim": 64,
+   "W_shape": [
+    384,
+    64
+   ]
+  }
+ },
+ "git_head": "36394aa74851cbc02fdfd68990f799563a9df80c",
+ "peak_rss_mb": 1673.2,
+ "seconds": 41.2
+}

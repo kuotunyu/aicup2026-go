@@ -1,0 +1,17 @@
+{
+ "games": 1745,
+ "positions": 183963,
+ "reference_positions": 183963,
+ "games_mismatch": 0,
+ "label_always_empty_point": true,
+ "n_invalid_own_gain": 0,
+ "input_shape": [
+  183963,
+  18,
+  19,
+  19
+ ],
+ "parse_ms_per_game_1core": 40.08739274688983,
+ "derive_ms_per_game_cpu4": 2.6976609981504076,
+ "mean_positions_per_game": 105.42292263610315
+}

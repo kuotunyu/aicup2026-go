@@ -1,0 +1,216 @@
+{
+ "pool": "seam_val",
+ "mode": "real",
+ "cnn": true,
+ "no_cnn_reason": null,
+ "no_cnn_basis": null,
+ "rerun": null,
+ "frozen_config": {
+  "path": "results/prereg02/player/frozen_config.json",
+  "sha256": "d70726ab198643c749b8dadc78f37b52c69bd831513e36ec564a9d04e2c7f3de",
+  "git_head": "3de23e08e8a02fb9ced2259e0857cfd80a0e5062",
+  "guard_calibration_sha256": "793c16a79080e57d4c60941a1fc311f3c0d950e19c42bafaff16a54f7ad43a28"
+ },
+ "frozen_tools": {
+  "now": {
+   "p02_player_open.py": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+   "p02_player_fuse.py": "cb1cc1a2ba626a80ed49e7ae8269715f1e123f33777b6ed135380dbd07b35d5b",
+   "p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495"
+  },
+  "changed": []
+ },
+ "t1": {
+  "path": "results/test02/checks/player/t1.json",
+  "sha256": "cc0ddcf72f857ed4c5ab335cf14e17a4747fe0c82e4fa6db73ffca76ec0c42cd",
+  "verdict": "PASS",
+  "normalize": {},
+  "checked": true,
+  "fail_opening": false,
+  "rule": null
+ },
+ "real_mode_checks": {
+  "files_tracked_and_clean": 17
+ },
+ "test_bundle": {
+  "MANIFEST.json": "b9e9e8a6a7fc8b7b696d2d4501563cb99aeac6a95e327f3a5e686d04bbdd0bbe",
+  "notebook_record_checked": true
+ },
+ "notebook": {
+  "config_sha256": "083b9434a4c68418958a0467a423ecc6afe18d78b5310b68ca8e15514bae4c1f",
+  "identity": {
+   "notebook": "colab/test02_player.ipynb",
+   "notebook_sha256": "fc4a2df1c9b3efaa104c4ef46e1da7183faedd34da9ae239a6083718fef202eb",
+   "committed_notebook": "colab/test02_player.ipynb",
+   "committed_source_sha256": "fc4a2df1c9b3efaa104c4ef46e1da7183faedd34da9ae239a6083718fef202eb",
+   "committed_embedded_sha256": "fc4a2df1c9b3efaa104c4ef46e1da7183faedd34da9ae239a6083718fef202eb",
+   "matches_committed_notebook": true
+  },
+  "last_run_status": "completed",
+  "repro_passed": true,
+  "seam_p02_bitwise_equal": true
+ },
+ "input_record": {
+  "questions_sha256": "d893a559f175b6535dc0d5f749314408b110149462f6a78a1b8cf7e9332cd676",
+  "candidates_sha256": "7cd2897593ee9add20dce4ff5d4b0dcf8699b6d51a3f10950dc399a757dd3ad5",
+  "input_json": {
+   "set": "seam_val",
+   "question_file": "player_val_questions.csv",
+   "sha256": "d893a559f175b6535dc0d5f749314408b110149462f6a78a1b8cf7e9332cd676",
+   "candidates_file": "player_val_candidates.csv",
+   "candidates_sha256": "7cd2897593ee9add20dce4ff5d4b0dcf8699b6d51a3f10950dc399a757dd3ad5"
+  }
+ },
+ "seam": null,
+ "inputs": {
+  "candidates_csv": {
+   "path": "data/local/player_val_candidates.csv",
+   "sha256": "7cd2897593ee9add20dce4ff5d4b0dcf8699b6d51a3f10950dc399a757dd3ad5"
+  },
+  "cand_games_npz": {
+   "path": "results/test02/player/seam_val/dumps/cand_games.npz",
+   "sha256": "56ed03d12e9a79871a21b5f69dc4bd4bb8c8aa69b1544cb8ec799e80227cfdea"
+  },
+  "questions_csv": {
+   "path": "data/local/player_val_questions.csv",
+   "sha256": "d893a559f175b6535dc0d5f749314408b110149462f6a78a1b8cf7e9332cd676"
+  },
+  "query_games_npz": {
+   "path": "results/test02/player/seam_val/dumps/query_games.npz",
+   "sha256": "665d0888a93f6632eb19edac76abf996d5499cd27c683d9844b97cb274b6f689"
+  }
+ },
+ "provenance": {
+  "git_head": "3de23e08e8a02fb9ced2259e0857cfd80a0e5062",
+  "tool": "tools/t02_player.py",
+  "tool_sha256": "b83a979615ee978792e18eecb32f60936622dcbc6c10068dbda00f2a33207bdf",
+  "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "frozen_tools_sha256": {
+   "p02_player_open.py": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+   "p02_player_fuse.py": "cb1cc1a2ba626a80ed49e7ae8269715f1e123f33777b6ed135380dbd07b35d5b",
+   "p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495"
+  },
+  "argv": [
+   "run",
+   "--pool",
+   "seam_val"
+  ],
+  "created": "2026-11-04T15:25:19+08:00"
+ },
+ "what": "PREREG_02 rev 5 9.4: this pool's combination on the full candidate pool and its question file, with the guard (cmd_apply's steps; rho denominator = this pool's sr_max_cos_median)",
+ "selected": {
+  "id": "Q04",
+  "e": "E0",
+  "o": "raw",
+  "w": 1.0
+ },
+ "gate_passed": true,
+ "effective": {
+  "id": "Q04",
+  "e": "E0",
+  "o": "raw",
+  "w": 1.0
+ },
+ "effective_rule": "gate passed: the selected combination",
+ "applied": {
+  "id": "Q04",
+  "e": "E0",
+  "o": "raw",
+  "w": 1.0
+ },
+ "guard_level": 1,
+ "guard_reason": "rho 1.0068 >= theta1 0.9630, colour shares within 0.5",
+ "guard_changed_combination": false,
+ "b_c_candidate_black_share": 0.502725,
+ "b_q_question_black_share": 0.5094224924012158,
+ "rho": {
+  "raw": 1.0068420434547063,
+  "canon": 0.98879379491075
+ },
+ "rho_numerator_max_cos_median": {
+  "raw": 0.2282092446788258,
+  "canon": 0.21874621500466926
+ },
+ "rho_denominator_sr_max_cos_median": {
+  "raw": 0.22665843779803582,
+  "canon": 0.22122531121305591
+ },
+ "guard": {
+  "source": "OUT_DIR/guard_calibration.json",
+  "sha256": "793c16a79080e57d4c60941a1fc311f3c0d950e19c42bafaff16a54f7ad43a28",
+  "smoke": false,
+  "thresholds": {
+   "raw": {
+    "rho_R": 1.0197271503546743,
+    "rho_F": 0.9062854576832535,
+    "rho_X": 0.7472186307476288,
+    "theta1": 0.9630063040189639,
+    "theta2": 0.8267520442154412,
+    "theta_RX": 0.8834728905511515,
+    "gap1_R_minus_F": 0.11344169267142079,
+    "gap2_F_minus_X": 0.15906682693562468,
+    "gap_R_minus_X": 0.2725085196070455,
+    "theta1_enabled": true,
+    "theta2_enabled": true
+   },
+   "canon": {
+    "rho_R": 1.014179401069461,
+    "rho_F": 0.9270569559027629,
+    "rho_X": 0.8002793994990274,
+    "theta1": 0.9706181784861119,
+    "theta2": 0.8636681777008952,
+    "theta_RX": 0.9072294002842441,
+    "gap1_R_minus_F": 0.08712244516669798,
+    "gap2_F_minus_X": 0.12677755640373556,
+    "gap_R_minus_X": 0.21390000157043354,
+    "theta1_enabled": true,
+    "theta2_enabled": true
+   }
+  }
+ },
+ "n_questions": 400,
+ "n_questions_in_file": 400,
+ "n_candidates": 400,
+ "n_candidate_games": 40000,
+ "n_question_games": 4935,
+ "n_questions_without_term": {
+  "raw": 0,
+  "canon": 0,
+  "E0": 0,
+  "E1": 0
+ },
+ "n_candidates_without_windows": {
+  "E0": 0,
+  "E1": 0
+ },
+ "n_fallback_questions": 0,
+ "n_distinct_top1": 357,
+ "sr_top1_distinct_per_round": [
+  356,
+  364,
+  370,
+  352,
+  353,
+  361,
+  357,
+  359,
+  352,
+  361
+ ],
+ "sr_top1_distinct_rule": "record-only (T6): distinct top-1 candidates per self-retrieval round under the applied combination",
+ "dump_weights_sha256": {
+  "cand_games_npz": "356eb4f65488925e2a552ea382979780c903ef515b85d329a3805db837b7773b",
+  "query_games_npz": "356eb4f65488925e2a552ea382979780c903ef515b85d329a3805db837b7773b"
+ },
+ "output": {
+  "path": "results/test02/player/seam_val/top5.csv",
+  "sha256": "69ca74a61ce34f8ffa8949df731df433d474347dce9aabb535156ab8197ead6c",
+  "rows": 400
+ },
+ "submit_allowed": true,
+ "submit_rule": "PREREG_02 rev 5 9.4: every pool is submitted (gate failed -> Q00; fallback list at level 3 keeps its selection)",
+ "runtime_s": 8.3
+}

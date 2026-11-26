@@ -1,0 +1,258 @@
+{
+ "what": "ESTIMATE ONLY; GPU evals/s are scenarios, not measurements",
+ "target_moves_per_game_measured": 111.04405621491946,
+ "g4_units_per_hour": 8.71,
+ "workload_games": {
+  "test_public_private": 10000.0,
+  "local_validation": 19163.34,
+  "inner_bank": 11813,
+  "fit_calibration_20k": 20000,
+  "fit_calibration_60k": 60000
+ },
+ "rows": [
+  {
+   "profiles": 12,
+   "colours": "target_moves_only",
+   "fit_sample": "fit_calibration_20k",
+   "games_total": 60976.34,
+   "positions_total": 6771060.126740042,
+   "evals_total": 81252721.5208805,
+   "evals_test_only": 13325286.745790334,
+   "gpu_hours_pessimistic_5k": 4.514040084493361,
+   "g4_units_pessimistic_5k": 39.31728913593718,
+   "test_day_minutes_pessimistic_5k": 44.417622485967776,
+   "gpu_hours_central_10k": 2.2570200422466806,
+   "g4_units_central_10k": 19.65864456796859,
+   "test_day_minutes_central_10k": 22.208811242983888,
+   "gpu_hours_optimistic_20k": 1.1285100211233403,
+   "g4_units_optimistic_20k": 9.829322283984295,
+   "test_day_minutes_optimistic_20k": 11.104405621491944
+  },
+  {
+   "profiles": 12,
+   "colours": "target_moves_only",
+   "fit_sample": "fit_calibration_60k",
+   "games_total": 100976.34,
+   "positions_total": 11212822.375336822,
+   "evals_total": 134553868.50404185,
+   "evals_test_only": 13325286.745790334,
+   "gpu_hours_pessimistic_5k": 7.475214916891214,
+   "g4_units_pessimistic_5k": 65.10912192612248,
+   "test_day_minutes_pessimistic_5k": 44.417622485967776,
+   "gpu_hours_central_10k": 3.737607458445607,
+   "g4_units_central_10k": 32.55456096306124,
+   "test_day_minutes_central_10k": 22.208811242983888,
+   "gpu_hours_optimistic_20k": 1.8688037292228035,
+   "g4_units_optimistic_20k": 16.27728048153062,
+   "test_day_minutes_optimistic_20k": 11.104405621491944
+  },
+  {
+   "profiles": 12,
+   "colours": "both_colours",
+   "fit_sample": "fit_calibration_20k",
+   "games_total": 60976.34,
+   "positions_total": 13542120.253480084,
+   "evals_total": 162505443.041761,
+   "evals_test_only": 26650573.49158067,
+   "gpu_hours_pessimistic_5k": 9.028080168986722,
+   "g4_units_pessimistic_5k": 78.63457827187436,
+   "test_day_minutes_pessimistic_5k": 88.83524497193555,
+   "gpu_hours_central_10k": 4.514040084493361,
+   "g4_units_central_10k": 39.31728913593718,
+   "test_day_minutes_central_10k": 44.417622485967776,
+   "gpu_hours_optimistic_20k": 2.2570200422466806,
+   "g4_units_optimistic_20k": 19.65864456796859,
+   "test_day_minutes_optimistic_20k": 22.208811242983888
+  },
+  {
+   "profiles": 12,
+   "colours": "both_colours",
+   "fit_sample": "fit_calibration_60k",
+   "games_total": 100976.34,
+   "positions_total": 22425644.750673644,
+   "evals_total": 269107737.0080837,
+   "evals_test_only": 26650573.49158067,
+   "gpu_hours_pessimistic_5k": 14.950429833782428,
+   "g4_units_pessimistic_5k": 130.21824385224497,
+   "test_day_minutes_pessimistic_5k": 88.83524497193555,
+   "gpu_hours_central_10k": 7.475214916891214,
+   "g4_units_central_10k": 65.10912192612248,
+   "test_day_minutes_central_10k": 44.417622485967776,
+   "gpu_hours_optimistic_20k": 3.737607458445607,
+   "g4_units_optimistic_20k": 32.55456096306124,
+   "test_day_minutes_optimistic_20k": 22.208811242983888
+  },
+  {
+   "profiles": 26,
+   "colours": "target_moves_only",
+   "fit_sample": "fit_calibration_20k",
+   "games_total": 60976.34,
+   "positions_total": 6771060.126740042,
+   "evals_total": 176047563.2952411,
+   "evals_test_only": 28871454.61587906,
+   "gpu_hours_pessimistic_5k": 9.78042018306895,
+   "g4_units_pessimistic_5k": 85.18745979453055,
+   "test_day_minutes_pessimistic_5k": 96.2381820529302,
+   "gpu_hours_central_10k": 4.890210091534475,
+   "g4_units_central_10k": 42.59372989726528,
+   "test_day_minutes_central_10k": 48.1190910264651,
+   "gpu_hours_optimistic_20k": 2.4451050457672374,
+   "g4_units_optimistic_20k": 21.29686494863264,
+   "test_day_minutes_optimistic_20k": 24.05954551323255
+  },
+  {
+   "profiles": 26,
+   "colours": "target_moves_only",
+   "fit_sample": "fit_calibration_60k",
+   "games_total": 100976.34,
+   "positions_total": 11212822.375336822,
+   "evals_total": 291533381.75875735,
+   "evals_test_only": 28871454.61587906,
+   "gpu_hours_pessimistic_5k": 16.19629898659763,
+   "g4_units_pessimistic_5k": 141.06976417326536,
+   "test_day_minutes_pessimistic_5k": 96.2381820529302,
+   "gpu_hours_central_10k": 8.098149493298815,
+   "g4_units_central_10k": 70.53488208663268,
+   "test_day_minutes_central_10k": 48.1190910264651,
+   "gpu_hours_optimistic_20k": 4.049074746649407,
+   "g4_units_optimistic_20k": 35.26744104331634,
+   "test_day_minutes_optimistic_20k": 24.05954551323255
+  },
+  {
+   "profiles": 26,
+   "colours": "both_colours",
+   "fit_sample": "fit_calibration_20k",
+   "games_total": 60976.34,
+   "positions_total": 13542120.253480084,
+   "evals_total": 352095126.5904822,
+   "evals_test_only": 57742909.23175812,
+   "gpu_hours_pessimistic_5k": 19.5608403661379,
+   "g4_units_pessimistic_5k": 170.3749195890611,
+   "test_day_minutes_pessimistic_5k": 192.4763641058604,
+   "gpu_hours_central_10k": 9.78042018306895,
+   "g4_units_central_10k": 85.18745979453055,
+   "test_day_minutes_central_10k": 96.2381820529302,
+   "gpu_hours_optimistic_20k": 4.890210091534475,
+   "g4_units_optimistic_20k": 42.59372989726528,
+   "test_day_minutes_optimistic_20k": 48.1190910264651
+  },
+  {
+   "profiles": 26,
+   "colours": "both_colours",
+   "fit_sample": "fit_calibration_60k",
+   "games_total": 100976.34,
+   "positions_total": 22425644.750673644,
+   "evals_total": 583066763.5175147,
+   "evals_test_only": 57742909.23175812,
+   "gpu_hours_pessimistic_5k": 32.39259797319526,
+   "g4_units_pessimistic_5k": 282.1395283465307,
+   "test_day_minutes_pessimistic_5k": 192.4763641058604,
+   "gpu_hours_central_10k": 16.19629898659763,
+   "g4_units_central_10k": 141.06976417326536,
+   "test_day_minutes_central_10k": 96.2381820529302,
+   "gpu_hours_optimistic_20k": 8.098149493298815,
+   "g4_units_optimistic_20k": 70.53488208663268,
+   "test_day_minutes_optimistic_20k": 48.1190910264651
+  }
+ ],
+ "plans": {
+  "pilot": {
+   "parts": [
+    {
+     "name": "fit_sample_N14",
+     "games": 10000,
+     "profiles": 14,
+     "colour_factor": 1
+    },
+    {
+     "name": "inner_bank_N14",
+     "games": 11813,
+     "profiles": 14,
+     "colour_factor": 1
+    },
+    {
+     "name": "fit_sample_full_grid_N26",
+     "games": 1000,
+     "profiles": 26,
+     "colour_factor": 1
+    },
+    {
+     "name": "variant_fox_source",
+     "games": 500,
+     "profiles": 14,
+     "colour_factor": 1
+    },
+    {
+     "name": "variant_date_2022",
+     "games": 500,
+     "profiles": 14,
+     "colour_factor": 1
+    },
+    {
+     "name": "variant_both_colours",
+     "games": 500,
+     "profiles": 14,
+     "colour_factor": 2
+    }
+   ],
+   "evals": 39907235.01063018,
+   "gpu_hours_pessimistic_5k": 2.2170686117016767,
+   "gpu_hours_central_10k": 1.1085343058508383,
+   "gpu_hours_optimistic_20k": 0.5542671529254192,
+   "g4_units_pessimistic_5k": 19.310667607921605,
+   "g4_units_central_10k": 9.655333803960803,
+   "g4_units_optimistic_20k": 4.827666901980401
+  },
+  "full_after_go": {
+   "parts": [
+    {
+     "name": "inner_rest_for_mono_gate",
+     "games": 61356,
+     "profiles": 14,
+     "colour_factor": 1
+    },
+    {
+     "name": "local_validation",
+     "games": 19163.34,
+     "profiles": 14,
+     "colour_factor": 1
+    }
+   ],
+   "evals": 125176717.64287499,
+   "gpu_hours_pessimistic_5k": 6.954262091270833,
+   "gpu_hours_central_10k": 3.4771310456354163,
+   "gpu_hours_optimistic_20k": 1.7385655228177082,
+   "g4_units_pessimistic_5k": 60.57162281496896,
+   "g4_units_central_10k": 30.28581140748448,
+   "g4_units_optimistic_20k": 15.14290570374224
+  },
+  "test_day": {
+   "parts": [
+    {
+     "name": "test_public_private",
+     "games": 10000.0,
+     "profiles": 14,
+     "colour_factor": 1
+    }
+   ],
+   "evals": 15546167.870088723,
+   "gpu_hours_pessimistic_5k": 0.8636759927827068,
+   "gpu_hours_central_10k": 0.4318379963913534,
+   "gpu_hours_optimistic_20k": 0.2159189981956767,
+   "g4_units_pessimistic_5k": 7.522617897137377,
+   "g4_units_central_10k": 3.7613089485686886,
+   "g4_units_optimistic_20k": 1.8806544742843443
+  }
+ },
+ "cpu_feed": {
+  "N12_pessimistic_5k_positions_per_s_needed": 416.6666666666667,
+  "N12_central_10k_positions_per_s_needed": 833.3333333333334,
+  "N12_optimistic_20k_positions_per_s_needed": 1666.6666666666667,
+  "N26_pessimistic_5k_positions_per_s_needed": 192.30769230769232,
+  "N26_central_10k_positions_per_s_needed": 384.61538461538464,
+  "N26_optimistic_20k_positions_per_s_needed": 769.2307692307693,
+  "python_featurisation_positions_per_s_one_core_measured": 76.74444804367286,
+  "python_featurisation_positions_per_s_40_workers_if_linear": 3069.777921746914,
+  "python_featurisation_positions_per_s_24_workers_if_linear": 1841.8667530481487
+ }
+}

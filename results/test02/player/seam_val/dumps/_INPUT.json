@@ -1,0 +1,7 @@
+{
+ "set": "seam_val",
+ "question_file": "player_val_questions.csv",
+ "sha256": "d893a559f175b6535dc0d5f749314408b110149462f6a78a1b8cf7e9332cd676",
+ "candidates_file": "player_val_candidates.csv",
+ "candidates_sha256": "7cd2897593ee9add20dce4ff5d4b0dcf8699b6d51a3f10950dc399a757dd3ad5"
+}

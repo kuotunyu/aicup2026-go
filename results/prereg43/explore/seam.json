@@ -1,0 +1,142 @@
+{
+ "format": "c10-prereg43 seam v1",
+ "base": {
+  "tune": "results/prereg39/explore/tune.json",
+  "eval": "results/prereg39/explore/eval.json",
+  "tune_sha256_lf": "f390b58598cbaeabf6ae18c67b19130d9baccb844ee590e1ba5f40ce0f7e2bea",
+  "eval_sha256_lf": "a9bd552dd94f34fe9c147ae0fdf917151bd99730815d6de920e00b5db10a7bf0",
+  "cfg": {
+   "gnorm": true,
+   "pool_w": "mean",
+   "centre_colour": false,
+   "whiten": {
+    "lam": 0.7,
+    "lda": 128
+   },
+   "sim": "proto",
+   "alpha": null,
+   "pair": null,
+   "krecip": null,
+   "aqe": null,
+   "qsmooth": null,
+   "wE": 8,
+   "gmul": null,
+   "rowz": false,
+   "norm": [
+    "csls",
+    20
+   ]
+  },
+  "emb_dir": "data/prereg37/emb/step_160000",
+  "emb": {
+   "ckpt": "step_160000",
+   "ckpt_sha256": "c97b3507924b28717cd97cd95c6b18a04d3a131d5e51f318a86f08ef64f0f016"
+  },
+  "M39": {
+   "variant": "joint",
+   "pw": "b4",
+   "wP": 8,
+   "csls_k": 10,
+   "tune_mean": 0.7244595631236577
+  },
+  "d_mean": 0.7244595631236577,
+  "e_mean": 0.6592585013564308
+ },
+ "git_head": "c34d7fc27c7f79353c5a0af239ff86ea1ea2b582",
+ "Q0_C0_wE4_k10": {
+  "value": 0.5805158972862898,
+  "tune_D_B4_mean": 0.5805158972862898,
+  "identical": true
+ },
+ "retune_M37": {
+  "cfg": {
+   "gnorm": true,
+   "pool_w": "mean",
+   "centre_colour": false,
+   "whiten": {
+    "lam": 0.7,
+    "lda": 128
+   },
+   "sim": "proto",
+   "alpha": null,
+   "pair": null,
+   "krecip": null,
+   "aqe": null,
+   "qsmooth": null,
+   "wE": 8,
+   "gmul": null,
+   "rowz": false,
+   "norm": [
+    "csls",
+    20
+   ]
+  },
+  "mean": 0.6655350985215651,
+  "identical_to_tune_D_B4_M37": true
+ },
+ "D": {
+  "per_pool": [
+   0.7507984006278611,
+   0.6918189222668093,
+   0.7162597734110764,
+   0.7138471042936672,
+   0.7153256670293484,
+   0.7622621207372481,
+   0.698916877089427,
+   0.7358958139434786,
+   0.7225226757002144,
+   0.736948276137447
+  ],
+  "mean": 0.7244595631236577,
+  "want_mean": 0.7244595631236577,
+  "identical": true,
+  "lda_sha256": "ccc95351f79d8c1ec41e5cebf9891f9312191221cef3f3556fa607839333419f",
+  "sets": {
+   "D": {
+    "games": 28212,
+    "usable": 28212,
+    "failed_fresh": 0
+   }
+  }
+ },
+ "E": {
+  "per_pool": [
+   0.6421147950786861,
+   0.6715371725107514,
+   0.6427320405445061,
+   0.6370276218812827,
+   0.6588550143701649,
+   0.6806085888514847,
+   0.6569110850084607,
+   0.6736729056582533,
+   0.664992830822118,
+   0.6606406580616451,
+   0.6478998655437485,
+   0.6217520907248989,
+   0.6819252650536274,
+   0.6778207031186829,
+   0.6537752081452513,
+   0.6578190116418591,
+   0.6631938477504142,
+   0.6758546862840046,
+   0.6838318999418153,
+   0.6322047361369636
+  ],
+  "mean": 0.6592585013564308,
+  "want_mean": 0.6592585013564308,
+  "identical": true,
+  "sets": {
+   "E": {
+    "games": 56934,
+    "usable": 56934,
+    "failed_fresh": 0
+   },
+   "E2": {
+    "games": 35769,
+    "usable": 35769,
+    "failed_fresh": 0
+   }
+  }
+ },
+ "seconds": 554.6
+}

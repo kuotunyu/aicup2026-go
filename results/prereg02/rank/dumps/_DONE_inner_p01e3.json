@@ -1,0 +1,16 @@
+{
+ "file": "dumps/inner_p01e3.npz",
+ "rows": 73556,
+ "syms": 1,
+ "bytes": 2943270,
+ "sha256": "236ec597eb4922a530cdcaff3027e9bc9634f738dc855121f8ba150f753e16a8",
+ "weights": "prereg01/rank/ckpt/epoch_3.pth",
+ "weights_sha256": "2870d62e563f5a0cb122ba061d6a8e046da03b50805b65301232c73f1e481e93",
+ "seconds": 19.58957529067993,
+ "time": "2026-09-26T05:16:13+00:00",
+ "run": 1,
+ "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "torch": "2.11.0+cu128",
+ "cudnn": 91900,
+ "device": "cuda"
+}

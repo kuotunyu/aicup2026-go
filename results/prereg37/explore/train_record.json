@@ -1,0 +1,61 @@
+{
+ "format": "c10-prereg36 train v1",
+ "config": {
+  "total_steps": 160000,
+  "batch_games": 96,
+  "segment_moves": 24,
+  "lr": 0.002,
+  "weight_decay": 0.0001,
+  "onecycle_pct": 0.05,
+  "seed": 0,
+  "scale": 30.0,
+  "blocks": 10,
+  "channels": 128,
+  "emb_dim": 256,
+  "fp16": true,
+  "channels_last": false,
+  "n_classes": 3685,
+  "T_sha256_sorted_ids": "9c1db9001568040a648276d3993c6012afc914abd2466f7d9c5411d667cfa066",
+  "cache_codes_sha256": "be5831abbccf22be3c96725082939638e6607f88ad45b1ed2164db33060c0303"
+ },
+ "finished": true,
+ "steps": 160000,
+ "smoke": false,
+ "device": "cuda",
+ "workers": 4,
+ "git_head": "956775c3dfb6b8a6e3b0a7f1de9a9014924fbbb5",
+ "torch": "2.11.0+cu128",
+ "counts": {
+  "T_players": 3685,
+  "T_games": 417698,
+  "positions_seen": 368640000,
+  "games_seen": 15360000
+ },
+ "split_sha256_sorted_ids": {
+  "E": "7778702211b3e234b731355b63e0da991ee2df9802c97c69313dc118044ffb7b",
+  "D": "490c37a134d0162301d3eb8faadcb16fbb8c8ec8dbbfda3ad6050b78fe8590bf",
+  "T": "9c1db9001568040a648276d3993c6012afc914abd2466f7d9c5411d667cfa066"
+ },
+ "seconds": 42934.5,
+ "checkpoints": {
+  "step_112000.pt": "b68ead610c0eb431f7f701a227d5b53f8265be40f11ac4392e704c6761b77731",
+  "step_128000.pt": "0717668fd6b73abab43f488806d39428912a90a05f9e594651f3b3e773c3d8bd",
+  "step_144000.pt": "178f1667213196083fcbaa5d2dabe3bf6ec4749a11c369f767fd715b975faeac",
+  "step_16000.pt": "c009bf907eaa77f0e052283e65b31062beea98a386fafe311de0758c5bd291d6",
+  "step_160000.pt": "c97b3507924b28717cd97cd95c6b18a04d3a131d5e51f318a86f08ef64f0f016",
+  "step_32000.pt": "faf6794bcdda07253b8c20aaee627e6f429b3554497819cb8afadcde913e5c59",
+  "step_48000.pt": "cc5e5fb73ca1b6024c91935b0f722d4374080b629f6e7df571a3cba052cf0db7",
+  "step_64000.pt": "4eb0d9d434769a274048bb667ec1acfc124b28c39cdd509379e6122afc897871",
+  "step_80000.pt": "e90bd67cad2c75143ec495b6dac534461fdf0d921dbc872fd461df6786c26c82",
+  "step_96000.pt": "8612abaf485664c68eabb0899f3c5205c59afc504f8c84d480bcabf337a09900"
+ },
+ "regular_checkpoints": [
+  "step_16000.pt",
+  "step_160000.pt",
+  "step_32000.pt",
+  "step_48000.pt",
+  "step_64000.pt",
+  "step_80000.pt",
+  "step_96000.pt"
+ ]
+}

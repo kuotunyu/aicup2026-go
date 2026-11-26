@@ -1,0 +1,132 @@
+{
+ "version": "split_v1",
+ "revision": 2,
+ "revision_note": "rev 2 (2026-09-24, before any model was scored): competition-1 questions are written in an order independent of the candidate file; contents unchanged",
+ "params": {
+  "salt": "c10-split-v1",
+  "val_frac": 0.2,
+  "bins": [
+   [
+    1,
+    4
+   ],
+   [
+    5,
+    24
+   ],
+   [
+    25,
+    104
+   ],
+   [
+    105,
+    1000000000
+   ]
+  ],
+  "k_min": 5,
+  "k_max": 20,
+  "pool_games": 100,
+  "pool_players": 400
+ },
+ "source_sha256": {
+  "train_D.csv": "2ac3b7684be1ead82ea3839243eb7510249e55457f536df910d99619ae0a6d22",
+  "train_C.csv": "d66c5ade7775dd1596f1d7c1a6e0aa49d32557f5073188ba79e68063f6de69f7",
+  "train_B.csv": "05ea3b278d4ca6043b9153c83fc62920f68bfd1aa2b424f05f28dfa4f9651c06",
+  "train_A.csv": "0915826dfeadb32fa6fc5f5a08b1ef90a5ed0e3cc7868452e8158c887e3ccbca",
+  "train_1D.csv": "879536c2b7f8fdeacf7d2ddd0b2ffab0f36b40862b7dcec48a4250cf8dea618b",
+  "train_2D.csv": "167eae9e4872c96be2bcbdddcee0ef37eff249dfe00bf8dce20c4ceb468628bc",
+  "train_3D.csv": "8954844760b0cd072aeb68ef1390e0c8a19055d900d31b554ab62fe3b25f455b",
+  "train_4D.csv": "96fccefca0d037aac2ba56f63d547ebbe4c321b0e60941457c508d1e25ff1867",
+  "train_5D.csv": "8b2bce946f10cd93f4be77469ac84b44f02f799467b717969e0ee350a10b7c85",
+  "train_6D.csv": "171a3083f1d49bf138cad71ae8b1122bdfb37ad6568f5d4c42321754e3969ee3"
+ },
+ "players": {
+  "total": 8007,
+  "val": 1600,
+  "train": 6407
+ },
+ "players_by_rank": {
+  "D": {
+   "train": 712,
+   "val": 178
+  },
+  "C": {
+   "train": 654,
+   "val": 163
+  },
+  "B": {
+   "train": 839,
+   "val": 209
+  },
+  "A": {
+   "train": 1266,
+   "val": 316
+  },
+  "1D": {
+   "train": 346,
+   "val": 87
+  },
+  "2D": {
+   "train": 488,
+   "val": 122
+  },
+  "3D": {
+   "train": 494,
+   "val": 124
+  },
+  "4D": {
+   "train": 512,
+   "val": 128
+  },
+  "5D": {
+   "train": 527,
+   "val": 131
+  },
+  "6D": {
+   "train": 569,
+   "val": 142
+  }
+ },
+ "train_games": 793863,
+ "val_games": 206137,
+ "rank_questions": {
+  "total": 1589,
+  "by_rank": {
+   "D": 178,
+   "C": 163,
+   "B": 207,
+   "A": 308,
+   "1D": 87,
+   "2D": 122,
+   "3D": 124,
+   "4D": 128,
+   "5D": 131,
+   "6D": 141
+  }
+ },
+ "player_pool": {
+  "players": 400,
+  "eligible_val_players": 539,
+  "by_rank": {
+   "D": 32,
+   "C": 46,
+   "B": 38,
+   "A": 48,
+   "1D": 34,
+   "2D": 40,
+   "3D": 43,
+   "4D": 39,
+   "5D": 41,
+   "6D": 39
+  },
+  "candidate_games": 40000
+ },
+ "output_sha256": {
+  "rank_val_questions.csv": "73e51bbfd7b051e73cbb62af4b180c403d2422f122240c5e67e9c92303776db5",
+  "rank_val_answers.csv": "cc0db6f3ad0019f57deff7ffc3bf149cc5b2fbe4bf3def6c6cbda3e0612b5e8e",
+  "player_val_candidates.csv": "7cd2897593ee9add20dce4ff5d4b0dcf8699b6d51a3f10950dc399a757dd3ad5",
+  "player_val_questions.csv": "d893a559f175b6535dc0d5f749314408b110149462f6a78a1b8cf7e9332cd676",
+  "player_val_answers.csv": "e296f29a52f99c034541032460db76ad591cbc487fe1552915ed877284db8e0a",
+  "players_split.csv": "69554875064ecbd83d790b3215c8ba8f9540f217ec4af3e4a8c43228ac2a3dfc"
+ }
+}

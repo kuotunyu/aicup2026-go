@@ -1,0 +1,45 @@
+{
+ "checked_utc": "2026-11-04T07:13:48+00:00",
+ "smoke": false,
+ "reference_dir": "/content/drive/MyDrive/C10/results/prereg02/player/dumps",
+ "files": {
+  "cand_games.npz": {
+   "arrays_equal": {
+    "color": true,
+    "emb_sum": true,
+    "game_id": true,
+    "n_windows": true,
+    "player_id": true,
+    "weights_sha256": true
+   },
+   "bitwise_equal": true,
+   "max_abs_emb_diff": 0.0,
+   "sha256": "56ed03d12e9a79871a21b5f69dc4bd4bb8c8aa69b1544cb8ec799e80227cfdea",
+   "reference_sha256": "56ed03d12e9a79871a21b5f69dc4bd4bb8c8aa69b1544cb8ec799e80227cfdea"
+  },
+  "query_games.npz": {
+   "arrays_equal": {
+    "color": true,
+    "emb_sum": true,
+    "n_windows": true,
+    "parsed": true,
+    "question_id": true,
+    "slot": true,
+    "weights_sha256": true
+   },
+   "bitwise_equal": true,
+   "max_abs_emb_diff": 0.0,
+   "sha256": "665d0888a93f6632eb19edac76abf996d5499cd27c683d9844b97cb274b6f689",
+   "reference_sha256": "665d0888a93f6632eb19edac76abf996d5499cd27c683d9844b97cb274b6f689"
+  }
+ },
+ "bitwise_equal": true,
+ "max_abs_emb_diff": 0.0,
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "torch": "2.11.0+cu128",
+ "cudnn": 91900,
+ "p02_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "p02_torch": "2.11.0+cu128",
+ "p02_cudnn": 91900,
+ "rule": "只記錄；接縫的判定在本機 tools/t02_player.py（登記第 9 節第 2 條）"
+}

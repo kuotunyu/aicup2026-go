@@ -1,0 +1,32 @@
+{
+ "format": "c10-prereg34 colab bundle v1",
+ "zip": {
+  "file": "C10_p34_bundle.zip",
+  "sha256": "a71b68aa86de93a90e873876564eee4f14babf42348feebd32907daec7f40355",
+  "bytes": 29609955
+ },
+ "manifest": {
+  "format": "c10-prereg34 colab bundle v1",
+  "kit_id": "g11-kit-v1-de2a1ffa6727",
+  "kit_zip_sha256": "98b6d1e745b0a6b4dd26076e4640b36bddeadd2c1ae730cdf9d60e566d09421c",
+  "p1_code_record": {
+   "results/prereg05/explore/u1/u1_lib.py": "225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7",
+   "results/prereg07/explore/pilot_humansl/hs_lib.py": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+   "results/prereg07/explore/pilot_humansl/pilot_fuse.py": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+   "results/prereg08/p1/p1_extract.py": "2ee8eb127150e672b62bcb30b70c4fac46b8cd6e32c7e4eb19d54f746a6e3f9c",
+   "results/prereg08/p1/p1_fuse.py": "ad356c8ca9f26e1e761677afa07b5aa369ca31e5318f61eb6a6cbda33b970953",
+   "results/prereg08/p1/p1_lib.py": "062600168326f9eecd4ec1073e54881c475f8f276e376164eab20d373bbff511"
+  },
+  "ogs_games": 75485,
+  "seam_games": 400,
+  "files": {
+   "data/prereg34/p1/seam_games.csv.gz": "322bee1e7d5d5f56dc87b6ed8cfa2eb82b46d77d694158f72fb2e474a9325477",
+   "data/prereg34/p1/seam_ref.npz": "1fb88741ae9bf3303f2ae7c51336a55722de68699550073c8577bd3a635209c5",
+   "data/prereg34/p1/seam_sets.json": "4bbeb2de87afc33d6fa77bd91b996df5fe4d73aab38073b6adfc210de65c5601",
+   "data/prereg34/p1/sets.json": "f063a4c85bcaa8677bf5c7d55a5aeeca4c5b7d34b5bf87bec6c24090eb16d947",
+   "data/prereg34/sample/sample_games.csv.gz": "bc5515862d78ad7424b38a5894c8619a6df23ebb808a274c4bb60e7e94b72e59",
+   "results/prereg34/explore/p34_extract.py": "05f182b12c0a7e007cd100523b76155f283acde00fc0ed25fbf80c623c6d42fc"
+  }
+ },
+ "seconds": 9.9
+}

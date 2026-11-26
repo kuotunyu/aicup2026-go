@@ -1,0 +1,186 @@
+{
+ "what": "PREREG_02 rev 5 9.2 local seam (competition 1) on the validation pool",
+ "reference": {
+  "dir": "results/prereg02/player",
+  "sr_report_sha256": "9c06f6ac852092adfe4d0c2824da011baf481006a32fcf0a2051971df28cfc2e",
+  "top5_sha256": "69ca74a61ce34f8ffa8949df731df433d474347dce9aabb535156ab8197ead6c"
+ },
+ "registered_rule": "self-retrieval selects Q04, gate passed, guard level 1, top-5 identical to player_val_top5.csv on >= 398/400 questions",
+ "added_rule": "opening-only means (Q22, Q23) and the self-retrieval medians equal prereg02 exactly (they do not depend on the dumps); when the seam_val dumps are bitwise equal to prereg02's, all means and the top-5 file must be identical",
+ "dumps_bitwise_equal": true,
+ "means_exact": true,
+ "means_max_abs_diff": 0.0,
+ "means_abs_diff": {
+  "Q00": 0.0,
+  "Q01": 0.0,
+  "Q02": 0.0,
+  "Q03": 0.0,
+  "Q04": 0.0,
+  "Q05": 0.0,
+  "Q06": 0.0,
+  "Q07": 0.0,
+  "Q08": 0.0,
+  "Q09": 0.0,
+  "Q10": 0.0,
+  "Q11": 0.0,
+  "Q12": 0.0,
+  "Q13": 0.0,
+  "Q14": 0.0,
+  "Q15": 0.0,
+  "Q16": 0.0,
+  "Q17": 0.0,
+  "Q18": 0.0,
+  "Q19": 0.0,
+  "Q20": 0.0,
+  "Q21": 0.0,
+  "Q22": 0.0,
+  "Q23": 0.0
+ },
+ "sr_max_cos_median": {
+  "raw": 0.22665843779803582,
+  "canon": 0.22122531121305591
+ },
+ "sr_max_cos_median_reference": {
+  "raw": 0.22665843779803582,
+  "canon": 0.22122531121305591
+ },
+ "selected": "Q04",
+ "gate": {
+  "q00_mean": 0.4006408144088361,
+  "selected_mean": 0.8997649863787647,
+  "selected_minus_q00": 0.4991241719699286,
+  "threshold": 0.02,
+  "passed": true
+ },
+ "guard_level": 1,
+ "n_questions": 400,
+ "n_top5_identical": 400,
+ "byte_identical_top5": true,
+ "criteria": {
+  "opening_only_means_exact": true,
+  "sr_max_cos_median_exact": true,
+  "selected_is_Q04": true,
+  "gate_passed": true,
+  "guard_level_1": true,
+  "same_questions": true,
+  "top5_identical_at_least_398": true,
+  "expected_identical_when_dumps_bitwise": true
+ },
+ "passed": true,
+ "failed_implementation_additions": [],
+ "environment": {
+  "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1"
+ },
+ "environment_note": "the implementation additions (exact equality of the opening-only means, the self-retrieval medians and, with bitwise dumps, all means and the top-5 file) do not depend on Colab; when only they fail, look for a local bug or a numpy / scipy change in .venv (versions above; prereg02 ran with the same .venv) before anything else",
+ "mode": "real",
+ "cnn": true,
+ "dump_comparison": {
+  "reference": "results/prereg02/player/dumps",
+  "files": {
+   "cand_games.npz": {
+    "compared": true,
+    "arrays_equal": {
+     "color": true,
+     "emb_sum": true,
+     "game_id": true,
+     "n_windows": true,
+     "player_id": true,
+     "weights_sha256": true
+    },
+    "bitwise_equal": true,
+    "max_abs_emb_diff": 0.0,
+    "sha256": "56ed03d12e9a79871a21b5f69dc4bd4bb8c8aa69b1544cb8ec799e80227cfdea",
+    "reference_sha256": "56ed03d12e9a79871a21b5f69dc4bd4bb8c8aa69b1544cb8ec799e80227cfdea"
+   },
+   "query_games.npz": {
+    "compared": true,
+    "arrays_equal": {
+     "color": true,
+     "emb_sum": true,
+     "n_windows": true,
+     "parsed": true,
+     "question_id": true,
+     "slot": true,
+     "weights_sha256": true
+    },
+    "bitwise_equal": true,
+    "max_abs_emb_diff": 0.0,
+    "sha256": "665d0888a93f6632eb19edac76abf996d5499cd27c683d9844b97cb274b6f689",
+    "reference_sha256": "665d0888a93f6632eb19edac76abf996d5499cd27c683d9844b97cb274b6f689"
+   }
+  },
+  "bitwise_equal": true
+ },
+ "notebook_config_sha256": "083b9434a4c68418958a0467a423ecc6afe18d78b5310b68ca8e15514bae4c1f",
+ "notebook_seam_p02": {
+  "checked_utc": "2026-11-04T07:13:48+00:00",
+  "smoke": false,
+  "reference_dir": "/content/drive/MyDrive/C10/results/prereg02/player/dumps",
+  "files": {
+   "cand_games.npz": {
+    "arrays_equal": {
+     "color": true,
+     "emb_sum": true,
+     "game_id": true,
+     "n_windows": true,
+     "player_id": true,
+     "weights_sha256": true
+    },
+    "bitwise_equal": true,
+    "max_abs_emb_diff": 0.0,
+    "sha256": "56ed03d12e9a79871a21b5f69dc4bd4bb8c8aa69b1544cb8ec799e80227cfdea",
+    "reference_sha256": "56ed03d12e9a79871a21b5f69dc4bd4bb8c8aa69b1544cb8ec799e80227cfdea"
+   },
+   "query_games.npz": {
+    "arrays_equal": {
+     "color": true,
+     "emb_sum": true,
+     "n_windows": true,
+     "parsed": true,
+     "question_id": true,
+     "slot": true,
+     "weights_sha256": true
+    },
+    "bitwise_equal": true,
+    "max_abs_emb_diff": 0.0,
+    "sha256": "665d0888a93f6632eb19edac76abf996d5499cd27c683d9844b97cb274b6f689",
+    "reference_sha256": "665d0888a93f6632eb19edac76abf996d5499cd27c683d9844b97cb274b6f689"
+   }
+  },
+  "bitwise_equal": true,
+  "max_abs_emb_diff": 0.0,
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "torch": "2.11.0+cu128",
+  "cudnn": 91900,
+  "p02_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "p02_torch": "2.11.0+cu128",
+  "p02_cudnn": 91900,
+  "rule": "只記錄；接縫的判定在本機 tools/t02_player.py（登記第 9 節第 2 條）"
+ },
+ "outputs": {
+  "top5_sha256": "69ca74a61ce34f8ffa8949df731df433d474347dce9aabb535156ab8197ead6c"
+ },
+ "rerun": null,
+ "provenance": {
+  "git_head": "3de23e08e8a02fb9ced2259e0857cfd80a0e5062",
+  "tool": "tools/t02_player.py",
+  "tool_sha256": "b83a979615ee978792e18eecb32f60936622dcbc6c10068dbda00f2a33207bdf",
+  "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "frozen_tools_sha256": {
+   "p02_player_open.py": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+   "p02_player_fuse.py": "cb1cc1a2ba626a80ed49e7ae8269715f1e123f33777b6ed135380dbd07b35d5b",
+   "p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495"
+  },
+  "argv": [
+   "run",
+   "--pool",
+   "seam_val"
+  ],
+  "created": "2026-11-04T15:25:19+08:00"
+ }
+}

@@ -1,0 +1,186 @@
+{
+ "format": "c10-prereg68 seam v1",
+ "E": {
+  "per_pool": [
+   0.7375863283288479,
+   0.7419073525183432,
+   0.7259563216008647,
+   0.7266343584157084,
+   0.7406107404864134,
+   0.7265386806688047,
+   0.7347657552196202,
+   0.7612295974548169,
+   0.7707633121299312,
+   0.7247220871099322,
+   0.7307171662191343,
+   0.7073843587393188,
+   0.7544151302202633,
+   0.7477968464579376,
+   0.7322740458029554,
+   0.7366409594625403,
+   0.7497703623167107,
+   0.7497710502084486,
+   0.7444273370372886,
+   0.7144874098471794
+  ],
+  "mean": 0.7379199600122529,
+  "want": 0.7379199600122529,
+  "identical": true,
+  "ok_ens_false_questions": 0,
+  "vectors": {
+   "c49": {
+    "file": "data/prereg49/emb/V2_step_320000_raw_tta1/store_E.npz",
+    "sha256": "27ce57a23c1b99a6968bf71689fea35e46f3f6cd4b8f7bb244be33a154e010f6"
+   },
+   "S": {
+    "file": "data/prereg55/emb_S/V2_step_320000_raw_tta1/store_E.npz",
+    "sha256": "fb8635f30eed7539465eb01256baf6323370636e7f5bfc73f92b14522d09e082"
+   },
+   "B": {
+    "file": "data/prereg51/emb_B/V2_step_320000_raw_tta1/store_E.npz",
+    "sha256": "4a30876238a8f9f3cdc4e98b51d01a83ae9fd2f65d6ee13313271317658261dc"
+   },
+   "p61": {
+    "file": "data/prereg61/emb/p60_step_200000_raw_tta1/store_E.npz",
+    "sha256": "542fa068495acc05265fe59541e4563350595ab1e611a94e3aed5b1ce7848855"
+   },
+   "S1": {
+    "file": "data/prereg62/S1/emb/p60_step_200000_raw_tta1/store_E.npz",
+    "sha256": "3c443ff7ef20bb72c5ac7cc8c7faf83c7ca87839a95c783ae30f90526dff1dbc"
+   },
+   "S2": {
+    "file": "data/prereg62/S2/emb/p60_step_200000_raw_tta1/store_E.npz",
+    "sha256": "c85a3e4bebdda36659bee7c2c83ac10e9697f5ad44abfb38af436f97c2797b7a"
+   },
+   "X": {
+    "file": "data/prereg62/X/emb/p60_step_400000_raw_tta1/store_E.npz",
+    "sha256": "62a6b770aa25a2f964ed23942ca16a348d35c3ad71cee1846a0124285f86a46a"
+   }
+  },
+  "weights": [
+   1.0,
+   1.0,
+   1.0,
+   2.0,
+   2.0,
+   2.0,
+   2.0,
+   0.0,
+   0.0
+  ],
+  "order": [
+   "c49",
+   "S",
+   "B",
+   "p61",
+   "S1",
+   "S2",
+   "X",
+   "X2",
+   "X3"
+  ],
+  "ok": true,
+  "cfg_ens": {
+   "gnorm": true,
+   "pool_w": "mean",
+   "centre_colour": true,
+   "whiten": {
+    "lam": 0.85,
+    "lda": null
+   },
+   "sim": "proto",
+   "alpha": null,
+   "pair": null,
+   "krecip": null,
+   "aqe": null,
+   "qsmooth": null,
+   "wE": 8,
+   "gmul": null,
+   "rowz": false,
+   "norm": [
+    "csls",
+    10
+   ]
+  },
+  "git_head": "50660be730db0e50efacc89bc817aae5d8ffd803",
+  "peak_rss_mb": 1956.8,
+  "seconds": 293.5
+ },
+ "ok": true,
+ "pseudo": {
+  "five_fixed_members": {
+   "per_pool": [
+    0.6646148474790234,
+    0.6459088983391392,
+    0.6764900773555261,
+    0.6401133566257653,
+    0.6476890430014208,
+    0.6393828026290752,
+    0.6730021660904265,
+    0.6741574655669536,
+    0.6489364557909246,
+    0.6752506492799756
+   ],
+   "mean": 0.658554576215823,
+   "want_per_pool": [
+    0.6646148474790234,
+    0.6459088983391392,
+    0.6764900773555261,
+    0.6401133566257653,
+    0.6476890430014208,
+    0.6393828026290752,
+    0.6730021660904265,
+    0.6741574655669536,
+    0.6489364557909246,
+    0.6752506492799756
+   ],
+   "want_mean": 0.658554576215823,
+   "identical": true
+  },
+  "seven_v29_members_recorded": {
+   "per_pool": [
+    0.6727615519793174,
+    0.6461292458570128,
+    0.6738321563825227,
+    0.6390815261470549,
+    0.6463769992069789,
+    0.6372082412164208,
+    0.6771902977107693,
+    0.6694018718456224,
+    0.6540221751709319,
+    0.6761957617055754
+   ],
+   "mean": 0.6592199827222206
+  },
+  "weights_X2_X3": [
+   0.0,
+   0.0
+  ],
+  "ok": true,
+  "cfg_ens": {
+   "gnorm": true,
+   "pool_w": "mean",
+   "centre_colour": true,
+   "whiten": {
+    "lam": 0.85,
+    "lda": null
+   },
+   "sim": "proto",
+   "alpha": null,
+   "pair": null,
+   "krecip": null,
+   "aqe": null,
+   "qsmooth": null,
+   "wE": 8,
+   "gmul": null,
+   "rowz": false,
+   "norm": [
+    "csls",
+    10
+   ]
+  },
+  "git_head": "50660be730db0e50efacc89bc817aae5d8ffd803",
+  "peak_rss_mb": 1937.1,
+  "seconds": 142.6
+ }
+}

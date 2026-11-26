@@ -1,0 +1,106 @@
+{
+ "what": "PREREG_06 S4: per-game CNN embeddings of the fit players' black games (>= 105 black games), 4090",
+ "mode": "real",
+ "precommit": true,
+ "created_utc": "2026-10-02T23:00:01+00:00",
+ "git_head": "6b668acb2c962635d2fbccf79789fb33fab6fedd",
+ "tool": {
+  "path": "tools/p06_cnn_fit.py",
+  "sha256_lf": "bf2ff36176239acd372c338a91098a928fca0a49a4eae607fd2b10570962cf18",
+  "committed_and_clean": false
+ },
+ "env": {
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "torch": "2.11.0+cu128",
+  "cuda": "12.8",
+  "cudnn": 91900,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "cudnn_benchmark": false,
+  "cudnn_allow_tf32": true,
+  "matmul_allow_tf32": false,
+  "workers": 6,
+  "GPU_BATCH": 4096,
+  "CHUNK": 256,
+  "SHARD": 8192
+ },
+ "inputs": {
+  "weights": {
+   "path": "data/prereg01_weights/player/best_model.pth",
+   "sha256": "356eb4f65488925e2a552ea382979780c903ef515b85d329a3805db837b7773b"
+  },
+  "tutorial_sha256": {
+   "utils.py": "3bdf715c6211282be103a75275ce211fdead65703d230b21db5be6ac411c1e63",
+   "network.py": "794a0d9cc9a20984292a3746bcec6f6e106dac2ef14394cc0d142958693ec3b6"
+  },
+  "split_csv_sha256": "69554875064ecbd83d790b3215c8ba8f9540f217ec4af3e4a8c43228ac2a3dfc",
+  "training_csv_sha256": {
+   "D": "2ac3b7684be1ead82ea3839243eb7510249e55457f536df910d99619ae0a6d22",
+   "C": "d66c5ade7775dd1596f1d7c1a6e0aa49d32557f5073188ba79e68063f6de69f7",
+   "B": "05ea3b278d4ca6043b9153c83fc62920f68bfd1aa2b424f05f28dfa4f9651c06",
+   "A": "0915826dfeadb32fa6fc5f5a08b1ef90a5ed0e3cc7868452e8158c887e3ccbca",
+   "1D": "879536c2b7f8fdeacf7d2ddd0b2ffab0f36b40862b7dcec48a4250cf8dea618b",
+   "2D": "167eae9e4872c96be2bcbdddcee0ef37eff249dfe00bf8dce20c4ceb468628bc",
+   "3D": "8954844760b0cd072aeb68ef1390e0c8a19055d900d31b554ab62fe3b25f455b",
+   "4D": "96fccefca0d037aac2ba56f63d547ebbe4c321b0e60941457c508d1e25ff1867",
+   "5D": "8b2bce946f10cd93f4be77469ac84b44f02f799467b717969e0ee350a10b7c85",
+   "6D": "171a3083f1d49bf138cad71ae8b1122bdfb37ad6568f5d4c42321754e3969ee3"
+  }
+ },
+ "data": {
+  "fit_rows": 720307,
+  "players_ge105_black": 1082,
+  "games": 232165,
+  "games_without_windows": 0,
+  "windows_total": 24834603,
+  "windows_per_game_mean": 106.97
+ },
+ "output": {
+  "path": "data/prereg06/cnn_fit/black_ge105.npz",
+  "sha256": "7919fd72ae1b6845c2ef729ab4c8a360cc3220edac458170a097f1bc4838c75f",
+  "bytes": 265598768,
+  "shards": {
+   "0": "bc2294d9f132617a1ed6261f8e2c193f558ed4f5dd209d48b75a32bc2475914e",
+   "1": "0101ce19483e23ec31e04374e86ea0ca16013a49a27b5fe10c58fe0571015420",
+   "2": "ebe673f9b6053098b15662619dd837d6475d76c3758abbab41aa11ea8d641edc",
+   "3": "2c211b3c7fcf6378509ca293c392be8b3d76e313c8fd6cbd9aea106357420a24",
+   "4": "ed04a901dd5d378b49323080e6e40271678105e7d32079e9b0019ccb1cb2acce",
+   "5": "683d3c7d0cd1da5dae6e2f381f7fce7b154cec14a80648875e8421812b7a9a0a",
+   "6": "3dd68304c35caf6710752b1c1bad13a3c2257ce7ba592758c3498c2804b71e12",
+   "7": "8575375cf50a17bbfc37acf9a8cef5013dde88090daf36166caee2f645f9f9fe",
+   "8": "1cfc652e249f5f3b577138a67ded16054756fac9d1fba041015268fac35e23ce",
+   "9": "332e7d7d899c870e713e76b7cbdc868c28529b18e852e792705f250c5fe001ef",
+   "10": "9d8f6862c21d364dcf5e922d47114a443ee15c5e2d3c702cec77aad250159ed2",
+   "11": "4fb5a5067504870ea38f9d8c4327ddeb3ee5959391918792730274cbd636aa87",
+   "12": "c3e044ddd43c0e93b35d6db0986b154d32408c6c4f762aa69a8ba155a8e4c975",
+   "13": "54c1168ee827bd64bf70400f2566b4e409b6a55a2ed996903ea8f80a89964963",
+   "14": "ee585f66c09c67d0c04783d2af203f5e9fc364b3b0dc1ad3c72f048187089ab4",
+   "15": "0240c9b419314cb355cda4a87124504e0944e703a274a4b7d2d5cd6eea7ec1a4",
+   "16": "e1bb820dbd503ec9efe98d173e2596b811af232660251c6d79e581fa5bc125c8",
+   "17": "ec240b1be194fa14a5d4f13bc9ee82c9de9b588615f04197dca19e5cbd79c080",
+   "18": "dec242bb3922a92e76d135e150e91fc4991971dd6ac52c25fa28abea0534afeb",
+   "19": "6406536a31eaef2f5fa25104e4188459a15fb33b76a4883c7d9bb94f9a0e7ef7",
+   "20": "8bec66a87d50b8724e2d1036069e316f2e8e71e92bfad11b9b2ccf838cf2e7d1",
+   "21": "ddc07bc0a27eee463946493c95c1a417841c91da29ffb6ece414d60372097eba",
+   "22": "4243eb22399fd91200c8d73da9788fdb9d5e09c52906327e8966b1c69dd4260e",
+   "23": "a9dda072be84bf46afd5ab463d1ae51c48e921339cd42525529edccdcceb2649",
+   "24": "3de710d6c730e9fd69e1962b6c75388c64147256e7dfdf1ced5d4a351a720e5d",
+   "25": "329256105abb719a32703dbdc1afc373f73fe1072265b785dc1f4a6858d8324f",
+   "26": "66af1b6115d1b70474c39f468a0ff964a7470c170c36f023e54cefb4b80a4e82",
+   "27": "c70759c5608b22d1fed5cca9f015c1b7f7ad27ed0f68069e67c90c5eff032aa4",
+   "28": "c6421b096e1eb1ae76f44abdccb8ea760e18df663250f52c772fe8ea694c02c2"
+  },
+  "resumed_shards": []
+ },
+ "recheck_first_games": {
+  "games": 256,
+  "max_abs_diff_emb_sum": 0.0,
+  "n_windows_same": true
+ },
+ "nvidia_smi_before": "Sat Oct  3 06:16:37 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 616.92                 KMD Version: 616.92        CUDA UMD Version: 13.4     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 4090      WDDM  |   00000000:01:00.0  On |                  Off |\n| 34%   45C    P8             22W /  450W |     871MiB /  24564MiB |      1%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A            3472    C+G   ...8bbwe\\PhoneExperienceHost.exe      N/A      |\n|    0   N/A  N/A            3756    C+G   ...em32\\ApplicationFrameHost.exe      N/A      |\n|    0   N/A  N/A            3760    C+G   ...5n1h2txyewy\\TextInputHost.exe      N/A      |\n|    0   N/A  N/A            4100    C+G   ...ntrolPanel\\SystemSettings.exe      N/A      |\n|    0   N/A  N/A           10680    C+G   C:\\Windows\\explorer.exe               N/A      |\n|    0   N/A  N/A           10816    C+G   ...indows\\System32\\ShellHost.exe      N/A      |\n|    0   N/A  N/A           11160    C+G   ...2txyewy\\CrossDeviceResume.exe      N/A      |\n|    0   N/A  N/A           12088    C+G   ..._cw5n1h2txyewy\\SearchHost.exe      N/A      |\n|    0   N/A  N/A           12112    C+G   ...y\\StartMenuExperienceHost.exe      N/A      |\n|    0   N/A  N/A           13964    C+G   ...2p2nqsd0c76g0\\app\\ChatGPT.exe      N/A      |\n|    0   N/A  N/A           14320    C+G   ....0.4258.48\\msedgewebview2.exe      N/A      |\n|    0   N/A  N/A           14368    C+G   ...App_cw5n1h2txyewy\\LockApp.exe      N/A      |\n|    0   N/A  N/A           17204    C+G   ...\\codex-computer-use-swift.exe      N/A      |\n|    0   N/A  N/A           19088    C+G   ..._pzs8sxrjxfjjc\\app\\claude.exe      N/A      |\n|    0   N/A  N/A           20068    C+G   ...xyewy\\ShellExperienceHost.exe      N/A      |\n|    0   N/A  N/A           29404    C+G   ..._pzs8sxrjxfjjc\\app\\claude.exe      N/A      |\n|    0   N/A  N/A           36284    C+G   ...rograms\\Evernote\\Evernote.exe      N/A      |\n+-----------------------------------------------------------------------------------------+\n",
+ "seconds": {
+  "load_fit": 6.6,
+  "embed": 2589.7,
+  "total": 2605.2
+ }
+}

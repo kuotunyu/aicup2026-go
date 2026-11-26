@@ -1,0 +1,157 @@
+{
+ "format": "c10-prereg04 opp count v1",
+ "command": "count",
+ "argv": [
+  "count",
+  "--workers",
+  "8"
+ ],
+ "preview": false,
+ "registered_output": true,
+ "created": "2026-09-29T16:59:16+08:00",
+ "tool": {
+  "git_head": "22e700e4ea81c74498029f1242e8216c86a357c8",
+  "dirty_or_untracked": [],
+  "files_sha256_rule": "sha256 of the file with CRLF folded to LF",
+  "files_sha256": {
+   "p04_opp.py": "b594e0eff135b539616d60f26403ca1a1a37ac3f44855785c36e2cc6be9768fa",
+   "p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+   "p02_rank_pseudo.py": "16e5bfdfb2995874ddb11bde1f7a9e786a478b14443453f675a4fb3a480bb098",
+   "p02_rank_opening.py": "a4195fece41aa3d50ecda82d1af93d9c04f49df5fd2157d69dd8a488dea93463",
+   "p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "decide.py": "cf66daf1231b3c2bd60c5b6484245627e133bd0f1cd7ff5557e978da3801d0e3",
+   "p02_player_fuse.py": "cb1cc1a2ba626a80ed49e7ae8269715f1e123f33777b6ed135380dbd07b35d5b",
+   "p02_player_open.py": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+   "p03_rank_fuse.py": "77abd7479d26f0f647a258b4a6d5d2e517808b4c187184f14ff599d70b8aca2f"
+  },
+  "frozen_equal_to_head": true,
+  "ported_from_design_sha256": {
+   "feat.py": "a5113f7ae00f8b87d3938d4dfe94acd3af4251c1314026c7e6f282e3eaef6141",
+   "count.py": "99eada5e6d88e17b33bcb60873373eba547d8f865c1eb82a7828b3dd60e05299",
+   "score_inner.py": "12233b1aa07f400a98b809650dceef96c8920adfc387f4ff5a41d3f2270c0058",
+   "prep.py": "00253d541b8f1dbfd3d48e71510f0ae56b067904a5d55feabc3ccb583c787753",
+   "t_feat.py": "34e5f9f5d1adc3634637cb2e82bb011956c0c3e643b4965f4dbd0d1b2ea167b4",
+   "t_feat2.py": "42da1b8a53d6ae49b979d3e629f0a7c29f3ecaf954fc35a343a1182ebe77b162",
+   "dupcheck.py": "1546091f514ae3b427a23769d40d52265aac4482e4ea8d7a957dfb789021e758"
+  }
+ },
+ "environment": {
+  "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "executable": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\.venv\\Scripts\\python.exe"
+ },
+ "workers": 8,
+ "games": 720307,
+ "target_moves": 79985811,
+ "opponent_moves": 79985352,
+ "anomalies": 0,
+ "n_cells": 557928,
+ "n_patterns": 1107,
+ "cells_seen_target": 124930,
+ "cells_played_target": 94665,
+ "target_moves_by_level": [
+  7971485,
+  8569099,
+  8183952,
+  7981148,
+  8024833,
+  8069709,
+  8036321,
+  7755217,
+  8092500,
+  7301547
+ ],
+ "stride": 1,
+ "limit": 0,
+ "worker_seconds": [
+  1960.3,
+  1963.3,
+  1968.8,
+  1956.8,
+  1965.6,
+  1971.2,
+  1970.2,
+  1966.0
+ ],
+ "wall_seconds": 2051.5,
+ "int32_guard": {
+  "rule": "per shard 361 x max(target, opponent moves) < 2^32 and no negative int32 partial (merge_shards): no worker accumulator overflowed",
+  "max_shard_bound": 3612396318,
+  "limit": 4294967296,
+  "max_count": 265024183
+ },
+ "counts_file": "data/prereg04/counts_fit.npz",
+ "counts_sha256": "f6c6debe90639585763b9812c235743a6b7f89d8db1c6422ece7bccd550a08a5",
+ "counts_bytes": 178537934,
+ "fit_rows_load": {
+  "loader": "tools/c10data.load_rows(part='fit')",
+  "games": 720307,
+  "moves": 159971163
+ },
+ "design_moves_seam": {
+  "file": "data/prereg04/design_scratch/moves_fit.npz",
+  "manifest_sha256": "b219d7dc53ffc6562abe3ce9e90d50f1b5c59be01efb00011b3638c16afdf5bb",
+  "sha256": "b219d7dc53ffc6562abe3ce9e90d50f1b5c59be01efb00011b3638c16afdf5bb",
+  "state": "present, sha256 equal to the manifest",
+  "moves_npy": {
+   "file": "data/prereg04/design_scratch/moves_fit_moves.npy",
+   "manifest_sha256": "57cc0ffaf665ed519d36aa5a5f38cb6e9d7d399ede79064a3be8b0a5ca9ba947",
+   "sha256": "57cc0ffaf665ed519d36aa5a5f38cb6e9d7d399ede79064a3be8b0a5ca9ba947",
+   "state": "present, sha256 equal to the manifest"
+  },
+  "arrays_equal": {
+   "off": true,
+   "rank": true,
+   "game_id": true,
+   "player_id": true,
+   "color": true,
+   "label": true,
+   "moves": true
+  }
+ },
+ "pinned": {
+  "games": {
+   "got": 720307,
+   "registered": 720307,
+   "equal": true
+  },
+  "target_moves": {
+   "got": 79985811,
+   "registered": 79985811,
+   "equal": true
+  },
+  "opponent_moves": {
+   "got": 79985352,
+   "registered": 79985352,
+   "equal": true
+  },
+  "anomalies": {
+   "got": 0,
+   "registered": 0,
+   "equal": true
+  },
+  "n_cells": {
+   "got": 557928,
+   "registered": 557928,
+   "equal": true
+  }
+ },
+ "design_counts": {
+  "file": "data/prereg04/design_scratch/counts_fit.npz",
+  "manifest_sha256": "f6c6debe90639585763b9812c235743a6b7f89d8db1c6422ece7bccd550a08a5",
+  "sha256": "f6c6debe90639585763b9812c235743a6b7f89d8db1c6422ece7bccd550a08a5",
+  "state": "present, sha256 equal to the manifest",
+  "arrays_equal": {
+   "C_t": true,
+   "A_t": true,
+   "C_o": true,
+   "A_o": true
+  },
+  "file_sha256_equal": true
+ },
+ "problems": [],
+ "status": "ok"
+}

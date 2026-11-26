@@ -1,0 +1,61 @@
+# Secrets - never commit
+.env
+.env.*
+
+# Python environment
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Competition data (license: 2026 AI CUP use only) and large artifacts - never commit
+data/
+*.tar.xz
+weights/
+checkpoints/
+*.pt
+*.pth
+*.safetensors
+
+# Python caches
+__pycache__/
+
+# Colab result zips (contents are extracted and committed; sha256 recorded in RESULTS.md)
+results/prereg01/*_results.zip
+results/prereg02/*.zip
+
+# Test-day (test02) result zips: contents are unpacked into results/test02/<comp>/ and committed;
+# the zip SHA-256 is recorded in results/test02/unpack_<comp>.json. Rehearsal outputs stay out of git.
+results/test02/*.zip
+results/test02_rehearsal/
+
+# prereg03 result zips (and *_results_failed.zip): contents are unpacked into results/prereg03/rank_{a,b}/ and committed;
+# the zip SHA-256 is recorded in results/prereg03/unpack_rank_{a,b}.json
+results/prereg03/*.zip
+/test02_*_results*.zip
+
+# Test-day 04 (test04) result zips: contents are unpacked into results/test04/sw/ and committed; the zip SHA-256
+# is recorded in results/test04/unpack_sw.json (archived zips go to data/test04_failed/). Rehearsal outputs stay out.
+results/test04/*.zip
+results/test04_rehearsal/
+
+# Local GPU environment for the 06/07 paths on the RTX 4090 (user OK 2026-10-02); not used by the Colab test-day paths
+.venv-gpu/
+
+# Test-day 07 (test07) drills: rehearsal outputs stay out of git (the HS chunks live under data/, already ignored)
+results/test07_rehearsal/
+
+# Test-day 08 (test08) drills: rehearsal outputs stay out of git (the P1 chunks live under data/, already ignored)
+results/test08_rehearsal/
+
+# Test-day 09 (test09) drills: rehearsal outputs stay out of git (09 reads the 08 P1 chunks under data/)
+results/test09_rehearsal/
+
+# 10/15 deep-research notes and reports (local only)
+research_notes/
+reports/
+# test19 (PREREG_19 rev 3): rehearsal outputs of tools/t19_rank.py --rehearsal and its temporary files
+results/test19_rehearsal/
+data/test19_rehearsal/

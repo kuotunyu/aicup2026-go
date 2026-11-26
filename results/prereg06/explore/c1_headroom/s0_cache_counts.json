@@ -1,0 +1,23 @@
+{
+ "fit_rows": 720307,
+ "fit_players": 5767,
+ "players_black_ge_105": 1082,
+ "players_black_ge_120": 926,
+ "players_black_ge_200": 424,
+ "cached_black_games": 232165,
+ "games_not_alternating_BW": 0,
+ "black_ge_120_by_level": {
+  "D": 92,
+  "C": 103,
+  "B": 100,
+  "A": 57,
+  "1D": 95,
+  "2D": 105,
+  "3D": 99,
+  "4D": 93,
+  "5D": 96,
+  "6D": 86
+ },
+ "load_seconds": 45.1,
+ "total_seconds": 47.2
+}

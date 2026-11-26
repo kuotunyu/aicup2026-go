@@ -1,0 +1,60 @@
+{
+ "eligible_inner_players_ge20_each_colour": 322,
+ "rounds": 20,
+ "R20": {
+  "mixed": {
+   "rank_balanced": 0.6040319024045585,
+   "question_mean": 0.6080584349540343,
+   "n": 6440
+  },
+  "single_B": {
+   "rank_balanced": 0.5901725601569517,
+   "question_mean": 0.5953021752993137,
+   "n": 6440
+  },
+  "single_W": {
+   "rank_balanced": 0.6135706486966004,
+   "question_mean": 0.6164161360730093,
+   "n": 6440
+  },
+  "single_random_colour": {
+   "rank_balanced": 0.6049682526301592,
+   "question_mean": 0.6093802797111237,
+   "n": 6440
+  }
+ },
+ "R20_without_opening_term(w=0)": {
+  "mixed": {
+   "rank_balanced": 0.587543589449274,
+   "question_mean": 0.5919263153430762,
+   "n": 6440
+  },
+  "single_B": {
+   "rank_balanced": 0.5782941915060638,
+   "question_mean": 0.5829128566702678,
+   "n": 6440
+  },
+  "single_W": {
+   "rank_balanced": 0.6015698189610622,
+   "question_mean": 0.6034290398316031,
+   "n": 6440
+  },
+  "single_random_colour": {
+   "rank_balanced": 0.5960442026416551,
+   "question_mean": 0.5994915260391451,
+   "n": 6440
+  }
+ },
+ "mean_expected_level_by_colour": {
+  "B": {
+   "cnn_mean_expected_level_minus_true": -0.050795208958275176,
+   "opening_mean_expected_level_minus_true": 0.1883278487626174,
+   "opening_has_share": 1.0
+  },
+  "W": {
+   "cnn_mean_expected_level_minus_true": -0.2005769346484765,
+   "opening_mean_expected_level_minus_true": 0.15227770126098208,
+   "opening_has_share": 1.0
+  }
+ }
+}

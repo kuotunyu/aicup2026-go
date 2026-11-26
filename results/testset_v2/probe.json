@@ -1,0 +1,515 @@
+{
+ "format": "c10 testset_v2 probe v1",
+ "registration": "docs/PREREG_27_TESTSET_V2.md",
+ "made_at": "2026-11-11T03:10:49+00:00",
+ "v1_dir": "D:/AI-Portfolio/competitions/aicup2026-go/data/test_rootprops/original",
+ "files": {
+  "player_identification_candidates2_private.csv": {
+   "bytes": 8210305,
+   "sha256": "8e80f94689284722bd21a3f3306c476ee78aead60a4061e74a0f8aaaede36812",
+   "rows": 6000,
+   "header": [
+    "game_id",
+    "player_id",
+    "sgf_content",
+    "color"
+   ],
+   "columns": 4,
+   "crlf": 6001,
+   "lf": 6001,
+   "bom": false,
+   "kind": "candidates",
+   "players": 600,
+   "games_per_player": {
+    "10": 600
+   },
+   "colours": {
+    "W": 3071,
+    "B": 2929
+   },
+   "player_id_patterns": {
+    "priv9_p_9999": 600
+   },
+   "game_id_patterns": {
+    "priv9_g_9999999": 6000
+   },
+   "duplicate_ids": 0,
+   "root_props": {
+    "SZ,HD": 6000
+   },
+   "source": "data/test_v2_download\\aicup2026_player_identification_v2_tests_20261108_fix_readme.zip:player_identification_candidates2_private.csv"
+  },
+  "player_identification_candidates2_public.csv": {
+   "bytes": 8114857,
+   "sha256": "ac3d7d20d1a19ee7e670638b556f5c3cc021904ca4e1644bc0d0bcec4ff6616d",
+   "rows": 6000,
+   "header": [
+    "game_id",
+    "player_id",
+    "sgf_content",
+    "color"
+   ],
+   "columns": 4,
+   "crlf": 6001,
+   "lf": 6001,
+   "bom": false,
+   "kind": "candidates",
+   "players": 600,
+   "games_per_player": {
+    "10": 600
+   },
+   "colours": {
+    "W": 3025,
+    "B": 2975
+   },
+   "player_id_patterns": {
+    "pub9_p_9999": 600
+   },
+   "game_id_patterns": {
+    "pub9_g_9999999": 6000
+   },
+   "duplicate_ids": 0,
+   "root_props": {
+    "SZ,HD": 6000
+   },
+   "source": "data/test_v2_download\\aicup2026_player_identification_v2_tests_20261108_fix_readme.zip:player_identification_candidates2_public.csv"
+  },
+  "player_identification_candidates_private.csv": {
+   "bytes": 55008481,
+   "sha256": "db2cfe33be9c1e36355fac5664b758909ef80bce1be257e55bae056fba40d963",
+   "rows": 40000,
+   "header": [
+    "game_id",
+    "player_id",
+    "sgf_content",
+    "color"
+   ],
+   "columns": 4,
+   "crlf": 40001,
+   "lf": 40001,
+   "bom": false,
+   "kind": "candidates",
+   "players": 400,
+   "games_per_player": {
+    "100": 400
+   },
+   "colours": {
+    "B": 40000
+   },
+   "player_id_patterns": {
+    "priv_p_9999": 400
+   },
+   "game_id_patterns": {
+    "priv_g_9999999": 40000
+   },
+   "duplicate_ids": 0,
+   "root_props": {
+    "SZ,HD": 40000
+   },
+   "source": "data/test_v2_download\\aicup2026_player_identification_v2_tests_20261108_fix_readme.zip:player_identification_candidates_private.csv",
+   "v1_byte_identical": true,
+   "v1_compare": {
+    "v1_rows": 40000,
+    "v1_ids_kept": 40000,
+    "rows_identical": 40000,
+    "rows_identical_after_root_props": 0,
+    "rows_changed": 0,
+    "v1_ids_missing": 0,
+    "new_ids": 0,
+    "v1_ids_first": true
+   }
+  },
+  "player_identification_candidates_public.csv": {
+   "bytes": 54956081,
+   "sha256": "e662242cb0f0b2be2009c129abd291c9c852af7fae25d8f1e1c00208785ee24d",
+   "rows": 40000,
+   "header": [
+    "game_id",
+    "player_id",
+    "sgf_content",
+    "color"
+   ],
+   "columns": 4,
+   "crlf": 40001,
+   "lf": 40001,
+   "bom": false,
+   "kind": "candidates",
+   "players": 400,
+   "games_per_player": {
+    "100": 400
+   },
+   "colours": {
+    "B": 40000
+   },
+   "player_id_patterns": {
+    "pub_p_9999": 400
+   },
+   "game_id_patterns": {
+    "pub_g_9999999": 40000
+   },
+   "duplicate_ids": 0,
+   "root_props": {
+    "SZ,HD": 40000
+   },
+   "source": "data/test_v2_download\\aicup2026_player_identification_v2_tests_20261108_fix_readme.zip:player_identification_candidates_public.csv",
+   "v1_byte_identical": true,
+   "v1_compare": {
+    "v1_rows": 40000,
+    "v1_ids_kept": 40000,
+    "rows_identical": 40000,
+    "rows_identical_after_root_props": 0,
+    "rows_changed": 0,
+    "v1_ids_missing": 0,
+    "new_ids": 0,
+    "v1_ids_first": true
+   }
+  },
+  "player_identification_test2_private.csv": {
+   "bytes": 1481715,
+   "sha256": "52e01bcc508e3e350f47b6430a7c841531976ac4a9d294fc2328b4570ca8a527",
+   "rows": 400,
+   "header": [
+    "question_id",
+    "num_games",
+    "sgf_1",
+    "sgf_2",
+    "..."
+   ],
+   "columns": 42,
+   "crlf": 401,
+   "lf": 401,
+   "bom": false,
+   "kind": "questions",
+   "sgf_columns": 20,
+   "k_counts": {
+    "1": 100,
+    "2": 100,
+    "3": 100,
+    "5": 100
+   },
+   "colours": {
+    "B": 546,
+    "W": 554
+   },
+   "id_patterns": {
+    "priv9_q_9999": 400
+   },
+   "duplicate_ids": 0,
+   "root_props": {
+    "SZ,HD": 1100
+   },
+   "source": "data/test_v2_download\\aicup2026_player_identification_v2_tests_20261108_fix_readme.zip:player_identification_test2_private.csv"
+  },
+  "player_identification_test2_public.csv": {
+   "bytes": 1468253,
+   "sha256": "33485b58da29a43d53526f9f83d92ebdc4610948cb0f5249e07bba5cbdd53d6a",
+   "rows": 400,
+   "header": [
+    "question_id",
+    "num_games",
+    "sgf_1",
+    "sgf_2",
+    "..."
+   ],
+   "columns": 42,
+   "crlf": 401,
+   "lf": 401,
+   "bom": false,
+   "kind": "questions",
+   "sgf_columns": 20,
+   "k_counts": {
+    "1": 100,
+    "2": 100,
+    "3": 100,
+    "5": 100
+   },
+   "colours": {
+    "B": 528,
+    "W": 572
+   },
+   "id_patterns": {
+    "pub9_q_9999": 400
+   },
+   "duplicate_ids": 0,
+   "root_props": {
+    "SZ,HD": 1100
+   },
+   "source": "data/test_v2_download\\aicup2026_player_identification_v2_tests_20261108_fix_readme.zip:player_identification_test2_public.csv"
+  },
+  "player_identification_test_private.csv": {
+   "bytes": 6756005,
+   "sha256": "eedd2630731070633dfa264897ac739aec03879f90ac57149bba033d9bd53dee",
+   "rows": 400,
+   "header": [
+    "question_id",
+    "num_games",
+    "sgf_1",
+    "sgf_2",
+    "..."
+   ],
+   "columns": 42,
+   "crlf": 401,
+   "lf": 401,
+   "bom": false,
+   "kind": "questions",
+   "sgf_columns": 20,
+   "k_counts": {
+    "5": 100,
+    "10": 100,
+    "15": 100,
+    "20": 100
+   },
+   "colours": {
+    "B": 5000
+   },
+   "id_patterns": {
+    "priv_q_9999": 400
+   },
+   "duplicate_ids": 0,
+   "root_props": {
+    "SZ,HD": 5000
+   },
+   "source": "data/test_v2_download\\aicup2026_player_identification_v2_tests_20261108_fix_readme.zip:player_identification_test_private.csv",
+   "v1_byte_identical": true,
+   "v1_compare": {
+    "v1_rows": 400,
+    "v1_ids_kept": 400,
+    "rows_identical": 400,
+    "rows_identical_after_root_props": 0,
+    "rows_changed": 0,
+    "v1_ids_missing": 0,
+    "new_ids": 0,
+    "v1_ids_first": true
+   }
+  },
+  "player_identification_test_public.csv": {
+   "bytes": 6705235,
+   "sha256": "fbf6f14de57bc37bbec6e3d732143a2561887d37b1f36271223ad1a14810ac74",
+   "rows": 400,
+   "header": [
+    "question_id",
+    "num_games",
+    "sgf_1",
+    "sgf_2",
+    "..."
+   ],
+   "columns": 42,
+   "crlf": 401,
+   "lf": 401,
+   "bom": false,
+   "kind": "questions",
+   "sgf_columns": 20,
+   "k_counts": {
+    "5": 100,
+    "10": 100,
+    "15": 100,
+    "20": 100
+   },
+   "colours": {
+    "B": 5000
+   },
+   "id_patterns": {
+    "pub_q_9999": 400
+   },
+   "duplicate_ids": 0,
+   "root_props": {
+    "SZ,HD": 5000
+   },
+   "source": "data/test_v2_download\\aicup2026_player_identification_v2_tests_20261108_fix_readme.zip:player_identification_test_public.csv",
+   "v1_byte_identical": true,
+   "v1_compare": {
+    "v1_rows": 400,
+    "v1_ids_kept": 400,
+    "rows_identical": 400,
+    "rows_identical_after_root_props": 0,
+    "rows_changed": 0,
+    "v1_ids_missing": 0,
+    "new_ids": 0,
+    "v1_ids_first": true
+   }
+  },
+  "rank_prediction_test_private.csv": {
+   "bytes": 6752165,
+   "sha256": "d59865e24fe2f5ad742db68108a7f59c2e41138f18c4dc2eea1aa364f3e73c73",
+   "rows": 400,
+   "header": [
+    "question_id",
+    "num_games",
+    "sgf_1",
+    "sgf_2",
+    "..."
+   ],
+   "columns": 42,
+   "crlf": 401,
+   "lf": 401,
+   "bom": false,
+   "kind": "questions",
+   "sgf_columns": 20,
+   "k_counts": {
+    "5": 100,
+    "10": 100,
+    "15": 100,
+    "20": 100
+   },
+   "colours": {
+    "W": 2475,
+    "B": 2525
+   },
+   "id_patterns": {
+    "priv_q_9999": 400
+   },
+   "duplicate_ids": 0,
+   "root_props": {
+    "SZ,HD": 5000
+   },
+   "source": "data/test_v2_download\\aicup2026_rank_prediction_tests_20261030.zip:rank_prediction_test_private.csv",
+   "v1_byte_identical": true,
+   "v1_compare": {
+    "v1_rows": 400,
+    "v1_ids_kept": 400,
+    "rows_identical": 400,
+    "rows_identical_after_root_props": 0,
+    "rows_changed": 0,
+    "v1_ids_missing": 0,
+    "new_ids": 0,
+    "v1_ids_first": true
+   }
+  },
+  "rank_prediction_test_public.csv": {
+   "bytes": 6775591,
+   "sha256": "4691803a8306ccd65d93a90bd6d7ba767d57abe96c0660b262f1a2b756b84fef",
+   "rows": 400,
+   "header": [
+    "question_id",
+    "num_games",
+    "sgf_1",
+    "sgf_2",
+    "..."
+   ],
+   "columns": 42,
+   "crlf": 401,
+   "lf": 401,
+   "bom": false,
+   "kind": "questions",
+   "sgf_columns": 20,
+   "k_counts": {
+    "5": 100,
+    "10": 100,
+    "15": 100,
+    "20": 100
+   },
+   "colours": {
+    "W": 2705,
+    "B": 2295
+   },
+   "id_patterns": {
+    "pub_q_9999": 400
+   },
+   "duplicate_ids": 0,
+   "root_props": {
+    "SZ,HD": 5000
+   },
+   "source": "data/test_v2_download\\aicup2026_rank_prediction_tests_20261030.zip:rank_prediction_test_public.csv",
+   "v1_byte_identical": true,
+   "v1_compare": {
+    "v1_rows": 400,
+    "v1_ids_kept": 400,
+    "rows_identical": 400,
+    "rows_identical_after_root_props": 0,
+    "rows_changed": 0,
+    "v1_ids_missing": 0,
+    "new_ids": 0,
+    "v1_ids_first": true
+   }
+  },
+  "sample_submission_player_v2.csv": {
+   "bytes": 116843,
+   "sha256": "70bf0e3cd31ce8aa0ad438c576f77b3f8c0ca3a49a8089bd026108ad3ba26c9c",
+   "rows": 1600,
+   "header": [
+    "question_id",
+    "top_1",
+    "top_2",
+    "top_3",
+    "..."
+   ],
+   "columns": 6,
+   "crlf": 1601,
+   "lf": 1601,
+   "bom": false,
+   "kind": "unknown",
+   "root_props": {},
+   "source": "data/test_v2_download\\aicup2026_player_identification_v2_tests_20261108_fix_readme.zip:sample_submission_player_v2.csv"
+  },
+  "sample_submission_rank.csv": {
+   "bytes": 12423,
+   "sha256": "aa5016dbc04d7c64860e1b8727d2c2fa0b19a28a481fd3c674f82ed36f68ed16",
+   "rows": 800,
+   "header": [
+    "question_id",
+    "pred_rank"
+   ],
+   "columns": 2,
+   "crlf": 801,
+   "lf": 801,
+   "bom": false,
+   "kind": "unknown",
+   "root_props": {},
+   "source": "data/test_v2_download\\aicup2026_rank_prediction_tests_20261030.zip:sample_submission_rank.csv"
+  }
+ },
+ "structure_matches_v1": false,
+ "needed_changes": [
+  {
+   "what": "file names",
+   "v1": [
+    "player_identification_candidates_private.csv",
+    "player_identification_candidates_public.csv",
+    "player_identification_test_private.csv",
+    "player_identification_test_public.csv",
+    "rank_prediction_test_private.csv",
+    "rank_prediction_test_public.csv"
+   ],
+   "v2": [
+    "player_identification_candidates2_private.csv",
+    "player_identification_candidates2_public.csv",
+    "player_identification_candidates_private.csv",
+    "player_identification_candidates_public.csv",
+    "player_identification_test2_private.csv",
+    "player_identification_test2_public.csv",
+    "player_identification_test_private.csv",
+    "player_identification_test_public.csv",
+    "rank_prediction_test_private.csv",
+    "rank_prediction_test_public.csv",
+    "sample_submission_player_v2.csv",
+    "sample_submission_rank.csv"
+   ],
+   "missing": [],
+   "new": [
+    "player_identification_candidates2_private.csv",
+    "player_identification_candidates2_public.csv",
+    "player_identification_test2_private.csv",
+    "player_identification_test2_public.csv",
+    "sample_submission_player_v2.csv",
+    "sample_submission_rank.csv"
+   ]
+  }
+ ],
+ "missing_files": [],
+ "hard_coded_at": [
+  "tools/t02_checks.py N_QUESTIONS / N_CANDIDATES / GAMES_PER_CANDIDATE / prefixes (T1.2, T1.3 k 5..20)",
+  "tools/t02_test_bundle.py N_QUESTIONS / GAMES_PER_PLAYER / RANK_FILES / PLAYER_*_FILES",
+  "tools/check_submission.py OFFICIAL_QUESTIONS / OFFICIAL_PLAYERS / OFFICIAL_GAMES_PER_PLAYER / 800 rows",
+  "tools/official_log.py FILE_NAMES / QUESTION_FILES / CANDIDATE_FILES",
+  "colab/build_test02_rank_nb.py N_TEST_QUESTIONS, colab/build_test02_player_nb.py preflight 400/40,000",
+  "NOT a structure constant to change: tools/t06_player.py N_OFFICIAL (06-ON 'pools_400_by_400' is the registered literal of PREREG_06 5.3; PREREG_27 7 keeps it)"
+ ],
+ "rank_bytes_identical_to_v1": true,
+ "player_bytes_identical_to_v1": true,
+ "player_pools_square": [
+  true,
+  true
+ ],
+ "rank_files_given": true,
+ "competition_2_branch_by_bytes": "K or R0 (page decides: no notice and leaderboard kept -> K)"
+}

@@ -1,0 +1,25 @@
+{
+ "files": {
+  "data/prereg44/cache/hold/cache.json": "50b75e13511c4333bdf16ebf29ada0a66b21334848f26b562f216838e1498c82",
+  "data/prereg44/cache/hold/codes.npy": "bb0f24fafa849a3bca9990fee6c4415f6150fea9a586f67759eb77570e486f9c",
+  "data/prereg44/cache/hold/meta.npz": "9bc8637a255e9779894a587cec0c0b03558acd913f34fc471eb1e2180107830a",
+  "data/prereg44/cache/hold/off.npy": "72c788c1c978fb79abe446d1f82a5fc4236b715115eb8c7e1db136ed6c7d4984",
+  "data/prereg44/cache/inner/cache.json": "0cba826c04657b361a5cd3d2a8055e844887d412ce40d7f4f305b334db780171",
+  "data/prereg44/cache/inner/codes.npy": "288148d0c936b281aabbc8c839cf214eae5fcf9f03105fc6dea998cfb49d69cd",
+  "data/prereg44/cache/inner/meta.npz": "b1ffa4e68e5f23652de1a7a7b7547cc53ee03fb665b276a31337adc8b2b9e1d7",
+  "data/prereg44/cache/inner/off.npy": "d263aaac0ede2a6459506f3425022af1e67b487cbb2598cb6ed000883642519c",
+  "data/prereg44/cache/train/cache.json": "dd4aa40ee0001fc037e298e470dfb9c15a3df13664b3a5743448dac40053026f",
+  "data/prereg44/cache/train/codes.npy": "79c649e6a3b4e9b5f80bef3ecdccc769830ce9e794891c13b2b1dd49af1f77ba",
+  "data/prereg44/cache/train/meta.npz": "342e920c1130d888de9ffaac4e78249e9a8aa9b651b51aba8a624d226d665990",
+  "data/prereg44/cache/train/off.npy": "ac361d42e4a180de7b98d1fa550a9309923e461df751cdc34e41ccab904dfbfa",
+  "results/prereg36/explore/p36_lib.py": "8df27b37a6b3de786b54af25908d3d91ffe4c030dceb7350d9dd130a14ce241f",
+  "results/prereg44/explore/p44_infer.py": "f01ab81811e7da2fb89ba29ef75eea7fb9f2457752571a0e399207dda5620dd3",
+  "results/prereg44/explore/p44_lib.py": "92a2893e9b84a3bd3882e67773286b777dba4e6194c83945c0b07a392d9e213a",
+  "results/prereg44/explore/p44_train.py": "29aeb34928e5e1377d08d379359da2258a1dcbecadaa12800f43f3730dd21480",
+  "tools/c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495"
+ },
+ "format": "c10-prereg44 colab kit v1",
+ "zip": "C10_p44_kit.zip",
+ "zip_bytes": 265884140,
+ "zip_sha256": "ff20262c3a4a2ce3e50293958b49f8fe3dcb5567d01ea38f3098efd5230885da"
+}

@@ -1,0 +1,886 @@
+{
+ "what": "prereg05 exploration B1 (O4 smoothing / back-off). DESIGN-STAGE inner numbers, not validation results; nothing scored; data/local never opened (u1_lib guard)",
+ "variants_file": {
+  "file": "results/prereg05/explore/B1_o4_backoff/b1_variants.json",
+  "sha256": "6699f12d2d14f96e1a3024d0657fba910a5e43bf6e7146ee6061f26a3151f914"
+ },
+ "created": "2026-10-01T19:11:54+08:00",
+ "git_head": "fac7bca1af8991e4d0a4e963d4d98e7821d4be43",
+ "environment": {
+  "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1"
+ },
+ "workers": 4,
+ "limit": 0,
+ "inputs": {
+  "counts_fit.npz": "f6c6debe90639585763b9812c235743a6b7f89d8db1c6422ece7bccd550a08a5",
+  "count_report_counts_sha256": "f6c6debe90639585763b9812c235743a6b7f89d8db1c6422ece7bccd550a08a5",
+  "counts_equal": true,
+  "moves_inner.npz": "da108b3872bb99faac3df568e3ad6dfb3ef2390d3f1e06bd99209283ff007484",
+  "moves_inner_moves.npy": "8eaccf77bc91f8d776d6425f5290b6f73b0956e559b8df0b59f66130177d539f",
+  "moves_equal_manifest": true
+ },
+ "seam_a": {
+  "tables_sha256": "f380e0d720edd4429e4858ab87a3e1a5efbbd9de84982c002ab214f19f120de5",
+  "inner_report_tables_sha256": "f380e0d720edd4429e4858ab87a3e1a5efbbd9de84982c002ab214f19f120de5",
+  "passed": true
+ },
+ "tables": {
+  "V0": {
+   "r0": 0.004021144559569304,
+   "moves": 79985352.0,
+   "sha256": "1aa1e2cdec25538c7c9dbd470779aac2dea19a4c25ed2b2b81105bec4637450b",
+   "max_abs_log_ratio_vs_V0": 0.0
+  },
+  "V1": {
+   "lambda": 0.25,
+   "alpha": 20.0,
+   "pooled_sums_equal": true,
+   "pooled_rate_equal_registered": true,
+   "r0": 0.004021144559569304,
+   "sha256": "fd158f60f670b6929e794688d61f4404198d0de6a0a4aed2906bb20a27cb6e31",
+   "max_abs_log_ratio_vs_V0": 1.2520714868527323
+  },
+  "V2": {
+   "alpha": 20.0,
+   "coarse_cells": 26568,
+   "coarse_cells_seen": 8452,
+   "r0_coarse": 0.004021144559569304,
+   "r0_equal_fine": true,
+   "level_ratio_range_seen_cells": [
+    0.24971938384244483,
+    3.4088192007967915
+   ],
+   "sha256": "1b5ea8c6d1970ca9aca1f3e5d5c42992d2a4011a3056c6944e3903386697c7a1",
+   "max_abs_log_ratio_vs_V0": 1.3874174561853394
+  },
+  "V3": {
+   "alpha": 50.0,
+   "sha256": "926f7f8c51f0106619234b00941f546591b40f8fff15d2eda05083e48639bf99",
+   "max_abs_log_ratio_vs_V0": 0.4400197551191809
+  }
+ },
+ "replay_resumed_games": 0,
+ "replay_memory_retries": 0,
+ "seam_b": {
+  "rows_compared": 73556,
+  "max_abs_diff": 0.0,
+  "bit_identical": true,
+  "n_moves_equal": true,
+  "anomalies": 0,
+  "inner_o4_sha256": "100a889367e147696a056d6cd70fab583926062a9b4fbbedd49acc42a2da9ce7",
+  "passed": true
+ },
+ "per_game_diagnostics_record_only": {
+  "V0": {
+   "per_game_top1": 0.1990184349339279,
+   "mean_logp_true_level": -2.254137815453167,
+   "nats_per_opponent_move_vs_uniform": 0.0004395954990771505,
+   "mean_abs_diff_vs_V0_raw": 0.0
+  },
+  "V1": {
+   "per_game_top1": 0.20790961988145087,
+   "mean_logp_true_level": -2.194513736412042,
+   "nats_per_opponent_move_vs_uniform": 0.0009806058120092364,
+   "mean_abs_diff_vs_V0_raw": 0.22800226237699275
+  },
+  "V2": {
+   "per_game_top1": 0.19840665615313502,
+   "mean_logp_true_level": -2.281265174851902,
+   "nats_per_opponent_move_vs_uniform": 0.00019345029342611783,
+   "mean_abs_diff_vs_V0_raw": 0.25474601426162435
+  },
+  "V3": {
+   "per_game_top1": 0.19971178421882646,
+   "mean_logp_true_level": -2.230009610795156,
+   "nats_per_opponent_move_vs_uniform": 0.0006585273092190981,
+   "mean_abs_diff_vs_V0_raw": 0.17823472597872164
+  }
+ },
+ "replay": {
+  "games": 73556,
+  "opponent_moves": 8106516,
+  "seconds": 581.5,
+  "workers": 4,
+  "chunks": 368,
+  "games_without_opponent_moves": 0
+ },
+ "seconds_replay_stage": 584.9,
+ "output_npz": {
+  "file": "results/prereg05/explore/B1_o4_backoff/b1_o4v.npz",
+  "sha256": "48df7cacd9558035d71c811817df6b3c5bc0cc67f64d63115154dd0e133b11c4",
+  "arrays": "o4v [73556, 4 (V0..V3), 10] float64 (opponent-side per-game sums, inner_keys order)"
+ },
+ "status": "done",
+ "seam_c": {
+  "eval_P_max_abs_diff": 0.0,
+  "mono_P_max_abs_diff": 0.0,
+  "rank_balanced": 0.6101211982700248,
+  "recorded": 0.6101211982700248,
+  "single_colour_rank_balanced": 0.6106683012815998,
+  "single_colour_recorded": 0.6106683012815998,
+  "seconds": 8.6,
+  "passed": true
+ },
+ "fusion": {
+  "terms": [
+   "OP",
+   "O4v",
+   "SWA",
+   "SWB"
+  ],
+  "rule": "B",
+  "oof": "5 folds, fold f fitted on the other folds' players' fit questions (p04_rank_fuse.gen_oof_record)",
+  "eval_questions": 127200,
+  "single_colour_questions": 120544,
+  "fit_questions": 25400,
+  "inputs_sha256": {
+   "inner_keys.npz": "b686872d459161330af26132fc0ec2617d104be6cd72eae509250ffef0c03ab6",
+   "pseudo_inner.json": "3a51b3dd4edf8e5745f6a7ff52ca925d4a0eacd6a24950ee1b6e3b48fd0b7923",
+   "opening_inner.npz": "054689536524f7d8ea41a19d19b49ae47e7eedd128bd9cad98c429e5f80fdee5",
+   "players_split.csv": "69554875064ecbd83d790b3215c8ba8f9540f217ec4af3e4a8c43228ac2a3dfc",
+   "inner_p02e9_d4.npz": "d042fca41e04a365dd9f7f4ebc31d244d39b24e803a1191cb06ecaaf3d056de5",
+   "O4_inner": "100a889367e147696a056d6cd70fab583926062a9b4fbbedd49acc42a2da9ce7",
+   "inner_p03a_d4.npz": "3b26a39952bfe8dc2df9676ff9b15cab472861a66b628c3a4ee49c4010626cab",
+   "inner_p03a_s0_swap.npz": "743825209569aeb922b0246587ec5801f3c2e0a10083bfb6111a327dd5ff1071",
+   "inner_p03b_d4.npz": "a9c9b1509328d2c77c74ad09bcd63424c1be1979a85f372e755e3931a414ca54",
+   "inner_p03b_s0_swap.npz": "106887321cc9d54316e0d7d96e776c2060dc309c54720a8c7345f280056d2056"
+  }
+ },
+ "results": {
+  "V0": {
+   "mixed_127200": {
+    "rank_balanced": 0.6101211982700248,
+    "Q02_rank_balanced": 0.6101211982700248,
+    "delta": 0.0,
+    "pboot_ci95": [
+     0.0,
+     0.0
+    ],
+    "pboot_se": 0.0,
+    "qboot_ci95_record_only": [
+     0.0,
+     0.0
+    ],
+    "question_mean_delta": 0.0,
+    "per_level_delta": {
+     "D": 0.0,
+     "C": 0.0,
+     "B": 0.0,
+     "A": 0.0,
+     "1D": 0.0,
+     "2D": 0.0,
+     "3D": 0.0,
+     "4D": 0.0,
+     "5D": 0.0,
+     "6D": 0.0
+    },
+    "per_n_bin_delta": {
+     "5-7": 0.0,
+     "8-12": 0.0,
+     "13-20": 0.0
+    },
+    "bank20_players_by_n_delta": {
+     "5": 0.0,
+     "10": 0.0,
+     "15": 0.0,
+     "20": 0.0
+    },
+    "se_val_record": {
+     "se_val": 0.0,
+     "adoption_probability": null,
+     "delta": 0.0,
+     "N_l": {
+      "D": 178,
+      "C": 163,
+      "B": 207,
+      "A": 308,
+      "1D": 87,
+      "2D": 122,
+      "3D": 124,
+      "4D": 128,
+      "5D": 131,
+      "6D": 141
+     },
+     "per_level_var_over_N": {
+      "D": 0.0,
+      "C": 0.0,
+      "B": 0.0,
+      "A": 0.0,
+      "1D": 0.0,
+      "2D": 0.0,
+      "3D": 0.0,
+      "4D": 0.0,
+      "5D": 0.0,
+      "6D": 0.0
+     },
+     "formula": "sqrt(sum_l Var_l(d, ddof 1) / N_l) / 10; Phi(delta / SE_val - 1.96)",
+     "adoption_probability_at_fraction_of_delta": null
+    }
+   },
+   "single_colour_120544": {
+    "rank_balanced": 0.0,
+    "question_mean": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "se": 0.0,
+    "n_questions": 120544,
+    "by_colour": {
+     "B": {
+      "rank_balanced": 0.0,
+      "question_mean": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "se": 0.0,
+      "n_questions": 59744
+     },
+     "W": {
+      "rank_balanced": 0.0,
+      "question_mean": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "se": 0.0,
+      "n_questions": 60800
+     }
+    },
+    "by_k": {
+     "5": {
+      "rank_balanced": 0.0
+     },
+     "10": {
+      "rank_balanced": 0.0
+     },
+     "15": {
+      "rank_balanced": 0.0
+     },
+     "20": {
+      "rank_balanced": 0.0
+     }
+    },
+    "bootstrap": "paired, players within each level, 1000 draws, default_rng(0); the colour splits draw their own players"
+   },
+   "official_shape_single_colour": {
+    "definition": "single-colour questions; mean over k in 5/10/15/20 of the rank-balanced mean at that k",
+    "variant": 0.6171015655838135,
+    "Q02": 0.6171015655838135,
+    "delta": 0.0,
+    "pboot_ci95_record_only": [
+     0.0,
+     0.0
+    ]
+   },
+   "fold_w_O4v": [
+    1.0310816540021088,
+    1.1035386947432777,
+    1.5531151062856272,
+    1.472975215284863,
+    0.8909513374793332
+   ],
+   "fold_w_Q02_O4": [
+    1.0310816540021088,
+    1.1035386947432777,
+    1.5531151062856272,
+    1.472975215284863,
+    0.8909513374793332
+   ],
+   "fold_w_all": [
+    {
+     "OP": 0.3384994136901169,
+     "O4v": 1.0310816540021088,
+     "SWA": 1.4229414778618097,
+     "SWB": 0.7293613141778824
+    },
+    {
+     "OP": 0.3139364170430689,
+     "O4v": 1.1035386947432777,
+     "SWA": 1.2630058855341486,
+     "SWB": 0.7101773652299364
+    },
+    {
+     "OP": 0.4659092005537002,
+     "O4v": 1.5531151062856272,
+     "SWA": 1.4155843093218763,
+     "SWB": 1.564406907504374
+    },
+    {
+     "OP": 0.4060640854161829,
+     "O4v": 1.472975215284863,
+     "SWA": 1.4373745215857623,
+     "SWB": 1.540380331285523
+    },
+    {
+     "OP": 0.3149878356743481,
+     "O4v": 0.8909513374793332,
+     "SWA": 1.3344758954459162,
+     "SWB": 0.5222044288262366
+    }
+   ],
+   "single_colour_rank_balanced": 0.6106683012815998,
+   "identical_to_Q02_probabilities": true,
+   "fusion_seconds": 9.3
+  },
+  "V1": {
+   "mixed_127200": {
+    "rank_balanced": 0.6151370606299125,
+    "Q02_rank_balanced": 0.6101211982700248,
+    "delta": 0.005015862359887713,
+    "pboot_ci95": [
+     0.00026925415311024895,
+     0.009841203585925773
+    ],
+    "pboot_se": 0.0024982702820615993,
+    "qboot_ci95_record_only": [
+     0.004005042044935819,
+     0.006010234331861756
+    ],
+    "question_mean_delta": 0.005245016620880961,
+    "per_level_delta": {
+     "D": 0.004501193162814721,
+     "C": -0.00583295188015609,
+     "B": 0.0015728403437006433,
+     "A": 0.010537105204428632,
+     "1D": 0.0024778952681764888,
+     "2D": 0.005218369546801882,
+     "3D": 0.012631835837436989,
+     "4D": 0.0063221950707608165,
+     "5D": 0.011125661581654733,
+     "6D": 0.0016044794632584791
+    },
+    "per_n_bin_delta": {
+     "5-7": 0.0035175387489440046,
+     "8-12": 0.005403297629306025,
+     "13-20": 0.004808042565863979
+    },
+    "bank20_players_by_n_delta": {
+     "5": -0.002894284972230987,
+     "10": 0.004044417579809667,
+     "15": 0.005033252303815017,
+     "20": 0.017084198037043863
+    },
+    "se_val_record": {
+     "se_val": 0.004517926202684839,
+     "adoption_probability": 0.19772187967506022,
+     "delta": 0.005015862359887713,
+     "N_l": {
+      "D": 178,
+      "C": 163,
+      "B": 207,
+      "A": 308,
+      "1D": 87,
+      "2D": 122,
+      "3D": 124,
+      "4D": 128,
+      "5D": 131,
+      "6D": 141
+     },
+     "per_level_var_over_N": {
+      "D": 7.87458066289798e-05,
+      "C": 0.00013910819074461884,
+      "B": 9.132329280754879e-05,
+      "A": 0.00010194116236999778,
+      "1D": 0.0004656792290096769,
+      "2D": 0.0003118663816154157,
+      "3D": 0.00031159760794683165,
+      "4D": 0.0002787791959423641,
+      "5D": 0.00019288665137231665,
+      "6D": 6.92381988528746e-05
+     },
+     "formula": "sqrt(sum_l Var_l(d, ddof 1) / N_l) / 10; Phi(delta / SE_val - 1.96)",
+     "adoption_probability_at_fraction_of_delta": {
+      "1.0": 0.19772187967506022,
+      "0.75": 0.12979939405923818,
+      "0.5": 0.08002650706613368
+     }
+    }
+   },
+   "single_colour_120544": {
+    "rank_balanced": 0.003297425277958399,
+    "question_mean": 0.0032557965434104608,
+    "ci95": [
+     0.0009615627957765022,
+     0.005810086964529659
+    ],
+    "se": 0.001237604600323073,
+    "n_questions": 120544,
+    "by_colour": {
+     "B": {
+      "rank_balanced": 0.0036920096516447343,
+      "question_mean": 0.0038315506774930785,
+      "ci95": [
+       0.00027639260982833814,
+       0.0075752544612608325
+      ],
+      "se": 0.001863794559254336,
+      "n_questions": 59744
+     },
+     "W": {
+      "rank_balanced": 0.002928726577087759,
+      "question_mean": 0.0026900423495513914,
+      "ci95": [
+       6.215375112918478e-05,
+       0.0058046129307079445
+      ],
+      "se": 0.0014414022484838117,
+      "n_questions": 60800
+     }
+    },
+    "by_k": {
+     "5": {
+      "rank_balanced": 0.0006646064784553429
+     },
+     "10": {
+      "rank_balanced": 0.0026510808391003726
+     },
+     "15": {
+      "rank_balanced": 0.004012929093854978
+     },
+     "20": {
+      "rank_balanced": 0.007451471582842206
+     }
+    },
+    "bootstrap": "paired, players within each level, 1000 draws, default_rng(0); the colour splits draw their own players"
+   },
+   "official_shape_single_colour": {
+    "definition": "single-colour questions; mean over k in 5/10/15/20 of the rank-balanced mean at that k",
+    "variant": 0.6207965875823767,
+    "Q02": 0.6171015655838135,
+    "delta": 0.003695021998563197,
+    "pboot_ci95_record_only": [
+     0.0012790872153941812,
+     0.006264569297115585
+    ]
+   },
+   "fold_w_O4v": [
+    1.7268733881046416,
+    1.7094404275859736,
+    3.067527759677372,
+    2.606024923900996,
+    1.3845805854321291
+   ],
+   "fold_w_Q02_O4": [
+    1.0310816540021088,
+    1.1035386947432777,
+    1.5531151062856272,
+    1.472975215284863,
+    0.8909513374793332
+   ],
+   "fold_w_all": [
+    {
+     "OP": 0.3670411242085325,
+     "O4v": 1.7268733881046416,
+     "SWA": 1.4126963404393975,
+     "SWB": 0.8663071717900681
+    },
+    {
+     "OP": 0.334432381155454,
+     "O4v": 1.7094404275859736,
+     "SWA": 1.2770209032851472,
+     "SWB": 0.7899942844606612
+    },
+    {
+     "OP": 0.5662788554378131,
+     "O4v": 3.067527759677372,
+     "SWA": 1.557230093887087,
+     "SWB": 2.054371436958849
+    },
+    {
+     "OP": 0.4642664750974647,
+     "O4v": 2.606024923900996,
+     "SWA": 1.5319227812674514,
+     "SWB": 1.8289673291137125
+    },
+    {
+     "OP": 0.320043233529093,
+     "O4v": 1.3845805854321291,
+     "SWA": 1.2762352336105955,
+     "SWB": 0.5287436740092107
+    }
+   ],
+   "single_colour_rank_balanced": 0.6139657265595582,
+   "identical_to_Q02_probabilities": false,
+   "fusion_seconds": 8.2
+  },
+  "V2": {
+   "mixed_127200": {
+    "rank_balanced": 0.6105460998284677,
+    "Q02_rank_balanced": 0.6101211982700248,
+    "delta": 0.0004249015584429916,
+    "pboot_ci95": [
+     -0.002264658079582507,
+     0.0031461020833136147
+    ],
+    "pboot_se": 0.0013556744723606806,
+    "qboot_ci95_record_only": [
+     -0.00027052672440488665,
+     0.0010997773569570107
+    ],
+    "question_mean_delta": 0.0013873489435424324,
+    "per_level_delta": {
+     "D": 0.00535501144161743,
+     "C": -0.003917055549830684,
+     "B": 0.0012347517009637654,
+     "A": 0.00831307550698479,
+     "1D": 1.372760378998139e-05,
+     "2D": 0.0004800905131751021,
+     "3D": -0.002474330522244772,
+     "4D": 0.0010905564253624878,
+     "5D": -0.0013935983129704788,
+     "6D": -0.004453213222418428
+    },
+    "per_n_bin_delta": {
+     "5-7": 0.001793023724167675,
+     "8-12": -0.002288673013521203,
+     "13-20": 0.001743340004439986
+    },
+    "bank20_players_by_n_delta": {
+     "5": -0.0007763825792831414,
+     "10": -0.0031470925096752644,
+     "15": 0.0006821789883193485,
+     "20": 0.007391982651489992
+    },
+    "se_val_record": {
+     "se_val": 0.0031200788445720712,
+     "adoption_probability": 0.03408986809904502,
+     "delta": 0.0004249015584429916,
+     "N_l": {
+      "D": 178,
+      "C": 163,
+      "B": 207,
+      "A": 308,
+      "1D": 87,
+      "2D": 122,
+      "3D": 124,
+      "4D": 128,
+      "5D": 131,
+      "6D": 141
+     },
+     "per_level_var_over_N": {
+      "D": 4.609211637229506e-05,
+      "C": 9.721448265662691e-05,
+      "B": 4.7386758648847794e-05,
+      "A": 4.650886076733502e-05,
+      "1D": 0.00015624313324438878,
+      "2D": 0.0001352127267067455,
+      "3D": 0.00014576201094544457,
+      "4D": 0.00012448653026663622,
+      "5D": 0.00012270773844340454,
+      "6D": 5.187484158289481e-05
+     },
+     "formula": "sqrt(sum_l Var_l(d, ddof 1) / N_l) / 10; Phi(delta / SE_val - 1.96)",
+     "adoption_probability_at_fraction_of_delta": {
+      "1.0": 0.03408986809904502,
+      "0.75": 0.03159425131088289,
+      "0.5": 0.029251585055214524
+     }
+    }
+   },
+   "single_colour_120544": {
+    "rank_balanced": 0.0007657717849293144,
+    "question_mean": 0.0007863744637058856,
+    "ci95": [
+     -0.0005409622686386395,
+     0.0020798276181938132
+    ],
+    "se": 0.0006941676048802055,
+    "n_questions": 120544,
+    "by_colour": {
+     "B": {
+      "rank_balanced": 0.0022439212896160354,
+      "question_mean": 0.00204368852004555,
+      "ci95": [
+       0.0002853854948622615,
+       0.004066095575773973
+      ],
+      "se": 0.0009601282174386619,
+      "n_questions": 59744
+     },
+     "W": {
+      "rank_balanced": -0.0006865177470519734,
+      "question_mean": -0.0004491020327076489,
+      "ci95": [
+       -0.002453942615804719,
+       0.0008776632467264394
+      ],
+      "se": 0.0008538963025914914,
+      "n_questions": 60800
+     }
+    },
+    "by_k": {
+     "5": {
+      "rank_balanced": 0.001122017261676378
+     },
+     "10": {
+      "rank_balanced": 9.071635469559691e-05
+     },
+     "15": {
+      "rank_balanced": 0.0008291585300481685
+     },
+     "20": {
+      "rank_balanced": 0.0009848320721721482
+     }
+    },
+    "bootstrap": "paired, players within each level, 1000 draws, default_rng(0); the colour splits draw their own players"
+   },
+   "official_shape_single_colour": {
+    "definition": "single-colour questions; mean over k in 5/10/15/20 of the rank-balanced mean at that k",
+    "variant": 0.6178582466384615,
+    "Q02": 0.6171015655838135,
+    "delta": 0.0007566810546479896,
+    "pboot_ci95_record_only": [
+     -0.0005161332789403838,
+     0.0020426690315898965
+    ]
+   },
+   "fold_w_O4v": [
+    0.9310987480568673,
+    0.9779759555214919,
+    1.253976497020989,
+    1.1514079563441897,
+    0.8178820065724827
+   ],
+   "fold_w_Q02_O4": [
+    1.0310816540021088,
+    1.1035386947432777,
+    1.5531151062856272,
+    1.472975215284863,
+    0.8909513374793332
+   ],
+   "fold_w_all": [
+    {
+     "OP": 0.33119052525606835,
+     "O4v": 0.9310987480568673,
+     "SWA": 1.423020715568302,
+     "SWB": 0.6961996715002687
+    },
+    {
+     "OP": 0.2995680671943022,
+     "O4v": 0.9779759555214919,
+     "SWA": 1.2057559269174003,
+     "SWB": 0.6580499712849528
+    },
+    {
+     "OP": 0.42461480781989613,
+     "O4v": 1.253976497020989,
+     "SWA": 1.3023682788115654,
+     "SWB": 1.335847392402702
+    },
+    {
+     "OP": 0.3428123257038399,
+     "O4v": 1.1514079563441897,
+     "SWA": 1.2248067814952415,
+     "SWB": 1.1536076562541453
+    },
+    {
+     "OP": 0.3102971896396209,
+     "O4v": 0.8178820065724827,
+     "SWA": 1.3368781076810359,
+     "SWB": 0.4983624003319455
+    }
+   ],
+   "single_colour_rank_balanced": 0.6114340730665291,
+   "identical_to_Q02_probabilities": false,
+   "fusion_seconds": 7.8
+  },
+  "V3": {
+   "mixed_127200": {
+    "rank_balanced": 0.6116466919030238,
+    "Q02_rank_balanced": 0.6101211982700248,
+    "delta": 0.001525493632999031,
+    "pboot_ci95": [
+     -0.0001387753084152232,
+     0.0031527083013229095
+    ],
+    "pboot_se": 0.0008501010559423884,
+    "qboot_ci95_record_only": [
+     0.0009708052802324508,
+     0.002081837776082805
+    ],
+    "question_mean_delta": 0.0014550930528605052,
+    "per_level_delta": {
+     "D": 0.001601834471836927,
+     "C": 0.00847505174213159,
+     "B": 0.00023943611618604255,
+     "A": -0.00029507031446096565,
+     "1D": -0.0015025834212898381,
+     "2D": -0.00030612244897954,
+     "3D": 0.0045383976531135906,
+     "4D": -0.0007099693693105591,
+     "5D": 0.0063300119756225515,
+     "6D": -0.003116050074859711
+    },
+    "per_n_bin_delta": {
+     "5-7": 0.0010592741948068918,
+     "8-12": 0.00102840827567785,
+     "13-20": 0.002100299441599174
+    },
+    "bank20_players_by_n_delta": {
+     "5": -0.0004676811399205727,
+     "10": 0.002008233039359042,
+     "15": -0.0007425875868505294,
+     "20": -4.683504985825149e-05
+    },
+    "se_val_record": {
+     "se_val": 0.0025916911741248445,
+     "adoption_probability": 0.08512660382802706,
+     "delta": 0.001525493632999031,
+     "N_l": {
+      "D": 178,
+      "C": 163,
+      "B": 207,
+      "A": 308,
+      "1D": 87,
+      "2D": 122,
+      "3D": 124,
+      "4D": 128,
+      "5D": 131,
+      "6D": 141
+     },
+     "per_level_var_over_N": {
+      "D": 2.7316628364923527e-05,
+      "C": 6.912197349524522e-05,
+      "B": 3.6201805904466406e-05,
+      "A": 2.6868360132138775e-05,
+      "1D": 0.0001355051120208746,
+      "2D": 8.671066775146693e-05,
+      "3D": 9.059191685836538e-05,
+      "4D": 8.7171303987064e-05,
+      "5D": 7.539220461519013e-05,
+      "6D": 3.680634107392668e-05
+     },
+     "formula": "sqrt(sum_l Var_l(d, ddof 1) / N_l) / 10; Phi(delta / SE_val - 1.96)",
+     "adoption_probability_at_fraction_of_delta": {
+      "1.0": 0.08512660382802706,
+      "0.75": 0.06443878470743725,
+      "0.5": 0.04788705633480428
+     }
+    }
+   },
+   "single_colour_120544": {
+    "rank_balanced": 0.0007684867518937821,
+    "question_mean": 0.0006401428692424105,
+    "ci95": [
+     -0.0002641449104545751,
+     0.0018803516679276875
+    ],
+    "se": 0.0005249297291299293,
+    "n_questions": 120544,
+    "by_colour": {
+     "B": {
+      "rank_balanced": 0.0018614084298520517,
+      "question_mean": 0.0017760514454896459,
+      "ci95": [
+       0.0004911641626034219,
+       0.0032691430544061423
+      ],
+      "se": 0.0007206511590588793,
+      "n_questions": 59744
+     },
+     "W": {
+      "rank_balanced": -0.0003108329155271372,
+      "question_mean": -0.00047603676857510546,
+      "ci95": [
+       -0.0016483130847584015,
+       0.00104604956906841
+      ],
+      "se": 0.0006880084704998767,
+      "n_questions": 60800
+     }
+    },
+    "by_k": {
+     "5": {
+      "rank_balanced": 0.0007319218829187069
+     },
+     "10": {
+      "rank_balanced": -9.564593460231752e-05
+     },
+     "15": {
+      "rank_balanced": 0.0014090633983964151
+     },
+     "20": {
+      "rank_balanced": 0.0011387469530558247
+     }
+    },
+    "bootstrap": "paired, players within each level, 1000 draws, default_rng(0); the colour splits draw their own players"
+   },
+   "official_shape_single_colour": {
+    "definition": "single-colour questions; mean over k in 5/10/15/20 of the rank-balanced mean at that k",
+    "variant": 0.6178975871587556,
+    "Q02": 0.6171015655838135,
+    "delta": 0.0007960215749421851,
+    "pboot_ci95_record_only": [
+     -0.0002558352877534725,
+     0.0018921634608094727
+    ]
+   },
+   "fold_w_O4v": [
+    1.2852506074144014,
+    1.3974407831130025,
+    2.1648193090149643,
+    2.0409368721363044,
+    1.152499278331313
+   ],
+   "fold_w_Q02_O4": [
+    1.0310816540021088,
+    1.1035386947432777,
+    1.5531151062856272,
+    1.472975215284863,
+    0.8909513374793332
+   ],
+   "fold_w_all": [
+    {
+     "OP": 0.3659993396752532,
+     "O4v": 1.2852506074144014,
+     "SWA": 1.5746208836104685,
+     "SWB": 0.7966309567373641
+    },
+    {
+     "OP": 0.34542680500139394,
+     "O4v": 1.3974407831130025,
+     "SWA": 1.4415883919376622,
+     "SWB": 0.7861133200922567
+    },
+    {
+     "OP": 0.5503379301511512,
+     "O4v": 2.1648193090149643,
+     "SWA": 1.752838407694336,
+     "SWB": 1.9051827740458351
+    },
+    {
+     "OP": 0.4862256385147775,
+     "O4v": 2.0409368721363044,
+     "SWA": 1.7952486505192926,
+     "SWB": 1.9064898043090996
+    },
+    {
+     "OP": 0.3440256818987056,
+     "O4v": 1.152499278331313,
+     "SWA": 1.4838415542356536,
+     "SWB": 0.6014420441224111
+    }
+   ],
+   "single_colour_rank_balanced": 0.6114367880334936,
+   "identical_to_Q02_probabilities": false,
+   "fusion_seconds": 8.1
+  }
+ },
+ "verdict_by_variant": {
+  "V1": "weak",
+  "V2": "stop",
+  "V3": "stop"
+ },
+ "verdict": "weak",
+ "success_signal": {
+  "pass": "some variant: delta >= +0.008 on the 127,200 mixed-colour questions, PlayerBootstrap 95 % lower bound > 0, and on the 120,544 single-colour questions delta > 0 overall and > 0 for black and for white",
+  "weak": "+0.005 <= delta < +0.008 and lower bound > 0 (only together with B2; no PREREG_05 on its own)",
+  "otherwise": "B1 stops (also when a seam fails)"
+ },
+ "seconds_fuse_stage": 96.1
+}

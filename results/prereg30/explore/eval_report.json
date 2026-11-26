@@ -1,0 +1,290 @@
+{
+ "format": "c10-prereg30 explore eval v1",
+ "smoke": false,
+ "what": "PLAN.md 4: does v2 add information on top of S25 (fit players held out by S25)? judged once",
+ "seam_s": {
+  "format": "c10-prereg30 seam S v1",
+  "games": 26779,
+  "chunks": 134,
+  "chunk_list_sha256": "cd4621b89620809003c7d1394ab243a998af76e4339f2d86cd6caadf23ea83e3",
+  "usable": 26779,
+  "same_counts": true,
+  "same_failed": true,
+  "same_n_moves": true,
+  "max_abs_diff_standardised": 0.02214918464993154,
+  "tolerance": 0.05,
+  "bitwise_equal_raw_X": false,
+  "v2_turns_not_contiguous": 0,
+  "v2_nan_fraction": {
+   "target_nlp_all": 0.0,
+   "target_nlp_150": 0.0,
+   "target_loss_150f": 0.0,
+   "target_big_150f": 0.0,
+   "target_wloss_150f": 0.0,
+   "opponent_nlp_all": 0.0,
+   "opponent_nlp_150": 0.0,
+   "opponent_loss_150f": 0.0,
+   "opponent_big_150f": 0.0,
+   "opponent_wloss_150f": 0.0
+  },
+  "nlp_max_over_positions": 0.0,
+  "passed": true
+ },
+ "pilot_games": 26779,
+ "usable": 26779,
+ "questions": 12000,
+ "question_stats": {
+  "colour_switched": 0,
+  "level_missing": 0
+ },
+ "settings": {
+  "per_cell": 300,
+  "q_seed": 30030,
+  "folds": 5,
+  "lambda": 0.001,
+  "placebo": 20,
+  "bootstrap": 1000,
+  "go_score": 0.005
+ },
+ "main": {
+  "score_m0": 0.7347332116624312,
+  "score_m1": 0.7329210408707574,
+  "nll_m0": 0.9681995056073974,
+  "nll_m1": 0.9762985175987391,
+  "d_score": -0.0018121707916738394,
+  "d_nll": 0.008099011991341665,
+  "d_score_ci95": [
+   -0.004828372916966921,
+   0.0014861958486008754
+  ],
+  "d_nll_ci95": [
+   0.00017545603835586492,
+   0.01703106409436962
+  ]
+ },
+ "gates": {
+  "GO_a": {
+   "threshold": 0.005,
+   "d_score": -0.0018121707916738394,
+   "passed": false
+  },
+  "GO_b": {
+   "d_nll_ci95": [
+    0.00017545603835586492,
+    0.01703106409436962
+   ],
+   "passed": false
+  },
+  "GO_c": {
+   "placebo_max": -0.0013082813039333452,
+   "passed": false
+  },
+  "all_folds_converged": true,
+  "GO": false
+ },
+ "record_only": {
+  "by_n": {
+   "5": {
+    "questions": 3000,
+    "d_score": -0.004792723352971429
+   },
+   "10": {
+    "questions": 3000,
+    "d_score": 0.000861815568647506
+   },
+   "15": {
+    "questions": 3000,
+    "d_score": -0.0034939361274761715
+   },
+   "20": {
+    "questions": 3000,
+    "d_score": 0.00017616074510473645
+   }
+  },
+  "by_level": {
+   "m0": [
+    0.8472935775234077,
+    0.8041850379397184,
+    0.750251740537481,
+    0.6705068536497443,
+    0.6712841410761017,
+    0.6205371730123637,
+    0.66154721958141,
+    0.6935033014194819,
+    0.7614780053413859,
+    0.8667450665432167
+   ],
+   "m1": [
+    0.8457996413959317,
+    0.8018577684789089,
+    0.7522249734051238,
+    0.6713876573752678,
+    0.676772013331054,
+    0.6131624331593638,
+    0.6552734843853149,
+    0.688283100488101,
+    0.7580108363462668,
+    0.8664385003422407
+   ]
+  },
+  "nlp_only": {
+   "score_m0": 0.7347332116624312,
+   "score_m1": 0.7330311413364478,
+   "nll_m0": 0.9681995056073974,
+   "nll_m1": 0.9719890368774001,
+   "d_score": -0.0017020703259834624,
+   "d_nll": 0.0037895312700026995
+  },
+  "loss_only": {
+   "score_m0": 0.7347332116624312,
+   "score_m1": 0.7337543742040906,
+   "nll_m0": 0.9681995056073974,
+   "nll_m1": 0.9727272898491413,
+   "d_score": -0.0009788374583405979,
+   "d_nll": 0.004527784241743826
+  },
+  "z_only": {
+   "score": 0.40467590993432434,
+   "nll": 1.9564829001301667
+  },
+  "spearman_game_v2_vs_level": {
+   "target_nlp_all": 0.4732094236594194,
+   "target_nlp_150": 0.44988382932851095,
+   "target_loss_150f": -0.21344517308587277,
+   "target_big_150f": -0.24498967385993559,
+   "target_wloss_150f": 0.014580983904405822,
+   "opponent_nlp_all": 0.45005923569129386,
+   "opponent_nlp_150": 0.43028478625542516,
+   "opponent_loss_150f": -0.20432857342692154,
+   "opponent_big_150f": -0.23860038335375156,
+   "opponent_wloss_150f": 0.0237467332883388
+  },
+  "folds_m0": [
+   {
+    "fold": 0,
+    "alpha": 1.0147228515991988,
+    "norm_u": 0.0,
+    "norm_v": 0.0,
+    "converged": true,
+    "iterations": 17,
+    "f": 0.9603050707037187
+   },
+   {
+    "fold": 1,
+    "alpha": 1.0255069495436522,
+    "norm_u": 0.0,
+    "norm_v": 0.0,
+    "converged": true,
+    "iterations": 16,
+    "f": 0.936300771083318
+   },
+   {
+    "fold": 2,
+    "alpha": 1.0022670324929397,
+    "norm_u": 0.0,
+    "norm_v": 0.0,
+    "converged": true,
+    "iterations": 16,
+    "f": 0.9568745190124418
+   },
+   {
+    "fold": 3,
+    "alpha": 0.981159392085168,
+    "norm_u": 0.0,
+    "norm_v": 0.0,
+    "converged": true,
+    "iterations": 19,
+    "f": 0.9807989483553785
+   },
+   {
+    "fold": 4,
+    "alpha": 1.0118665947090075,
+    "norm_u": 0.0,
+    "norm_v": 0.0,
+    "converged": true,
+    "iterations": 16,
+    "f": 0.9456890305109891
+   }
+  ],
+  "folds_m1": [
+   {
+    "fold": 0,
+    "alpha": 1.011212954976077,
+    "norm_u": 0.6522795561567436,
+    "norm_v": 0.6264912978205921,
+    "converged": true,
+    "iterations": 45,
+    "f": 0.9575685515123169
+   },
+   {
+    "fold": 1,
+    "alpha": 1.0305212691358314,
+    "norm_u": 0.8182410015166878,
+    "norm_v": 1.2164274991013777,
+    "converged": true,
+    "iterations": 36,
+    "f": 0.9277763851990468
+   },
+   {
+    "fold": 2,
+    "alpha": 0.9970042548975495,
+    "norm_u": 1.248712658712676,
+    "norm_v": 1.1157487634815837,
+    "converged": true,
+    "iterations": 49,
+    "f": 0.9462841376772179
+   },
+   {
+    "fold": 3,
+    "alpha": 0.9801574571429276,
+    "norm_u": 1.0822169846730811,
+    "norm_v": 1.1207169186393833,
+    "converged": true,
+    "iterations": 48,
+    "f": 0.9736857347558268
+   },
+   {
+    "fold": 4,
+    "alpha": 1.006121098107553,
+    "norm_u": 0.958810212143137,
+    "norm_v": 1.0485240318510203,
+    "converged": true,
+    "iterations": 52,
+    "f": 0.9376414965303771
+   }
+  ],
+  "placebo_d_score": [
+   -0.003475805522078601,
+   -0.0027210584828596396,
+   -0.0032219160343380793,
+   -0.003261209181395275,
+   -0.001860958017169012,
+   -0.0021809077843237823,
+   -0.001750857551478635,
+   -0.0035591388554120362,
+   -0.0022996447769738637,
+   -0.0033626731201262805,
+   -0.0018475744509905967,
+   -0.0022737351960953056,
+   -0.0022689881568761505,
+   -0.002528482235314322,
+   -0.0032957552892334263,
+   -0.0024749479706001054,
+   -0.0013082813039333452,
+   -0.002392472188745387,
+   -0.0027258055220786837,
+   -0.002471058482859667
+  ]
+ },
+ "code": {
+  "results/prereg30/explore/PLAN.md": "b1bd5635a78231ac7ce9e38045e53fd394e8f34f7781041ff4290740a03fb0e0",
+  "results/prereg30/explore/p30_lib.py": "7a3ca1a958ef05f7fd0f28259fb1e11ade548c24e1a3d97adad937b6bc38d6e9",
+  "results/prereg30/explore/p30_scorer.py": "72e07c964c79e027acb3587e3e1ec08bcbbfc9dbe0b69bd2828ca47ec848949b",
+  "results/prereg30/explore/p30_data.py": "ba9f6ee1149e919c12bb4b34b2b77cf8f0f660c520b31f4e4bce0abe2fb9fb59",
+  "results/prereg30/explore/p30_extract.py": "2283adeb4662c99799a2b526bf4b5add600cf0e245c110a139d88a16808d6404",
+  "results/prereg30/explore/p30_eval.py": "9726c14567cb60b60e5222c67bf8b10a5c0bb27ff718a1f4ba22ba0311d7a0d9",
+  "results/prereg30/explore/test_p30.py": "de319d0cda1d7aba098050b5d2535beb220fbf1336aff0c9b6835ad7b89c32f3",
+  "results/prereg30/explore/run_pilot.sh": "2c28c03ef599a3b8e9f16fa17d23b4de5238af184841530fe362573b0fd1545a"
+ },
+ "seconds": 76.4
+}

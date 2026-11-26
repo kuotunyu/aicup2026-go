@@ -1,0 +1,1319 @@
+{
+ "format": "c10-prereg41 explore eval v1",
+ "smoke": false,
+ "code": {
+  "head": "5aae3e48be8405cf84fe7c204c7df18a871ba5ac",
+  "dirty": "",
+  "sha256_lf": {
+   "results/prereg05/explore/u1/u1_lib.py": "225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7",
+   "results/prereg07/explore/pilot_humansl/hs_lib.py": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+   "results/prereg07/explore/pilot_humansl/pilot_fuse.py": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+   "results/prereg08/p1/p1_fuse.py": "ad356c8ca9f26e1e761677afa07b5aa369ca31e5318f61eb6a6cbda33b970953",
+   "results/prereg08/p1/p1_lib.py": "062600168326f9eecd4ec1073e54881c475f8f276e376164eab20d373bbff511",
+   "results/prereg08/rank/p1_map.npz": "3f0d6904c5ccb938206884827b128c2a4ef2d83993f8635577dc43ffd52971fb",
+   "results/prereg09/rank/check_report.json": "3dfe765d1b7aa1c7c9f33ac8c0d6f89e44a5abf0141ca1195fdaa0fc71fe00a0",
+   "results/prereg09/rank/frozen_config.json": "50d38d2787c94569d88ed87a482e872ed64be2d1d20e4f57ffbb07a216663ff5",
+   "results/prereg09/rank/p1e_map.npz": "b5a9e33023a48099cbbafa87e5c92a081b272a73402dbd7d0fba4c70323be5eb",
+   "results/prereg09/rank/tune_report.json": "30fe15a0bfec2160dfcb4a50e3a7f5ad7c7de13f3e8a35c341b9912d66abba83",
+   "results/prereg12/explore/finetune/ft_eval.py": "2e3302cad19ab4c6b3f4242278a7d9bd751cdfbd92b4672696a6af46860b8021",
+   "results/prereg19/explore/eval_report.json": "c2d7db3219b4ae14f3158bfa6c239ec50ea69bc0ad3fab6d709d5fc0e6aadeed",
+   "results/prereg19/explore/p19_lib.py": "bbdc4225687777b732df1275277c4f4986f77225b935808f02cc7aefd4256376",
+   "results/prereg19/explore/train_record.json": "89b0c11c25ca61e0381c7e22e0869de06e403222358a0a1a4655b736890d770b",
+   "results/prereg19/rank/s19_seed0.npz": "ce8e63fceefa83c44e949064037efea42092447c40fc27c757091e92bf384357",
+   "results/prereg19/rank/s19_seed1.npz": "51e670c61b591c8d61bc89a29eaf0bf102d0405fd64a9598bea347d60402bd28",
+   "results/prereg19/rank/s19_seed2.npz": "976e450f477827c5197221edb137a74916b643b13474994a605ccdfcd564794c",
+   "results/prereg23/explore/p23_eval.py": "e0c0b2eaf374038873a6a86ccae158b57ca84e6ef2f28c41eb2d9a126ea15b5f",
+   "results/prereg23/explore/p23_lib.py": "003d62d19ba42c1a2b04652beb8d47685f44d5da1875cd608b4c1b9dc1169eac",
+   "results/prereg25/explore/eval_report.json": "229193eef8b9f974836e24150394b5e80948b1199e6264c484010e5a4c340b9c",
+   "results/prereg25/explore/train_record.json": "c5197c54bbbc9c1981fbdbdf5912d556811bfa7ce9c9ae0a093f70480cb08d63",
+   "results/prereg41/explore/PLAN.md": "eb24eba35a53b44dfe6103a9ca4ade68ae89ff28bd89712f94ebc32ce53d1193",
+   "results/prereg41/explore/p41_eval.py": "f349d4e6af04afda9e686c051d5536e49fca67a8f094d99501ba65565829db34",
+   "results/prereg41/explore/p41_lib.py": "2979417a4944d7555dad8a7054ca4e4a98c88f14c38822c91f1aa55dee16a7ee",
+   "results/prereg41/explore/test_p41.py": "74fa1fb769093aa712a90c333a8fa97c2a80e68681d7fb381ea06d9b4f474d2c",
+   "tools/p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+   "tools/p03_rank_fuse.py": "77abd7479d26f0f647a258b4a6d5d2e517808b4c187184f14ff599d70b8aca2f",
+   "tools/p04_rank_fuse.py": "c3a647b09c46760239d5b2ee274d56f7231987354fc1c1f6c3ff40102f4b26a2",
+   "tools/p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142",
+   "tools/p08_p1.py": "a10c77c4bd97472b464f39080816090f0f64986195384b28e1d95dfc76e6677f",
+   "tools/p08_rank_fuse.py": "64f42bd956f7808947e0c85abe1f9fa60d9958cb8e769fc889c6283c188d481e",
+   "tools/p09_forward.py": "67124e0e534f575493aa8d72dbd2582335e4166718448e36bb5e105c61cb185d",
+   "tools/p09_map.py": "fff3ffe6ae6b8c32163803a6d307fa184c2857af5d6e1505e3c931a4e8831566",
+   "tools/p09_rank_fuse.py": "1486f7ce102450c1ed0b051234537286f6f9a0b38f7aaaf182a38458e4ddfb8b"
+  }
+ },
+ "created": "2026-11-11T17:46:29+00:00",
+ "seconds": 224.0,
+ "smoke_note": null,
+ "rerun_reason": null,
+ "earlier_run_heads": null,
+ "what": "PLAN.md: inner-only judgement of Q41 = Q25's seven terms with per-term (n/12)^gamma_t fusion (5-fold player OOF on the fit pseudo-questions); no validation scoring",
+ "status": "gates not passed: stop",
+ "seam": {
+  "Q02H": [
+   0.6242752597994481,
+   0.6242752597994481
+  ],
+  "Q08": [
+   0.6986195853659671,
+   0.6986195853659671
+  ],
+  "Q08_mono": [
+   0.6946737091777063,
+   0.6946737091777063
+  ],
+  "Q09": [
+   0.7114420614163589,
+   0.7114420614163589
+  ],
+  "Q09_mono": [
+   0.7145431684624712,
+   0.7145431684624712
+  ],
+  "Q19": [
+   0.7345843051712626,
+   0.7345843051712626
+  ],
+  "Q19_mono": [
+   0.7430172362615272,
+   0.7430172362615272
+  ],
+  "Q25": [
+   0.7456519871546352,
+   0.7456519871546352
+  ],
+  "Q25_mono": [
+   0.7482450052195216,
+   0.7482450052195216
+  ]
+ },
+ "seam_ref_bound": true,
+ "seam1_bitwise": true,
+ "seam_x": {
+  "all_free": {
+   "eval_max_abs": 8.881784197001252e-16,
+   "mono_max_abs": 8.881784197001252e-16
+  },
+  "none_free": {
+   "eval_max_abs": 8.881784197001252e-16,
+   "mono_max_abs": 8.881784197001252e-16
+  },
+  "ok": true
+ },
+ "seam_g": {
+  "questions": 3000,
+  "max_rel_diff": 9.065496246077694e-08,
+  "tol": 1e-05,
+  "ok": true
+ },
+ "seam_m": {
+  "models": {
+   "0": {
+    "sha256": "4a01d6a60355cd514e9cc4988c08424a7952fc33302b47a63542a8caf67163bb",
+    "best_step": 11000,
+    "ok": true
+   },
+   "1": {
+    "sha256": "ab53d69b2762a7c01bed354ac6c218cf167fda44bbd3d88eed06a6f4adf3cba4",
+    "best_step": 7500,
+    "ok": true
+   },
+   "2": {
+    "sha256": "20e190f56866c7a28b4eeef0c0d4d656867b79a908e066ba91a47570601c4fbb",
+    "best_step": 10500,
+    "ok": true
+   }
+  },
+  "ok": true,
+  "inner_X_sha_equal_check": true
+ },
+ "candidate": {
+  "name": "Q41",
+  "terms": [
+   "OP",
+   "O4",
+   "SWA",
+   "SWB",
+   "HS",
+   "P1TO",
+   "SET"
+  ],
+  "inner_rank_balanced": 0.7461073518304815,
+  "inner_question_mean": 0.7459934906408563,
+  "single_colour_rank_balanced": 0.7495239279294956,
+  "single_colour_by_colour": {
+   "B": 0.7413998298707466,
+   "W": 0.7575102694531395
+  },
+  "vs": {
+   "inner_diff": 0.0004553646758462815,
+   "inner_ci95": [
+    -0.00048219250418168327,
+    0.0013602382390656418
+   ],
+   "mono_diff": 0.0012789227099739842,
+   "mono_ci95": [
+    0.0003440307050323305,
+    0.0022481621845588827
+   ],
+   "mono_by_colour": {
+    "B": 0.0007647682422952107,
+    "W": 0.0018109128031008614
+   }
+  },
+  "folds": [
+   {
+    "fold": 0,
+    "loss": 0.8734559950043621,
+    "q25_loss_same_fold": 0.8758015825401068,
+    "winner": "q25_fold",
+    "starts": [
+     {
+      "start": "a=0",
+      "loss": 0.8734560097344086,
+      "nit": 79,
+      "success": true,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+     },
+     {
+      "start": "a=1",
+      "loss": 0.8734559958110105,
+      "nit": 90,
+      "success": true,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+     },
+     {
+      "start": "q25_fold",
+      "loss": 0.8734559950043621,
+      "nit": 57,
+      "success": true,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+     }
+    ],
+    "params": {
+     "a": -1.0724376918499632,
+     "gamma0": 0.6462458123349374,
+     "w": {
+      "OP": 0.6364605426816696,
+      "O4": 0.21676672304387865,
+      "SWA": 0.0,
+      "SWB": 0.0,
+      "HS": 0.0,
+      "P1TO": 0.4748799170782022,
+      "SET": 0.6535631106263237
+     },
+     "gamma": {
+      "OP": 0.479843879349996,
+      "O4": -0.4373394651678557,
+      "SWA": 0.4124052648816266,
+      "SWB": 0.4124052648816266,
+      "HS": 0.4124052648816266,
+      "P1TO": -0.8738926265842702,
+      "SET": 0.70935082313531
+     },
+     "free": {
+      "OP": true,
+      "O4": true,
+      "SWA": true,
+      "SWB": true,
+      "HS": true,
+      "P1TO": true,
+      "SET": true
+     },
+     "w_at_bound": {
+      "OP": false,
+      "O4": false,
+      "SWA": true,
+      "SWB": true,
+      "HS": true,
+      "P1TO": false,
+      "SET": false
+     },
+     "gamma_at_bound": {
+      "OP": false,
+      "O4": false,
+      "SWA": false,
+      "SWB": false,
+      "HS": false,
+      "P1TO": false,
+      "SET": false
+     }
+    }
+   },
+   {
+    "fold": 1,
+    "loss": 0.8840933024547769,
+    "q25_loss_same_fold": 0.8862698364488437,
+    "winner": "a=0",
+    "starts": [
+     {
+      "start": "a=0",
+      "loss": 0.8840933024547769,
+      "nit": 85,
+      "success": true,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+     },
+     {
+      "start": "a=1",
+      "loss": 0.8840933324237441,
+      "nit": 93,
+      "success": true,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+     },
+     {
+      "start": "q25_fold",
+      "loss": 0.8840933091431449,
+      "nit": 58,
+      "success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+     }
+    ],
+    "params": {
+     "a": -0.7020572223384478,
+     "gamma0": 0.6082609234749877,
+     "w": {
+      "OP": 0.4843757523029834,
+      "O4": 0.4742834657252405,
+      "SWA": 0.0,
+      "SWB": 0.0,
+      "HS": 0.0,
+      "P1TO": 0.2718061462603268,
+      "SET": 0.4253963919819441
+     },
+     "gamma": {
+      "OP": 0.6723837620757808,
+      "O4": 0.5484548914009093,
+      "SWA": 0.0011114875645853795,
+      "SWB": 0.0010205751883645901,
+      "HS": 0.0026170347355054225,
+      "P1TO": -1.0,
+      "SET": 0.6471680860915957
+     },
+     "free": {
+      "OP": true,
+      "O4": true,
+      "SWA": true,
+      "SWB": true,
+      "HS": true,
+      "P1TO": true,
+      "SET": true
+     },
+     "w_at_bound": {
+      "OP": false,
+      "O4": false,
+      "SWA": true,
+      "SWB": true,
+      "HS": true,
+      "P1TO": false,
+      "SET": false
+     },
+     "gamma_at_bound": {
+      "OP": false,
+      "O4": false,
+      "SWA": false,
+      "SWB": false,
+      "HS": false,
+      "P1TO": true,
+      "SET": false
+     }
+    }
+   },
+   {
+    "fold": 2,
+    "loss": 0.8564924810155079,
+    "q25_loss_same_fold": 0.8586594273238374,
+    "winner": "a=1",
+    "starts": [
+     {
+      "start": "a=0",
+      "loss": 0.856492494115999,
+      "nit": 91,
+      "success": true,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+     },
+     {
+      "start": "a=1",
+      "loss": 0.8564924810155079,
+      "nit": 120,
+      "success": true,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+     },
+     {
+      "start": "q25_fold",
+      "loss": 0.8564924983497907,
+      "nit": 90,
+      "success": true,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+     }
+    ],
+    "params": {
+     "a": -1.3262779297051959,
+     "gamma0": -0.009656980316648713,
+     "w": {
+      "OP": 0.8105018255759546,
+      "O4": 0.47172817612468054,
+      "SWA": 0.0,
+      "SWB": 0.0,
+      "HS": 0.3941612762519578,
+      "P1TO": 0.32988923239543166,
+      "SET": 0.920572451268896
+     },
+     "gamma": {
+      "OP": 0.46399524926614766,
+      "O4": -0.8120504350386958,
+      "SWA": 0.0014270916864442542,
+      "SWB": -0.0008179013915996516,
+      "HS": -1.0,
+      "P1TO": -1.0,
+      "SET": 0.574086740405786
+     },
+     "free": {
+      "OP": true,
+      "O4": true,
+      "SWA": true,
+      "SWB": true,
+      "HS": true,
+      "P1TO": true,
+      "SET": true
+     },
+     "w_at_bound": {
+      "OP": false,
+      "O4": false,
+      "SWA": true,
+      "SWB": true,
+      "HS": false,
+      "P1TO": false,
+      "SET": false
+     },
+     "gamma_at_bound": {
+      "OP": false,
+      "O4": false,
+      "SWA": false,
+      "SWB": false,
+      "HS": true,
+      "P1TO": true,
+      "SET": false
+     }
+    }
+   },
+   {
+    "fold": 3,
+    "loss": 0.8660549239449771,
+    "q25_loss_same_fold": 0.8685068099664641,
+    "winner": "a=0",
+    "starts": [
+     {
+      "start": "a=0",
+      "loss": 0.8660549239449771,
+      "nit": 86,
+      "success": true,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+     },
+     {
+      "start": "a=1",
+      "loss": 0.8660550972204445,
+      "nit": 100,
+      "success": true,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+     },
+     {
+      "start": "q25_fold",
+      "loss": 0.8660549580405696,
+      "nit": 60,
+      "success": true,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+     }
+    ],
+    "params": {
+     "a": -1.7038953417045544,
+     "gamma0": 0.5053488397474567,
+     "w": {
+      "OP": 1.1602951828931767,
+      "O4": 1.252567996447637,
+      "SWA": 0.7188447666833979,
+      "SWB": 0.0,
+      "HS": 0.0,
+      "P1TO": 0.6750566707064218,
+      "SET": 1.2873612992960357
+     },
+     "gamma": {
+      "OP": 0.523810127132621,
+      "O4": 0.26945627275153183,
+      "SWA": -0.4812143903937445,
+      "SWB": 0.0004955197479639187,
+      "HS": 0.0010650168351580569,
+      "P1TO": -1.0,
+      "SET": 0.7082207245791802
+     },
+     "free": {
+      "OP": true,
+      "O4": true,
+      "SWA": true,
+      "SWB": true,
+      "HS": true,
+      "P1TO": true,
+      "SET": true
+     },
+     "w_at_bound": {
+      "OP": false,
+      "O4": false,
+      "SWA": false,
+      "SWB": true,
+      "HS": true,
+      "P1TO": false,
+      "SET": false
+     },
+     "gamma_at_bound": {
+      "OP": false,
+      "O4": false,
+      "SWA": false,
+      "SWB": false,
+      "HS": false,
+      "P1TO": true,
+      "SET": false
+     }
+    }
+   },
+   {
+    "fold": 4,
+    "loss": 0.886572962627795,
+    "q25_loss_same_fold": 0.8889818319485556,
+    "winner": "q25_fold",
+    "starts": [
+     {
+      "start": "a=0",
+      "loss": 0.8865730113454686,
+      "nit": 113,
+      "success": true,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+     },
+     {
+      "start": "a=1",
+      "loss": 0.8865730690895828,
+      "nit": 136,
+      "success": true,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+     },
+     {
+      "start": "q25_fold",
+      "loss": 0.886572962627795,
+      "nit": 92,
+      "success": true,
+      "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+     }
+    ],
+    "params": {
+     "a": -0.9840794112847046,
+     "gamma0": 0.7731165014121532,
+     "w": {
+      "OP": 0.7200681803408974,
+      "O4": 0.7148822416299893,
+      "SWA": 0.2569875524876117,
+      "SWB": 0.0,
+      "HS": 0.0,
+      "P1TO": 0.32590985746994705,
+      "SET": 0.5771711140091172
+     },
+     "gamma": {
+      "OP": 0.5328948098478709,
+      "O4": 0.518797287995564,
+      "SWA": -0.9183761990400587,
+      "SWB": 0.40658259482256337,
+      "HS": 0.40658259482256337,
+      "P1TO": -1.0,
+      "SET": 0.6650513769363494
+     },
+     "free": {
+      "OP": true,
+      "O4": true,
+      "SWA": true,
+      "SWB": true,
+      "HS": true,
+      "P1TO": true,
+      "SET": true
+     },
+     "w_at_bound": {
+      "OP": false,
+      "O4": false,
+      "SWA": false,
+      "SWB": true,
+      "HS": true,
+      "P1TO": false,
+      "SET": false
+     },
+     "gamma_at_bound": {
+      "OP": false,
+      "O4": false,
+      "SWA": false,
+      "SWB": false,
+      "HS": false,
+      "P1TO": true,
+      "SET": false
+     }
+    }
+   }
+  ]
+ },
+ "baseline": {
+  "name": "Q25",
+  "terms": [
+   "OP",
+   "O4",
+   "SWA",
+   "SWB",
+   "HS",
+   "P1TO",
+   "SET"
+  ],
+  "inner_rank_balanced": 0.7456519871546352,
+  "single_colour_rank_balanced": 0.7482450052195216,
+  "fusion_weights_by_fold": [
+   {
+    "OP": 0.6011725694137467,
+    "O4": 0.22485638452664086,
+    "SWA": 0.0,
+    "SWB": 0.0,
+    "HS": 0.0,
+    "P1TO": 0.4893293853052368,
+    "SET": 0.6245538053072298
+   },
+   {
+    "OP": 0.4625684348680943,
+    "O4": 0.44858970768856404,
+    "SWA": 0.0,
+    "SWB": 0.0,
+    "HS": 0.0,
+    "P1TO": 0.2900122632543005,
+    "SET": 0.4157777156240525
+   },
+   {
+    "OP": 0.6408137458464389,
+    "O4": 0.4760251662599433,
+    "SWA": 0.0,
+    "SWB": 0.0,
+    "HS": 0.18226214182870637,
+    "P1TO": 0.24769989962177533,
+    "SET": 0.7404436683399818
+   },
+   {
+    "OP": 0.8182038961114977,
+    "O4": 0.9052629995049756,
+    "SWA": 0.37110446823877735,
+    "SWB": 0.0,
+    "HS": 0.0,
+    "P1TO": 0.48957057827265765,
+    "SET": 0.9252395313046059
+   },
+   {
+    "OP": 0.6185953050499572,
+    "O4": 0.616183828062654,
+    "SWA": 0.2156404814056743,
+    "SWB": 0.0,
+    "HS": 0.0,
+    "P1TO": 0.27235418995073535,
+    "SET": 0.5103533587991825
+   }
+  ],
+  "gamma_by_fold": [
+   0.4124052648816266,
+   0.3879684579754112,
+   0.362314253619234,
+   0.43750050060261897,
+   0.40658259482256337
+  ]
+ },
+ "gates": {
+  "G1": {
+   "threshold": 0.005,
+   "delta": 0.0004553646758462815,
+   "passed": false
+  },
+  "G2": {
+   "ci95": [
+    -0.00048219250418168327,
+    0.0013602382390656418
+   ],
+   "passed": false
+  },
+  "G4": {
+   "mono_diff": 0.0012789227099739842,
+   "mono_ci95": [
+    0.0003440307050323305,
+    0.0022481621845588827
+   ],
+   "by_colour": {
+    "B": 0.0007647682422952107,
+    "W": 0.0018109128031008614
+   },
+   "passed": true
+  },
+  "passed": false
+ },
+ "record_only": {
+  "by_game_count": {
+   "mono_by_k": {
+    "5": {
+     "n_questions": 37440,
+     "candidate": 0.6912739929763232,
+     "baseline": 0.6888745176905925,
+     "diff": 0.002399475285730701,
+     "ci95": [
+      -0.00033127634525030586,
+      0.005204183378837238
+     ]
+    },
+    "10": {
+     "n_questions": 32288,
+     "candidate": 0.7539705742779075,
+     "baseline": 0.7539521983420865,
+     "diff": 1.8375935820991174e-05,
+     "ci95": [
+      -0.0006914324163570157,
+      0.0007036917399125402
+     ]
+    },
+    "15": {
+     "n_questions": 27296,
+     "candidate": 0.7812598051394513,
+     "baseline": 0.7805552632483664,
+     "diff": 0.00070454189108482,
+     "ci95": [
+      -0.00012936117518861365,
+      0.001603500819379591
+     ]
+    },
+    "20": {
+     "n_questions": 23520,
+     "candidate": 0.7970533035833411,
+     "baseline": 0.7951948359285153,
+     "diff": 0.0018584676548258905,
+     "ci95": [
+      0.0001813822056514314,
+      0.003817661861323551
+     ]
+    }
+   },
+   "eval_by_n_exact": {
+    "5": {
+     "n_questions": 8970,
+     "candidate": 0.661372104372832,
+     "baseline": 0.658620669182109,
+     "diff": 0.0027514351907229617,
+     "ci95": [
+      -0.0013624667763534714,
+      0.007005653167399334
+     ]
+    },
+    "10": {
+     "n_questions": 7979,
+     "candidate": 0.7460381864191147,
+     "baseline": 0.7465810560409736,
+     "diff": -0.0005428696218588991,
+     "ci95": [
+      -0.0018455091318911794,
+      0.0007883066179264791
+     ]
+    },
+    "15": {
+     "n_questions": 7473,
+     "candidate": 0.7821701140549022,
+     "baseline": 0.780435904866061,
+     "diff": 0.0017342091888412625,
+     "ci95": [
+      0.0003438118269126017,
+      0.0032920933313039745
+     ]
+    },
+    "20": {
+     "n_questions": 6479,
+     "candidate": 0.7987071822206577,
+     "baseline": 0.7967641449754822,
+     "diff": 0.0019430372451755273,
+     "ci95": [
+      0.0,
+      0.005074209460583939
+     ]
+    }
+   },
+   "eval_by_n_bin": {
+    "5-7": {
+     "n_questions": 26849,
+     "candidate": 0.6832824830709848,
+     "baseline": 0.6821239193117787,
+     "diff": 0.0011585637592060882,
+     "ci95": [
+      -0.0013441424783482842,
+      0.0037552288679674525
+     ]
+    },
+    "8-12": {
+     "n_questions": 42850,
+     "candidate": 0.7370253044159646,
+     "baseline": 0.738445861256675,
+     "diff": -0.0014205568407104074,
+     "ci95": [
+      -0.0033653279921863678,
+      -5.853401778824776e-05
+     ]
+    },
+    "13-20": {
+     "n_questions": 57501,
+     "candidate": 0.7813605381096266,
+     "baseline": 0.7798731602403886,
+     "diff": 0.0014873778692380268,
+     "ci95": [
+      0.00017325131256463734,
+      0.002962538401424746
+     ]
+    }
+   }
+  },
+  "by_level": {
+   "eval": [
+    {
+     "level": "D",
+     "candidate": 0.8488806897316391,
+     "baseline": 0.8454011797378264,
+     "diff": 0.003479509993812746
+    },
+    {
+     "level": "C",
+     "candidate": 0.7903599307404617,
+     "baseline": 0.7902132651793671,
+     "diff": 0.000146665561094661
+    },
+    {
+     "level": "B",
+     "candidate": 0.7348495807601801,
+     "baseline": 0.7354906898672026,
+     "diff": -0.0006411091070224195
+    },
+    {
+     "level": "A",
+     "candidate": 0.6772157476797974,
+     "baseline": 0.6807023903615617,
+     "diff": -0.0034866426817642404
+    },
+    {
+     "level": "1D",
+     "candidate": 0.6691771991543968,
+     "baseline": 0.669200817212359,
+     "diff": -2.361805796224914e-05
+    },
+    {
+     "level": "2D",
+     "candidate": 0.6522466909700124,
+     "baseline": 0.6504358695924526,
+     "diff": 0.0018108213775598347
+    },
+    {
+     "level": "3D",
+     "candidate": 0.6822085151568311,
+     "baseline": 0.681042714757668,
+     "diff": 0.0011658003991631416
+    },
+    {
+     "level": "4D",
+     "candidate": 0.7509244641668453,
+     "baseline": 0.7503575063133371,
+     "diff": 0.0005669578535082431
+    },
+    {
+     "level": "5D",
+     "candidate": 0.7543821235469245,
+     "baseline": 0.754039470664016,
+     "diff": 0.0003426528829084674
+    },
+    {
+     "level": "6D",
+     "candidate": 0.9008285763977262,
+     "baseline": 0.8996359678605609,
+     "diff": 0.0011926085371652961
+    }
+   ],
+   "mono": [
+    {
+     "level": "D",
+     "candidate": 0.8647858673346582,
+     "baseline": 0.8620942476330826,
+     "diff": 0.0026916197015756094
+    },
+    {
+     "level": "C",
+     "candidate": 0.7700310499428449,
+     "baseline": 0.7699148917022562,
+     "diff": 0.00011615824058863744
+    },
+    {
+     "level": "B",
+     "candidate": 0.7822699048250848,
+     "baseline": 0.7796335170106112,
+     "diff": 0.0026363878144736175
+    },
+    {
+     "level": "A",
+     "candidate": 0.7127117867465818,
+     "baseline": 0.7100931832406572,
+     "diff": 0.002618603505924577
+    },
+    {
+     "level": "1D",
+     "candidate": 0.662409788778581,
+     "baseline": 0.664190870031616,
+     "diff": -0.0017810812530349995
+    },
+    {
+     "level": "2D",
+     "candidate": 0.6498007467022932,
+     "baseline": 0.6495292444325141,
+     "diff": 0.0002715022697790115
+    },
+    {
+     "level": "3D",
+     "candidate": 0.6730746408525801,
+     "baseline": 0.672996246533655,
+     "diff": 7.839431892509019e-05
+    },
+    {
+     "level": "4D",
+     "candidate": 0.7169200125611725,
+     "baseline": 0.713888712551448,
+     "diff": 0.0030313000097245135
+    },
+    {
+     "level": "5D",
+     "candidate": 0.7819068104453509,
+     "baseline": 0.7812499015728693,
+     "diff": 0.0006569088724815986
+    },
+    {
+     "level": "6D",
+     "candidate": 0.8813286711058083,
+     "baseline": 0.8788592374865056,
+     "diff": 0.00246943361930263
+    }
+   ]
+  },
+  "Q41S_only_SET_own_gamma": {
+   "inner_rank_balanced": 0.7450176767231595,
+   "inner_question_mean": 0.7448546600882207,
+   "single_colour_rank_balanced": 0.7482789720482732,
+   "single_colour_by_colour": {
+    "B": 0.7401377491551596,
+    "W": 0.7562654810462508
+   },
+   "vs": {
+    "inner_diff": -0.0006343104314756598,
+    "inner_ci95": [
+     -0.0025040006706724184,
+     0.0006946923908839108
+    ],
+    "mono_diff": 3.396682875156376e-05,
+    "mono_ci95": [
+     -0.0007747926108304908,
+     0.0008353325939783188
+    ],
+    "mono_by_colour": {
+     "B": -0.0004973124732917666,
+     "W": 0.0005661243962121754
+    }
+   },
+   "folds": [
+    {
+     "fold": 0,
+     "loss": 0.8748294089248322,
+     "q25_loss_same_fold": 0.8758015825401068,
+     "winner": "a=1",
+     "starts": [
+      {
+       "start": "a=0",
+       "loss": 0.8748294096443164,
+       "nit": 41,
+       "success": true,
+       "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      {
+       "start": "a=1",
+       "loss": 0.8748294089248322,
+       "nit": 46,
+       "success": true,
+       "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      {
+       "start": "q25_fold",
+       "loss": 0.8748294106022394,
+       "nit": 26,
+       "success": true,
+       "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      }
+     ],
+     "params": {
+      "a": -1.2516958398636306,
+      "gamma0": -0.11509521287426958,
+      "w": {
+       "OP": 0.6798585596974424,
+       "O4": 0.28501317117655334,
+       "SWA": 0.0,
+       "SWB": 0.0,
+       "HS": 0.0,
+       "P1TO": 0.7100061232658569,
+       "SET": 0.7746497662313916
+      },
+      "gamma": {
+       "OP": -0.11509521287426958,
+       "O4": -0.11509521287426958,
+       "SWA": -0.11509521287426958,
+       "SWB": -0.11509521287426958,
+       "HS": -0.11509521287426958,
+       "P1TO": -0.11509521287426958,
+       "SET": 0.5972821745586496
+      },
+      "free": {
+       "OP": false,
+       "O4": false,
+       "SWA": false,
+       "SWB": false,
+       "HS": false,
+       "P1TO": false,
+       "SET": true
+      },
+      "w_at_bound": {
+       "OP": false,
+       "O4": false,
+       "SWA": true,
+       "SWB": true,
+       "HS": true,
+       "P1TO": false,
+       "SET": false
+      },
+      "gamma_at_bound": {
+       "OP": false,
+       "O4": false,
+       "SWA": false,
+       "SWB": false,
+       "HS": false,
+       "P1TO": false,
+       "SET": false
+      }
+     }
+    },
+    {
+     "fold": 1,
+     "loss": 0.8859785988965332,
+     "q25_loss_same_fold": 0.8862698364488437,
+     "winner": "a=0",
+     "starts": [
+      {
+       "start": "a=0",
+       "loss": 0.8859785988965332,
+       "nit": 34,
+       "success": true,
+       "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+      },
+      {
+       "start": "a=1",
+       "loss": 0.885978602644737,
+       "nit": 46,
+       "success": true,
+       "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      {
+       "start": "q25_fold",
+       "loss": 0.8859785992583228,
+       "nit": 20,
+       "success": true,
+       "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      }
+     ],
+     "params": {
+      "a": -0.7335313422762312,
+      "gamma0": 0.11866948967371362,
+      "w": {
+       "OP": 0.4686068818642488,
+       "O4": 0.4478742567375822,
+       "SWA": 0.0,
+       "SWB": 0.0,
+       "HS": 0.0,
+       "P1TO": 0.3446937508811213,
+       "SET": 0.4393471300908638
+      },
+      "gamma": {
+       "OP": 0.11866948967371362,
+       "O4": 0.11866948967371362,
+       "SWA": 0.11866948967371362,
+       "SWB": 0.11866948967371362,
+       "HS": 0.11866948967371362,
+       "P1TO": 0.11866948967371362,
+       "SET": 0.4800574030687347
+      },
+      "free": {
+       "OP": false,
+       "O4": false,
+       "SWA": false,
+       "SWB": false,
+       "HS": false,
+       "P1TO": false,
+       "SET": true
+      },
+      "w_at_bound": {
+       "OP": false,
+       "O4": false,
+       "SWA": true,
+       "SWB": true,
+       "HS": true,
+       "P1TO": false,
+       "SET": false
+      },
+      "gamma_at_bound": {
+       "OP": false,
+       "O4": false,
+       "SWA": false,
+       "SWB": false,
+       "HS": false,
+       "P1TO": false,
+       "SET": false
+      }
+     }
+    },
+    {
+     "fold": 2,
+     "loss": 0.8580099566772252,
+     "q25_loss_same_fold": 0.8586594273238374,
+     "winner": "a=1",
+     "starts": [
+      {
+       "start": "a=0",
+       "loss": 0.8580100150932835,
+       "nit": 55,
+       "success": true,
+       "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      {
+       "start": "a=1",
+       "loss": 0.8580099566772252,
+       "nit": 54,
+       "success": true,
+       "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      {
+       "start": "q25_fold",
+       "loss": 0.8580100586473269,
+       "nit": 25,
+       "success": true,
+       "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      }
+     ],
+     "params": {
+      "a": -1.2877199369177794,
+      "gamma0": -0.17073213089635078,
+      "w": {
+       "OP": 0.6817177017612143,
+       "O4": 0.5650981233584443,
+       "SWA": 0.0,
+       "SWB": 0.013703886471860771,
+       "HS": 0.31262750332347,
+       "P1TO": 0.3840368550783489,
+       "SET": 0.88647620564286
+      },
+      "gamma": {
+       "OP": -0.17073213089635078,
+       "O4": -0.17073213089635078,
+       "SWA": -0.17073213089635078,
+       "SWB": -0.17073213089635078,
+       "HS": -0.17073213089635078,
+       "P1TO": -0.17073213089635078,
+       "SET": 0.4841122129489294
+      },
+      "free": {
+       "OP": false,
+       "O4": false,
+       "SWA": false,
+       "SWB": false,
+       "HS": false,
+       "P1TO": false,
+       "SET": true
+      },
+      "w_at_bound": {
+       "OP": false,
+       "O4": false,
+       "SWA": true,
+       "SWB": false,
+       "HS": false,
+       "P1TO": false,
+       "SET": false
+      },
+      "gamma_at_bound": {
+       "OP": false,
+       "O4": false,
+       "SWA": false,
+       "SWB": false,
+       "HS": false,
+       "P1TO": false,
+       "SET": false
+      }
+     }
+    },
+    {
+     "fold": 3,
+     "loss": 0.8675468092703904,
+     "q25_loss_same_fold": 0.8685068099664641,
+     "winner": "a=0",
+     "starts": [
+      {
+       "start": "a=0",
+       "loss": 0.8675468092703904,
+       "nit": 79,
+       "success": true,
+       "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      {
+       "start": "a=1",
+       "loss": 0.86754681089597,
+       "nit": 89,
+       "success": true,
+       "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      {
+       "start": "q25_fold",
+       "loss": 0.8675468198943496,
+       "nit": 56,
+       "success": true,
+       "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      }
+     ],
+     "params": {
+      "a": -2.0092837855507497,
+      "gamma0": -0.142973078089116,
+      "w": {
+       "OP": 1.3820628186757966,
+       "O4": 1.513728764592593,
+       "SWA": 1.3251950008939666,
+       "SWB": 0.0,
+       "HS": 0.0,
+       "P1TO": 1.1644511375192883,
+       "SET": 1.7364860432535933
+      },
+      "gamma": {
+       "OP": -0.142973078089116,
+       "O4": -0.142973078089116,
+       "SWA": -0.142973078089116,
+       "SWB": -0.142973078089116,
+       "HS": -0.142973078089116,
+       "P1TO": -0.142973078089116,
+       "SET": 0.6038565519964466
+      },
+      "free": {
+       "OP": false,
+       "O4": false,
+       "SWA": false,
+       "SWB": false,
+       "HS": false,
+       "P1TO": false,
+       "SET": true
+      },
+      "w_at_bound": {
+       "OP": false,
+       "O4": false,
+       "SWA": false,
+       "SWB": true,
+       "HS": true,
+       "P1TO": false,
+       "SET": false
+      },
+      "gamma_at_bound": {
+       "OP": false,
+       "O4": false,
+       "SWA": false,
+       "SWB": false,
+       "HS": false,
+       "P1TO": false,
+       "SET": false
+      }
+     }
+    },
+    {
+     "fold": 4,
+     "loss": 0.8886157564932609,
+     "q25_loss_same_fold": 0.8889818319485556,
+     "winner": "a=0",
+     "starts": [
+      {
+       "start": "a=0",
+       "loss": 0.8886157564932609,
+       "nit": 45,
+       "success": true,
+       "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      {
+       "start": "a=1",
+       "loss": 0.8886157686815978,
+       "nit": 60,
+       "success": true,
+       "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      },
+      {
+       "start": "q25_fold",
+       "loss": 0.8886157572131023,
+       "nit": 34,
+       "success": true,
+       "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+      }
+     ],
+     "params": {
+      "a": -0.967830157977434,
+      "gamma0": 0.11387313844042012,
+      "w": {
+       "OP": 0.672846663209021,
+       "O4": 0.6557796797061866,
+       "SWA": 0.29803859061937077,
+       "SWB": 0.0,
+       "HS": 0.0,
+       "P1TO": 0.3648413951652322,
+       "SET": 0.5732711709241504
+      },
+      "gamma": {
+       "OP": 0.11387313844042012,
+       "O4": 0.11387313844042012,
+       "SWA": 0.11387313844042012,
+       "SWB": 0.11387313844042012,
+       "HS": 0.11387313844042012,
+       "P1TO": 0.11387313844042012,
+       "SET": 0.5006809389361351
+      },
+      "free": {
+       "OP": false,
+       "O4": false,
+       "SWA": false,
+       "SWB": false,
+       "HS": false,
+       "P1TO": false,
+       "SET": true
+      },
+      "w_at_bound": {
+       "OP": false,
+       "O4": false,
+       "SWA": false,
+       "SWB": true,
+       "HS": true,
+       "P1TO": false,
+       "SET": false
+      },
+      "gamma_at_bound": {
+       "OP": false,
+       "O4": false,
+       "SWA": false,
+       "SWB": false,
+       "HS": false,
+       "P1TO": false,
+       "SET": false
+      }
+     }
+    }
+   ]
+  }
+ },
+ "q09_map_sha256": "ecc9c9b1747b7b7d40cf53869b6c67c8e6f776ba7498498737fe3eede8e2edba",
+ "peak_memory_record": {
+  "peak_working_set_gb": 3.8,
+  "peak_pagefile_gb": 4.86
+ }
+}

@@ -1,0 +1,93 @@
+{
+ "format": "c10-prereg66 apply v1",
+ "pool": "public",
+ "vectors": {
+  "file": "data/prereg49/emb/V2_step_320000_raw_tta1/pool_public.npz",
+  "file_sha256": "67bc36f21307a02104fff37ddb3b5d4716a252bf3f7b5e969bfd1ebed0ca811e",
+  "ckpt": "data/prereg49/S0/ckpt/step_320000.pt",
+  "ckpt_sha256": "c091d3af1797a19ce98dc0a670eea211ceca2de4b58ee4a3c62b73b854748e12",
+  "embed_cfg": {
+   "chunk": 16,
+   "ckpt_sha256": "c091d3af1797a19ce98dc0a670eea211ceca2de4b58ee4a3c62b73b854748e12",
+   "games": 7100,
+   "mode": null,
+   "moves": 1545708,
+   "part_items": 128,
+   "spec": {
+    "head": "cos",
+    "name": "se_gpool_trunk",
+    "pool": "mean",
+    "sampler": "game",
+    "trunk": "gpse"
+   },
+   "tta": 1,
+   "weights": "raw"
+  },
+  "same_games_as": "data/prereg43/emb_S0/V2_step_320000_raw_tta1/pool_public.npz"
+ },
+ "cfg78": {
+  "gnorm": true,
+  "pool_w": "mean",
+  "centre_colour": false,
+  "whiten": {
+   "lam": 0.78,
+   "lda": null
+  },
+  "sim": "proto",
+  "alpha": null,
+  "pair": null,
+  "krecip": null,
+  "aqe": null,
+  "qsmooth": null,
+  "wE": 8,
+  "gmul": null,
+  "rowz": false,
+  "norm": [
+   "csls",
+   10
+  ]
+ },
+ "recipe": {
+  "cnn_whiten_lam": 0.78,
+  "w_p1_orig": 5.5,
+  "w_p1_multi": 3.0,
+  "w_c13_sp128": 3.0,
+  "c13_pool_lam": 0.5,
+  "rk_w_s25": 1.0,
+  "rk_w_p1to": 0.6,
+  "rk_w_cnn": 0.5,
+  "rk_cnn_tau": 35.0,
+  "rk_sigma": 0.85,
+  "rk_eps": 1e-06,
+  "w_rk_in_csls": 1.8,
+  "w_rk_post_by_k": {
+   "1": 2.8,
+   "2": 2.2,
+   "3": 1.5,
+   "5": 0.8
+  },
+  "csls_k": 20
+ },
+ "v27_top5_equals_prereg49_apply": true,
+ "questions": 400,
+ "candidates": 600,
+ "games": 7100,
+ "k_counts": {
+  "1": 100,
+  "2": 100,
+  "3": 100,
+  "5": 100
+ },
+ "games_without_P1": 0,
+ "questions_without_P1": 0,
+ "head": {
+  "file": "results/prereg64/rank/c49_head.npz",
+  "sha256": "ea7408d96181e5f6012bb7aafd1f4c2c31a66be77bf72b8220d688a41d0f0a6a"
+ },
+ "eval_sha256": "c92c98ba49c34b3446bf12038bf4087471238e16e5bd721192df8e1448eaaf84",
+ "top5_sha256": "b67381a14cc308f90b813b1b94d422426b06422d9ec57b107661407674d7a2c7",
+ "rows_differ_from_v27": 369,
+ "top1_differs_from_v27": 57,
+ "peak_rss_mb": 1939.0,
+ "seconds": 102.3
+}

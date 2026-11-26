@@ -1,0 +1,102 @@
+{
+ "format": "c10-prereg67 frozen v1",
+ "source": {
+  "report": "data/advice/gemini_1121h/REPORT.md section 4 (lines 113-147)",
+  "recipe_code": "data/advice/gemini_1121h/03_beyond_ensemble_k12.py lines 205-313, experiment 5m_tilt2_085cc_wE14 line 349",
+  "sha256": {
+   "REPORT.md": "bdb5f66ec8f64790c20edc3e1ad57d927ac1da1a408c6de01a45d5ee97cef400",
+   "01_prep_pseudo20.py": "9ac512edcafee93a7572aa1236897193d73bc28d1a9387455541de7e82707b55",
+   "02_ensemble_experiments.py": "a20d3015cdd8dc6c3c19c1ad4fcd74b4aaf503e5ebe1c5b80ea9a498b27198a1",
+   "03_beyond_ensemble_k12.py": "2d01fe77ac1d83dcf591c7f660a3b5b143766c616c479813e57015486c641c06",
+   "01_prep_summary.json": "075f709357276498a2ab8ffb91e6ce0d502262832087804cd016e94b1b4765a3",
+   "02_ensemble_results.json": "e2cafa25ff94cfd8409aa31b99e03ae810c6b1c70272e8edc82b3f7ae6613f59",
+   "03_beyond_ensemble_results.json": "56414c6ee41264aff143b7d91dc17134e7b3ec4bcab4bda292f16e79235cf343"
+  }
+ },
+ "recipe": {
+  "cfg_ens": {
+   "value": {"gnorm": true, "pool_w": "mean", "centre_colour": true, "whiten": {"lam": 0.85, "lda": null}, "sim": "proto"},
+   "where": "REPORT.md:129; 03_beyond_ensemble_k12.py:207 (cfg_085_cc)",
+   "note": "applied as v2-6 cfg with centre_colour True and whiten lam 0.85 (BK.e_term reads only these keys)"
+  },
+  "ensemble": {
+   "value": "E_ens = sum_m (w_m / sum w) zscore_rows(E_m, ok_m); ok_ens = AND ok_m; no re-z",
+   "where": "REPORT.md:130; 03_beyond_ensemble_k12.py:266-267 (w normalised), 280 (tensordot), 218-222 (zscore_rows per member)"
+  },
+  "w_E": {"value": 14.0, "where": "REPORT.md:132; 03_beyond_ensemble_k12.py:349 (w_E=14.0), 299 (F = G + w_E E_agg + P1 + w_rk_in z_rk)"},
+  "weights": {
+   "value": {"c49": 1.0, "S": 1.0, "B": 1.0, "p61": 2.0, "S1": 2.0, "S2": 2.0, "X": 2.0},
+   "where": "REPORT.md:120-122; PLAN.md (X 2.0: 'clearly' undefined); 03_beyond_ensemble_k12.py:257 (tilt2 1:1:1:2:2 for c49,S,B,S1,S2)"
+  },
+  "member_order": ["c49", "S", "B", "p61", "S1", "S2", "X"],
+  "versions": {
+   "value": {"7": ["c49", "S", "B", "p61", "S1", "S2", "X"], "A": ["c49", "S", "B", "p61", "S1", "S2"],
+             "B": ["c49", "S", "B", "S1", "S2"]},
+   "where": "REPORT.md:120-122; PLAN.md 'Version by availability'; NOTES.md 6 (X without p61: drop p61 only)"
+  },
+  "member_check": {
+   "value": {"pseudo": "std10", "back_end": "v2-8 (A66, cfg78, w_E 8)", "min_mean": 0.6406, "zero_count_games": 0},
+   "where": "REPORT.md:124; PLAN.md; 01_prep_summary.json models.c49.v28.all20 = 0.6406158249544318"
+  },
+  "time_cutoff": {"value": "2026-11-22T02:00:00+08:00", "where": "PLAN.md 'Hard time rule'"},
+  "back_end": {
+   "value": "prereg66 A66 unchanged except the CNN term: w_p1_orig 5.5, w_p1_multi 3.0, w_c13_sp128 3.0 (z_sp128, no breg128), w_rk_in_csls 1.8, csls_k 20, w_post 2.8/2.2/1.5/0.8",
+   "where": "REPORT.md:133-139; results/prereg66/explore/frozen.json; 03_beyond_ensemble_k12.py:162 (P1_combo), 312-313"
+  },
+  "pseudo_pools_std10": {
+   "value": "candidates2 public seeds 52000-52004 then private 52100-52104 (p52_pseudo.POOLS / split), first 6000 rows of each pool file",
+   "where": "01_prep_pseudo20.py:195-311; 03_beyond_ensemble_k12.py:174-201"
+  }
+ },
+ "members": {
+  "c49": {"dir": "data/prereg49/emb/V2_step_320000_raw_tta1", "sha256": {
+   "store_E.npz": "27ce57a23c1b99a6968bf71689fea35e46f3f6cd4b8f7bb244be33a154e010f6",
+   "pool_public.npz": "67bc36f21307a02104fff37ddb3b5d4716a252bf3f7b5e969bfd1ebed0ca811e",
+   "pool_private.npz": "337b24da4c33cfa2f9162447d0e821f2bbc15fec6dd350ecd4bcf8ba47598871"}},
+  "S": {"dir": "data/prereg55/emb_S/V2_step_320000_raw_tta1", "sha256": {
+   "store_E.npz": "fb8635f30eed7539465eb01256baf6323370636e7f5bfc73f92b14522d09e082",
+   "pool_public.npz": "eb266be41c954cd74d94226e96a9c10e2f517d8ef079f675de6b17b6d6946287",
+   "pool_private.npz": "cebf39fdeeec34a48ae3afbe4df41883951fa4e0b3bcfa8eb39009b87d50f964"}},
+  "B": {"dir": "data/prereg51/emb_B/V2_step_320000_raw_tta1", "sha256": {
+   "store_E.npz": "4a30876238a8f9f3cdc4e98b51d01a83ae9fd2f65d6ee13313271317658261dc",
+   "pool_public.npz": "177c7912132608eb730ed7992368b8bbc24f03db62b6a35884658171bb26f56d",
+   "pool_private.npz": "38bd09722acc480d2f2e5b1685da739ab19b27333d0abc4356a99bfb629c5be4"}},
+  "S1": {"dir": "data/prereg62/S1/emb/p60_step_200000_raw_tta1", "sha256": {
+   "store_E.npz": "3c443ff7ef20bb72c5ac7cc8c7faf83c7ca87839a95c783ae30f90526dff1dbc",
+   "pool_public.npz": "c9afb2822b362398556844c1968b295bd498a1d2258623b2726e57b1b6235157",
+   "pool_private.npz": "103da854d7d13f844aafe0830131857cd0cc181521e7464b1de6067208262509"}},
+  "S2": {"dir": "data/prereg62/S2/emb/p60_step_200000_raw_tta1", "sha256": {
+   "store_E.npz": "c85a3e4bebdda36659bee7c2c83ac10e9697f5ad44abfb38af436f97c2797b7a",
+   "pool_public.npz": "867bf3fca157f56fd87e6eaecb6f1ffdbd5b8abf962f832f671f63bee7994c27",
+   "pool_private.npz": "95f2d0dbe4c6f6c01d3f67082a8cf366b04b0419c4439cfdf961bba21a4bb543"}},
+  "p61": {"dir": "data/prereg61/emb/p60_step_200000_raw_tta1", "ckpt_step": 200000, "sha256": "recorded by check-member in members.json"},
+  "X": {"dir": "data/prereg62/X/emb/p60_step_400000_raw_tta1", "ckpt_step": 400000, "sha256": "recorded by check-member in members.json"}
+ },
+ "seams": {
+  "pseudo_c49_v28": {
+   "value": 0.6397593752945936,
+   "per_pool_where": "01_prep_summary.json models.c49.v28.per_pool[0:10] (lines 31-41)",
+   "rule": "c49 alone, cfg78 (lam 0.78, centre_colour False), w_E 8: per pool bit for bit"
+  },
+  "E_A66": {
+   "value": 0.7183609308316172,
+   "where": "results/prereg66/explore/eval.json means.A66 / per_pool.A66",
+   "rule": "c49 alone, cfg78, w_E 8 through the ensemble function: per pool bit for bit"
+  },
+  "recipe_5m_tilt2_085cc_wE14_std10": {
+   "value": 0.658555,
+   "where": "03_beyond_ensemble_results.json experiments.5m_tilt2_085cc_wE14.vs_c49.std10.mean (line 140)",
+   "rule": "float32 caches emulated, |diff| <= 1e-6 (gating port check, pseudo pools only)"
+  }
+ },
+ "base": {
+  "v2-8": "results/prereg66/explore/eval.json A66 (E 0.7183609308316172)",
+  "z_E": {"file": "data/prereg66/z_E.npz", "sha256": "d0921a285c2a6dfd59b46b3ed1702238c36babc5dbfb51b9ccc53daff8991e93"},
+  "submission": {"file": "results/prereg66/apply/submission_player.csv", "sha256": "d89d3432960a9756d2f03813e33f09048c8c7afe84638c3fa964c6d20c28a3d6"}
+ },
+ "judgement": {
+  "pools": "E 20",
+  "rule": "mean(ens - v2-8) >= 0.01, bootstrap 10,000 seed 43 low > 0, >= 18 of 20 higher",
+  "expected_e_use": 11
+ }
+}

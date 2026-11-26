@@ -1,0 +1,187 @@
+{
+ "format": "c10-prereg40 explore stage0b v1",
+ "smoke": false,
+ "created": "2026-11-11T17:13:26+00:00",
+ "seconds": 7.6,
+ "code": {
+  "head": "cfa9f19feb0cf8b467b7bda1e0cb89cdb8a4d59a",
+  "dirty": "",
+  "sha256_lf": {
+   "results/prereg05/explore/u1/u1_lib.py": "225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7",
+   "results/prereg07/explore/pilot_humansl/hs_lib.py": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+   "results/prereg07/explore/pilot_humansl/pilot_fuse.py": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+   "results/prereg08/p1/p1_fuse.py": "ad356c8ca9f26e1e761677afa07b5aa369ca31e5318f61eb6a6cbda33b970953",
+   "results/prereg08/p1/p1_lib.py": "062600168326f9eecd4ec1073e54881c475f8f276e376164eab20d373bbff511",
+   "results/prereg08/rank/p1_map.npz": "3f0d6904c5ccb938206884827b128c2a4ef2d83993f8635577dc43ffd52971fb",
+   "results/prereg09/rank/check_report.json": "3dfe765d1b7aa1c7c9f33ac8c0d6f89e44a5abf0141ca1195fdaa0fc71fe00a0",
+   "results/prereg09/rank/frozen_config.json": "50d38d2787c94569d88ed87a482e872ed64be2d1d20e4f57ffbb07a216663ff5",
+   "results/prereg09/rank/p1e_map.npz": "b5a9e33023a48099cbbafa87e5c92a081b272a73402dbd7d0fba4c70323be5eb",
+   "results/prereg09/rank/tune_report.json": "30fe15a0bfec2160dfcb4a50e3a7f5ad7c7de13f3e8a35c341b9912d66abba83",
+   "results/prereg12/explore/finetune/ft_eval.py": "2e3302cad19ab4c6b3f4242278a7d9bd751cdfbd92b4672696a6af46860b8021",
+   "results/prereg19/explore/eval_report.json": "c2d7db3219b4ae14f3158bfa6c239ec50ea69bc0ad3fab6d709d5fc0e6aadeed",
+   "results/prereg19/explore/p19_lib.py": "bbdc4225687777b732df1275277c4f4986f77225b935808f02cc7aefd4256376",
+   "results/prereg19/explore/train_record.json": "89b0c11c25ca61e0381c7e22e0869de06e403222358a0a1a4655b736890d770b",
+   "results/prereg19/rank/s19_seed0.npz": "ce8e63fceefa83c44e949064037efea42092447c40fc27c757091e92bf384357",
+   "results/prereg19/rank/s19_seed1.npz": "51e670c61b591c8d61bc89a29eaf0bf102d0405fd64a9598bea347d60402bd28",
+   "results/prereg19/rank/s19_seed2.npz": "976e450f477827c5197221edb137a74916b643b13474994a605ccdfcd564794c",
+   "results/prereg23/explore/p23_eval.py": "e0c0b2eaf374038873a6a86ccae158b57ca84e6ef2f28c41eb2d9a126ea15b5f",
+   "results/prereg23/explore/p23_lib.py": "003d62d19ba42c1a2b04652beb8d47685f44d5da1875cd608b4c1b9dc1169eac",
+   "results/prereg23/explore/p23_train.py": "2b4208534cdca6d65261a7da66f382edbaa0e47996705280eb19f2880f14a542",
+   "results/prereg25/explore/audit.json": "df703254bca7d3818f5a40f5c36ece68ab2bef9452255783c6649229c18888a7",
+   "results/prereg25/explore/eval_report.json": "229193eef8b9f974836e24150394b5e80948b1199e6264c484010e5a4c340b9c",
+   "results/prereg25/explore/p25_lib.py": "a5c2454dd69ff971e3f5fa29636b231b9fda0568704b62d78cc832b282ff774d",
+   "results/prereg25/explore/train_record.json": "c5197c54bbbc9c1981fbdbdf5912d556811bfa7ce9c9ae0a093f70480cb08d63",
+   "results/prereg26/explore/v_ex_record.json": "36c44f880e777fbb1c20d628b52f55ee4a93267ca124bdc4a84efb00583a0001",
+   "results/prereg40/explore/PLAN.md": "43c91bed244858b3bb4ff3e7a2101764e3c6cd5be5ee93977678da1cce71780d",
+   "results/prereg40/explore/p40_eval.py": "26aac19cf484c915a02b1b490dc02e7a5bc966bb463f816ef2d52769cea6ca99",
+   "results/prereg40/explore/p40_lib.py": "00869a2b3797c12052783e770fcf51ba19c6d504b2a62e96c9f4e7ca4146f740",
+   "results/prereg40/explore/p40_train.py": "ac9560836b579031bccc288ca0e3af57b70faaaa6b769a90ee8a1dbe7e0ecc2c",
+   "results/prereg40/explore/test_p40.py": "33596a8ba5daa93dc9eb05ea3c94c20a3d06f01c259e8535b79619bf97f8aaea",
+   "results/prereg40/explore/train_record.json": "9c3b9b8448ef6bbbe03839ea5e61709e9b60875bf1a217f4965b76671b9b7b35",
+   "tools/c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "tools/decide.py": "cf66daf1231b3c2bd60c5b6484245627e133bd0f1cd7ff5557e978da3801d0e3",
+   "tools/p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "tools/p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+   "tools/p02_rank_opening.py": "a4195fece41aa3d50ecda82d1af93d9c04f49df5fd2157d69dd8a488dea93463",
+   "tools/p02_rank_pseudo.py": "16e5bfdfb2995874ddb11bde1f7a9e786a478b14443453f675a4fb3a480bb098",
+   "tools/p03_rank_fuse.py": "77abd7479d26f0f647a258b4a6d5d2e517808b4c187184f14ff599d70b8aca2f",
+   "tools/p04_rank_fuse.py": "c3a647b09c46760239d5b2ee274d56f7231987354fc1c1f6c3ff40102f4b26a2",
+   "tools/p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142",
+   "tools/p08_p1.py": "a10c77c4bd97472b464f39080816090f0f64986195384b28e1d95dfc76e6677f",
+   "tools/p08_rank_fuse.py": "64f42bd956f7808947e0c85abe1f9fa60d9958cb8e769fc889c6283c188d481e",
+   "tools/p09_forward.py": "67124e0e534f575493aa8d72dbd2582335e4166718448e36bb5e105c61cb185d",
+   "tools/p09_map.py": "fff3ffe6ae6b8c32163803a6d307fa184c2857af5d6e1505e3c931a4e8831566",
+   "tools/p09_rank_fuse.py": "1486f7ce102450c1ed0b051234537286f6f9a0b38f7aaaf182a38458e4ddfb8b"
+  }
+ },
+ "earlier_run_heads": null,
+ "what": "PLAN.md 4: held-out NLL (S25's 4,000 held-out questions) of the S40 ensemble (5 seeds, lse mean) vs the S25 ensemble (3 frozen seeds), numpy float64; no inner data",
+ "train_record_sha256_lf": "9c3b9b8448ef6bbbe03839ea5e61709e9b60875bf1a217f4965b76671b9b7b35",
+ "seam_m": {
+  "models": {
+   "0": {
+    "sha256": "6e62d64829f6fde1266d838f9af9a7c34801b34275a73f41ccf98f29119b4692",
+    "best_step": 8000,
+    "ok": true
+   },
+   "1": {
+    "sha256": "c4f85088113ded919727c03377101feb72288d315039771aaa02c6fa9cfad0c6",
+    "best_step": 9000,
+    "ok": true
+   },
+   "2": {
+    "sha256": "542719860597a7db4763276b7fc3e470710009b7cbaf8fc25ec4c76fdf796ade",
+    "best_step": 7500,
+    "ok": true
+   },
+   "3": {
+    "sha256": "d314a257b2255a30671350c32ae74ac3991dc26cb625ff83756db3f0f623c7ca",
+    "best_step": 6000,
+    "ok": true
+   },
+   "4": {
+    "sha256": "659f3c79b0b4fdbb27544350e7c12ebd49bc08f7b93e8376b47113903cd15c49",
+    "best_step": 8000,
+    "ok": true
+   }
+  },
+  "train_settings_registered": true,
+  "train_code_clean": true,
+  "train_seams": {
+   "seam_p": true,
+   "seam_s25": true,
+   "seam_d": true,
+   "seam_h": true
+  },
+  "forward_code_same_as_train": {
+   "results/prereg23/explore/p23_lib.py": true,
+   "results/prereg23/explore/p23_train.py": true,
+   "results/prereg19/explore/p19_lib.py": true,
+   "tools/p09_forward.py": true
+  },
+  "ok": true
+ },
+ "seam_s25": {
+  "models": {
+   "0": {
+    "sha256": "4a01d6a60355cd514e9cc4988c08424a7952fc33302b47a63542a8caf67163bb",
+    "best_step": 11000,
+    "ok": true
+   },
+   "1": {
+    "sha256": "ab53d69b2762a7c01bed354ac6c218cf167fda44bbd3d88eed06a6f4adf3cba4",
+    "best_step": 7500,
+    "ok": true
+   },
+   "2": {
+    "sha256": "20e190f56866c7a28b4eeef0c0d4d656867b79a908e066ba91a47570601c4fbb",
+    "best_step": 10500,
+    "ok": true
+   }
+  },
+  "ok": true
+ },
+ "seam_hold": {
+  "holdout_questions_equal_train": true,
+  "holdout_sampling_equal_train": true,
+  "ok": true
+ },
+ "nll": {
+  "S40": 0.9781222132839821,
+  "S25": 0.9853642124599393
+ },
+ "verdict": {
+  "delta": -0.007241999175957248,
+  "threshold": -0.005,
+  "passed": true
+ },
+ "status": "passed: run the judgement (PLAN.md 5)",
+ "record_only": {
+  "per_n": {
+   "S40": {
+    "5": 1.1685563067692164,
+    "10": 0.9687918117173929,
+    "15": 0.8865856082488595,
+    "20": 0.8885551264004591
+   },
+   "S25": {
+    "5": 1.1975851749374549,
+    "10": 0.9729998719824682,
+    "15": 0.8878617190896336,
+    "20": 0.8830100838302003
+   },
+   "delta": {
+    "5": -0.029028868168238464,
+    "10": -0.004208060265075253,
+    "15": -0.0012761108407741695,
+    "20": 0.005545042570258785
+   }
+  },
+  "S40_seeds_0_2": {
+   "nll": 0.9751340778183232,
+   "delta_vs_S25": -0.010230134641616151,
+   "per_n": {
+    "5": 1.170070035331662,
+    "10": 0.9673811402597092,
+    "15": 0.882018964610209,
+    "20": 0.8810661710717123
+   }
+  },
+  "per_seed_S40": {
+   "0": 1.0033162743482862,
+   "1": 0.9898243535823444,
+   "2": 1.0007215275851213,
+   "3": 1.0197942710379837,
+   "4": 1.0120729556353627
+  },
+  "per_seed_S25": {
+   "0": 1.0073539559535492,
+   "1": 1.007117806032077,
+   "2": 1.0048496498594326
+  }
+ },
+ "peak_memory_record": {
+  "peak_working_set_gb": 1.35,
+  "peak_pagefile_gb": 2.51
+ }
+}

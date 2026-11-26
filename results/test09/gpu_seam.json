@@ -1,0 +1,63 @@
+{
+ "max_abs_std_ex": 0.007377602709122355,
+ "max_abs_std_ex_all_44": 0.17822240822917124,
+ "frac_lowp_record_only": {
+  "features": [
+   "t_frac_lowp",
+   "o_frac_lowp"
+  ],
+  "max_abs_std": 0.17822240822917124,
+  "games_jumped": 2
+ },
+ "max_abs_std_x": 0.009584205497790599,
+ "max_abs_lp_p1e": 0.005900628827308019,
+ "lp_p1e_quantiles": {
+  "0.5": 0.00038732067436186846,
+  "0.9": 0.0010168220328631073,
+  "0.99": 0.0016293712770257768
+ },
+ "games_lp_above_review_line": 1,
+ "argmax_equal": 400,
+ "bitwise_equal_means": false,
+ "bitwise_equal_ex": false,
+ "games": 400,
+ "usable_games": 400,
+ "equal": {
+  "failed": true,
+  "counts": true,
+  "n_moves": true
+ },
+ "counts_equal": true,
+ "problems": [],
+ "passed": true,
+ "tolerances": {
+  "std_ex": 0.05,
+  "lp_p1e": 0.04
+ },
+ "std_ex_definition": "largest |difference| of the standardised EX over the 42 features other than t_frac_lowp / o_frac_lowp (recorded only; PREREG_09 rev 4)",
+ "lp_review_line": 0.005,
+ "lp_above_review_line": true,
+ "lp_definition": "lp_P1TO_E = log(mean of the 6 members' probabilities) per game with the frozen p1e_map.npz (numpy float64), before the x 4",
+ "format": "c10-test09 gpu seam v1",
+ "mode": "real",
+ "created": "2026-11-04T10:58:44+00:00",
+ "seam_p1_report_sha256": "6cd8741d2c98fa0123284a36c5f45020a89937b86d56971693d961ce230a10a3",
+ "reference": {
+  "val_chunks": [
+   {
+    "file": "data\\prereg08\\val\\chunk_00000.npz",
+    "sha256": "956675e2bfa8b5ce299ce960bccff81d3ce3fdc9feef90b541c996f3a83e437d",
+    "games": 200,
+    "positions": 46175
+   },
+   {
+    "file": "data\\prereg08\\val\\chunk_00001.npz",
+    "sha256": "79df2319abaeb0f629cdbea17c268abf03e9d7519779d75c48e5c4719ae0ec21",
+    "games": 200,
+    "positions": 44138
+   }
+  ],
+  "val_report.json": "2ce9e86f8e639217c38814541f7d1bfb083b609ac194b5e19c8c38c60e653535",
+  "p1e_map.npz": "ecc9c9b1747b7b7d40cf53869b6c67c8e6f776ba7498498737fe3eede8e2edba"
+ }
+}

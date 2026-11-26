@@ -1,0 +1,1179 @@
+# test02 rank：colab/prereg02_rank.ipynb 與 colab/test02_rank.ipynb 的逐格 unified diff（程式格、markdown 格、notebook metadata）
+# 底稿：colab/prereg02_rank.ipynb  sha256=9fb1f9d06ba5ee5fbebfb6dfe022246888c93e7762e9a89e1adc99c9f1c12b0c
+# 本版：colab/test02_rank.ipynb  sha256=53337a7acc396bdc1f94b3cbdc7dd0ce859766511099e8004697ff0d6a487b05  notebook_sha256（config.json 的規則）=dc7526bef020a0bec2ba23168c109a067c62013bf4a457a80514c3f7f9024551
+# 產生方式：colab/build_test02_rank_nb.py；difflib.unified_diff，依 cell metadata c10.base_cell 配對底稿的格；新增的格對空白比。cell 編號從 0 起算。
+# 每一處改動的說明見本版第 0 格「和 prereg02 notebook 的差異」；沒列在表上的沿用格和底稿逐字相同。
+# 產生器核對過和底稿逐字相同的片段：d4、load_net、sgf_to_features、dump_is_done、write_dump、write_keys、_dump_path、_marker_path、require_gpu_for、pack_results、flush_drive、_argmax_first、rule_b、d4 self-check、parse loop sgf_cols= .. parsed=、per-question loop (with torch.no_grad())
+# 對照表：
+#   本版 cell  0（markdown）← /dev/null（新增：header）：新增
+#   本版 cell  1（程式格）← prereg02_rank.ipynb cell 1（setup）：改動
+#   本版 cell  2（程式格）← prereg02_rank.ipynb cell 3（prepare）：改動
+#   本版 cell  3（程式格）← prereg02_rank.ipynb cell 4（official_1）：完全相同
+#   本版 cell  4（程式格）← prereg02_rank.ipynb cell 5（environment）：完全相同
+#   本版 cell  5（程式格）← prereg02_rank.ipynb cell 6（official_2）：改動
+#   本版 cell  6（程式格）← /dev/null（新增：preflight_t02）：新增
+#   本版 cell  7（程式格）← prereg02_rank.ipynb cell 16（dump_tools）：改動
+#   本版 cell  8（程式格）← /dev/null（新增：dump_set_seam_val）：新增
+#   本版 cell  9（程式格）← /dev/null（新增：dump_set_public）：新增
+#   本版 cell 10（程式格）← /dev/null（新增：dump_set_private）：新增
+#   本版 cell 11（程式格）← /dev/null（新增：seam_check）：新增
+#   本版 cell 12（程式格）← prereg02_rank.ipynb cell 20（final_check）：改寫
+# 沒有沿用的底稿格（14 格）：
+#   prereg02 cell  0（markdown，header）
+#   prereg02 cell  2（程式格，preflight）
+#   prereg02 cell  7（程式格，official_4）
+#   prereg02 cell  8（程式格，official_6）
+#   prereg02 cell  9（程式格，official_8）
+#   prereg02 cell 10（程式格，feature_backup_tools）
+#   prereg02 cell 11（程式格，official_9）
+#   prereg02 cell 12（程式格，official_11）
+#   prereg02 cell 13（程式格，official_12）
+#   prereg02 cell 14（程式格，official_14）
+#   prereg02 cell 15（程式格，official_15）
+#   prereg02 cell 17（程式格，p1_dumps_and_repro）
+#   prereg02 cell 18（程式格，continued_training）
+#   prereg02 cell 19（程式格，p2_dumps）
+
+====================================================================================================
+本版 cell 0（markdown）↔ /dev/null（新增：header）（新增）
+====================================================================================================
+--- /dev/null（新增：header）
++++ test02_rank.ipynb cell 0
+@@ -0,0 +1,76 @@
++# C10 測試日（test02）：競賽二（棋力預測）逐盤輸出（Colab 版，只推論）
++
++**用途**：`docs/PREREG_02_OPENING_FUSION.md` 第 9 節（rev 5）的 Colab 部分。用 prereg02 指定的權重 `epoch_9.pth`（不訓練、不調參），算三組題目的逐盤輸出（8 種對稱的 logits）：
++
++1. `seam_val`：本機驗證題 1,589 題（接縫核對用，和 prereg02 當時算的比）。
++2. `public`、`private`：官方測試題各 400 題。
++
++合併、校準、開局特徵、規則 B 和交件檔都在本機做（`tools/t02_rank.py`），不在這裡。這份 notebook 不讀訓練資料，也不讀任何答案檔。
++
++## 怎麼跑
++
++0. 用**跑 prereg02 的同一個 Google 帳號**：權重和接縫參照在它的 Drive（`MyDrive/C10/results/prereg02/rank/`）。
++1. `MyDrive/C10/` 裡要有：`C10_bundle_v1.zip`（原本那份，不用重傳）、Claude 給你的 `C10_test_v1.zip`（檔名不能改、不要解壓），和這份 `test02_rank.ipynb`。
++2. 選單「執行階段 → 變更執行階段類型」：選 **G4 GPU**。G4 是灰色、點不了時，選 **A100 GPU**，「大量 RAM」關掉。沒有 GPU 或 Colab 改派別的 GPU 時，前面幾格就會停下。
++3. 選單「執行階段 → 全部執行」。第一個程式格會要求存取 Google Drive，按允許。
++4. 跑完後（G4 約 10 分鐘，推估），最後兩行是「Drive 已寫入完成並卸載」和「完成。請下載…」。先按「執行階段 → 中斷連線並刪除執行階段」，再下載 `MyDrive/C10/results/test02/test02_rank_results.zip`，把位置告訴 Claude。
++5. 跑完前不要關分頁，電腦不要睡眠。
++
++詳細步驟以 `docs/COLAB_RUN.md` 的「測試集（test02）」一節為準；和這裡不一致時，以那一節為準。
++
++## 會停下來的情況（錯誤訊息裡都寫了處理方式）
++
++依序：
++- **找不到測試集 zip，或 zip 的種類不對**：在第一個程式格停下。
++- **沒有 GPU，或 GPU 不是 G4／A100**：還沒開始算。先刪除執行階段，換成 G4（灰色時 A100）再全部執行。
++- **權重或接縫參照的 SHA-256 不符、測試集 zip 的檔案和 MANIFEST 不符、題目檔格式不對、Drive 空間不足、只讀目錄和第一次執行時不同**：preflight 格停下，還沒開始算。
++- **上一次執行的接縫核對沒過**（`seam_check.json` 記沒過）：停下。舊的逐盤輸出不能沿用，重跑必須重算：照 Claude 的指示先把 Drive 的 `C10/results/test02/rank` 資料夾改名成 `rank_failed_1`，再全部執行。
++- **某一組已有逐盤輸出，但題目檔換過**（`_INPUT.json` 不同）：停下，不會沿用舊的輸出。
++- **任何寫進 prereg01、prereg02 目錄的動作**：一律擋下。
++- **接縫核對沒過**（包括接續後三組的逐盤輸出不是同一個 GPU 型號、torch、cuDNN 算的）：這次的測試輸出一律不用、不上傳。會先打包 zip 再停下。**不要自己重跑**，下載 zip、截圖給 Claude。
++- **結尾發現 prereg01 或 prereg02 目錄被改動**：結果照樣打包，但會停下；截圖給 Claude。
++
++出現紅字時都先截圖給 Claude，不要自己重跑。
++
++## 結果寫到哪裡
++
++`MyDrive/C10/results/test02/rank/`（彩排是 `test02_rehearsal/`）：
++
++| 檔案 | 內容 |
++|---|---|
++| `<組>/dumps/val_keys.npz` | 每個 slot 一列：`question_id`、`slot`（從 1 起算）、`color`、`parsed`；題目檔的列順序，再依 slot 順序 |
++| `<組>/dumps/val_p02e9_d4.npz` | `logits` float32 [盤數, 8, 10]、`weights_sha256`、`syms`；解析失敗的 slot 整列是 NaN |
++| `<組>/dumps/_DONE_<檔名>.json` | 完成標記：列數、SHA-256、權重 SHA-256、秒數，以及算它的那次執行的 GPU 型號、torch、cuDNN |
++| `<組>/dumps/_INPUT.json` | 這一組用的題目檔和它的 SHA-256 |
++| `seam_check.json` | 接縫核對的數字和結果 |
++| `readonly_before.json`、`readonly_after.json` | prereg01、prereg02 目錄每個檔的大小和 mtime（開頭、結尾） |
++| `config.json`、`env.json`、`run_log.json`、`timings.json` | 設定、環境、每次執行的紀錄（`status`）、各階段秒數 |
++
++`<組>` 是 `seam_val`、`public`、`private`。`MyDrive/C10/results/test02/test02_rank_results.zip`：上面全部檔案（zip 內路徑從 `rank/` 起），這個檔帶回本機。
++
++## 中斷後怎麼接續
++
++重新打開後，**選和中斷前同一種 GPU**（中斷前是 G4 就選 G4），再按一次「全部執行」：已完成的逐盤輸出靠完成標記、SHA-256 和 `_INPUT.json` 跳過；沒完成的重算。三組的逐盤輸出必須是同一個執行環境算的（GPU 型號、torch、cuDNN，記在各組的完成標記）：接續時換了 GPU（例如中斷前 G4、接續時 A100），或 Colab 換了 torch／cuDNN，接縫核對會判定沒過並停下，這時照 Claude 的指示先把 `C10/results/test02/rank` 改名成 `rank_failed_1`，再整份重算。中斷前那一種 GPU 拿不到時，先不要跑，告訴 Claude。
++
++## 和 prereg02 notebook 的差異
++
++底稿是已 commit 的 `colab/prereg02_rank.ipynb`（產生時核對 SHA-256）。沿用的格子沒列在下表的，和 prereg02 逐字相同；和官方 notebook、prereg01 notebook 的差異照 prereg02 的差異表。逐格的 unified diff 在 `results/test02/notebook_diff_rank.txt`。
++
++| 格 | 改了什麼 |
++|---|---|
++| 新增 | 第一格 markdown：用途、步驟、GPU、會停下的情況、輸出清單、交回方式、這張差異表。 |
++| 設定 | 先讀 Drive 上 `C10_test_v1.zip` 的 `tests/MANIFEST.json` 決定種類（正式 `official`、彩排 `rehearsal`；SMOKE 只接受 `smoke`），找不到或種類不對就停。結果目錄改成 `test02`（彩排 `test02_rehearsal`，SMOKE `test02_smoke`）的 `rank/`，沒有 `ckpt/`、沒有分片備份。只讀目錄改成兩個：`prereg01`、`prereg02`（SMOKE 是 `_smoke`），`guard_write()` 兩個都擋，`readonly_fingerprint(root)` 取代 `p01_fingerprint()`。`sha256_path()`、`gpu_name_of()` 從 prereg02 的 preflight 格逐字搬到這裡（本版的 preflight 在 GPU 關卡之後）。拿掉收尾開關 `FINISH_WITHOUT_TRAINING` 和 `SMOKE_CFG_P02`；`P02_CHANGES` 換成 `T02_CHANGES`，另記這份 notebook 的 SHA-256（規則見 `NOTEBOOK_SHA256_RULE`）。`config.json` 的 `prereg` 改指第 9 節，記 `rehearsal`、測試集種類、底稿 SHA-256、這張表和只讀目錄。`run_log.json` 頂層加 `status`（這次執行開始時清空，結束時寫 completed／seam_failed／readonly_changed）。 |
++| 準備 | 拿掉解開訓練資料的整段（本版只推論，不讀訓練資料）；第一行註解跟著改。打包檔的 SHA-256 核對和拒收答案檔的那一行照舊。 |
++| 底稿官方 2 | 拿掉 `CKPT_DIR`、`guard_write(CKPT_DIR)`／`makedirs`、`EXTRA_EPOCHS`／`PEAK_LR`／`FINAL_EPOCH` 和它們的 assert。沒有 GPU 的關卡拿掉收尾開關的例外；型號關卡照舊（只接受 G4〔RTX PRO 6000〕或 A100）。最後的 `print` 只印裝置、GPU、NPROC。 |
++| 新增 preflight | 在 GPU 關卡之後：① 權重 `prereg02/rank/ckpt/epoch_9.pth` 的 SHA-256 等於登記的值（SMOKE：等於 prereg02_smoke 完成標記記的）；② 接縫參照 `prereg02/rank/dumps/val_keys.npz`、`val_p02e9_d4.npz` 的 SHA-256 釘死，prereg02 的 GPU 型號記下；③ 測試集 zip 解到 `WORK/tests/`，只收 `tests/` 底下的 6 個官方檔名和 `MANIFEST.json`，每個檔的 SHA-256、大小要等於 MANIFEST；④ 快速格式檢查（T1 的一部分：沒有 BOM、400 題、`question_id` 不重複且前綴是 `pub_`／`priv_`、`num_games` 是 5–20 的整數、`sgf_1..20`／`color_1..20` 欄都在、剛好前 `num_games` 格有棋、執色是 B/W、兩份題目不重疊）；⑤ 上一次執行的 `seam_check.json` 沒過就停（已完成的 dump 會被沿用，登記的「重跑一次」必須重算：先把結果資料夾改名保留）；每組的 `_INPUT.json`（題目檔 SHA-256）：已存在但不同就停（防止沿用換過題目檔的舊 dump）；⑥ Drive 剩餘空間 ≥ 0.5 GB；⑦ 兩個只讀目錄的開頭指紋 `readonly_before.json`，重跑時和第一次記的不同就停。`config.json` 頂層記 GPU、torch、cuDNN、權重、測試集 zip 與 MANIFEST 的 SHA-256、各組題目檔 SHA-256 與題數。 |
++| 底稿 dump 工具 | 拿掉 inner 的部分（`EXPECTED_INNER_GAMES`、`INNER_*`、`decode_with_key`、`KEY_LOADER`、`dump_inner`）和最後的 print。`DUMP_DIR` 不在這格建立，改由各組的格子在呼叫前指定（底稿的函式把它當全域變數讀，本身一字不改）。`parse_val()` 改成 `parse_questions(path)`（依題目檔路徑快取，`pd.read_csv(path, dtype={'question_id': str})`，SMOKE 照舊只取前 12 題）；`dump_val(net, …)` 改成 `dump_questions(net, path, …)`，檔名仍是 `val_` 開頭（在 test02 裡只代表「一組題目的逐盤輸出」）。`record_p01_after()` 改成兩個只讀目錄的 `record_readonly_after()`。`d4`、`load_net`、`sgf_to_features`、`dump_is_done`、`write_dump`、`write_keys`、`pack_results`、`flush_drive`、解析迴圈和逐題推論迴圈和底稿逐字相同（產生器用 ast 核對）。 |
++| 新增三組逐盤輸出 | `seam_val`（打包檔的本機驗證題 1,589 題）、`public`、`private` 各一格，內容相同、只有第一行不同：`DUMP_DIR = <組>/dumps`，`write_keys('val_keys', …)`，`dump_questions(…, 'p02e9_d4', 8, …)`；權重只載入一次（`load_net(path, expect_sha=登記的 SHA-256)`）。 |
++| 新增接縫核對 | `seam_val` 的逐盤輸出和 Drive 上 prereg02 的比（登記第 9 節第 2 條）：key 陣列完全相同；原方向逐盤 softmax 的每題 float32 平均最大差 ≤ 1e-4（算這份 dump 的 GPU 型號和 prereg02 相同時）或 ≤ 1e-3（不同時）；規則 B 不同 ≤ 4 題（SMOKE 依題數等比例，至少 1）。另記是否逐位元組相同、8 種對稱的 logits 最大差、兩邊的 GPU／torch／cuDNN。三組 dump 的完成標記記的 GPU 型號、torch、cuDNN 必須和 `seam_val` 的相同（中斷後接續時，已完成的組會被沿用，可能是別的執行環境算的；不同就算接縫沒過，接縫才涵蓋產生測試輸出的環境）。寫 `seam_check.json`；沒過就記結尾指紋、`status = seam_failed`、打包、送出 Drive 的寫入後停下。 |
++| 底稿結尾（改寫） | 核對三組 dump 的完成標記、SHA-256、列數、形狀、權重、NaN 位置和 `_INPUT.json`；記 `readonly_after.json` 並和開頭比對（不同就 `status = readonly_changed`，打包後停下）；補完 config／timings／run_log；打包 `test02/test02_rank_results.zip`（zip 內路徑從 `rank/` 起；跳過 `.pth`、`.pt`、`.tmp` 和 ≥ 100 MB 的檔），確認必要的檔都在 zip 裡；最後 `drive.flush_and_unmount()`。 |
++| 拿掉 | prereg02 的 preflight、官方 4、6、8、9、11、12、14、15（讀訓練資料、抽分片、loader、建模型、驗證）、分片備份工具、P1 輸出與重現核對、接著訓練、P2 輸出。本版不訓練、不讀訓練資料。 |
++| metadata | notebook metadata 沿用 prereg02。每格 cell id 是 `c10-rank-t02-NN`，cell metadata `c10` 記底稿的格號、底稿的 `c10` 和是否改動。 |
++
++## 其他
++
++- **本機冒煙測試**：`colab/run_local_smoke.py` 設定 `C10_SMOKE=1`，只用極少量資料在 CPU 上跑：要先有 `prereg01_smoke`、`prereg02_smoke` 和種類 `smoke` 的測試集 zip；每組只推論前 12 題，結果寫到 `results/test02_smoke/`。
++- **不在這裡打分**：答案檔不上傳 Colab；測試集沒有答案。
+
+====================================================================================================
+本版 cell 1（程式格）↔ prereg02_rank.ipynb cell 1（setup）（改動）
+====================================================================================================
+--- prereg02_rank.ipynb cell 1（setup）
++++ test02_rank.ipynb cell 1
+@@ -9,10 +9,6 @@
+ import time
+ 
+ RUN_START = time.time()
+-
+-# 本版（prereg02）收尾開關：平常維持 False。只有 Claude 請你改的時候才改成 True（見第一格「接著訓練做不完時」）。
+-# True：不再接著訓練；已存的逐盤輸出照樣核對，第 9 個 epoch 沒完成就照登記不做 epoch 9 的逐盤輸出，結尾照樣打包。
+-FINISH_WITHOUT_TRAINING = False
+ 
+ 
+ def now_iso():
+@@ -45,17 +41,41 @@
+ os.makedirs(WORK, exist_ok=True)
+ os.chdir(WORK)
+ 
+-# 結果目錄：正式和 SMOKE 分開，絕不混用。本版（prereg02）只寫 prereg02；prereg01 只讀
+-RESULT_ROOT = os.path.join(DRIVE_DIR, 'results', 'prereg02_smoke' if SMOKE else 'prereg02')
++# 本版（test02）：測試集 zip（Drive 上的 C10_test_v1.zip）。這裡只讀它的 tests/MANIFEST.json，決定這次是正式、彩排還是冒煙；
++# 逐檔核對在 preflight 格
++import zipfile
++
++TEST_ZIP = os.path.join(DRIVE_DIR, 'C10_test_v1.zip')
++TEST_MANIFEST_MEMBER = 'tests/MANIFEST.json'
++TEST_MANIFEST_FORMAT = 'c10-test02 manifest v1'
++OFFICIAL_TEST_NAMES = ["rank_prediction_test_public.csv", "rank_prediction_test_private.csv", "player_identification_test_public.csv", "player_identification_test_private.csv", "player_identification_candidates_public.csv", "player_identification_candidates_private.csv"]
++TEST_FILES = {'public': 'rank_prediction_test_public.csv', 'private': 'rank_prediction_test_private.csv'}
++TEST_HELP = ('處理方式：確認 MyDrive/C10/ 裡有 Claude 給你的 C10_test_v1.zip（檔名不能改、不要解壓），再按一次「全部執行」。'
++             '還是不對就把這段訊息截圖給 Claude。')
++if not os.path.isfile(TEST_ZIP):
++    raise SystemExit('找不到測試集 zip：%s。%s' % (TEST_ZIP, TEST_HELP))
++try:
++    with zipfile.ZipFile(TEST_ZIP) as _z:
++        TEST_MANIFEST = json.loads(_z.read(TEST_MANIFEST_MEMBER))
++except (OSError, KeyError, ValueError, zipfile.BadZipFile) as e:
++    raise SystemExit('測試集 zip 讀不出 %s（%s: %s）。%s' % (TEST_MANIFEST_MEMBER, type(e).__name__, e, TEST_HELP))
++TEST_KIND = TEST_MANIFEST.get('kind') if isinstance(TEST_MANIFEST, dict) else None
++_KINDS_OK = ('smoke',) if SMOKE else ('official', 'rehearsal')
++if not isinstance(TEST_MANIFEST, dict) or TEST_MANIFEST.get('format') != TEST_MANIFEST_FORMAT or TEST_KIND not in _KINDS_OK:
++    raise SystemExit('測試集 zip 的 MANIFEST 不是這次能用的（格式 %r、種類 %r；這次只接受 %s）。%s'
++                     % (TEST_MANIFEST.get('format') if isinstance(TEST_MANIFEST, dict) else None, TEST_KIND,
++                        '、'.join(_KINDS_OK), TEST_HELP))
++REHEARSAL = TEST_KIND == 'rehearsal'
++
++# 結果目錄：正式、彩排、SMOKE 分開，絕不混用。本版（test02）只寫 test02（彩排 test02_rehearsal、SMOKE test02_smoke）
++RESULT_ROOT = os.path.join(DRIVE_DIR, 'results',
++                           'test02_smoke' if SMOKE else ('test02_rehearsal' if REHEARSAL else 'test02'))
+ RESULT_DIR = os.path.join(RESULT_ROOT, 'rank')
+-RESULT_CKPT = os.path.join(RESULT_DIR, 'ckpt')
+-FEAT_BACKUP = os.path.join(RESULT_ROOT, 'features_rank')   # 本版自己的分片備份（只在重抽時寫）
+-
+-# 本版：prereg01 的結果目錄（權重、state.pt、機率檔、分片備份）只讀
++
++# 本版：prereg01、prereg02 的結果目錄只讀（prereg02 的 epoch_9.pth 是這次的權重，它的驗證題逐盤輸出是接縫參照）
+ P01_ROOT = os.path.join(DRIVE_DIR, 'results', 'prereg01_smoke' if SMOKE else 'prereg01')
+-P01_RANK = os.path.join(P01_ROOT, 'rank')
+-P01_CKPT = os.path.join(P01_RANK, 'ckpt')
+-P01_FEAT = os.path.join(P01_ROOT, 'features_rank')
++P02_ROOT = os.path.join(DRIVE_DIR, 'results', 'prereg02_smoke' if SMOKE else 'prereg02')
++READONLY_ROOTS = {'prereg01': P01_ROOT, 'prereg02': P02_ROOT}
+ 
+ 
+ def _real(path):
+@@ -68,31 +88,47 @@
+ 
+ 
+ def guard_write(path):
+-    # 本版：寫檔、torch.save、np.savez、copyfile 的目的地、rmtree、zip 一律先過這一關；落在 prereg01 底下就停
+-    if _is_under(path, P01_ROOT):
+-        raise PermissionError('本版不能寫入 prereg01 的目錄（只讀）：%s' % path)
++    # 本版：寫檔、np.savez、zip、rmtree 的目的地一律先過這一關；落在 prereg01 或 prereg02 底下就停
++    for _name, _root in READONLY_ROOTS.items():
++        if _is_under(path, _root):
++            raise PermissionError('本版不能寫入 %s 的目錄（只讀）：%s' % (_name, path))
+     return path
+ 
+ 
+-def p01_fingerprint():
+-    # prereg01 目錄每個檔的 {相對路徑: [bytes, mtime_ns]}；開頭和結尾各記一次，結尾必須相同
++def readonly_fingerprint(root):
++    # 只讀目錄每個檔的 {相對路徑: [bytes, mtime_ns]}；開頭和結尾各記一次，結尾必須相同
+     out = {}
+-    for root, dirs, files in os.walk(P01_ROOT):
++    for base, dirs, files in os.walk(root):
+         dirs.sort()
+         for n in sorted(files):
+-            p = os.path.join(root, n)
++            p = os.path.join(base, n)
+             st = os.stat(p)
+-            out[os.path.relpath(p, P01_ROOT).replace(os.sep, '/')] = [st.st_size, st.st_mtime_ns]
++            out[os.path.relpath(p, root).replace(os.sep, '/')] = [st.st_size, st.st_mtime_ns]
+     return out
+ 
+ 
+-# 本機工作目錄、prereg02 的結果目錄都不能和 prereg01 互相包含
+-# （沿用的準備格、抽特徵的 worker 只寫 WORK 底下，所以不另外過 guard_write）
++# 本版：這兩個函式原本在 prereg02 的 preflight 格（本版的 preflight 在 GPU 關卡之後，官方 2 就要用 gpu_name_of）
++def sha256_path(path):
++    d = hashlib.sha256()
++    with open(path, 'rb') as f:
++        for chunk in iter(lambda: f.read(1 << 20), b''):
++            d.update(chunk)
++    return d.hexdigest()
++
++
++def gpu_name_of(env_run):
++    # env.json 一筆執行紀錄裡的 GPU 型號（nvidia-smi 的第一欄）；沒有 GPU 時是 None
++    smi = (env_run.get('gpu') or {}).get('nvidia_smi')
++    return smi[0].split(',')[0].strip() if smi else None
++
++
++# 本機工作目錄、test02 的結果目錄都不能和只讀目錄互相包含
+ for _p in (WORK, RESULT_ROOT):
+     guard_write(_p)
+-    assert not _is_under(P01_ROOT, _p), (P01_ROOT, _p)
+-guard_write(RESULT_CKPT)
+-os.makedirs(RESULT_CKPT, exist_ok=True)
++    for _root in READONLY_ROOTS.values():
++        assert not _is_under(_root, _p), (_root, _p)
++guard_write(RESULT_DIR)
++os.makedirs(RESULT_DIR, exist_ok=True)
+ 
+ # SMOKE 的縮小方式：只在本機冒煙測試生效，正式執行時完全不用
+ SMOKE_CFG = {
+@@ -107,27 +143,26 @@
+     'loader_workers': 0,   # 本機 Windows 的 spawn 無法 pickle notebook 內定義的函式
+ }
+ 
+-# 本版（prereg02）的 SMOKE 設定另外放；SMOKE_CFG 不動（分片備份的指紋含它，改了就還原不到 prereg01 的分片）
+-SMOKE_CFG_P02 = {
+-    'extra_epochs': 1,     # 接著訓練的 epoch 數（正式是 4）
+-}
+-
+-# 本版和 prereg01 notebook 的差異（與第一格的表同一份）
+-P02_CHANGES = [
+-    "[新增] 第一格 markdown：用途、步驟、會停下的情況、輸出清單、接續方式、這張差異表。",
+-    "[設定] 結果目錄改成 `prereg02`（SMOKE 是 `prereg02_smoke`），分片備份 `FEAT_BACKUP` 跟著改到 `prereg02/features_rank`。新增只讀的 `P01_ROOT`／`P01_RANK`／`P01_CKPT`／`P01_FEAT`（`prereg01`，SMOKE 是 `prereg01_smoke`）、`guard_write()`（目的地落在 `P01_ROOT` 底下就停）、`p01_fingerprint()`（檔名、大小、mtime）。`write_json` 先過 `guard_write`。`SMOKE_CFG` 不動（分片備份的指紋含它，改了就還原不到 prereg01 的分片），本版的 SMOKE 設定另放 `SMOKE_CFG_P02`。`config.json` 的 `prereg` 改指 PREREG_02，另記底稿 notebook 的 SHA-256 和這張表。新增收尾開關 `FINISH_WITHOUT_TRAINING = False`（登記 1.2「第 9 個 epoch 沒跑完」的退路；只在 Claude 請你改時改成 True）。",
+-    "[新增 preflight] 開跑前確認 prereg01 的 `epoch_1..5.pth`、`best_model.pth`、`state.pt`、`history.csv`、`rank_val_probs.csv`、`env.json` 都在，記 SHA-256；`best_model.pth` 必須等於 `epoch_5.pth`；正式執行時機率檔、`history.csv`、`env.json` 必須和本機 commit 的 prereg01 結果逐位元組相同，inner accuracy 目標是 25.1482%、每個 epoch 2,814 步。prereg01 沒有分片備份只警告（會重抽）。Drive 剩餘空間 ≥ 3 GB。記下 prereg01 目錄的指紋 `p01_readonly_before.json`；重跑時和第一次記的不同就停。",
+-    "[底稿官方 2] `NUM_EPOCHS` 維持 prereg01 的 5（SMOKE 是 prereg01 冒煙的 1），用來比對 `state.pt`。新增 `EXTRA_EPOCHS`＝4（SMOKE 是 1）、`PEAK_LR`＝`LEARNING_RATE`＝1e-3、`FINAL_EPOCH`＝`NUM_EPOCHS`＋`EXTRA_EPOCHS`。`CKPT_DIR` 由設定格決定（`prereg02/rank/ckpt`），`makedirs` 前先過 `guard_write`。最後的 `print` 多印 GPU 型號和接著訓練的 epoch 數。正式執行沒有 GPU 就在這裡停下（收尾開關打開時例外，缺的逐盤輸出另由 dump 工具擋下）；有 GPU 但型號（環境紀錄格 nvidia-smi 查到的）不是 G4（RTX PRO 6000）或 A100 也停下（PREREG_02 第 7 節第 8 條）。",
+-    "[底稿分片工具] `restore_features(fp, src)` 改成可以指定來源，對來源只讀；還原到本機前 `guard_write(FEAT_DIR)`。`backup_features` 只寫到 `prereg02/features_rank`，`rmtree` 和每個複製目的地先過 `guard_write`。",
+-    "[底稿官方 9] 依序試 `prereg02/features_rank`、`prereg01/features_rank` 還原分片；都不能用才重抽（抽完備份到 prereg02）。`rmtree(FEAT_DIR)` 前先過 `guard_write`。`run_log.json` 另記分片來源。",
+-    "[新增 dump 工具] `d4(x, s)`（s＝0 原方向；s≥4 先在 dim 3 鏡射，再在 dims (2, 3) 旋轉 s%4 次，格內自我檢查 8 種兩兩不同且封閉）；`load_net()`（讀進記憶體、算 SHA-256、從同一份位元組載入）；inner 用分片的 `__key__`＝`等級_game_id` 對回 `df_val` 的列，assert 每盤剛好一次；本機驗證題照題目檔列順序和 slot 1..num_games 解析，失敗的保留位置（logits 填 NaN），每題一個 batch（和 prereg01 推論相同）；每個檔先寫 `.tmp` 再改名，附 `_DONE_<檔名>.json`（另記算它的那次執行的 GPU 型號、torch、cuDNN），重跑時對得上就跳過。正式執行時要算 dump 卻沒有 GPU 就停。另有 `record_p01_after()`（結尾指紋）、`pack_results()`（打包，跳過權重、暫存檔和 ≥ 100 MB 的檔）、`flush_drive()`（Colab 上 `drive.flush_and_unmount()`）。",
+-    "[新增 P1 輸出與重現核對] prereg01 epoch 1–4 原方向、epoch 5 八種對稱的逐盤 logits（inner、本機驗證題）和兩個 key 檔。重現核對三項：① epoch 5 在 inner 的逐盤 accuracy 和 `history.csv` 相差 ≤ 0.05 個百分點；② 每題 float32 平均機率和 prereg01 `rank_val_probs.csv` 最大差距 ≤ 1e-4（算 `val_p01e5_d4` 那次執行的 GPU 型號和 prereg01 不同時 1e-3；正式執行沒記到 GPU 就不通過）；③ 規則 B 不同的題 ≤ 4（SMOKE 依題數等比例縮小）。任一項不過就停，不訓練；停下前記結尾指紋、打包 `prereg02/rank_results_repro_failed.zip`、送出 Drive 的寫入。",
+-    "[新增接著訓練] 從 prereg01 `state.pt`（只讀、核對 SHA-256、設定、逐張量等於 `epoch_5.pth`）載入 model 和 AdamW 狀態，接著訓練 epoch 6–9：`LambdaLR` 每步 `max(0, 1 − t/T)`、T＝4×2,814，每個 epoch 開始 seed＝42＋epoch，其餘和 prereg01 相同。每個 epoch 存 `epoch_N.pth`、`state.pt`（含 scheduler、global_step、history、設定）、`history.csv`（inner 驗證只當監看）。有 prereg02 的 `state.pt` 就接續，設定不同就停。不產生 `best_model.pth`。訓練前用 `_count_w*.json` 和分片清單算出每個 epoch 的步數（webdataset 先依 worker 分分片），和 prereg01 的 2,814 步不同就停。收尾開關打開時不訓練，已完成的 epoch 從 prereg02 的 `state.pt` 讀回。",
+-    "[新增 P2 輸出] 用 `epoch_9.pth` 存 8 種對稱的逐盤 logits（inner、本機驗證題）；第 9 個 epoch 沒完成（包括收尾開關打開時）就跳過並記錄。",
+-    "[底稿結尾（改寫）] 改成核對所有 dump 的列數、形狀、NaN 位置和完成標記；記 `p01_readonly_after.json` 並和開頭比對（不同就在打包後停下）；補完 config／timings／run_log；打包 `prereg02/rank_results.zip`（跳過 `.pth`、`.pt`、`.tmp` 和 ≥ 100 MB 的檔；dump 一律 < 100 MB，否則在寫檔時就停）；最後 `drive.flush_and_unmount()`。",
+-    "[拿掉] prereg01 的設定紀錄與接續工具、官方 16（訓練迴圈）、18（訓練曲線）、20、21（推論）、所有官方 markdown 格。推論改由 dump 工具做，訓練改由接著訓練格做。",
+-    "[metadata] notebook metadata 的 Colab 設定拿掉預選的 A100 和「大量 RAM」（照第一格選 G4；拿不到 G4 時選 A100 標準版）。每格 cell id 是 `c10-rank02-NN`，cell metadata `c10` 記底稿的格號、底稿的 `c10` 和是否改動。"
++# 本版（test02）和 prereg02 notebook 的差異（與第一格的表同一份）
++T02_CHANGES = [
++    "[新增] 第一格 markdown：用途、步驟、GPU、會停下的情況、輸出清單、交回方式、這張差異表。",
++    "[設定] 先讀 Drive 上 `C10_test_v1.zip` 的 `tests/MANIFEST.json` 決定種類（正式 `official`、彩排 `rehearsal`；SMOKE 只接受 `smoke`），找不到或種類不對就停。結果目錄改成 `test02`（彩排 `test02_rehearsal`，SMOKE `test02_smoke`）的 `rank/`，沒有 `ckpt/`、沒有分片備份。只讀目錄改成兩個：`prereg01`、`prereg02`（SMOKE 是 `_smoke`），`guard_write()` 兩個都擋，`readonly_fingerprint(root)` 取代 `p01_fingerprint()`。`sha256_path()`、`gpu_name_of()` 從 prereg02 的 preflight 格逐字搬到這裡（本版的 preflight 在 GPU 關卡之後）。拿掉收尾開關 `FINISH_WITHOUT_TRAINING` 和 `SMOKE_CFG_P02`；`P02_CHANGES` 換成 `T02_CHANGES`，另記這份 notebook 的 SHA-256（規則見 `NOTEBOOK_SHA256_RULE`）。`config.json` 的 `prereg` 改指第 9 節，記 `rehearsal`、測試集種類、底稿 SHA-256、這張表和只讀目錄。`run_log.json` 頂層加 `status`（這次執行開始時清空，結束時寫 completed／seam_failed／readonly_changed）。",
++    "[準備] 拿掉解開訓練資料的整段（本版只推論，不讀訓練資料）；第一行註解跟著改。打包檔的 SHA-256 核對和拒收答案檔的那一行照舊。",
++    "[底稿官方 2] 拿掉 `CKPT_DIR`、`guard_write(CKPT_DIR)`／`makedirs`、`EXTRA_EPOCHS`／`PEAK_LR`／`FINAL_EPOCH` 和它們的 assert。沒有 GPU 的關卡拿掉收尾開關的例外；型號關卡照舊（只接受 G4〔RTX PRO 6000〕或 A100）。最後的 `print` 只印裝置、GPU、NPROC。",
++    "[新增 preflight] 在 GPU 關卡之後：① 權重 `prereg02/rank/ckpt/epoch_9.pth` 的 SHA-256 等於登記的值（SMOKE：等於 prereg02_smoke 完成標記記的）；② 接縫參照 `prereg02/rank/dumps/val_keys.npz`、`val_p02e9_d4.npz` 的 SHA-256 釘死，prereg02 的 GPU 型號記下；③ 測試集 zip 解到 `WORK/tests/`，只收 `tests/` 底下的 6 個官方檔名和 `MANIFEST.json`，每個檔的 SHA-256、大小要等於 MANIFEST；④ 快速格式檢查（T1 的一部分：沒有 BOM、400 題、`question_id` 不重複且前綴是 `pub_`／`priv_`、`num_games` 是 5–20 的整數、`sgf_1..20`／`color_1..20` 欄都在、剛好前 `num_games` 格有棋、執色是 B/W、兩份題目不重疊）；⑤ 上一次執行的 `seam_check.json` 沒過就停（已完成的 dump 會被沿用，登記的「重跑一次」必須重算：先把結果資料夾改名保留）；每組的 `_INPUT.json`（題目檔 SHA-256）：已存在但不同就停（防止沿用換過題目檔的舊 dump）；⑥ Drive 剩餘空間 ≥ 0.5 GB；⑦ 兩個只讀目錄的開頭指紋 `readonly_before.json`，重跑時和第一次記的不同就停。`config.json` 頂層記 GPU、torch、cuDNN、權重、測試集 zip 與 MANIFEST 的 SHA-256、各組題目檔 SHA-256 與題數。",
++    "[底稿 dump 工具] 拿掉 inner 的部分（`EXPECTED_INNER_GAMES`、`INNER_*`、`decode_with_key`、`KEY_LOADER`、`dump_inner`）和最後的 print。`DUMP_DIR` 不在這格建立，改由各組的格子在呼叫前指定（底稿的函式把它當全域變數讀，本身一字不改）。`parse_val()` 改成 `parse_questions(path)`（依題目檔路徑快取，`pd.read_csv(path, dtype={'question_id': str})`，SMOKE 照舊只取前 12 題）；`dump_val(net, …)` 改成 `dump_questions(net, path, …)`，檔名仍是 `val_` 開頭（在 test02 裡只代表「一組題目的逐盤輸出」）。`record_p01_after()` 改成兩個只讀目錄的 `record_readonly_after()`。`d4`、`load_net`、`sgf_to_features`、`dump_is_done`、`write_dump`、`write_keys`、`pack_results`、`flush_drive`、解析迴圈和逐題推論迴圈和底稿逐字相同（產生器用 ast 核對）。",
++    "[新增三組逐盤輸出] `seam_val`（打包檔的本機驗證題 1,589 題）、`public`、`private` 各一格，內容相同、只有第一行不同：`DUMP_DIR = <組>/dumps`，`write_keys('val_keys', …)`，`dump_questions(…, 'p02e9_d4', 8, …)`；權重只載入一次（`load_net(path, expect_sha=登記的 SHA-256)`）。",
++    "[新增接縫核對] `seam_val` 的逐盤輸出和 Drive 上 prereg02 的比（登記第 9 節第 2 條）：key 陣列完全相同；原方向逐盤 softmax 的每題 float32 平均最大差 ≤ 1e-4（算這份 dump 的 GPU 型號和 prereg02 相同時）或 ≤ 1e-3（不同時）；規則 B 不同 ≤ 4 題（SMOKE 依題數等比例，至少 1）。另記是否逐位元組相同、8 種對稱的 logits 最大差、兩邊的 GPU／torch／cuDNN。三組 dump 的完成標記記的 GPU 型號、torch、cuDNN 必須和 `seam_val` 的相同（中斷後接續時，已完成的組會被沿用，可能是別的執行環境算的；不同就算接縫沒過，接縫才涵蓋產生測試輸出的環境）。寫 `seam_check.json`；沒過就記結尾指紋、`status = seam_failed`、打包、送出 Drive 的寫入後停下。",
++    "[底稿結尾（改寫）] 核對三組 dump 的完成標記、SHA-256、列數、形狀、權重、NaN 位置和 `_INPUT.json`；記 `readonly_after.json` 並和開頭比對（不同就 `status = readonly_changed`，打包後停下）；補完 config／timings／run_log；打包 `test02/test02_rank_results.zip`（zip 內路徑從 `rank/` 起；跳過 `.pth`、`.pt`、`.tmp` 和 ≥ 100 MB 的檔），確認必要的檔都在 zip 裡；最後 `drive.flush_and_unmount()`。",
++    "[拿掉] prereg02 的 preflight、官方 4、6、8、9、11、12、14、15（讀訓練資料、抽分片、loader、建模型、驗證）、分片備份工具、P1 輸出與重現核對、接著訓練、P2 輸出。本版不訓練、不讀訓練資料。",
++    "[metadata] notebook metadata 沿用 prereg02。每格 cell id 是 `c10-rank-t02-NN`，cell metadata `c10` 記底稿的格號、底稿的 `c10` 和是否改動。"
+ ]
++
++# 本版：這份 notebook 的 SHA-256（產生器寫入；規則見 NOTEBOOK_SHA256_RULE）
++NOTEBOOK_REL = 'colab/test02_rank.ipynb'
++NOTEBOOK_SHA256 = 'dc7526bef020a0bec2ba23168c109a067c62013bf4a457a80514c3f7f9024551'
++NOTEBOOK_SHA256_RULE = ('sha256 of json.dumps([the source of every cell], ensure_ascii=False) with this value replaced by '
++                        '64 zeros (colab/build_test02_rank_nb.py; tools/t02_rank.py can recompute it)')
+ 
+ # 和官方 notebook 的全部差異（prereg01 的差異表，沿用的格子照它）
+ DEVIATIONS = [
+@@ -191,6 +226,7 @@
+        'in_colab': IN_COLAB, 'features': None, 'start_epoch': None, 'loaded_state': False,
+        'resumed_training': False, 'epochs_trained': []}
+ run_log['runs'].append(RUN)
++run_log['status'] = None   # 本版：這次執行結束時才寫（completed／seam_failed／readonly_changed）
+ 
+ 
+ def save_run_log():
+@@ -215,11 +251,12 @@
+ CONFIG.update({
+     'layout': '頂層：固定說明與跨執行的累計狀態；runs：每次執行各一筆的實際設定',
+     'smoke': SMOKE, 'smoke_cfg': SMOKE_CFG if SMOKE else None,
+-    'prereg': 'docs/PREREG_02_OPENING_FUSION.md 第 1.1 節（競賽二）',
+-    'base_notebook': {'path': 'colab/prereg01_rank.ipynb', 'sha256': '5f97d51978674bcc789493a47f278f186fb839f3f2d396aa2d218a6820e9744b'},
+-    'changes_from_prereg01': P02_CHANGES,
+-    'smoke_cfg_p02': SMOKE_CFG_P02 if SMOKE else None,
+-    'p01_root': P01_ROOT,
++    'prereg': 'docs/PREREG_02_OPENING_FUSION.md 第 9 節（rev 5，測試日；競賽二）',
++    'rehearsal': REHEARSAL, 'test_kind': TEST_KIND,
++    'notebook': NOTEBOOK_REL, 'notebook_sha256': NOTEBOOK_SHA256, 'notebook_sha256_rule': NOTEBOOK_SHA256_RULE,
++    'base_notebook': {'path': 'colab/prereg02_rank.ipynb', 'sha256': '9fb1f9d06ba5ee5fbebfb6dfe022246888c93e7762e9a89e1adc99c9f1c12b0c'},
++    'changes_from_prereg02': T02_CHANGES,
++    'readonly_roots': READONLY_ROOTS,
+     'official_notebook': 'third_party/aicup2026_tutorial/rank-prediction.ipynb',
+     'deviations_from_official': DEVIATIONS,
+     # resumed：是否曾有任何一次執行從 ckpt/state.pt 接續訓練。和 run_log.json 的 resume_count 同一個來源；
+@@ -249,4 +286,5 @@
+ print('IN_COLAB', IN_COLAB, '| SMOKE', SMOKE, '| run', RUN['run'], '| multiprocessing', MP_START_METHOD)
+ print('WORK', WORK)
+ print('結果目錄', RESULT_DIR)
+-print('prereg01（只讀）', P01_ROOT)
++print('只讀：prereg01', P01_ROOT, '| prereg02', P02_ROOT)
++print('測試集 zip：%s（種類 %s）' % (TEST_ZIP, TEST_KIND))
+
+====================================================================================================
+本版 cell 2（程式格）↔ prereg02_rank.ipynb cell 3（prepare）（改動）
+====================================================================================================
+--- prereg02_rank.ipynb cell 3（prepare）
++++ test02_rank.ipynb cell 2
+@@ -1,4 +1,4 @@
+-# 準備：缺套件才安裝、把打包檔複製到 WORK 解壓並逐檔核對 SHA-256、解開訓練資料
++# 準備：缺套件才安裝、把打包檔複製到 WORK 解壓並逐檔核對 SHA-256（本版不解開訓練資料）
+ import hashlib
+ import importlib.util
+ import subprocess
+@@ -51,27 +51,7 @@
+ _all_files = [os.path.join(r, n) for r, _d, ns in os.walk(BUNDLE) for n in ns]
+ assert not any('answers' in p for p in _all_files), '打包檔裡有答案檔，停止'
+ 
+-# 訓練資料：tar.xz 解開後是 ./training/train_<等級>.csv（另有 macOS 的 ._train_*.csv，load_rows 不會讀）
+-ARCHIVE = os.path.join(BUNDLE, 'training', 'aicup2026_go_training.tar.xz')
+-ARCHIVE_SHA = MANIFEST['files']['training/aicup2026_go_training.tar.xz']
+-TRAIN_FILES = ['train_%s.csv' % lv for lv in ('D', 'C', 'B', 'A', '1D', '2D', '3D', '4D', '5D', '6D')]
+-_marker = os.path.join('training', '.c10_extracted.json')
+-if (read_json(_marker, {}).get('archive_sha256') == ARCHIVE_SHA
+-        and all(os.path.exists(os.path.join('training', n)) for n in TRAIN_FILES)):
+-    print('訓練資料已解開，跳過')
+-else:
+-    shutil.rmtree('training', ignore_errors=True)
+-    with tarfile.open(ARCHIVE, 'r:xz') as tf:
+-        if hasattr(tarfile, 'data_filter'):
+-            tf.extractall(WORK, filter='data')
+-        else:
+-            tf.extractall(WORK)
+-    missing = [n for n in TRAIN_FILES if not os.path.exists(os.path.join('training', n))]
+-    if missing:
+-        raise SystemExit('解開後缺檔：%s' % missing)
+-    write_json(_marker, {'archive_sha256': ARCHIVE_SHA,
+-                         'bytes': {n: os.path.getsize(os.path.join('training', n)) for n in TRAIN_FILES}})
+-    print('訓練資料解開完成')
++# 本版（test02）：只推論，不解開訓練資料（底稿這裡解開 training/aicup2026_go_training.tar.xz 的整段拿掉）
+ 
+ # 打包檔裡的 c10data.py、官方 utils.py／network.py 加進 import 路徑
+ for _sub in ('tools', 'tutorial'):
+
+====================================================================================================
+本版 cell 3（程式格）↔ prereg02_rank.ipynb cell 4（official_1）（完全相同）
+====================================================================================================
+（完全相同）
+
+====================================================================================================
+本版 cell 4（程式格）↔ prereg02_rank.ipynb cell 5（environment）（完全相同）
+====================================================================================================
+（完全相同）
+
+====================================================================================================
+本版 cell 5（程式格）↔ prereg02_rank.ipynb cell 6（official_2）（改動）
+====================================================================================================
+--- prereg02_rank.ipynb cell 6（official_2）
++++ test02_rank.ipynb cell 5
+@@ -1,7 +1,7 @@
+ # 路徑：官方的相對路徑照用（工作目錄已切到 WORK）；checkpoint 改存到 Drive 的結果目錄，中斷後才能接續
+ TRAIN_DIR = './training'
+ FEAT_DIR = './rank-features'
+-CKPT_DIR = RESULT_CKPT
++# 本版（test02）：只推論，不存 checkpoint（拿掉 CKPT_DIR）
+ 
+ # 等級由弱到強。順序很重要：評分時的「相鄰一級」就是這個順序上的相鄰。
+ LEVELS = ['D', 'C', 'B', 'A', '1D', '2D', '3D', '4D', '5D', '6D']
+@@ -25,17 +25,9 @@
+     BATCH_SIZE = SMOKE_CFG['batch_size']
+     NUM_EPOCHS = SMOKE_CFG['num_epochs']
+ 
+-# 本版（prereg02）：NUM_EPOCHS 維持 prereg01 的值，用來比對 prereg01 的 state.pt；接著訓練 EXTRA_EPOCHS 個 epoch
+-EXTRA_EPOCHS = SMOKE_CFG_P02['extra_epochs'] if SMOKE else 4
+-PEAK_LR = LEARNING_RATE            # 1e-3，每步線性降到 0
+-FINAL_EPOCH = NUM_EPOCHS + EXTRA_EPOCHS   # 正式是 9：登記指定的 checkpoint 是 epoch_9.pth
+-if not SMOKE:
+-    assert NUM_EPOCHS == 5 and EXTRA_EPOCHS == 4 and PEAK_LR == 1e-3 and BATCH_SIZE == 256, 'prereg02 的設定被改動'
+-
+ DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+-# 本版：正式執行一定要有 GPU（逐盤輸出和接著訓練在 CPU 上要好幾天）。收尾開關打開時可以沒有 GPU，
+-# 但逐盤輸出必須都已存好（缺的話 dump 工具會停下）
+-if not SMOKE and DEVICE.type != 'cuda' and not FINISH_WITHOUT_TRAINING:
++# 本版（test02）：正式執行一定要有 GPU（接縫核對要和 prereg02 在 GPU 上算的逐盤輸出比）
++if not SMOKE and DEVICE.type != 'cuda':
+     raise SystemExit('沒有 GPU，停在這裡（還沒開始算）。處理方式：選單「執行階段 → 變更執行階段類型」選 G4 GPU'
+                      '（灰色時選 A100 GPU，「大量 RAM」關掉）→ 儲存，再按一次「全部執行」。')
+ # 本版：GPU 型號只接受 G4（RTX PRO 6000）或 A100（PREREG_02 第 7 節第 8 條）。Colab 在選的 GPU 沒空時可能改派別的 GPU。
+@@ -51,8 +43,5 @@
+ torch.manual_seed(SEED)
+ torch.cuda.manual_seed_all(SEED)
+ 
+-guard_write(CKPT_DIR)
+-os.makedirs(CKPT_DIR, exist_ok=True)
+-print('device', DEVICE, '| GPU', GPU_MODEL_NOW, '| NPROC', NPROC, '| batch', BATCH_SIZE,
+-      '| epochs', NUM_EPOCHS, '| extra epochs', EXTRA_EPOCHS, '| final epoch', FINAL_EPOCH)
++print('device', DEVICE, '| GPU', GPU_MODEL_NOW, '| NPROC', NPROC)
+ RANK_TO_ID
+
+====================================================================================================
+本版 cell 6（程式格）↔ /dev/null（新增：preflight_t02）（新增）
+====================================================================================================
+--- /dev/null（新增：preflight_t02）
++++ test02_rank.ipynb cell 6
+@@ -0,0 +1,209 @@
++# 本版新增（preflight，在 GPU 關卡之後）：權重、接縫參照、測試集 zip、題目檔格式、舊輸出、Drive 空間、只讀目錄的指紋。
++# 任何一項不符就用中文說明處理方式後停下，還沒開始算（但執行階段開著就會扣運算單元）。
++import io
++
++t0 = time.time()
++DUMP_NAME, DUMP_SYMS = 'p02e9_d4', 8
++SETS = ('seam_val', 'public', 'private')
++# 產生器從 repo 讀出的釘選值（results/prereg02/rank/frozen_config.json、dumps/ 的完成標記與檔案）
++W_PIN = '423581b4fddd5c2c160ebf691f4e86b9e00c4fe743d5cfb23df7891f4a2ca939'
++W_LABEL_PIN = 'prereg02/rank/ckpt/epoch_9.pth'
++SEAM_REF_SHA256_PIN = {"val_keys.npz": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c", "val_p02e9_d4.npz": "ec0b729d805eb9f3458f7a497444b099b8ec47e5cec73703ae4b8bf9cf0a11b2"}
++P02_REF_GPU_PIN = 'NVIDIA RTX PRO 6000 Blackwell Server Edition'
++MIN_DRIVE_FREE_BYTES = 5 * 10 ** 8
++N_TEST_QUESTIONS = 400
++P02_RANK = os.path.join(P02_ROOT, 'rank')
++P02_DUMPS = os.path.join(P02_RANK, 'dumps')
++P02_HELP = ('處理方式：確認這個 Colab 用的是跑 prereg02 的同一個 Google 帳號，而且 Drive 上有 '
++            'MyDrive/C10/results/prereg02/rank/ckpt/epoch_9.pth 和 rank/dumps/（val_keys.npz、val_p02e9_d4.npz 和它們的 _DONE_ 檔）。'
++            '不要搬動、改名或修改 prereg02 的任何檔案。還是不對就把這段訊息截圖給 Claude。')
++
++# ① 權重：prereg02 指定的 epoch_9.pth（SMOKE：prereg02_smoke 的完成標記記的那一份）
++_m_ref = read_json(os.path.join(P02_DUMPS, '_DONE_val_%s.json' % DUMP_NAME))
++if not _m_ref:
++    raise SystemExit('找不到 prereg02 的 rank/dumps/_DONE_val_%s.json。%s' % (DUMP_NAME, P02_HELP))
++if SMOKE:
++    W_LABEL, WSHA = _m_ref['weights'], _m_ref['weights_sha256']
++else:
++    W_LABEL, WSHA = W_LABEL_PIN, W_PIN
++    if (_m_ref.get('weights'), _m_ref.get('weights_sha256')) != (W_LABEL, WSHA):
++        raise SystemExit('prereg02 的 rank/dumps/_DONE_val_%s.json 記的權重不是 %s。%s' % (DUMP_NAME, W_LABEL, P02_HELP))
++if not W_LABEL.startswith('prereg02/'):
++    raise SystemExit('prereg02 的完成標記記的權重路徑 %r 不在 prereg02 底下。請截圖給 Claude。' % W_LABEL)
++W_PATH = os.path.join(P02_ROOT, *W_LABEL[len('prereg02/'):].split('/'))
++if not os.path.isfile(W_PATH):
++    raise SystemExit('找不到權重 %s。%s' % (W_PATH, P02_HELP))
++if sha256_path(W_PATH) != WSHA:
++    raise SystemExit('權重 %s 的 SHA-256 不是登記的 %s…。%s' % (W_PATH, WSHA[:12], P02_HELP))
++
++# ② 接縫參照：prereg02 在 Drive 上的本機驗證題逐盤輸出（正式執行釘 SHA-256；SMOKE 核對完成標記）
++SEAM_REF = {}
++for _n in ('val_keys.npz', 'val_%s.npz' % DUMP_NAME):
++    _p = os.path.join(P02_DUMPS, _n)
++    if not os.path.isfile(_p):
++        raise SystemExit('找不到接縫參照 %s。%s' % (_p, P02_HELP))
++    SEAM_REF[_n] = sha256_path(_p)
++    _want = ((read_json(os.path.join(P02_DUMPS, '_DONE_%s.json' % _n[:-4])) or {}).get('sha256') if SMOKE
++             else SEAM_REF_SHA256_PIN[_n])
++    if SEAM_REF[_n] != _want:
++        raise SystemExit('接縫參照 %s 的 SHA-256 不符。%s' % (_p, P02_HELP))
++with np.load(os.path.join(P02_DUMPS, 'val_%s.npz' % DUMP_NAME), allow_pickle=False) as _z:
++    if str(_z['weights_sha256']) != WSHA:
++        raise SystemExit('接縫參照 val_%s.npz 記的權重不是 %s…。%s' % (DUMP_NAME, WSHA[:12], P02_HELP))
++P02_REF_GPU = _m_ref.get('gpu_name')   # 接縫核對的 GPU 規則：和算這次 seam_val dump 的 GPU 比
++if not SMOKE and P02_REF_GPU != P02_REF_GPU_PIN:
++    raise SystemExit('prereg02 的完成標記記的 GPU 是 %r，不是登記時的 %s。%s' % (P02_REF_GPU, P02_REF_GPU_PIN, P02_HELP))
++
++# ③ 測試集 zip：只收 tests/ 底下的 6 個官方檔名和 MANIFEST.json，解到 WORK/tests；每個檔的 SHA-256、大小要等於 MANIFEST
++TESTS_DIR = os.path.join(WORK, 'tests')
++_allowed = {'tests/' + n for n in OFFICIAL_TEST_NAMES} | {TEST_MANIFEST_MEMBER}
++shutil.rmtree(TESTS_DIR, ignore_errors=True)
++os.makedirs(TESTS_DIR)
++with zipfile.ZipFile(TEST_ZIP) as _z:
++    _members = [i.filename for i in _z.infolist() if not i.filename.endswith('/')]
++    _bad = [m for m in _members if m not in _allowed]
++    _absent = sorted(_allowed - set(_members))
++    if _bad or _absent or len(_members) != len(set(_members)):
++        raise SystemExit('測試集 zip 的內容不對（多出：%s；缺少：%s）。%s' % (_bad[:5], _absent, TEST_HELP))
++    for _m in _members:
++        with open(os.path.join(TESTS_DIR, _m[len('tests/'):]), 'wb') as _f:
++            _f.write(_z.read(_m))
++TEST_ZIP_SHA = sha256_path(TEST_ZIP)
++TEST_MANIFEST_SHA = sha256_path(os.path.join(TESTS_DIR, 'MANIFEST.json'))
++if read_json(os.path.join(TESTS_DIR, 'MANIFEST.json')) != TEST_MANIFEST:
++    raise SystemExit('測試集 zip 的 MANIFEST 和第一格讀到的不同。%s' % TEST_HELP)
++_mf = TEST_MANIFEST.get('files') or {}
++_problems = []
++if sorted(_mf) != sorted(OFFICIAL_TEST_NAMES):
++    _problems.append('MANIFEST 列的檔名不是 6 個官方檔名：%s' % sorted(_mf))
++for _n in OFFICIAL_TEST_NAMES:
++    _p = os.path.join(TESTS_DIR, _n)
++    _e = _mf.get(_n) or {}
++    if sha256_path(_p) != _e.get('sha256') or os.path.getsize(_p) != _e.get('bytes'):
++        _problems.append('%s 的 SHA-256 或大小和 MANIFEST 不同' % _n)
++if _problems:
++    raise SystemExit('測試集 zip 核對沒過：%s。%s' % ('；'.join(_problems), TEST_HELP))
++
++
++def quick_check_questions(path, prefix):
++    # T1 的一部分（競賽二的題目檔）：沒有 BOM、400 題、question_id 不重複且前綴對、num_games 是 5–20 的整數、
++    # sgf_1..20／color_1..20 欄都在、剛好前 num_games 格有棋、這幾格的執色是 B/W。回傳 (問題清單, question_id 清單)
++    problems = []
++    with open(path, 'rb') as f:
++        raw = f.read()
++    if raw.startswith(b'\xef\xbb\xbf'):
++        problems.append('檔頭有 BOM')
++    csv.field_size_limit(10 ** 8)
++    rd = csv.DictReader(io.StringIO(raw.decode('utf-8-sig'), newline=''))
++    need = ['question_id', 'num_games'] + ['sgf_%d' % i for i in range(1, 21)] + ['color_%d' % i for i in range(1, 21)]
++    missing = [c for c in need if c not in (rd.fieldnames or [])]
++    if missing:
++        return problems + ['缺欄位 %s' % missing[:5]], []
++    ids = []
++    for r in rd:
++        q = r['question_id']
++        ids.append(q)
++        if not q.startswith(prefix):
++            problems.append('%s 的前綴不是 %s' % (q, prefix))
++        g = (r['num_games'] or '').strip()
++        if not g.isdigit() or not 5 <= int(g) <= 20:
++            problems.append('%s 的 num_games 是 %r' % (q, r['num_games']))
++            continue
++        n = int(g)
++        filled = [i for i in range(1, 21) if (r['sgf_%d' % i] or '').strip()]
++        if filled != list(range(1, n + 1)):
++            problems.append('%s：有棋的格是 %s，num_games 是 %d' % (q, filled[:3], n))
++        bad = [i for i in range(1, n + 1) if r['color_%d' % i] not in ('B', 'W')]
++        if bad:
++            problems.append('%s：第 %s 格的執色不是 B/W' % (q, bad[:3]))
++    if len(ids) != N_TEST_QUESTIONS:
++        problems.append('%d 題，應該是 %d 題' % (len(ids), N_TEST_QUESTIONS))
++    if len(set(ids)) != len(ids):
++        problems.append('question_id 有重複')
++    return problems, ids
++
++
++_ids = {}
++for _set, _prefix in (('public', 'pub_'), ('private', 'priv_')):
++    _pr, _ids[_set] = quick_check_questions(os.path.join(TESTS_DIR, TEST_FILES[_set]), _prefix)
++    _problems += ['%s：%s' % (TEST_FILES[_set], x) for x in _pr[:10]]
++if set(_ids['public']) & set(_ids['private']):
++    _problems.append('public 和 private 有相同的 question_id')
++if _problems:
++    raise SystemExit('測試題目檔的格式檢查沒過（%d 項）：%s。處理方式：不要改檔，把這段訊息截圖給 Claude。'
++                     % (len(_problems), '；'.join(_problems[:10])))
++
++# ④-0 上一次執行的接縫核對沒過就停：已完成的逐盤輸出會被 dump_is_done 沿用，登記第 9 節第 2 條的
++#     「換一個執行階段重跑一次」就變成拿同一份輸出再比一次。要重跑必須重算，所以先把整個結果資料夾改名保留。
++_prev_seam = read_json(os.path.join(RESULT_DIR, 'seam_check.json'))
++if _prev_seam is not None and _prev_seam.get('passed') is not True:
++    raise SystemExit('上一次執行的接縫核對沒過（%s 記 passed = %r）。這個資料夾裡的逐盤輸出不能沿用，重跑必須重算。'
++                     '處理方式：先把畫面截圖給 Claude；Claude 說要重跑時，在 Google 雲端硬碟把 %s 整個資料夾'
++                     '改名成 rank_failed_1（同一層，數字照 Claude 給的），再按一次「全部執行」。'
++                     % (os.path.join(RESULT_DIR, 'seam_check.json'), _prev_seam.get('passed'),
++                        os.path.relpath(RESULT_DIR, os.path.dirname(DRIVE_DIR)).replace(os.sep, '/')))
++
++# ④ 各組的題目檔與 _INPUT.json：已存在但不同就停（dump_is_done 只看列數，換過的題目檔會被當成已完成）
++SET_QUESTIONS = {'seam_val': RANK_QUESTIONS, 'public': os.path.join(TESTS_DIR, TEST_FILES['public']),
++                 'private': os.path.join(TESTS_DIR, TEST_FILES['private'])}
++SET_INPUT, SET_ROWS = {}, {}
++for _set in SETS:
++    _q = SET_QUESTIONS[_set]
++    with open(_q, newline='', encoding='utf-8-sig') as _f:
++        _n_rows = sum(1 for _ in csv.DictReader(_f))
++    SET_ROWS[_set] = min(_n_rows, SMOKE_CFG['questions']) if SMOKE else _n_rows
++    _rec = {'set': _set, 'question_file': ('bundle local/' if _set == 'seam_val' else 'tests/') + os.path.basename(_q),
++            'sha256': sha256_path(_q)}
++    _dir = os.path.join(RESULT_DIR, _set, 'dumps')
++    _ip = os.path.join(_dir, '_INPUT.json')
++    _old = read_json(_ip)
++    if _old is not None and _old != _rec:
++        raise SystemExit('%s 已有逐盤輸出，但當時的題目檔和這次不同（%s）。不能沿用。處理方式：不要刪檔，把這段訊息截圖給 Claude。'
++                         % (_set, _ip))
++    if _old is None and os.path.isdir(_dir) and os.listdir(_dir):
++        raise SystemExit('%s 有檔案但沒有 _INPUT.json，不知道是用哪個題目檔算的。處理方式：不要刪檔，把這段訊息截圖給 Claude。' % _dir)
++    guard_write(_dir)
++    os.makedirs(_dir, exist_ok=True)
++    if _old is None:
++        write_json(_ip, _rec)
++    SET_INPUT[_set] = _rec
++
++# ⑤ Drive 剩餘空間
++try:
++    DRIVE_FREE_BYTES = shutil.disk_usage(DRIVE_DIR).free
++except OSError as e:
++    DRIVE_FREE_BYTES = None
++    print('注意：查不到 Drive 剩餘空間（%s: %s），請自己確認還有 0.5 GB 以上' % (type(e).__name__, e))
++if DRIVE_FREE_BYTES is not None and DRIVE_FREE_BYTES < MIN_DRIVE_FREE_BYTES:
++    raise SystemExit('Drive 只剩 %.2f GB，這份 notebook 要 0.5 GB 以上。處理方式：清出空間（Drive 的垃圾桶也要清空）後再按一次'
++                     '「全部執行」。' % (DRIVE_FREE_BYTES / 1e9))
++
++# ⑥ 只讀目錄的指紋（開頭）。重跑時必須和第一次執行記下的相同：不同代表 prereg01／prereg02 在兩次執行之間被改過
++READONLY_BEFORE = {_name: readonly_fingerprint(_root) for _name, _root in READONLY_ROOTS.items()}
++_before_path = os.path.join(RESULT_DIR, 'readonly_before.json')
++_before_log = read_runs(_before_path)
++if _before_log['runs'] and _before_log['runs'][0]['files'] != READONLY_BEFORE:
++    _first = _before_log['runs'][0]['files']
++    _changed = {_k: sorted(f for f in set(_first.get(_k, {})) | set(READONLY_BEFORE[_k])
++                           if _first.get(_k, {}).get(f) != READONLY_BEFORE[_k].get(f)) for _k in READONLY_BEFORE}
++    raise SystemExit('只讀目錄和第一次執行時不同（%s）。處理方式：不要再執行，把這段訊息截圖給 Claude。'
++                     % {k: v[:5] for k, v in _changed.items() if v})
++_before_log['runs'].append({'run': RUN['run'], 'time': now_iso(), 'roots': READONLY_ROOTS,
++                            'n_files': {k: len(v) for k, v in READONLY_BEFORE.items()}, 'files': READONLY_BEFORE})
++write_json(_before_path, _before_log)
++
++save_config(preflight={'weights': W_LABEL, 'weights_sha256': WSHA, 'seam_reference_sha256': SEAM_REF,
++                       'p02_reference_gpu': P02_REF_GPU, 'test_zip_sha256': TEST_ZIP_SHA,
++                       'test_manifest_sha256': TEST_MANIFEST_SHA, 'test_kind': TEST_KIND, 'sets': SET_INPUT,
++                       'drive_free_bytes': DRIVE_FREE_BYTES,
++                       'readonly_files_fingerprinted': {k: len(v) for k, v in READONLY_BEFORE.items()}})
++save_config_summary(gpu=GPU_MODEL_NOW, torch=torch.__version__, cudnn=ENV_INFO.get('cudnn'),
++                    weights={'path': W_LABEL, 'sha256': WSHA},
++                    test_bundle={'zip_sha256': TEST_ZIP_SHA, 'manifest_sha256': TEST_MANIFEST_SHA,
++                                 'kind': TEST_KIND, 't1': TEST_MANIFEST.get('t1'),
++                                 'files': {n: _mf[n]['sha256'] for n in OFFICIAL_TEST_NAMES}},
++                    sets={s: {'questions_sha256': SET_INPUT[s]['sha256'], 'rows': SET_ROWS[s]} for s in SETS},
++                    seam_reference={'gpu_name': P02_REF_GPU, 'sha256': SEAM_REF})
++mark_time('preflight', time.time() - t0)
++print('preflight 通過：權重 %s（%s…），測試集 zip %s（%s…），題目 %s，prereg02 的 GPU：%s'
++      % (W_LABEL, WSHA[:12], TEST_KIND, TEST_ZIP_SHA[:12], SET_ROWS, P02_REF_GPU))
+
+====================================================================================================
+本版 cell 7（程式格）↔ prereg02_rank.ipynb cell 16（dump_tools）（改動）
+====================================================================================================
+--- prereg02_rank.ipynb cell 16（dump_tools）
++++ test02_rank.ipynb cell 7
+@@ -1,23 +1,17 @@
+-# 本版新增：逐盤輸出（dump）工具
+-# - inner：對內部驗證的分片跑一遍（和 validate() 一樣 batch 256、不打散），用分片的 __key__＝「等級_game_id」對回 df_val 的列
+-# - 本機驗證題：照題目檔的列順序和 slot 1..num_games 解析，失敗的保留位置（logits 填 NaN）；
+-#   每題一個 batch，和 prereg01 的推論相同，重現核對才對得上
++# 本版新增：逐盤輸出（dump）工具（test02：沿用 prereg02 的工具，拿掉 inner 的部分）
++# - 題目檔（本機驗證題或官方測試題）：照題目檔的列順序和 slot 1..num_games 解析，失敗的保留位置（logits 填 NaN）；
++#   每題一個 batch，和 prereg01、prereg02 的推論相同，接縫核對才對得上
+ # - 每個檔先寫 .tmp 再改名，附 _DONE_<檔名>.json；重跑時完成標記、SHA-256、權重 SHA-256 都對得上就跳過
++# - DUMP_DIR 由各組的格子在呼叫前指定（<組>/dumps）；底稿的函式把它當全域變數讀，本身一字不改
+ import io
+ import math
+ import random
+ import zipfile
+ 
+-DUMP_DIR = os.path.join(RESULT_DIR, 'dumps')
+-guard_write(DUMP_DIR)
+-os.makedirs(DUMP_DIR, exist_ok=True)
++DUMP_DIR = None                        # 本版：各組的格子在呼叫前指定（<組>/dumps）
+ DUMP_MAX_BYTES = 100 * 1024 * 1024   # 結果 zip 會跳過 ≥ 100 MB 的檔，所以每個 dump 都必須更小
+ GPU_BATCH = 64                         # 和 prereg01 推論相同
+ NUM_SYMS = 8
+-EXPECTED_INNER_GAMES = SMOKE_CFG['inner_games'] if SMOKE else 73556
+-if not VAL_SIZE == len(df_val) == EXPECTED_INNER_GAMES:
+-    raise SystemExit('內部驗證的盤數不對：VAL_SIZE %s、df_val %d、應該是 %d。請截圖給 Claude。'
+-                     % (VAL_SIZE, len(df_val), EXPECTED_INNER_GAMES))
+ 
+ 
+ def d4(x, s):
+@@ -95,14 +89,17 @@
+                          '選 G4 GPU（灰色時選 A100 GPU，「大量 RAM」關掉）→ 儲存，再按一次「全部執行」。' % stem)
+ 
+ 
+-def record_p01_after():
+-    # prereg01 目錄的指紋（結尾，或重現核對沒過時）：和這次開頭記的比，寫進 p01_readonly_after.json；回傳 (指紋, 不同的檔)
+-    after = p01_fingerprint()
+-    path = os.path.join(RESULT_DIR, 'p01_readonly_after.json')
++def record_readonly_after():
++    # 本版：兩個只讀目錄（prereg01、prereg02）的指紋（結尾，或接縫核對沒過時）：和這次開頭記的比，寫進 readonly_after.json；
++    # 回傳 (指紋, {目錄: 不同的檔})
++    after = {name: readonly_fingerprint(root) for name, root in READONLY_ROOTS.items()}
++    path = os.path.join(RESULT_DIR, 'readonly_after.json')
+     log = read_runs(path)
+-    changed = sorted(k for k in set(P01_BEFORE) | set(after) if P01_BEFORE.get(k) != after.get(k))
+-    log['runs'].append({'run': RUN['run'], 'time': now_iso(), 'root': P01_ROOT, 'n_files': len(after),
+-                        'total_bytes': sum(v[0] for v in after.values()), 'files': after,
++    changed = {name: sorted(k for k in set(READONLY_BEFORE[name]) | set(after[name])
++                            if READONLY_BEFORE[name].get(k) != after[name].get(k)) for name in after}
++    changed = {k: v for k, v in changed.items() if v}
++    log['runs'].append({'run': RUN['run'], 'time': now_iso(), 'roots': READONLY_ROOTS, 'files': after,
++                        'n_files': {k: len(v) for k, v in after.items()},
+                         'same_as_before': not changed, 'changed_files': changed})
+     write_json(path, log)
+     return after, changed
+@@ -155,68 +152,6 @@
+     return 'written'
+ 
+ 
+-# inner 的 key：df_val 的列順序（load_rows 的順序再用 SEED 打散，每次執行都相同）
+-INNER_KEYS = {
+-    'rank': np.array(df_val['rank'].tolist(), dtype=str),
+-    'game_id': np.array(df_val['game_id'].tolist(), dtype=str),
+-    'player_id': np.array(df_val['player_id'].tolist(), dtype=str),
+-    'color': np.array(df_val['color'].tolist(), dtype=str),
+-    'label': np.array([RANK_TO_ID[r] for r in df_val['rank']], dtype=np.int8),
+-}
+-INNER_INDEX = {(r, g): i for i, (r, g) in enumerate(zip(df_val['rank'], df_val['game_id']))}
+-assert len(INNER_INDEX) == len(df_val), '(等級, game_id) 在內部驗證裡不唯一'
+-assert set(INNER_KEYS['color'].tolist()) <= {'B', 'W'}
+-
+-
+-def decode_with_key(sample):
+-    return (torch.from_numpy(sample['features.npy']).float(),
+-            torch.tensor(int(sample['rank_idx.txt']), dtype=torch.long),
+-            sample['game_name.txt'], sample['__key__'])
+-
+-
+-# inner 專用的 loader：和 val_loader 相同的分片、worker 數、batch，多回傳分片的 __key__
+-KEY_LOADER = DataLoader(
+-    wds.WebDataset(val_shards, shardshuffle=0).decode().map(decode_with_key).batched(BATCH_SIZE, partial=True),
+-    batch_size=None, num_workers=workers, pin_memory=True, persistent_workers=workers > 0)
+-
+-
+-def dump_inner(net, name, syms, weights, weights_sha):
+-    stem, n = 'inner_' + name, len(df_val)
+-    if dump_is_done(stem, n, syms, weights_sha):
+-        print('  %s：已完成，跳過' % stem)
+-        return 'skipped'
+-    require_gpu_for(stem)
+-    t0 = time.time()
+-    logits = np.full((n, syms, NUM_CLASSES), np.nan, dtype=np.float32)
+-    seen = np.zeros(n, dtype=bool)
+-    count = 0
+-    with torch.no_grad():
+-        for x, y, names, keys in KEY_LOADER:
+-            idx = []
+-            for lab, g, k in zip(y.tolist(), names, keys):
+-                if k != '%s_%s' % (LEVELS[lab], g):
+-                    raise SystemExit('分片的 __key__ %r 和（等級, game_id）＝（%s, %s）對不上。請截圖給 Claude。'
+-                                     % (k, LEVELS[lab], g))
+-                i = INNER_INDEX.get((LEVELS[lab], g))
+-                if i is None:
+-                    raise SystemExit('分片裡的 %s 不在這次的內部驗證（df_val）裡。請截圖給 Claude。' % k)
+-                idx.append(i)
+-            idx = np.asarray(idx, dtype=np.int64)
+-            if len(set(idx.tolist())) != len(idx) or seen[idx].any():
+-                raise SystemExit('內部驗證有盤出現兩次（%s）。請截圖給 Claude。' % stem)
+-            seen[idx] = True
+-            count += len(idx)
+-            xb = x.to(DEVICE, non_blocking=True)
+-            for s in range(syms):
+-                logits[idx, s] = net(d4(xb, s)).float().cpu().numpy()
+-    if count != n or not seen.all():
+-        raise SystemExit('%s：讀到 %d 盤，內部驗證是 %d 盤，有盤沒讀到。請截圖給 Claude。' % (stem, count, n))
+-    write_dump(stem, n, syms, weights, weights_sha, time.time() - t0,
+-               {'logits': logits, 'weights_sha256': np.array(weights_sha), 'syms': np.array(syms)})
+-    print('  %s：%d 盤 × %d 種方向，%.0f 秒' % (stem, n, syms, time.time() - t0), flush=True)
+-    return 'written'
+-
+-
+ _infer_parser = SGFParseRankPrediction()
+ 
+ 
+@@ -226,16 +161,15 @@
+     return None if err is not None else feat
+ 
+ 
+-VAL = None   # parse_val() 的結果，整份 notebook 共用（只解析一次）
+-
+-
+-def parse_val():
+-    # 本機驗證題：題目檔的列順序、slot 1..num_games；SMOKE 時和 prereg01 冒煙一樣只取前幾題
+-    global VAL
+-    if VAL is not None:
+-        return VAL
++QSETS = {}   # 本版：parse_questions() 的結果，依題目檔路徑快取（每個檔只解析一次；各組的格子用完就釋放）
++
++
++def parse_questions(path):
++    # 本版：題目檔（本機驗證題或官方測試題）：題目檔的列順序、slot 1..num_games；SMOKE 時和 prereg01 冒煙一樣只取前幾題
++    if path in QSETS:
++        return QSETS[path]
+     t0 = time.time()
+-    test = pd.read_csv(RANK_QUESTIONS, dtype={'question_id': str})
++    test = pd.read_csv(path, dtype={'question_id': str})
+     if SMOKE:
+         test = test.head(SMOKE_CFG['questions'])
+     sgf_cols = [c for c in test.columns if c.startswith('sgf_')]
+@@ -256,17 +190,18 @@
+     with Pool(NPROC) as pool:
+         feats = pool.map(sgf_to_features, sgfs, chunksize=8)
+     parsed = np.array([f is not None for f in feats], dtype=bool)
+-    VAL = {'spans': spans, 'feats': feats,
+-           'keys': {'question_id': np.array(qids, dtype=str), 'slot': np.array(slots, dtype=np.int32),
+-                    'color': np.array(colors, dtype=str), 'parsed': parsed}}
+-    mark_time('parse_val', time.time() - t0)
+-    print('本機驗證題：%d 題、%d 盤，解析失敗 %d 盤，%.0f 秒'
+-          % (len(spans), len(feats), int((~parsed).sum()), time.time() - t0), flush=True)
+-    return VAL
+-
+-
+-def dump_val(net, name, syms, weights, weights_sha):
+-    V = parse_val()
++    QSETS[path] = {'spans': spans, 'feats': feats,
++                   'keys': {'question_id': np.array(qids, dtype=str), 'slot': np.array(slots, dtype=np.int32),
++                            'color': np.array(colors, dtype=str), 'parsed': parsed}}
++    mark_time('parse_questions %s' % os.path.basename(path), time.time() - t0)
++    print('題目檔 %s：%d 題、%d 盤，解析失敗 %d 盤，%.0f 秒'
++          % (os.path.basename(path), len(spans), len(feats), int((~parsed).sum()), time.time() - t0), flush=True)
++    return QSETS[path]
++
++
++def dump_questions(net, path, name, syms, weights, weights_sha):
++    # 本版：底稿的 dump_val 改成指定題目檔；檔名仍是 'val_' + 名稱（在 test02 裡只代表「一組題目的逐盤輸出」），寫到目前的 DUMP_DIR
++    V = parse_questions(path)
+     stem, n = 'val_' + name, len(V['feats'])
+     if dump_is_done(stem, n, syms, weights_sha):
+         print('  %s：已完成，跳過' % stem)
+@@ -311,4 +246,6 @@
+                                  for k in range(n)])]
+ 
+ 
+-print('dump 工具就緒：inner %d 盤（worker %d）' % (len(df_val), workers))
++NET = None      # 本版：三組共用的網路，第一組的格子載入一次
++SET_LOG = {}    # 本版：每組的逐盤輸出紀錄（寫進 config.json）
++print('dump 工具就緒：權重 %s（SHA-256 %s…），%d 種方向' % (W_LABEL, WSHA[:12], NUM_SYMS))
+
+====================================================================================================
+本版 cell 8（程式格）↔ /dev/null（新增：dump_set_seam_val）（新增）
+====================================================================================================
+--- /dev/null（新增：dump_set_seam_val）
++++ test02_rank.ipynb cell 8
+@@ -0,0 +1,22 @@
++SET = 'seam_val'   # 本版新增：這一格處理的題目組（seam_val、public、private 三格只有這一行不同）
++# 一組題目的逐盤輸出（prereg02 的 epoch_9.pth，8 種對稱），寫到 <組>/dumps；已完成就跳過
++t0 = time.time()
++_path = SET_QUESTIONS[SET]
++DUMP_DIR = guard_write(os.path.join(RESULT_DIR, SET, 'dumps'))   # 底稿的 dump 函式把 DUMP_DIR 當全域變數讀
++os.makedirs(DUMP_DIR, exist_ok=True)
++if read_json(os.path.join(DUMP_DIR, '_INPUT.json')) != SET_INPUT[SET]:
++    raise SystemExit('%s 的 _INPUT.json 和 preflight 記的不同。請把這段訊息截圖給 Claude。' % SET)
++if NET is None:
++    NET, _ = load_net(W_PATH, expect_sha=WSHA)
++_V = parse_questions(_path)
++_st = [write_keys('val_keys', _V['keys']), dump_questions(NET, _path, DUMP_NAME, DUMP_SYMS, W_LABEL, WSHA)]
++SET_LOG[SET] = {'questions': len(_V['spans']), 'games': len(_V['feats']),
++                'games_unparsed': int((~_V['keys']['parsed']).sum()), 'keys': _st[0], 'dump': _st[1],
++                'seconds': time.time() - t0}
++del _V
++QSETS.pop(_path, None)   # 解析結果用完就釋放記憶體
++if DEVICE.type == 'cuda':
++    torch.cuda.empty_cache()
++save_config(dumps=SET_LOG)
++mark_time('dump_%s' % SET, time.time() - t0)
++print('%s：%s' % (SET, SET_LOG[SET]))
+
+====================================================================================================
+本版 cell 9（程式格）↔ /dev/null（新增：dump_set_public）（新增）
+====================================================================================================
+--- /dev/null（新增：dump_set_public）
++++ test02_rank.ipynb cell 9
+@@ -0,0 +1,22 @@
++SET = 'public'   # 本版新增：這一格處理的題目組（seam_val、public、private 三格只有這一行不同）
++# 一組題目的逐盤輸出（prereg02 的 epoch_9.pth，8 種對稱），寫到 <組>/dumps；已完成就跳過
++t0 = time.time()
++_path = SET_QUESTIONS[SET]
++DUMP_DIR = guard_write(os.path.join(RESULT_DIR, SET, 'dumps'))   # 底稿的 dump 函式把 DUMP_DIR 當全域變數讀
++os.makedirs(DUMP_DIR, exist_ok=True)
++if read_json(os.path.join(DUMP_DIR, '_INPUT.json')) != SET_INPUT[SET]:
++    raise SystemExit('%s 的 _INPUT.json 和 preflight 記的不同。請把這段訊息截圖給 Claude。' % SET)
++if NET is None:
++    NET, _ = load_net(W_PATH, expect_sha=WSHA)
++_V = parse_questions(_path)
++_st = [write_keys('val_keys', _V['keys']), dump_questions(NET, _path, DUMP_NAME, DUMP_SYMS, W_LABEL, WSHA)]
++SET_LOG[SET] = {'questions': len(_V['spans']), 'games': len(_V['feats']),
++                'games_unparsed': int((~_V['keys']['parsed']).sum()), 'keys': _st[0], 'dump': _st[1],
++                'seconds': time.time() - t0}
++del _V
++QSETS.pop(_path, None)   # 解析結果用完就釋放記憶體
++if DEVICE.type == 'cuda':
++    torch.cuda.empty_cache()
++save_config(dumps=SET_LOG)
++mark_time('dump_%s' % SET, time.time() - t0)
++print('%s：%s' % (SET, SET_LOG[SET]))
+
+====================================================================================================
+本版 cell 10（程式格）↔ /dev/null（新增：dump_set_private）（新增）
+====================================================================================================
+--- /dev/null（新增：dump_set_private）
++++ test02_rank.ipynb cell 10
+@@ -0,0 +1,22 @@
++SET = 'private'   # 本版新增：這一格處理的題目組（seam_val、public、private 三格只有這一行不同）
++# 一組題目的逐盤輸出（prereg02 的 epoch_9.pth，8 種對稱），寫到 <組>/dumps；已完成就跳過
++t0 = time.time()
++_path = SET_QUESTIONS[SET]
++DUMP_DIR = guard_write(os.path.join(RESULT_DIR, SET, 'dumps'))   # 底稿的 dump 函式把 DUMP_DIR 當全域變數讀
++os.makedirs(DUMP_DIR, exist_ok=True)
++if read_json(os.path.join(DUMP_DIR, '_INPUT.json')) != SET_INPUT[SET]:
++    raise SystemExit('%s 的 _INPUT.json 和 preflight 記的不同。請把這段訊息截圖給 Claude。' % SET)
++if NET is None:
++    NET, _ = load_net(W_PATH, expect_sha=WSHA)
++_V = parse_questions(_path)
++_st = [write_keys('val_keys', _V['keys']), dump_questions(NET, _path, DUMP_NAME, DUMP_SYMS, W_LABEL, WSHA)]
++SET_LOG[SET] = {'questions': len(_V['spans']), 'games': len(_V['feats']),
++                'games_unparsed': int((~_V['keys']['parsed']).sum()), 'keys': _st[0], 'dump': _st[1],
++                'seconds': time.time() - t0}
++del _V
++QSETS.pop(_path, None)   # 解析結果用完就釋放記憶體
++if DEVICE.type == 'cuda':
++    torch.cuda.empty_cache()
++save_config(dumps=SET_LOG)
++mark_time('dump_%s' % SET, time.time() - t0)
++print('%s：%s' % (SET, SET_LOG[SET]))
+
+====================================================================================================
+本版 cell 11（程式格）↔ /dev/null（新增：seam_check）（新增）
+====================================================================================================
+--- /dev/null（新增：seam_check）
++++ test02_rank.ipynb cell 11
+@@ -0,0 +1,117 @@
++# 本版新增：接縫核對（PREREG_02 第 9 節第 2 條）：這次重算的 seam_val 逐盤輸出，和 Drive 上 prereg02 的比
++# 通過條件：key 陣列完全相同；原方向逐盤 softmax 的每題 float32 平均（C0）最大差 ≤ tol（算這份 dump 的 GPU 型號和
++# prereg02 相同時 1e-4，不同時 1e-3）；規則 B（C0）不同的題 ≤ 4（SMOKE 依題數等比例，至少 1）
++t0 = time.time()
++SEAM_KEYS = ('question_id', 'slot', 'color', 'parsed')
++
++
++def _load_npz(path):
++    with np.load(path, allow_pickle=False) as z:
++        return {k: z[k] for k in z.files}
++
++
++def question_spans(qids):
++    # key 陣列的題目區段 [(question_id, 開始列, 盤數)]；同一題的 slot 必須相鄰
++    out, seen = [], set()
++    for i, q in enumerate(qids.tolist()):
++        if out and out[-1][0] == q:
++            out[-1][2] += 1
++            continue
++        assert q not in seen, ('同一題的 slot 不相鄰', q)
++        seen.add(q)
++        out.append([q, i, 1])
++    return out
++
++
++def c0_of(L, spans, parsed):
++    # C0：每盤原方向 softmax、同題在 float32 下平均（和 prereg01 推論、prereg02 的重現核對相同）；沒有可解析的盤是 None
++    out = []
++    for _q, start, k in spans:
++        ok = [start + j for j in range(k) if parsed[start + j]]
++        out.append([float(v) for v in torch.from_numpy(L[ok, 0, :]).softmax(1).numpy().mean(0)] if ok else None)
++    return out
++
++
++def seam_compare(new, ref, same_gpu, smoke):
++    # new、ref：{'keys': {...}, 'logits': 陣列}。回傳紀錄；'passed' 是登記的判定
++    keys_equal = {k: bool(new['keys'][k].shape == ref['keys'][k].shape and np.array_equal(new['keys'][k], ref['keys'][k]))
++                  for k in SEAM_KEYS}
++    L1, L0 = new['logits'], ref['logits']
++    rec = {'keys_equal': keys_equal, 'same_gpu_as_prereg02': bool(same_gpu), 'tol': 1e-4 if same_gpu else 1e-3,
++           'bitwise_equal': bool(all(keys_equal.values()) and L1.dtype == L0.dtype and L1.shape == L0.shape
++                                 and L1.tobytes() == L0.tobytes()),
++           'max_abs_logit_diff': None, 'max_abs_c0_diff': None, 'problems': []}
++    if not all(keys_equal.values()) or L1.shape != L0.shape:
++        rec['problems'].append('key 陣列或 logits 的形狀和 prereg02 不同：%s' % keys_equal)
++        rec['passed'] = False
++        return rec
++    parsed = new['keys']['parsed'].astype(bool)
++    rec['max_abs_logit_diff'] = (float(np.max(np.abs(L1[parsed].astype(np.float64) - L0[parsed].astype(np.float64))))
++                                 if parsed.any() else 0.0)
++    spans = question_spans(new['keys']['question_id'])
++    c1, c0 = c0_of(L1, spans, parsed), c0_of(L0, spans, parsed)
++    diffs = [max(abs(a - b) for a, b in zip(x, y)) for x, y in zip(c1, c0) if x is not None]
++    rec['max_abs_c0_diff'] = max(diffs) if diffs else 0.0
++    b_diff = [s[0] for s, x, y in zip(spans, c1, c0) if x is not None and rule_b(x) != rule_b(y)]
++    b_allowed = 4 if not smoke else max(1, math.ceil(4 * len(spans) / 1589))
++    rec.update(questions=len(spans), games=int(len(parsed)), games_parsed=int(parsed.sum()),
++               rule_b_diff={'questions': len(b_diff), 'allowed': b_allowed, 'question_ids': b_diff[:50]})
++    rec['passed'] = bool(rec['max_abs_c0_diff'] <= rec['tol'] and len(b_diff) <= b_allowed)
++    return rec
++
++
++_new_dir = os.path.join(RESULT_DIR, 'seam_val', 'dumps')
++_new = {'keys': _load_npz(os.path.join(_new_dir, 'val_keys.npz')),
++        'logits': _load_npz(os.path.join(_new_dir, 'val_%s.npz' % DUMP_NAME))['logits']}
++_ref = {'keys': _load_npz(os.path.join(P02_DUMPS, 'val_keys.npz')),
++        'logits': _load_npz(os.path.join(P02_DUMPS, 'val_%s.npz' % DUMP_NAME))['logits']}
++_m_new = read_json(os.path.join(_new_dir, '_DONE_val_%s.json' % DUMP_NAME)) or {}
++SEAM_DUMP_GPU = _m_new.get('gpu_name')   # 算這份 seam_val dump 的那次執行的 GPU（接續時可能不是這次）
++_same_gpu = SEAM_DUMP_GPU == P02_REF_GPU and (SMOKE or SEAM_DUMP_GPU is not None)
++SEAM = seam_compare(_new, _ref, _same_gpu, SMOKE)
++del _new, _ref
++# 三組的逐盤輸出必須是同一個執行環境算的：中斷後接續時，已完成的組會被 dump_is_done 沿用，public、private 可能是
++# 別次執行（別的 GPU、torch、cuDNN）算的，接縫就沒涵蓋產生測試輸出的環境（登記第 9 節第 2 條）。不同就算接縫沒過
++SEAM_ENV_KEYS = ('gpu_name', 'torch', 'cudnn')
++SEAM_DUMP_ENV = {_s: {_k: (read_json(os.path.join(RESULT_DIR, _s, 'dumps', '_DONE_val_%s.json' % DUMP_NAME)) or {}).get(_k)
++                      for _k in SEAM_ENV_KEYS} for _s in SETS}
++_env_mixed = [_s for _s in SETS if SEAM_DUMP_ENV[_s] != SEAM_DUMP_ENV['seam_val']]
++if _env_mixed:
++    SEAM['problems'].append('%s 的逐盤輸出和 seam_val 的不是同一個執行環境算的（GPU 型號、torch、cuDNN：%s）'
++                            % ('、'.join(_env_mixed), SEAM_DUMP_ENV))
++    SEAM['passed'] = False
++SEAM.update({
++    'what': 'test02 notebook seam (PREREG_02 section 9 item 2): seam_val dump vs prereg02 val_p02e9_d4.npz on Drive',
++    'run': RUN['run'], 'time': now_iso(), 'smoke': SMOKE,
++    'tol_rule': '1e-4 when the GPU that wrote the seam_val dump (its _DONE_ marker) is the prereg02 dump GPU, else 1e-3',
++    'gpu_this_run': GPU_MODEL_NOW, 'torch_this_run': torch.__version__, 'cudnn_this_run': ENV_INFO.get('cudnn'),
++    'seam_dump': {k: _m_new.get(k) for k in ('gpu_name', 'torch', 'cudnn', 'run', 'sha256', 'weights_sha256')},
++    'prereg02_dump': {k: _m_ref.get(k) for k in ('gpu_name', 'torch', 'cudnn', 'run', 'sha256', 'weights_sha256')},
++    'reference_sha256': SEAM_REF,
++    'dump_env': SEAM_DUMP_ENV, 'dump_env_same': not _env_mixed,
++    'dump_env_rule': 'the val_p02e9_d4 dumps of seam_val, public and private must carry the same gpu_name, torch and '
++                     'cudnn in their _DONE markers (a resumed run reuses finished sets)'})
++_seam_path = os.path.join(RESULT_DIR, 'seam_check.json')
++_prev = read_json(_seam_path)
++SEAM['earlier_runs'] = ((_prev.get('earlier_runs') or []) + [{k: v for k, v in _prev.items() if k != 'earlier_runs'}]
++                        if _prev else [])
++write_json(_seam_path, SEAM)
++save_config(seam_check={k: SEAM.get(k) for k in ('passed', 'tol', 'bitwise_equal', 'max_abs_c0_diff',
++                                                 'max_abs_logit_diff', 'rule_b_diff', 'same_gpu_as_prereg02',
++                                                 'dump_env_same')})
++mark_time('seam_check', time.time() - t0)
++print('接縫核對：C0 最大差 %s（容許 %g；算 dump 的 GPU %s，prereg02 %s），規則 B 不同 %s，逐位元組相同 %s → %s'
++      % (SEAM['max_abs_c0_diff'], SEAM['tol'], SEAM_DUMP_GPU, P02_REF_GPU, SEAM.get('rule_b_diff'),
++         SEAM['bitwise_equal'], '通過' if SEAM['passed'] else '沒過'))
++if not SEAM['passed']:
++    # 停下前照樣比對只讀目錄的指紋、打包（查原因要用），並把 Drive 的寫入送出
++    _after, _ro_changed = record_readonly_after()
++    RUN.update(end=now_iso(), status='seam_failed')
++    run_log['status'] = 'seam_failed'
++    save_config_summary(status='seam_failed')
++    save_run_log()
++    _zip, _ = pack_results('test02_rank_results.zip')
++    flush_drive()
++    raise SystemExit('接縫核對沒過%s：這次執行的測試輸出一律不用、不上傳（PREREG_02 第 9 節第 2 條）。處理方式：不要自己重跑；'
++                     '下載 %s，連同這段訊息的截圖一起給 Claude。'
++                     % (('（%s）' % '；'.join(SEAM['problems'])) if SEAM['problems'] else '', _zip))
+
+====================================================================================================
+本版 cell 12（程式格）↔ prereg02_rank.ipynb cell 20（final_check）（改寫）
+====================================================================================================
+--- prereg02_rank.ipynb cell 20（final_check）
++++ test02_rank.ipynb cell 12
+@@ -1,69 +1,70 @@
+-# 本版改寫的結尾：核對所有逐盤輸出，比對 prereg01 目錄前後的指紋，補完 config／timings／run_log，
+-# 打包 rank_results.zip（不含權重），把 Drive 的寫入送出
+-import zipfile
++# 本版改寫的結尾：核對三組的逐盤輸出，比對兩個只讀目錄前後的指紋，補完 config／timings／run_log，
++# 打包 test02_rank_results.zip（不含權重），把 Drive 的寫入送出
++t0 = time.time()
++DUMP_CHECK = {}
++for SET in SETS:
++    _dir = os.path.join(RESULT_DIR, SET, 'dumps')
++    _chk = {}
++    for _stem in ('val_keys', 'val_' + DUMP_NAME):
++        _path, _m = os.path.join(_dir, _stem + '.npz'), read_json(os.path.join(_dir, '_DONE_%s.json' % _stem))
++        _sha = sha256_path(_path) if os.path.exists(_path) else None
++        assert _m is not None and _sha == _m['sha256'], ('完成標記不符', SET, _stem)
++        assert os.path.getsize(_path) < DUMP_MAX_BYTES, (SET, _stem)
++        _chk[_stem] = {'rows': _m['rows'], 'bytes': os.path.getsize(_path), 'sha256': _sha,
++                       'gpu_name': _m.get('gpu_name'), 'torch': _m.get('torch'), 'cudnn': _m.get('cudnn'),
++                       'run': _m.get('run')}
++    with np.load(os.path.join(_dir, 'val_keys.npz'), allow_pickle=False) as _z:
++        _keys = {k: _z[k] for k in _z.files}
++    _rows = len(_keys['question_id'])
++    assert sorted(_keys) == ['color', 'parsed', 'question_id', 'slot'] and all(len(v) == _rows for v in _keys.values()), SET
++    _parsed = _keys['parsed'].astype(bool)
++    with np.load(os.path.join(_dir, 'val_%s.npz' % DUMP_NAME), allow_pickle=False) as _z:
++        _L = _z['logits']
++        assert _L.dtype == np.float32 and _L.shape == (_rows, DUMP_SYMS, NUM_CLASSES), (SET, _L.shape)
++        assert str(_z['weights_sha256']) == WSHA and int(_z['syms']) == DUMP_SYMS, SET
++        assert np.array_equal(np.isnan(_L).all(axis=(1, 2)), ~_parsed) and not np.isnan(_L[_parsed]).any(), SET
++    assert _rows == _chk['val_keys']['rows'] == _chk['val_' + DUMP_NAME]['rows'], SET
++    assert read_json(os.path.join(_dir, '_INPUT.json')) == SET_INPUT[SET], SET
++    _qids = _keys['question_id'].tolist()
++    DUMP_CHECK[SET] = {'questions': len(set(_qids)), 'games': _rows, 'games_unparsed': int((~_parsed).sum()),
++                       'files': _chk, 'input': SET_INPUT[SET]}
++    assert DUMP_CHECK[SET]['questions'] == SET_ROWS[SET], (SET, DUMP_CHECK[SET]['questions'], SET_ROWS[SET])
++    del _keys, _L
+ 
+-t0 = time.time()
+-V = parse_val()
+-_parsed = V['keys']['parsed']
+-_expect = ['inner_keys', 'val_keys'] + ['%s_%s' % (p, n) for n, _e, _s in P1_DUMPS for p in ('inner', 'val')]
+-if P2_RESULT['done']:
+-    _expect += ['inner_' + P2_NAME, 'val_' + P2_NAME]
+-DUMP_CHECK = {}
+-for stem in _expect:
+-    _path, _m = _dump_path(stem), read_json(_marker_path(stem))
+-    _sha = sha256_path(_path) if os.path.exists(_path) else None
+-    assert _m is not None and _sha == _m['sha256'], ('完成標記不符', stem)
+-    _rows_expected = len(df_val) if stem.startswith('inner') else len(V['feats'])
+-    with np.load(_path, allow_pickle=False) as _z:
+-        if stem.endswith('_keys'):
+-            _rows = len(_z['game_id'] if stem.startswith('inner') else _z['question_id'])
+-            assert all(len(_z[k]) == _rows for k in _z.files), stem
+-        else:
+-            _L = _z['logits']
+-            _rows = _L.shape[0]
+-            assert _L.dtype == np.float32 and _L.ndim == 3 and _L.shape[1:] == (int(_z['syms']), NUM_CLASSES), stem
+-            assert str(_z['weights_sha256']) == _m['weights_sha256'], stem
+-            if stem.startswith('val_'):
+-                assert np.array_equal(np.isnan(_L).all(axis=(1, 2)), ~_parsed) and not np.isnan(_L[_parsed]).any(), stem
+-            else:
+-                assert not np.isnan(_L).any(), stem
+-    assert _rows == _rows_expected == _m['rows'], (stem, _rows, _rows_expected, _m['rows'])
+-    assert os.path.getsize(_path) < DUMP_MAX_BYTES, stem
+-    DUMP_CHECK[stem] = {'rows': _rows, 'bytes': os.path.getsize(_path), 'sha256': _sha,
+-                        'weights': _m['weights'], 'weights_sha256': _m['weights_sha256']}
+-
+-# prereg01 目錄的指紋（結尾）：必須和這次開頭記的完全相同
+-P01_AFTER, _p01_changed = record_p01_after()
+-
++# 只讀目錄的指紋（結尾）：必須和這次開頭記的完全相同
++READONLY_AFTER, _ro_changed = record_readonly_after()
++STATUS = 'completed' if not _ro_changed else 'readonly_changed'
+ OUTPUTS = {
+-    'dumps': DUMP_CHECK,
+-    'inner_games': len(df_val), 'val_questions': len(V['spans']), 'val_games': len(V['feats']),
+-    'val_games_unparsed': int((~_parsed).sum()),
+-    'repro_check_pass': REPRO['pass'], 'training_complete': TRAIN_COMPLETE, 'p2_dumps_done': P2_RESULT['done'],
+-    'finish_without_training': FINISH_WITHOUT_TRAINING,
+-    'p01_readonly_unchanged': not _p01_changed, 'p01_files_fingerprinted': len(P01_AFTER),
+-    'history': history,
++    'dumps': DUMP_CHECK, 'seam_check_passed': SEAM['passed'], 'seam_bitwise_equal': SEAM['bitwise_equal'],
++    'readonly_unchanged': not _ro_changed, 'readonly_changed_files': _ro_changed,
+     'files': {n: os.path.getsize(os.path.join(RESULT_DIR, n)) for n in sorted(os.listdir(RESULT_DIR))
+               if os.path.isfile(os.path.join(RESULT_DIR, n))},
+ }
+-RUN.update(end=now_iso(), status='completed' if not _p01_changed else 'p01_changed')
++RUN.update(end=now_iso(), status=STATUS)
++run_log['status'] = STATUS
+ save_config(outputs=OUTPUTS, end=RUN['end'])
++save_config_summary(status=STATUS)
+ save_run_log()
+ mark_time('final_check', time.time() - t0)
+ mark_time('total_this_run', time.time() - RUN_START)
+-print(json.dumps({k: v for k, v in OUTPUTS.items() if k not in ('dumps', 'history')}, ensure_ascii=False, indent=1))
+-print('ckpt/', sorted(os.listdir(CKPT_DIR)))
++print(json.dumps({k: v for k, v in OUTPUTS.items() if k != 'dumps'}, ensure_ascii=False, indent=1))
++print(json.dumps({s: {k: v for k, v in d.items() if k in ('questions', 'games', 'games_unparsed')}
++                  for s, d in DUMP_CHECK.items()}, ensure_ascii=False))
+ 
+-# 結果打包：結果目錄裡除了權重和暫存檔以外的檔案，打成一個 zip 放在結果目錄旁邊
+-RESULTS_ZIP, _skipped_big = pack_results(os.path.basename(RESULT_DIR) + '_results.zip')
++# 結果打包：結果目錄裡除了權重和暫存檔以外的檔案，打成 test02/test02_rank_results.zip（zip 內路徑從 rank/ 起）
++RESULTS_ZIP, _skipped_big = pack_results('test02_rank_results.zip')
+ with zipfile.ZipFile(RESULTS_ZIP) as _zf:
+     _names = set(_zf.namelist())
+-_missing_in_zip = [s for s in _expect if 'rank/dumps/%s.npz' % s not in _names]
+-assert not _missing_in_zip, ('dump 沒進 zip', _missing_in_zip)
++_need = (['rank/' + n for n in ('config.json', 'run_log.json', 'env.json', 'timings.json', 'seam_check.json',
++                                'readonly_before.json', 'readonly_after.json')]
++         + ['rank/%s/dumps/%s' % (s, n) for s in SETS
++            for n in ('val_keys.npz', 'val_%s.npz' % DUMP_NAME, '_DONE_val_keys.json', '_DONE_val_%s.json' % DUMP_NAME,
++                      '_INPUT.json')])
++_missing_in_zip = [n for n in _need if n not in _names]
++assert not _missing_in_zip and not _skipped_big, ('沒進 zip', _missing_in_zip, _skipped_big)
+ _zip_mb = os.path.getsize(RESULTS_ZIP) / 1e6
+-# 下載 zip、刪除執行階段之前，先把 Drive 的寫入全部送出（epoch_9.pth、state.pt 之後還要用）
+ flush_drive()
+-if _p01_changed:
+-    raise SystemExit('prereg01 的目錄在這次執行中被改動（%d 個檔：%s）。結果已打包在 %s，但先不要用；'
+-                     '把這段訊息截圖給 Claude。' % (len(_p01_changed), _p01_changed[:10], RESULTS_ZIP))
+-print('完成。請下載這個檔回傳給 Claude（合併、校準、打分都在本機做）：%s（%.1f MB）' % (RESULTS_ZIP, _zip_mb))
++if _ro_changed:
++    raise SystemExit('prereg01 或 prereg02 的目錄在這次執行中被改動（%s）。結果已打包在 %s，但先不要用；'
++                     '把這段訊息截圖給 Claude。' % ({k: v[:5] for k, v in _ro_changed.items()}, RESULTS_ZIP))
++print('完成。請下載這個檔回傳給 Claude（合併、校準、交件檔都在本機做）：%s（%.1f MB）' % (RESULTS_ZIP, _zip_mb))
+
+====================================================================================================
+notebook metadata
+====================================================================================================
+（完全相同）

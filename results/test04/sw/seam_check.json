@@ -1,0 +1,235 @@
+{
+ "what": "test04 notebook seam (PREREG_04 rev 3 section 11 item 5): seam_val dumps of both prereg03 arms vs the prereg03 val dumps on Drive",
+ "passed": true,
+ "tol": 0.0001,
+ "tol_rule": "1e-4 when the GPU that wrote the seam_val val_p03x_d4 dump (its _DONE_ marker) is the prereg03 dump GPU (and not None, except in SMOKE), else 1e-3; per arm, both arms equal when the environment is the same",
+ "seam_dump_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "reference_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "same_gpu": true,
+ "keys_equal": true,
+ "weights_ok": true,
+ "env_same": true,
+ "env": {
+  "seam_val/val_keys": {
+   "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "torch": "2.11.0+cu128",
+   "cudnn": 91900
+  },
+  "seam_val/val_p03a_d4": {
+   "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "torch": "2.11.0+cu128",
+   "cudnn": 91900
+  },
+  "seam_val/val_p03a_s0_swap": {
+   "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "torch": "2.11.0+cu128",
+   "cudnn": 91900
+  },
+  "seam_val/val_p03b_d4": {
+   "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "torch": "2.11.0+cu128",
+   "cudnn": 91900
+  },
+  "seam_val/val_p03b_s0_swap": {
+   "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "torch": "2.11.0+cu128",
+   "cudnn": 91900
+  },
+  "public/val_keys": {
+   "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "torch": "2.11.0+cu128",
+   "cudnn": 91900
+  },
+  "public/val_p03a_d4": {
+   "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "torch": "2.11.0+cu128",
+   "cudnn": 91900
+  },
+  "public/val_p03a_s0_swap": {
+   "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "torch": "2.11.0+cu128",
+   "cudnn": 91900
+  },
+  "public/val_p03b_d4": {
+   "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "torch": "2.11.0+cu128",
+   "cudnn": 91900
+  },
+  "public/val_p03b_s0_swap": {
+   "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "torch": "2.11.0+cu128",
+   "cudnn": 91900
+  },
+  "private/val_keys": {
+   "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "torch": "2.11.0+cu128",
+   "cudnn": 91900
+  },
+  "private/val_p03a_d4": {
+   "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "torch": "2.11.0+cu128",
+   "cudnn": 91900
+  },
+  "private/val_p03a_s0_swap": {
+   "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "torch": "2.11.0+cu128",
+   "cudnn": 91900
+  },
+  "private/val_p03b_d4": {
+   "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "torch": "2.11.0+cu128",
+   "cudnn": 91900
+  },
+  "private/val_p03b_s0_swap": {
+   "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "torch": "2.11.0+cu128",
+   "cudnn": 91900
+  }
+ },
+ "env_rule": "the 12 logits markers (3 sets x 2 arms x {d4, s0_swap}) and the 3 key markers carry the same gpu_name, torch and cudnn",
+ "arms": {
+  "a": {
+   "keys_equal": {
+    "question_id": true,
+    "slot": true,
+    "color": true,
+    "parsed": true
+   },
+   "tol": 0.0001,
+   "c0_s0_max_abs_diff": 0.0,
+   "c0_swap_max_abs_diff": 0.0,
+   "bitwise_equal_d4": true,
+   "bitwise_equal_swap": true,
+   "max_abs_logit_diff_per_sym": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "max_abs_logit_diff_swap": 0.0,
+   "max_abs_e_diff_s0": 0.0,
+   "max_abs_e_diff_swap": 0.0,
+   "rule_b_differences_s0_record_only": 0,
+   "problems": [],
+   "questions": 1589,
+   "games": 19156,
+   "games_parsed": 19156,
+   "passed": true,
+   "weights_ok": true,
+   "weights_mismatch": [],
+   "same_gpu": true,
+   "seam_dump_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "reference_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "seam_dump": {
+    "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "torch": "2.11.0+cu128",
+    "cudnn": 91900,
+    "run": 1,
+    "sha256": "1e4e5957442596358b087e5f4e69c1fcf9f22f2c7933cc2049066bfab3075ecd",
+    "weights_sha256": "790b767c5425e262130d6c103c71e89238edb17f927fa48e2a2770db788e50ac"
+   },
+   "reference_dump": {
+    "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "torch": "2.11.0+cu128",
+    "cudnn": 91900,
+    "run": 1,
+    "sha256": "1e4e5957442596358b087e5f4e69c1fcf9f22f2c7933cc2049066bfab3075ecd",
+    "weights_sha256": "790b767c5425e262130d6c103c71e89238edb17f927fa48e2a2770db788e50ac"
+   },
+   "file_sha_equal_d4": true,
+   "file_sha_equal_swap": true
+  },
+  "b": {
+   "keys_equal": {
+    "question_id": true,
+    "slot": true,
+    "color": true,
+    "parsed": true
+   },
+   "tol": 0.0001,
+   "c0_s0_max_abs_diff": 0.0,
+   "c0_swap_max_abs_diff": 0.0,
+   "bitwise_equal_d4": true,
+   "bitwise_equal_swap": true,
+   "max_abs_logit_diff_per_sym": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "max_abs_logit_diff_swap": 0.0,
+   "max_abs_e_diff_s0": 0.0,
+   "max_abs_e_diff_swap": 0.0,
+   "rule_b_differences_s0_record_only": 0,
+   "problems": [],
+   "questions": 1589,
+   "games": 19156,
+   "games_parsed": 19156,
+   "passed": true,
+   "weights_ok": true,
+   "weights_mismatch": [],
+   "same_gpu": true,
+   "seam_dump_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "reference_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "seam_dump": {
+    "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "torch": "2.11.0+cu128",
+    "cudnn": 91900,
+    "run": 1,
+    "sha256": "bad2277dd20bf832c02213be781768ba9d8a304922693bee383a28aa3531a627",
+    "weights_sha256": "8e88f6ec6cbaad5372e5d62607b99ece3d77dc7a20af86a9197553f1a6c59a42"
+   },
+   "reference_dump": {
+    "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "torch": "2.11.0+cu128",
+    "cudnn": 91900,
+    "run": 1,
+    "sha256": "bad2277dd20bf832c02213be781768ba9d8a304922693bee383a28aa3531a627",
+    "weights_sha256": "8e88f6ec6cbaad5372e5d62607b99ece3d77dc7a20af86a9197553f1a6c59a42"
+   },
+   "file_sha_equal_d4": true,
+   "file_sha_equal_swap": true
+  }
+ },
+ "bitwise_equal": true,
+ "problems": [],
+ "run": 1,
+ "created": "2026-11-04T07:49:50+00:00",
+ "smoke": false,
+ "gpu_this_run": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "torch_this_run": "2.11.0+cu128",
+ "cudnn_this_run": 91900,
+ "reference_sha256": {
+  "a": {
+   "val_keys.npz": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+   "val_p03a_d4.npz": "1e4e5957442596358b087e5f4e69c1fcf9f22f2c7933cc2049066bfab3075ecd",
+   "val_p03a_s0_swap.npz": "b355c26bf68069feb0e48ee95c46bd211c2bdbc6b5a48416c8408a210aec3848"
+  },
+  "b": {
+   "val_keys.npz": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+   "val_p03b_d4.npz": "bad2277dd20bf832c02213be781768ba9d8a304922693bee383a28aa3531a627",
+   "val_p03b_s0_swap.npz": "0cadff4bae36b2a41f02fddf4366a2081d9912ede4a3063c8b50fd28a2647527"
+  }
+ },
+ "reference_env": {
+  "a": {
+   "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "torch": "2.11.0+cu128",
+   "cudnn": 91900
+  },
+  "b": {
+   "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "torch": "2.11.0+cu128",
+   "cudnn": 91900
+  }
+ },
+ "earlier_runs": []
+}

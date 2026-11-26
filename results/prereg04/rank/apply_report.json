@@ -1,0 +1,297 @@
+{
+ "format": "c10-prereg04 rank apply_report v1",
+ "what": "PREREG_04 competition 2 apply: frozen configuration on the validation questions",
+ "created": "2026-09-29T17:09:47+08:00",
+ "seconds": 0.9,
+ "smoke": false,
+ "preview": false,
+ "design_input": false,
+ "commit_check": {
+  "files": 1,
+  "git_head": "89fddac12547bd4ba2a706a089bf91257acc8786"
+ },
+ "inputs_commit_check": {
+  "files": 17,
+  "git_head": "89fddac12547bd4ba2a706a089bf91257acc8786"
+ },
+ "check_report": {
+  "sha256": "e80b3806197514c6d3d6ebf1ea115e62106291e851e07b45474f62a975eff1c9",
+  "equal_to_frozen_config_record": true,
+  "commit_check": {
+   "files": 1,
+   "git_head": "89fddac12547bd4ba2a706a089bf91257acc8786"
+  }
+ },
+ "combo": {
+  "id": "Q02",
+  "sources": [
+   "C5",
+   "OP",
+   "O4",
+   "SWA",
+   "SWB"
+  ],
+  "terms": [
+   "OP",
+   "O4",
+   "SWA",
+   "SWB"
+  ],
+  "path": "gen",
+  "pool": "log",
+  "calibrated": true,
+  "opening": true
+ },
+ "params": {
+  "path": "gen",
+  "terms": [
+   "OP",
+   "O4",
+   "SWA",
+   "SWB"
+  ],
+  "a": -0.002868204430466803,
+  "gamma": 0.44924502702246777,
+  "w": {
+   "OP": 0.36530333634893786,
+   "O4": 1.1879617321448344,
+   "SWA": 1.391189442106492,
+   "SWB": 0.9644033187249899
+  },
+  "beta": [
+   0.38429025128283867,
+   0.18266455494042838,
+   0.21582357012464126,
+   0.12909177353336326,
+   0.2652776225638259,
+   0.15481418192563182,
+   0.16399880959505675,
+   0.0715243670892457,
+   -0.37639167475059143
+  ],
+  "b": [
+   0.5004659481206654,
+   -0.043002537131289854,
+   0.005014228646370861,
+   -0.09505237940594,
+   -0.05247267542085266,
+   -0.22760655879730707,
+   -0.15266075724741898,
+   -0.18465277798896096,
+   -0.10710898613641402,
+   0.3570764953611474
+  ],
+  "theta": [
+   -0.002868204430466803,
+   0.44924502702246777,
+   0.36530333634893786,
+   1.1879617321448344,
+   1.391189442106492,
+   0.9644033187249899,
+   0.38429025128283867,
+   0.18266455494042838,
+   0.21582357012464126,
+   0.12909177353336326,
+   0.2652776225638259,
+   0.15481418192563182,
+   0.16399880959505675,
+   0.0715243670892457,
+   -0.37639167475059143
+  ]
+ },
+ "questions": 1589,
+ "questions_without_parsed_game": 0,
+ "games": 19156,
+ "games_parsed": 19156,
+ "val_colour_check": {
+  "SWA": {
+   "val_sub_question_dkappa_from_check": 0.03631175839656169
+  },
+  "SWB": {
+   "val_sub_question_dkappa_from_check": 0.034356617152967346
+  },
+  "O4": {
+   "reference": -2.6210633635554172,
+   "source": -2.7260899433855603,
+   "dkappa": 0.1050265798301427,
+   "sub_questions": 2986,
+   "questions_with_a_sub_question": 1589,
+   "question_bootstrap_ci95_recorded_only": [
+    0.07601177046419677,
+    0.13528668686095835
+   ],
+   "definition": "each validation question's parsed games split by the question file's colour (val_keys.npz; no label); sub-questions with >= 2 parsed games; plain mean over sub-questions",
+   "by_colour": {
+    "B": {
+     "dkappa": 0.08983153211435857,
+     "sub_questions": 1492
+    },
+    "W": {
+     "dkappa": 0.12020128611658841,
+     "sub_questions": 1494
+    }
+   }
+  }
+ },
+ "o4_val_file": {
+  "file": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg04\\opp\\val_o4.npz",
+  "sha256": "30d312c02c357f6761567099003885be5e08635b6e6c0b49d71baac137cd9cd4",
+  "layout": "o4/t4",
+  "report": {
+   "file": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg04\\opp\\val_report.json",
+   "sha256": "abbc7a1a1a9af87b9471e14372dd09c090896d7fd352bb97723f5d7dcb1a77bd",
+   "status": "ok",
+   "preview": false,
+   "output_sha256": "30d312c02c357f6761567099003885be5e08635b6e6c0b49d71baac137cd9cd4",
+   "tables_sha256": "f380e0d720edd4429e4858ab87a3e1a5efbbd9de84982c002ab214f19f120de5",
+   "p04_opp_sha256": "b594e0eff135b539616d60f26403ca1a1a37ac3f44855785c36e2cc6be9768fa",
+   "frozen_config_sha256": "ae728e9c936a55dfeced255e9b05b5ac6a4955a7101f108e78c53c679e162661"
+  },
+  "replay_failures": 0,
+  "non_finite_on_parsed_slots": 0,
+  "unparsed_slots_ignored": 0,
+  "rows": 19156,
+  "bound_to_frozen_config": {
+   "frozen_config_sha256": {
+    "val_report": "ae728e9c936a55dfeced255e9b05b5ac6a4955a7101f108e78c53c679e162661",
+    "expected": "ae728e9c936a55dfeced255e9b05b5ac6a4955a7101f108e78c53c679e162661",
+    "equal": true
+   },
+   "p04_opp_sha256": {
+    "val_report": "b594e0eff135b539616d60f26403ca1a1a37ac3f44855785c36e2cc6be9768fa",
+    "expected": "b594e0eff135b539616d60f26403ca1a1a37ac3f44855785c36e2cc6be9768fa",
+    "equal": true
+   },
+   "tables_sha256": {
+    "val_report": "f380e0d720edd4429e4858ab87a3e1a5efbbd9de84982c002ab214f19f120de5",
+    "expected": "f380e0d720edd4429e4858ab87a3e1a5efbbd9de84982c002ab214f19f120de5",
+    "equal": true
+   }
+  }
+ },
+ "inputs_sha256": {
+  "val_p02e9_d4.npz": "ec0b729d805eb9f3458f7a497444b099b8ec47e5cec73703ae4b8bf9cf0a11b2",
+  "val_keys.npz": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+  "frozen_config.json": "ae728e9c936a55dfeced255e9b05b5ac6a4955a7101f108e78c53c679e162661",
+  "val_p03a_s0_swap.npz": "b355c26bf68069feb0e48ee95c46bd211c2bdbc6b5a48416c8408a210aec3848",
+  "val_p03b_s0_swap.npz": "0cadff4bae36b2a41f02fddf4366a2081d9912ede4a3063c8b50fd28a2647527",
+  "O4_val": "30d312c02c357f6761567099003885be5e08635b6e6c0b49d71baac137cd9cd4",
+  "opening_val.npz": "75ffec64f9e949ac0be52ce9e72a4a19bb978a25de2b6ed9d355aac7a1a5ae85",
+  "questions": "73e51bbfd7b051e73cbb62af4b180c403d2422f122240c5e67e9c92303776db5"
+ },
+ "p02_inputs": {
+  "sha256": {
+   "inner_keys.npz": "b686872d459161330af26132fc0ec2617d104be6cd72eae509250ffef0c03ab6",
+   "pseudo_inner.json": "3a51b3dd4edf8e5745f6a7ff52ca925d4a0eacd6a24950ee1b6e3b48fd0b7923",
+   "opening_inner.npz": "054689536524f7d8ea41a19d19b49ae47e7eedd128bd9cad98c429e5f80fdee5",
+   "players_split.csv": "69554875064ecbd83d790b3215c8ba8f9540f217ec4af3e4a8c43228ac2a3dfc",
+   "inner_p02e9_d4.npz": "d042fca41e04a365dd9f7f4ebc31d244d39b24e803a1191cb06ecaaf3d056de5",
+   "val_p02e9_d4.npz": "ec0b729d805eb9f3458f7a497444b099b8ec47e5cec73703ae4b8bf9cf0a11b2",
+   "val_keys.npz": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+   "opening_val.npz": "75ffec64f9e949ac0be52ce9e72a4a19bb978a25de2b6ed9d355aac7a1a5ae85"
+  },
+  "equal_to_prereg02_records": true,
+  "commit_check": {
+   "files": 8,
+   "git_head": "89fddac12547bd4ba2a706a089bf91257acc8786"
+  }
+ },
+ "output": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg04\\rank\\rank_val_probs.csv",
+ "output_sha256": "3c7ab658dc558ce8c6aefdd7b0747de1a60de575d151e9eee96ca6775f442e5c",
+ "tool": {
+  "git_head": "89fddac12547bd4ba2a706a089bf91257acc8786",
+  "dirty_or_untracked": [],
+  "files_sha256_rule": "sha256 of the file with CRLF folded to LF",
+  "files_sha256": {
+   "p04_rank_fuse.py": "c3a647b09c46760239d5b2ee274d56f7231987354fc1c1f6c3ff40102f4b26a2",
+   "p04_opp.py": "b594e0eff135b539616d60f26403ca1a1a37ac3f44855785c36e2cc6be9768fa",
+   "p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "p02_player_fuse.py": "cb1cc1a2ba626a80ed49e7ae8269715f1e123f33777b6ed135380dbd07b35d5b",
+   "p02_player_open.py": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+   "p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+   "p02_rank_opening.py": "a4195fece41aa3d50ecda82d1af93d9c04f49df5fd2157d69dd8a488dea93463",
+   "p02_rank_pseudo.py": "16e5bfdfb2995874ddb11bde1f7a9e786a478b14443453f675a4fb3a480bb098",
+   "p03_rank_fuse.py": "77abd7479d26f0f647a258b4a6d5d2e517808b4c187184f14ff599d70b8aca2f",
+   "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "decide.py": "cf66daf1231b3c2bd60c5b6484245627e133bd0f1cd7ff5557e978da3801d0e3"
+  }
+ },
+ "frozen_tools": {
+  "rule": "sha256 with CRLF folded to LF, working file == HEAD blob",
+  "files_sha256": {
+   "p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "p02_player_fuse.py": "cb1cc1a2ba626a80ed49e7ae8269715f1e123f33777b6ed135380dbd07b35d5b",
+   "p02_player_open.py": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+   "p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+   "p02_rank_opening.py": "a4195fece41aa3d50ecda82d1af93d9c04f49df5fd2157d69dd8a488dea93463",
+   "p02_rank_pseudo.py": "16e5bfdfb2995874ddb11bde1f7a9e786a478b14443453f675a4fb3a480bb098",
+   "p03_rank_fuse.py": "77abd7479d26f0f647a258b4a6d5d2e517808b4c187184f14ff599d70b8aca2f",
+   "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "decide.py": "cf66daf1231b3c2bd60c5b6484245627e133bd0f1cd7ff5557e978da3801d0e3"
+  },
+  "equal_to_prereg02_frozen_config_record": [
+   "c10data.py",
+   "decide.py",
+   "p02_moves.py",
+   "p02_rank_fuse.py",
+   "p02_rank_opening.py",
+   "p02_rank_pseudo.py"
+  ],
+  "equal_to_prereg03_frozen_config_record": [
+   "c10data.py",
+   "decide.py",
+   "p02_moves.py",
+   "p02_rank_fuse.py",
+   "p02_rank_opening.py",
+   "p02_rank_pseudo.py",
+   "p03_rank_fuse.py"
+  ]
+ },
+ "environment": {
+  "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1"
+ },
+ "gates": {
+  "selected": "Q02",
+  "G1": {
+   "threshold": 0.01,
+   "delta": 0.024650946164443077,
+   "passed": true
+  },
+  "G2": {
+   "ci95": [
+    0.013889486536097137,
+    0.0351869621167156
+   ],
+   "se": 0.005576766483826525,
+   "passed": true,
+   "bootstrap": "players within each level, 1000 draws, default_rng(0), paired"
+  },
+  "G3": {
+   "question_mean_difference": 0.024785127028358337,
+   "passed": true,
+   "note": "mean of the per-question score differences on the inner eval rounds, >= 0 with 1e-12 slack"
+  },
+  "G4": {
+   "rank_balanced_difference": 0.027412749480596466,
+   "ci95": [
+    0.02118094400409241,
+    0.03329202526691168
+   ],
+   "by_colour_point_estimates": {
+    "B": 0.03020455583634707,
+    "W": 0.024683483461816813
+   },
+   "passed": true,
+   "questions": 120544,
+   "rule": "single-colour inner pseudo-questions: paired PlayerBootstrap 95 % CI lower bound > 0 and the black and white point estimates > 0"
+  },
+  "passed": true,
+  "reason": "all four gates passed"
+ },
+ "score_allowed": true,
+ "score_blocked_reasons": [],
+ "next": "PY tools/decide.py results/prereg04/rank/rank_val_probs.csv results/prereg04/rank; PY tools/check_submission.py rank results/prereg04/rank/pred_B.csv --questions data/local/rank_val_questions.csv; commit; H4R (PREREG_04 3) only when score_allowed is true"
+}

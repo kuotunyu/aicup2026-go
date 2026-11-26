@@ -1,0 +1,7 @@
+{
+ "set": "private",
+ "question_file": "player_identification_test_private.csv",
+ "sha256": "4b07a403b36875f44007adb22aaa8da3c75ec3994e165f36c29a9400e6efcd11",
+ "candidates_file": "player_identification_candidates_private.csv",
+ "candidates_sha256": "7a8926ca83b43b1dca0e32c23513cbbff2731d623be151cf80ed912a91d91e57"
+}

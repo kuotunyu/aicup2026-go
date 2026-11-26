@@ -1,0 +1,205 @@
+{
+ "reference_check": {
+  "fit_reference": {
+   "rebuilt": {
+    "players": 5767,
+    "games": 720307,
+    "sha256_sorted_player_ids": "9940feed82f435a770030a17b32b5bbf7dc1002daa61616a989b24580bdf664f"
+   },
+   "committed": {
+    "players": 5767,
+    "games": 720307,
+    "sha256_sorted_player_ids": "9940feed82f435a770030a17b32b5bbf7dc1002daa61616a989b24580bdf664f"
+   },
+   "passed": true
+  },
+  "raw": {
+   "vocab": [
+    146421,
+    146421
+   ],
+   "vocab_sha256": [
+    "63974765eeed627eaaaaabbdb47ff3e04621092696564dd87ca834ae486f4cb3",
+    "63974765eeed627eaaaaabbdb47ff3e04621092696564dd87ca834ae486f4cb3"
+   ],
+   "idf_sha256": [
+    "2523d83ca8eed86b7edfa157efbfbbe968ee207263b32f325d5baaff55c4016d",
+    "2523d83ca8eed86b7edfa157efbfbbe968ee207263b32f325d5baaff55c4016d"
+   ],
+   "q99": [
+    0.1004267242871777,
+    0.1004267242871777
+   ],
+   "null_player_ids_equal": true,
+   "null_S2_equal": true,
+   "idf_equal_npz": true,
+   "passed": true
+  },
+  "canon": {
+   "vocab": [
+    144097,
+    144097
+   ],
+   "vocab_sha256": [
+    "7715531569bdf0e87f2c0d7dc632641e377da1dd8e2850504e3f17fb29dac055",
+    "7715531569bdf0e87f2c0d7dc632641e377da1dd8e2850504e3f17fb29dac055"
+   ],
+   "idf_sha256": [
+    "0214853fa9a080b519b87bdf4302e4cd9045855e0465ed37e514bdd12682b3fb",
+    "0214853fa9a080b519b87bdf4302e4cd9045855e0465ed37e514bdd12682b3fb"
+   ],
+   "q99": [
+    0.08085695648061325,
+    0.08085695648061325
+   ],
+   "null_player_ids_equal": true,
+   "null_S2_equal": true,
+   "idf_equal_npz": true,
+   "passed": true
+  }
+ },
+ "pools": {},
+ "t3q": {
+  "rank_prediction_test_public.csv": {
+   "raw": {
+    "questions": 400,
+    "n_above_q99_of_k": 7,
+    "share_above": 0.0175,
+    "expected_null_share": 0.01,
+    "questions_with_k_outside_5_20": 0,
+    "S2_quantiles": {
+     "0.0": 3.019851047561528e-05,
+     "0.01": 0.00016143635489117736,
+     "0.5": 0.00743210485339886,
+     "0.9": 0.027854958379772237,
+     "0.99": 0.08797632035495567,
+     "1.0": 0.1420994261799956
+    }
+   },
+   "canon": {
+    "questions": 400,
+    "n_above_q99_of_k": 3,
+    "share_above": 0.0075,
+    "expected_null_share": 0.01,
+    "questions_with_k_outside_5_20": 0,
+    "S2_quantiles": {
+     "0.0": 1.2641799561147193e-05,
+     "0.01": 7.637536594589656e-05,
+     "0.5": 0.006924477231148904,
+     "0.9": 0.029284397625442726,
+     "0.99": 0.06360944504088259,
+     "1.0": 0.12222267871526077
+    }
+   }
+  },
+  "rank_prediction_test_private.csv": {
+   "raw": {
+    "questions": 400,
+    "n_above_q99_of_k": 11,
+    "share_above": 0.0275,
+    "expected_null_share": 0.01,
+    "questions_with_k_outside_5_20": 0,
+    "S2_quantiles": {
+     "0.0": 7.486980765147866e-05,
+     "0.01": 0.00016610823335571652,
+     "0.5": 0.007997679099156482,
+     "0.9": 0.03583467736716489,
+     "0.99": 0.09548276019843961,
+     "1.0": 0.1805907969472132
+    }
+   },
+   "canon": {
+    "questions": 400,
+    "n_above_q99_of_k": 5,
+    "share_above": 0.0125,
+    "expected_null_share": 0.01,
+    "questions_with_k_outside_5_20": 0,
+    "S2_quantiles": {
+     "0.0": 3.331350976076841e-06,
+     "0.01": 0.00015613233655316805,
+     "0.5": 0.007891560572595366,
+     "0.9": 0.03438931600986479,
+     "0.99": 0.07516861051783869,
+     "1.0": 0.21595182857307532
+    }
+   }
+  }
+ },
+ "verdict": "RECORD_ONLY",
+ "consequence": "rank: only T3q (question profiles) is recorded; it decides nothing",
+ "t1_verdict": "PASS",
+ "t2a_fired": false,
+ "t2a_note": null,
+ "rule": "n_raw = #{S2_raw > q99_raw}, n_canon = #{S2_canon > q99_canon}; overlap iff n_raw >= ceil(0.10 x candidates) OR n_canon >= ceil(0.10 x candidates) (40 of 400)",
+ "black_only_rule": "a pool whose candidate black share b_c is exactly 1 uses T3b (PREREG_02 rev 8; results/test02/null/t3b_null.json); the registered T3 numbers of that pool are recorded only",
+ "low_power_rule": "a pool on the registered T3 with max(b_c, 1 - b_c) >= 0.9 (b_c not exactly 1) is flagged low_power: without a declared overlap its conclusion is 'not determinable (low power)' and T3's verdict LOW_POWER instead of PASS (PREREG_02 rev 8); a declared overlap stays OVERLAP",
+ "low_power_pools": [],
+ "variants": {},
+ "reference": {
+  "players": 5767,
+  "games": 720307,
+  "sha256_sorted_player_ids": "9940feed82f435a770030a17b32b5bbf7dc1002daa61616a989b24580bdf664f"
+ },
+ "format": "c10-test02 t3 v1",
+ "comp": "rank",
+ "provenance": {
+  "tool": "tools/t02_checks.py",
+  "tool_sha256": "a6fb40f99e7af19bfe4eef3f5cbb1d0049a8f0c14a7cc95cddfac73884f99cc8",
+  "tool_committed_clean": true,
+  "c10data_sha256": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+  "p02_moves_sha256": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+  "p02_player_open_sha256": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+  "git_head": "7cdb60ab8d21a33ea0ffe3c3fd08d5b5569e3b44",
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "mode": "real",
+  "argv": [
+   "run",
+   "--comp",
+   "rank"
+  ],
+  "created": "2026-11-04T14:31:56+0800",
+  "inputs": {
+   "results/test02/checks/rank/t1.json": "9ddf1cc98c4085493c7ec81f539acaba5e8a2701ba849d41bf168368a8bcfb2c",
+   "manifest": {
+    "manifest_sha256": "b9e9e8a6a7fc8b7b696d2d4501563cb99aeac6a95e327f3a5e686d04bbdd0bbe",
+    "files": {
+     "rank_prediction_test_public.csv": "75baefaded49ad40584bc52d8bd345410a5c6601c4034ff903746e0d92252bb4",
+     "rank_prediction_test_private.csv": "c8a6a1923af7324fcae6b22987711d1e57b5efe9f882a2a7b42604399d3e2edc"
+    }
+   },
+   "rank_prediction_test_public.csv": "75baefaded49ad40584bc52d8bd345410a5c6601c4034ff903746e0d92252bb4",
+   "rank_prediction_test_private.csv": "c8a6a1923af7324fcae6b22987711d1e57b5efe9f882a2a7b42604399d3e2edc",
+   "results/test02/null/t3_null.json": "1950e9a8af5543dc95f6dd9d28664278ba145fafef153b785905264a6e934dd4",
+   "results/test02/null/t3_null_raw.npz": "4eb9cf053b3ae296df6de020e7f1ecf4caa3e3bc53ed477e0e749a4f4d4da714",
+   "results/test02/null/t3_null_canon.npz": "5312a18c34e71d4a254b5239b508612265be0b38a543b2f65dbd458159fcf69e",
+   "results/test02/null/t3b_null.json": "a8cf38347b326b024a464b84b193846a9ce1c0205df3be072c95f7b107f5e58c",
+   "results/test02/null/t3b_null_raw.npz": "e42318ca89298213175920b0600bc93ec9ed0707d6ea7a063100f7f49c988db7",
+   "results/test02/null/t3b_null_canon.npz": "46589ca3a1d0fadbed9c5831959fbd3f237ade1b18842dbcf340e64c434279fc",
+   "results/test02/null/train_refs.json": "380a0a7fa6e4cb7751e8ee3404a1ccba645ca73dd919a6a5e9a8451636988203"
+  },
+  "rerun_reason": null,
+  "validation_hash_guard": {
+   "available": true,
+   "rule": "real mode: hits are recorded; a file with share >= 0.50 of local validation games is refused (validation-derived tree)",
+   "games_checked": 10000,
+   "validation_hashes": 61558,
+   "hits": 0,
+   "files": {
+    "rank_prediction_test_public.csv": {
+     "games": 5000,
+     "validation_hits": 0,
+     "share": 0.0
+    },
+    "rank_prediction_test_private.csv": {
+     "games": 5000,
+     "validation_hits": 0,
+     "share": 0.0
+    }
+   }
+  },
+  "missing_files_skipped": [],
+  "runtime_s": 278.5
+ }
+}

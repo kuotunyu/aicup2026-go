@@ -1,0 +1,113 @@
+{
+ "weekdays": {
+  "2026-10-01": "四",
+  "2026-10-04": "日",
+  "2026-10-05": "一",
+  "2026-10-07": "三",
+  "2026-10-09": "五",
+  "2026-10-12": "一",
+  "2026-10-14": "三",
+  "2026-10-16": "五",
+  "2026-10-18": "日",
+  "2026-10-19": "一",
+  "2026-10-24": "六",
+  "2026-10-27": "二",
+  "2026-10-30": "五",
+  "2026-10-31": "六",
+  "2026-11-01": "日",
+  "2026-11-02": "一",
+  "2026-11-03": "二",
+  "2026-11-04": "三",
+  "2026-11-05": "四",
+  "2026-11-07": "六",
+  "2026-11-10": "二",
+  "2026-11-15": "日",
+  "2026-11-16": "一",
+  "2026-11-20": "五",
+  "2026-11-23": "一",
+  "2026-11-24": "二"
+ },
+ "adoption_probability": {
+  "SE=0.003": {
+   "delta=0.003": 0.169,
+   "delta=0.005": 0.385,
+   "delta=0.008": 0.76,
+   "delta=0.01": 0.915,
+   "delta=0.015": 0.999,
+   "delta=0.02": 1.0
+  },
+  "SE=0.004": {
+   "delta=0.003": 0.113,
+   "delta=0.005": 0.239,
+   "delta=0.008": 0.516,
+   "delta=0.01": 0.705,
+   "delta=0.015": 0.963,
+   "delta=0.02": 0.999
+  },
+  "SE=0.005": {
+   "delta=0.003": 0.087,
+   "delta=0.005": 0.169,
+   "delta=0.008": 0.359,
+   "delta=0.01": 0.516,
+   "delta=0.015": 0.851,
+   "delta=0.02": 0.979
+  },
+  "SE=0.006": {
+   "delta=0.003": 0.072,
+   "delta=0.005": 0.13,
+   "delta=0.008": 0.265,
+   "delta=0.01": 0.385,
+   "delta=0.015": 0.705,
+   "delta=0.02": 0.915
+  },
+  "SE=0.00738": {
+   "delta=0.003": 0.06,
+   "delta=0.005": 0.1,
+   "delta=0.008": 0.191,
+   "delta=0.01": 0.273,
+   "delta=0.015": 0.529,
+   "delta=0.02": 0.773
+  }
+ },
+ "true_gain_needed": {
+  "SE=0.003": {
+   "p50": 0.0059,
+   "p80": 0.0084
+  },
+  "SE=0.004": {
+   "p50": 0.0078,
+   "p80": 0.0112
+  },
+  "SE=0.005": {
+   "p50": 0.0098,
+   "p80": 0.014
+  },
+  "SE=0.006": {
+   "p50": 0.0118,
+   "p80": 0.0168
+  },
+  "SE=0.00738": {
+   "p50": 0.0145,
+   "p80": 0.0207
+  }
+ },
+ "formula": "Phi(delta / SE - 1.96) (tools/p03_rank_fuse.se_val_record)",
+ "se_reference_inner_based": {
+  "Q01_vs_R20": 0.00693594129100802,
+  "Q02_vs_R20": 0.007378616638272913,
+  "source": "results/prereg04/rank/tune_report.json combinations[1|2].oof.se_val_record (inner only, before H4R)"
+ },
+ "elapsed_hours_from_git": {
+  "prereg02 rev1 -> impl (a7fe166)": 2.27,
+  "prereg02 test-day kit rev5 -> e2e fixes (74486a2)": 3.67,
+  "prereg03 rev1 -> impl with 3 reviews (39ebccb)": 7.1,
+  "prereg03 Colab unpack -> RESULTS (e3fc40a)": 0.23,
+  "prereg04 rev1 -> impl rev2 (82027fa)": 4.02,
+  "prereg04 impl -> H4R scored (e8b24f2)": 0.78,
+  "prereg04 rev1 -> RESULTS verified (608d702)": 5.02,
+  "test04 branch point 6ec5e68 -> design 9f63acd": 10.15,
+  "test04 design -> implementation 62ca557": 13.67,
+  "test04 implementation -> merge f4853e5 (2 K5 gate rounds)": 8.32,
+  "test04 branch point -> merge (whole test-day extension)": 32.13
+ }
+}

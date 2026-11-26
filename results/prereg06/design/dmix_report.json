@@ -1,0 +1,282 @@
+{
+ "what": "PREREG_06 S7 (2.8) D-mix: black-and-white pools of fit players; O_raw + v2 (per colour, V2 weights) + CSLS10 vs O_raw + CSLS10; no CNN",
+ "seeds": [
+  700,
+  701,
+  702,
+  703,
+  704,
+  705,
+  706,
+  707,
+  708,
+  709
+ ],
+ "main_diff": [
+  0.05514,
+  0.04868,
+  0.0616
+ ],
+ "passed": true,
+ "stop_rule": "main mean difference <= 0 -> 06 is not scored on the local validation set",
+ "recorded_only_blackonly_diff": [
+  0.02283,
+  0.01378,
+  0.03188
+ ],
+ "scores": {
+  "base": [
+   0.92185,
+   0.91346,
+   0.93024
+  ],
+  "main": [
+   0.97699,
+   0.97306,
+   0.98091
+  ],
+  "blackonly": [
+   0.94468,
+   0.93711,
+   0.95225
+  ]
+ },
+ "per_seed": [
+  {
+   "seed": 700,
+   "base_O_csls10": 0.9136283212148245,
+   "main_O_v2_csls10": 0.9757045220077534,
+   "blackonly_O_v2_csls10": 0.94374226863356,
+   "candidate_black_share": 0.501175,
+   "question_black_share": 0.4960130852586383,
+   "not_alternating_games": 0,
+   "lda_train": {
+    "B": [
+     850,
+     179785
+    ],
+    "W": [
+     846,
+     178491
+    ]
+   },
+   "seconds": 9.5
+  },
+  {
+   "seed": 701,
+   "base_O_csls10": 0.9144634280889616,
+   "main_O_v2_csls10": 0.9747395981332109,
+   "blackonly_O_v2_csls10": 0.946578995339068,
+   "candidate_black_share": 0.503525,
+   "question_black_share": 0.4934117170079059,
+   "not_alternating_games": 0,
+   "lda_train": {
+    "B": [
+     850,
+     181327
+    ],
+    "W": [
+     846,
+     179823
+    ]
+   },
+   "seconds": 9.2
+  },
+  {
+   "seed": 702,
+   "base_O_csls10": 0.9159282946308441,
+   "main_O_v2_csls10": 0.9688354093267145,
+   "blackonly_O_v2_csls10": 0.9493266246229041,
+   "candidate_black_share": 0.499475,
+   "question_black_share": 0.5014724442574674,
+   "not_alternating_games": 0,
+   "lda_train": {
+    "B": [
+     852,
+     182654
+    ],
+    "W": [
+     843,
+     181188
+    ]
+   },
+   "seconds": 9.6
+  },
+  {
+   "seed": 703,
+   "base_O_csls10": 0.9042672970170712,
+   "main_O_v2_csls10": 0.9757933610483976,
+   "blackonly_O_v2_csls10": 0.9294409318268773,
+   "candidate_black_share": 0.4922,
+   "question_black_share": 0.49391727493917276,
+   "not_alternating_games": 0,
+   "lda_train": {
+    "B": [
+     867,
+     185126
+    ],
+    "W": [
+     844,
+     182571
+    ]
+   },
+   "seconds": 9.7
+  },
+  {
+   "seed": 704,
+   "base_O_csls10": 0.92000765169547,
+   "main_O_v2_csls10": 0.9818220175258137,
+   "blackonly_O_v2_csls10": 0.9357818945234478,
+   "candidate_black_share": 0.499775,
+   "question_black_share": 0.5080677692617991,
+   "not_alternating_games": 0,
+   "lda_train": {
+    "B": [
+     862,
+     180524
+    ],
+    "W": [
+     849,
+     179269
+    ]
+   },
+   "seconds": 9.7
+  },
+  {
+   "seed": 705,
+   "base_O_csls10": 0.9276116950879666,
+   "main_O_v2_csls10": 0.973684707566808,
+   "blackonly_O_v2_csls10": 0.942714175981752,
+   "candidate_black_share": 0.501775,
+   "question_black_share": 0.5006165228113441,
+   "not_alternating_games": 0,
+   "lda_train": {
+    "B": [
+     858,
+     182288
+    ],
+    "W": [
+     851,
+     180119
+    ]
+   },
+   "seconds": 9.7
+  },
+  {
+   "seed": 706,
+   "base_O_csls10": 0.9283633122509451,
+   "main_O_v2_csls10": 0.9806426592884913,
+   "blackonly_O_v2_csls10": 0.9702024040122219,
+   "candidate_black_share": 0.501375,
+   "question_black_share": 0.5062977493289283,
+   "not_alternating_games": 0,
+   "lda_train": {
+    "B": [
+     853,
+     181215
+    ],
+    "W": [
+     851,
+     179292
+    ]
+   },
+   "seconds": 6.4
+  },
+  {
+   "seed": 707,
+   "base_O_csls10": 0.9380067250926217,
+   "main_O_v2_csls10": 0.9804454261989676,
+   "blackonly_O_v2_csls10": 0.9445761237903514,
+   "candidate_black_share": 0.49895,
+   "question_black_share": 0.4992956329241296,
+   "not_alternating_games": 0,
+   "lda_train": {
+    "B": [
+     837,
+     177949
+    ],
+    "W": [
+     833,
+     175150
+    ]
+   },
+   "seconds": 6.3
+  },
+  {
+   "seed": 708,
+   "base_O_csls10": 0.9148185821514889,
+   "main_O_v2_csls10": 0.9711156256344489,
+   "blackonly_O_v2_csls10": 0.9411338745846807,
+   "candidate_black_share": 0.50125,
+   "question_black_share": 0.5115376761282417,
+   "not_alternating_games": 0,
+   "lda_train": {
+    "B": [
+     850,
+     182854
+    ],
+    "W": [
+     842,
+     181338
+    ]
+   },
+   "seconds": 6.4
+  },
+  {
+   "seed": 709,
+   "base_O_csls10": 0.9413967082203689,
+   "main_O_v2_csls10": 0.9870984930146429,
+   "blackonly_O_v2_csls10": 0.9433051873585854,
+   "candidate_black_share": 0.507725,
+   "question_black_share": 0.5146661119201165,
+   "not_alternating_games": 0,
+   "lda_train": {
+    "B": [
+     842,
+     181916
+    ],
+    "W": [
+     842,
+     182010
+    ]
+   },
+   "seconds": 6.3
+  }
+ ],
+ "workers": 6,
+ "thread_env_per_worker": 4,
+ "feature_store_check": {
+  "checked": true,
+  "build_report_sha256": "5a103fa0726e82b00b573db71350cd3fcb49dfb785a63891f5c1b8dda2a1dbf4",
+  "lda_report_sha256": "07dd419d1c4acf3290768c42bde3452b895ee3d082c82e62979b975a654d7633"
+ },
+ "command": "dmix",
+ "mode": "real",
+ "precommit": false,
+ "created": "2026-10-03T11:36:56+08:00",
+ "git_head": "2715549b4a7103badd656ef62928b4c99fd8a6d8",
+ "tools": {
+  "tools/p06_style.py": {
+   "sha256_lf": "78beb8138c27853da70081e469e534508174265852a64ebada21e354ae72058a",
+   "committed_and_clean": true
+  },
+  "tools/p06_sim.py": {
+   "sha256_lf": "21deeea1eb08b1d6580ba78c47505789f66dbdd10c8891973e14f523ef443eeb",
+   "committed_and_clean": true
+  },
+  "tools/p06_player.py": {
+   "sha256_lf": "b25636878ee87ca828a9c65177965dc60466ac4e9aa348acd88785ca11075590",
+   "committed_and_clean": true
+  }
+ },
+ "env": {
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "executable": ".venv/Scripts/python.exe"
+ },
+ "inputs": {
+  "lda_report.json": "07dd419d1c4acf3290768c42bde3452b895ee3d082c82e62979b975a654d7633"
+ },
+ "seconds": 19.7
+}

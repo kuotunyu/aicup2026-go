@@ -1,0 +1,73 @@
+{
+ "format": "c10-g11 input record v1",
+ "input_id": "rehearsal",
+ "mode": "rehearsal",
+ "created": "2026-10-10T08:37:57+00:00",
+ "manifest_sha256": "2679955f52e5994234f92cde9bb665304b25e37976e744e4b66eb9763364ade4",
+ "manifest": {
+  "format": "c10-g11 input v1",
+  "input_id": "rehearsal",
+  "mode": "rehearsal",
+  "kit_id": "g11-kit-v1-de2a1ffa6727",
+  "created": "2026-10-10T08:37:57+00:00",
+  "git_head": "8e64b3e13961b6bee12da2493e4c1bccc320613a",
+  "runs": [
+   {
+    "stage": "hs",
+    "set": "seam"
+   },
+   {
+    "stage": "hs",
+    "set": "offgrid"
+   },
+   {
+    "stage": "p1",
+    "set": "seam"
+   },
+   {
+    "stage": "p1",
+    "set": "offgrid"
+   }
+  ],
+  "sets": {
+   "seam": {
+    "file": "sets/seam.json",
+    "sha256": "d39f53f95640756305307a762bb8afd5e8c7cdd0dd9292e53d6e332cedf9ace4",
+    "games": 400,
+    "keys_sha256": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+    "questions_sha256": "73e51bbfd7b051e73cbb62af4b180c403d2422f122240c5e67e9c92303776db5",
+    "source": {
+     "validation_rows": [
+      0,
+      400
+     ],
+     "file": "the registered validation question file (pf7.QUESTIONS_SHA)"
+    }
+   },
+   "offgrid": {
+    "file": "sets/offgrid.json",
+    "sha256": "579f47dc51fdd2af921828170d9d77ccc9408b6a052cedfc5ce648d18e910446",
+    "games": 1000,
+    "keys_sha256": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+    "questions_sha256": "73e51bbfd7b051e73cbb62af4b180c403d2422f122240c5e67e9c92303776db5",
+    "source": {
+     "validation_rows": [
+      4787,
+      5787
+     ],
+     "file": "the registered validation question file (pf7.QUESTIONS_SHA)"
+    }
+   }
+  }
+ },
+ "zip": {
+  "file": "C10_gpu_input_rehearsal.zip",
+  "sha256": "ccba487a543bbe8b085d693f162142eac235d7ed25e376f4d45582f8a67911c1",
+  "bytes": 494317
+ },
+ "tool": {
+  "git_head": "8e64b3e13961b6bee12da2493e4c1bccc320613a",
+  "g11_gpu_fallback.py": "bb1bbc14800d9915c1b8fbb7a78d3e6d44c8294838906db793ca5af3522986f4",
+  "gpu_fallback_core.py": "980c8beeb0e0a3602988c2086257ef86d27c1b15639236a26d7bbc4ee1187c33"
+ }
+}

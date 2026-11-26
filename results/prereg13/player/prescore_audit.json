@@ -1,0 +1,104 @@
+{
+ "format": "c10-prereg13 player prescore_audit v1",
+ "what": "PREREG_13 5.3 independent pre-score audit of the black-only view outputs (no answers read, no score seen or computed, tools/score.py neither run nor imported)",
+ "auditor": "Claude subagent (independent of tools/p13_view.py authoring), 2026-10-13",
+ "program_errors_affecting_view": [],
+ "independent_recompute_identical": true,
+ "outputs_sha256": {
+  "view_06_top5.csv": "85aa19b0ce8e86e8acae22b873d8fcb28604c7f8235a9a440f7b8c69eb888399",
+  "view_10b_top5.csv": "44ca2d4b727953ccc2bdcbdca552c136378119aacb28d1c8d9e6f7c9f68f8b05",
+  "view_report.json": "4df21ee36fe0a263ea9c5ec838a47f291b5edc17ba3dc77d20c0758495cec257"
+ },
+ "inputs_sha256": {
+  "p1_lda.npz": "924357870cd55ebfb8cc6856d3ec5d9d00542882a3c7a07176f1ab552337a40a",
+  "frozen_config.json": "8e2bd5a312c5174a731e783671b7dccc37449d5f0274511434ee9523bd93c88b",
+  "val_report.json": "76ed0b83d529d70977679be2de66d8f5081800c4b30c67c442b5ddcc558c70f4"
+ },
+ "sha_method": "top5 files and view_report.json: SHA-256 of the bytes with CRLF folded to LF (equal to raw; files are LF); p1_lda.npz raw; frozen_config.json and val_report.json CRLF folded to LF (as view_report.json records them)",
+ "view_report_commit": "2026-10-13T11:49:38+08:00 (6cec628)",
+ "method": "own script (scratchpad, does not import tools/p13_view.py): p10_apply.apply_prerequisites for the frozen B inputs; p02 Data and readers inside p06_style.allow_local() for the two validation game files only; colours read independently from cand_games.npz / query_games.npz by key and compared to the game files; own sr06 loop (p06_style.sr06_rounds strict=False, empty pseudo questions skipped), own selection rule (max, earliest within 0.003, cross-checked with p06_player.choose_combo), own CSV writer and own 400-row assembly; frozen library calls only (p06_player.MemStore/apply_terms, p06_sim.combo_F, p06_style.csls/top5/ranks/points, p10_fuse.load_side0/project_p1/z_p1/fuse_10b). Secondary check: a second pool with the white and non-view rows physically deleted (new MemStore and O_raw vocabulary).",
+ "checks": {
+  "identity_view_of_own_code": {
+   "top5_06_equals_prereg06": true,
+   "top5_10b_equals_prereg10": true,
+   "sr06_equal_p10_report": true,
+   "sr06_10B_equal_p10_report": true,
+   "selected": "V2",
+   "pool_gate_equal": true
+  },
+  "colour_dumps_equal_game_files": true,
+  "input_shas_equal_06_apply_report": true,
+  "game_order_equals_val_report": true,
+  "view_structure": {
+   "n_view": 263,
+   "candidates": 400,
+   "candidates_without_black": 0,
+   "candidate_black_games_total": 20109,
+   "candidate_black_min": 2,
+   "candidate_black_median": 49.0,
+   "candidate_black_max": 100,
+   "questions_by_black_games": {
+    "0": 5,
+    "1-4": 132,
+    ">=5": 263
+   },
+   "view_question_black_games_total": 2141,
+   "view_games": 22250,
+   "p1_failed_in_view": 0,
+   "n_view_equal": true,
+   "view_question_ids_equal": true,
+   "per_candidate_black_counts_equal": true,
+   "per_question_black_counts_equal": true,
+   "p1_view_counts_equal": true
+  },
+  "selection": {
+   "sr06_equal_6dp": true,
+   "sr06_10B_equal_6dp": true,
+   "selected": "V2",
+   "selected_equal": true,
+   "pseudo_questions_per_round": [
+    398,
+    399,
+    399,
+    399,
+    400,
+    398,
+    399,
+    399,
+    399,
+    400
+   ]
+  },
+  "gates": {
+   "V2_abs_diff": 0.0,
+   "V3_abs_diff": 0.0,
+   "V2_passed": true,
+   "V3_passed": true
+  },
+  "top5": {
+   "view_06_top5_bytes_identical": true,
+   "view_10b_top5_bytes_identical": true,
+   "changed_top1_equal": true,
+   "nonview_rows": 137,
+   "nonview_rows_identical_to_prereg06": true,
+   "row_order_is_question_file_order": true,
+   "format_check_returncodes_in_report": [
+    0,
+    0
+   ]
+  },
+  "deletion_cross_check": {
+   "view_06_top5_identical": true,
+   "view_10b_top5_identical": true,
+   "selected": "V2",
+   "max_abs_sr06_diff": 0.0,
+   "max_abs_sr06_10B_diff": 0.0
+  }
+ },
+ "code_review_tools_p13_view": {
+  "program_errors_affecting_view": [],
+  "notes_not_affecting_view": [
+   "After apply --finalize rewrites view_report.json, `status` recomputes the audit binding against the rewritten file, so it will print audit 'unbound' (cosmetic; finalize records view_report_sha256_at_audit; no effect on the view, the two files or score_allowed)."
+  ]
+ }
+}

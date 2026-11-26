@@ -1,0 +1,27 @@
+== base python 3.10
+python 3.10.9
+
+rank prereg01 B: details identical: True  {'exact_rate': 0.3303964757709251, 'adjacent_rate': 0.4392699811202014}
+  mean  then 0.4919948709488189  now 0.49199487094881483  diff -4.052e-15
+  rank-balanced then 0.4908937784188385  now 0.49089377841883897  diff 4.441e-16
+  correctly rounded mean from the counts (525 exact, 698 adjacent): 0.49199487094881483
+  now == correctly rounded: True; then == correctly rounded: False
+
+player prereg01: details identical: True  {'top1_rate': 0.3, 'top5_rate': 0.6025}
+  mean  then 0.3668476608218301  now 0.36684766082183023  diff 1.110e-16
+
+sum([0.1]*10) = 0.9999999999999999  math.fsum = 1.0
+
+== .venv python 3.12
+python 3.12.13
+
+rank prereg01 B: details identical: True  {'exact_rate': 0.3303964757709251, 'adjacent_rate': 0.4392699811202014}
+  mean  then 0.4919948709488189  now 0.49199487094881483  diff -4.052e-15
+  rank-balanced then 0.4908937784188385  now 0.49089377841883897  diff 4.441e-16
+  correctly rounded mean from the counts (525 exact, 698 adjacent): 0.49199487094881483
+  now == correctly rounded: True; then == correctly rounded: False
+
+player prereg01: details identical: True  {'top1_rate': 0.3, 'top5_rate': 0.6025}
+  mean  then 0.3668476608218301  now 0.36684766082183023  diff 1.110e-16
+
+sum([0.1]*10) = 1.0  math.fsum = 1.0

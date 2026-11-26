@@ -1,0 +1,49 @@
+{
+ "what": "prereg05 exploration B2 (opp_cells_v2): finer opponent-move cells (line position, approximate own-group liberties after the move). Variant list fixed BEFORE any counting or scoring; no variant is added afterwards.",
+ "written": "2026-10-01T19:06:00+08:00 (before b2_count.py / b2_score.py were run)",
+ "design_stage_only": "inner pseudo-questions of training players only; not validation results; data/local is never opened; score.py is never run",
+ "subsample": {
+  "players": "the 5,767 fit players of data/prereg04/design_scratch/moves_fit.npz (split v1 fit)",
+  "rule": "within each level, sort the level's fit players by sha256('c10-p05-b2|' + player_id) (hex, ascending) and keep the first ceil(25 % of the level's players); all their fit games",
+  "list_sha256_definition": "sha256 of the UTF-8 bytes of '\\n'.join(sorted(selected player_id))",
+  "fallback": "if the 25 % count run exceeds 55 minutes it is stopped and rerun on 12.5 % (same rule with ceil(12.5 %)); written in the report"
+ },
+ "inputs": {
+  "fit_moves": "data/prereg04/design_scratch/moves_fit.npz (off, player_id, color, label) + moves_fit_moves.npy (SHA-256 equal to results/prereg04/design/scratch_manifest.json; registered count_report.json design_moves_seam: arrays equal)",
+  "inner_moves": "data/prereg04/design_scratch/moves_inner.npz + moves_inner_moves.npy, re-indexed to results/prereg02/rank/dumps/inner_keys.npz row order by (rank, game_id); player_id and colour must agree",
+  "never_used": "tools/c10data.load_rows, tools/p04_opp.load_part, anything under data/local"
+ },
+ "cells": {
+  "base": "O4 cell of tools/p04_opp.cells_of, unchanged: ((((pat*8+tac)*7+d_opp)*3+d_own)*3+phase), 557,928 cells",
+  "line4": "line = min(r, c, 18-r, 18-c) + 1 of the empty point; line4 = 0 for line 1-2, 1 for line 3, 2 for line 4, 3 for line >= 5",
+  "lib3": "approximate liberties of the mover's own block after playing the empty point = (number of empty on-board 4-neighbours) + sum over the DISTINCT own blocks adjacent to the point of (that block's liberties - 1); captures are ignored (they are in tac); lib3 = 0 for <= 1, 1 for 2, 2 for >= 3",
+  "N_both": "(cell * 4 + line4) * 3 + lib3, 6,695,136 cells",
+  "empty_points": "recomputed with the same np.nonzero(board == 0) as cells_of (asserted identical order); own blocks recomputed with scipy.ndimage.label (4-connectivity) and the liberties with p04_opp._libs4",
+  "counted_side": "opponent moves only (C_o, A_o); level = the TARGET player's level; one int32 N_both accumulator pair per worker; every other table is an integer marginal sum of N_both"
+ },
+ "variants": {
+  "V0": {"cells": "O4 cell (N_both summed over line4 and lib3)", "n_cells": 557928, "rate": "registered formula, alpha 20", "role": "same-data (25 %) control"},
+  "V1": {"cells": "cell x line4 (= N_both // 3)", "n_cells": 2231712, "rate": "registered formula, alpha 20"},
+  "V2": {"cells": "cell x lib3 (= cell * 3 + lib3)", "n_cells": 1673784, "rate": "registered formula, alpha 20"},
+  "V3": {"cells": "N_both", "n_cells": 6695136, "rate": "r_k(x) = (C_k(x) + 20) / (A_k(x) + 20 / (r(x) * r_k^V0(cell(x)) / r^V0(cell(x)))), r(x) = (C(x) + 1) / (A(x) + 1 / r0) pooled over the levels on N_both, r^V0 the pooled V0 rate, r_k^V0 the V0 level-k rate"}
+ },
+ "registered_formula": "r0 = sum C / sum A; r(c) = (C(c) + 1) / (A(c) + 1 / r0); r_k(c) = (C_k(c) + 20) / (A_k(c) + 20 / r(c)); per opponent move log P_k = log r_k(played cell) - log sum_{empty q} r_k(cell(q)); per game: per phase sums, then summed over the 3 phases -> 10-vector",
+ "fusion": "lp['Vi'] = log_softmax(o_Vi); u1_lib.run_gen(d, ['OP', 'Vi', 'SWA', 'SWB']) i.e. Q02 with O4 replaced by Vi (the task text writes ['Vi','SWA','SWB'] and 'replace O4 in Q02 by Vi'; Q02's terms are OP, O4, SWA, SWB, so OP is kept); 5-fold OOF, rule B, parameters fitted only on the other folds' fit questions",
+ "seams_stop_on_failure": {
+  "a": "first 300 subsample games: tools/p04_opp._count_shard (O4 cells, opponent side) == N_both marginal summed over line4 and lib3, cell by cell (C_o and A_o)",
+  "b": "slow per-point reference (p04_opp.ref_cell for the base cell + BFS liberties and line for the new parts) on >= 50 positions: 0 mismatches",
+  "c": "u1_lib.run_gen(d, ['OP','O4','SWA','SWB']) reproduces Q02 0.6101211982700248 (eval) and 0.6106683012815998 (single colour) within 1e-12",
+  "extra": "the replay also gathers the registered O4 opponent table (data/prereg04/counts_fit.npz via p04_opp.build_tables) and must equal results/prereg04/opp/inner_o4.npz 'o4' on every inner game within 1e-12 (checks the inner move alignment and the scoring path)"
+ },
+ "comparisons": {
+  "primary": "Vi - V0 (i = 1..3; both 25 % data, only the cells differ)",
+  "also": ["Vi - Q02 (i = 0..3; Q02's O4 uses 100 % of the fit data: conservative for the new cells)", "V0 - Q02 = the loss from 100 % -> 25 % data (a data-size point for B4)"],
+  "items": "rank-balanced mean difference on the 127,200 inner eval questions; paired PlayerBootstrap 95 % CI (decision; players within each level, 1,000 draws, default_rng(0)); qboot 95 % CI (record only; questions within each level, 2,000 draws, default_rng(0)); per-question mean difference; 10 levels; n bins 5-7 / 8-12 / 13-20; single-colour pseudo-questions (120,544): all / black / white via p03_rank_fuse.mono_diff_record and k = 5 / 10 / 15 / 20; official-shape weighted (single colour, each level 1/10, each k 1/4) with a paired PlayerBootstrap CI; p03_rank_fuse.se_val_record; per-game top-1 accuracy of each o_Vi on the 73,556 inner games (record only)"
+ },
+ "success_signal_fixed_before_running": {
+  "enter_full_confirmation": "any Vi (i = 1..3) with (Vi - V0) >= +0.005, PlayerBootstrap 95 % lower bound > 0, and single-colour black and white differences both > 0",
+  "full_confirmation": "recount N_both on 100 % of fit (2-3 player-hash parts, each run < 60 min, summed); full (Vi - Q02) >= +0.008, lower bound > 0, single-colour black and white > 0 -> write PREREG_05",
+  "direct_pass": "if the 25 % (Vi - Q02) is already >= +0.008 with lower bound > 0",
+  "otherwise": "B2 stops"
+ }
+}

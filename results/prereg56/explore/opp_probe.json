@@ -1,0 +1,48 @@
+{
+ "D_store": {
+  "games": 94015,
+  "groups": 300,
+  "opponent_side": {
+   "frac_games_with_ge10_nbrs": 0.9515396479285221,
+   "frac_games_with_ge50_nbrs": 0.6295484763069723,
+   "knn10_median": 0.530999439817176,
+   "knn10_p90": 0.6172518429577761,
+   "nbrs_above_thr_max": 959,
+   "nbrs_above_thr_median": 70.0,
+   "nbrs_above_thr_p90": 236.0
+  },
+  "player_frac_ge10": 0.9393501037068553,
+  "player_frac_ge50": 0.6046375578365154,
+  "player_side": {
+   "knn10_median": 0.5254844122706357,
+   "knn10_p90": 0.6062088055473099,
+   "nbrs_above_thr_max": 1099,
+   "nbrs_above_thr_median": 67.0,
+   "nbrs_above_thr_p90": 233.0
+  },
+  "thr_p999_player_pairs": 0.45143138448219405
+ },
+ "rank_test": {
+  "games": 10000,
+  "groups": 800,
+  "opponent_side": {
+   "frac_games_with_ge10_nbrs": 0.3541,
+   "frac_games_with_ge50_nbrs": 0.0102,
+   "knn10_median": 0.4398755205703536,
+   "knn10_p90": 0.5112072273918529,
+   "nbrs_above_thr_max": 83,
+   "nbrs_above_thr_median": 6.0,
+   "nbrs_above_thr_p90": 23.0
+  },
+  "player_frac_ge10": 0.3332,
+  "player_frac_ge50": 0.0104,
+  "player_side": {
+   "knn10_median": 0.4367885707940719,
+   "knn10_p90": 0.5064642360622646,
+   "nbrs_above_thr_max": 100,
+   "nbrs_above_thr_median": 6.0,
+   "nbrs_above_thr_p90": 22.0
+  },
+  "thr_p999_player_pairs": 0.4574591593220529
+ }
+}

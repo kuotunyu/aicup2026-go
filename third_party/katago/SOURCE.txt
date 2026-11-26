@@ -1,0 +1,46 @@
+KataGo python modules vendored for the C10 PREREG_07 (competition 2, KataGo HumanSL) pilot.
+
+Upstream repository : https://github.com/lightvector/KataGo
+Upstream commit     : d91ea855110dae533f0aada947b2b7d78cc8a4e1 (commit date 2026-09-27 20:12:18 -0400, master HEAD at clone time)
+Copied on           : 2026-10-02 (Asia/Taipei)
+Licence             : LICENSE (MIT-style, repository root) and python/katago/train/LICENSE_AND_AUTHORS (MIT, transformer parts);
+                      authors listed in CONTRIBUTORS. Both files are copied unmodified next to the code.
+Network weights     : NOT vendored. b18c384nbt-humanv0.ckpt (KataGo v1.15.0 release asset, 323,752,318 bytes) is kept
+                      git-ignored under data/katago/; its licence is https://katagotraining.org/network_license/ .
+
+How the files were copied
+  Each file was written with `git cat-file blob HEAD:<path>` from a shallow clone of the commit above, so the bytes are
+  the upstream git blob (LF line endings), not the Windows checkout (core.autocrlf=true gave CRLF in the clone).
+  No file was modified. Verify with `git hash-object --no-filters <file>` against the blob id below.
+  Anything we need to change lives in our own code (results/prereg07/explore/pilot_humansl/hs_lib.py), never here.
+
+Files (path relative to this folder = path relative to the upstream repository root)
+  path | upstream git blob id | sha256 of the copied bytes | bytes
+  LICENSE | b7bb8b7408679966c53fa75a440ed54e4c6eac8a | ead22455d923920cd152546d89e4f415c94d6b580aa109fda3b57a69c57c32e0 | 2616
+  CONTRIBUTORS | 7a2bda0e9641f6eeece01e33132f3c83a36161fb | 6c6d353f188e27a511e269cdc7adc6ebf495ed6c215e89a95dada0a51effe5ee | 4584
+  python/katago/__init__.py | e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 | e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 | 0
+  python/katago/game/__init__.py | e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 | e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 | 0
+  python/katago/game/board.py | 17c0d2ec9f98139d4b873448a6c1f304235ff4e6 | 0a759e6ca74fdf3f3c7b309de78d7f8056c838c9328d8cf3a54158912e42527d | 62686
+  python/katago/game/features.py | 519ae6b0968da3672c369c57c868480170dfbfe3 | ed7fca1a3e4297ee06d72dfa31dd19a7b5370507f1d52c8176519ac7fd9c0077 | 14247
+  python/katago/game/gamestate.py | 896fbf079cc03f03791584944f0af21d0302a51d | 8485d575dfcaee66105cf30708a67db7bbe8e615502680047d76466f931c5959 | 13550
+  python/katago/game/sgfmetadata.py | 4cefc7985302368170f9152aab8697283d8b60c5 | c11c0a7d8ea0f6aa31bbffb80b5ab56f3fe2712de2e02ad8e8f3b6bfbedab789 | 6944
+  python/katago/train/__init__.py | e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 | e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 | 0
+  python/katago/train/LICENSE_AND_AUTHORS | 4960ac848d879c59522aab8161dcbe3d4cd395e6 | 8ea99ae9c36adc1317f42cf85cf73da053fbf48e802b6f002b905e9a8dbc86cf | 1676
+  python/katago/train/load_model.py | 3c086efb77d63122d659cccfeee1331f4a45a03f | 7954930e88554c703daf4179d3dffa57d027624373cf35dcbba20d244a955960 | 5133
+  python/katago/train/model_pytorch.py | bb0585059e1c6926dd7850ead0f7b8f1dfc1d0cc | bde17b3fff4ebc97717969bf68f2843fb5fd1c781386048c7f19dae13d1d9517 | 205910
+  python/katago/train/modelconfigs.py | b9086fd39c000b4252fc70b2e5a4a34faeb3f749 | 4ced5464586c18492247033cb9f9b5aa66e9d41e335d10baebe83ec1e68a9d2e | 64064
+  python/katago/train/trainloop_helpers.py | a59f78f6b31500db8bc04a91f3de0db4926e5ad0 | 669bed8c0b6616e9c138db01a07b7a7b5ac4ffc89407c9206eb5c1538ad47456 | 25908
+  python/humanslnet_server.py | ca7b3e33f16c350cd8598f4552145cb4453f5b36 | 87770956ad34a4444ffc97a9768c618291ce6ab6b59f01e1e695669bb0edd0c3 | 2883
+
+Why these files
+  game/board.py, game/features.py      : KataGo's python Board (simple ko only, no superko) and input featurisation
+                                         (22 spatial planes + 19 globals for model versions 10-17).
+  game/sgfmetadata.py                  : the 192-channel SGF metadata row (rank, time control, date, source).
+  game/gamestate.py                    : KataGo's own single-position inference path; used only as the parity reference.
+  train/model_pytorch.py, modelconfigs.py, trainloop_helpers.py (env_flag), load_model.py : the PyTorch model and loader.
+  humanslnet_server.py                 : KataGo's own HumanSL stdin/stdout server; the parity test runs it unchanged as a
+                                         subprocess (batch 1, CPU).
+Not copied (not imported by the b18c384nbt conv-net path): train/fused_rope.py and train/fused_swiglu.py (Triton kernels,
+imported lazily only by transformer configs), game/data.py (needs sgfmill), and the training / export scripts.
+
+Use: put third_party/katago/python on sys.path (hs_lib.py does this) and `import katago...`.

@@ -1,0 +1,13 @@
+{
+ "comp": "rank",
+ "attempt": 1,
+ "reason": "notebook seam_failed (PREREG_02 section 9 item 2): Colab default runtime (latest, 2026-11-04) shipped torch 2.11.0+cu130 / cuDNN 92700 instead of the prereg02 torch 2.11.0+cu128 / cuDNN 91900; same GPU (NVIDIA RTX PRO 6000 Blackwell Server Edition) so tol 1e-4; max_abs_c0_diff 0.00012886524200439453 > 1e-4, max_abs_logit_diff 0.011771202087402344, bitwise_equal false, rule_b_diff 0 questions (allowed 4)",
+ "notebook_seam_check_time": "2026-11-04T06:38:39+00:00",
+ "seam_dump_sha256": "7ff7d03702ce5b264c3f432a5519a3d758fcdd94f90080fdbbf53f33a91d4148",
+ "then": "user pressed Run all again in the same runtime; notebook stopped at preflight (previous seam_check passed=false), nothing computed",
+ "drive_archive": "Drive C10/results/test02/rank renamed to rank_failed_1; its zip renamed to test02_rank_results_failed_1.zip (both kept on Drive, not downloaded)",
+ "zip_sha256": null,
+ "zip_moved_to": null,
+ "registered_rerun": "new runtime, Colab runtime version 2026.07 (terminal check before Run all: torch 2.11.0+cu128, nvidia-cudnn-cu12 9.19.0.56, GPU RTX PRO 6000 Blackwell Server Edition); notebook completed 2026-11-04 ~14:55 Taiwan time with seam_check_passed true, seam_bitwise_equal true",
+ "source": "values copied from the Drive file C10/results/test02/rank_failed_1/seam_check.json read in the browser"
+}

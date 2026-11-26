@@ -1,0 +1,101 @@
+{
+ "what": "PREREG_06 S2: LDA64 per colour on the fit players with >= 105 games of that colour",
+ "colours": {
+  "B": {
+   "players": 1082,
+   "games_of_colour": 232165,
+   "not_alternating_excluded": 0,
+   "training_games": 232165,
+   "vocab_size": 220,
+   "dims": 286,
+   "directions": 64,
+   "eigenvalues_first10": [
+    0.650164,
+    0.521811,
+    0.408046,
+    0.254157,
+    0.226127,
+    0.182124,
+    0.146531,
+    0.125316,
+    0.105175,
+    0.100083
+   ],
+   "eigenvalue_64": 0.01218961828125935,
+   "finite": true,
+   "decreasing": true,
+   "passed": true,
+   "file": "results/prereg06/player/lda_B.npz",
+   "sha256": "ecfee95d0c7d8fdeb499ca9f89a8a6bb840e9a3cf0e999b1baa14ff78d69faa5",
+   "ldain_sha256": "6cfca91ef4215589b1d948cd52afaccbe934c2a5836517b3b4b65eb2c5460137",
+   "ldain_rows_sha256": "a174208ed1f6ffdbb926668bec2f0a695708880e90675530f443e8ceea127840",
+   "ldain_cols_sha256": "915fb3e987114080d4675b0930dc4d7dbdfed155869e0d872ae14e7415227f21"
+  },
+  "W": {
+   "players": 1077,
+   "games_of_colour": 229761,
+   "not_alternating_excluded": 0,
+   "training_games": 229761,
+   "vocab_size": 226,
+   "dims": 292,
+   "directions": 64,
+   "eigenvalues_first10": [
+    1.095973,
+    0.610007,
+    0.494866,
+    0.394577,
+    0.268979,
+    0.208794,
+    0.178667,
+    0.167984,
+    0.14781,
+    0.138469
+   ],
+   "eigenvalue_64": 0.012635486927882815,
+   "finite": true,
+   "decreasing": true,
+   "passed": true,
+   "file": "results/prereg06/player/lda_W.npz",
+   "sha256": "e8bc63331a749bce83cc7cab8b7852bec70c6644f38fe89982f0dbbad581292d",
+   "ldain_sha256": "e003b645f96e9891caab9983ae4083feb965bfaf98385a52d188a26ca44f647d",
+   "ldain_rows_sha256": "c9610053c6dcc6c767987986980e3406252ff41e159a4f8036aafd4d140d7abe",
+   "ldain_cols_sha256": "01dd6e00fb42f7bbe198f67a0edff07eecc48c1c1b4fd30f71caeccb88713923"
+  }
+ },
+ "passed": true,
+ "feature_store_check": {
+  "checked": true,
+  "build_report_sha256": "5a103fa0726e82b00b573db71350cd3fcb49dfb785a63891f5c1b8dda2a1dbf4",
+  "lda_report_sha256": null
+ },
+ "inputs_note": "feature store of S1 (build_report.json files_sha256, verified before use)",
+ "command": "lda",
+ "mode": "real",
+ "precommit": false,
+ "created": "2026-10-03T11:30:28+08:00",
+ "git_head": "e43193141a1c7bef8bddd56b21469d50a0e60ee3",
+ "tools": {
+  "tools/p06_style.py": {
+   "sha256_lf": "78beb8138c27853da70081e469e534508174265852a64ebada21e354ae72058a",
+   "committed_and_clean": true
+  },
+  "tools/p06_sim.py": {
+   "sha256_lf": "21deeea1eb08b1d6580ba78c47505789f66dbdd10c8891973e14f523ef443eeb",
+   "committed_and_clean": true
+  },
+  "tools/p06_player.py": {
+   "sha256_lf": "b25636878ee87ca828a9c65177965dc60466ac4e9aa348acd88785ca11075590",
+   "committed_and_clean": true
+  }
+ },
+ "env": {
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "executable": ".venv/Scripts/python.exe"
+ },
+ "inputs": {
+  "build_report.json": "5a103fa0726e82b00b573db71350cd3fcb49dfb785a63891f5c1b8dda2a1dbf4"
+ },
+ "seconds": 10.3
+}

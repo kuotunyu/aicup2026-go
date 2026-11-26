@@ -1,0 +1,14 @@
+{
+ "all": {
+  "games": 73556,
+  "also_in_fit": 0,
+  "also_in_fit_other_colour": 0
+ },
+ "bank": {
+  "games": 11813,
+  "also_in_fit": 0,
+  "also_in_fit_other_colour": 0
+ },
+ "fit_unique_sequences": 720307,
+ "fit_games": 720307
+}

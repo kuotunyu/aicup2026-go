@@ -1,0 +1,110 @@
+{
+ "format": "c10-prereg38 retune v1",
+ "seam": {
+  "base_mean": 0.656940331928074,
+  "tune_mean": 0.656940331928074,
+  "abs_diff": 0.0,
+  "ok": true
+ },
+ "d_seeds": [
+  100,
+  101,
+  102,
+  103,
+  104,
+  105,
+  106,
+  107,
+  108,
+  109
+ ],
+ "kept": [
+  "B4"
+ ],
+ "structure_sha256": "b0192e478993e85626b029eac4f101d92523e64e5238776a9885a187f547ad46",
+ "base_tune_sha256": "1c8f478919a12e04e7f1b49a3f8a2233eb9ce756029b6140c749e5c92b628f57",
+ "emb": {
+  "ckpt": "step_160000",
+  "ckpt_sha256": "c97b3507924b28717cd97cd95c6b18a04d3a131d5e51f318a86f08ef64f0f016"
+ },
+ "b0": {
+  "cfg": {
+   "gnorm": false,
+   "pool_w": "mean",
+   "centre_colour": false,
+   "whiten": null,
+   "sim": "proto",
+   "alpha": null,
+   "pair": null,
+   "krecip": null,
+   "aqe": null,
+   "qsmooth": null,
+   "wE": 8,
+   "gmul": null,
+   "rowz": false,
+   "norm": [
+    "csls",
+    10
+   ]
+  },
+  "mean": 0.656940331928074,
+  "by_k": {
+   "1": 0.427416601148723,
+   "2": 0.6526836047495176,
+   "3": 0.7083275096982637,
+   "5": 0.8393336121157915
+  }
+ },
+ "recommended": {
+  "name": "ASSEMBLED",
+  "cfg": {
+   "gnorm": true,
+   "pool_w": "mean",
+   "centre_colour": false,
+   "whiten": {
+    "lam": 0.7,
+    "lda": 128
+   },
+   "sim": "proto",
+   "alpha": null,
+   "pair": null,
+   "krecip": null,
+   "aqe": null,
+   "qsmooth": null,
+   "wE": 8,
+   "gmul": null,
+   "rowz": false,
+   "norm": [
+    "csls",
+    20
+   ]
+  },
+  "mean": 0.6655350985215651,
+  "diff_b0": 0.008594766593491144,
+  "ci95": [
+   -0.0010994728185993775,
+   0.017850132480847325
+  ],
+  "pools_higher": 7,
+  "by_k": {
+   "1": 0.42306267324243424,
+   "2": 0.6609089815887041,
+   "3": 0.7130579050675172,
+   "5": 0.8651108341876048
+  },
+  "per_pool": [
+   0.6920891975124426,
+   0.605771323610639,
+   0.6614687290414554,
+   0.668979433037212,
+   0.658381380854069,
+   0.713135668517397,
+   0.641916899731007,
+   0.6506182191118808,
+   0.6940377363363592,
+   0.6689523974631895
+  ]
+ },
+ "seconds": 32.4,
+ "git_head": "a1241349bc374be3175e329ec2b9aa38877bfbf7"
+}

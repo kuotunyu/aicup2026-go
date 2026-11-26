@@ -1,0 +1,187 @@
+{
+ "format": "c10-prereg51 eval v1",
+ "arm": "B",
+ "e_seeds": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19
+ ],
+ "e_pools_use_number": 7,
+ "earlier_e_judgements": [
+  "prereg36",
+  "prereg37",
+  "prereg38",
+  "prereg39",
+  "prereg43",
+  "prereg49"
+ ],
+ "vectors": {
+  "file": "data/prereg51/emb_B/V2_step_320000_raw_tta1/store_E.npz",
+  "file_sha256": "4a30876238a8f9f3cdc4e98b51d01a83ae9fd2f65d6ee13313271317658261dc",
+  "ckpt": "data/prereg51/B/ckpt/step_320000.pt",
+  "ckpt_sha256": "e61a4feb6ee4438587622c16e79a427b54622fc8de2caf5af9c4a1ab6199c192",
+  "embed_cfg": {
+   "chunk": 16,
+   "ckpt_sha256": "e61a4feb6ee4438587622c16e79a427b54622fc8de2caf5af9c4a1ab6199c192",
+   "games": 193736,
+   "mode": null,
+   "moves": 43238718,
+   "part_items": 128,
+   "spec": {
+    "head": "cos",
+    "name": "se_gpool_trunk",
+    "pool": "mean",
+    "sampler": "game",
+    "trunk": "gpse"
+   },
+   "tta": 1,
+   "weights": "raw"
+  }
+ },
+ "train_size": {
+  "file": "results/prereg51/explore/train_record_B.json",
+  "size": null,
+  "steps": 320000,
+  "finished": true
+ },
+ "base_vectors_E": {
+  "file": "data/prereg49/emb/V2_step_320000_raw_tta1/store_E.npz",
+  "file_sha256": "27ce57a23c1b99a6968bf71689fea35e46f3f6cd4b8f7bb244be33a154e010f6",
+  "ckpt_sha256": "c091d3af1797a19ce98dc0a670eea211ceca2de4b58ee4a3c62b73b854748e12"
+ },
+ "base": {
+  "name": "c49",
+  "members": [
+   "c49"
+  ],
+  "eval": "results/prereg49/explore/eval.json",
+  "key": "c49",
+  "e_mean": 0.7035676497986656,
+  "apply": "results/prereg49/apply"
+ },
+ "cfg": {
+  "gnorm": true,
+  "pool_w": "mean",
+  "centre_colour": false,
+  "whiten": {
+   "lam": 0.7,
+   "lda": null
+  },
+  "sim": "proto",
+  "alpha": null,
+  "pair": null,
+  "krecip": null,
+  "aqe": null,
+  "qsmooth": null,
+  "wE": 8,
+  "gmul": null,
+  "rowz": false,
+  "norm": [
+   "csls",
+   10
+  ]
+ },
+ "wP": 8,
+ "k": 20,
+ "seam_base_E_identical": true,
+ "git_head": "1250e8fa7f754b964903eb361cbce58c8db961a4",
+ "p1_sets": {
+  "E": {
+   "games": 56934,
+   "usable": 56934,
+   "failed_fresh": 0
+  },
+  "E2": {
+   "games": 35769,
+   "usable": 35769,
+   "failed_fresh": 0
+  }
+ },
+ "means": {
+  "B": 0.7018024547621323,
+  "base": 0.7035676497986656
+ },
+ "per_pool": {
+  "B": [
+   0.6720857467736425,
+   0.712337881750359,
+   0.697134913912529,
+   0.6855476260498056,
+   0.7026790341745073,
+   0.7137248119509391,
+   0.7028091822530758,
+   0.7236373026615603,
+   0.717356205762848,
+   0.7037527375167494,
+   0.6891383473465337,
+   0.678341070064446,
+   0.7114917688323498,
+   0.7282474949485984,
+   0.6913463620612719,
+   0.6931252026058702,
+   0.710849771802014,
+   0.6995878187573038,
+   0.7154879623519974,
+   0.687367853666248
+  ],
+  "base": [
+   0.6901487548737176,
+   0.7063302884392315,
+   0.7056482370599799,
+   0.6844300761910879,
+   0.6922684143991793,
+   0.6995414658344743,
+   0.6973744547130798,
+   0.7363471042936672,
+   0.7244048407752041,
+   0.6961455205477606,
+   0.6927652374058825,
+   0.6844290285141121,
+   0.7225981546390352,
+   0.7187727273724797,
+   0.6853203157595424,
+   0.6982242564541186,
+   0.7128487558241156,
+   0.7266402172301448,
+   0.7195124382510306,
+   0.6776027073954682
+  ]
+ },
+ "by_k": {
+  "B": {
+   "1": 0.46330729987191,
+   "2": 0.6759821992404779,
+   "3": 0.7885889252302415,
+   "5": 0.8793313947059007
+  }
+ },
+ "B_minus_base": {
+  "mean": -0.0017651950365331459,
+  "ci95": [
+   -0.006445885984995469,
+   0.0026114528874870784
+  ],
+  "pools_higher": 9
+ },
+ "rule": "adopt arm B if mean difference >= 0.01 and ci95 low > 0 and higher in >= 18 of 20 pools (pool bootstrap, 10000 samples, seed 43)",
+ "adopt": false,
+ "peak_working_set_mb": 1953.1,
+ "seconds": 209.6
+}

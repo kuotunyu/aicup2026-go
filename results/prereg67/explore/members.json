@@ -1,0 +1,94 @@
+{
+ "p61": {
+  "name": "p61",
+  "dir": "data/prereg61/emb/p60_step_200000_raw_tta1",
+  "files": {
+   "dir": "data/prereg61/emb/p60_step_200000_raw_tta1",
+   "sha256": {
+    "store_E.npz": "542fa068495acc05265fe59541e4563350595ab1e611a94e3aed5b1ce7848855",
+    "pool_public.npz": "22829d0ea650b9f072ae07aa94fa69f27c324c4e378978ab0ce0e15303f9ad0b",
+    "pool_private.npz": "3e9915c803159eeaad58f879f213e5ada2f3eaab2619d172c3efc266ba9be118"
+   },
+   "mtime": {
+    "store_E.npz": "2026-11-21T20:50:08.272987",
+    "pool_public.npz": "2026-11-21T20:32:14.448143",
+    "pool_private.npz": "2026-11-21T20:33:05.159884"
+   },
+   "ckpt_sha256": "046336c9618f6fc47dba2e9c607e9aa0fbd24914734c17fbf605bf2c5b4c5a64",
+   "ckpt_step": 200000,
+   "zero_count_games": {
+    "store_E.npz": 0,
+    "pool_public.npz": 0,
+    "pool_private.npz": 0
+   },
+   "problems": [],
+   "ok": true
+  },
+  "before_cutoff": true,
+  "threshold": 0.6406,
+  "checked_at": "2026-11-21T20:50:42",
+  "std10_per_pool": [
+   0.6507032403513827,
+   0.629958969439294,
+   0.6656841221309628,
+   0.6293774820066642,
+   0.6392677818997815,
+   0.6198535936468413,
+   0.6604167284617368,
+   0.6354614935752454,
+   0.6508752636586053,
+   0.6638183851264665
+  ],
+  "std10_mean": 0.6445417060296981,
+  "pass": true,
+  "git_head": "db8cd79da4bd8c5a2b3ee434242d4f3791498052",
+  "peak_rss_mb": 1978.0,
+  "seconds": 84.9
+ },
+ "X": {
+  "name": "X",
+  "dir": "data/prereg62/X/emb/p60_step_400000_raw_tta1",
+  "files": {
+   "dir": "data/prereg62/X/emb/p60_step_400000_raw_tta1",
+   "sha256": {
+    "store_E.npz": "62a6b770aa25a2f964ed23942ca16a348d35c3ad71cee1846a0124285f86a46a",
+    "pool_public.npz": "7497215841e2286062458239419fc8eb5ec48db38cca8ca382ca6d6e892e5208",
+    "pool_private.npz": "489542407b6c9050d08b720f58abc5aa8611f171ac435a4e530866cb61ffda2d"
+   },
+   "mtime": {
+    "store_E.npz": "2026-11-22T01:04:24.964135",
+    "pool_public.npz": "2026-11-22T01:05:33.118719",
+    "pool_private.npz": "2026-11-22T01:06:18.617874"
+   },
+   "ckpt_sha256": "2c6f6796fbca3a480a807017cbd10d4415d523b9b3059c0593bef0ed348957b4",
+   "ckpt_step": 400000,
+   "zero_count_games": {
+    "store_E.npz": 0,
+    "pool_public.npz": 0,
+    "pool_private.npz": 0
+   },
+   "problems": [],
+   "ok": true
+  },
+  "before_cutoff": true,
+  "threshold": 0.6406,
+  "checked_at": "2026-11-22T01:08:05",
+  "std10_per_pool": [
+   0.6530075697605698,
+   0.6394407778217223,
+   0.6701367788638176,
+   0.6215561123243836,
+   0.644087310324036,
+   0.6179559421457096,
+   0.6592080401680533,
+   0.6426959751264155,
+   0.6539178757625299,
+   0.6640479438668584
+  ],
+  "std10_mean": 0.6466054326164096,
+  "pass": true,
+  "git_head": "8821dc75eca400da976eb587e4f61281c91e22c8",
+  "peak_rss_mb": 1977.6,
+  "seconds": 244.1
+ }
+}

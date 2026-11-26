@@ -1,0 +1,434 @@
+{
+ "layout": "頂層：固定說明與跨執行的累計狀態；runs：每次執行各一筆的實際設定",
+ "smoke": false,
+ "smoke_cfg": null,
+ "prereg": "docs/PREREG_02_OPENING_FUSION.md 第 1.1 節（競賽二）",
+ "base_notebook": {
+  "path": "colab/prereg01_rank.ipynb",
+  "sha256": "5f97d51978674bcc789493a47f278f186fb839f3f2d396aa2d218a6820e9744b"
+ },
+ "changes_from_prereg01": [
+  "[新增] 第一格 markdown：用途、步驟、會停下的情況、輸出清單、接續方式、這張差異表。",
+  "[設定] 結果目錄改成 `prereg02`（SMOKE 是 `prereg02_smoke`），分片備份 `FEAT_BACKUP` 跟著改到 `prereg02/features_rank`。新增只讀的 `P01_ROOT`／`P01_RANK`／`P01_CKPT`／`P01_FEAT`（`prereg01`，SMOKE 是 `prereg01_smoke`）、`guard_write()`（目的地落在 `P01_ROOT` 底下就停）、`p01_fingerprint()`（檔名、大小、mtime）。`write_json` 先過 `guard_write`。`SMOKE_CFG` 不動（分片備份的指紋含它，改了就還原不到 prereg01 的分片），本版的 SMOKE 設定另放 `SMOKE_CFG_P02`。`config.json` 的 `prereg` 改指 PREREG_02，另記底稿 notebook 的 SHA-256 和這張表。新增收尾開關 `FINISH_WITHOUT_TRAINING = False`（登記 1.2「第 9 個 epoch 沒跑完」的退路；只在 Claude 請你改時改成 True）。",
+  "[新增 preflight] 開跑前確認 prereg01 的 `epoch_1..5.pth`、`best_model.pth`、`state.pt`、`history.csv`、`rank_val_probs.csv`、`env.json` 都在，記 SHA-256；`best_model.pth` 必須等於 `epoch_5.pth`；正式執行時機率檔、`history.csv`、`env.json` 必須和本機 commit 的 prereg01 結果逐位元組相同，inner accuracy 目標是 25.1482%、每個 epoch 2,814 步。prereg01 沒有分片備份只警告（會重抽）。Drive 剩餘空間 ≥ 3 GB。記下 prereg01 目錄的指紋 `p01_readonly_before.json`；重跑時和第一次記的不同就停。",
+  "[底稿官方 2] `NUM_EPOCHS` 維持 prereg01 的 5（SMOKE 是 prereg01 冒煙的 1），用來比對 `state.pt`。新增 `EXTRA_EPOCHS`＝4（SMOKE 是 1）、`PEAK_LR`＝`LEARNING_RATE`＝1e-3、`FINAL_EPOCH`＝`NUM_EPOCHS`＋`EXTRA_EPOCHS`。`CKPT_DIR` 由設定格決定（`prereg02/rank/ckpt`），`makedirs` 前先過 `guard_write`。最後的 `print` 多印 GPU 型號和接著訓練的 epoch 數。正式執行沒有 GPU 就在這裡停下（收尾開關打開時例外，缺的逐盤輸出另由 dump 工具擋下）；有 GPU 但型號（環境紀錄格 nvidia-smi 查到的）不是 G4（RTX PRO 6000）或 A100 也停下（PREREG_02 第 7 節第 8 條）。",
+  "[底稿分片工具] `restore_features(fp, src)` 改成可以指定來源，對來源只讀；還原到本機前 `guard_write(FEAT_DIR)`。`backup_features` 只寫到 `prereg02/features_rank`，`rmtree` 和每個複製目的地先過 `guard_write`。",
+  "[底稿官方 9] 依序試 `prereg02/features_rank`、`prereg01/features_rank` 還原分片；都不能用才重抽（抽完備份到 prereg02）。`rmtree(FEAT_DIR)` 前先過 `guard_write`。`run_log.json` 另記分片來源。",
+  "[新增 dump 工具] `d4(x, s)`（s＝0 原方向；s≥4 先在 dim 3 鏡射，再在 dims (2, 3) 旋轉 s%4 次，格內自我檢查 8 種兩兩不同且封閉）；`load_net()`（讀進記憶體、算 SHA-256、從同一份位元組載入）；inner 用分片的 `__key__`＝`等級_game_id` 對回 `df_val` 的列，assert 每盤剛好一次；本機驗證題照題目檔列順序和 slot 1..num_games 解析，失敗的保留位置（logits 填 NaN），每題一個 batch（和 prereg01 推論相同）；每個檔先寫 `.tmp` 再改名，附 `_DONE_<檔名>.json`（另記算它的那次執行的 GPU 型號、torch、cuDNN），重跑時對得上就跳過。正式執行時要算 dump 卻沒有 GPU 就停。另有 `record_p01_after()`（結尾指紋）、`pack_results()`（打包，跳過權重、暫存檔和 ≥ 100 MB 的檔）、`flush_drive()`（Colab 上 `drive.flush_and_unmount()`）。",
+  "[新增 P1 輸出與重現核對] prereg01 epoch 1–4 原方向、epoch 5 八種對稱的逐盤 logits（inner、本機驗證題）和兩個 key 檔。重現核對三項：① epoch 5 在 inner 的逐盤 accuracy 和 `history.csv` 相差 ≤ 0.05 個百分點；② 每題 float32 平均機率和 prereg01 `rank_val_probs.csv` 最大差距 ≤ 1e-4（算 `val_p01e5_d4` 那次執行的 GPU 型號和 prereg01 不同時 1e-3；正式執行沒記到 GPU 就不通過）；③ 規則 B 不同的題 ≤ 4（SMOKE 依題數等比例縮小）。任一項不過就停，不訓練；停下前記結尾指紋、打包 `prereg02/rank_results_repro_failed.zip`、送出 Drive 的寫入。",
+  "[新增接著訓練] 從 prereg01 `state.pt`（只讀、核對 SHA-256、設定、逐張量等於 `epoch_5.pth`）載入 model 和 AdamW 狀態，接著訓練 epoch 6–9：`LambdaLR` 每步 `max(0, 1 − t/T)`、T＝4×2,814，每個 epoch 開始 seed＝42＋epoch，其餘和 prereg01 相同。每個 epoch 存 `epoch_N.pth`、`state.pt`（含 scheduler、global_step、history、設定）、`history.csv`（inner 驗證只當監看）。有 prereg02 的 `state.pt` 就接續，設定不同就停。不產生 `best_model.pth`。訓練前用 `_count_w*.json` 和分片清單算出每個 epoch 的步數（webdataset 先依 worker 分分片），和 prereg01 的 2,814 步不同就停。收尾開關打開時不訓練，已完成的 epoch 從 prereg02 的 `state.pt` 讀回。",
+  "[新增 P2 輸出] 用 `epoch_9.pth` 存 8 種對稱的逐盤 logits（inner、本機驗證題）；第 9 個 epoch 沒完成（包括收尾開關打開時）就跳過並記錄。",
+  "[底稿結尾（改寫）] 改成核對所有 dump 的列數、形狀、NaN 位置和完成標記；記 `p01_readonly_after.json` 並和開頭比對（不同就在打包後停下）；補完 config／timings／run_log；打包 `prereg02/rank_results.zip`（跳過 `.pth`、`.pt`、`.tmp` 和 ≥ 100 MB 的檔；dump 一律 < 100 MB，否則在寫檔時就停）；最後 `drive.flush_and_unmount()`。",
+  "[拿掉] prereg01 的設定紀錄與接續工具、官方 16（訓練迴圈）、18（訓練曲線）、20、21（推論）、所有官方 markdown 格。推論改由 dump 工具做，訓練改由接著訓練格做。",
+  "[metadata] notebook metadata 的 Colab 設定拿掉預選的 A100 和「大量 RAM」（照第一格選 G4；拿不到 G4 時選 A100 標準版）。每格 cell id 是 `c10-rank02-NN`，cell metadata `c10` 記底稿的格號、底稿的 `c10` 和是否改動。"
+ ],
+ "smoke_cfg_p02": null,
+ "p01_root": "/content/drive/MyDrive/C10/results/prereg01",
+ "official_notebook": "third_party/aicup2026_tutorial/rank-prediction.ipynb",
+ "deviations_from_official": [
+  "[①] 官方 cell 4：改用 `c10data.load_rows(..., part=\"fit\")` 讀訓練資料（5,767 人、720,307 盤），`part=\"inner\"` 讀內部驗證（640 人、73,556 盤），各自轉成 DataFrame。`load_rows` 會 assert 人數、盤數，並確認沒有任何一盤出現在本機驗證檔。結果存 `leak_check.json`（每次執行各記一筆）。SMOKE 時等 `load_rows` 全部通過，才用固定 seed 縮小資料。",
+  "[②] 官方 cell 4：取代 `df.iloc[:VAL_SIZE]` 的切法：`df_train`、`df_val` 各自 `sample(frac=1.0, random_state=42)` 打散之後，才寫分片。",
+  "[③] 官方 cell 2、8、9：`VAL_SIZE` 改成內部驗證實際寫入的盤數：每個抽特徵的 worker 寫完後，把 `rows`、`written`、`bad` 寫進分片目錄的 `_count_w<N>.json`；`extract_split` 加總、核對後回傳；cell 9 設定 `VAL_SIZE` 並印出。cell 2 先設成 `None`。",
+  "[④] 官方 cell 20、21：`predict()` 改讀打包檔的 `local/rank_val_questions.csv`，拿掉 public／private 迴圈（內層程式因此少一層縮排，進度訊息不印 split 名稱）。每題另存 10 維平均機率到 `rank_val_probs.csv`（完整 float；沒有可解析棋譜的題 `n_parsed=0`、機率欄留空）。官方的 argmax 結果改存成 `pred_official_argmax.csv`（官方是 `./submission_rank.csv`）。`predict()` 因此多了題目檔、機率檔路徑和 `limit` 三個參數；SMOKE 時只推論前 12 題。",
+  "[營運性] 新增：最前面兩格 markdown：這份 notebook 的用途與操作說明，以及這張差異表。",
+  "[營運性] 新增：新增的程式格：設定（Colab 或本機、Drive 路徑、SMOKE 縮小設定、結果紀錄工具）、準備（解壓打包檔並逐檔核對 SHA-256、確認沒有答案檔、解開訓練資料、把打包檔的 `tools/`、`tutorial/` 加進 import 路徑）、環境紀錄（`env.json`）、分片備份工具、設定紀錄與接續工具、結尾核對，以及把結果目錄裡權重以外的檔案打成 `rank_results.zip`（放在結果目錄旁，方便下載）。",
+  "[營運性] 新增（準備格）：缺 `sgfmill` 或 `webdataset` 時才用 pip 安裝，版本固定為 `sgfmill==1.1.1`、`webdataset==1.0.2`（本機冒煙測試用的版本）。官方 notebook 只列出需要的套件，不安裝也不固定版本。Colab 內建的 torch、pandas、numpy、matplotlib 不動，實際版本記在 `env.json`。",
+  "[營運性] 新增（設定格）：在 Linux 上明確指定 multiprocessing 用 `fork`。官方的 worker 函式定義在 notebook 內，依賴 fork；Python 3.14 起 Linux 預設改成 forkserver。3.13 以前本來就是 fork，行為不變。實際的啟動方式記在 `config.json`。",
+  "[營運性] metadata：notebook metadata 加上 Colab 設定（GPU、A100、高 RAM），其餘沿用官方。官方格沿用官方的 cell id，新增的格用 `c10-rank-NN`；每格的 cell metadata 加 `c10` 對照欄（對應的官方格、是否改動）。官方原本就沒有存輸出。",
+  "[營運性] 官方 cell markdown 0、3、5、19、22：官方的說明原文不動，在後面附加一段「**本版**」說明：路徑由設定格決定（0）、① ② 的讀法（3）、分片會備份到 Drive（5）、④ 只預測本機驗證題（19）、分數不在這裡算（22）。",
+  "[營運性] 全部：工作目錄切到 `WORK`（Colab 是 `/content/c10`），官方的相對路徑 `./training`、`./rank-features` 照用。webdataset 會把 Windows 路徑的 `C:` 當成網址格式，本機冒煙測試只能用相對路徑。",
+  "[營運性] 全部：改過的格在開頭或行內加了說明註解（標 ①–④ 或「本版」）。",
+  "[營運性] 全部：紀錄檔都是每次執行各記一筆、不覆蓋前幾次：`timings.json`（各階段秒數）、`run_log.json`（每次執行與接續）、`env.json`、`leak_check.json`、`config.json`（頂層是固定說明與跨執行的累計狀態，每次執行的實際設定在 `runs`）。JSON 和 CSV 的 float 都寫完整精度。原生 Windows 的正式執行會直接報錯，因為官方的多進程依賴 Linux 的 fork。",
+  "[營運性] 官方 cell 2：`CKPT_DIR` 改到 Drive 的結果目錄 `ckpt/`，拿掉 `TEST_DIR`。`NPROC` 從寫死的 8 改成 `os.cpu_count()`（官方註解寫「設成 CPU 核數」）。加上 SMOKE 縮小設定（只在 SMOKE 生效）。最後的 `print` 多印 `NPROC`、batch、epoch 數。",
+  "[營運性] 官方 cell 4：不印官方的「全量 N 局」和全量的等級分布；改成逐一印 `fit`、`inner` 的人數與盤數，等級分布只印訓練集（`df_train`）。顯示前 3 列時不印棋譜欄，不讓棋譜內容進 notebook 輸出。",
+  "[營運性] 官方 cell 6：示範用的第一盤改取 `df_train`（本版沒有合併的 `df`）。",
+  "[營運性] 官方 cell 9：分片特徵抽完後備份到 Drive 的 `features_rank/`，全部核對後才寫完成標記。重跑時有完整且設定相符的備份，就複製回來、核對 SHA-256，不重抽；備份缺檔、大小或 SHA-256 不符時改成重抽。重抽前先清掉不完整的舊分片。",
+  "[營運性] 官方 cell 11、12：`pick_workers` 另外記下讀出的筆數（寫進 `config.json`）。本機冒煙測試的 worker 候選數是 0（Windows 的 spawn 無法 pickle notebook 內定義的函式）。多 worker 對不上時照官方退回 0，並用 0 個 worker 再數一次；還是對不上 `VAL_SIZE` 就停下來，因為這表示 ③ 沒有成立。",
+  "[營運性] 官方 cell 16：每個 epoch 結束，把 model、optimizer、epoch、最佳分數、history 存成 `ckpt/state.pt`。重跑時從最後完成的 epoch 接續；`state.pt` 讀不進來、或設定和上次不同，就停下來並說明處理方式。另外記最佳 epoch 的編號，結束時一併印出。history 多記 loss、步數、樣本數、秒數和第幾次執行。官方的 `epoch_N.pth`、`best_model.pth`、`history.csv` 照樣存在 `ckpt/`。",
+  "[營運性] 官方 cell 16：`sync_best()` 把最佳 epoch 的 `epoch_N.pth` 複製成 `best_model.pth`：接續時做一次（中斷時可能留下寫一半的 `best_model.pth`），正常訓練結束時也做一次。複製來源和官方存的 `best_model.pth` 是同一個 epoch 結束時的同一份權重。找不到那個 `epoch_N.pth` 就停下來並說明處理方式。",
+  "[營運性] 官方 cell 16：每次執行記下有沒有讀 `state.pt`、是否接續訓練、實際訓練了哪些 epoch（`run_log.json`、`config.json` 的 `runs`），頂層的 `resumed` 表示是否曾經接續訓練。",
+  "[營運性] 官方 cell 18：訓練曲線另存 `ckpt/history.png`。非 Colab 時用不開視窗的 Agg 後端，不 `show()`，畫完就 `close()`。",
+  "[營運性] 官方 cell 20：`predict()` 讀題目檔時 `question_id` 以字串讀入（`dtype={'question_id': str}`），代號原樣照抄，不會被轉成數字。每題 assert 非空的 `sgf_` 欄數等於 `num_games`，題目檔格式不對就停。兩者都不改變預測。",
+  "[營運性] 官方 cell 21：推論用的權重、題目檔、題數寫進 `config.json`，秒數寫進 `timings.json`；輸出路徑指向 Drive 的結果目錄。"
+ ],
+ "resumed": false,
+ "resume_count": 0,
+ "runs": [
+  {
+   "run": 1,
+   "start": "2026-09-26T05:11:56+00:00",
+   "end": "2026-09-26T05:51:18+00:00",
+   "in_colab": true,
+   "mp_start_method": "fork",
+   "preflight": {
+    "p01_root": "/content/drive/MyDrive/C10/results/prereg01",
+    "p01_sha256": {
+     "ckpt/epoch_1.pth": "72d3e25c2a3b4c2caaf74cfc2b7f7c0a58634e97cc9d9bbaf3207fe2508fc98b",
+     "ckpt/epoch_2.pth": "5d808df5937ae8448955da6e70ca78a29f5e019cab9dba739ee30ea75632785f",
+     "ckpt/epoch_3.pth": "2870d62e563f5a0cb122ba061d6a8e046da03b50805b65301232c73f1e481e93",
+     "ckpt/epoch_4.pth": "a06e0a8a5ebd4777145c2e871e0d0cc5f5f1fd2e94d8ee94206ad52b44f03aed",
+     "ckpt/epoch_5.pth": "3e2267a24860c836e8db219d07cd265f3f180f3573aa565ccadd27f859fc3c8d",
+     "ckpt/best_model.pth": "3e2267a24860c836e8db219d07cd265f3f180f3573aa565ccadd27f859fc3c8d",
+     "ckpt/state.pt": "c72ba0d60026e5f5ed7715365bdbad1950fc7d41b99a48fd6c9e0167f515847d",
+     "ckpt/history.csv": "d76272073a80efde206dc8cdac0d5f297aaeb23240f52ff05be35a673718cf35",
+     "rank_val_probs.csv": "92cc750cad9eb114541047cf0c4863634ef4de0be1bac75f889edcee4823800c",
+     "env.json": "2461a1daa8fef88a636716af8c39a82c48413e98c9eb2d0cccfe99ebe4d90b85"
+    },
+    "p01_expected_sha256": {
+     "rank_val_probs.csv": "92cc750cad9eb114541047cf0c4863634ef4de0be1bac75f889edcee4823800c",
+     "ckpt/history.csv": "d76272073a80efde206dc8cdac0d5f297aaeb23240f52ff05be35a673718cf35",
+     "env.json": "2461a1daa8fef88a636716af8c39a82c48413e98c9eb2d0cccfe99ebe4d90b85"
+    },
+    "p01_inner_acc": 25.14818641579205,
+    "p01_steps_per_epoch": 2814,
+    "p01_gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "p01_torch": "2.11.0+cu128",
+    "p01_cudnn": 91900,
+    "p01_features_backup_complete": true,
+    "drive_free_bytes": 191142047744,
+    "p01_files_fingerprinted": 996
+   },
+   "dumps_p1": {
+    "p01e1": {
+     "weights": "prereg01/rank/ckpt/epoch_1.pth",
+     "weights_sha256": "72d3e25c2a3b4c2caaf74cfc2b7f7c0a58634e97cc9d9bbaf3207fe2508fc98b",
+     "syms": 1,
+     "inner": "written",
+     "val": "written",
+     "seconds": 27.157978773117065
+    },
+    "p01e2": {
+     "weights": "prereg01/rank/ckpt/epoch_2.pth",
+     "weights_sha256": "5d808df5937ae8448955da6e70ca78a29f5e019cab9dba739ee30ea75632785f",
+     "syms": 1,
+     "inner": "written",
+     "val": "written",
+     "seconds": 25.56313967704773
+    },
+    "p01e3": {
+     "weights": "prereg01/rank/ckpt/epoch_3.pth",
+     "weights_sha256": "2870d62e563f5a0cb122ba061d6a8e046da03b50805b65301232c73f1e481e93",
+     "syms": 1,
+     "inner": "written",
+     "val": "written",
+     "seconds": 25.65592098236084
+    },
+    "p01e4": {
+     "weights": "prereg01/rank/ckpt/epoch_4.pth",
+     "weights_sha256": "a06e0a8a5ebd4777145c2e871e0d0cc5f5f1fd2e94d8ee94206ad52b44f03aed",
+     "syms": 1,
+     "inner": "written",
+     "val": "written",
+     "seconds": 25.78036618232727
+    },
+    "p01e5_d4": {
+     "weights": "prereg01/rank/ckpt/epoch_5.pth",
+     "weights_sha256": "3e2267a24860c836e8db219d07cd265f3f180f3573aa565ccadd27f859fc3c8d",
+     "syms": 8,
+     "inner": "written",
+     "val": "written",
+     "seconds": 145.01241302490234
+    }
+   },
+   "repro_check": {
+    "pass": true,
+    "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "dump_gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "p01_gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "same_gpu_as_p01": true,
+    "inner_acc": {
+     "dump": "inner_p01e5_d4 s=0",
+     "value_pct": 25.14818641579205,
+     "target_pct": 25.14818641579205,
+     "abs_diff_pp": 0.0,
+     "tolerance_pp": 0.05,
+     "games": 73556,
+     "pass": true
+    },
+    "val_c0_vs_p01": {
+     "dump": "val_p01e5_d4 s=0",
+     "reference": "prereg01/rank/rank_val_probs.csv",
+     "questions_compared": 1589,
+     "max_abs_diff": 8.940696716308594e-08,
+     "tolerance": 0.0001,
+     "pass": true
+    },
+    "rule_b_diff": {
+     "questions": 0,
+     "allowed": 4,
+     "question_ids": [],
+     "pass": true
+    },
+    "counts": {
+     "problems": [],
+     "n_problems": 0,
+     "pass": true
+    }
+   },
+   "train_steps_check": {
+    "expected_steps_per_epoch": 2814,
+    "p01_steps_per_epoch": 2814,
+    "detail": {
+     "loader_workers": 4,
+     "samples_per_loader_worker": [
+      192000,
+      192000,
+      192000,
+      144307
+     ],
+     "shards": 768
+    }
+   },
+   "training": {
+    "init_from": "prereg01/rank/ckpt/state.pt",
+    "start_epoch": 5,
+    "final_epoch": 9,
+    "global_step_at_start": 0,
+    "state_config": {
+     "SEED": 42,
+     "BATCH_SIZE": 256,
+     "PEAK_LR": 0.001,
+     "SCHEDULE": "LambdaLR: lr = PEAK_LR * max(0, 1 - t / T)；每次 optimizer.step() 後 scheduler.step()",
+     "EXTRA_EPOCHS": 4,
+     "T": 11256,
+     "P01_STEPS": 2814,
+     "NUM_EPOCHS": 5,
+     "VAL_SIZE": 73556,
+     "init_state_sha256": "c72ba0d60026e5f5ed7715365bdbad1950fc7d41b99a48fd6c9e0167f515847d",
+     "init_weights_sha256": "3e2267a24860c836e8db219d07cd265f3f180f3573aa565ccadd27f859fc3c8d"
+    },
+    "optimizer": {
+     "class": "AdamW",
+     "lr": 0.001,
+     "betas": [
+      0.9,
+      0.999
+     ],
+     "eps": 1e-08,
+     "weight_decay": 0.01,
+     "amsgrad": false,
+     "maximize": false,
+     "foreach": null,
+     "capturable": false,
+     "differentiable": false,
+     "fused": null,
+     "decoupled_weight_decay": true
+    },
+    "criterion": "CrossEntropyLoss",
+    "device": "cuda",
+    "device_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "tf32": {
+     "cudnn": true,
+     "matmul": false
+    },
+    "loader_workers": 4,
+    "seed_rule": "random／numpy／torch 的 seed 在每個 epoch 開始時設為 SEED + epoch",
+    "checkpoint_rule": "指定 epoch_9.pth（最後一個 epoch），不另選 best；inner 驗證只當監看"
+   },
+   "epochs_trained": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "dumps_p2": {
+    "done": true,
+    "weights": "prereg02/rank/ckpt/epoch_9.pth",
+    "weights_sha256": "423581b4fddd5c2c160ebf691f4e86b9e00c4fe743d5cfb23df7891f4a2ca939",
+    "inner": "written",
+    "val": "written",
+    "inner_acc_from_dump_pct": 25.581869595954103,
+    "inner_acc_from_history_pct": 25.581869595954103,
+    "abs_diff_pp": 0.0,
+    "finish_without_training": false
+   },
+   "outputs": {
+    "dumps": {
+     "inner_keys": {
+      "rows": 73556,
+      "bytes": 8313070,
+      "sha256": "b686872d459161330af26132fc0ec2617d104be6cd72eae509250ffef0c03ab6",
+      "weights": null,
+      "weights_sha256": null
+     },
+     "val_keys": {
+      "rows": 19156,
+      "bytes": 939646,
+      "sha256": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+      "weights": null,
+      "weights_sha256": null
+     },
+     "inner_p01e1": {
+      "rows": 73556,
+      "bytes": 2943270,
+      "sha256": "b14e49af759c695bd5e41ef2f0cc81aa017886fde0b8b870422ea00ead5ab188",
+      "weights": "prereg01/rank/ckpt/epoch_1.pth",
+      "weights_sha256": "72d3e25c2a3b4c2caaf74cfc2b7f7c0a58634e97cc9d9bbaf3207fe2508fc98b"
+     },
+     "val_p01e1": {
+      "rows": 19156,
+      "bytes": 767270,
+      "sha256": "8584ce696818534004df005baaf7a274b8985578d2d46624eae411d73dc34855",
+      "weights": "prereg01/rank/ckpt/epoch_1.pth",
+      "weights_sha256": "72d3e25c2a3b4c2caaf74cfc2b7f7c0a58634e97cc9d9bbaf3207fe2508fc98b"
+     },
+     "inner_p01e2": {
+      "rows": 73556,
+      "bytes": 2943270,
+      "sha256": "1423c2bf4a05573ecc0f0534e13e14401a25a9ec6fdd920f9a744d09459337fd",
+      "weights": "prereg01/rank/ckpt/epoch_2.pth",
+      "weights_sha256": "5d808df5937ae8448955da6e70ca78a29f5e019cab9dba739ee30ea75632785f"
+     },
+     "val_p01e2": {
+      "rows": 19156,
+      "bytes": 767270,
+      "sha256": "8ab72d9a458cd04bcfaffb9ed35f7a30d4e890518ba35f8e19f0c422debc0fb6",
+      "weights": "prereg01/rank/ckpt/epoch_2.pth",
+      "weights_sha256": "5d808df5937ae8448955da6e70ca78a29f5e019cab9dba739ee30ea75632785f"
+     },
+     "inner_p01e3": {
+      "rows": 73556,
+      "bytes": 2943270,
+      "sha256": "236ec597eb4922a530cdcaff3027e9bc9634f738dc855121f8ba150f753e16a8",
+      "weights": "prereg01/rank/ckpt/epoch_3.pth",
+      "weights_sha256": "2870d62e563f5a0cb122ba061d6a8e046da03b50805b65301232c73f1e481e93"
+     },
+     "val_p01e3": {
+      "rows": 19156,
+      "bytes": 767270,
+      "sha256": "1e1c24bb4e306873d083b073d52643c915a3bc284c377317be72becda00a74f3",
+      "weights": "prereg01/rank/ckpt/epoch_3.pth",
+      "weights_sha256": "2870d62e563f5a0cb122ba061d6a8e046da03b50805b65301232c73f1e481e93"
+     },
+     "inner_p01e4": {
+      "rows": 73556,
+      "bytes": 2943270,
+      "sha256": "91dc87d5d7d70e60443ccabe3e5105e1f61f41aa22aae6a04cef72b8437cfac0",
+      "weights": "prereg01/rank/ckpt/epoch_4.pth",
+      "weights_sha256": "a06e0a8a5ebd4777145c2e871e0d0cc5f5f1fd2e94d8ee94206ad52b44f03aed"
+     },
+     "val_p01e4": {
+      "rows": 19156,
+      "bytes": 767270,
+      "sha256": "b9ffc963151f11aa87bc8501459dd26253dac3b88ef34b8d6e79176c58f35d5d",
+      "weights": "prereg01/rank/ckpt/epoch_4.pth",
+      "weights_sha256": "a06e0a8a5ebd4777145c2e871e0d0cc5f5f1fd2e94d8ee94206ad52b44f03aed"
+     },
+     "inner_p01e5_d4": {
+      "rows": 73556,
+      "bytes": 23538950,
+      "sha256": "377f2b5fd8700d67fc0df98d92b2d2423443195403ca6a233570f91c23b4b12a",
+      "weights": "prereg01/rank/ckpt/epoch_5.pth",
+      "weights_sha256": "3e2267a24860c836e8db219d07cd265f3f180f3573aa565ccadd27f859fc3c8d"
+     },
+     "val_p01e5_d4": {
+      "rows": 19156,
+      "bytes": 6130950,
+      "sha256": "ef91e9cd967802719d4f16bf74ebf475809b0f4b31971589f73097f928b0a434",
+      "weights": "prereg01/rank/ckpt/epoch_5.pth",
+      "weights_sha256": "3e2267a24860c836e8db219d07cd265f3f180f3573aa565ccadd27f859fc3c8d"
+     },
+     "inner_p02e9_d4": {
+      "rows": 73556,
+      "bytes": 23538950,
+      "sha256": "d042fca41e04a365dd9f7f4ebc31d244d39b24e803a1191cb06ecaaf3d056de5",
+      "weights": "prereg02/rank/ckpt/epoch_9.pth",
+      "weights_sha256": "423581b4fddd5c2c160ebf691f4e86b9e00c4fe743d5cfb23df7891f4a2ca939"
+     },
+     "val_p02e9_d4": {
+      "rows": 19156,
+      "bytes": 6130950,
+      "sha256": "ec0b729d805eb9f3458f7a497444b099b8ec47e5cec73703ae4b8bf9cf0a11b2",
+      "weights": "prereg02/rank/ckpt/epoch_9.pth",
+      "weights_sha256": "423581b4fddd5c2c160ebf691f4e86b9e00c4fe743d5cfb23df7891f4a2ca939"
+     }
+    },
+    "inner_games": 73556,
+    "val_questions": 1589,
+    "val_games": 19156,
+    "val_games_unparsed": 0,
+    "repro_check_pass": true,
+    "training_complete": true,
+    "p2_dumps_done": true,
+    "finish_without_training": false,
+    "p01_readonly_unchanged": true,
+    "p01_files_fingerprinted": 996,
+    "history": [
+     {
+      "epoch": 6,
+      "train_acc": 27.71054564234417,
+      "val_acc": 24.966012289955952,
+      "train_loss": 1.8606195892098107,
+      "val_loss": 1.9502858805159728,
+      "steps": 2814,
+      "samples": 720307,
+      "seconds": 445.78314661979675,
+      "run": 1,
+      "lr_start": 0.001,
+      "lr_end": 0.00075,
+      "global_step": 2814
+     },
+     {
+      "epoch": 7,
+      "train_acc": 29.620842224218286,
+      "val_acc": 20.77736690412747,
+      "train_loss": 1.804074953232747,
+      "val_loss": 2.2424599313073688,
+      "steps": 2814,
+      "samples": 720307,
+      "seconds": 444.78217482566833,
+      "run": 1,
+      "lr_start": 0.00075,
+      "lr_end": 0.0005,
+      "global_step": 5628
+     },
+     {
+      "epoch": 8,
+      "train_acc": 31.875297616155333,
+      "val_acc": 25.157702974604383,
+      "train_loss": 1.7373489574837024,
+      "val_loss": 1.973949013484849,
+      "steps": 2814,
+      "samples": 720307,
+      "seconds": 445.1886444091797,
+      "run": 1,
+      "lr_start": 0.0005,
+      "lr_end": 0.00025,
+      "global_step": 8442
+     },
+     {
+      "epoch": 9,
+      "train_acc": 33.92747814473551,
+      "val_acc": 25.581869595954103,
+      "train_loss": 1.6734723024276783,
+      "val_loss": 1.9804975998898346,
+      "steps": 2814,
+      "samples": 720307,
+      "seconds": 444.7563302516937,
+      "run": 1,
+      "lr_start": 0.00025,
+      "lr_end": 0.0,
+      "global_step": 11256
+     }
+    ],
+    "files": {
+     "config.json": 20354,
+     "env.json": 1626,
+     "leak_check.json": 1322,
+     "p01_readonly_after.json": 95966,
+     "p01_readonly_before.json": 95915,
+     "repro_check.json": 1364,
+     "run_log.json": 445,
+     "timings.json": 617
+    }
+   }
+  }
+ ],
+ "epochs_completed": 9,
+ "global_step": 11256,
+ "training_complete": true,
+ "trained_in_runs": [
+  1
+ ],
+ "finish_without_training": false
+}

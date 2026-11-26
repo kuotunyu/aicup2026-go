@@ -1,0 +1,445 @@
+{
+ "what": "R20 fake-tree golden (spec results/test04/design/spec.md 8.1 point 1): the deterministic outputs of the t02 R20 rank path in tests/test_t02_dryrun.py FromValPipeline, recorded on branch p04-testday before any t04 code existed. test_t04_dryrun.py (8.1 point 2) and the pre-merge check (8.1 point 3) must reproduce every value under 'files_sha256', 'decide_summary' (normalised) and 'opening_test_npz.arrays'.",
+ "tree": "S = <C10_DRYRUN_DIR>/fromval (tests/test_t02_dryrun.py workdir('fromval')); all paths below are relative to S",
+ "files_sha256": {
+  "out/rank/rank_test_probs.csv": "bb76e6cf7b2bbed94113c536d1b7d4596230125d987c46ffd01eeb9b354d5b59",
+  "out/rank/pred_A.csv": "e04031de197e4ec603e6cc90e949e227b293b2528d823f1402d2a25230776553",
+  "out/rank/pred_B.csv": "d9b9801b3df85c75e5932ce228eebbeb8a76c43b40d2efd02700ce8807490d97",
+  "out/rank/submission_rank.csv": "d9b9801b3df85c75e5932ce228eebbeb8a76c43b40d2efd02700ce8807490d97",
+  "out/rank/seam_val/rank_val_probs.csv": "a83700432fce5d7d26653fdaee345b0c894729fdff0029a244ed94e06c803b63",
+  "out/rank/seam_val/pred_A.csv": "6729fe1dd62eda19a46d05daa9a0abd522e73bf9bcb412e72888c839fbe7f8b2",
+  "out/rank/seam_val/pred_B.csv": "863a62582424adddc9c2e1821fcc056008bd651e103c19ec8ada98a14f87a2fd"
+ },
+ "decide_summary": {
+  "method": "json.load the file, delete the key 'input' (the absolute path of the input CSV, tools/decide.py:278), then sha256 of json.dumps(obj, sort_keys=True, ensure_ascii=False) encoded as UTF-8; 'fields' is that object (every key of the actual file except 'input')",
+  "out/rank/decide_summary.json": {
+   "normalised_sha256": "a14374bd9d9a63e7a4435058160c2cc34e8ab6f2a3f91957aee08a05e3cca380",
+   "fields": {
+    "n_questions": 800,
+    "n_missing": 0,
+    "missing_question_ids": [],
+    "missing_rule": "n_parsed == 0 (no parsable game in the question); n_parsed > 0 with blank probabilities is an error",
+    "missing_with_probs_ignored": 0,
+    "missing_fallback": "D",
+    "n_A_ne_B": 96,
+    "A_to_B_changes": {
+     "1D->2D": 7,
+     "1D->A": 4,
+     "2D->1D": 7,
+     "2D->3D": 4,
+     "3D->2D": 6,
+     "3D->4D": 1,
+     "4D->3D": 5,
+     "4D->5D": 2,
+     "5D->3D": 1,
+     "5D->4D": 8,
+     "6D->5D": 10,
+     "A->1D": 12,
+     "B->A": 9,
+     "B->C": 9,
+     "C->B": 2,
+     "D->C": 9
+    },
+    "distribution_A": {
+     "D": 99,
+     "C": 78,
+     "B": 124,
+     "A": 106,
+     "1D": 57,
+     "2D": 71,
+     "3D": 57,
+     "4D": 69,
+     "5D": 70,
+     "6D": 69
+    },
+    "distribution_B": {
+     "D": 90,
+     "C": 94,
+     "B": 108,
+     "A": 107,
+     "1D": 65,
+     "2D": 73,
+     "3D": 60,
+     "4D": 71,
+     "5D": 73,
+     "6D": 59
+    },
+    "rule_A": "argmax p_k",
+    "rule_B": "argmax p_k + e^-1*(p_{k-1}+p_{k+1}), neighbours past D or 6D count as 0",
+    "e_minus_1": 0.36787944117144233,
+    "tie_break": "smallest level index (weaker level), same as numpy.argmax",
+    "sum_tolerance": 1e-05,
+    "levels": [
+     "D",
+     "C",
+     "B",
+     "A",
+     "1D",
+     "2D",
+     "3D",
+     "4D",
+     "5D",
+     "6D"
+    ],
+    "input_sha256": "bb76e6cf7b2bbed94113c536d1b7d4596230125d987c46ffd01eeb9b354d5b59",
+    "pred_A_sha256": "e04031de197e4ec603e6cc90e949e227b293b2528d823f1402d2a25230776553",
+    "pred_B_sha256": "d9b9801b3df85c75e5932ce228eebbeb8a76c43b40d2efd02700ce8807490d97"
+   }
+  },
+  "out/rank/seam_val/decide_summary.json": {
+   "normalised_sha256": "b1b3f3a023e3da66a62e6f98cb692428171c8b774512220afcd6a96dab928621",
+   "fields": {
+    "n_questions": 1589,
+    "n_missing": 0,
+    "missing_question_ids": [],
+    "missing_rule": "n_parsed == 0 (no parsable game in the question); n_parsed > 0 with blank probabilities is an error",
+    "missing_with_probs_ignored": 0,
+    "missing_fallback": "D",
+    "n_A_ne_B": 187,
+    "A_to_B_changes": {
+     "1D->2D": 10,
+     "1D->A": 6,
+     "2D->1D": 8,
+     "2D->3D": 11,
+     "2D->A": 1,
+     "3D->2D": 15,
+     "3D->4D": 7,
+     "4D->3D": 12,
+     "4D->5D": 5,
+     "5D->3D": 1,
+     "5D->4D": 16,
+     "6D->5D": 16,
+     "A->1D": 23,
+     "A->2D": 1,
+     "A->4D": 1,
+     "A->B": 1,
+     "B->A": 16,
+     "B->C": 14,
+     "C->B": 5,
+     "D->C": 18
+    },
+    "distribution_A": {
+     "D": 185,
+     "C": 158,
+     "B": 218,
+     "A": 213,
+     "1D": 131,
+     "2D": 137,
+     "3D": 136,
+     "4D": 123,
+     "5D": 143,
+     "6D": 145
+    },
+    "distribution_B": {
+     "D": 167,
+     "C": 185,
+     "B": 194,
+     "A": 210,
+     "1D": 146,
+     "2D": 143,
+     "3D": 138,
+     "4D": 130,
+     "5D": 147,
+     "6D": 129
+    },
+    "rule_A": "argmax p_k",
+    "rule_B": "argmax p_k + e^-1*(p_{k-1}+p_{k+1}), neighbours past D or 6D count as 0",
+    "e_minus_1": 0.36787944117144233,
+    "tie_break": "smallest level index (weaker level), same as numpy.argmax",
+    "sum_tolerance": 1e-05,
+    "levels": [
+     "D",
+     "C",
+     "B",
+     "A",
+     "1D",
+     "2D",
+     "3D",
+     "4D",
+     "5D",
+     "6D"
+    ],
+    "input_sha256": "a83700432fce5d7d26653fdaee345b0c894729fdff0029a244ed94e06c803b63",
+    "pred_A_sha256": "6729fe1dd62eda19a46d05daa9a0abd522e73bf9bcb412e72888c839fbe7f8b2",
+    "pred_B_sha256": "863a62582424adddc9c2e1821fcc056008bd651e103c19ec8ada98a14f87a2fd"
+   }
+  }
+ },
+ "opening_test_npz": {
+  "path": "out/rank/opening_test.npz",
+  "method": "numpy.load(allow_pickle=False); per array: dtype.str, shape and sha256 of numpy.ascontiguousarray(a).tobytes(); 'meta' is excluded (it holds 'created' and the absolute input paths)",
+  "members": [
+   "set",
+   "question_id",
+   "slot",
+   "color",
+   "ll",
+   "o",
+   "has",
+   "n_terms",
+   "n_moves",
+   "meta"
+  ],
+  "excluded": [
+   "meta"
+  ],
+  "arrays": {
+   "set": {
+    "dtype": "<U8",
+    "shape": [
+     28758
+    ],
+    "sha256": "3718e11d8fa1790bb2435584b943f2e9d43cad9fb9ecb8edae8421edc5a9fd0f"
+   },
+   "question_id": {
+    "dtype": "<U11",
+    "shape": [
+     28758
+    ],
+    "sha256": "8953e942a55cc38332f7f841822fa714d5c176fdd774760a708f43656e2f7c87"
+   },
+   "slot": {
+    "dtype": "<i2",
+    "shape": [
+     28758
+    ],
+    "sha256": "aad0fe26342b0d20114a40b993729dc74a44de3931160d773bb0c18e08d210a5"
+   },
+   "color": {
+    "dtype": "<U1",
+    "shape": [
+     28758
+    ],
+    "sha256": "6f4317be94c774f721d23d238ce27115133354468a7c5dc7345edbc1c39fc945"
+   },
+   "ll": {
+    "dtype": "<f8",
+    "shape": [
+     28758,
+     10
+    ],
+    "sha256": "4c6a9e4b7302ea4f3c2d632dc29f77e40fde30b9ff95654f2834227b9f170b1e"
+   },
+   "o": {
+    "dtype": "<f8",
+    "shape": [
+     28758,
+     10
+    ],
+    "sha256": "cbc1bf68612fa5d866ac91157c856885c40a70fdad81150f0952bb5528cc597c"
+   },
+   "has": {
+    "dtype": "|b1",
+    "shape": [
+     28758
+    ],
+    "sha256": "0d01337fceba0af93a7e608f33fec5cd0283d4363c5bf08cf44881077a232653"
+   },
+   "n_terms": {
+    "dtype": "<i2",
+    "shape": [
+     28758
+    ],
+    "sha256": "411aabd5bb1df6e911e2f86f4c846aa57ccb0e9c09d032b2c1a213f57cfc4841"
+   },
+   "n_moves": {
+    "dtype": "<i2",
+    "shape": [
+     28758
+    ],
+    "sha256": "93a0731dcd0ffa3428291dbe45f48ca48364dd3a8662f43bcbb50d76eb6b764b"
+   }
+  }
+ },
+ "known_values": {
+  "out/rank/submission_rank.csv": {
+   "expected": "d9b9801b3df85c75e5932ce228eebbeb8a76c43b40d2efd02700ce8807490d97",
+   "got": "d9b9801b3df85c75e5932ce228eebbeb8a76c43b40d2efd02700ce8807490d97",
+   "equal": true
+  },
+  "out/rank/seam_val/rank_val_probs.csv": {
+   "expected": "a83700432fce5d7d26653fdaee345b0c894729fdff0029a244ed94e06c803b63",
+   "got": "a83700432fce5d7d26653fdaee345b0c894729fdff0029a244ed94e06c803b63",
+   "equal": true
+  },
+  "out/rank/seam_val/pred_B.csv": {
+   "expected": "863a62582424adddc9c2e1821fcc056008bd651e103c19ec8ada98a14f87a2fd",
+   "got": "863a62582424adddc9c2e1821fcc056008bd651e103c19ec8ada98a14f87a2fd",
+   "equal": true
+  }
+ },
+ "informational_not_compared": {
+  "note": "location- or time-dependent, or recorded for diagnosis only; not part of the golden comparison",
+  "files_bytes": {
+   "out/rank/rank_test_probs.csv": 180998,
+   "out/rank/pred_A.csv": 11215,
+   "out/rank/pred_B.csv": 11223,
+   "out/rank/submission_rank.csv": 11223,
+   "out/rank/seam_val/rank_val_probs.csv": 358655,
+   "out/rank/seam_val/pred_A.csv": 21494,
+   "out/rank/seam_val/pred_B.csv": 21512
+  },
+  "whole_file_sha256": {
+   "out/rank/decide_summary.json": "18ddb5bf90156955b925318c44d56d02105f8e7ea63b3b50dd17c9f1dbd37c6e",
+   "out/rank/seam_val/decide_summary.json": "a031e98ccde40dd7b8139f92963c6ee19eacfdf3481231d471217dcacd6f2c77",
+   "out/rank/opening_test.npz": "aed3a3593bb33f6a1b29a05db79cd92d3bb131547c5a93adefe7dfd4be999bf5"
+  },
+  "whole_file_note": "decide_summary.json embeds the absolute input path; opening_test.npz embeds meta (created, absolute input paths)",
+  "cross_checks": {
+   "submission_rank.csv == out/rank/pred_B.csv (whole file)": true,
+   "decide_summary pred_A_sha256 / pred_B_sha256 / input_sha256 == the files next to it": true,
+   "seam_val files vs committed results/prereg02/rank/ (working-tree bytes)": {
+    "rank_val_probs.csv": {
+     "prereg02_sha256": "a83700432fce5d7d26653fdaee345b0c894729fdff0029a244ed94e06c803b63",
+     "equal": true
+    },
+    "pred_A.csv": {
+     "prereg02_sha256": "6729fe1dd62eda19a46d05daa9a0abd522e73bf9bcb412e72888c839fbe7f8b2",
+     "equal": true
+    },
+    "pred_B.csv": {
+     "prereg02_sha256": "863a62582424adddc9c2e1821fcc056008bd651e103c19ec8ada98a14f87a2fd",
+     "equal": true
+    }
+   }
+  },
+  "opening_meta_without_created_and_paths": {
+   "format": "c10-test02 rank opening_test v1",
+   "what": "test02 opening n-gram scores (tools/t02_rank.py opening)",
+   "params": {
+    "M": 12,
+    "alpha": 20.0,
+    "n_points": 361,
+    "levels": [
+     "D",
+     "C",
+     "B",
+     "A",
+     "1D",
+     "2D",
+     "3D",
+     "4D",
+     "5D",
+     "6D"
+    ],
+    "canonical": "p02_moves.canon(mv, 12): D4 transform making the first 12 points smallest, ties -> smallest symmetry index",
+    "counted_on": "load_rows(part='fit') only"
+   },
+   "build_id": "bd35b1ba207178530cc8f2de9520c78f37a55027ab45f456ed0b412c998806cc",
+   "frozen_opening_build_id": "c0cb86b47cd3f95c75940cc71b3b7ca24d43c3390c1a510bf96c6ae68e0f93a6",
+   "seam_bitwise_equal": true,
+   "fit_games": 720307,
+   "fit_games_by_level": {
+    "D": 69748,
+    "C": 75315,
+    "B": 72264,
+    "A": 71255,
+    "1D": 71538,
+    "2D": 73011,
+    "3D": 73725,
+    "4D": 71135,
+    "5D": 73840,
+    "6D": 68476
+   },
+   "inputs": {
+    "seam_val": {
+     "sha256": "73e51bbfd7b051e73cbb62af4b180c403d2422f122240c5e67e9c92303776db5",
+     "slots": 19156,
+     "questions": 1589
+    },
+    "public": {
+     "sha256": "9ad3b4612f0d5bf89164ae29e8309f50dcb668bfc7652ff9b474eb50720568af",
+     "slots": 4787,
+     "questions": 400
+    },
+    "private": {
+     "sha256": "b4fad2f400d9af022e1c21cce0af558096af1bcbf5a507c910236f1b7ca68890",
+     "slots": 4815,
+     "questions": 400
+    }
+   },
+   "reference": {
+    "path": "results/prereg02/rank/opening_val.npz",
+    "sha256": "75ffec64f9e949ac0be52ce9e72a4a19bb978a25de2b6ed9d355aac7a1a5ae85"
+   },
+   "tool_sha256": {
+    "t02_rank.py": "e3485e073a20843654f622828283af4ae3985141e08378cefb59d6c6f2495874",
+    "p02_rank_opening.py": "a4195fece41aa3d50ecda82d1af93d9c04f49df5fd2157d69dd8a488dea93463",
+    "p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+    "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495"
+   }
+  },
+  "fake_tree": {
+   "format": "c10-test02 fake tree v1",
+   "kind": "from-val",
+   "rule": "validation-derived: never run content statistics (T1.4-T5) on this tree; only the apply pipeline and T1.1-T1.3 (structure)",
+   "zip_kind": "rehearsal",
+   "zip_sha256": "24095c5377b27451b7dfa86fb34b4a1fe7d35e47109f0ae563dad3ece0bf6ca9",
+   "manifest_sha256": "f3e85006d604d75b0ae6198f0ffad43becc432b2055ec16f3e43c2ee8a957263",
+   "files": {
+    "rank_prediction_test_public.csv": "9ad3b4612f0d5bf89164ae29e8309f50dcb668bfc7652ff9b474eb50720568af",
+    "rank_prediction_test_private.csv": "b4fad2f400d9af022e1c21cce0af558096af1bcbf5a507c910236f1b7ca68890",
+    "player_identification_test_public.csv": "641f84a50f886f9e153c332302ad4c9f5409e7e93f37db8ec5a164aff71eec9a",
+    "player_identification_test_private.csv": "1b2ece4c73b2e9df91c0e2f092ddb254eb9047dd4cac00048a2efae168892c42",
+    "player_identification_candidates_public.csv": "793527ad49396f5bc4427a6361d428eeb0e61111663a4ed1d90959130f5a4b34",
+    "player_identification_candidates_private.csv": "35ef2065074b28c58889ad7d6bdd616919d82c946398c2654c97472b8dfcf94f"
+   }
+  },
+  "apply_test_report_seconds": 1.1,
+  "opening_test_report_seconds": 111.3
+ },
+ "provenance": {
+  "recorded_by": "I3-golden (workflow agent), before any t04 code",
+  "branch": "p04-testday",
+  "commit": "9f63acdac36f0edcf75999f5580ea864d218a4e8",
+  "code_equals": "main 6ec5e68: git diff --name-only 6ec5e68 9f63acd lists only results/test04/design/*",
+  "git_status_porcelain_untracked_all_before_run": "",
+  "git_status_porcelain_untracked_all_after_run": "",
+  "git_blob_ids_at_commit": {
+   "tools/t02_fake_tests.py": "2df933a18347458979bad41f7c8fcee4daa6c776",
+   "tools/t02_checks.py": "69d9cac2d267c2657d7c5345c7f5c76bb524f11e",
+   "tools/t02_rank.py": "162540a4d2bc000b8c2b2aa7d01f2dc8ca987f01",
+   "tools/t02_player.py": "a7e7188dad3daecceceea1a57780fe3ac8d0b884",
+   "tools/decide.py": "7fa7a2dabfbde311d1b8c59860e890b65b78fd64",
+   "tools/check_submission.py": "fec2e2de01f181b405c94ce7fb0675556ae546b8",
+   "tools/c10data.py": "8d84b365657277dda537ee2d07c4212f81a53c6f",
+   "tools/p02_rank_fuse.py": "ab5bbd22b4e7639df522b93cc0e3d14819b75ce9",
+   "tools/p02_rank_opening.py": "a39606d6db746586150c324e10f4b143ff407755",
+   "tools/p02_rank_pseudo.py": "ef8c74dbbd1768e90d2b7edcd12823b0aa8ede83",
+   "tools/p02_moves.py": "c71ebcd0a609d82d0f151eae87f1df12c108a605",
+   "tests/test_t02_dryrun.py": "6ecfaaf4a31bbae82a9f7101010929d221365eb6",
+   "results/test02/rank/fallback_R10.json": "d46d4dc31abd50a6df7159b7ccd1aaf86a096827"
+  },
+  "cwd": "D:\\AI-Portfolio\\competitions\\aicup2026-go",
+  "command": ".venv/Scripts/python.exe -m pytest -q tests/test_t02_dryrun.py -k FromValPipeline -p no:cacheprovider",
+  "command_note": "-p no:cacheprovider only keeps pytest from touching .pytest_cache; it does not change what runs",
+  "env": {
+   "C10_SLOW": "1",
+   "C10_KEEP": "1",
+   "C10_DRYRUN_DIR": "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\D--AI-Portfolio-competitions-aicup2026-solar\\b3b12887-5b96-4ead-ab34-78eb6f69fc09\\scratchpad\\p04build\\golden_tree",
+   "OMP_NUM_THREADS": "6",
+   "MKL_NUM_THREADS": "6",
+   "OPENBLAS_NUM_THREADS": "6",
+   "PYTHONIOENCODING": "utf-8",
+   "PYTHONUTF8": "unset"
+  },
+  "rank_steps_run_by_the_test": [
+   "tools/t02_fake_tests.py from-val --root S",
+   "tools/t02_checks.py t1 --comp rank|player --dry-run --root S --only T1.1,T1.2,T1.3",
+   "tools/t02_rank.py opening --dry-run --results-dir S/results/test02 --tests-dir S/data/test --out-dir S/out/rank",
+   "tools/t02_rank.py apply --dry-run --results-dir S/results/test02 --tests-dir S/data/test --out-dir S/out/rank",
+   "(then the R10 fallback, the mixed-environment refusal, competition 1 and t6, into other out dirs)"
+  ],
+  "started": "2026-09-30T03:59:41.3615476+08:00",
+  "ended": "2026-09-30T04:04:33.6047479+08:00",
+  "wall": "exit=0 seconds=292.2",
+  "pytest_result": "15 passed, 12 deselected in 290.63s (0:04:50)",
+  "python": "3.12.13",
+  "python_full": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "pytest": "9.1.1",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "machine": "AMD64"
+ }
+}

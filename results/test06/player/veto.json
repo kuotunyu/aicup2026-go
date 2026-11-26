@@ -1,0 +1,54 @@
+{
+ "format": "c10-test06 veto v1",
+ "mode": "real",
+ "what": "PREREG_06 5.3 public veto of the one-to-one switch",
+ "entries": {
+  "q04": 2,
+  "off": 4,
+  "on": 5
+ },
+ "pairing": "06-ON with the latest 06-OFF of the same run_id uploaded before it (PREREG_06 rev 3)",
+ "public": {
+  "q04": 0.9574382,
+  "off": 0.9886787,
+  "on": 1.0
+ },
+ "now": "2026-11-04T16:01:19.272081+08:00",
+ "k7p": "2026-11-22T23:59:59+08:00",
+ "log_sha256": "217cb50671b2a48c032fc3375183ec252c5949b396482bca984e27448f862a38",
+ "rerun": null,
+ "confirmed_upload_check": null,
+ "upload_check": null,
+ "tools": {
+  "git_head": "5ced3eaa2ee712bad60512c1948a0f37c7d227b6",
+  "files_sha256_lf": {
+   "tools/t06_player.py": "d1e48050f827495579fc22b5ceff9b4d8eba8f18ab471909436ceb4d16f3b0f6",
+   "tools/p06_style.py": "78beb8138c27853da70081e469e534508174265852a64ebada21e354ae72058a",
+   "tools/p06_sim.py": "21deeea1eb08b1d6580ba78c47505789f66dbdd10c8891973e14f523ef443eeb",
+   "tools/p06_player.py": "b25636878ee87ca828a9c65177965dc60466ac4e9aa348acd88785ca11075590",
+   "tools/p02_player_fuse.py": "cb1cc1a2ba626a80ed49e7ae8269715f1e123f33777b6ed135380dbd07b35d5b",
+   "tools/p02_player_open.py": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+   "tools/p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "tools/c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "tools/check_submission.py": "b5c7c300cca4fcd5b243e4579417453699777e99bd4aff88dcbf6805e9346144"
+  }
+ },
+ "env": {
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "executable": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\.venv\\Scripts\\python.exe"
+ },
+ "same_file_warning": [],
+ "decided": true,
+ "paused": false,
+ "k7_passed": false,
+ "d": 0.011321299999999979,
+ "vetoed": false,
+ "final_variant": "on",
+ "reupload_off_needed": false,
+ "outcome": "kept",
+ "rule": "d = public(06-ON) - public(06-OFF) from results/official_scores.json; d < 0 vetoes (final 06-OFF, upload it once more); d >= 0 keeps 06-ON (it must still be the last upload)",
+ "created": "2026-11-04T16:01:19+08:00",
+ "seconds": 0.1
+}

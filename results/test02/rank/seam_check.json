@@ -1,0 +1,71 @@
+{
+ "keys_equal": {
+  "question_id": true,
+  "slot": true,
+  "color": true,
+  "parsed": true
+ },
+ "same_gpu_as_prereg02": true,
+ "tol": 0.0001,
+ "bitwise_equal": true,
+ "max_abs_logit_diff": 0.0,
+ "max_abs_c0_diff": 0.0,
+ "problems": [],
+ "questions": 1589,
+ "games": 19156,
+ "games_parsed": 19156,
+ "rule_b_diff": {
+  "questions": 0,
+  "allowed": 4,
+  "question_ids": []
+ },
+ "passed": true,
+ "what": "test02 notebook seam (PREREG_02 section 9 item 2): seam_val dump vs prereg02 val_p02e9_d4.npz on Drive",
+ "run": 1,
+ "time": "2026-11-04T06:55:12+00:00",
+ "smoke": false,
+ "tol_rule": "1e-4 when the GPU that wrote the seam_val dump (its _DONE_ marker) is the prereg02 dump GPU, else 1e-3",
+ "gpu_this_run": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "torch_this_run": "2.11.0+cu128",
+ "cudnn_this_run": 91900,
+ "seam_dump": {
+  "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "torch": "2.11.0+cu128",
+  "cudnn": 91900,
+  "run": 1,
+  "sha256": "ec0b729d805eb9f3458f7a497444b099b8ec47e5cec73703ae4b8bf9cf0a11b2",
+  "weights_sha256": "423581b4fddd5c2c160ebf691f4e86b9e00c4fe743d5cfb23df7891f4a2ca939"
+ },
+ "prereg02_dump": {
+  "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "torch": "2.11.0+cu128",
+  "cudnn": 91900,
+  "run": 1,
+  "sha256": "ec0b729d805eb9f3458f7a497444b099b8ec47e5cec73703ae4b8bf9cf0a11b2",
+  "weights_sha256": "423581b4fddd5c2c160ebf691f4e86b9e00c4fe743d5cfb23df7891f4a2ca939"
+ },
+ "reference_sha256": {
+  "val_keys.npz": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+  "val_p02e9_d4.npz": "ec0b729d805eb9f3458f7a497444b099b8ec47e5cec73703ae4b8bf9cf0a11b2"
+ },
+ "dump_env": {
+  "seam_val": {
+   "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "torch": "2.11.0+cu128",
+   "cudnn": 91900
+  },
+  "public": {
+   "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "torch": "2.11.0+cu128",
+   "cudnn": 91900
+  },
+  "private": {
+   "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "torch": "2.11.0+cu128",
+   "cudnn": 91900
+  }
+ },
+ "dump_env_same": true,
+ "dump_env_rule": "the val_p02e9_d4 dumps of seam_val, public and private must carry the same gpu_name, torch and cudnn in their _DONE markers (a resumed run reuses finished sets)",
+ "earlier_runs": []
+}

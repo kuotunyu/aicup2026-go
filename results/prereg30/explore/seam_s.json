@@ -1,0 +1,28 @@
+{
+ "format": "c10-prereg30 seam S v1",
+ "games": 26779,
+ "chunks": 134,
+ "chunk_list_sha256": "cd4621b89620809003c7d1394ab243a998af76e4339f2d86cd6caadf23ea83e3",
+ "usable": 26779,
+ "same_counts": true,
+ "same_failed": true,
+ "same_n_moves": true,
+ "max_abs_diff_standardised": 0.02214918464993154,
+ "tolerance": 0.05,
+ "bitwise_equal_raw_X": false,
+ "v2_turns_not_contiguous": 0,
+ "v2_nan_fraction": {
+  "target_nlp_all": 0.0,
+  "target_nlp_150": 0.0,
+  "target_loss_150f": 0.0,
+  "target_big_150f": 0.0,
+  "target_wloss_150f": 0.0,
+  "opponent_nlp_all": 0.0,
+  "opponent_nlp_150": 0.0,
+  "opponent_loss_150f": 0.0,
+  "opponent_big_150f": 0.0,
+  "opponent_wloss_150f": 0.0
+ },
+ "nlp_max_over_positions": 0.0,
+ "passed": true
+}

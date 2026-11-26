@@ -1,0 +1,575 @@
+{
+ "format": "c10-test02 t3 null v1",
+ "what": "T3 null (PREREG_02 rev 5 9.8) from training players only: split-v1 part 'train' read through c10data.load_rows; no validation game, no label file",
+ "definitions": {
+  "reference_R": "all fit players (split v1, c10data.load_rows(part='fit') players), each profiled on all their fit games",
+  "tokens": "p02_player_open.game_tokens(colour, p02_player_open.moves_of(sgf), orient): colour-prefixed and colour-free sets together, own first 10 moves and whole-game first 10 moves; orient raw or canon (p02_moves.canon(mv, 10))",
+  "vocabulary": "tokens of every training game (fit + inner) in load_rows order; tokens seen only in inner games have df = 0",
+  "weights": "profile counts summed over its games, tf = 1 + ln(count), idf = ln((1 + 5767) / (1 + df)) + 1 with df over R, rows L2-normalised (norm + 1e-12); a test token absent from the vocabulary enters only the row norm with idf = ln(5768) + 1",
+  "statistic": "S2(c) = top1 - top2 of the cosine between the candidate profile (its 100 pool games) and the 5,767 reference rows, per orientation",
+  "null": "fit players with >= 100 games (1,985), profile = first 100 games in sha256('c10-t3|cand|{pid}|{gid}') order, own reference column left out; q99 = np.quantile(null, 0.99, method='higher')",
+  "holdout": "inner players with >= 100 games (never in R), same profile rule",
+  "positives": "the null players with their own column replaced by the profile of their other games (m = 20 / 50 / 100 / all)",
+  "t3q": "record-only: k-game profiles (k = 5..20) of fit players with >= 25 games, LOO null; test questions are compared with q99(k) of their own k"
+ },
+ "reference": {
+  "players": 5767,
+  "games": 720307,
+  "sha256_sorted_player_ids": "9940feed82f435a770030a17b32b5bbf7dc1002daa61616a989b24580bdf664f"
+ },
+ "orient": {
+  "raw": {
+   "n_null": 1985,
+   "n_holdout_inner": 226,
+   "vocab": 146421,
+   "vocab_sha256": "63974765eeed627eaaaaabbdb47ff3e04621092696564dd87ca834ae486f4cb3",
+   "idf_sha256": "2523d83ca8eed86b7edfa157efbfbbe968ee207263b32f325d5baaff55c4016d",
+   "idf_sha256_rule": "sha256 of the idf vector as little-endian float64 bytes, vocabulary order = first appearance over all training games in load_rows order",
+   "S2_q99": 0.1004267242871777,
+   "S1_q99": 0.45351487253545486,
+   "null_n_exceed": 19,
+   "null_S2_quantiles": {
+    "0.5": 0.006558479686650964,
+    "0.9": 0.025068872133920186,
+    "0.95": 0.035105029478047924,
+    "0.99": 0.09926944722474747,
+    "0.995": 0.12102058507726786,
+    "0.999": 0.1839582731855651
+   },
+   "null_S2_max": 0.20609941566182255,
+   "null_S2_exceed_by_level": {
+    "D": 0.015,
+    "C": 0.0093,
+    "B": 0.0,
+    "A": 0.0082,
+    "1D": 0.0204,
+    "2D": 0.0158,
+    "3D": 0.0052,
+    "4D": 0.0165,
+    "5D": 0.0,
+    "6D": 0.0106
+   },
+   "null_worst_level_P_declare": 3.5491942945506604e-16,
+   "holdout_inner_exceed": 0.0044,
+   "holdout_inner_n_exceed": 1,
+   "pos": {
+    "20": {
+     "n": 1775,
+     "tpr": 0.0445,
+     "tpr_by_level": {
+      "D": 0.047,
+      "C": 0.026,
+      "B": 0.028,
+      "A": 0.035,
+      "1D": 0.042,
+      "2D": 0.057,
+      "3D": 0.05,
+      "4D": 0.061,
+      "5D": 0.04,
+      "6D": 0.065
+     }
+    },
+    "50": {
+     "n": 1489,
+     "tpr": 0.1605,
+     "tpr_by_level": {
+      "D": 0.142,
+      "C": 0.181,
+      "B": 0.098,
+      "A": 0.144,
+      "1D": 0.123,
+      "2D": 0.185,
+      "3D": 0.15,
+      "4D": 0.162,
+      "5D": 0.158,
+      "6D": 0.27
+     }
+    },
+    "100": {
+     "n": 1139,
+     "tpr": 0.3363,
+     "tpr_by_level": {
+      "D": 0.282,
+      "C": 0.333,
+      "B": 0.226,
+      "A": 0.361,
+      "1D": 0.264,
+      "2D": 0.383,
+      "3D": 0.3,
+      "4D": 0.384,
+      "5D": 0.336,
+      "6D": 0.514
+     }
+    },
+    "all": {
+     "n": 1974,
+     "tpr": 0.3804,
+     "tpr_by_level": {
+      "D": 0.364,
+      "C": 0.302,
+      "B": 0.25,
+      "A": 0.283,
+      "1D": 0.422,
+      "2D": 0.444,
+      "3D": 0.44,
+      "4D": 0.5,
+      "5D": 0.416,
+      "6D": 0.463
+     }
+    }
+   },
+   "pos_all_tpr_by_ref_games": {
+    "1-20": {
+     "n": 213,
+     "tpr": 0.0376
+    },
+    "21-50": {
+     "n": 279,
+     "tpr": 0.1004
+    },
+    "51-100": {
+     "n": 346,
+     "tpr": 0.2312
+    },
+    "101-200": {
+     "n": 473,
+     "tpr": 0.4376
+    },
+    "201-1000000": {
+     "n": 663,
+     "tpr": 0.6456
+    }
+   },
+   "power_pool_rule": {
+    "0.0": {
+     "P_declare": 0.0,
+     "mean_share_above": 0.0095,
+     "p05_share": 0.0025
+    },
+    "0.1": {
+     "P_declare": 0.0,
+     "mean_share_above": 0.0364,
+     "p05_share": 0.0225
+    },
+    "0.2": {
+     "P_declare": 0.005,
+     "mean_share_above": 0.063,
+     "p05_share": 0.0425
+    },
+    "0.3": {
+     "P_declare": 0.2672,
+     "mean_share_above": 0.0898,
+     "p05_share": 0.0675
+    },
+    "0.4": {
+     "P_declare": 0.8602,
+     "mean_share_above": 0.1163,
+     "p05_share": 0.09
+    },
+    "0.5": {
+     "P_declare": 0.9948,
+     "mean_share_above": 0.1431,
+     "p05_share": 0.115
+    },
+    "0.75": {
+     "P_declare": 1.0,
+     "mean_share_above": 0.2098,
+     "p05_share": 0.1775
+    },
+    "1.0": {
+     "P_declare": 1.0,
+     "mean_share_above": 0.2773,
+     "p05_share": 0.24
+    }
+   },
+   "t3q": {
+    "population": "fit players with >= 25 games (4177); question = first k of the hash order; positive reference = games 21.. of the hash order",
+    "by_k": {
+     "5": {
+      "q99": 0.07615486701409349,
+      "tpr_rest_ge5": 0.0613
+     },
+     "6": {
+      "q99": 0.07171597605664495,
+      "tpr_rest_ge5": 0.0809
+     },
+     "7": {
+      "q99": 0.07244130307349873,
+      "tpr_rest_ge5": 0.09
+     },
+     "8": {
+      "q99": 0.07533970642596971,
+      "tpr_rest_ge5": 0.0936
+     },
+     "9": {
+      "q99": 0.07467183064517113,
+      "tpr_rest_ge5": 0.1099
+     },
+     "10": {
+      "q99": 0.0702838379875674,
+      "tpr_rest_ge5": 0.1329
+     },
+     "11": {
+      "q99": 0.07394170774372014,
+      "tpr_rest_ge5": 0.1348
+     },
+     "12": {
+      "q99": 0.07694896365896475,
+      "tpr_rest_ge5": 0.1343
+     },
+     "13": {
+      "q99": 0.0724356191966985,
+      "tpr_rest_ge5": 0.1638
+     },
+     "14": {
+      "q99": 0.07579735985890873,
+      "tpr_rest_ge5": 0.1618
+     },
+     "15": {
+      "q99": 0.07538193457693479,
+      "tpr_rest_ge5": 0.1724
+     },
+     "16": {
+      "q99": 0.07572700299669918,
+      "tpr_rest_ge5": 0.186
+     },
+     "17": {
+      "q99": 0.07577222097125844,
+      "tpr_rest_ge5": 0.1908
+     },
+     "18": {
+      "q99": 0.07697203845239822,
+      "tpr_rest_ge5": 0.1901
+     },
+     "19": {
+      "q99": 0.07563032495002645,
+      "tpr_rest_ge5": 0.2025
+     },
+     "20": {
+      "q99": 0.0756339903479081,
+      "tpr_rest_ge5": 0.2138
+     }
+    },
+    "t_s": 201.8
+   },
+   "t_null_s": 70.5,
+   "t_orient_s": 280.3
+  },
+  "canon": {
+   "n_null": 1985,
+   "n_holdout_inner": 226,
+   "vocab": 144097,
+   "vocab_sha256": "7715531569bdf0e87f2c0d7dc632641e377da1dd8e2850504e3f17fb29dac055",
+   "idf_sha256": "0214853fa9a080b519b87bdf4302e4cd9045855e0465ed37e514bdd12682b3fb",
+   "idf_sha256_rule": "sha256 of the idf vector as little-endian float64 bytes, vocabulary order = first appearance over all training games in load_rows order",
+   "S2_q99": 0.08085695648061325,
+   "S1_q99": 0.45462118974341137,
+   "null_n_exceed": 19,
+   "null_S2_quantiles": {
+    "0.5": 0.006193812422527312,
+    "0.9": 0.024682514492184105,
+    "0.95": 0.03432026081935016,
+    "0.99": 0.0803618330481557,
+    "0.995": 0.10861683203745828,
+    "0.999": 0.1484397532937373
+   },
+   "null_S2_max": 0.2252265168166019,
+   "null_S2_exceed_by_level": {
+    "D": 0.02,
+    "C": 0.0046,
+    "B": 0.0,
+    "A": 0.0082,
+    "1D": 0.0136,
+    "2D": 0.0316,
+    "3D": 0.0,
+    "4D": 0.0055,
+    "5D": 0.0052,
+    "6D": 0.0106
+   },
+   "null_worst_level_P_declare": 2.502042307932861e-10,
+   "holdout_inner_exceed": 0.0133,
+   "holdout_inner_n_exceed": 3,
+   "pos": {
+    "20": {
+     "n": 1775,
+     "tpr": 0.0456,
+     "tpr_by_level": {
+      "D": 0.047,
+      "C": 0.016,
+      "B": 0.028,
+      "A": 0.045,
+      "1D": 0.049,
+      "2D": 0.052,
+      "3D": 0.056,
+      "4D": 0.042,
+      "5D": 0.051,
+      "6D": 0.077
+     }
+    },
+    "50": {
+     "n": 1489,
+     "tpr": 0.178,
+     "tpr_by_level": {
+      "D": 0.121,
+      "C": 0.181,
+      "B": 0.11,
+      "A": 0.178,
+      "1D": 0.154,
+      "2D": 0.178,
+      "3D": 0.176,
+      "4D": 0.169,
+      "5D": 0.178,
+      "6D": 0.348
+     }
+    },
+    "100": {
+     "n": 1139,
+     "tpr": 0.4004,
+     "tpr_by_level": {
+      "D": 0.355,
+      "C": 0.405,
+      "B": 0.29,
+      "A": 0.349,
+      "1D": 0.318,
+      "2D": 0.442,
+      "3D": 0.433,
+      "4D": 0.464,
+      "5D": 0.392,
+      "6D": 0.55
+     }
+    },
+    "all": {
+     "n": 1974,
+     "tpr": 0.4296,
+     "tpr_by_level": {
+      "D": 0.394,
+      "C": 0.344,
+      "B": 0.315,
+      "A": 0.3,
+      "1D": 0.517,
+      "2D": 0.508,
+      "3D": 0.466,
+      "4D": 0.538,
+      "5D": 0.489,
+      "6D": 0.521
+     }
+    }
+   },
+   "pos_all_tpr_by_ref_games": {
+    "1-20": {
+     "n": 213,
+     "tpr": 0.0329
+    },
+    "21-50": {
+     "n": 279,
+     "tpr": 0.086
+    },
+    "51-100": {
+     "n": 346,
+     "tpr": 0.263
+    },
+    "101-200": {
+     "n": 473,
+     "tpr": 0.5032
+    },
+    "201-1000000": {
+     "n": 663,
+     "tpr": 0.736
+    }
+   },
+   "power_pool_rule": {
+    "0.0": {
+     "P_declare": 0.0,
+     "mean_share_above": 0.0095,
+     "p05_share": 0.0025
+    },
+    "0.1": {
+     "P_declare": 0.0,
+     "mean_share_above": 0.0398,
+     "p05_share": 0.025
+    },
+    "0.2": {
+     "P_declare": 0.0152,
+     "mean_share_above": 0.0701,
+     "p05_share": 0.05
+    },
+    "0.3": {
+     "P_declare": 0.5338,
+     "mean_share_above": 0.1004,
+     "p05_share": 0.0775
+    },
+    "0.4": {
+     "P_declare": 0.9744,
+     "mean_share_above": 0.1302,
+     "p05_share": 0.1025
+    },
+    "0.5": {
+     "P_declare": 1.0,
+     "mean_share_above": 0.1609,
+     "p05_share": 0.13
+    },
+    "0.75": {
+     "P_declare": 1.0,
+     "mean_share_above": 0.2366,
+     "p05_share": 0.2025
+    },
+    "1.0": {
+     "P_declare": 1.0,
+     "mean_share_above": 0.3126,
+     "p05_share": 0.275
+    }
+   },
+   "t3q": {
+    "population": "fit players with >= 25 games (4177); question = first k of the hash order; positive reference = games 21.. of the hash order",
+    "by_k": {
+     "5": {
+      "q99": 0.07646232935149289,
+      "tpr_rest_ge5": 0.0479
+     },
+     "6": {
+      "q99": 0.0742951810489382,
+      "tpr_rest_ge5": 0.0608
+     },
+     "7": {
+      "q99": 0.07565194732862096,
+      "tpr_rest_ge5": 0.0632
+     },
+     "8": {
+      "q99": 0.07223914755411118,
+      "tpr_rest_ge5": 0.0766
+     },
+     "9": {
+      "q99": 0.06834385772678114,
+      "tpr_rest_ge5": 0.0972
+     },
+     "10": {
+      "q99": 0.06647295099372591,
+      "tpr_rest_ge5": 0.1166
+     },
+     "11": {
+      "q99": 0.06497211975949838,
+      "tpr_rest_ge5": 0.1333
+     },
+     "12": {
+      "q99": 0.06556390985027433,
+      "tpr_rest_ge5": 0.1412
+     },
+     "13": {
+      "q99": 0.06700324866146032,
+      "tpr_rest_ge5": 0.1444
+     },
+     "14": {
+      "q99": 0.06925597873286404,
+      "tpr_rest_ge5": 0.1482
+     },
+     "15": {
+      "q99": 0.07200639613164428,
+      "tpr_rest_ge5": 0.1499
+     },
+     "16": {
+      "q99": 0.07020699684477405,
+      "tpr_rest_ge5": 0.169
+     },
+     "17": {
+      "q99": 0.06967207237151518,
+      "tpr_rest_ge5": 0.1784
+     },
+     "18": {
+      "q99": 0.06946108532255368,
+      "tpr_rest_ge5": 0.1853
+     },
+     "19": {
+      "q99": 0.07233823909884601,
+      "tpr_rest_ge5": 0.1817
+     },
+     "20": {
+      "q99": 0.07297788171600916,
+      "tpr_rest_ge5": 0.1891
+     }
+    },
+    "t_s": 200.2
+   },
+   "t_null_s": 82.7,
+   "t_orient_s": 290.7
+  }
+ },
+ "either": {
+  "null_exceed_raw_or_canon_per_candidate": 0.01309823677581864,
+  "null_exceed_raw_and_canon": 0.006045340050377834,
+  "holdout_exceed_raw_or_canon": 0.01327433628318584,
+  "note": "the pool rule is applied per orientation (>= 40 above that orientation's q99); overlap if raw OR canon fires",
+  "P_declare_raw_or_canon": {
+   "0.0": 0.0,
+   "0.2": 0.0202,
+   "0.3": 0.5386,
+   "0.4": 0.9742,
+   "0.5": 0.9998,
+   "1.0": 1.0
+  }
+ },
+ "rule": {
+  "per_pool": "n_raw = #{S2_raw > q99_raw}, n_canon = #{S2_canon > q99_canon}; overlap iff n_raw >= ceil(0.10 x candidates) OR n_canon >= ceil(0.10 x candidates) (40 of 400)",
+  "test_day": "rebuild R; vocabulary size, vocab_sha256, idf_sha256, q99 and the null S2 vector must equal the committed null; T1 FAIL_OPENING -> not evaluable; T2(a) FAIL proves the overlap directly",
+  "consequence": "consider 乙 under a new registration; uploads of 甲 continue",
+  "limit": "overlap of about 20% of the candidates or less is not detectable",
+  "disclosure": "S2 was chosen after the inner holdout rates of 6 statistics had been seen"
+ },
+ "pins": {
+  "expected": {
+   "reference": {
+    "players": 5767,
+    "games": 720307,
+    "sha256_sorted_player_ids": "9940feed82f435a770030a17b32b5bbf7dc1002daa61616a989b24580bdf664f"
+   },
+   "raw": {
+    "S2_q99": 0.1004267242871777,
+    "vocab": 146421,
+    "n_null": 1985,
+    "n_holdout_inner": 226,
+    "null_n_exceed": 19,
+    "holdout_inner_n_exceed": 1
+   },
+   "canon": {
+    "S2_q99": 0.08085695648061325,
+    "vocab": 144097,
+    "n_null": 1985,
+    "n_holdout_inner": 226,
+    "null_n_exceed": 19,
+    "holdout_inner_n_exceed": 3
+   }
+  },
+  "all_match": true,
+  "mismatches": []
+ },
+ "provenance": {
+  "tool": "tools/t02_checks.py",
+  "tool_sha256": "43e1d0ef43d330e7102b425047626371fa0737a06c033039baa2e732c1289060",
+  "tool_committed_clean": false,
+  "c10data_sha256": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+  "p02_moves_sha256": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+  "p02_player_open_sha256": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+  "git_head": "5a5572e807edc33165cb5fb59d517a251f738c02",
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "mode": "real",
+  "argv": [
+   "precompute"
+  ],
+  "created": "2026-09-26T16:16:00+0800",
+  "inputs": {
+   "split_csv": "results/split_v1/players_split.csv fc20f6bf1338ed454222f9097c39d58dc2eba2cac4d89be4014b368c74646b8c"
+  },
+  "rerun_reason": null,
+  "runtime_s": {
+   "load": 14.0,
+   "parse_and_hash": 168.1,
+   "total": 825.2
+  },
+  "peak_wset_mb": 2457
+ },
+ "npz_sha256": {
+  "t3_null_raw.npz": "4eb9cf053b3ae296df6de020e7f1ecf4caa3e3bc53ed477e0e749a4f4d4da714",
+  "t3_null_canon.npz": "5312a18c34e71d4a254b5239b508612265be0b38a543b2f65dbd458159fcf69e"
+ }
+}

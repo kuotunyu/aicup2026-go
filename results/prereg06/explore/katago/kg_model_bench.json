@@ -1,0 +1,63 @@
+{
+ "what": "random-weight stand-in for b18c384nbt-humanv0 (config b18c384nbt-mish-meta, version 14); CPU only",
+ "torch": "2.14.0+cpu",
+ "threads": 8,
+ "params": 26759349,
+ "params_fp32_megabytes": 107.037396,
+ "macs_per_eval": 9438664448,
+ "gflops_per_eval": 18.877328896,
+ "macs_conv": 9437140704,
+ "macs_linear": 1523744,
+ "policy_output_shape": [
+  64,
+  6,
+  362
+ ],
+ "profiles": [
+  "20k",
+  "18k",
+  "16k",
+  "14k",
+  "13k",
+  "12k",
+  "11k",
+  "10k",
+  "9k",
+  "8k",
+  "7k",
+  "6k",
+  "5k",
+  "4k",
+  "3k",
+  "2k",
+  "1k",
+  "1d",
+  "2d",
+  "3d",
+  "4d",
+  "5d",
+  "6d",
+  "7d",
+  "8d",
+  "9d"
+ ],
+ "metadata_checks": {
+  "row_width": 192,
+  "all_profiles_distinct": true,
+  "rank_ones_for_5k": 14,
+  "rank_ones_for_9d": 1,
+  "kgs_vs_fox_rows_differ_only_in_source_onehot": true
+ },
+ "cpu_batch": 64,
+ "cpu_iters": 5,
+ "cpu_seconds": 49.45345909999969,
+ "cpu_evals_per_second": 6.47073037606791,
+ "logp_pd_first_profiles_randomweights": [
+  -5.894967555999756,
+  -5.895045757293701,
+  -5.8950514793396,
+  -5.895060062408447,
+  -5.8951568603515625
+ ],
+ "note": "shared desktop CPU with other jobs running; fp32; random weights so outputs are meaningless"
+}

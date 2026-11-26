@@ -1,0 +1,202 @@
+{
+ "what": "test02 rank opening (spec 3.2): seam part bitwise equal to results/prereg02/rank/opening_val.npz, then public and private scored with the same model",
+ "created": "2026-11-04T15:13:24+08:00",
+ "mode": "real",
+ "passed": true,
+ "seam_check": {
+  "reference": {
+   "path": "results/prereg02/rank/opening_val.npz",
+   "sha256": "75ffec64f9e949ac0be52ce9e72a4a19bb978a25de2b6ed9d355aac7a1a5ae85"
+  },
+  "equal": {
+   "question_id": true,
+   "slot": true,
+   "color": true,
+   "ll": true,
+   "o": true,
+   "has": true,
+   "n_terms": true
+  },
+  "max_abs_ll_diff": 0.0,
+  "slots": 19156
+ },
+ "sets": {
+  "seam_val": {
+   "path": "data/local/rank_val_questions.csv",
+   "sha256": "73e51bbfd7b051e73cbb62af4b180c403d2422f122240c5e67e9c92303776db5",
+   "slots": 19156,
+   "questions": 1589,
+   "with_score": 19156,
+   "mean_terms": 8.683128001670495,
+   "terms_histogram": {
+    "1": 1,
+    "2": 31,
+    "3": 188,
+    "4": 413,
+    "5": 1009,
+    "6": 2123,
+    "7": 3065,
+    "8": 2942,
+    "9": 2140,
+    "10": 1776,
+    "11": 1355,
+    "12": 4113
+   }
+  },
+  "public": {
+   "path": "data/test/rank_prediction_test_public.csv",
+   "sha256": "75baefaded49ad40584bc52d8bd345410a5c6601c4034ff903746e0d92252bb4",
+   "slots": 5000,
+   "questions": 400,
+   "with_score": 5000,
+   "mean_terms": 8.6546,
+   "terms_histogram": {
+    "1": 1,
+    "2": 4,
+    "3": 17,
+    "4": 70,
+    "5": 276,
+    "6": 611,
+    "7": 907,
+    "8": 775,
+    "9": 493,
+    "10": 439,
+    "11": 373,
+    "12": 1034
+   }
+  },
+  "private": {
+   "path": "data/test/rank_prediction_test_private.csv",
+   "sha256": "c8a6a1923af7324fcae6b22987711d1e57b5efe9f882a2a7b42604399d3e2edc",
+   "slots": 5000,
+   "questions": 400,
+   "with_score": 5000,
+   "mean_terms": 8.692,
+   "terms_histogram": {
+    "2": 9,
+    "3": 40,
+    "4": 104,
+    "5": 284,
+    "6": 577,
+    "7": 794,
+    "8": 716,
+    "9": 554,
+    "10": 473,
+    "11": 366,
+    "12": 1083
+   }
+  }
+ },
+ "fit_games": 720307,
+ "keys_counted": {
+  "contexts": 159807,
+  "entries": 188146
+ },
+ "checks": {
+  "frozen_config": {
+   "path": "results/prereg02/rank/frozen_config.json",
+   "sha256": "44a16e09679cc6815d41d9a1255882f4a38599cd97cbf66996d447709b4f2efa",
+   "commit_check": {
+    "frozen_config": "results/prereg02/rank/frozen_config.json",
+    "git_head": "7d53aa9feba8c1e74317032f8a46de8b652cec34"
+   }
+  },
+  "own_files_commit_check": {
+   "files": 3,
+   "rule": "tracked by git and unchanged against HEAD",
+   "git_head": "7d53aa9feba8c1e74317032f8a46de8b652cec34"
+  },
+  "notebook_outputs_commit_check": {
+   "files": 22,
+   "rule": "tracked by git and unchanged against HEAD",
+   "git_head": "7d53aa9feba8c1e74317032f8a46de8b652cec34"
+  },
+  "notebook": {
+   "config_sha256": "ed11044631d6132b357472e967a6f0436a2c40825dde59a0a7aef4d2d7d94fdc",
+   "run_log_status": "completed",
+   "seam_check_passed": true,
+   "seam_check_tol": 0.0001,
+   "seam_check_bitwise_equal": true,
+   "smoke": false,
+   "rehearsal": false,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "torch": "2.11.0+cu128",
+   "cudnn": 91900,
+   "weights": {
+    "path": "prereg02/rank/ckpt/epoch_9.pth",
+    "sha256": "423581b4fddd5c2c160ebf691f4e86b9e00c4fe743d5cfb23df7891f4a2ca939"
+   },
+   "notebook": "colab/test02_rank.ipynb",
+   "notebook_sha256": "dc7526bef020a0bec2ba23168c109a067c62013bf4a457a80514c3f7f9024551",
+   "same_as_repo_notebook": true
+  },
+  "test_files_sha256": {
+   "MANIFEST.json": "b9e9e8a6a7fc8b7b696d2d4501563cb99aeac6a95e327f3a5e686d04bbdd0bbe",
+   "rank_prediction_test_public.csv": "75baefaded49ad40584bc52d8bd345410a5c6601c4034ff903746e0d92252bb4",
+   "rank_prediction_test_private.csv": "c8a6a1923af7324fcae6b22987711d1e57b5efe9f882a2a7b42604399d3e2edc"
+  },
+  "sets": {
+   "seam_val": {
+    "questions": "data/local/rank_val_questions.csv",
+    "questions_sha256": "73e51bbfd7b051e73cbb62af4b180c403d2422f122240c5e67e9c92303776db5"
+   },
+   "public": {
+    "questions": "data/test/rank_prediction_test_public.csv",
+    "questions_sha256": "75baefaded49ad40584bc52d8bd345410a5c6601c4034ff903746e0d92252bb4"
+   },
+   "private": {
+    "questions": "data/test/rank_prediction_test_private.csv",
+    "questions_sha256": "c8a6a1923af7324fcae6b22987711d1e57b5efe9f882a2a7b42604399d3e2edc"
+   }
+  },
+  "t1": {
+   "path": "results/test02/checks/rank/t1.json",
+   "sha256": "9ddf1cc98c4085493c7ec81f539acaba5e8a2701ba849d41bf168368a8bcfb2c",
+   "verdict": "PASS"
+  }
+ },
+ "rerun": {
+  "rerun": false,
+  "reason": null,
+  "replaced_sha256": {}
+ },
+ "paths": {
+  "results_dir": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\test02",
+  "rank_dir": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\test02\\rank",
+  "tests_dir": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\data\\test",
+  "out_dir": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\test02\\rank",
+  "checks_dir": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\test02\\checks"
+ },
+ "tool": {
+  "git_head": "7d53aa9feba8c1e74317032f8a46de8b652cec34",
+  "t02_rank.py_sha256": "e3485e073a20843654f622828283af4ae3985141e08378cefb59d6c6f2495874",
+  "t02_rank.py_tracked": true,
+  "check_submission.py_sha256": "b5c7c300cca4fcd5b243e4579417453699777e99bd4aff88dcbf6805e9346144",
+  "sha256_rule": "sha256 of the file with CRLF folded to LF",
+  "frozen_tools": {
+   "git_head": "7d53aa9feba8c1e74317032f8a46de8b652cec34",
+   "dirty_or_untracked": [],
+   "files_sha256_rule": "sha256 of the file with CRLF folded to LF",
+   "files_sha256": {
+    "p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+    "p02_rank_pseudo.py": "16e5bfdfb2995874ddb11bde1f7a9e786a478b14443453f675a4fb3a480bb098",
+    "p02_rank_opening.py": "a4195fece41aa3d50ecda82d1af93d9c04f49df5fd2157d69dd8a488dea93463",
+    "p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+    "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+    "decide.py": "cf66daf1231b3c2bd60c5b6484245627e133bd0f1cd7ff5557e978da3801d0e3"
+   }
+  }
+ },
+ "environment": {
+  "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1"
+ },
+ "output": {
+  "path": "results/test02/rank/opening_test.npz",
+  "sha256": "6863ccd053837d30be070a2e0d0d3e3968b69636936dd33414221513886d0e07",
+  "build_id": "3f672f49bf886a44d11870aff6a5aedb9435d93785d7b424d45c41c90e5e0f96"
+ },
+ "seconds": 26.8
+}

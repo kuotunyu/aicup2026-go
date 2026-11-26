@@ -1,0 +1,196 @@
+{
+ "fit": {
+  "load_seconds": 70.4,
+  "games": 720307,
+  "moves_total": 159971163,
+  "target_moves": 79985811,
+  "target_moves_in_250_state_window": 76579579,
+  "window_coverage": 0.9574145469375812,
+  "mean_moves_per_game": 222.087475201546,
+  "median_moves": 228.0,
+  "p90_moves": 286.0,
+  "max_moves": 445,
+  "min_moves": 100,
+  "frac_games_ge_250": 0.3393747388266392,
+  "mean_target_moves_per_game": 111.04405621491946,
+  "mean_target_moves_in_window_per_game": 106.31519477111843,
+  "anomalies": {},
+  "players": 5767,
+  "target_moves_per_player_quantiles": {
+   "10": 1412,
+   "50": 5640,
+   "90": 36365,
+   "99": 96461
+  },
+  "top_10pct_players_share_of_target_moves": 0.4447527324565103,
+  "per_level": {
+   "D": {
+    "games": 69748,
+    "target_moves": 7971485,
+    "target_moves_in_window": 7632763,
+    "mean_moves": 228.59991684349373,
+    "frac_ge_250": 0.37820439295750413
+   },
+   "C": {
+    "games": 75315,
+    "target_moves": 8569099,
+    "target_moves_in_window": 8218909,
+    "mean_moves": 227.56432317599416,
+    "frac_ge_250": 0.363327358427936
+   },
+   "B": {
+    "games": 72264,
+    "target_moves": 8183952,
+    "target_moves_in_window": 7836565,
+    "mean_moves": 226.50239399977858,
+    "frac_ge_250": 0.3618260821432525
+   },
+   "A": {
+    "games": 71255,
+    "target_moves": 7981148,
+    "target_moves_in_window": 7647164,
+    "mean_moves": 224.0166865483124,
+    "frac_ge_250": 0.34727387551750755
+   },
+   "1D": {
+    "games": 71538,
+    "target_moves": 8024833,
+    "target_moves_in_window": 7672134,
+    "mean_moves": 224.3315580530627,
+    "frac_ge_250": 0.3530850736671419
+   },
+   "2D": {
+    "games": 73011,
+    "target_moves": 8069709,
+    "target_moves_in_window": 7739349,
+    "mean_moves": 221.04244565887333,
+    "frac_ge_250": 0.3290463080905617
+   },
+   "3D": {
+    "games": 73725,
+    "target_moves": 8036321,
+    "target_moves_in_window": 7710714,
+    "mean_moves": 218.0021024075958,
+    "frac_ge_250": 0.3117802644964395
+   },
+   "4D": {
+    "games": 71135,
+    "target_moves": 7755217,
+    "target_moves_in_window": 7426850,
+    "mean_moves": 218.05065017220778,
+    "frac_ge_250": 0.3179166373796303
+   },
+   "5D": {
+    "games": 73840,
+    "target_moves": 8092500,
+    "target_moves_in_window": 7711829,
+    "mean_moves": 219.1850758396533,
+    "frac_ge_250": 0.33406013001083423
+   },
+   "6D": {
+    "games": 68476,
+    "target_moves": 7301547,
+    "target_moves_in_window": 6983302,
+    "mean_moves": 213.25524271277527,
+    "frac_ge_250": 0.2959869151235469
+   }
+  }
+ },
+ "inner": {
+  "load_seconds": 41.1,
+  "games": 73556,
+  "moves_total": 16211597,
+  "target_moves": 8105081,
+  "target_moves_in_250_state_window": 7774722,
+  "window_coverage": 0.9592405060479963,
+  "mean_moves_per_game": 220.39802327478384,
+  "median_moves": 226.0,
+  "p90_moves": 284.0,
+  "max_moves": 439,
+  "min_moves": 100,
+  "frac_games_ge_250": 0.32722007722007723,
+  "mean_target_moves_per_game": 110.18925716460927,
+  "mean_target_moves_in_window_per_game": 105.6979988036326,
+  "anomalies": {},
+  "players": 640,
+  "target_moves_per_player_quantiles": {
+   "10": 1418,
+   "50": 5813,
+   "90": 33456,
+   "99": 77417
+  },
+  "top_10pct_players_share_of_target_moves": 0.4141071508107075,
+  "per_level": {
+   "D": {
+    "games": 8147,
+    "target_moves": 917540,
+    "target_moves_in_window": 878938,
+    "mean_moves": 225.2454891371057,
+    "frac_ge_250": 0.3587823738799558
+   },
+   "C": {
+    "games": 7240,
+    "target_moves": 832424,
+    "target_moves_in_window": 794652,
+    "mean_moves": 229.9792817679558,
+    "frac_ge_250": 0.38591160220994475
+   },
+   "B": {
+    "games": 7431,
+    "target_moves": 836009,
+    "target_moves_in_window": 802948,
+    "mean_moves": 225.0341811330911,
+    "frac_ge_250": 0.35217332795047773
+   },
+   "A": {
+    "games": 7590,
+    "target_moves": 839226,
+    "target_moves_in_window": 806372,
+    "mean_moves": 221.1227931488801,
+    "frac_ge_250": 0.32674571805006586
+   },
+   "1D": {
+    "games": 7033,
+    "target_moves": 765499,
+    "target_moves_in_window": 735446,
+    "mean_moves": 217.70382482582113,
+    "frac_ge_250": 0.3116735390302858
+   },
+   "2D": {
+    "games": 6490,
+    "target_moves": 713495,
+    "target_moves_in_window": 684923,
+    "mean_moves": 219.89984591679507,
+    "frac_ge_250": 0.32434514637904466
+   },
+   "3D": {
+    "games": 7191,
+    "target_moves": 779833,
+    "target_moves_in_window": 752524,
+    "mean_moves": 216.90724516757058,
+    "frac_ge_250": 0.29717702683910446
+   },
+   "4D": {
+    "games": 6601,
+    "target_moves": 705753,
+    "target_moves_in_window": 679996,
+    "mean_moves": 213.88259354643236,
+    "frac_ge_250": 0.28541130131798215
+   },
+   "5D": {
+    "games": 6946,
+    "target_moves": 758551,
+    "target_moves_in_window": 724143,
+    "mean_moves": 218.4267204146271,
+    "frac_ge_250": 0.3272386985315289
+   },
+   "6D": {
+    "games": 8887,
+    "target_moves": 956751,
+    "target_moves_in_window": 914780,
+    "mean_moves": 215.35377517722517,
+    "frac_ge_250": 0.2997636997862046
+   }
+  }
+ }
+}

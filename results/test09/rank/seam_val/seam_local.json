@@ -1,0 +1,64 @@
+{
+ "format": "c10-test09 seam_local v1",
+ "what": "test09 local Q09 seam (PREREG_09 5.2): Q09 on the seam_val inputs + val_hs.npz + val_lp_p1e.npz vs results/prereg09/rank",
+ "mode": "real",
+ "created": "2026-11-04T10:58:47+00:00",
+ "passed": true,
+ "questions": 1589,
+ "max_abs_diff": 0.0,
+ "tol": 0.0001,
+ "rule_b_differences": 0,
+ "rule_b_max": 4,
+ "rule_b_differing_questions": [],
+ "count_mismatch_questions": [],
+ "problems": [],
+ "byte_identical_probs": true,
+ "byte_identical_pred_B": true,
+ "byte_identical_pred_A": true,
+ "t08_seam_byte_identical": true,
+ "required_byte_identical": true,
+ "usable_equal_to_prereg09": true,
+ "verdict": "passed",
+ "tol_source": "test04 t04_apply_report.json seam_local.tol (as 07 / 08)",
+ "set": {
+  "questions": 1589,
+  "questions_without_parsed_game": 0,
+  "questions_without_parsed_game_ids": [],
+  "games": 19156,
+  "games_parsed": 19156,
+  "o4_mask_games": 19156,
+  "o4_replay_failed": 0,
+  "questions_with_empty_o4_mask": 0,
+  "masked_E_P1": {
+   "games_in_questions": 19156,
+   "unusable_slots_in_questions": 0,
+   "path": "pooled",
+   "scale": 4.0
+  },
+  "unusable_p1_games": 0,
+  "p1_not_ok": 0,
+  "questions_without_usable_p1_game": 0,
+  "rule_B_differs_from_Q02H": 537
+ },
+ "direction": {
+  "rho": 0.9698496797391194,
+  "questions": 1589,
+  "reference": 0.9633910264688432,
+  "floor": 0.078,
+  "threshold": 0.4816955132344216,
+  "passed": true,
+  "rule": "rho >= max(0.5 x reference, floor) (spec 4.6)",
+  "equal_to_prereg09_apply": true
+ },
+ "reference_sha256": {
+  "rank_val_probs.csv": "3f8d32f4b5b0431c9f4407199ae2c074595428ef9053ab807a5cf3b129e3b4fb",
+  "pred_B.csv": "d1a2f1d673a8b95425dfdc6b392a64a3e7484509d8bbaa3eb3c72f5ee283333b",
+  "pred_A.csv": "5c412993c6f72a7169327c8a2575cc7b3be44195ad3e198d30712d73d62432e0"
+ },
+ "outputs_sha256": {
+  "rank_val_probs.csv": "3f8d32f4b5b0431c9f4407199ae2c074595428ef9053ab807a5cf3b129e3b4fb",
+  "pred_A.csv": "5c412993c6f72a7169327c8a2575cc7b3be44195ad3e198d30712d73d62432e0",
+  "pred_B.csv": "d1a2f1d673a8b95425dfdc6b392a64a3e7484509d8bbaa3eb3c72f5ee283333b",
+  "decide_summary.json": "e9165036931d58b13d5c8c905ac876c54b9c55e0d3464b2d2b35fcbf510c5f40"
+ }
+}

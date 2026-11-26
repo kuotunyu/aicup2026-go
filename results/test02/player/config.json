@@ -1,0 +1,188 @@
+{
+ "notebook": "colab/test02_player.ipynb",
+ "notebook_sha256": "fc4a2df1c9b3efaa104c4ef46e1da7183faedd34da9ae239a6083718fef202eb",
+ "notebook_sha256_rule": "sha256 of json.dumps([[cell_type, source], ...], ensure_ascii=False, separators=(',', ':')) over all cells, where the 64-hex value assigned to NB_SOURCE_SHA256 in this cell is replaced by the placeholder @@NB_SOURCE_SHA256@@",
+ "base_notebook": "colab/prereg02_player.ipynb",
+ "base_notebook_sha256": "738c1dd81aa8a93953e45019cf6563e9b2b44ffa7cf846763c51fcc8190a5c12",
+ "official_notebook": "third_party/aicup2026_tutorial/player-identification.ipynb",
+ "prereg": "docs/PREREG_02_OPENING_FUSION.md 第 9 節（rev 5：測試日只推論、每個候選池各算一次、接縫核對）；規格 results/test02/design/spec.md 2.0、2.2、2.3",
+ "split": "split_v1 rev 2",
+ "in_colab": true,
+ "smoke": false,
+ "rehearsal": false,
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "torch": "2.11.0+cu128",
+ "cudnn": 91900,
+ "inference": {
+  "weights": "prereg01 的 ckpt/best_model.pth（只讀；prereg02 用的同一份，SHA-256 見 weights）",
+  "model": "GoPlayerResNet() 預設值：in_channels 17、num_channels 128、num_blocks 16、embed_dim 256",
+  "features": "SGFParsePlayerIdentification() 預設 history_length 8：8 層自己 + 8 層對手 + 1 層執色 = 17 層",
+  "precision": "fp32（和 prereg01、prereg02 的推論相同，沒有 autocast）",
+  "per_game": "每盤 sgf_windows → 一盤一次 embed（GPU_BATCH 4096）→ emb_sum = e.sum(0)（float32）、n_windows = len(e)；每次平行解析 CHUNK 256 盤（同 prereg02）",
+  "pools": "public、private（官方測試集）與 seam_val（本機驗證池，接縫核對），依序各算一次",
+  "TOP_N": 5
+ },
+ "repro_criteria": {
+  "top5_max_mismatch": 2,
+  "centroid_max_abs_diff": 0.0001,
+  "rule": "seam_val：top_1…top_5 完全相同的題 ≥ 題數 − top5_max_mismatch；候選代號與順序相同；重心最大差距 ≤ centroid_max_abs_diff"
+ },
+ "nproc": 48,
+ "device": "cuda",
+ "mp_start_method": "fork",
+ "smoke_settings": null,
+ "paths": {
+  "DRIVE_DIR": "/content/drive/MyDrive/C10",
+  "WORK": "/content/c10",
+  "RESULT_ROOT": "/content/drive/MyDrive/C10/results/test02",
+  "RESULT_DIR": "/content/drive/MyDrive/C10/results/test02/player",
+  "P01_ROOT": "/content/drive/MyDrive/C10/results/prereg01",
+  "P02_ROOT": "/content/drive/MyDrive/C10/results/prereg02",
+  "CKPT_DIR": "/content/drive/MyDrive/C10/results/prereg01/player/ckpt",
+  "TEST_ZIP": "/content/drive/MyDrive/C10/C10_test_v1.zip",
+  "SEAM_QUESTIONS_CSV": "/content/c10/C10_bundle_v1/local/player_val_questions.csv",
+  "SEAM_CANDIDATES_CSV": "/content/c10/C10_bundle_v1/local/player_val_candidates.csv"
+ },
+ "weights": {
+  "path": "prereg01/player/ckpt/best_model.pth",
+  "sha256": "356eb4f65488925e2a552ea382979780c903ef515b85d329a3805db837b7773b"
+ },
+ "test_bundle": {
+  "zip": "/content/drive/MyDrive/C10/C10_test_v1.zip",
+  "zip_sha256": "136266e387064d34514ae4c3371edec9634932d627248dcefc35ad9475125d7d",
+  "manifest_sha256": "b9e9e8a6a7fc8b7b696d2d4501563cb99aeac6a95e327f3a5e686d04bbdd0bbe",
+  "kind": "official",
+  "created": "2026-11-04T06:26:50+00:00",
+  "t1": {
+   "rank": "PASS",
+   "player": "PASS"
+  },
+  "files": {
+   "player_identification_test_public.csv": "0e59f7f72376cfa2e81ae913d61092caeb1240d95abb43a581207ed29f1647a8",
+   "player_identification_candidates_public.csv": "8175aeb08235536a1435bb6ba4c55088f906096cc14e7048e8898e3d7a3597a6",
+   "player_identification_test_private.csv": "4b07a403b36875f44007adb22aaa8da3c75ec3994e165f36c29a9400e6efcd11",
+   "player_identification_candidates_private.csv": "7a8926ca83b43b1dca0e32c23513cbbff2731d623be151cf80ed912a91d91e57"
+  },
+  "names_checked_only": [
+   "rank_prediction_test_public.csv",
+   "rank_prediction_test_private.csv"
+  ]
+ },
+ "sets": {
+  "public": {
+   "questions_file": "player_identification_test_public.csv",
+   "questions_sha256": "0e59f7f72376cfa2e81ae913d61092caeb1240d95abb43a581207ed29f1647a8",
+   "candidates_file": "player_identification_candidates_public.csv",
+   "candidates_sha256": "8175aeb08235536a1435bb6ba4c55088f906096cc14e7048e8898e3d7a3597a6",
+   "rows": 400,
+   "expected_dump_counts": {
+    "candidate_games": 40000,
+    "query_games": 5000,
+    "questions": 400
+   }
+  },
+  "private": {
+   "questions_file": "player_identification_test_private.csv",
+   "questions_sha256": "4b07a403b36875f44007adb22aaa8da3c75ec3994e165f36c29a9400e6efcd11",
+   "candidates_file": "player_identification_candidates_private.csv",
+   "candidates_sha256": "7a8926ca83b43b1dca0e32c23513cbbff2731d623be151cf80ed912a91d91e57",
+   "rows": 400,
+   "expected_dump_counts": {
+    "candidate_games": 40000,
+    "query_games": 5000,
+    "questions": 400
+   }
+  },
+  "seam_val": {
+   "questions_file": "player_val_questions.csv",
+   "questions_sha256": "d893a559f175b6535dc0d5f749314408b110149462f6a78a1b8cf7e9332cd676",
+   "candidates_file": "player_val_candidates.csv",
+   "candidates_sha256": "7cd2897593ee9add20dce4ff5d4b0dcf8699b6d51a3f10950dc399a757dd3ad5",
+   "rows": 400,
+   "expected_dump_counts": {
+    "candidate_games": 40000,
+    "query_games": 4935,
+    "questions": 400
+   }
+  }
+ },
+ "p01_inputs": {
+  "root": "/content/drive/MyDrive/C10/results/prereg01",
+  "files": {
+   "best_model.pth": {
+    "path": "/content/drive/MyDrive/C10/results/prereg01/player/ckpt/best_model.pth",
+    "sha256": "356eb4f65488925e2a552ea382979780c903ef515b85d329a3805db837b7773b",
+    "bytes": 19212521
+   },
+   "player_val_top5.csv": {
+    "path": "/content/drive/MyDrive/C10/results/prereg01/player/player_val_top5.csv",
+    "sha256": "0f5761a11b9f68ab07b2bc91b9650236f85b8cbeff45d459753dbd24459d3ec7",
+    "bytes": 50842
+   },
+   "player_val_embeddings.npz": {
+    "path": "/content/drive/MyDrive/C10/results/prereg01/player/player_val_embeddings.npz",
+    "sha256": "c247b2653e73589975d558b17e96c4a1f38c3e4d66468d56ea6d02596e15752d",
+    "bytes": 873032
+   },
+   "predict_summary.json": {
+    "path": "/content/drive/MyDrive/C10/results/prereg01/player/predict_summary.json",
+    "sha256": "88b720242fef538a99327fdbdf839515c214a8492e2bf551f48b93c4c81eeb32",
+    "bytes": 826
+   }
+  },
+  "checked_against_repo": true,
+  "predict_summary": {
+   "finished_utc": "2026-09-25T19:29:46+00:00",
+   "smoke": false,
+   "weights": "/content/drive/MyDrive/C10/results/prereg01/player/ckpt/best_model.pth",
+   "weights_sha256": "356eb4f65488925e2a552ea382979780c903ef515b85d329a3805db837b7773b",
+   "output": "/content/drive/MyDrive/C10/results/prereg01/player/player_val_top5.csv",
+   "output_sha256": "0f5761a11b9f68ab07b2bc91b9650236f85b8cbeff45d459753dbd24459d3ec7",
+   "questions_csv_sha256": "d893a559f175b6535dc0d5f749314408b110149462f6a78a1b8cf7e9332cd676",
+   "candidates_csv_sha256": "7cd2897593ee9add20dce4ff5d4b0dcf8699b6d51a3f10950dc399a757dd3ad5",
+   "n_questions": 400,
+   "n_query_games": 4935,
+   "n_questions_embedded": 400,
+   "n_fallback_questions": 0,
+   "n_candidate_rows": 40000,
+   "n_candidate_players": 400,
+   "n_centroids": 400,
+   "GPU_BATCH": 4096,
+   "CHUNK": 256,
+   "NPROC": 48
+  },
+  "p01_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "p01_torch": "2.11.0+cu128",
+  "questions_csv_sha256": "d893a559f175b6535dc0d5f749314408b110149462f6a78a1b8cf7e9332cd676",
+  "candidates_csv_sha256": "7cd2897593ee9add20dce4ff5d4b0dcf8699b6d51a3f10950dc399a757dd3ad5"
+ },
+ "p02_inputs": {
+  "root": "/content/drive/MyDrive/C10/results/prereg02",
+  "dumps": {
+   "cand_games.npz": {
+    "path": "/content/drive/MyDrive/C10/results/prereg02/player/dumps/cand_games.npz",
+    "sha256": "56ed03d12e9a79871a21b5f69dc4bd4bb8c8aa69b1544cb8ec799e80227cfdea"
+   },
+   "query_games.npz": {
+    "path": "/content/drive/MyDrive/C10/results/prereg02/player/dumps/query_games.npz",
+    "sha256": "665d0888a93f6632eb19edac76abf996d5499cd27c683d9844b97cb274b6f689"
+   }
+  },
+  "checked_against_repo": true,
+  "p02_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "p02_torch": "2.11.0+cu128",
+  "p02_cudnn": 91900
+ },
+ "changes_from_prereg02": [
+  "[登記 9.1] 只推論，和 prereg02 相同：模型、權重（prereg01 的 `best_model.pth`，prereg02 用的同一份）、特徵、每盤 embedding 的算法都不變。準備格、官方 cell 1、環境紀錄格、官方 cell 2、官方 cell 20、重現核對格和 prereg02 逐位元組相同；每盤 embedding 格裡的 `game_embeddings()`、`save_npz()` 和候選／題目兩段迴圈（`with Pool(NPROC)` 整段）也逐位元組相同（產生本 notebook 時用 ast 逐段核對）。",
+  "[登記 9.4] 每個候選池各算一次每盤 embedding：同一格程式印三次，順序 public → private → seam_val（本機驗證池）。三格只差第一行 `POOL = …; QUESTIONS_CSV, CANDIDATES_CSV = POOL_FILES[POOL]`，其餘逐字相同。輸出寫到 `results/test02/player/<POOL>/dumps/`（cand_games.npz、query_games.npz，欄位和 prereg02 相同），另寫 `_INPUT.json`（題目檔、候選檔的檔名與 SHA-256）。盤數和題數依 preflight 算好的 `EXPECTED_COUNTS[POOL]` 核對（seam_val 仍是 prereg01 記的 40,000／4,935／400）。seam_val 放最後，因為 dump 格開頭會刪掉上一次的重現核對結果。",
+  "[登記 9.2] 接縫核對（notebook 這一層）：seam_val 用 prereg02 原封不動的重現核對格（和 prereg01 至少 398/400 題 Top-5 相同、重心最大差 ≤ 1e-4，SMOKE 全部相同），沒過時狀態記 repro_failed、照樣打包後停下。新增 `seam_p02.json`，只記錄 seam_val 的逐盤 embedding 和 prereg02 的 dumps 是否逐位元組相同（最大差、兩次的 GPU／torch／cuDNN）；判定在本機（`tools/t02_player.py`）。",
+  "[營運性] 測試包：讀 `MyDrive/C10/C10_test_v1.zip`。成員只能是 `tests/MANIFEST.json` 和六個官方檔名，六個都要在；MANIFEST 的 format 要是 `c10-test02 manifest v1`，kind 正式執行要是 official 或 rehearsal（SMOKE 要是 smoke），T1 的競賽一結果要是 PASS、NORMALIZED 或 FAIL_OPENING（登記第 9 節第 6 條：T1.4／T1.5 不過時競賽一照常每池程序，結果記進 config.json 的 `test_bundle.t1`；FAIL_STRUCT 或沒有結果就停下）。只解開競賽一的四個檔和 MANIFEST.json 到 `WORK/tests/`，逐檔核對 SHA-256 和 MANIFEST 相同；競賽二的兩個檔只核對檔名在不在，不讀內容。任何一項不符就停下。",
+  "[營運性] 快速格式檢查（T1 的一部分）：兩份題目檔各 400 題、沒有 BOM、`question_id` 不重複且前綴是 pub_／priv_、`num_games` 是 5–20 的整數、`sgf_1..20` 和 `color_1..20` 欄都在、剛好前 `num_games` 格有棋、執色是 B／W；兩份候選檔各 40,000 列＝400 位 × 各剛好 100 盤、player_id 前綴 pub_p_／priv_p_、game_id 不重複且前綴 pub_／priv_、執色是 B／W；兩池不共用玩家和棋。不符就列出來後停下。",
+  "[營運性] 唯讀保護擴大到 prereg02：設定格多了 `P02_ROOT`（`results/prereg02`，SMOKE 是 `prereg02_smoke`），`guard_write` 同時擋 prereg01 和 prereg02。preflight 開頭和收尾格各記一次兩個目錄的指紋（`readonly_before.json`、`readonly_after.json`，取代 `p01_readonly_*.json`），有變動時狀態記 readonly_changed。",
+  "[營運性] preflight 另外核對：prereg02 的 `dumps/cand_games.npz`、`query_games.npz` 的 SHA-256（正式執行時和 repo 相同；接縫的參照）、兩個檔記的 `weights_sha256` 等於 `best_model.pth` 的 SHA-256、權重是 prereg02 用的那一份；stale-dump guard：已經存在的 `<POOL>/dumps/_INPUT.json` 和這次的輸入檔不同就停下。GPU 仍然只接受 G4。",
+  "[營運性] 結果目錄改成 `results/test02/player/`（SMOKE：`test02_smoke`；測試包 kind 是 rehearsal：`test02_rehearsal`），結果 zip 固定叫 `test02_player_results.zip`，放在 `results/test02/`，成員從 `player/` 起算。`run_log.json` 最上層另記 `status`（running、completed、repro_failed、readonly_changed、final_check_failed、preflight_failed），和最後一筆 run 的 status 相同。",
+  "[營運性] config.json 的新欄位：`notebook_sha256`（本 notebook 各格原始碼的 SHA-256，算法見 `notebook_sha256_rule`）、`rehearsal`、`gpu`／`torch`／`cudnn`、`weights`、`test_bundle`（zip 與 MANIFEST 的 SHA-256、競賽一四個檔的 SHA-256）、`sets`（三個池的輸入檔 SHA-256 與列數）、`p02_inputs`、`changes_from_prereg02`（本表）。",
+  "[營運性] notebook：沿用的格保留 prereg02 的 cell id（三份每盤 embedding 格加上 `-<POOL>`），新增的格用 `c10-player-t02-NN`；每格的 metadata `c10` 記對應的底稿格與是否改動。notebook metadata 的 `c10` 改記底稿和本表。"
+ ]
+}

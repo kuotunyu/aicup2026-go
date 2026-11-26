@@ -1,0 +1,76 @@
+{
+ "format": "c10-prereg42 train v1",
+ "config": {
+  "variant": "V2",
+  "spec": {
+   "name": "se_gpool_trunk",
+   "sampler": "game",
+   "trunk": "gpse",
+   "pool": "mean",
+   "head": "cos"
+  },
+  "total_steps": 320000,
+  "lr": 0.002,
+  "weight_decay": 0.0001,
+  "onecycle_pct": 0.05,
+  "seed": 0,
+  "scale": 30.0,
+  "blocks": 10,
+  "channels": 128,
+  "emb_dim": 256,
+  "fp16": true,
+  "channels_last": false,
+  "ema_decay": 0.999,
+  "n_classes": 5771,
+  "T_sha256_sorted_ids": "a23c64d297803a4d6a5e98229a006cc12791571fc99830e49015e0c71130ed4b",
+  "cache_codes_sha256": "2447f0e05a42c3634a3ba16ba2666affeed95e90c4c8724ed29d8a4ee849a09a",
+  "small": null,
+  "game": {
+   "batch_games": 96,
+   "moves": 24
+  },
+  "gpse": {
+   "se_ratio": 8,
+   "gpool_blocks": [
+    2,
+    5,
+    8
+   ],
+   "gpool_ch": 32
+  }
+ },
+ "finished": true,
+ "steps": 320000,
+ "smoke": false,
+ "device": "NVIDIA GeForce RTX 4090",
+ "workers": 4,
+ "git_head": "3f813b7d9215e4437222f2b8addd7777ce2f20b6",
+ "code_sha256": {
+  "p42_lib.py": "edfc892f4268dd3d4fed42712d461a1529cde693def187a2e71db0db0eec6d4b",
+  "p42_train.py": "27557635ddf1b55f29a24abe4933cdf172d0c6789b5812a953c56f4896283302",
+  "p36_lib.py": "8df27b37a6b3de786b54af25908d3d91ffe4c030dceb7350d9dd130a14ce241f"
+ },
+ "torch": "2.11.0+cu128",
+ "embed_net_parameters": 3220800,
+ "counts": {
+  "T_players": 5771,
+  "positions_seen": 737280000
+ },
+ "split_sha256_sorted_ids": {
+  "E": "7778702211b3e234b731355b63e0da991ee2df9802c97c69313dc118044ffb7b",
+  "D": "490c37a134d0162301d3eb8faadcb16fbb8c8ec8dbbfda3ad6050b78fe8590bf",
+  "T": "a23c64d297803a4d6a5e98229a006cc12791571fc99830e49015e0c71130ed4b"
+ },
+ "seconds": 107434.4,
+ "checkpoints": {
+  "step_128000.pt": "b1dd65c0e2aa4b34445e2d6e0f7927b77c39bd7dbef53c56328d2d268de1b97f",
+  "step_160000.pt": "5484dfb1614818cb569f3f4bf181a5bc802752a1b6442d3413971b657760e382",
+  "step_192000.pt": "e3e538ad76378bb0e226a43c9bf9e84e184d809e99a4677ebaf8ad82d2e65c7c",
+  "step_224000.pt": "f19e8d77eef386d23eac902bf8bc1ae496acf561f31e784b080b9d4c2a8f9b57",
+  "step_256000.pt": "b763d344013a148663439e4abfe66070a5662fc88573702b26639433a1766ed4",
+  "step_288000.pt": "31fe9242c199a06fec0b0d78bc8d7d846d69cade7cc12b12501196c435b510e0",
+  "step_309500.pt": "870d3eb7ab5b62dac7f178bb6bd9552e9686812077e2c3837a03133ef3ba8708",
+  "step_311300.pt": "4e321a800fcfef9e5ce4df99de29cc639431cde4c80929a9d5a93cbcafadea27",
+  "step_320000.pt": "c091d3af1797a19ce98dc0a670eea211ceca2de4b58ee4a3c62b73b854748e12"
+ }
+}

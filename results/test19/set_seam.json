@@ -1,0 +1,37 @@
+{
+ "games": 400,
+ "usable_games": 400,
+ "bitwise_equal_means": false,
+ "max_abs_lp_set": 0.006628416062975262,
+ "lp_set_quantiles": {
+  "0.5": 0.0009739775200285905,
+  "0.9": 0.0027146290325490876,
+  "0.99": 0.0050074483805941485
+ },
+ "games_lp_above_review_line": 5,
+ "argmax_equal": 400,
+ "judged": false,
+ "review_line": 0.005,
+ "note": "recorded only (PREREG_19 4.2 step 2): 09's GPU seam on the same chunks is the judged one",
+ "format": "c10-test19 set seam v1",
+ "mode": "real",
+ "created": "2026-11-04T11:00:54+00:00",
+ "seam_p1_report_sha256": "6cd8741d2c98fa0123284a36c5f45020a89937b86d56971693d961ce230a10a3",
+ "reference": {
+  "val_chunks": [
+   {
+    "file": "data\\prereg08\\val\\chunk_00000.npz",
+    "sha256": "956675e2bfa8b5ce299ce960bccff81d3ce3fdc9feef90b541c996f3a83e437d",
+    "games": 200,
+    "positions": 46175
+   },
+   {
+    "file": "data\\prereg08\\val\\chunk_00001.npz",
+    "sha256": "79df2319abaeb0f629cdbea17c268abf03e9d7519779d75c48e5c4719ae0ec21",
+    "games": 200,
+    "positions": 44138
+   }
+  ],
+  "val_report.json": "2ce9e86f8e639217c38814541f7d1bfb083b609ac194b5e19c8c38c60e653535"
+ }
+}

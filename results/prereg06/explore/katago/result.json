@@ -1,0 +1,127 @@
+{
+ "dir": "katago",
+ "summary_zh": "結論：KataGo HumanSL 用在競賽二做得到。建議走 PyTorch 路線：在 Colab 讀官方 .ckpt，自己算特徵、大批次推論。C++ 引擎只拿來做小量對照。\n檔案：b18c384nbt-humanv0.ckpt 323,752,318 bytes，.bin.gz 99,066,230 bytes（v1.15.0）。程式和權重都是 MIT 式授權，可以任何用途，要附聲明。\n訓練來源（從原始碼推）：OGS、KGS、野狐、GoGoD、Go4Go。程式裡沒有處理幽玄之間的部分，所以測試棋被 HumanSL 看過的機會很低。\nC++ 的等級設定固定用 KGS 的尺度。PyTorch 可以自己設來源（野狐或 KGS）、日期和對手等級。\n每換一個等級設定，整個網路都要重算。每次運算 18.9 GFLOP（本機量的）。\n本機量測：fit 每盤目標手數平均 111.04；python 算特徵單核心每秒 77 個局面；60 盤重下，0 手不合法。\n估計：pilot 約 3,990 萬次運算，G4 要 0.6–2.2 小時、5–19 單元。正式版要 1.7–7 小時。測試日要 13–52 分鐘。\nBlackwell：v1.18.x 的 CUDA 12.8 版有編 sm_120，但 Colab 上的函式庫要實際跑才知道。PyTorch 路線沒有這個問題。\n前人（Kuboki 2025，野狐，同一玩家抽樣）換算成本題指標是 +0.011～+0.049。我們已經有 Q02，增益可能更小，要 pilot 量。\n建議門檻：inner eval 假題上，Q02+HS 比 Q02 高 ≥ +0.010，而且 PlayerBootstrap 下界 > 0，才做正式版。\n規則：之前「不用 KataGo」是我們自己登記的限制。要先做規則核對，再寫 PREREG_06；兩份報告草稿第 7 節也要改。\n使用者要做：用 G4 跑一次 pilot（約 1 小時）；之後正式版和測試日各再跑一次。權重由 notebook 自己下載。\n競賽一：HumanSL 主要給的是棋力資訊，Q04 已經 0.883，先不做。\nREPORT.md 被子代理規則擋下，沒有寫成。內容都在這份輸出裡；程式和 JSON 放在 katago 資料夾。",
+ "verdicts": [
+  {
+   "item": "1. Released files, sizes, URLs, licence",
+   "verdict": "Both a C++ .bin.gz and a PyTorch .ckpt are released. Code and weights both use MIT-style licences: any use is allowed, including competitions, as long as the notice is kept. We would not redistribute the weights; the notebook downloads them from the official URL.",
+   "evidence": "GitHub API, v1.15.0 release (2024-07-19), recorded in kg_sources.json: b18c384nbt-humanv0.bin.gz is 99,066,230 B at https://github.com/lightvector/KataGo/releases/download/v1.15.0/b18c384nbt-humanv0.bin.gz. b18c384nbt-humanv0.ckpt is 323,752,318 B at https://github.com/lightvector/KataGo/releases/download/v1.15.0/b18c384nbt-humanv0.ckpt. The release notes describe the .ckpt as the raw PyTorch checkpoint for developers, for experiments or finetuning. A mirror is listed at https://katagotraining.org/extra_networks/. Code licence: MIT-style, https://github.com/lightvector/KataGo/blob/d91ea855110dae533f0aada947b2b7d78cc8a4e1/LICENSE. Weights licence: MIT-style, covers networks labelled KataGo on extra_networks, https://katagotraining.org/network_license/. My random-weight stand-in has 26,759,349 params (about 107 MB in fp32; kg_model_bench.json). So the 324 MB ckpt probably also holds SWA weights or optimizer state; this is an inference only. Issue #1009 says HumanSL was trained as model version 14 with mish activations and hacked to v15 only at .bin.gz export."
+  },
+  {
+   "item": "2. Training data sources, years, rank labels, contamination",
+   "verdict": "From the code, the sources are OGS, KGS, Fox, GoGoD (historical pros) and Go4Go (modern pros). Nothing in the code handles Yugen no Ma (Nihon Ki-in) or Pandanet/IGS. A Tygem code exists but the data writer has no Tygem branch. No official list was found, so this is inferred from the code. The contamination risk for our test games is therefore low. The Fox-based prior art may be optimistic, because Fox is one of HumanSL's own sources.",
+   "evidence": "Source enum OGS=1, KGS=2, FOX=3, TYGEM=4, GOGOD=5, GO4GO=6: https://github.com/lightvector/KataGo/blob/d91ea855110dae533f0aada947b2b7d78cc8a4e1/cpp/neuralnet/sgfmetadata.h#L41-L47. The writer accepts only ogs/kgs/gogod/go4go/fox; anything else throws 'Unknown what-data-source': cpp/command/writetrainingdata.cpp#L961-L1018, with sources assigned at #L1684-L1792. lightvector says writetrainingdata 'was originally written ... for the purpose of training the HumanSL net': https://github.com/lightvector/KataGo/issues/1077. GoGoD was used for old games: issue #1074. Rank parsing (k/kyu/級, d/dan/段, p) maps every server onto one scale: 9d=1, 1d=9, 1k=10, 20k=29, pro=1 (writetrainingdata.cpp#L250-L438); a per-source one-hot lets the net learn each server's offset. Years: the profile dates are preaz=2016-09-01 and rank=2020-03-01. proyear covers 1800–2020 from GoGoD and 2021–2023 from Go4Go (sgfmetadata.cpp#L218-L278). The amateur year range is not published. The release notes, extra_networks page and the OGS forum announcement only say 'a large number of human games'."
+  },
+  {
+   "item": "3. Metadata inputs and full humanSLProfile list",
+   "verdict": "There are 192 metadata channels. The C++ profiles are fixed presets on the KGS scale. PyTorch can build any metadata row we want. Metadata is added to the trunk right after the first conv, so every rank profile costs one full forward pass.",
+   "evidence": "fillMetadataRow: https://github.com/lightvector/KataGo/blob/d91ea855110dae533f0aada947b2b7d78cc8a4e1/cpp/neuralnet/sgfmetadata.cpp#L135-L216. Python version: python/katago/game/sgfmetadata.py#L96-L186. Channel layout: 0-5 human/unranked/unknown flags for the player to move and the opponent; 6-73 thermometer-coded ranks, 34 per side; 74 ratedness; 75-85 time-control type plus main time, period time, periods and Canadian moves; 86 board area (masked); 87-150 date as 32 sin/cos pairs; 151-166 source one-hot. Profiles (getProfile, sgfmetadata.cpp#L265-L340; Analysis_Engine.md#L114-L118): rank_20k..rank_9d, preaz_20k..preaz_9d, rank_{B}_{W} and preaz_{B}_{W}, proyear_1800..proyear_2023, and '' or '_' for none. The C++ presets use source KGS, byo-yomi 1200 s + 5x30 s, and ratedness unknown; the code comment says 'KGS rating system is pretty reasonable' (#L218-L237). Metadata is added at the trunk start: python/katago/train/model_pytorch.py#L3868-L3871. Local check (kg_model_bench.json): rows are 192 wide, all 26 profiles are distinct, and the KGS and FOX rows differ only in the source one-hot."
+  },
+  {
+   "item": "4. Path A: C++ analysis engine on Colab G4 (Blackwell sm_120)",
+   "verdict": "Possible without compiling, using the prebuilt v1.18.x Linux CUDA 12.8 + cuDNN 9.8 build, which compiles sm_120. Whether its runtime libraries work on Colab is unknown until we try. It is poor for volume: each eval returns a 362-float JSON (roughly 3-4 KB, estimate), which means hundreds of GB of text at full scale. The profiles are also fixed to the KGS presets. Good only for a small parity check.",
+   "evidence": "CMakeLists builds archs '... 90 120' for CUDA>=12.8 and adds 100/103/110/121 for CUDA>=13 (HEAD #L757-L762). I checked the same lines in the v1.18.2 tag file. v1.15.3 tops out at sm_90 and ships cuDNN 8.9.7 builds. v1.16.0 notes say CUDA 12.8 / TRT 10.9 should suit RTX 5000. Old TRT builds fail at init on an RTX 5090, while TRT 10.9 + CUDA 12.8 built from source works: https://github.com/lightvector/KataGo/issues/1041. v1.17.0/1.17.1 TRT failed on HumanSL with 'SGF metadata encoder not yet supported'; fixed in v1.17.2 (release notes). Asset sizes (kg_sources.json): v1.18.2 cuda12.8-cudnn9.8.0-linux zip 51,350,638 B; v1.18.1 trt10.9.0-cuda12.8-linux 43,122,191 B. Query recipe: maxVisits 1, includePolicy, overrideSettings humanSLProfile + rootNumSymmetriesToSample 1 + nnRandomize false + rootPolicyOptimism 0 (issue #1154); analyzeTurns lists the target moves. One visit is enough because the policy is the raw net output: issue #1030. GTP kata-raw-human-nn evaluates one position per call (GTP_Extensions.md#L216-L226), so it is not usable at volume."
+  },
+  {
+   "item": "5. Path B: PyTorch (model_pytorch, load_model, features, SGFMetadata)",
+   "verdict": "Feasible. We can featurize directly from our SGF move lists. humanslnet_server.py exists but runs at batch 1 over JSON stdio, so it is fine for parity checks but we need our own batched script. For logits we must mask illegal moves ourselves before log-softmax; the C++ engine does this, the python helper does not.",
+   "evidence": "load_model (HEAD) adds safe globals for torch>=2.6: python/katago/train/load_model.py#L13-L15 and #L62-L98. v1.15.3's load_model.py calls torch.load directly (line 37), so with the old code we would need weights_only=False. features.fill_row_features gives 22 planes and 19 globals (python/katago/game/features.py#L96). The python code does not handle superko (#L126). gamestate.get_model_outputs takes a batch of 1 and applies softmax over all 362 points without masking (gamestate.py#L104-L152). C++ sets illegal moves to -1e30 before softmax (cpp/neuralnet/nneval.cpp#L1222-L1282). Parity evidence: with the humanv0 ckpt on an empty board, proyear_2020, Chinese rules, komi 7.5, python gives 0.036621157 / 0.156812981 / 5.0567e-05 and the engine gives 0.0366211012 / 0.156812504 / 5.05667886e-05 (https://github.com/lightvector/KataGo/issues/1154). Local runs: kg_feat_bench.json replayed 60 fit games (6 per level, seed 20261002) with KataGo's python Board under Japanese rules, komi 6.5. Result: 0 illegal moves, 6,301 target positions, 77 positions/s on one core, and 70.6% of positions carry a ladder feature. kg_model_bench.json built the b18c384nbt-mish-meta v14 stand-in on CPU: policy output (N,6,362), 6.5 evals/s with 8 threads in fp32 on a loaded machine."
+  },
+  {
+   "item": "6. Which path is lower-risk for a rerunnable Colab notebook",
+   "verdict": "Path B (PyTorch). Colab torch 2.11+cu128 already supports Blackwell natively, so no CUDA, cuDNN or KataGo binary has to be installed. We output only the numbers we need, we control the metadata fully, and a rerun depends only on the pinned KataGo commit, the ckpt SHA-256 and the torch version. Path A is kept as an optional small parity check.",
+   "evidence": "See items 4 and 5. Pin KataGo at a fixed commit and vendor python/katago together with LICENSE. HEAD at the time of reading was d91ea855110dae533f0aada947b2b7d78cc8a4e1 (2026-09-27); the v1.15.3 commit is cd0ed6c0712088ddb901be68189ba7fa1439a9e7. Issue #1154 (2026-01) shows that newer python code loaded humanv0.ckpt and matched C++."
+  },
+  {
+   "item": "7. Throughput and compute estimate (ESTIMATE)",
+   "verdict": "Planning scenarios for b18c384nbt with PyTorch fp16 large batches on G4 are 5k / 10k / 20k evals/s; these are not measured. Pilot (about 39.9M evals): 2.22 / 1.11 / 0.55 G4-hours, or 19.3 / 9.7 / 4.8 units. Full run after the gate (about 125.2M evals): 6.95 / 3.48 / 1.74 h, or 60.6 / 30.3 / 15.1 units. Test day (15.5M evals): 52 / 26 / 13 min. The task's own formula with N=12 profiles and target moves only gives 81.3M–134.6M evals, i.e. 1.13–7.48 h. With N=26 it is 176M–292M evals; scoring both colours doubles it.",
+   "evidence": "Measured inputs: target moves per game average 111.04 over all 720,307 fit games (median 114, p90 143; per level from 114.3 for D down to 106.6 for 6D; kg_feat_bench.json). One eval is 9.44 GMAC = 18.9 GFLOP (kg_model_bench.json), and b28c512nbt costs 2.77x that (kg_macs.json). Speed basis: an RTX 4090 with TRT on b28c512nbt does about 2,465–2,544 nnEvals/s at batch ~28–34 (issue #1041, comment 3062721774), which works out to about 7k/s for b18. An RTX 5090 with TRT on b28 does about 5k–10k positions/s (comment 3061169355). NVIDIA lists the RTX PRO 6000 Blackwell Server at 1 PFLOP FP16/BF16; it does not say whether that includes sparsity. Workloads: test 800 questions x 12.5 games = 10,000 games; local validation 1,589 x 12.06; inner bank 11,813 games (results/prereg02/RESULTS.md line 63). The mono pseudo-questions use 72,908 inner games, and the union with the bank is 73,169 (counted from results/prereg05/explore/u1/u1_oof.npz). G4 costs 8.71 units/h (docs/COLAB_RUN.md line 35). G4 has 48 vCPU and 176.9 GB RAM (results/colab_facts_20260925.json). CPU feed: at 10k evals/s with N=14 we need 714 positions/s; 24–40 worker processes would give about 1.8k–3.1k positions/s if scaling were linear (estimate). Script: kg_compute_estimate.py."
+  },
+  {
+   "item": "8. Prior art and rank-scale alignment",
+   "verdict": "The only quantitative prior art is Kuboki et al. 2025 (Fox data; the organiser is a co-author). Converted to our metric, removing HumanSL priors costs -0.034 to -0.053 under random sampling. In the player-specific setting (closest to ours), all features vs Chen's SE gives +0.049 / +0.011 / +0.012 at n = 5 / 10 / 15. Rank MLE and LizGoban have rank estimators but publish no accuracy. The C++ profile scale is KGS ranks. The Yugen-to-KGS/Fox mapping is anecdotal only, so we should learn the mapping from our labelled training data with a wide 20k–9d grid.",
+   "evidence": "https://arxiv.org/html/2505.00279v1 (tables re-read twice and consistent with results/prereg02/design/understand_priorArt.md). Setup: preaz_ profiles at 10k, 8k, ..., 2k, 1d, 3d, ..., 9d, a geometric mean of played-move priors, and LightGBM. Table 2 (random sampling): Use All 64.8 (98.8) vs without Prior 58.1 (97.7) at n=5; 79.6 vs 73.0 at n=10; 91.7 vs 86.4 at n=20. Table 4 (player-specific): 58.1 (95.3) vs 51.6 (93.1); 61.0 (96.2) vs 59.4 (96.0); 63.2 (96.6) vs 61.1 (96.9). Conversion: score = exact + (within1 - exact)/e (kg_prior_art_convert.py/.json). The paper reports no compute cost and does not discuss overlap between its Fox games and HumanSL's training data. Rank MLE (retired): https://rankmle.david.ma/, listed at https://weiqi.soumyak4.in/posts/tools/. LizGoban 0.9.0 (2024-05-27) adds rank estimation, scanning 9d/3d/1k/6k/15k by default: https://github.com/kaorahi/lizgoban/releases. A GitHub issue search on 2026-10-02 found no accuracy reports. Anecdote (unverified): Yugen 5d is about KGS 2d (Yahoo Chiebukuro q11272803916). Release notes: the raw net is weaker at predicting high-dan moves."
+  },
+  {
+   "item": "9. Local CPU smoke-test route",
+   "verdict": "The parts that need no weights are done: featurization replays our SGFs legally, the stand-in model builds, metadata rows are right, and CPU speed is measured. With weights, the next step (needs OK to download 324 MB) has three checks. (1) Reproduce the issue #1154 numbers. (2) Run 3 fit games (D, 1D, 6D) x 4 profiles, about 1,300 evals or 3–4 min at 6.5 evals/s, and check the curve direction. (3) Compare our batched script with humanslnet_server.py point by point. The optional C++ check uses Eigen AVX2 Windows v1.18.1 (5,899,607 B) plus the .bin.gz (99 MB) on a few dozen positions.",
+   "evidence": "kg_feat_bench.json, kg_model_bench.json and kg_macs.json, produced in the repo .venv (Python 3.12, torch 2.14.0+cpu, at most 8 threads). All data went through tools/c10data.load_rows(part='fit') with kg_guard.py blocking data/local. The KataGo shallow clone is about 179 MB in scratchpad/katago/KataGo; it was not built or run. The machine was heavily loaded (load_rows took 1,092 s; torch import took 502 s), so the speeds are conservative."
+  },
+  {
+   "item": "10. Rules and self-imposed ban",
+   "verdict": "The official rules only require disclosure of external resources. The 'no KataGo' rule came from our own PREREG_02–04. Using HumanSL needs: the rules-check topic finished, a new PREREG_06 lifting the ban for the new path (R20/04 frozen paths untouched), and rewrites of report drafts section 7 (rank 7.1 and player 7.4), which currently state that no KataGo or pretrained model was used.",
+   "evidence": "results/prereg02/design/understand_priorArt.md section 1 (rule text: external data, programs and generative AI must be disclosed with sources and contribution; organiser slide 15 says 'everyone trains from scratch'; slide 80 calls pretrained weights an improvement direction). docs/PREREG_02_OPENING_FUSION.md line 164; docs/PREREG_04_OPPONENT.md line 258; report/rank_report_draft.md lines 534-538; report/player_report_draft.md line 398."
+  },
+  {
+   "item": "11. Competition 1",
+   "verdict": "Low priority. HumanSL curves carry strength information, not identity, and Q04 is already at 0.8830. A possible later use is to push candidates whose estimated strength is far from the question's to the bottom. That costs about 107M evals for two pools of 40k black games at N=12 (estimate), or less if we use only 20 games per candidate.",
+   "evidence": "Estimate: 80,000 games x 111 moves x 12 profiles. Q04 local score is from the task statement. The strength-filter idea is P4 in results/prereg02/design/understand_priorArt.md."
+  },
+  {
+   "item": "12. Deliverable status",
+   "verdict": "REPORT.md was NOT written: the subagent harness refused report .md files ('Subagents should return findings as text'). The full findings are in this structured output. All scripts and JSON outputs are in results/prereg06/explore/katago/.",
+   "evidence": "Write tool error on D:/AI-Portfolio/competitions/aicup2026-go/results/prereg06/explore/katago/REPORT.md. No git operations were run; git status shows only '?? results/prereg06/'."
+  }
+ ],
+ "opportunities": [
+  {
+   "name": "Competition 2: KataGo HumanSL rank-likelihood features fused into Q02 (PyTorch path, pilot then full)",
+   "competition": "comp2",
+   "expected_gain": "Unknown until the pilot. Analogy from Kuboki 2025 (Fox): +0.011 to +0.049 in our metric in the player-specific setting, and +0.034 to +0.053 from priors under random sampling. My guess for Q02+HS over Q02 on local validation is +0.00 to +0.03, smaller because Q02 already uses opening and opponent information. This guess is not measured.",
+   "basis": "HumanSL is a rank-conditioned human move predictor trained on OGS/KGS/Fox/GoGoD/Go4Go. Per-move log p(move | rank) summed over a question gives a rank likelihood curve. A small model learned on fit games maps the curve to the 10 levels, and the result is fused into Q02 with the existing U1/p04 OOF machinery (U.load_inputs and U.run_gen in results/prereg05/explore/u1). Gate: inner eval pseudo-questions, Q02+HS minus Q02 at least +0.010 with PlayerBootstrap 95% lower bound > 0, then a mono check like PREREG_04 G4.",
+   "confidence": "low",
+   "effort_days": 12,
+   "colab_runs": 5,
+   "user_actions": "Run the pilot notebook once on G4 (about 0.6–2.2 h, 5–19 units, estimate). If the gate passes, run one or two full feature runs (about 15–61 units, estimate), a rehearsal, and a test-day run (13–52 min). Upload as usual with a per-file OK. Optional: approve a local 324 MB ckpt download into data\\katago\\ for the CPU smoke check. The weights are downloaded by the notebook inside Colab, so no manual download is needed.",
+   "main_risks": "1. Rules interpretation (organiser slide 'everyone trains from scratch'); needs the rules check and full disclosure. 2. Incremental gain over Q02 may be about 0. 3. Compute units: the full mono check alone needs about 61k inner games. 4. One extra test-day Colab path; must not touch the frozen R20/04 paths. 5. Python featurization speed (77 positions/s/core measured) and parity with C++ features. 6. Yugen rank scale differs from KGS/Fox, so the mapping has to be learned. 7. High-dan moves are weaker in the raw policy."
+  },
+  {
+   "name": "Competition 2 variant: also score the opponent's moves under HumanSL (opponent rank correlates with target rank)",
+   "competition": "comp2",
+   "expected_gain": "Unknown. The prereg04 opponent features (O4+SW) added +0.0345 locally, which suggests the opponent's moves carry information. HumanSL on opponent moves may add a little on top. This is a guess.",
+   "basis": "Yugen matchmaking pairs players of similar rank. A pilot variant (500 games, both colours) measures it cheaply.",
+   "confidence": "low",
+   "effort_days": 1,
+   "colab_runs": 0,
+   "user_actions": "None beyond the pilot run; it is part of the same notebook.",
+   "main_risks": "Doubles compute for every later run. The information may overlap with the existing O4/SW terms."
+  },
+  {
+   "name": "Competition 1: HumanSL strength filter on candidates",
+   "competition": "comp1",
+   "expected_gain": "Small and unmeasured. Q04 is already 0.8830; only some of the remaining errors may be strength mismatches.",
+   "basis": "Estimate each candidate's rank from up to 100 black games and each question's rank from 5–20 games, then down-weight candidates whose rank is far from the question's.",
+   "confidence": "low",
+   "effort_days": 4,
+   "colab_runs": 2,
+   "user_actions": "Extra Colab runs over both candidate pools; about 107M evals at N=12, or fewer with 20 games per candidate (estimate).",
+   "main_risks": "High compute for little gain. Adds a new test-day dependency to a path that already scores well. Do this only after the comp2 HumanSL work is finished."
+  }
+ ],
+ "open_questions": [
+  "REPORT.md could not be written because the subagent harness blocks report .md files. The parent should write results/prereg06/explore/katago/REPORT.md (zh-TW) from this output, or decide that the JSON and scripts are enough.",
+  "Rules check (the separate prereg06 topic): is KataGo HumanSL acceptable under the AIdea rules and the organiser's 'train from scratch' slide? This is needed before PREREG_06 lifts the self-imposed ban.",
+  "What exactly is inside b18c384nbt-humanv0.ckpt (config, swa_model, optimizer)? Does the HEAD python code load it with a strict state_dict, or do we need v1.15.3 code plus weights_only=False? The pilot resolves this.",
+  "Actual G4 throughput for PyTorch fp16 with large batches, and whether 48 vCPU of python featurization can keep the GPU fed. Planning assumes 5k / 10k / 20k evals/s.",
+  "Which conditioning works best for Yugen games: KGS or Fox source, date 2020 or 2022, opponent same rank or unknown, how many profiles N, and whether to sub-sample moves.",
+  "Do the prebuilt v1.18.x CUDA 12.8 Linux binaries run on Colab G4 (cuDNN 9 and CUDA runtime libraries, AppImage)? This only matters if we want a C++ parity check.",
+  "Assumed Japanese rules with komi 6.5 for Yugen games (the SGFs have no KM). Could some handicap games have had their setup stones stripped? This affects HumanSL and the existing CNN alike.",
+  "Should the full-run mono gate cover all 61,356 extra inner games (about 15–61 units, estimate) or a player subset?",
+  "User OK to download the 324 MB ckpt locally (data\\katago\\) for the CPU smoke check, or keep all weight handling inside Colab?"
+ ],
+ "files_written": [
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\katago\\kg_guard.py",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\katago\\kg_feat_bench.py",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\katago\\kg_feat_bench.json",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\katago\\kg_model_bench.py",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\katago\\kg_model_bench.json",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\katago\\kg_macs.py",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\katago\\kg_macs.json",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\katago\\kg_compute_estimate.py",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\katago\\kg_compute_estimate.json",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\katago\\kg_prior_art_convert.py",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\katago\\kg_prior_art_convert.json",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\katago\\kg_collect_sources.py",
+  "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg06\\explore\\katago\\kg_sources.json"
+ ]
+}

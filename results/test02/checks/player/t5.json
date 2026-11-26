@@ -1,0 +1,174 @@
+{
+ "verdict": "RECORD_ONLY",
+ "consequence": "none (record-only)",
+ "files": {
+  "player_identification_test_public.csv": {
+   "questions": 400,
+   "histogram": {
+    "5": 100,
+    "6": 0,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 100,
+    "11": 0,
+    "12": 0,
+    "13": 0,
+    "14": 0,
+    "15": 100,
+    "16": 0,
+    "17": 0,
+    "18": 0,
+    "19": 0,
+    "20": 100
+   },
+   "outside_5_20": 0,
+   "mean": 12.5,
+   "share_below_10": 0.25,
+   "chi2_vs_uniform": 1200.0,
+   "df": 15,
+   "p_value": 1.63637830520833e-246,
+   "official_design": {
+    "5": 100,
+    "10": 100,
+    "15": 100,
+    "20": 100
+   },
+   "official_design_match": true,
+   "chi2_note": "the official files use a fixed design (5/10/15/20 games x 100 questions), so the chi2 against uniform 5..20 is not a test of anything there (PREREG_02 rev 8; record only)"
+  },
+  "player_identification_test_private.csv": {
+   "questions": 400,
+   "histogram": {
+    "5": 100,
+    "6": 0,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 100,
+    "11": 0,
+    "12": 0,
+    "13": 0,
+    "14": 0,
+    "15": 100,
+    "16": 0,
+    "17": 0,
+    "18": 0,
+    "19": 0,
+    "20": 100
+   },
+   "outside_5_20": 0,
+   "mean": 12.5,
+   "share_below_10": 0.25,
+   "chi2_vs_uniform": 1200.0,
+   "df": 15,
+   "p_value": 1.63637830520833e-246,
+   "official_design": {
+    "5": 100,
+    "10": 100,
+    "15": 100,
+    "20": 100
+   },
+   "official_design_match": true,
+   "chi2_note": "the official files use a fixed design (5/10/15/20 games x 100 questions), so the chi2 against uniform 5..20 is not a test of anything there (PREREG_02 rev 8; record only)"
+  }
+ },
+ "references": {
+  "uniform_5_20": {
+   "mean": 12.5,
+   "share_below_10": 0.3125
+  },
+  "chi2_df15_critical": {
+   "0.05": 24.99579013972863,
+   "0.01": 30.577914166892494
+  },
+  "local_rank_validation_reference": {
+   "mean": 12.06,
+   "share_below_10": 0.364,
+   "source": "results/test02/design/checks.md (T5); copied, not recomputed here"
+  },
+  "official_design": {
+   "5": 100,
+   "10": 100,
+   "15": 100,
+   "20": 100
+  }
+ },
+ "format": "c10-test02 t5 v1",
+ "comp": "player",
+ "t1_verdict": "PASS",
+ "provenance": {
+  "tool": "tools/t02_checks.py",
+  "tool_sha256": "a6fb40f99e7af19bfe4eef3f5cbb1d0049a8f0c14a7cc95cddfac73884f99cc8",
+  "tool_committed_clean": true,
+  "c10data_sha256": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+  "p02_moves_sha256": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+  "p02_player_open_sha256": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+  "git_head": "7cdb60ab8d21a33ea0ffe3c3fd08d5b5569e3b44",
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "mode": "real",
+  "argv": [
+   "run",
+   "--comp",
+   "player"
+  ],
+  "created": "2026-11-04T14:36:34+0800",
+  "inputs": {
+   "results/test02/checks/player/t1.json": "cc0ddcf72f857ed4c5ab335cf14e17a4747fe0c82e4fa6db73ffca76ec0c42cd",
+   "manifest": {
+    "manifest_sha256": "b9e9e8a6a7fc8b7b696d2d4501563cb99aeac6a95e327f3a5e686d04bbdd0bbe",
+    "files": {
+     "player_identification_test_public.csv": "0e59f7f72376cfa2e81ae913d61092caeb1240d95abb43a581207ed29f1647a8",
+     "player_identification_candidates_public.csv": "8175aeb08235536a1435bb6ba4c55088f906096cc14e7048e8898e3d7a3597a6",
+     "player_identification_test_private.csv": "4b07a403b36875f44007adb22aaa8da3c75ec3994e165f36c29a9400e6efcd11",
+     "player_identification_candidates_private.csv": "7a8926ca83b43b1dca0e32c23513cbbff2731d623be151cf80ed912a91d91e57"
+    }
+   },
+   "player_identification_test_public.csv": "0e59f7f72376cfa2e81ae913d61092caeb1240d95abb43a581207ed29f1647a8",
+   "player_identification_candidates_public.csv": "8175aeb08235536a1435bb6ba4c55088f906096cc14e7048e8898e3d7a3597a6",
+   "player_identification_test_private.csv": "4b07a403b36875f44007adb22aaa8da3c75ec3994e165f36c29a9400e6efcd11",
+   "player_identification_candidates_private.csv": "7a8926ca83b43b1dca0e32c23513cbbff2731d623be151cf80ed912a91d91e57",
+   "results/test02/null/t3_null.json": "1950e9a8af5543dc95f6dd9d28664278ba145fafef153b785905264a6e934dd4",
+   "results/test02/null/t3_null_raw.npz": "4eb9cf053b3ae296df6de020e7f1ecf4caa3e3bc53ed477e0e749a4f4d4da714",
+   "results/test02/null/t3_null_canon.npz": "5312a18c34e71d4a254b5239b508612265be0b38a543b2f65dbd458159fcf69e",
+   "results/test02/null/t3b_null.json": "a8cf38347b326b024a464b84b193846a9ce1c0205df3be072c95f7b107f5e58c",
+   "results/test02/null/t3b_null_raw.npz": "e42318ca89298213175920b0600bc93ec9ed0707d6ea7a063100f7f49c988db7",
+   "results/test02/null/t3b_null_canon.npz": "46589ca3a1d0fadbed9c5831959fbd3f237ade1b18842dbcf340e64c434279fc",
+   "results/test02/null/train_refs.json": "380a0a7fa6e4cb7751e8ee3404a1ccba645ca73dd919a6a5e9a8451636988203"
+  },
+  "rerun_reason": null,
+  "validation_hash_guard": {
+   "available": true,
+   "rule": "real mode: hits are recorded; a file with share >= 0.50 of local validation games is refused (validation-derived tree)",
+   "games_checked": 90000,
+   "validation_hashes": 61558,
+   "hits": 0,
+   "files": {
+    "player_identification_test_public.csv": {
+     "games": 5000,
+     "validation_hits": 0,
+     "share": 0.0
+    },
+    "player_identification_candidates_public.csv": {
+     "games": 40000,
+     "validation_hits": 0,
+     "share": 0.0
+    },
+    "player_identification_test_private.csv": {
+     "games": 5000,
+     "validation_hits": 0,
+     "share": 0.0
+    },
+    "player_identification_candidates_private.csv": {
+     "games": 40000,
+     "validation_hits": 0,
+     "share": 0.0
+    }
+   }
+  },
+  "missing_files_skipped": [],
+  "runtime_s": 277.2
+ }
+}

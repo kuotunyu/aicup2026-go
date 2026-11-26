@@ -1,0 +1,381 @@
+{
+ "format": "c10 official_scores_v2 (manual ledger, PREREG_27 section 12 rev 3)",
+ "note": "v2 test set (1,600-row player submissions). Competition 2 is unchanged (branch K): see results/official_scores.json.",
+ "uploads": [
+  {
+   "id": "v2-1",
+   "comp": "player",
+   "team": "TEAM_11249",
+   "file": "results/prereg35/apply/submission_player.csv",
+   "sha256": "ac25aa81bbf86679b8a4604af8cd284c91b21d3985ba0f688ad67204ba1746fa",
+   "rows": 1600,
+   "git_commit": "872ec9b",
+   "method": "pub_/priv_: v1 06-ON rows (sha256 94cc82650dd4...); pub2_/priv2_: prereg35 G (O 1, L 2, JO 0.5, S2 0, PA 1, CSLS 40), no CNN",
+   "checks": "p35_apply.py assemble ok (1,600 rows, 4 prefixes x 400, no duplicate, top-5 distinct, ids in the matching candidate file)",
+   "uploaded_at": "2026-11-11T12:13:13+08:00",
+   "uploads_today_after": 1,
+   "approval": "standing approval (2026-11-04 15:29); user asked Claude to operate Chrome on 2026-11-11",
+   "public_score": 0.6541362,
+   "public_rank": "4/5",
+   "leaderboard_at_upload": [
+    [
+     "TEAM_10957",
+     0.8173181
+    ],
+    [
+     "TEAM_11889",
+     0.6692203
+    ],
+    [
+     "TEAM_11307",
+     0.6650306
+    ],
+    [
+     "TEAM_11249",
+     0.6541362
+    ],
+    [
+     "TEAM_11683",
+     0.6117111
+    ]
+   ],
+   "derived": "if the original half is 1.0 as on v1, the new public half is 2 x 0.6541362 - 1.0 = 0.3083 (computed, not shown by the site); simulation mean 0.3201"
+  },
+  {
+   "id": "v2-2",
+   "comp": "player",
+   "team": "TEAM_11249",
+   "file": "results/prereg36/apply/submission_player.csv",
+   "sha256": "81675f6975c54d956c248f4c62db837a4ef3ec80c1b09167460bd402895d3b0e",
+   "rows": 1600,
+   "git_commit": "3c8eab4",
+   "method": "pub_/priv_: v1 06-ON rows (unchanged from v2-1); pub2_/priv2_: prereg36 M = prereg35 G terms + 4 x metric CNN (step_40000), CSLS 20",
+   "checks": "p36_eval.py assemble ok (1,600 rows, 4 prefixes x 400); browser-side sha256 prefix 81675f6975c5 and no CR verified before submit",
+   "uploaded_at": "2026-11-11T17:18:08+08:00 (site time)",
+   "uploads_today_after": 2,
+   "approval": "standing approval (2026-11-04 15:29); user logged in and said to continue on 2026-11-11",
+   "public_score": 0.7113956,
+   "public_rank": "15/33",
+   "leaderboard_at_upload": [
+    [
+     "TEAM_10957",
+     0.8173181
+    ],
+    [
+     "TEAM_11873",
+     0.8154518
+    ],
+    [
+     "TEAM_12127",
+     0.8078846
+    ],
+    [
+     "TEAM_12404",
+     0.8025546
+    ],
+    [
+     "TEAM_11092",
+     0.7759842
+    ],
+    [
+     "TEAM_11769",
+     0.7640091
+    ],
+    [
+     "TEAM_12303",
+     0.7519912
+    ],
+    [
+     "TEAM_11543",
+     0.7492912
+    ],
+    [
+     "TEAM_11307",
+     0.7240918
+    ],
+    [
+     "TEAM_11294",
+     0.7221671
+    ],
+    [
+     "TEAM_11984",
+     0.716961
+    ],
+    [
+     "TEAM_12240",
+     0.7166181
+    ],
+    [
+     "TEAM_10872",
+     0.7150795
+    ],
+    [
+     "TEAM_11224",
+     0.7134494
+    ],
+    [
+     "TEAM_11249",
+     0.7113956
+    ],
+    [
+     "TEAM_10942",
+     0.6988057
+    ]
+   ],
+   "derived": "if the original half is 1.0, the new public half is 2 x 0.7113956 - 1.0 = 0.4228 (computed, not shown by the site); simulation mean 0.4241"
+  },
+  {
+   "id": "v2-3",
+   "comp": "player",
+   "team": "TEAM_11249",
+   "file": "results/prereg38/apply/submission_player.csv",
+   "sha256": "2637bd4df054d7baf33b4d780cdf18f17cf622dfd0daeaed291971f18a5b42c6",
+   "rows": 1600,
+   "git_commit": "ae3f54c",
+   "method": "pub_/priv_: v1 06-ON rows (unchanged); pub2_/priv2_: prereg38 backend on the prereg36 CNN (step_40000): per-game L2, candidate-pool within-class whitening (lambda 0.02) + LDA 32, G terms + 4 x CNN term, CSLS 10",
+   "checks": "assemble ok (1,600 rows, 4 prefixes x 400); browser-side sha256 prefix 2637bd4df054 and no CR verified before submit",
+   "uploaded_at": "2026-11-11T18:14:24+08:00 (site time)",
+   "uploads_today_after": 3,
+   "approval": "standing approval (2026-11-04 15:29)",
+   "public_score": 0.7440598,
+   "public_rank": "11/35",
+   "leaderboard_at_upload": [
+    [
+     "TEAM_12404",
+     0.8251914
+    ],
+    [
+     "TEAM_10957",
+     0.8173181
+    ],
+    [
+     "TEAM_11873",
+     0.8154518
+    ],
+    [
+     "TEAM_12127",
+     0.8078846
+    ],
+    [
+     "TEAM_11092",
+     0.7759842
+    ],
+    [
+     "TEAM_11769",
+     0.7640091
+    ],
+    [
+     "TEAM_10986",
+     0.7616462
+    ],
+    [
+     "TEAM_12303",
+     0.7519912
+    ],
+    [
+     "TEAM_11543",
+     0.7492912
+    ],
+    [
+     "TEAM_12240",
+     0.7473707
+    ],
+    [
+     "TEAM_11249",
+     0.7440598
+    ],
+    [
+     "TEAM_12057",
+     0.7257352
+    ]
+   ],
+   "derived": "if the original half is 1.0, the new public half is 2 x 0.7440598 - 1.0 = 0.4881 (computed, not shown by the site); simulation mean 0.4970"
+  },
+  {
+   "id": "v2-4",
+   "comp": "player",
+   "team": "TEAM_11249",
+   "file": "results/prereg37/apply/submission_player.csv",
+   "sha256": "71322ee4386a171c6e795f5821a01a958016e772144a01d12ce63f811b3e607d",
+   "rows": 1600,
+   "git_commit": "c76355a (branch p37-long)",
+   "method": "pub_/priv_: v1 06-ON rows (unchanged); pub2_/priv2_: prereg37 CNN (160,000 steps, step_160000) + prereg38 backend retuned on D (whitening lambda 0.7 + LDA 128, wE 8, CSLS 20); judged once on E: 0.5856 vs v2-3 0.4970, +0.0887 [0.0826, 0.0946], 20/20",
+   "checks": "assemble ok (1,600 rows, 4 prefixes x 400, original 800 rows identical to v2-3, no CR); local copy sha256 prefix 71322ee4386a; the in-browser hash check returned nothing (async), file size 113 KB matched",
+   "uploaded_at": "2026-11-12T06:41:10+08:00 (site time)",
+   "uploads_today_after": 1,
+   "approval": "standing approval (2026-11-04 15:29) + user 2026-11-12 no-cap instruction",
+   "public_score": 0.7851737,
+   "public_rank": "11/49",
+   "leaderboard_top_at_upload": [
+    0.8340738,
+    0.8285606,
+    0.8216869,
+    0.8173181,
+    0.8078846,
+    0.8006661,
+    0.7909669,
+    0.7907037,
+    0.787875,
+    0.7873633,
+    0.7851737
+   ],
+   "derived": "if the original half is 1.0, the new public half is 2 x 0.7851737 - 1.0 = 0.5703 (computed); simulation mean 0.5856"
+  },
+  {
+   "id": "v2-5",
+   "comp": "player",
+   "team": "TEAM_11249",
+   "file": "results/prereg39/apply/submission_player.csv",
+   "sha256": "0614cb2cc8082ee63e1a9a604fafbdf274de4c7e5e71fdc838a139ca9d358534",
+   "rows": 1600,
+   "method": "pub_/priv_: v1 06-ON rows (unchanged); pub2_/priv2_: v2-4 (M37 CNN + retuned prereg38 backend) + prereg39 KataGo P1 term (LDA learned on L players, joint colours, B4 pool whitening, wP 8, CSLS 10); judged once on E (use 4): 0.6593 vs v2-4 0.5856, +0.0736 [0.0699, 0.0773], 20/20",
+   "git_commit": "318fa00 (branch p39-p1), merged b44c826",
+   "checks": "assemble ok (1,600 rows, 4 prefixes x 400, 1,600 unique ids, 5 distinct candidates per row, no CR); original 800 rows identical to v2-4; base-without-P1 top5 identical to prereg37 apply for both pools; 0 games without P1",
+   "approval": "standing approval (2026-11-04 15:29) + user 2026-11-12 no-cap instruction",
+   "uploaded_at": "2026-11-12T14:05:02+08:00 (site time)",
+   "uploads_today_after": 2,
+   "public_score": 0.8237372,
+   "public_rank": "4/53",
+   "derived": "if the original half is 1.0, the new public half is 2 x 0.8237372 - 1.0 = 0.6475 (computed); simulation mean 0.6593",
+   "leaderboard_top_at_upload": [
+    0.8375259,
+    0.8285606,
+    0.8239826,
+    0.8237372
+   ]
+  },
+  {
+   "id": "v2-6",
+   "comp": "player",
+   "team": "TEAM_11249",
+   "file": "results/prereg43/apply/submission_player.csv",
+   "sha256": "992e6515288457885f1d42c1e125b9951b271d110a0df7c3fb7f567446692de9",
+   "rows": 1600,
+   "git_commit": "ab40bab",
+   "method": "pub_/priv_: v1 06-ON rows (unchanged); pub2_/priv2_: prereg43 c* = V2 CNN seed 0 raw (320,000 steps) + prereg38 backend retuned on D + prereg39 P1 term (wP 8, CSLS 20)",
+   "checks": "p43_eval.py apply (v2-5 rebuilt == prereg39 top5 on both pools) + assemble ok (1,600 rows, 4 prefixes x 400); browser-side sha256 prefix 992e65152884, no CR",
+   "uploaded_at": "2026-11-14T08:06:36+08:00 (site time)",
+   "uploads_today_after": 1,
+   "approval": "standing approval (2026-11-04 15:29); user logged in to AIdea on 2026-11-14 and said 登好了",
+   "public_score": 0.8224599,
+   "public_rank": "16/77",
+   "leaderboard_before_upload_top5": [
+    [
+     "TEAM_11543",
+     0.8936906
+    ],
+    [
+     "TEAM_11820",
+     0.890323
+    ],
+    [
+     "TEAM_10883",
+     0.8801077
+    ],
+    [
+     "TEAM_12404",
+     0.8750895
+    ],
+    [
+     "TEAM_11092",
+     0.8726225
+    ]
+   ],
+   "derived": "new public half = 2 x 0.8224599 - 1.0 = 0.6449 (computed, assumes the original half is 1.0); v2-5 0.6475; E simulation 0.6816 vs v2-5 0.6593",
+   "note": "public -0.0013 vs v2-5 (400 new public questions; within noise for the +0.0224 E judgement over 20 pools). Kept as the last upload per the registered rule (public only catches format errors and large regressions); not chosen or changed because of this public score."
+  },
+  {
+   "id": "v2-7",
+   "comp": "player",
+   "team": "TEAM_11249",
+   "file": "results/prereg49/apply/submission_player.csv",
+   "sha256": "34d239a521e7406110cb9025720063d3cc4c14a74cb6681e508a36d91885eac0",
+   "rows": 1600,
+   "git_commit": "a893dd9",
+   "method": "pub_/priv_: v1 06-ON rows (unchanged); pub2_/priv2_: prereg49 c49 = c* recipe (V2 CNN, 320,000 steps, seed 0, raw) retrained on every training player outside E (5,771) + v2-6's backend and P1 term unchanged",
+   "checks": "p49_eval.py apply (v2-6 rebuilt == prereg43 top5 on both pools, byte for byte) + assemble ok (1,600 rows, 4 prefixes x 400, original 800 rows = v2-6); browser-side sha256 prefix 34d239a521e7, no CR",
+   "uploaded_at": "2026-11-18T02:46:34+08:00 (site time)",
+   "uploads_today_after": 1,
+   "approval": "standing approval (2026-11-04 15:29)",
+   "public_score": 0.8282314,
+   "public_rank": "30/106",
+   "leaderboard_before_upload_top5": [
+    [
+     "TEAM_11820",
+     0.9238247
+    ],
+    [
+     "TEAM_11713",
+     0.9065
+    ],
+    [
+     "TEAM_11092",
+     0.9005341
+    ],
+    [
+     "TEAM_12404",
+     0.8961082
+    ],
+    [
+     "TEAM_11543",
+     0.8936906
+    ]
+   ],
+   "derived": "new public half = 2 x 0.8282314 - 1.0 = 0.6565 (computed, assumes the original half is 1.0); v2-6 0.6449; E judgement c49 0.7036 vs v2-6 0.6816",
+   "note": "E pools use 6 (prereg49, eval.json 7194e82)."
+  },
+  {
+   "id": "v2-8",
+   "comp": "player",
+   "team": null,
+   "file": "results/prereg66/apply/submission_player.csv",
+   "sha256": "d89d3432960a9756d2f03813e33f09048c8c7afe84638c3fa964c6d20c28a3d6",
+   "rows": 1600,
+   "git_commit": null,
+   "method": "prereg66 = v2-7 + Gemini Carbon 04_R_final_PRIMARY back end (lam 0.78, P1 combo 5.5/3/3, rank compatibility 1.8 + post by k)",
+   "checks": null,
+   "uploaded_at": null,
+   "uploads_today_after": null,
+   "approval": null,
+   "public_score": 0.8337026,
+   "public_rank": "34/123",
+   "leaderboard_before_upload_top5": null,
+   "derived": null,
+   "note": "uploaded by Claude under the standing approval of 11/04; public +0.0055 vs v2-7",
+   "uploaded_at_site": "2026-11-21 19:20:17",
+   "reason": "prereg66 E use 10: +0.0148 [+0.0099, +0.0193], 18/20 (rank term models saw E players' games - NOTES F1)"
+  },
+  {
+   "id": "v2-9",
+   "comp": "player",
+   "team": "TEAM_11249",
+   "file": "results/prereg67/apply/submission_player.csv",
+   "sha256": "36b222d866267abffda03d126d94db9ed5bea3406b2f8b47323622fd5329a026",
+   "rows": 1600,
+   "git_commit": null,
+   "method": "prereg67 = v2-8 back end + 7-member score-level CNN ensemble (c49, S, B, p61, S1, S2, X; Gemini Hydrogen recipe)",
+   "checks": null,
+   "uploaded_at": null,
+   "uploads_today_after": null,
+   "approval": null,
+   "public_score": 0.8417387,
+   "public_rank": "29/125",
+   "leaderboard_before_upload_top5": null,
+   "derived": null,
+   "note": "uploaded by Claude under the standing approval of 11/04; public +0.0080 vs v2-8",
+   "uploaded_at_site": "2026-11-22 01:17:12",
+   "reason": "prereg67 E use 11: +0.0196 [+0.0165, +0.0228], 20/20 vs v2-8"
+  }
+ ],
+ "private_leaderboard": {
+  "read_at": "2026-11-25 17:10 +08:00 (AIdea leaderboard, Claude via Chrome)",
+  "competition": "1 player identification (TEAM_11249)",
+  "final_upload": "v2-9 = prereg67 (results/prereg67/apply/submission_player.csv)",
+  "private_score": 0.8697239,
+  "private_rank": 27,
+  "private_teams": 136,
+  "public_score": 0.8417387,
+  "public_rank_final": 36,
+  "private_first": 0.9341401
+ }
+}

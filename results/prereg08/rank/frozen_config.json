@@ -1,0 +1,1194 @@
+{
+ "format": "c10-prereg08 rank frozen_config v1",
+ "what": "PREREG_08 competition 2 frozen configuration Q08 = Q02H + 4 x P1TO (inner only; commit with p1_map.npz before p08_p1.py val and apply)",
+ "created": "2026-10-08T14:17:51+00:00",
+ "preview": false,
+ "precommit": false,
+ "combo": {
+  "id": "Q08",
+  "sources": [
+   "C5",
+   "OP",
+   "O4",
+   "SWA",
+   "SWB",
+   "HS",
+   "P1TO"
+  ],
+  "terms": [
+   "OP",
+   "O4",
+   "SWA",
+   "SWB",
+   "HS",
+   "P1TO"
+  ],
+  "path": "gen",
+  "pool": "log",
+  "calibrated": true,
+  "opening": true,
+  "p1_scale": 4.0
+ },
+ "params": {
+  "path": "gen",
+  "terms": [
+   "OP",
+   "O4",
+   "SWA",
+   "SWB",
+   "HS",
+   "P1TO"
+  ],
+  "a": -1.5782906138621513,
+  "gamma": 0.38476138165512164,
+  "w": {
+   "OP": 1.1651053556861017,
+   "O4": 3.023118556668115,
+   "SWA": 0.4408620509030945,
+   "SWB": 0.0,
+   "HS": 0.0,
+   "P1TO": 4.0
+  },
+  "beta": [
+   0.05387697503432896,
+   0.02882166471409971,
+   0.005328599933338606,
+   -0.054177351481715444,
+   0.038371301878140994,
+   -0.001297483968814341,
+   0.03749016836690935,
+   0.011646021742180442,
+   0.016796756272075684
+  ],
+  "b": [
+   0.05424524792292163,
+   -0.021948300870263015,
+   -0.019150712517232243,
+   -0.0017708590333582728,
+   0.06341596425252437,
+   -0.02707538724807784,
+   0.009354101611456915,
+   -0.031925810954988386,
+   -0.009209441026239747,
+   -0.015934802136743413
+  ],
+  "theta": [
+   -1.5782906138621513,
+   0.38476138165512164,
+   1.1651053556861017,
+   3.023118556668115,
+   0.4408620509030945,
+   0.0,
+   0.0,
+   4.0,
+   0.05387697503432896,
+   0.02882166471409971,
+   0.005328599933338606,
+   -0.054177351481715444,
+   0.038371301878140994,
+   -0.001297483968814341,
+   0.03749016836690935,
+   0.011646021742180442,
+   0.016796756272075684
+  ]
+ },
+ "folds": [
+  {
+   "fold": 0,
+   "loss": 1.0178969852860258,
+   "starts": [
+    {
+     "start_a": 0.0,
+     "loss": 1.0178969854922215,
+     "nit": 41,
+     "success": true,
+     "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+    },
+    {
+     "start_a": 1.0,
+     "loss": 1.0178969852860258,
+     "nit": 42,
+     "success": true,
+     "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+    }
+   ],
+   "params": {
+    "path": "gen",
+    "terms": [
+     "OP",
+     "O4",
+     "SWA",
+     "SWB",
+     "HS",
+     "P1TO"
+    ],
+    "a": -1.557273858542251,
+    "gamma": 0.39957742098886695,
+    "w": {
+     "OP": 1.0690735577352795,
+     "O4": 2.3156493499123565,
+     "SWA": 0.5041680622331526,
+     "SWB": 0.0,
+     "HS": 0.0,
+     "P1TO": 4.0
+    },
+    "beta": [
+     0.07901292769241158,
+     0.014907237201442892,
+     -0.006568886517391206,
+     -0.05947305955292713,
+     0.010835660310558102,
+     -0.023543958568225748,
+     0.04118440650262183,
+     0.028890611445848525,
+     0.02235488462330467
+    ],
+    "b": [
+     0.05637167742489113,
+     -0.055369476520522015,
+     -0.01775646185690053,
+     0.0020003431473400294,
+     0.0628044225438213,
+     -0.002259770207386227,
+     0.03306217083766213,
+     -0.03276328175028081,
+     -0.02488191794664964,
+     -0.021207705671975392
+    ],
+    "theta": [
+     -1.557273858542251,
+     0.39957742098886695,
+     1.0690735577352795,
+     2.3156493499123565,
+     0.5041680622331526,
+     0.0,
+     0.0,
+     4.0,
+     0.07901292769241158,
+     0.014907237201442892,
+     -0.006568886517391206,
+     -0.05947305955292713,
+     0.010835660310558102,
+     -0.023543958568225748,
+     0.04118440650262183,
+     0.028890611445848525,
+     0.02235488462330467
+    ]
+   },
+   "bounds_hit": {
+    "SWB": "lower",
+    "HS": "lower",
+    "P1TO": "upper"
+   }
+  },
+  {
+   "fold": 1,
+   "loss": 1.0235341701008525,
+   "starts": [
+    {
+     "start_a": 0.0,
+     "loss": 1.023544558128952,
+     "nit": 31,
+     "success": true,
+     "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+     "start_a": 1.0,
+     "loss": 1.0235341701008525,
+     "nit": 34,
+     "success": true,
+     "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    }
+   ],
+   "params": {
+    "path": "gen",
+    "terms": [
+     "OP",
+     "O4",
+     "SWA",
+     "SWB",
+     "HS",
+     "P1TO"
+    ],
+    "a": -1.5834351562631794,
+    "gamma": 0.38968636716583777,
+    "w": {
+     "OP": 1.0997775902896942,
+     "O4": 3.5137698501095547,
+     "SWA": 0.08886854320458729,
+     "SWB": 0.0,
+     "HS": 0.0,
+     "P1TO": 3.961205694072108
+    },
+    "beta": [
+     0.036995546767325097,
+     0.0275491394657834,
+     0.02023108801974307,
+     -0.09310823537077823,
+     0.04751483863918701,
+     -0.023216251403474514,
+     0.008620331296282872,
+     -0.021544526462856192,
+     0.0444291925985102
+    ],
+    "b": [
+     0.030816047937606422,
+     -0.021503556048152843,
+     -0.029084421327243058,
+     -0.029951491374325172,
+     0.09166731657402655,
+     -0.04366111872541922,
+     0.02479021372857643,
+     -0.005919380253897385,
+     0.02499562245290442,
+     -0.04214923296407613
+    ],
+    "theta": [
+     -1.5834351562631794,
+     0.38968636716583777,
+     1.0997775902896942,
+     3.5137698501095547,
+     0.08886854320458729,
+     0.0,
+     0.0,
+     3.961205694072108,
+     0.036995546767325097,
+     0.0275491394657834,
+     0.02023108801974307,
+     -0.09310823537077823,
+     0.04751483863918701,
+     -0.023216251403474514,
+     0.008620331296282872,
+     -0.021544526462856192,
+     0.0444291925985102
+    ]
+   },
+   "bounds_hit": {
+    "SWB": "lower",
+    "HS": "lower"
+   }
+  },
+  {
+   "fold": 2,
+   "loss": 0.9907596437781041,
+   "starts": [
+    {
+     "start_a": 0.0,
+     "loss": 0.9909610046643736,
+     "nit": 21,
+     "success": true,
+     "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    {
+     "start_a": 1.0,
+     "loss": 0.9907596437781041,
+     "nit": 32,
+     "success": true,
+     "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+    }
+   ],
+   "params": {
+    "path": "gen",
+    "terms": [
+     "OP",
+     "O4",
+     "SWA",
+     "SWB",
+     "HS",
+     "P1TO"
+    ],
+    "a": -1.5012713819069146,
+    "gamma": 0.35240007989384187,
+    "w": {
+     "OP": 1.07283134005377,
+     "O4": 2.727825382794163,
+     "SWA": 0.0,
+     "SWB": 0.0,
+     "HS": 0.0,
+     "P1TO": 4.0
+    },
+    "beta": [
+     0.024779771257949824,
+     0.01941968938314485,
+     0.021965037547892922,
+     -0.06033623813704205,
+     0.05069527827214323,
+     0.028227460871811362,
+     0.06587778231336842,
+     -0.02036170464413316,
+     0.008818305721888103
+    ],
+    "b": [
+     0.03924357747901737,
+     0.004199688893521718,
+     -0.0020625317897548087,
+     -0.01156946248781101,
+     0.07491078301426396,
+     -0.03458948391546129,
+     -0.01880038054848123,
+     -0.0630931415698438,
+     0.020126730280007627,
+     -0.008365779355458522
+    ],
+    "theta": [
+     -1.5012713819069146,
+     0.35240007989384187,
+     1.07283134005377,
+     2.727825382794163,
+     0.0,
+     0.0,
+     0.0,
+     4.0,
+     0.024779771257949824,
+     0.01941968938314485,
+     0.021965037547892922,
+     -0.06033623813704205,
+     0.05069527827214323,
+     0.028227460871811362,
+     0.06587778231336842,
+     -0.02036170464413316,
+     0.008818305721888103
+    ]
+   },
+   "bounds_hit": {
+    "SWA": "lower",
+    "SWB": "lower",
+    "HS": "lower",
+    "P1TO": "upper"
+   }
+  },
+  {
+   "fold": 3,
+   "loss": 1.0330579468715537,
+   "starts": [
+    {
+     "start_a": 0.0,
+     "loss": 1.0330579497305068,
+     "nit": 35,
+     "success": true,
+     "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+    },
+    {
+     "start_a": 1.0,
+     "loss": 1.0330579468715537,
+     "nit": 44,
+     "success": true,
+     "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+    }
+   ],
+   "params": {
+    "path": "gen",
+    "terms": [
+     "OP",
+     "O4",
+     "SWA",
+     "SWB",
+     "HS",
+     "P1TO"
+    ],
+    "a": -1.604435514871379,
+    "gamma": 0.3987633224485379,
+    "w": {
+     "OP": 1.124749294350897,
+     "O4": 3.1532589111408487,
+     "SWA": 0.5875217834965606,
+     "SWB": 0.0,
+     "HS": 0.0,
+     "P1TO": 4.0
+    },
+    "beta": [
+     0.03789253021625257,
+     0.03700024116833631,
+     0.021141323872869287,
+     -0.04279506788495803,
+     0.021065694919292846,
+     -0.00968727072535195,
+     0.02728290648372728,
+     0.0232204206300575,
+     -0.008139161979686092
+    ],
+    "b": [
+     0.04630877202171357,
+     -0.007279358122743131,
+     -0.025801148661686625,
+     -0.02000247631229102,
+     0.046152787677490356,
+     -0.015200597273140699,
+     0.014493111495937641,
+     -0.02364221233281737,
+     -0.022750365522718658,
+     0.0077214870302559505
+    ],
+    "theta": [
+     -1.604435514871379,
+     0.3987633224485379,
+     1.124749294350897,
+     3.1532589111408487,
+     0.5875217834965606,
+     0.0,
+     0.0,
+     4.0,
+     0.03789253021625257,
+     0.03700024116833631,
+     0.021141323872869287,
+     -0.04279506788495803,
+     0.021065694919292846,
+     -0.00968727072535195,
+     0.02728290648372728,
+     0.0232204206300575,
+     -0.008139161979686092
+    ]
+   },
+   "bounds_hit": {
+    "SWB": "lower",
+    "HS": "lower",
+    "P1TO": "upper"
+   }
+  },
+  {
+   "fold": 4,
+   "loss": 1.0309216343391725,
+   "starts": [
+    {
+     "start_a": 0.0,
+     "loss": 1.0309216531578411,
+     "nit": 33,
+     "success": true,
+     "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+    },
+    {
+     "start_a": 1.0,
+     "loss": 1.0309216343391725,
+     "nit": 46,
+     "success": true,
+     "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+    }
+   ],
+   "params": {
+    "path": "gen",
+    "terms": [
+     "OP",
+     "O4",
+     "SWA",
+     "SWB",
+     "HS",
+     "P1TO"
+    ],
+    "a": -1.6354159795703989,
+    "gamma": 0.3839822420703412,
+    "w": {
+     "OP": 1.4170369587830978,
+     "O4": 3.318527614875506,
+     "SWA": 1.310060161677665,
+     "SWB": 0.0,
+     "HS": 0.0,
+     "P1TO": 4.0
+    },
+    "beta": [
+     0.08695749939102328,
+     0.04214217081306228,
+     -0.02492920044833192,
+     -0.026735012673431806,
+     0.0644840067983566,
+     0.01841922830096023,
+     0.04415963179634386,
+     0.04247974594258583,
+     0.007490451042954515
+    ],
+    "b": [
+     0.09183032744453995,
+     -0.031146147544295316,
+     -0.021271317622484024,
+     0.04192338193830669,
+     0.050224713912572785,
+     -0.04432649861782477,
+     -0.005355963828747255,
+     -0.03551170419056382,
+     -0.03926072569218823,
+     -0.0071060657993160005
+    ],
+    "theta": [
+     -1.6354159795703989,
+     0.3839822420703412,
+     1.4170369587830978,
+     3.318527614875506,
+     1.310060161677665,
+     0.0,
+     0.0,
+     4.0,
+     0.08695749939102328,
+     0.04214217081306228,
+     -0.02492920044833192,
+     -0.026735012673431806,
+     0.0644840067983566,
+     0.01841922830096023,
+     0.04415963179634386,
+     0.04247974594258583,
+     0.007490451042954515
+    ]
+   },
+   "bounds_hit": {
+    "SWB": "lower",
+    "HS": "lower",
+    "P1TO": "upper"
+   }
+  }
+ ],
+ "basis": [
+  [
+   0.7071067811865475,
+   0.4082482904638631,
+   0.2886751345948129,
+   0.22360679774997896,
+   0.18257418583505536,
+   0.1543033499620919,
+   0.1336306209562122,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   -0.7071067811865475,
+   0.4082482904638631,
+   0.2886751345948129,
+   0.22360679774997896,
+   0.18257418583505536,
+   0.1543033499620919,
+   0.1336306209562122,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   -0.8164965809277261,
+   0.2886751345948129,
+   0.22360679774997896,
+   0.18257418583505536,
+   0.1543033499620919,
+   0.1336306209562122,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   0.0,
+   -0.8660254037844387,
+   0.22360679774997896,
+   0.18257418583505536,
+   0.1543033499620919,
+   0.1336306209562122,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   -0.8944271909999159,
+   0.18257418583505536,
+   0.1543033499620919,
+   0.1336306209562122,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   -0.9128709291752769,
+   0.1543033499620919,
+   0.1336306209562122,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   -0.9258200997725514,
+   0.1336306209562122,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   -0.9354143466934853,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   -0.9428090415820635,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   -0.9486832980505138
+  ]
+ ],
+ "formula": "p = softmax(e^a (n/12)^gamma (m_C5 + w_OP m_OP + w_O4 E_O4 + w_SWA E_SWA + w_SWB E_SWB + w_HS E_HS + w_P1 E_P1 + B beta)); E_P1 = mean over the question's usable games (C5 parsed, P1 not failed, >= 1 target move) of 4 lp_P1TO, 0 without one; E_HS as PREREG_07; n = C5-parsed games",
+ "decision_rule": "B, tools/decide.py (argmax p_k + e^-1 (p_{k-1} + p_{k+1}))",
+ "p1": {
+  "variant": "TO",
+  "features": 1540,
+  "scale": 4.0,
+  "p1_map_npz_sha256": "116923629b66198a79da06282aac9ca863acf77bf6a1e1f5d584b526fb54afb2",
+  "probe_used": "P1+P2",
+  "probe_reason": "600/600 chunks, failed games 0 <= 600",
+  "sets_sha256": {
+   "p1": "f0c494962788615d76080b5481de5b762d71f3ad37f8add55a09efef82acb7c7",
+   "p2": "2b68f7ae27b2b6bbe00a3920065495d2a5d6b73fd7df33854f4bf99ae5390049"
+  },
+  "games": 150000,
+  "players": 5767,
+  "lambda": 0.001,
+  "refit_loss": 1.5458247503421114,
+  "run": {
+   "precision": "fp16",
+   "device": "cuda",
+   "batch": 1024,
+   "channels_last": true,
+   "group_batches": 4,
+   "workers": 20,
+   "chunk": 200,
+   "sides": [
+    "target",
+    "opponent"
+   ],
+   "cudnn_benchmark": true,
+   "pad": true
+  },
+  "checkpoint": {
+   "path": "data/katago/b18c384nbt-humanv0.ckpt",
+   "bytes": 323752318,
+   "sha256": "84b23476b56a73a775a0f09bad7d1c5c435690adb343aa851e80bf198c0c8b27",
+   "weights": "model (not swa_model)"
+  },
+  "katago_commit": "d91ea855110dae533f0aada947b2b7d78cc8a4e1",
+  "source_txt_sha256": "039d5a1cbc815b4d69b68dc8c01163354820ac00b5070ef136c14a040b5ba20b",
+  "neutral_metadata_sha256": "404bb7096c63136d7642f5abc98ec84d3c826290451ed649fcbe37c903307282",
+  "inner_manifest_sha256": "0ce2114d637f5205b666e46cfc2b05b9201982e06e231a85212f479f49a415d3"
+ },
+ "pinned_sha256": {
+  "results/prereg07/explore/pilot_humansl/hs_lib.py": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+  "results/prereg07/explore/pilot_humansl/pilot_run.py": "b0d127fd1d5a83af5b17ec3df1dccc85d94b11c3479d33cac07448a3796a3936",
+  "results/prereg07/explore/pilot_humansl/pilot_fuse.py": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+  "results/prereg05/explore/u1/u1_lib.py": "225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7",
+  "results/prereg08/p1/p1_lib.py": "062600168326f9eecd4ec1073e54881c475f8f276e376164eab20d373bbff511",
+  "results/prereg08/p1/p1_extract.py": "2ee8eb127150e672b62bcb30b70c4fac46b8cd6e32c7e4eb19d54f746a6e3f9c",
+  "results/prereg08/p1/p1_fuse.py": "ad356c8ca9f26e1e761677afa07b5aa369ca31e5318f61eb6a6cbda33b970953",
+  "results/prereg08/p1/p1_plan.json": "0cd46bf90c764cae3824f5906e72e13336ab7276ef5fa7edb2ec6831911b228d",
+  "results/prereg08/p2/p2_sets.py": "98bad3d85a32e80c065226b0cc8cd1065b423cdb39dce89829a54b0cbf381c8f",
+  "tools/p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142",
+  "tools/p07_hs.py": "b27ea371bdc1477558effb9ca86c540805dcced971d983226e15fb5e19b7b8dc"
+ },
+ "data_pins_sha256": {
+  "data/prereg08/p1/sets.json": "f0c494962788615d76080b5481de5b762d71f3ad37f8add55a09efef82acb7c7",
+  "data/prereg08/p2/sets.json": "2b68f7ae27b2b6bbe00a3920065495d2a5d6b73fd7df33854f4bf99ae5390049",
+  "data/prereg07/pilot/plan.json": "8494e9afd79c06249bd81545263b86caef7b9e77f3cd631a1e354368cfe33946"
+ },
+ "prereg07": {
+  "frozen_config_sha256": "93a0ac29615260865d554ee61aec258c633820a87aeb7dfcf8047a5dfd200c0b",
+  "hs_map_npz_sha256": "a4334e79c490e4d8102dd5136ac08c0de1060315981f4ccc527ebffa1b84a3e4",
+  "rank_val_probs_sha256": "6ae2db6025a903eb5c58af9418dc203c0b6e84dd664049f85dfa850e57dc28c1",
+  "val_hs_sha256": "ef2067e8cb633f521c205a09aa4638c79fef3ba0b4e90e6a54bdc046e5a5550f"
+ },
+ "gates": {
+  "compared": "Q08 vs Q02H",
+  "G1": {
+   "threshold": 0.01,
+   "delta": 0.07434432556651904,
+   "passed": true
+  },
+  "G2": {
+   "ci95": [
+    0.058606131138957566,
+    0.08999647019327887
+   ],
+   "se": 0.008071295038434873,
+   "passed": true,
+   "bootstrap": "players within each level, 1000 draws, default_rng(0), paired"
+  },
+  "G4": {
+   "rank_balanced_difference": 0.06859565850106708,
+   "ci95": [
+    0.05852024703634782,
+    0.07967602957377838
+   ],
+   "by_colour_point_estimates": {
+    "B": 0.07173650085937522,
+    "W": 0.06516174303275335
+   },
+   "questions": 120544,
+   "registered_questions": 120544,
+   "passed": true,
+   "rule": "all 120,544 single-colour inner pseudo-questions: paired PlayerBootstrap 95 % lower bound > 0, black and white point estimates > 0"
+  },
+  "question_mean": {
+   "question_mean_difference": 0.07458524074309589,
+   "note": "recorded only (PREREG_08 2.5)"
+  },
+  "passed": true,
+  "reason": "G1, G2, G4 passed"
+ },
+ "p1_direction_ref": {
+  "rho_eval": 0.9628047229694198,
+  "eval_questions": 127200,
+  "rho_mono": 0.9673017067776464,
+  "mono_questions": 120544,
+  "floor_validation": 0.078,
+  "floor_test_per_set": 0.155,
+  "validation_threshold": 0.4814023614847099,
+  "test_threshold": 0.4836508533888232,
+  "definition": "Spearman (average ranks) between sum_k k softmax(E_P1)_k (E_P1 = masked mean of 4 lp_P1TO) and sum_k k P_Q02,k (Q02 OOF), questions with >= 1 usable game"
+ },
+ "se_val": {
+  "se_val": 0.008959895145982487,
+  "adoption_probability": 0.9999999998832042,
+  "delta": 0.07434432556651904,
+  "N_l": {
+   "D": 178,
+   "C": 163,
+   "B": 207,
+   "A": 308,
+   "1D": 87,
+   "2D": 122,
+   "3D": 124,
+   "4D": 128,
+   "5D": 131,
+   "6D": 141
+  },
+  "per_level_var_over_N": {
+   "D": 0.00046149940363710083,
+   "C": 0.0006715262760469323,
+   "B": 0.0005960017751936214,
+   "A": 0.00038931371263414664,
+   "1D": 0.001451388395250601,
+   "2D": 0.001039613424864734,
+   "3D": 0.001013746724240468,
+   "4D": 0.0009618676329673295,
+   "5D": 0.0009333646908202862,
+   "6D": 0.0005096500670448318
+  },
+  "formula": "sqrt(sum_l Var_l(d, ddof 1) / N_l) / 10; Phi(delta / SE_val - 1.96)",
+  "adoption_probability_at_fraction_of_delta": {
+   "1.0": 0.9999999998832042,
+   "0.75": 0.9999899190886208,
+   "0.5": 0.9856916715590824
+  }
+ },
+ "score_pending_val": true,
+ "score_allowed_note": "gates passed; score_allowed is decided by apply (PREREG_08 2.7) after the validation P1",
+ "oof": {
+  "rank_balanced": 0.6986195853659671,
+  "question_mean": 0.7024224932539705,
+  "per_level": {
+   "D": 0.8059424827119034,
+   "C": 0.7606453460028486,
+   "B": 0.6908463567043511,
+   "A": 0.6433443972767119,
+   "1D": 0.5610170270344236,
+   "2D": 0.5984505924735722,
+   "3D": 0.6462119948925983,
+   "4D": 0.6969005261209308,
+   "5D": 0.7295890045789573,
+   "6D": 0.8532481258633736
+  },
+  "per_n_bin": {
+   "5-7": {
+    "n_questions": 26849,
+    "rank_balanced": 0.6569158728914063,
+    "levels_present": 10,
+    "question_mean": 0.6453857495691705,
+    "pred_distribution": {
+     "D": 2539,
+     "C": 3115,
+     "B": 3485,
+     "A": 4035,
+     "1D": 2870,
+     "2D": 2231,
+     "3D": 1994,
+     "4D": 2066,
+     "5D": 2214,
+     "6D": 2300
+    },
+    "true_distribution": {
+     "D": 2649,
+     "C": 2428,
+     "B": 4237,
+     "A": 6446,
+     "1D": 1254,
+     "2D": 2032,
+     "3D": 1798,
+     "4D": 1929,
+     "5D": 1962,
+     "6D": 2114
+    }
+   },
+   "8-12": {
+    "n_questions": 42850,
+    "rank_balanced": 0.6906563164339522,
+    "levels_present": 10,
+    "question_mean": 0.6937164402986113,
+    "pred_distribution": {
+     "D": 4010,
+     "C": 5467,
+     "B": 5663,
+     "A": 6240,
+     "1D": 4524,
+     "2D": 3062,
+     "3D": 3288,
+     "4D": 3602,
+     "5D": 3311,
+     "6D": 3683
+    },
+    "true_distribution": {
+     "D": 4640,
+     "C": 4702,
+     "B": 5719,
+     "A": 9227,
+     "1D": 2119,
+     "2D": 2990,
+     "3D": 3068,
+     "4D": 3319,
+     "5D": 3374,
+     "6D": 3692
+    }
+   },
+   "13-20": {
+    "n_questions": 57501,
+    "rank_balanced": 0.7250588742954901,
+    "levels_present": 10,
+    "question_mean": 0.7355425068246967,
+    "pred_distribution": {
+     "D": 5980,
+     "C": 6757,
+     "B": 6651,
+     "A": 7683,
+     "1D": 4297,
+     "2D": 4882,
+     "3D": 4925,
+     "4D": 5458,
+     "5D": 5130,
+     "6D": 5738
+    },
+    "true_distribution": {
+     "D": 6911,
+     "C": 5870,
+     "B": 6644,
+     "A": 8927,
+     "1D": 3427,
+     "2D": 4778,
+     "3D": 4934,
+     "4D": 5152,
+     "5D": 5264,
+     "6D": 5594
+    }
+   }
+  },
+  "pred_distribution": {
+   "D": 12529,
+   "C": 15339,
+   "B": 15799,
+   "A": 17958,
+   "1D": 11691,
+   "2D": 10175,
+   "3D": 10207,
+   "4D": 11126,
+   "5D": 10655,
+   "6D": 11721
+  }
+ },
+ "Q02H_oof_rank_balanced": 0.6242752597994481,
+ "Q02_oof_rank_balanced": 0.6101211982700248,
+ "single_colour": {
+  "questions_sha256": "45d0f14acd98786adfd7cae040edc551420f095aaf6118d52edb47ddf91a5622",
+  "Q08": {
+   "rank_balanced": 0.6946737091777063,
+   "question_mean": 0.7020591459970189,
+   "se": 0.008614097915198791,
+   "n_questions": 120544,
+   "per_level": {
+    "D": 0.8322685179183353,
+    "C": 0.7331721232323638,
+    "B": 0.7381626222855888,
+    "A": 0.6551586998330967,
+    "1D": 0.5811956032640205,
+    "2D": 0.5864946084451529,
+    "3D": 0.6197523713123289,
+    "4D": 0.6428433519552399,
+    "5D": 0.7339663495900066,
+    "6D": 0.8237228439409305
+   },
+   "by_colour": {
+    "B": {
+     "rank_balanced": 0.6823305609913284,
+     "question_mean": 0.6879110336184008,
+     "n_questions": 59744
+    },
+    "W": {
+     "rank_balanced": 0.7067581666356186,
+     "question_mean": 0.7159615280027452,
+     "n_questions": 60800
+    }
+   },
+   "by_k": {
+    "5": {
+     "rank_balanced": 0.6492892423961572,
+     "question_mean": 0.6577301129370837,
+     "n_questions": 37440
+    },
+    "10": {
+     "rank_balanced": 0.6970310903930752,
+     "question_mean": 0.7056645522092657,
+     "n_questions": 32288
+    },
+    "15": {
+     "rank_balanced": 0.7211869430163355,
+     "question_mean": 0.7266940340497224,
+     "n_questions": 27296
+    },
+    "20": {
+     "rank_balanced": 0.7315359348698521,
+     "question_mean": 0.7390843899466936,
+     "n_questions": 23520
+    }
+   }
+  },
+  "Q02H": {
+   "rank_balanced": 0.6260780506766392,
+   "question_mean": 0.6312478158054818,
+   "se": 0.009225812340201894,
+   "n_questions": 120544,
+   "per_level": {
+    "D": 0.747562148073681,
+    "C": 0.654875381394137,
+    "B": 0.6331169988382728,
+    "A": 0.5792518533596452,
+    "1D": 0.5364316473252081,
+    "2D": 0.5213550422266776,
+    "3D": 0.5464030633640727,
+    "4D": 0.603775774646898,
+    "5D": 0.6794628548823085,
+    "6D": 0.7585457426554929
+   },
+   "by_colour": {
+    "B": {
+     "rank_balanced": 0.6105940601319532,
+     "question_mean": 0.6144996120731417,
+     "n_questions": 59744
+    },
+    "W": {
+     "rank_balanced": 0.6415964236028653,
+     "question_mean": 0.6477051296835235,
+     "n_questions": 60800
+    }
+   },
+   "by_k": {
+    "5": {
+     "rank_balanced": 0.5811313255708155,
+     "question_mean": 0.5854361255281308,
+     "n_questions": 37440
+    },
+    "10": {
+     "rank_balanced": 0.6270794646614012,
+     "question_mean": 0.6345342926608359,
+     "n_questions": 32288
+    },
+    "15": {
+     "rank_balanced": 0.6557376206153155,
+     "question_mean": 0.6605090045504798,
+     "n_questions": 27296
+    },
+    "20": {
+     "rank_balanced": 0.6608229984641373,
+     "question_mean": 0.6657020042108767,
+     "n_questions": 23520
+    }
+   }
+  },
+  "Q08_minus_Q02H": {
+   "rank_balanced": 0.06859565850106708,
+   "question_mean": 0.07081133019153707,
+   "ci95": [
+    0.05852024703634782,
+    0.07967602957377838
+   ],
+   "se": 0.005370494936371855,
+   "n_questions": 120544,
+   "by_colour": {
+    "B": {
+     "rank_balanced": 0.07173650085937522,
+     "question_mean": 0.07341142154525904,
+     "ci95": [
+      0.05863129575888347,
+      0.08639608274641436
+     ],
+     "se": 0.007113103951575515,
+     "n_questions": 59744
+    },
+    "W": {
+     "rank_balanced": 0.06516174303275335,
+     "question_mean": 0.0682563983192217,
+     "ci95": [
+      0.051850437622751724,
+      0.07894306673768813
+     ],
+     "se": 0.006902574111130024,
+     "n_questions": 60800
+    }
+   },
+   "by_k": {
+    "5": {
+     "rank_balanced": 0.06815791682534167
+    },
+    "10": {
+     "rank_balanced": 0.06995162573167402
+    },
+    "15": {
+     "rank_balanced": 0.06544932240101997
+    },
+    "20": {
+     "rank_balanced": 0.07071293640571485
+    }
+   },
+   "bootstrap": "paired, players within each level, 1000 draws, default_rng(0); the colour splits draw their own players"
+  }
+ },
+ "refit": {
+  "loss": 1.019571482106084,
+  "starts": [
+   {
+    "start_a": 0.0,
+    "loss": 1.0195714822809505,
+    "nit": 40,
+    "success": true,
+    "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+   },
+   {
+    "start_a": 1.0,
+    "loss": 1.019571482106084,
+    "nit": 44,
+    "success": true,
+    "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+   }
+  ],
+  "fit_questions": 25400,
+  "bounds_hit": {
+   "SWB": "lower",
+   "HS": "lower",
+   "P1TO": "upper"
+  },
+  "in_sample_fit_rank_balanced": 0.7091166041663832,
+  "oof_eval_rank_balanced": 0.6986195853659671
+ },
+ "check": {
+  "check_report_sha256": "1b3b06ba614a7bc1a3d550a0b591801fd582cf034c15d58f3d661c2dbd74533d",
+  "selfcheck_sha256": "dd95be1f9c60a86c1f70ce0069e0d719beffa708907bf016ad09332cdf43191c",
+  "inner_manifest_sha256": "0ce2114d637f5205b666e46cfc2b05b9201982e06e231a85212f479f49a415d3"
+ },
+ "inputs_sha256": {
+  "inner_manifest.json": "0ce2114d637f5205b666e46cfc2b05b9201982e06e231a85212f479f49a415d3",
+  "check_report.json": "1b3b06ba614a7bc1a3d550a0b591801fd582cf034c15d58f3d661c2dbd74533d",
+  "selfcheck.json": "dd95be1f9c60a86c1f70ce0069e0d719beffa708907bf016ad09332cdf43191c",
+  "pilot_plan.json": "8494e9afd79c06249bd81545263b86caef7b9e77f3cd631a1e354368cfe33946",
+  "inner_o4.npz": "100a889367e147696a056d6cd70fab583926062a9b4fbbedd49acc42a2da9ce7",
+  "inner_keys.npz": "b686872d459161330af26132fc0ec2617d104be6cd72eae509250ffef0c03ab6",
+  "pseudo_inner.json": "3a51b3dd4edf8e5745f6a7ff52ca925d4a0eacd6a24950ee1b6e3b48fd0b7923",
+  "opening_inner.npz": "054689536524f7d8ea41a19d19b49ae47e7eedd128bd9cad98c429e5f80fdee5",
+  "players_split.csv": "69554875064ecbd83d790b3215c8ba8f9540f217ec4af3e4a8c43228ac2a3dfc",
+  "inner_p02e9_d4.npz": "d042fca41e04a365dd9f7f4ebc31d244d39b24e803a1191cb06ecaaf3d056de5",
+  "O4_inner": "100a889367e147696a056d6cd70fab583926062a9b4fbbedd49acc42a2da9ce7",
+  "inner_p03a_d4.npz": "3b26a39952bfe8dc2df9676ff9b15cab472861a66b628c3a4ee49c4010626cab",
+  "inner_p03a_s0_swap.npz": "743825209569aeb922b0246587ec5801f3c2e0a10083bfb6111a327dd5ff1071",
+  "inner_p03b_d4.npz": "a9c9b1509328d2c77c74ad09bcd63424c1be1979a85f372e755e3931a414ca54",
+  "inner_p03b_s0_swap.npz": "106887321cc9d54316e0d7d96e776c2060dc309c54720a8c7345f280056d2056"
+ },
+ "tool": {
+  "git_head": "4f39faefd4bade08d6fc65f18e2e966705a9bd0c",
+  "dirty_or_untracked": [],
+  "files_sha256_rule": "sha256, CRLF folded to LF",
+  "files_sha256": {
+   "tools/p08_p1.py": "a10c77c4bd97472b464f39080816090f0f64986195384b28e1d95dfc76e6677f",
+   "tools/p08_rank_fuse.py": "64f42bd956f7808947e0c85abe1f9fa60d9958cb8e769fc889c6283c188d481e",
+   "results/prereg07/explore/pilot_humansl/hs_lib.py": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+   "results/prereg07/explore/pilot_humansl/pilot_run.py": "b0d127fd1d5a83af5b17ec3df1dccc85d94b11c3479d33cac07448a3796a3936",
+   "results/prereg07/explore/pilot_humansl/pilot_fuse.py": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+   "results/prereg05/explore/u1/u1_lib.py": "225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7",
+   "results/prereg08/p1/p1_lib.py": "062600168326f9eecd4ec1073e54881c475f8f276e376164eab20d373bbff511",
+   "results/prereg08/p1/p1_extract.py": "2ee8eb127150e672b62bcb30b70c4fac46b8cd6e32c7e4eb19d54f746a6e3f9c",
+   "results/prereg08/p1/p1_fuse.py": "ad356c8ca9f26e1e761677afa07b5aa369ca31e5318f61eb6a6cbda33b970953",
+   "results/prereg08/p1/p1_plan.json": "0cd46bf90c764cae3824f5906e72e13336ab7276ef5fa7edb2ec6831911b228d",
+   "results/prereg08/p2/p2_sets.py": "98bad3d85a32e80c065226b0cc8cd1065b423cdb39dce89829a54b0cbf381c8f",
+   "tools/p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142",
+   "tools/p07_hs.py": "b27ea371bdc1477558effb9ca86c540805dcced971d983226e15fb5e19b7b8dc"
+  }
+ },
+ "environment": {
+  "venv": {
+   "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+   "executable": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\.venv\\Scripts\\python.exe",
+   "platform": "Windows-11-10.0.26200-SP0",
+   "numpy": "2.5.3",
+   "scipy": "1.18.1",
+   "blas_env": {
+    "OMP_NUM_THREADS": null,
+    "OPENBLAS_NUM_THREADS": null,
+    "MKL_NUM_THREADS": null
+   },
+   "cpu_count": 24
+  },
+  "venv_gpu_reference": {
+   "python": "3.12.13",
+   "torch": "2.11.0+cu128",
+   "cudnn": 91900,
+   "gpu": "NVIDIA GeForce RTX 4090",
+   "numpy": "2.5.3",
+   "sources": "torch: the P1 / P2 chunks' torch field (inner_manifest.json); python / cuDNN / GPU / numpy: results/prereg07/rank/frozen_config.json venv_gpu_reference (the same .venv-gpu)"
+  },
+  "nvidia_driver_record_only": {
+   "gpus": [
+    {
+     "name": "NVIDIA GeForce RTX 4090",
+     "driver": "616.92"
+    }
+   ],
+   "driver": "616.92"
+  }
+ },
+ "tool_files_at_tune": {
+  "tools/p08_p1.py": "a10c77c4bd97472b464f39080816090f0f64986195384b28e1d95dfc76e6677f",
+  "tools/p08_rank_fuse.py": "64f42bd956f7808947e0c85abe1f9fa60d9958cb8e769fc889c6283c188d481e",
+  "results/prereg07/explore/pilot_humansl/hs_lib.py": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+  "results/prereg07/explore/pilot_humansl/pilot_run.py": "b0d127fd1d5a83af5b17ec3df1dccc85d94b11c3479d33cac07448a3796a3936",
+  "results/prereg07/explore/pilot_humansl/pilot_fuse.py": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+  "results/prereg05/explore/u1/u1_lib.py": "225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7",
+  "results/prereg08/p1/p1_lib.py": "062600168326f9eecd4ec1073e54881c475f8f276e376164eab20d373bbff511",
+  "results/prereg08/p1/p1_extract.py": "2ee8eb127150e672b62bcb30b70c4fac46b8cd6e32c7e4eb19d54f746a6e3f9c",
+  "results/prereg08/p1/p1_fuse.py": "ad356c8ca9f26e1e761677afa07b5aa369ca31e5318f61eb6a6cbda33b970953",
+  "results/prereg08/p1/p1_plan.json": "0cd46bf90c764cae3824f5906e72e13336ab7276ef5fa7edb2ec6831911b228d",
+  "results/prereg08/p2/p2_sets.py": "98bad3d85a32e80c065226b0cc8cd1065b423cdb39dce89829a54b0cbf381c8f",
+  "tools/p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142",
+  "tools/p07_hs.py": "b27ea371bdc1477558effb9ca86c540805dcced971d983226e15fb5e19b7b8dc"
+ }
+}

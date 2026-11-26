@@ -1,0 +1,123 @@
+{
+ "format": "c10-test10 p1 rehearsal v1",
+ "mode": "real",
+ "scorer": "real",
+ "what": "PREREG_10 rev 4: the 4090 rehearsal of the GPU seam before test data; m = max projected difference of the 400 re-extracted validation games, tol_P = max(0.05, 2.5 m)",
+ "passed": true,
+ "m": 0.008017234314574129,
+ "tol_P": 0.05,
+ "compare": {
+  "games": 400,
+  "usable_games": 400,
+  "failed_equal": true,
+  "counts_equal": true,
+  "max_abs_projected_diff": 0.008017234314574129,
+  "games_above_tol": null,
+  "bitwise_equal_side0": false,
+  "tol_P": null,
+  "passed": true,
+  "definition": "per game: max over the 64 dims of |LDA projection (frozen p1_lda.npz) of the re-extracted side-0 mean - that of val_seam_feats.npz|; max over the usable games (PREREG_10 4.2)"
+ },
+ "keys": {
+  "keys_sha256": "ff3811b5d759ae09081b3a2bced83254012fc4893727ef2aa42a1cfff23d1d28",
+  "games": 400,
+  "inputs_sha256": {
+   "candidates_csv": "7cd2897593ee9add20dce4ff5d4b0dcf8699b6d51a3f10950dc399a757dd3ad5",
+   "questions_csv": "d893a559f175b6535dc0d5f749314408b110149462f6a78a1b8cf7e9332cd676"
+  },
+  "val_keys_sha256": "902b2fc21f8b92f067dc1a1577a4e921574bcfdd7d913912d4cf1b77fb04215f"
+ },
+ "environment": {
+  "scorer": "real",
+  "torch": "2.11.0+cu128",
+  "cudnn": "91900",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "cuda": "12.8"
+ },
+ "gpu_check": {
+  "checked": true,
+  "other_compute_processes": []
+ },
+ "chunks": [
+  {
+   "file": "chunk_00000.npz",
+   "sha256": "958403a3e829f810377369eb410897c996252fe21078ee1e092817a7440c2030",
+   "format": "c10-prereg08 p1 chunk v1",
+   "set": "t10_rehearsal",
+   "sides": [
+    "target",
+    "opponent"
+   ],
+   "precision": "fp16",
+   "meta_sha256": "404bb7096c63136d7642f5abc98ec84d3c826290451ed649fcbe37c903307282",
+   "ckpt_bytes": 323752318,
+   "code_sha256": "{\"results/prereg05/explore/u1/u1_lib.py\": \"225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7\", \"results/prereg07/explore/pilot_humansl/hs_lib.py\": \"d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c\", \"results/prereg07/explore/pilot_humansl/pilot_fuse.py\": \"37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6\", \"results/prereg08/p1/p1_extract.py\": \"2ee8eb127150e672b62bcb30b70c4fac46b8cd6e32c7e4eb19d54f746a6e3f9c\", \"results/prereg08/p1/p1_fuse.py\": \"ad356c8ca9f26e1e761677afa07b5aa369ca31e5318f61eb6a6cbda33b970953\", \"results/prereg08/p1/p1_lib.py\": \"062600168326f9eecd4ec1073e54881c475f8f276e376164eab20d373bbff511\"}",
+   "games": 200,
+   "ref_first": 0,
+   "ref_last": 199,
+   "failed": 0,
+   "no_target_moves": 0,
+   "keys_sha256": "ff3811b5d759ae09081b3a2bced83254012fc4893727ef2aa42a1cfff23d1d28",
+   "mode": "real",
+   "scorer": "real",
+   "torch": "2.11.0+cu128",
+   "cudnn": "91900",
+   "gpu_name": "NVIDIA GeForce RTX 4090",
+   "seconds": 72.0098786354065
+  },
+  {
+   "file": "chunk_00001.npz",
+   "sha256": "c1da239df71785781a252612cf5cdfc173bde3e3bb7835f7c570e92feaf48547",
+   "format": "c10-prereg08 p1 chunk v1",
+   "set": "t10_rehearsal",
+   "sides": [
+    "target",
+    "opponent"
+   ],
+   "precision": "fp16",
+   "meta_sha256": "404bb7096c63136d7642f5abc98ec84d3c826290451ed649fcbe37c903307282",
+   "ckpt_bytes": 323752318,
+   "code_sha256": "{\"results/prereg05/explore/u1/u1_lib.py\": \"225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7\", \"results/prereg07/explore/pilot_humansl/hs_lib.py\": \"d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c\", \"results/prereg07/explore/pilot_humansl/pilot_fuse.py\": \"37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6\", \"results/prereg08/p1/p1_extract.py\": \"2ee8eb127150e672b62bcb30b70c4fac46b8cd6e32c7e4eb19d54f746a6e3f9c\", \"results/prereg08/p1/p1_fuse.py\": \"ad356c8ca9f26e1e761677afa07b5aa369ca31e5318f61eb6a6cbda33b970953\", \"results/prereg08/p1/p1_lib.py\": \"062600168326f9eecd4ec1073e54881c475f8f276e376164eab20d373bbff511\"}",
+   "games": 200,
+   "ref_first": 200,
+   "ref_last": 399,
+   "failed": 0,
+   "no_target_moves": 0,
+   "keys_sha256": "ff3811b5d759ae09081b3a2bced83254012fc4893727ef2aa42a1cfff23d1d28",
+   "mode": "real",
+   "scorer": "real",
+   "torch": "2.11.0+cu128",
+   "cudnn": "91900",
+   "gpu_name": "NVIDIA GeForce RTX 4090",
+   "seconds": 52.07961368560791
+  }
+ ],
+ "bound": {
+  "frozen_sha256_lf": "8e2bd5a312c5174a731e783671b7dccc37449d5f0274511434ee9523bd93c88b",
+  "val_seam_sha256": "fd40afef15000875ab9020c93bcd4c183608aa4adaa35bc55f75dadca5a81dd4",
+  "lda_sha256": "924357870cd55ebfb8cc6856d3ec5d9d00542882a3c7a07176f1ab552337a40a"
+ },
+ "test_open": "2026-11-04T11:00:00+08:00",
+ "now": "2026-10-13T17:17:21.977234+08:00",
+ "rerun": null,
+ "tools": {
+  "git_head": "1e8169ccd351f19ac92a9a4ca2f5e8e49f897065",
+  "files_sha256_lf": {
+   "tools/t10_player.py": "199ba12248a88fdcb6201229e2ee426196f1c9553296feba1e5e2180c5c3839d",
+   "tools/t10_b.py": "79e655f2b1e39e0c491c1e5a2e9029194b68180967f37dd0a28c30f941ecc596",
+   "tools/p10_fuse.py": "63878050e5c59c79778db613af41773a460834cd122b1e5ef384a31acfb72e9a",
+   "tools/p10_apply.py": "b5056e1da7cae969b92a68243669c9131d92adc79e24b26a258692e6bbbf63e3",
+   "tools/t06_player.py": "d1e48050f827495579fc22b5ceff9b4d8eba8f18ab471909436ceb4d16f3b0f6",
+   "tools/p06_style.py": "78beb8138c27853da70081e469e534508174265852a64ebada21e354ae72058a",
+   "tools/p06_sim.py": "21deeea1eb08b1d6580ba78c47505789f66dbdd10c8891973e14f523ef443eeb",
+   "tools/p06_player.py": "b25636878ee87ca828a9c65177965dc60466ac4e9aa348acd88785ca11075590",
+   "tools/p02_player_fuse.py": "cb1cc1a2ba626a80ed49e7ae8269715f1e123f33777b6ed135380dbd07b35d5b",
+   "tools/p02_player_open.py": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+   "tools/p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "tools/c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "tools/check_submission.py": "b5c7c300cca4fcd5b243e4579417453699777e99bd4aff88dcbf6805e9346144"
+  }
+ },
+ "created": "2026-10-13T17:20:16+08:00",
+ "seconds": 172.0
+}

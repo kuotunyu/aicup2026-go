@@ -1,0 +1,16 @@
+{
+ "files": {
+  "results/prereg42/explore/p42_embed.py": "ea926c43bd2fd7bd5de38e14c9b5481af36de435341e82571c0797c70606b400",
+  "results/prereg42/explore/p42_lib.py": "edfc892f4268dd3d4fed42712d461a1529cde693def187a2e71db0db0eec6d4b",
+  "results/prereg42/explore/p42_train.py": "27557635ddf1b55f29a24abe4933cdf172d0c6789b5812a953c56f4896283302"
+ },
+ "format": "c10-prereg42 colab overlay v1",
+ "kit_zip_sha256": "6f5c93650375db2d13a3182d5c2808902b679686975438486a0342e5ad5a7306",
+ "plan": "PLAN.md revision 3",
+ "replaces_kit_files": {
+  "results/prereg42/explore/p42_embed.py": "23b60a6f71d1aad5881acd10c87ef2c31a9ed81e6ac2d369c3d29615452b69fd",
+  "results/prereg42/explore/p42_lib.py": "b5045f8b8222e1c3e6891675eb4b3296fe4254b974421c71853ea8a43cea6eea",
+  "results/prereg42/explore/p42_train.py": "ec5d7baf7bf16753cd9d0fb7369e3ff4cb5a9a271d8ed28cf264691bb2359c80"
+ },
+ "variant": "V3b"
+}

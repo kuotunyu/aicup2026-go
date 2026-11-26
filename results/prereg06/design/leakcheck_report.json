@@ -1,0 +1,64 @@
+{
+ "what": "PREREG_06 S0: fit games vs the two validation game files (SHA-1 of the SGF text; VALIDATION rev 2 leak check)",
+ "fit": {
+  "players": 5767,
+  "games": 720307,
+  "expected": {
+   "players": 5767,
+   "games": 720307
+  }
+ },
+ "validation_game_files": {
+  "files": [
+   "player_val_candidates.csv",
+   "player_val_questions.csv"
+  ],
+  "sha256": {
+   "player_val_candidates.csv": "7cd2897593ee9add20dce4ff5d4b0dcf8699b6d51a3f10950dc399a757dd3ad5",
+   "player_val_questions.csv": "d893a559f175b6535dc0d5f749314408b110149462f6a78a1b8cf7e9332cd676"
+  },
+  "distinct_games": 44935
+ },
+ "overlap": 0,
+ "passed": true,
+ "note": "only the two game files of competition 1 are read (rank_val_questions.csv, which c10data._sgf_hashes_in_local would also read, is not opened)",
+ "command": "leakcheck",
+ "mode": "real",
+ "precommit": false,
+ "created": "2026-10-03T11:13:02+08:00",
+ "git_head": "5e10249ddd3defeecf08b54334b0154e71ec7525",
+ "tools": {
+  "tools/p06_style.py": {
+   "sha256_lf": "7c14c52d91b63cda5025dac76499a4cd9af12b5dff98891cfbe497878c67cd66",
+   "committed_and_clean": true
+  },
+  "tools/p06_sim.py": {
+   "sha256_lf": "21deeea1eb08b1d6580ba78c47505789f66dbdd10c8891973e14f523ef443eeb",
+   "committed_and_clean": true
+  },
+  "tools/p06_player.py": {
+   "sha256_lf": "83dfab6611dd909b96fe2f4bf729d4f43a2e3c54ebd427b1e141a6d8ea280fe1",
+   "committed_and_clean": true
+  }
+ },
+ "env": {
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "executable": ".venv/Scripts/python.exe"
+ },
+ "inputs": {
+  "split_csv": "69554875064ecbd83d790b3215c8ba8f9540f217ec4af3e4a8c43228ac2a3dfc",
+  "train_D.csv": "2ac3b7684be1ead82ea3839243eb7510249e55457f536df910d99619ae0a6d22",
+  "train_C.csv": "d66c5ade7775dd1596f1d7c1a6e0aa49d32557f5073188ba79e68063f6de69f7",
+  "train_B.csv": "05ea3b278d4ca6043b9153c83fc62920f68bfd1aa2b424f05f28dfa4f9651c06",
+  "train_A.csv": "0915826dfeadb32fa6fc5f5a08b1ef90a5ed0e3cc7868452e8158c887e3ccbca",
+  "train_1D.csv": "879536c2b7f8fdeacf7d2ddd0b2ffab0f36b40862b7dcec48a4250cf8dea618b",
+  "train_2D.csv": "167eae9e4872c96be2bcbdddcee0ef37eff249dfe00bf8dce20c4ceb468628bc",
+  "train_3D.csv": "8954844760b0cd072aeb68ef1390e0c8a19055d900d31b554ab62fe3b25f455b",
+  "train_4D.csv": "96fccefca0d037aac2ba56f63d547ebbe4c321b0e60941457c508d1e25ff1867",
+  "train_5D.csv": "8b2bce946f10cd93f4be77469ac84b44f02f799467b717969e0ee350a10b7c85",
+  "train_6D.csv": "171a3083f1d49bf138cad71ae8b1122bdfb37ad6568f5d4c42321754e3969ee3"
+ },
+ "seconds": 12.8
+}

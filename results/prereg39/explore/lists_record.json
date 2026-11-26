@@ -1,0 +1,142 @@
+{
+ "format": "c10-prereg39 lists record v1",
+ "l_per_level": 120,
+ "l_games": 30,
+ "d_seeds": [
+  100,
+  101,
+  102,
+  103,
+  104,
+  105,
+  106,
+  107,
+  108,
+  109
+ ],
+ "e_seeds": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "e2_seeds": [
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19
+ ],
+ "pos_per_game": 222.0,
+ "pos_per_s": 1012.0,
+ "split": {
+  "E": 600,
+  "D": 300,
+  "T": 3685
+ },
+ "l_players_by_level": {
+  "D": 120,
+  "C": 120,
+  "B": 120,
+  "A": 120,
+  "1D": 120,
+  "2D": 120,
+  "3D": 120,
+  "4D": 120,
+  "5D": 120,
+  "6D": 120
+ },
+ "l_players_in_store": 347,
+ "sets": {
+  "L": {
+   "games": 34630,
+   "fresh_games": 32888,
+   "reused_from_prereg10_mock": 1742,
+   "black": 17523,
+   "white": 17107,
+   "est_positions_fresh": 7301136,
+   "est_hours_4090_fresh": 2.0,
+   "chunks_fresh": 165,
+   "players": 1200
+  },
+  "D": {
+   "games": 28212,
+   "fresh_games": 23064,
+   "reused_from_prereg10_mock": 5148,
+   "black": 14133,
+   "white": 14079,
+   "est_positions_fresh": 5120208,
+   "est_hours_4090_fresh": 1.41,
+   "chunks_fresh": 116,
+   "players": 300
+  },
+  "pub2": {
+   "games": 7100,
+   "fresh_games": 7100,
+   "reused_from_prereg10_mock": 0,
+   "black": 3503,
+   "white": 3597,
+   "est_positions_fresh": 1576200,
+   "est_hours_4090_fresh": 0.43,
+   "chunks_fresh": 36
+  },
+  "priv2": {
+   "games": 7100,
+   "fresh_games": 7100,
+   "reused_from_prereg10_mock": 0,
+   "black": 3475,
+   "white": 3625,
+   "est_positions_fresh": 1576200,
+   "est_hours_4090_fresh": 0.43,
+   "chunks_fresh": 36
+  },
+  "E": {
+   "games": 56934,
+   "fresh_games": 45215,
+   "reused_from_prereg10_mock": 11719,
+   "black": 28639,
+   "white": 28295,
+   "est_positions_fresh": 10037730,
+   "est_hours_4090_fresh": 2.76,
+   "chunks_fresh": 227,
+   "players": 600
+  },
+  "E2": {
+   "games": 35769,
+   "fresh_games": 27485,
+   "reused_from_prereg10_mock": 8284,
+   "black": 18126,
+   "white": 17643,
+   "est_positions_fresh": 6101670,
+   "est_hours_4090_fresh": 1.67,
+   "chunks_fresh": 138,
+   "players": 600
+  }
+ },
+ "mock_chunks_present": 616,
+ "total": {
+  "games": 169745,
+  "fresh_games": 142852,
+  "est_hours_4090_fresh": 8.7
+ },
+ "lists_sha256": {
+  "L": "bd4d3ded735c525700854abda129d771d6286b488fdf17afb800ca462694f2d7",
+  "D": "194d5d1ef1d658cc89a64c4fa9a8a9039da13c9e1ccc6580df1011a6e610e4f5",
+  "pub2": "219ca009bb328a990bb2a5fcf3e40341ff8c3716a7b526675b1a24e15cd3097a",
+  "priv2": "c70997af0bb103a7431810c2e21bc229ff1c0b99c69dce214d681ee27fc28e96",
+  "E": "777ccf91bb9831926718fa5c974df7f925f694f42eece47493b6736b87c8b8ac",
+  "E2": "fae1133476f31a2cbe51cc80c8bdcb7d21b0c64072fd34daf8bc16ce85ca9569"
+ },
+ "tool_sha256": "364ea0d9492932bad9f5c5a18b53b306bf0e5e4e439ab1c3fa67fba06200db1d"
+}

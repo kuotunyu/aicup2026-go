@@ -1,0 +1,127 @@
+{
+ "format": "c10-prereg10 player frozen_config v1",
+ "what": "PREREG_10 2.4 freeze of B (10B = 06 + w* z(T_P1))",
+ "w_star": 16.0,
+ "csls_k": 10,
+ "gates": {
+  "G1_base": {
+   "passed": true,
+   "mean_diff": 0.008608183247953738,
+   "ci95": [
+    0.00523687599904693,
+    0.012431358397591224
+   ],
+   "rule": "mean >= +0.003 and 95 % lower bound > 0"
+  },
+  "G2_nov4": {
+   "passed": true,
+   "mean_diff": 0.06563139887183143,
+   "ci95": [
+    0.05433898209795067,
+    0.07638971358064768
+   ],
+   "rule": "mean >= +0.020 and 95 % lower bound > 0"
+  },
+  "G3_no_harm": {
+   "passed": true,
+   "by_scenario": {
+    "wr": {
+     "passed": true,
+     "mean_diff": 0.011886286169495983,
+     "ci95": [
+      0.008714837176172479,
+      0.015253820699500457
+     ]
+    },
+    "c20": {
+     "passed": true,
+     "mean_diff": 0.049338614163104796,
+     "ci95": [
+      0.04160889558141084,
+      0.05822757269237298
+     ]
+    }
+   },
+   "rule": "wr and c20 each mean >= -0.002"
+  },
+  "passed": true
+ },
+ "mock_report_sha256": "a733e0d3d4dcbc480c802b608fca41a7caee5301bb70796926fae195d4a1de56",
+ "mock_report_commit": {
+  "files": {
+   "results/prereg10/player/mock_report.json": "a733e0d3d4dcbc480c802b608fca41a7caee5301bb70796926fae195d4a1de56"
+  },
+  "commit": "2026-10-11T19:17:41+08:00"
+ },
+ "lda": {
+  "file": "results/prereg10/player/p1_lda.npz",
+  "sha256": "924357870cd55ebfb8cc6856d3ec5d9d00542882a3c7a07176f1ab552337a40a",
+  "n_games": 123114,
+  "n_players": 926,
+  "source": "competition 1 mock-pool black games (cand, base, nov4) of all 926 mock players",
+  "usable_rule": "chunk present, not failed, >= 1 target move; players with >= 2 such games",
+  "standardise": "mean, sd + 1e-6 of these games",
+  "lda": "p06_style.lda_fit reg 1e-3, 64 dims"
+ },
+ "p06_frozen_sha256": {
+  "frozen_config.json": "5e5c3b827782678bb3e985cd0caeada61e62951312ee1d6938bf4e331348bfc9",
+  "lda_B.npz": "ecfee95d0c7d8fdeb499ca9f89a8a6bb840e9a3cf0e999b1baa14ff78d69faa5",
+  "lda_W.npz": "e8bc63331a749bce83cc7cab8b7852bec70c6644f38fe89982f0dbbad581292d",
+  "player_val_top5.csv": "094223f69bf445a4c450212cc9b4a3eceda9c69e992d1ed7f7c6e02105b818be",
+  "apply_report.json": "5207662cade5dd795bef97f1bf5b8a07d8cfbebc2d689ce60efe3a4c56078351"
+ },
+ "p1_code_sha256": {
+  "results/prereg08/p1/p1_lib.py": "062600168326f9eecd4ec1073e54881c475f8f276e376164eab20d373bbff511",
+  "results/prereg08/p1/p1_extract.py": "2ee8eb127150e672b62bcb30b70c4fac46b8cd6e32c7e4eb19d54f746a6e3f9c"
+ },
+ "katago_commit": "d91ea855110dae533f0aada947b2b7d78cc8a4e1",
+ "checkpoint": {
+  "path": "data/katago/b18c384nbt-humanv0.ckpt",
+  "bytes": 323752318,
+  "sha256": "84b23476b56a73a775a0f09bad7d1c5c435690adb343aa851e80bf198c0c8b27"
+ },
+ "neutral_metadata_sha256": [
+  "404bb7096c63136d7642f5abc98ec84d3c826290451ed649fcbe37c903307282"
+ ],
+ "chunk_code_sha256": [
+  "{\"results/prereg05/explore/u1/u1_lib.py\": \"225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7\", \"results/prereg07/explore/pilot_humansl/hs_lib.py\": \"d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c\", \"results/prereg07/explore/pilot_humansl/pilot_fuse.py\": \"37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6\", \"results/prereg08/p1/p1_extract.py\": \"2ee8eb127150e672b62bcb30b70c4fac46b8cd6e32c7e4eb19d54f746a6e3f9c\", \"results/prereg08/p1/p1_fuse.py\": \"ad356c8ca9f26e1e761677afa07b5aa369ca31e5318f61eb6a6cbda33b970953\", \"results/prereg08/p1/p1_lib.py\": \"062600168326f9eecd4ec1073e54881c475f8f276e376164eab20d373bbff511\"}"
+ ],
+ "sets_sha256": "167c5a518cb2d2b01e4c85bf77d6d308abec76e40d2313f59233d905b84425bc",
+ "fail_max": 0.005,
+ "p1_games": {
+  "total": 123114,
+  "failed": 0,
+  "usable": 123114
+ },
+ "b_passed": true,
+ "score_pending_val": true,
+ "preview": false,
+ "created": "2026-10-11T11:17:58+00:00",
+ "tools": {
+  "git_head": "ffb6a796f7e5b4f05af4880d604a7567f7bedfdc",
+  "dirty_or_untracked": [],
+  "files_sha256_rule": "sha256, CRLF folded to LF",
+  "files_sha256": {
+   "tools/p10_fuse.py": "63878050e5c59c79778db613af41773a460834cd122b1e5ef384a31acfb72e9a",
+   "tools/p06_style.py": "78beb8138c27853da70081e469e534508174265852a64ebada21e354ae72058a",
+   "tools/p06_sim.py": "21deeea1eb08b1d6580ba78c47505789f66dbdd10c8891973e14f523ef443eeb",
+   "tools/p02_player_fuse.py": "cb1cc1a2ba626a80ed49e7ae8269715f1e123f33777b6ed135380dbd07b35d5b",
+   "tools/p02_player_open.py": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+   "tools/p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "tools/c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495"
+  }
+ },
+ "env": {
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "executable": ".venv/Scripts/python.exe"
+ },
+ "blas_env": {
+  "OMP_NUM_THREADS": null,
+  "OPENBLAS_NUM_THREADS": null,
+  "MKL_NUM_THREADS": null
+ },
+ "inputs": {},
+ "seconds": 16.4
+}

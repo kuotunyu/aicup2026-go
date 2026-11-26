@@ -1,0 +1,288 @@
+{
+ "format": "c10-prereg19 apply_audit v1",
+ "created": "2026-10-20T08:08:36+00:00",
+ "auditor": "independent subagent (Claude), separate from the builder",
+ "outputs_sha256": {
+  "rank_val_probs.csv": "9833ad333deb5bfcf9097e32e98b5d661f4f61b2f9a16ee0a0e68aba81c30790",
+  "pred_A.csv": "70580eab800124bbe5d153767956f9c68178e2d6d67a64477f6af811af751ecc",
+  "pred_B.csv": "e48b341bfa1de3068b8a283750f32d309ce9def885f519b3934befc44e147942",
+  "decide_summary.json": "2b9a0e21c0f28afe12587c1ee51c2954ae29801b43a8f598e0ccf12f10f0549d",
+  "val_set.npz": "28c82ef51cb58d6f4f4d835bba312ce54988849799ba687609571163cbe55a1e"
+ },
+ "inputs_sha256": {
+  "frozen_config.json": "1ba68c5af4571b20dd98ab2d6207462ea9b97d3557b4985ee4684263aeca6644",
+  "s19_seed0.npz": "b0d7ea70e77d4e2ab145e42415b13a5c987c68d676c0c2a07760fb91d6859949",
+  "s19_seed1.npz": "8b8729ea5a0fed3948134cc1a8c8bc54302e9e3b0a8bda7d3a3945b5e70b1ffd",
+  "s19_seed2.npz": "b3bc704a4ba19329d99dacf0724c7a9d70f325f5dbb8d08ee6c08c122b7c9519",
+  "val_report.json (08)": "2ce9e86f8e639217c38814541f7d1bfb083b609ac194b5e19c8c38c60e653535"
+ },
+ "checks": {
+  "1_model_files": {
+   "per_seed": {
+    "0": {
+     "rank_copy": "b0d7ea70e77d4e2ab145e42415b13a5c987c68d676c0c2a07760fb91d6859949",
+     "original": "b0d7ea70e77d4e2ab145e42415b13a5c987c68d676c0c2a07760fb91d6859949",
+     "registered": "b0d7ea70e77d4e2ab145e42415b13a5c987c68d676c0c2a07760fb91d6859949",
+     "train_record": "b0d7ea70e77d4e2ab145e42415b13a5c987c68d676c0c2a07760fb91d6859949",
+     "all_equal": true,
+     "format_seed_step_smoke": [
+      "c10-prereg19 s19 model v1",
+      0,
+      10000,
+      false
+     ],
+     "train_record_best_step": 10000
+    },
+    "1": {
+     "rank_copy": "8b8729ea5a0fed3948134cc1a8c8bc54302e9e3b0a8bda7d3a3945b5e70b1ffd",
+     "original": "8b8729ea5a0fed3948134cc1a8c8bc54302e9e3b0a8bda7d3a3945b5e70b1ffd",
+     "registered": "8b8729ea5a0fed3948134cc1a8c8bc54302e9e3b0a8bda7d3a3945b5e70b1ffd",
+     "train_record": "8b8729ea5a0fed3948134cc1a8c8bc54302e9e3b0a8bda7d3a3945b5e70b1ffd",
+     "all_equal": true,
+     "format_seed_step_smoke": [
+      "c10-prereg19 s19 model v1",
+      1,
+      8500,
+      false
+     ],
+     "train_record_best_step": 8500
+    },
+    "2": {
+     "rank_copy": "b3bc704a4ba19329d99dacf0724c7a9d70f325f5dbb8d08ee6c08c122b7c9519",
+     "original": "b3bc704a4ba19329d99dacf0724c7a9d70f325f5dbb8d08ee6c08c122b7c9519",
+     "registered": "b3bc704a4ba19329d99dacf0724c7a9d70f325f5dbb8d08ee6c08c122b7c9519",
+     "train_record": "b3bc704a4ba19329d99dacf0724c7a9d70f325f5dbb8d08ee6c08c122b7c9519",
+     "all_equal": true,
+     "format_seed_step_smoke": [
+      "c10-prereg19 s19 model v1",
+      2,
+      7000,
+      false
+     ],
+     "train_record_best_step": 7000
+    }
+   },
+   "passed": true
+  },
+  "2_validation_lp_SET": {
+   "chunks": 96,
+   "chunk_sha_mismatch": [],
+   "refs_in_order": true,
+   "chunk_sha_equal_val_set_record": true,
+   "games": 19156,
+   "questions": 1589,
+   "question_order_equal_val_set": true,
+   "usable_games": 19156,
+   "usable_equal_val_set_usable": true,
+   "usable_subset_of_p1_ok_and_p1_ok_equals_own": true,
+   "games_parsed_false_count": 0,
+   "max_abs_diff_lp_on_has": 1.4477308241112041e-13,
+   "max_abs_diff_lp_all_rows": 1.4477308241112041e-13,
+   "has_equal": true,
+   "questions_with_usable": 1589,
+   "mu_sd_shape": [
+    [
+     1540
+    ],
+    [
+     1540
+    ]
+   ],
+   "sd_nonpositive": 0,
+   "nan_mu_sd": 0,
+   "opp_rows_without_move": 0,
+   "passed": true,
+   "via_val_keys_groups": {
+    "grouping_equal_check2": true,
+    "max_abs_diff_vs_check2_lp": 0.0,
+    "usable_equal_own_rule(parsed & !failed & target>0)": true
+   },
+   "tolerance": 1e-09
+  },
+  "3_Q19_validation_probabilities": {
+   "theta_len": 18,
+   "w": {
+    "OP": 4.0,
+    "O4": 3.5942286918320168,
+    "SWA": 3.6671861838682687,
+    "SWB": 0.0,
+    "HS": 0.0,
+    "P1TO": 3.841586884721083,
+    "SET": 3.313624035664545
+   },
+   "a": -2.7933206993971083,
+   "gamma": 0.3788047617772551,
+   "params_w_equal_theta_slice": true,
+   "own_E_P1E_vs_q09_core_E_max_abs_diff": 2.1316282072803006e-14,
+   "q02_E_terms_from": "q02_validation E04 OP/O4/SWA/SWB; E_hs from apply_core",
+   "same_question_order": true,
+   "same_counts": true,
+   "questions": 1589,
+   "ok_questions": 1589,
+   "nan_pattern_equal": true,
+   "max_abs_diff_probs": 7.216449660063518e-16,
+   "pred_B_equal_rule_B_of_own_probs": true,
+   "pred_A_equal_argmax_of_own_probs": true,
+   "pred_B_differs_from_Q09_ruleB": 292,
+   "swap_P1TO_SET_would_change_probs_by": 0.05353537552248855,
+   "tolerance": 1e-12,
+   "passed": true
+  },
+  "4_Q09_reproduction": {
+   "q02_seam_passed": true,
+   "q09_csv_bytes_equal_committed": true,
+   "q09_csv_sha256": "3f8d32f4b5b0431c9f4407199ae2c074595428ef9053ab807a5cf3b129e3b4fb",
+   "committed_lf_sha256": "3f8d32f4b5b0431c9f4407199ae2c074595428ef9053ab807a5cf3b129e3b4fb",
+   "apply_report_reproduction": {
+    "Q02": true,
+    "Q02H": true,
+    "Q08": true,
+    "Q09": true
+   },
+   "passed": true
+  },
+  "5_theta_refit": {
+   "theta_max_abs_diff_vs_frozen": 0.0,
+   "loss": 0.8950772956366483,
+   "frozen_refit_loss": 0.8950772956366483,
+   "fit_questions": 25400,
+   "fit_players": 508,
+   "eval_players": 636,
+   "fit_players_subset_eval_players_record": 0,
+   "Ef_term_order_ok(HS,P1TO,SET slots)": true,
+   "own_set_vs_ref": {
+    "fit": {
+     "questions": 25400,
+     "without_usable": 0
+    },
+    "eval": {
+     "questions": 127200,
+     "without_usable": 0
+    },
+    "mono": {
+     "questions": 120544,
+     "without_usable": 0
+    }
+   },
+   "oof_inner_rank_balanced": 0.7345843051712626,
+   "oof_inner_equal_ref": true,
+   "oof_mono_rank_balanced": 0.7430172362615272,
+   "fold_w_max_abs_diff_vs_eval_report": 0.0,
+   "own_fusion_vs_library_in_sample_max_abs_diff": 1.1102230246251565e-16,
+   "seam_d_recorded": {
+    "A_players": 5186,
+    "H_players": 581,
+    "I_players": 636,
+    "A_and_H": 0,
+    "probe_and_I": 0,
+    "probe_and_I_player_id_only_record": 0,
+    "train_record_players_match": true,
+    "ok": true
+   },
+   "seconds": 58.7,
+   "tolerance": 1e-09,
+   "pooling": "own h, own sparse averaging matrix (row q = 1/|usable| on usable games)",
+   "sensitivity_record_only": {
+    "pooling": "own h, per-question numpy row mean (differs from sparse averaging by float rounding ~1e-16)",
+    "theta_max_abs_diff_vs_frozen": 0.007410805162448408,
+    "loss": 0.8950772924639843,
+    "oof_inner_rank_balanced": 0.7345820123011932,
+    "fold_w_max_abs_diff": 0.0830850238547316,
+    "validation_max_abs_prob_diff_vs_committed": 6.81108751279802e-05,
+    "validation_rule_B_changes": 0
+   },
+   "passed": true
+  },
+  "6_discipline": {
+   "ledger_prereg19_rows": 0,
+   "ledger_rows": 36,
+   "freeze_seam_1": {
+    "Q02H": [
+     0.6242752597994481,
+     0.6242752597994481
+    ],
+    "Q08": [
+     0.6986195853659671,
+     0.6986195853659671
+    ],
+    "Q08_mono": [
+     0.6946737091777063,
+     0.6946737091777063
+    ],
+    "Q09": [
+     0.7114420614163589,
+     0.7114420614163589
+    ],
+    "Q09_mono": [
+     0.7145431684624712,
+     0.7145431684624712
+    ]
+   },
+   "freeze_seam_e": {
+    "fit": 0.0,
+    "eval": 0.0,
+    "mono": 0.0,
+    "ok": true
+   },
+   "freeze_seam_f": {
+    "inner": [
+     0.7345843051712626,
+     0.7345843051712626
+    ],
+    "mono": [
+     0.7430172362615272,
+     0.7430172362615272
+    ],
+    "eval_report_inner": 0.7345843051712626,
+    "eval_report_mono": 0.7430172362615272,
+    "fold_weights_max_abs_diff": 0.0,
+    "ok": true
+   },
+   "freeze_inner_prep_ok": true,
+   "frozen_terms": [
+    "OP",
+    "O4",
+    "SWA",
+    "SWB",
+    "HS",
+    "P1TO",
+    "SET"
+   ],
+   "p1_scale": 4.0,
+   "set_scale": 4.0,
+   "apply_usable": "pending_audit",
+   "apply_reproduction": {
+    "Q02": true,
+    "Q02H": true,
+    "Q08": true,
+    "Q09": true
+   },
+   "apply_same_as_09": {
+    "usable_equal_val_lp_p1e": true,
+    "p1_ok_equal_val_lp_p1e": true,
+    "passed": true
+   },
+   "apply_direction": {
+    "rho": 0.9592834978392899,
+    "questions": 1589,
+    "reference": 0.9543009493356425,
+    "floor": 0.078,
+    "threshold": 0.47715047466782123,
+    "passed": true,
+    "rule": "rho >= max(0.5 x reference, floor) (spec 4.6)"
+   },
+   "tools_subprocesses": "p19_set.py runs only decide.py and check_submission.py; no score.py; no label file named (refuse_label_path guard); no torch import",
+   "scale_4_once": "E_SET = 4 lp_SET (own forward, scale applied once, equal to tool within 1.4e-13 on lp); E_P1E = mean of 4 lp (own pooling equals q09_core E within 2.1e-14); fusion with own code matches committed probabilities to 7.2e-16, so neither term is scaled twice",
+   "passed": true
+  }
+ },
+ "program_errors_affecting_predictions": [],
+ "notes": [
+  "Own numpy float64 forward (alib.py: GELU erf, cumulative link, 3-seed mean of probabilities, floor 1e-300) and own fusion (softmax(e^a (n/12)^gamma (m + sum w_j E_j + B beta)), own Helmert basis); p19_forward / p19_set functions were not called for the verified parts.",
+  "Validation data/local was touched only through registered readers (p07 q02_validation, check_question_file, apply_core; p08 import_pilot_fuse, import_p1, read_val_chunks; p09 read_val_ex, q09_core); the auditor never opened, listed, stat-ed or hashed anything under data/local and never opened a label file or ran score.py; no validation score was looked at.",
+  "Inner OOF numbers (training players only) were recomputed as required by check 5.",
+  "Record only: the frozen theta has w_OP at the upper bound 4 and w_SWB, w_HS at the lower bound 0 (bounds_hit recorded in frozen_config.json; registered bounds, not a program error). Q19 rule B differs from Q09 on 292 of 1,589 validation questions (= apply_report record_only).",
+  "Fit sensitivity (record only, not a program error): the L-BFGS-B optimum is flat; summing in a different float order (per-question row mean instead of the sparse averaging matrix) moves theta by up to 0.0074 (loss differs by 3.2e-9, inner OOF 0.7345820 vs 0.7345843) but changes validation probabilities by at most 6.8e-5 and no rule-B prediction. With the registered sparse averaging the refit is bit-exact (theta diff 0.0). The test-day tool must keep the same pooling code path (p19_forward.mean_matrix) to stay bit-exact with the frozen records.",
+  "Player disjointness: eval_report.json seam_d records probe_and_I = 0, A_and_H = 0 (ok true); the fit uses inner.Xf only (25,400 inner fit pseudo-questions)."
+ ]
+}

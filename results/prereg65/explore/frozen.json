@@ -1,0 +1,98 @@
+{
+ "format": "c10-prereg65 frozen settings v1",
+ "created": "2026-11-21",
+ "note": "written before any code of the term and before any inner number; pointers are to data/advice/gemini_1121n/ (N/) unless stated; NOTES.md gives the readings",
+ "neon_files_sha256": {
+  "REPORT.md": "cd8ba19460d500347aa64b9ff7d80580a517a3dc024ab76079c79f6d5813089b",
+  "02a_train_opp_p1_v2.py": "6350aa2be84a46a4975d27cba8364dbb0a4afd4f27538996adf016df39d267b3",
+  "02a_opp_p1_v2_record.json": "7433b54ab3708fe0e4bbfe8fd8dc7d9e8f3932408473be3b4d2507a8a0631e6b",
+  "03_c2_2_set_cond_train_eval.py": "ec51730c2f0ddf2a06607bfab59aa91e0e7b271f3496649e99e5cbde2b2b9882",
+  "04_final_candidate_stack.py": "2ab1c1cb672a74b4babb120f31495833087782388e0c026b8430ec43b3881ec2",
+  "04_final_candidate_stack.json": "14a851f8761ef56af2ac909f42ec60bcd405978049e60317f488d19801c4629e",
+  "opp_p1_v2.npz": "e47912f7afe65ff053c7f3c802062f58f23b4b50c96a9e196d701e7a43b49f5c",
+  "c2_2_scond_p1.npz": "7ef4b1d6d22353f728782e0f5f233398f93baddad6bd1e45cbba08863751d1f1"
+ },
+ "anchor": {
+  "what": "A = log_softmax(Q25 gen_logits) with Q25's fold parameters (inner) / frozen theta (test), as prereg64",
+  "pointer": ["REPORT.md lines 198-199", "results/prereg64/explore/NOTES.md 7"]
+ },
+ "c49_channel": {
+  "head": "results/prereg64/rank/c49_head.npz (5,771 rows, L2), sha256 ea7408d96181e5f6012bb7aafd1f4c2c31a66be77bf72b8220d688a41d0f0a6a",
+  "prototypes": "results/prereg64/rank/prototypes.npz = data/prereg64/prototypes.npz, sha256 6ffe6682b6584ee08c544247ef2f6ec9371ab08c59fb726b741b6fe5ff5565f7; split by src E (600) / X (1,504)",
+  "tau1": 70.0,
+  "tau2": 50.0,
+  "b_E": -1.0,
+  "b_X": -2.0,
+  "prior_correction": "each part's rank sums / N_part[s] * mean_s N_part[s] (N = classes per rank of that part)",
+  "pointer": ["04 lines 345-354 (N_head, N_pr_E, N_pr_X; _rank_sums taus 70 / 50, block 4000)", "04 lines 360-382 make_q_c49('splitEX')", "REPORT.md lines 200-204"],
+  "own_left_out": {"D_table_games": "own head row (04 line 344, 351)", "inner_games": "own head row (prereg64 NOTES 4)", "test_games": "nothing (04 line 903)"}
+ },
+ "c49_table": {
+  "games": "all D games with a c49 opponent-side sample (data/prereg56/emb_opp_D/V2_step_320000_raw_tta1/store_D.npz; 04 lines 319-327 ok_D_all)",
+  "counts": "p59_lib.table_counts / table (add 0.5)",
+  "lam_hd1": 0.25,
+  "shrink": "M[1, c] = 0.75 M[1, c] + 0.25 rownorm(K58.kernel_matrix(K58.kernel(K58.kernel_counts(q, r, h, c, ok)))[1, c])",
+  "bayes": "M / max(mean over r of M, 1e-12)",
+  "pointer": ["04 lines 179-189 table_bayes", "04 lines 852-855 (all-D table for the test pools)", "04 lines 389-402 (5-fold tables, seam N only)", "REPORT.md lines 205-209"]
+ },
+ "p1_channel": {
+  "model": "N/opp_p1_v2.npz members mlp0, mlp1 (softmax) + clm0, clm1 (p09_forward.clm_logp), probability mean; input standardised with mu_t / sd_t, non-finite -> 0",
+  "pointer_model": ["04 lines 234-250 predict_opp_p1_v2", "02a lines 95-96 (mu_t = p1e_map mu_x[:770])", "02a lines 190-216, 309-326"],
+  "table": "M_p1_tr of N/c2_2_scond_p1.npz (frozen, [3, 2, 10, 10])",
+  "pointer_table": ["03 lines 171-173 table_bayes", "03 line 293 (A_tr HD <= 1 games with an opponent move)"],
+  "no_opponent_vector": "R_P1 = 1 (04 lines 405-406, 900-901)",
+  "inner_input": "data/prereg12/q09_inner/inner_X.npy [:, 770:] (rows -> inner games by inner_meta.npz ref); no row or NaN opponent half -> R_P1 = 1",
+  "test_input": "data/test08/p1/<pool>/chunk_*.npz means[:, 1, :] by ref (04 lines 876-899); counts[:, 1] == 0 -> R_P1 = 1"
+ },
+ "term": {
+  "alpha": "clip((max_s q_c49 - 0.1) / 0.9, 0, 1) ** 1.5",
+  "p_pow": 1.5,
+  "eps": 1e-9,
+  "game_value": "log(alpha R_c49 + (1 - alpha) R_P1 + 1e-9); 0 for a game without a c49 sample",
+  "scale": 10.0,
+  "pooling": "flat mean (prereg64 question_term); gamma_O 0; w_hd1 1",
+  "pointer": ["04 lines 464-466 lr_lg", "04 line 489 OPP4B_EX_l25_p1.5", "04 lines 454-456", "04 lines 915-917", "REPORT.md lines 216-218"],
+  "not_used": "04 section 4's p = 1.0 and ratio-scaled w_O (lines 917-925): NOTES 1"
+ },
+ "fusion": {
+  "Z": "w_A * A + w_O * OPP4B",
+  "fit": "p64_lib.fit_weights: L-BFGS-B from 0.4, bounds [0, 4], L2 1e-3, no class offsets; per player fold (inner), all inner fit questions (test day)",
+  "decode": "rule B (rf.rule_b_np)",
+  "pointer": ["REPORT.md lines 220-222", "results/prereg64/explore/NOTES.md 7"]
+ },
+ "merge_M8": {
+  "threshold": 0.80,
+  "same_colour": true,
+  "rank_guard": 2.5,
+  "beta": 0.85,
+  "rule": "agree_and_support",
+  "similarity": "p64_lib.cc_whiten_sim lam 0.30 on c49 player-side vectors",
+  "pointer": ["04 lines 691-748 apply_safe_merge (M8 branch lines 729-748)", "REPORT.md lines 223-227"],
+  "simulation": {
+   "pointer": "04 lines 666-824 (section 3) with section 2 lines 521-664 for the base",
+   "players": "E n H with >= 20 games of each colour (recorded 46)",
+   "pools": 100, "seeds": "9000 + sd", "modes": [0.0, 0.35, 1.0],
+   "base_weights_recorded": [0.2162, 0.538],
+   "recorded_M8": {"0pct": {"gain_mean": 0.0, "pools_with_any_change": 0}, "35pct": {"gain_mean": 0.00039}, "100pct": {"gain_mean": 0.00344}},
+   "pointer_recorded": "04_final_candidate_stack.json lines 1452-1517",
+   "pass": "0% mode: questions changed = 0 in all 100 pools; 35% mode: mean gain > 0"
+  }
+ },
+ "seams": {
+  "Q25": [0.7456519871546352, 0.7482450052195216],
+  "Q64": [0.7610187048035557, 0.7599313807253795],
+  "pointer_Q64": "results/prereg64/explore/eval.json lines 584-585",
+  "P_H_ens4": {"nll": 1.59235, "rank_balanced": 0.48575, "tol": 1e-4, "pointer": "02a_opp_p1_v2_record.json lines 40-43; H rows = 02a lines 103-145 (31,772)"},
+  "N_D_cap_H": {"Q64_proxy": 0.74839, "OPP4B_EX_l25_p1.5": 0.76584, "weights": [0.2294, 0.6102],
+                "pointer": "04_final_candidate_stack.json lines 48-49, 576-577, 612-615; questions 04 lines 415-452",
+                "rule": "unrounded value rounded to 5 decimals equals the record; weights rounded to 4 equal (NOTES 7)"}
+ },
+ "gates": {"vs": "Q64", "G1": ">= +0.005", "G2": "lower bound > 0", "G4": "single colour lower bound > 0, B and W each >= -1e-12", "function": "p23_lib.gates"},
+ "hard_stop": "2026-11-23T12:00:00",
+ "touches": {
+  "inner": "4th use (prereg58, 59, 64, 65); judged once",
+  "H": "S25 holdout players are used only in seams P, N and the M8 simulation (no fitting of anything frozen here)",
+  "validation_players": "OPP_P1_v2 and M_P1 trained / estimated by Neon on probe + V role-A players (V = validation players), not H, not inner; c49 trained on validation players (prereg49)",
+  "never": "data/local, tools/score.py"
+ }
+}

@@ -1,0 +1,72 @@
+{
+ "runs": [
+  {
+   "run": 1,
+   "time": "2026-09-28T15:41:06+00:00",
+   "c10data_sha256": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "local_files_checked": [
+    "player_val_candidates.csv",
+    "player_val_questions.csv",
+    "rank_val_questions.csv"
+   ],
+   "parts": {
+    "fit": {
+     "players": 5767,
+     "games": 720307,
+     "expected": {
+      "players": 5767,
+      "games": 720307
+     },
+     "count_assert": "通過",
+     "leak_check": "外洩檢查通過（0 盤出現在本機驗證檔）",
+     "games_by_rank": {
+      "D": 69748,
+      "C": 75315,
+      "B": 72264,
+      "A": 71255,
+      "1D": 71538,
+      "2D": 73011,
+      "3D": 73725,
+      "4D": 71135,
+      "5D": 73840,
+      "6D": 68476
+     },
+     "seconds": 9.803108215332031
+    },
+    "inner": {
+     "players": 640,
+     "games": 73556,
+     "expected": {
+      "players": 640,
+      "games": 73556
+     },
+     "count_assert": "通過",
+     "leak_check": "外洩檢查通過（0 盤出現在本機驗證檔）",
+     "games_by_rank": {
+      "D": 8147,
+      "C": 7240,
+      "B": 7431,
+      "A": 7590,
+      "1D": 7033,
+      "2D": 6490,
+      "3D": 7191,
+      "4D": 6601,
+      "5D": 6946,
+      "6D": 8887
+     },
+     "seconds": 8.142885208129883
+    }
+   },
+   "fit_inner_player_overlap": 0,
+   "three_way_disjoint": {
+    "fit_players": 5767,
+    "inner_players": 640,
+    "validation_players": 1600,
+    "fit_inner": 0,
+    "fit_validation": 0,
+    "inner_validation": 0,
+    "unknown_players": 0
+   }
+  }
+ ]
+}

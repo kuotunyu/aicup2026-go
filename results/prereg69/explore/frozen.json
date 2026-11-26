@@ -1,0 +1,32 @@
+{
+ "format": "c10-prereg69 frozen settings v1",
+ "created": "2026-11-22",
+ "note": "written before any code and any number of prereg69; NOTES.md gives the readings",
+ "merge_M8": {
+  "function": "results/prereg65/explore/p65_lib.py m8 (unchanged)",
+  "threshold": 0.8, "same_colour": true, "rank_guard": 2.5, "beta": 0.85, "rule": "agree_and_support",
+  "similarity": "results/prereg64/explore/p64_lib.py cc_whiten_sim lam 0.30",
+  "vectors_test": "data/prereg56/emb_rank/V2_step_320000_raw_tta1/pool_<set>.npz (c49 player side, as tools/t64_rank.py own_vectors)",
+  "pointer": ["results/prereg65/explore/frozen.json merge_M8", "results/prereg65/explore/NOTES.md 8"]
+ },
+ "base_test": {
+  "what": "Q64 steps 1-3 (merge off) = tools/t64_rank.py anchor_logp / E8 / frozen (w_A, w_O); lp_base = log_softmax(w_A A + w_O OPP3)",
+  "frozen_config": "results/prereg64/rank/frozen_config.json",
+  "w_A": 0.7667121789025336, "w_O": 0.4940900911252534
+ },
+ "base_sim_proxy": {
+  "A": "log_softmax(lp_S25) (p19_forward.set_term lp, 3 frozen S25 seeds)",
+  "O": "10 x flat mean of log(R + 1e-9); q = p59_lib.combine(class_parts(S0 head, prereg59 prototypes, own prototype out), 50, 30, 1); R = p65_eval.oof_R(q, r, h, c, f, ok, bayes False, lam 0) on prereg65 section 2's (D u E) games",
+  "weights": "64's frozen (w_A, w_O), no refit",
+  "pointer": ["NOTES.md 2", "results/prereg64/explore/NOTES.md 1-7", "results/prereg65/explore/p65_eval.py neon_section2_3"]
+ },
+ "simulation": {
+  "players": "E n H, >= 20 games of each colour (prereg65: 46)",
+  "pools": 100, "seeds": "9000 + sd", "modes": [0.0, 0.35, 1.0],
+  "loop": "copied from p65_eval.neon_section2_3 section 3",
+  "seam_S": "prereg65 base on the same loop reproduces results/prereg65/explore/merge_sim.json section2 and section3 numbers exactly"
+ },
+ "gate": "64-proxy base: 0% mode changed = 0 in 100/100 pools AND 35% mode mean gain > 0",
+ "seam_T": "t69 merge off = results/test64/rank/rank_test_probs.csv and submission_rank.csv byte for byte; M8 pred0 = rule B of 64; changed rows softmax(L_new) with rule B = M8's prediction",
+ "never": ["data/local", "tools/score.py", "inner", "GPU"]
+}

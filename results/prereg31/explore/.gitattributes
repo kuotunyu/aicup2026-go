@@ -1,0 +1,4 @@
+# the two launchers are run by Git Bash: LF on every checkout (core.autocrlf is true on this PC; the same rule as
+# tools/t10_p1_launch.sh in the root .gitattributes). test_p31.py::TestConsistency::test_launchers checks it.
+run_train.sh text eol=lf
+run_eval.sh text eol=lf

@@ -1,0 +1,174 @@
+{
+ "what": "pilot_run GPU smoke chunks vs CPU fp32 (hs_lib)",
+ "created_utc": "2026-10-02T17:48:43+00:00",
+ "smoke_dir": "data/prereg07/pilot_smoke",
+ "profiles_checked": [
+  "rank_20k",
+  "rank_1d",
+  "rank_9d"
+ ],
+ "tolerances": {
+  "position_logp_abs": 0.05,
+  "game_mean_logp_abs": 0.002
+ },
+ "sets": {
+  "fitmap": {
+   "games": 40,
+   "failed": 0,
+   "refs_equal_plan": true,
+   "counts_equal_featurisation": true,
+   "max_abs_sums_vs_position_sum": 0.0,
+   "curves_finite": true,
+   "curves_ok_games": 40,
+   "chunk_meta": {
+    "precision": "fp16",
+    "batch": "1024",
+    "channels_last": "True",
+    "torch": "2.11.0+cu128",
+    "ckpt_bytes": "323752318",
+    "hs_lib_sha256": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+    "seconds": "62.43694734573364",
+    "created_utc": "2026-10-02T17:46:19+00:00"
+   },
+   "mean_curve_over_games": [
+    -1.7031901284397122,
+    -1.6702831414559571,
+    -1.629888046476874,
+    -1.6030214034482697,
+    -1.5768766898243949,
+    -1.5635454202373884,
+    -1.5876099403332673,
+    -1.6739462804862302,
+    -1.8345126208595122,
+    -1.933565803167297,
+    -2.051266269253669,
+    -2.2716699255712816,
+    -2.3943399849527256,
+    -2.701485610836584
+   ],
+   "values": [
+    {
+     "game_id": "g_0040377",
+     "level": "D",
+     "colour": "B",
+     "positions": 145,
+     "turns_equal": true,
+     "max_abs_position_logp": 0.005772590637207031,
+     "max_abs_game_mean_logp": 4.058519146443729e-05,
+     "cpu_mean_logp": [
+      -1.7502294322411562,
+      -1.7107840147921174,
+      -2.490850141084681
+     ],
+     "gpu_mean_logp": [
+      -1.7502176398604081,
+      -1.7107945662501653,
+      -2.4908907262761453
+     ]
+    },
+    {
+     "game_id": "g_0094934",
+     "level": "D",
+     "colour": "W",
+     "positions": 95,
+     "turns_equal": true,
+     "max_abs_position_logp": 0.00673675537109375,
+     "max_abs_game_mean_logp": 0.00018597836621525587,
+     "cpu_mean_logp": [
+      -1.6500547568656896,
+      -1.7061711722825605,
+      -2.347907869540627
+     ],
+     "gpu_mean_logp": [
+      -1.6499731267361264,
+      -1.7060430149602899,
+      -2.3477218911744115
+     ]
+    }
+   ],
+   "max_abs_position_logp": 0.00673675537109375,
+   "max_abs_game_mean_logp": 0.00018597836621525587,
+   "passed": true
+  },
+  "bank": {
+   "games": 40,
+   "failed": 0,
+   "refs_equal_plan": true,
+   "counts_equal_featurisation": true,
+   "max_abs_sums_vs_position_sum": 0.0,
+   "curves_finite": true,
+   "curves_ok_games": 40,
+   "chunk_meta": {
+    "precision": "fp16",
+    "batch": "1024",
+    "channels_last": "True",
+    "torch": "2.11.0+cu128",
+    "ckpt_bytes": "323752318",
+    "hs_lib_sha256": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+    "seconds": "56.24323081970215",
+    "created_utc": "2026-10-02T17:47:34+00:00"
+   },
+   "mean_curve_over_games": [
+    -1.7100071367539318,
+    -1.7047093995979317,
+    -1.6788324412319913,
+    -1.6608001008100701,
+    -1.6207034006917098,
+    -1.5617077976268194,
+    -1.507639622254996,
+    -1.4953964736514347,
+    -1.548532445997001,
+    -1.6015262041093397,
+    -1.6777596794698728,
+    -1.8430096601702661,
+    -1.9535520790203242,
+    -2.2081395883922648
+   ],
+   "values": [
+    {
+     "game_id": "g_0026264",
+     "level": "A",
+     "colour": "B",
+     "positions": 152,
+     "turns_equal": true,
+     "max_abs_position_logp": 0.006736278533935547,
+     "max_abs_game_mean_logp": 9.521561725311933e-05,
+     "cpu_mean_logp": [
+      -1.4176024692378153,
+      -1.119656733138024,
+      -1.8457430609414587
+     ],
+     "gpu_mean_logp": [
+      -1.4175262744415944,
+      -1.1195691913252583,
+      -1.8456478453242056
+     ]
+    },
+    {
+     "game_id": "g_0013084",
+     "level": "B",
+     "colour": "B",
+     "positions": 163,
+     "turns_equal": true,
+     "max_abs_position_logp": 0.007282257080078125,
+     "max_abs_game_mean_logp": 0.00016138991937397762,
+     "cpu_mean_logp": [
+      -1.6272351778815128,
+      -1.6220699616506455,
+      -2.489204642632148
+     ],
+     "gpu_mean_logp": [
+      -1.6271944866041463,
+      -1.622051897860115,
+      -2.489043252712774
+     ]
+    }
+   ],
+   "max_abs_position_logp": 0.007282257080078125,
+   "max_abs_game_mean_logp": 0.00016138991937397762,
+   "passed": true
+  }
+ },
+ "passed": true,
+ "seconds": 283.9690523147583
+}

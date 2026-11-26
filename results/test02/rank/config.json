@@ -1,0 +1,297 @@
+{
+ "layout": "頂層：固定說明與跨執行的累計狀態；runs：每次執行各一筆的實際設定",
+ "smoke": false,
+ "smoke_cfg": null,
+ "prereg": "docs/PREREG_02_OPENING_FUSION.md 第 9 節（rev 5，測試日；競賽二）",
+ "rehearsal": false,
+ "test_kind": "official",
+ "notebook": "colab/test02_rank.ipynb",
+ "notebook_sha256": "dc7526bef020a0bec2ba23168c109a067c62013bf4a457a80514c3f7f9024551",
+ "notebook_sha256_rule": "sha256 of json.dumps([the source of every cell], ensure_ascii=False) with this value replaced by 64 zeros (colab/build_test02_rank_nb.py; tools/t02_rank.py can recompute it)",
+ "base_notebook": {
+  "path": "colab/prereg02_rank.ipynb",
+  "sha256": "9fb1f9d06ba5ee5fbebfb6dfe022246888c93e7762e9a89e1adc99c9f1c12b0c"
+ },
+ "changes_from_prereg02": [
+  "[新增] 第一格 markdown：用途、步驟、GPU、會停下的情況、輸出清單、交回方式、這張差異表。",
+  "[設定] 先讀 Drive 上 `C10_test_v1.zip` 的 `tests/MANIFEST.json` 決定種類（正式 `official`、彩排 `rehearsal`；SMOKE 只接受 `smoke`），找不到或種類不對就停。結果目錄改成 `test02`（彩排 `test02_rehearsal`，SMOKE `test02_smoke`）的 `rank/`，沒有 `ckpt/`、沒有分片備份。只讀目錄改成兩個：`prereg01`、`prereg02`（SMOKE 是 `_smoke`），`guard_write()` 兩個都擋，`readonly_fingerprint(root)` 取代 `p01_fingerprint()`。`sha256_path()`、`gpu_name_of()` 從 prereg02 的 preflight 格逐字搬到這裡（本版的 preflight 在 GPU 關卡之後）。拿掉收尾開關 `FINISH_WITHOUT_TRAINING` 和 `SMOKE_CFG_P02`；`P02_CHANGES` 換成 `T02_CHANGES`，另記這份 notebook 的 SHA-256（規則見 `NOTEBOOK_SHA256_RULE`）。`config.json` 的 `prereg` 改指第 9 節，記 `rehearsal`、測試集種類、底稿 SHA-256、這張表和只讀目錄。`run_log.json` 頂層加 `status`（這次執行開始時清空，結束時寫 completed／seam_failed／readonly_changed）。",
+  "[準備] 拿掉解開訓練資料的整段（本版只推論，不讀訓練資料）；第一行註解跟著改。打包檔的 SHA-256 核對和拒收答案檔的那一行照舊。",
+  "[底稿官方 2] 拿掉 `CKPT_DIR`、`guard_write(CKPT_DIR)`／`makedirs`、`EXTRA_EPOCHS`／`PEAK_LR`／`FINAL_EPOCH` 和它們的 assert。沒有 GPU 的關卡拿掉收尾開關的例外；型號關卡照舊（只接受 G4〔RTX PRO 6000〕或 A100）。最後的 `print` 只印裝置、GPU、NPROC。",
+  "[新增 preflight] 在 GPU 關卡之後：① 權重 `prereg02/rank/ckpt/epoch_9.pth` 的 SHA-256 等於登記的值（SMOKE：等於 prereg02_smoke 完成標記記的）；② 接縫參照 `prereg02/rank/dumps/val_keys.npz`、`val_p02e9_d4.npz` 的 SHA-256 釘死，prereg02 的 GPU 型號記下；③ 測試集 zip 解到 `WORK/tests/`，只收 `tests/` 底下的 6 個官方檔名和 `MANIFEST.json`，每個檔的 SHA-256、大小要等於 MANIFEST；④ 快速格式檢查（T1 的一部分：沒有 BOM、400 題、`question_id` 不重複且前綴是 `pub_`／`priv_`、`num_games` 是 5–20 的整數、`sgf_1..20`／`color_1..20` 欄都在、剛好前 `num_games` 格有棋、執色是 B/W、兩份題目不重疊）；⑤ 上一次執行的 `seam_check.json` 沒過就停（已完成的 dump 會被沿用，登記的「重跑一次」必須重算：先把結果資料夾改名保留）；每組的 `_INPUT.json`（題目檔 SHA-256）：已存在但不同就停（防止沿用換過題目檔的舊 dump）；⑥ Drive 剩餘空間 ≥ 0.5 GB；⑦ 兩個只讀目錄的開頭指紋 `readonly_before.json`，重跑時和第一次記的不同就停。`config.json` 頂層記 GPU、torch、cuDNN、權重、測試集 zip 與 MANIFEST 的 SHA-256、各組題目檔 SHA-256 與題數。",
+  "[底稿 dump 工具] 拿掉 inner 的部分（`EXPECTED_INNER_GAMES`、`INNER_*`、`decode_with_key`、`KEY_LOADER`、`dump_inner`）和最後的 print。`DUMP_DIR` 不在這格建立，改由各組的格子在呼叫前指定（底稿的函式把它當全域變數讀，本身一字不改）。`parse_val()` 改成 `parse_questions(path)`（依題目檔路徑快取，`pd.read_csv(path, dtype={'question_id': str})`，SMOKE 照舊只取前 12 題）；`dump_val(net, …)` 改成 `dump_questions(net, path, …)`，檔名仍是 `val_` 開頭（在 test02 裡只代表「一組題目的逐盤輸出」）。`record_p01_after()` 改成兩個只讀目錄的 `record_readonly_after()`。`d4`、`load_net`、`sgf_to_features`、`dump_is_done`、`write_dump`、`write_keys`、`pack_results`、`flush_drive`、解析迴圈和逐題推論迴圈和底稿逐字相同（產生器用 ast 核對）。",
+  "[新增三組逐盤輸出] `seam_val`（打包檔的本機驗證題 1,589 題）、`public`、`private` 各一格，內容相同、只有第一行不同：`DUMP_DIR = <組>/dumps`，`write_keys('val_keys', …)`，`dump_questions(…, 'p02e9_d4', 8, …)`；權重只載入一次（`load_net(path, expect_sha=登記的 SHA-256)`）。",
+  "[新增接縫核對] `seam_val` 的逐盤輸出和 Drive 上 prereg02 的比（登記第 9 節第 2 條）：key 陣列完全相同；原方向逐盤 softmax 的每題 float32 平均最大差 ≤ 1e-4（算這份 dump 的 GPU 型號和 prereg02 相同時）或 ≤ 1e-3（不同時）；規則 B 不同 ≤ 4 題（SMOKE 依題數等比例，至少 1）。另記是否逐位元組相同、8 種對稱的 logits 最大差、兩邊的 GPU／torch／cuDNN。三組 dump 的完成標記記的 GPU 型號、torch、cuDNN 必須和 `seam_val` 的相同（中斷後接續時，已完成的組會被沿用，可能是別的執行環境算的；不同就算接縫沒過，接縫才涵蓋產生測試輸出的環境）。寫 `seam_check.json`；沒過就記結尾指紋、`status = seam_failed`、打包、送出 Drive 的寫入後停下。",
+  "[底稿結尾（改寫）] 核對三組 dump 的完成標記、SHA-256、列數、形狀、權重、NaN 位置和 `_INPUT.json`；記 `readonly_after.json` 並和開頭比對（不同就 `status = readonly_changed`，打包後停下）；補完 config／timings／run_log；打包 `test02/test02_rank_results.zip`（zip 內路徑從 `rank/` 起；跳過 `.pth`、`.pt`、`.tmp` 和 ≥ 100 MB 的檔），確認必要的檔都在 zip 裡；最後 `drive.flush_and_unmount()`。",
+  "[拿掉] prereg02 的 preflight、官方 4、6、8、9、11、12、14、15（讀訓練資料、抽分片、loader、建模型、驗證）、分片備份工具、P1 輸出與重現核對、接著訓練、P2 輸出。本版不訓練、不讀訓練資料。",
+  "[metadata] notebook metadata 沿用 prereg02。每格 cell id 是 `c10-rank-t02-NN`，cell metadata `c10` 記底稿的格號、底稿的 `c10` 和是否改動。"
+ ],
+ "readonly_roots": {
+  "prereg01": "/content/drive/MyDrive/C10/results/prereg01",
+  "prereg02": "/content/drive/MyDrive/C10/results/prereg02"
+ },
+ "official_notebook": "third_party/aicup2026_tutorial/rank-prediction.ipynb",
+ "deviations_from_official": [
+  "[①] 官方 cell 4：改用 `c10data.load_rows(..., part=\"fit\")` 讀訓練資料（5,767 人、720,307 盤），`part=\"inner\"` 讀內部驗證（640 人、73,556 盤），各自轉成 DataFrame。`load_rows` 會 assert 人數、盤數，並確認沒有任何一盤出現在本機驗證檔。結果存 `leak_check.json`（每次執行各記一筆）。SMOKE 時等 `load_rows` 全部通過，才用固定 seed 縮小資料。",
+  "[②] 官方 cell 4：取代 `df.iloc[:VAL_SIZE]` 的切法：`df_train`、`df_val` 各自 `sample(frac=1.0, random_state=42)` 打散之後，才寫分片。",
+  "[③] 官方 cell 2、8、9：`VAL_SIZE` 改成內部驗證實際寫入的盤數：每個抽特徵的 worker 寫完後，把 `rows`、`written`、`bad` 寫進分片目錄的 `_count_w<N>.json`；`extract_split` 加總、核對後回傳；cell 9 設定 `VAL_SIZE` 並印出。cell 2 先設成 `None`。",
+  "[④] 官方 cell 20、21：`predict()` 改讀打包檔的 `local/rank_val_questions.csv`，拿掉 public／private 迴圈（內層程式因此少一層縮排，進度訊息不印 split 名稱）。每題另存 10 維平均機率到 `rank_val_probs.csv`（完整 float；沒有可解析棋譜的題 `n_parsed=0`、機率欄留空）。官方的 argmax 結果改存成 `pred_official_argmax.csv`（官方是 `./submission_rank.csv`）。`predict()` 因此多了題目檔、機率檔路徑和 `limit` 三個參數；SMOKE 時只推論前 12 題。",
+  "[營運性] 新增：最前面兩格 markdown：這份 notebook 的用途與操作說明，以及這張差異表。",
+  "[營運性] 新增：新增的程式格：設定（Colab 或本機、Drive 路徑、SMOKE 縮小設定、結果紀錄工具）、準備（解壓打包檔並逐檔核對 SHA-256、確認沒有答案檔、解開訓練資料、把打包檔的 `tools/`、`tutorial/` 加進 import 路徑）、環境紀錄（`env.json`）、分片備份工具、設定紀錄與接續工具、結尾核對，以及把結果目錄裡權重以外的檔案打成 `rank_results.zip`（放在結果目錄旁，方便下載）。",
+  "[營運性] 新增（準備格）：缺 `sgfmill` 或 `webdataset` 時才用 pip 安裝，版本固定為 `sgfmill==1.1.1`、`webdataset==1.0.2`（本機冒煙測試用的版本）。官方 notebook 只列出需要的套件，不安裝也不固定版本。Colab 內建的 torch、pandas、numpy、matplotlib 不動，實際版本記在 `env.json`。",
+  "[營運性] 新增（設定格）：在 Linux 上明確指定 multiprocessing 用 `fork`。官方的 worker 函式定義在 notebook 內，依賴 fork；Python 3.14 起 Linux 預設改成 forkserver。3.13 以前本來就是 fork，行為不變。實際的啟動方式記在 `config.json`。",
+  "[營運性] metadata：notebook metadata 加上 Colab 設定（GPU、A100、高 RAM），其餘沿用官方。官方格沿用官方的 cell id，新增的格用 `c10-rank-NN`；每格的 cell metadata 加 `c10` 對照欄（對應的官方格、是否改動）。官方原本就沒有存輸出。",
+  "[營運性] 官方 cell markdown 0、3、5、19、22：官方的說明原文不動，在後面附加一段「**本版**」說明：路徑由設定格決定（0）、① ② 的讀法（3）、分片會備份到 Drive（5）、④ 只預測本機驗證題（19）、分數不在這裡算（22）。",
+  "[營運性] 全部：工作目錄切到 `WORK`（Colab 是 `/content/c10`），官方的相對路徑 `./training`、`./rank-features` 照用。webdataset 會把 Windows 路徑的 `C:` 當成網址格式，本機冒煙測試只能用相對路徑。",
+  "[營運性] 全部：改過的格在開頭或行內加了說明註解（標 ①–④ 或「本版」）。",
+  "[營運性] 全部：紀錄檔都是每次執行各記一筆、不覆蓋前幾次：`timings.json`（各階段秒數）、`run_log.json`（每次執行與接續）、`env.json`、`leak_check.json`、`config.json`（頂層是固定說明與跨執行的累計狀態，每次執行的實際設定在 `runs`）。JSON 和 CSV 的 float 都寫完整精度。原生 Windows 的正式執行會直接報錯，因為官方的多進程依賴 Linux 的 fork。",
+  "[營運性] 官方 cell 2：`CKPT_DIR` 改到 Drive 的結果目錄 `ckpt/`，拿掉 `TEST_DIR`。`NPROC` 從寫死的 8 改成 `os.cpu_count()`（官方註解寫「設成 CPU 核數」）。加上 SMOKE 縮小設定（只在 SMOKE 生效）。最後的 `print` 多印 `NPROC`、batch、epoch 數。",
+  "[營運性] 官方 cell 4：不印官方的「全量 N 局」和全量的等級分布；改成逐一印 `fit`、`inner` 的人數與盤數，等級分布只印訓練集（`df_train`）。顯示前 3 列時不印棋譜欄，不讓棋譜內容進 notebook 輸出。",
+  "[營運性] 官方 cell 6：示範用的第一盤改取 `df_train`（本版沒有合併的 `df`）。",
+  "[營運性] 官方 cell 9：分片特徵抽完後備份到 Drive 的 `features_rank/`，全部核對後才寫完成標記。重跑時有完整且設定相符的備份，就複製回來、核對 SHA-256，不重抽；備份缺檔、大小或 SHA-256 不符時改成重抽。重抽前先清掉不完整的舊分片。",
+  "[營運性] 官方 cell 11、12：`pick_workers` 另外記下讀出的筆數（寫進 `config.json`）。本機冒煙測試的 worker 候選數是 0（Windows 的 spawn 無法 pickle notebook 內定義的函式）。多 worker 對不上時照官方退回 0，並用 0 個 worker 再數一次；還是對不上 `VAL_SIZE` 就停下來，因為這表示 ③ 沒有成立。",
+  "[營運性] 官方 cell 16：每個 epoch 結束，把 model、optimizer、epoch、最佳分數、history 存成 `ckpt/state.pt`。重跑時從最後完成的 epoch 接續；`state.pt` 讀不進來、或設定和上次不同，就停下來並說明處理方式。另外記最佳 epoch 的編號，結束時一併印出。history 多記 loss、步數、樣本數、秒數和第幾次執行。官方的 `epoch_N.pth`、`best_model.pth`、`history.csv` 照樣存在 `ckpt/`。",
+  "[營運性] 官方 cell 16：`sync_best()` 把最佳 epoch 的 `epoch_N.pth` 複製成 `best_model.pth`：接續時做一次（中斷時可能留下寫一半的 `best_model.pth`），正常訓練結束時也做一次。複製來源和官方存的 `best_model.pth` 是同一個 epoch 結束時的同一份權重。找不到那個 `epoch_N.pth` 就停下來並說明處理方式。",
+  "[營運性] 官方 cell 16：每次執行記下有沒有讀 `state.pt`、是否接續訓練、實際訓練了哪些 epoch（`run_log.json`、`config.json` 的 `runs`），頂層的 `resumed` 表示是否曾經接續訓練。",
+  "[營運性] 官方 cell 18：訓練曲線另存 `ckpt/history.png`。非 Colab 時用不開視窗的 Agg 後端，不 `show()`，畫完就 `close()`。",
+  "[營運性] 官方 cell 20：`predict()` 讀題目檔時 `question_id` 以字串讀入（`dtype={'question_id': str}`），代號原樣照抄，不會被轉成數字。每題 assert 非空的 `sgf_` 欄數等於 `num_games`，題目檔格式不對就停。兩者都不改變預測。",
+  "[營運性] 官方 cell 21：推論用的權重、題目檔、題數寫進 `config.json`，秒數寫進 `timings.json`；輸出路徑指向 Drive 的結果目錄。"
+ ],
+ "resumed": false,
+ "resume_count": 0,
+ "runs": [
+  {
+   "run": 1,
+   "start": "2026-11-04T06:52:45+00:00",
+   "end": "2026-11-04T06:55:13+00:00",
+   "in_colab": true,
+   "mp_start_method": "fork",
+   "preflight": {
+    "weights": "prereg02/rank/ckpt/epoch_9.pth",
+    "weights_sha256": "423581b4fddd5c2c160ebf691f4e86b9e00c4fe743d5cfb23df7891f4a2ca939",
+    "seam_reference_sha256": {
+     "val_keys.npz": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+     "val_p02e9_d4.npz": "ec0b729d805eb9f3458f7a497444b099b8ec47e5cec73703ae4b8bf9cf0a11b2"
+    },
+    "p02_reference_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "test_zip_sha256": "136266e387064d34514ae4c3371edec9634932d627248dcefc35ad9475125d7d",
+    "test_manifest_sha256": "b9e9e8a6a7fc8b7b696d2d4501563cb99aeac6a95e327f3a5e686d04bbdd0bbe",
+    "test_kind": "official",
+    "sets": {
+     "seam_val": {
+      "set": "seam_val",
+      "question_file": "bundle local/rank_val_questions.csv",
+      "sha256": "73e51bbfd7b051e73cbb62af4b180c403d2422f122240c5e67e9c92303776db5"
+     },
+     "public": {
+      "set": "public",
+      "question_file": "tests/rank_prediction_test_public.csv",
+      "sha256": "75baefaded49ad40584bc52d8bd345410a5c6601c4034ff903746e0d92252bb4"
+     },
+     "private": {
+      "set": "private",
+      "question_file": "tests/rank_prediction_test_private.csv",
+      "sha256": "c8a6a1923af7324fcae6b22987711d1e57b5efe9f882a2a7b42604399d3e2edc"
+     }
+    },
+    "drive_free_bytes": 197116792832,
+    "readonly_files_fingerprinted": {
+     "prereg01": 996,
+     "prereg02": 54
+    }
+   },
+   "dumps": {
+    "seam_val": {
+     "questions": 1589,
+     "games": 19156,
+     "games_unparsed": 0,
+     "keys": "written",
+     "dump": "written",
+     "seconds": 57.21916103363037
+    },
+    "public": {
+     "questions": 400,
+     "games": 5000,
+     "games_unparsed": 0,
+     "keys": "written",
+     "dump": "written",
+     "seconds": 12.7128005027771
+    },
+    "private": {
+     "questions": 400,
+     "games": 5000,
+     "games_unparsed": 0,
+     "keys": "written",
+     "dump": "written",
+     "seconds": 12.798680543899536
+    }
+   },
+   "seam_check": {
+    "passed": true,
+    "tol": 0.0001,
+    "bitwise_equal": true,
+    "max_abs_c0_diff": 0.0,
+    "max_abs_logit_diff": 0.0,
+    "rule_b_diff": {
+     "questions": 0,
+     "allowed": 4,
+     "question_ids": []
+    },
+    "same_gpu_as_prereg02": true,
+    "dump_env_same": true
+   },
+   "outputs": {
+    "dumps": {
+     "seam_val": {
+      "questions": 1589,
+      "games": 19156,
+      "games_unparsed": 0,
+      "files": {
+       "val_keys": {
+        "rows": 19156,
+        "bytes": 939646,
+        "sha256": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "torch": "2.11.0+cu128",
+        "cudnn": 91900,
+        "run": 1
+       },
+       "val_p02e9_d4": {
+        "rows": 19156,
+        "bytes": 6130950,
+        "sha256": "ec0b729d805eb9f3458f7a497444b099b8ec47e5cec73703ae4b8bf9cf0a11b2",
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "torch": "2.11.0+cu128",
+        "cudnn": 91900,
+        "run": 1
+       }
+      },
+      "input": {
+       "set": "seam_val",
+       "question_file": "bundle local/rank_val_questions.csv",
+       "sha256": "73e51bbfd7b051e73cbb62af4b180c403d2422f122240c5e67e9c92303776db5"
+      }
+     },
+     "public": {
+      "questions": 400,
+      "games": 5000,
+      "games_unparsed": 0,
+      "files": {
+       "val_keys": {
+        "rows": 5000,
+        "bytes": 246002,
+        "sha256": "01fc5858d1607d56fc1b72cfc5aac658c85cef7704c05b39e3ac7220732208fa",
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "torch": "2.11.0+cu128",
+        "cudnn": 91900,
+        "run": 1
+       },
+       "val_p02e9_d4": {
+        "rows": 5000,
+        "bytes": 1601030,
+        "sha256": "5f6159946fa0277aea3f44b409811b16374e5238da276147fc4f23d37f8473db",
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "torch": "2.11.0+cu128",
+        "cudnn": 91900,
+        "run": 1
+       }
+      },
+      "input": {
+       "set": "public",
+       "question_file": "tests/rank_prediction_test_public.csv",
+       "sha256": "75baefaded49ad40584bc52d8bd345410a5c6601c4034ff903746e0d92252bb4"
+      }
+     },
+     "private": {
+      "questions": 400,
+      "games": 5000,
+      "games_unparsed": 0,
+      "files": {
+       "val_keys": {
+        "rows": 5000,
+        "bytes": 266002,
+        "sha256": "94037ca1d286480aeb32c535af7fab53407017f052ed23b0b9f87cebebb1eede",
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "torch": "2.11.0+cu128",
+        "cudnn": 91900,
+        "run": 1
+       },
+       "val_p02e9_d4": {
+        "rows": 5000,
+        "bytes": 1601030,
+        "sha256": "63b782f98e8d294d7ab3d4f1f016399658778ef4b550a61920169319dbc9bb39",
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "torch": "2.11.0+cu128",
+        "cudnn": 91900,
+        "run": 1
+       }
+      },
+      "input": {
+       "set": "private",
+       "question_file": "tests/rank_prediction_test_private.csv",
+       "sha256": "c8a6a1923af7324fcae6b22987711d1e57b5efe9f882a2a7b42604399d3e2edc"
+      }
+     }
+    },
+    "seam_check_passed": true,
+    "seam_bitwise_equal": true,
+    "readonly_unchanged": true,
+    "readonly_changed_files": {},
+    "files": {
+     "config.json": 18566,
+     "env.json": 1626,
+     "readonly_after.json": 104622,
+     "readonly_before.json": 104571,
+     "run_log.json": 297,
+     "seam_check.json": 2268,
+     "timings.json": 547
+    }
+   }
+  }
+ ],
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "torch": "2.11.0+cu128",
+ "cudnn": 91900,
+ "weights": {
+  "path": "prereg02/rank/ckpt/epoch_9.pth",
+  "sha256": "423581b4fddd5c2c160ebf691f4e86b9e00c4fe743d5cfb23df7891f4a2ca939"
+ },
+ "test_bundle": {
+  "zip_sha256": "136266e387064d34514ae4c3371edec9634932d627248dcefc35ad9475125d7d",
+  "manifest_sha256": "b9e9e8a6a7fc8b7b696d2d4501563cb99aeac6a95e327f3a5e686d04bbdd0bbe",
+  "kind": "official",
+  "t1": {
+   "rank": "PASS",
+   "player": "PASS"
+  },
+  "files": {
+   "rank_prediction_test_public.csv": "75baefaded49ad40584bc52d8bd345410a5c6601c4034ff903746e0d92252bb4",
+   "rank_prediction_test_private.csv": "c8a6a1923af7324fcae6b22987711d1e57b5efe9f882a2a7b42604399d3e2edc",
+   "player_identification_test_public.csv": "0e59f7f72376cfa2e81ae913d61092caeb1240d95abb43a581207ed29f1647a8",
+   "player_identification_test_private.csv": "4b07a403b36875f44007adb22aaa8da3c75ec3994e165f36c29a9400e6efcd11",
+   "player_identification_candidates_public.csv": "8175aeb08235536a1435bb6ba4c55088f906096cc14e7048e8898e3d7a3597a6",
+   "player_identification_candidates_private.csv": "7a8926ca83b43b1dca0e32c23513cbbff2731d623be151cf80ed912a91d91e57"
+  }
+ },
+ "sets": {
+  "seam_val": {
+   "questions_sha256": "73e51bbfd7b051e73cbb62af4b180c403d2422f122240c5e67e9c92303776db5",
+   "rows": 1589
+  },
+  "public": {
+   "questions_sha256": "75baefaded49ad40584bc52d8bd345410a5c6601c4034ff903746e0d92252bb4",
+   "rows": 400
+  },
+  "private": {
+   "questions_sha256": "c8a6a1923af7324fcae6b22987711d1e57b5efe9f882a2a7b42604399d3e2edc",
+   "rows": 400
+  }
+ },
+ "seam_reference": {
+  "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "sha256": {
+   "val_keys.npz": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+   "val_p02e9_d4.npz": "ec0b729d805eb9f3458f7a497444b099b8ec47e5cec73703ae4b8bf9cf0a11b2"
+  }
+ },
+ "status": "completed"
+}

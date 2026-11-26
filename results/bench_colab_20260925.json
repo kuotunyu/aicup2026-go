@@ -1,0 +1,24 @@
+{
+ "games": 300,
+ "rank": {
+  "parse_ms_per_game": 29.661758000050515,
+  "gzip9_ms": 9.156493333284743,
+  "gzip6_ms": 2.4693316668466045,
+  "raw_kb": 176.39453125,
+  "gz_kb": 1.568359375,
+  "loader_decode_ms_per_sample": 0.8106650000263471,
+  "fwd_gflops_per_sample": 17.870112256,
+  "params_m": 26.349806
+ },
+ "player": {
+  "parse_ms_per_game": 22.099884333341226,
+  "gzip6_ms_per_game": 11.91319833335001,
+  "raw_kb_per_game": 647.201787109375,
+  "gz_kb_per_game": 13.042356770833333,
+  "windows_per_game": 107.99,
+  "load_one_window_ms": 1.5781141666714877,
+  "cpu_ms_per_training_step_batch100": 473.43425000144634,
+  "fwd_gflops_per_window": 3.421012224,
+  "params_m": 4.775744
+ }
+}

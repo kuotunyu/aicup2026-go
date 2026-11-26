@@ -1,0 +1,70 @@
+{
+ "format": "c10-prereg63 subset check v1",
+ "pools": [
+  {
+   "seed": 100,
+   "z_identical": true,
+   "z_max_abs": 0.0,
+   "raw_max_abs": 0.0
+  },
+  {
+   "seed": 101,
+   "z_identical": true,
+   "z_max_abs": 0.0,
+   "raw_max_abs": 0.0
+  },
+  {
+   "seed": 102,
+   "z_identical": true,
+   "z_max_abs": 0.0,
+   "raw_max_abs": 0.0
+  },
+  {
+   "seed": 103,
+   "z_identical": true,
+   "z_max_abs": 0.0,
+   "raw_max_abs": 0.0
+  },
+  {
+   "seed": 104,
+   "z_identical": true,
+   "z_max_abs": 0.0,
+   "raw_max_abs": 0.0
+  },
+  {
+   "seed": 105,
+   "z_identical": true,
+   "z_max_abs": 0.0,
+   "raw_max_abs": 0.0
+  },
+  {
+   "seed": 106,
+   "z_identical": true,
+   "z_max_abs": 0.0,
+   "raw_max_abs": 0.0
+  },
+  {
+   "seed": 107,
+   "z_identical": true,
+   "z_max_abs": 0.0,
+   "raw_max_abs": 0.0
+  },
+  {
+   "seed": 108,
+   "z_identical": true,
+   "z_max_abs": 0.0,
+   "raw_max_abs": 0.0
+  },
+  {
+   "seed": 109,
+   "z_identical": true,
+   "z_max_abs": 0.0,
+   "raw_max_abs": 0.0
+  }
+ ],
+ "all_identical": true,
+ "max_abs": 0.0,
+ "git_head": "6912cc7a28f45252201f147d71a3d254ca0608ec",
+ "peak_rss_mb": 1860.3,
+ "seconds": 58.2
+}

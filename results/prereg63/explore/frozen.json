@@ -1,0 +1,66 @@
+{
+  "format": "c10-prereg63 frozen v1",
+  "written": "2026-11-21T02:45 (before any code or number of prereg63)",
+  "source": {
+    "script": "data/advice/gemini_1121/02_hypotheses_and_comp1_verify.py",
+    "script_sha256": "d327fada3714da91415289f7b310bfe922f0dfac4df5904e2839437ccf842a16",
+    "results": "data/advice/gemini_1121/02_comp1_and_hypotheses.json",
+    "results_sha256": "29bdfea833130513a42442a28b52b3bdbae8297f7a727ceebf7525401f5b8811",
+    "colour_fix_script": "data/advice/gemini_1121/03_comp2_and_final_checks.py",
+    "colour_fix_script_sha256": "dd3c01b0ffe4f42085f34ec4409be2c04b36136978da583a9ebead0862e79ecf",
+    "colour_fix_results": "data/advice/gemini_1121/03_comp2_and_final_checks.json",
+    "colour_fix_results_sha256": "2d1a04d72fed80de2a5329f50c7177844add52d132bdd4159ce1b82ef1b4b59f",
+    "report": "data/advice/gemini_1121/REPORT.md",
+    "report_sha256": "30bfd7b887c08aa784700895f3eb6ee6ded32f6c02a16da50401115914a0fe19"
+  },
+  "B_p1_multi": {
+    "fit_sets": ["L", "M1"],
+    "fit_input": "side-0 P1 means [770], usable rows, labels = player_id (lines 581-591)",
+    "loader": "load_p1_full: chunks of data/prereg39/p1/<L> and data/prereg45/p1/M1, usable = ~failed & counts[:,0] > 0, PREREG_10 mock fallback (lines 535-577)",
+    "fisher_lda": {"function": "fit_fisher_lda (lines 595-636)", "block": 20000,
+                   "full": {"cols": [0, 770], "out_dim": 128, "reg": 0.01, "line": 638},
+                   "move": {"cols": [0, 384], "out_dim": 64, "reg": 0.01, "line": 639},
+                   "board": {"cols": [384, 768], "out_dim": 64, "reg": 0.01, "line": 640}},
+    "pool_term": {"function": "b4_proto_term (lines 652-687)", "per_game_l2": true, "whitening_lam": 0.5,
+                  "whitening_lda": null, "candidate_without_usable_game": "row minimum of the others",
+                  "z": "st.zscore_rows(T, has_q)", "lines": [791, 793]},
+    "combine": {"weights": {"full": 0.5, "move": 0.3, "board": 0.2}, "outer": "st.zrows", "line": 794}
+  },
+  "C_rank_compat": {
+    "function": "s25_rank_compat_term (lines 726-744)",
+    "models": "tools/p25_forward.load_models(data/prereg25/models) (line 533)",
+    "standardisation": "results/prereg09/rank/p1e_map.npz mu_x, sd_x (line 532)",
+    "inputs": "both-side P1 means [N,2,770], counts, usable of every game of the pool's set; groups = candidates then questions (lines 728-734)",
+    "posterior": "softmax of lp (lines 735-737)",
+    "kernel": {"form": "exp(-(i-j)^2 / (2 sigma^2))", "sigma": 0.85, "lines": [741, 742, 797]},
+    "compat": "log(max(p_q K p_c^T, 1e-6)) (line 743)",
+    "z": "st.zscore_rows(compat, has_q) (line 744)"
+  },
+  "U1_combined": {
+    "formula": "st.csls(F_base + 9.0 * z_p1_multi + 2.5 * z_rk, k_base)",
+    "line": 813,
+    "w_p1_multi": 9.0,
+    "w_rank": 2.5,
+    "replaces_v27_p1_term": true,
+    "k": "v2-6's csls_k (E45.v26()['k'], line 755)",
+    "F_base": "BK.fuse_cfg(p, BK.e_term(p, emb, cfg), cfg) with v2-6's cfg (line 779)"
+  },
+  "A_colour_fill": {
+    "rule": "per colour: row z over candidates having that colour; candidates without it 0 (PLAN.md A; p38_backend._z_valid convention)",
+    "replaces": "tools/p06_style.py colour_terms lines 337-342 (row-minimum fill)",
+    "gemini_variant_not_used": "03_comp2_and_final_checks.py lines 909-929 (mean fill then z over all)"
+  },
+  "seam_targets_D": {
+    "pools": "D, seeds 100-109 (p36_eval.D_SEEDS), stored terms",
+    "vectors": "data/prereg43/emb_S0/V2_step_320000_raw_tta1/store_D.npz (v2-6's c*) (lines 758-759)",
+    "v26_base": 0.746777,
+    "v26_base_full": 0.7467766213119217,
+    "U1_combined": 0.756796,
+    "U1_combined_by_k": {"1": 0.5227, "2": 0.7714, "3": 0.8171, "5": 0.9159},
+    "tolerance": 1e-6,
+    "json_key": "Comp1_upgrades_verification.D_10pools_vs_v26"
+  },
+  "seam_target_E": {"v27_mean": 0.7035676497986656, "record": "results/prereg49/explore/eval.json per_pool.c49"},
+  "judge": {"pools": "E seeds 0-19", "adopt": "mean(A63 - v2-7) >= 0.01 and bootstrap(10000, seed 43) 95% low > 0 and higher in >= 18 of 20",
+            "bootstrap": "p42_eval.bootstrap"}
+}

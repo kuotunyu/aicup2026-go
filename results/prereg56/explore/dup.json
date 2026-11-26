@@ -1,0 +1,62 @@
+{
+ "distinct_full": 1000000,
+ "distinct_prefix60": 999854,
+ "rank_private": {
+  "examples": [],
+  "full_match": 0,
+  "full_match_same_colour": 0,
+  "games": 5000,
+  "prefix60_match": 0
+ },
+ "rank_public": {
+  "examples": [],
+  "full_match": 0,
+  "full_match_same_colour": 0,
+  "games": 5000,
+  "prefix60_match": 0
+ },
+ "training_games": 1000000,
+ "training_internal_dup_groups": 0,
+ "x_candidates2_private": {
+  "examples": [],
+  "full_match": 0,
+  "full_match_same_colour": 0,
+  "games": 6000,
+  "prefix60_match": 0
+ },
+ "x_candidates2_public": {
+  "examples": [],
+  "full_match": 0,
+  "full_match_same_colour": 0,
+  "games": 6000,
+  "prefix60_match": 0
+ },
+ "x_test2_private": {
+  "examples": [],
+  "full_match": 0,
+  "full_match_same_colour": 0,
+  "games": 1100,
+  "prefix60_match": 0
+ },
+ "x_test2_public": {
+  "examples": [],
+  "full_match": 0,
+  "full_match_same_colour": 0,
+  "games": 1100,
+  "prefix60_match": 0
+ },
+ "x_test_private": {
+  "examples": [],
+  "full_match": 0,
+  "full_match_same_colour": 0,
+  "games": 5000,
+  "prefix60_match": 0
+ },
+ "x_test_public": {
+  "examples": [],
+  "full_match": 0,
+  "full_match_same_colour": 0,
+  "games": 5000,
+  "prefix60_match": 0
+ }
+}

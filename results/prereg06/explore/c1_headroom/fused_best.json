@@ -1,0 +1,17 @@
+{
+ "terms": [
+  "base",
+  "joseki_own",
+  "style",
+  "n30",
+  "joseki"
+ ],
+ "weights": [
+  1.0,
+  0.75,
+  2.0,
+  0.75,
+  0.3325
+ ],
+ "post": "csls10"
+}

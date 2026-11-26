@@ -1,0 +1,25 @@
+{
+ "games": 400,
+ "usable_games": 400,
+ "counts_equal": true,
+ "max_abs_std_feature": 0.009569825109513985,
+ "max_abs_lp_p1": 0.005462575287179305,
+ "tolerances": {
+  "std_feature": 0.05,
+  "lp_p1": 0.04
+ },
+ "lp_review_line": 0.005,
+ "lp_above_review_line": true,
+ "bitwise_equal_means": false,
+ "problems": [],
+ "passed": true,
+ "lp_definition": "lp_P1TO = log_softmax(W z + b) per game with the frozen p1_map.npz, before the x 4",
+ "format": "c10-test08 gpu seam v1",
+ "mode": "real",
+ "created": "2026-11-04T10:54:26+00:00",
+ "seam_p1_sha256": "920a08ad10da9e95905f9e46ad6553b2f2609f8aacecbf7a950d20b971c0f2b6",
+ "reference": {
+  "val_seam_feats.npz": "0a7b9b0010192a4c7f3878e914f9e514a18cfa338d94dc8c49936b6b625b9318",
+  "p1_map.npz": "116923629b66198a79da06282aac9ca863acf77bf6a1e1f5d584b526fb54afb2"
+ }
+}

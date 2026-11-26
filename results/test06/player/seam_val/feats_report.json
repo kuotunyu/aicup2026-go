@@ -1,0 +1,89 @@
+{
+ "format": "c10-test06 feats v1",
+ "mode": "real",
+ "pool": "seam_val",
+ "what": "PREREG_06 5.2 feats: per-game v2 features (S2, JO, LDA64 with the frozen LDA_B / LDA_W) of the pool's candidate and question games, p06_player.MemStore as in the H6P apply",
+ "inputs": {
+  "questions_csv": {
+   "path": "data/local/player_val_questions.csv",
+   "sha256": "d893a559f175b6535dc0d5f749314408b110149462f6a78a1b8cf7e9332cd676"
+  },
+  "candidates_csv": {
+   "path": "data/local/player_val_candidates.csv",
+   "sha256": "7cd2897593ee9add20dce4ff5d4b0dcf8699b6d51a3f10950dc399a757dd3ad5"
+  }
+ },
+ "test02_inputs": null,
+ "frozen": {
+  "path": "results/prereg06/player/frozen_config.json",
+  "sha256_lf": "5e5c3b827782678bb3e985cd0caeada61e62951312ee1d6938bf4e331348bfc9",
+  "pinned": true,
+  "lda_sha256": {
+   "B": "ecfee95d0c7d8fdeb499ca9f89a8a6bb840e9a3cf0e999b1baa14ff78d69faa5",
+   "W": "e8bc63331a749bce83cc7cab8b7852bec70c6644f38fe89982f0dbbad581292d"
+  }
+ },
+ "n_candidates": 400,
+ "n_candidate_games": 40000,
+ "n_questions": 400,
+ "n_question_games": 4935,
+ "games": {
+  "candidate": {
+   "B": 20109,
+   "W": 19891,
+   "not_alternating_B": 0,
+   "not_alternating_W": 0,
+   "without_moves": 0
+  },
+  "question": {
+   "B": 2514,
+   "W": 2421,
+   "not_alternating_B": 0,
+   "not_alternating_W": 0,
+   "without_moves": 0
+  }
+ },
+ "out_of_vocabulary_tokens": {
+  "B": 0,
+  "W": 0
+ },
+ "output": {
+  "path": "data/test06/player/seam_val/feats.npz",
+  "sha256": "58481bca71e6572b021b0b2e054d725111b7df584320d64b4cb3182f2050715b",
+  "rows": 44935
+ },
+ "t1": {
+  "path": "results/test02/checks/player/t1.json",
+  "sha256_lf": "cc0ddcf72f857ed4c5ab335cf14e17a4747fe0c82e4fa6db73ffca76ec0c42cd",
+  "verdict": "PASS"
+ },
+ "q04_upload": {
+  "checked": true,
+  "entry_id": 2,
+  "sha256": "e87aaa91df9ddb3f5838b8ce18fd56715c6edaa55d6902de1ceaa0afc3d5bc79",
+  "uploaded_at": "2026-11-04T15:32:01+08:00"
+ },
+ "rerun": null,
+ "tools": {
+  "git_head": "96d23823ec3651985a7a0cf21a1b0e2934ea8426",
+  "files_sha256_lf": {
+   "tools/t06_player.py": "d1e48050f827495579fc22b5ceff9b4d8eba8f18ab471909436ceb4d16f3b0f6",
+   "tools/p06_style.py": "78beb8138c27853da70081e469e534508174265852a64ebada21e354ae72058a",
+   "tools/p06_sim.py": "21deeea1eb08b1d6580ba78c47505789f66dbdd10c8891973e14f523ef443eeb",
+   "tools/p06_player.py": "b25636878ee87ca828a9c65177965dc60466ac4e9aa348acd88785ca11075590",
+   "tools/p02_player_fuse.py": "cb1cc1a2ba626a80ed49e7ae8269715f1e123f33777b6ed135380dbd07b35d5b",
+   "tools/p02_player_open.py": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+   "tools/p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "tools/c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "tools/check_submission.py": "b5c7c300cca4fcd5b243e4579417453699777e99bd4aff88dcbf6805e9346144"
+  }
+ },
+ "env": {
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "executable": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\.venv\\Scripts\\python.exe"
+ },
+ "created": "2026-11-04T15:55:25+08:00",
+ "seconds": 45.6
+}

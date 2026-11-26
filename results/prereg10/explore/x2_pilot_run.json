@@ -1,0 +1,20 @@
+{
+ "what": "prereg10 x2 pilot extraction facts (from data/prereg10/tmp/p1pilot/run_log.jsonl)",
+ "games": 8000,
+ "players": 200,
+ "chunks": 40,
+ "failed_games": 0,
+ "positions_total_both_sides": 1775073,
+ "positions_per_game": 221.9,
+ "note_contention": "chunks 0-1 ran while another project's GPU job shared the 4090 (254 pos/s); the run yielded (STOP) and resumed when the GPU was free",
+ "uncontended_chunks": 38,
+ "uncontended_positions_per_s": 1011.6,
+ "uncontended_hours_for_pilot": 0.488,
+ "estimates_hours_at_uncontended_rate": {
+  "one_official_pool_45000_games_both_sides": 2.74,
+  "one_official_pool_player_side_only_approx_half": 1.37,
+  "public_plus_private_both_sides": 5.48,
+  "local_validation_pool_44935_games": 2.74,
+  "official_shape_mock_926_players_x_120_black_games": 6.77
+ }
+}

@@ -1,0 +1,641 @@
+{
+ "files": {
+  "1D": {
+   "header": [
+    "player_id",
+    "game_id",
+    "rank",
+    "color",
+    "sgf_content"
+   ],
+   "header_ok": true,
+   "rows": 100000,
+   "rank_label_mismatch": 0,
+   "bad_colour_values": 0,
+   "duplicate_game_ids": 0,
+   "unique_players": 433,
+   "games_per_player": {
+    "p0": 1,
+    "p10": 30,
+    "p25": 47,
+    "p50": 87,
+    "p75": 319,
+    "p90": 636,
+    "p100": 1505
+   },
+   "players_with_at_least": {
+    "5": 432,
+    "20": 430,
+    "100": 205,
+    "200": 152
+   },
+   "colour_counts": {
+    "B": 50000,
+    "W": 50000
+   },
+   "colour_runs_in_row_order": 2,
+   "players_with_both_colours": 423,
+   "board_sizes": {
+    "19": 100000
+   },
+   "sgf_properties_share": {
+    "SZ": 1.0,
+    "W": 1.0,
+    "B": 1.0
+   },
+   "moves_per_game": {
+    "p0": 100,
+    "p10": 151,
+    "p25": 187,
+    "p50": 230,
+    "p75": 262,
+    "p90": 286,
+    "p100": 382
+   },
+   "games_under_20_moves": 0,
+   "pass_moves_total": 0,
+   "non_alternating_games": 0,
+   "first_move_colour": {
+    "B": 100000
+   },
+   "empty_sgf": 0
+  },
+  "2D": {
+   "header": [
+    "player_id",
+    "game_id",
+    "rank",
+    "color",
+    "sgf_content"
+   ],
+   "header_ok": true,
+   "rows": 100000,
+   "rank_label_mismatch": 0,
+   "bad_colour_values": 0,
+   "duplicate_game_ids": 0,
+   "unique_players": 610,
+   "games_per_player": {
+    "p0": 6,
+    "p10": 23,
+    "p25": 34,
+    "p50": 76,
+    "p75": 221,
+    "p90": 410,
+    "p100": 1467
+   },
+   "players_with_at_least": {
+    "5": 610,
+    "20": 572,
+    "100": 265,
+    "200": 171
+   },
+   "colour_counts": {
+    "B": 50000,
+    "W": 50000
+   },
+   "colour_runs_in_row_order": 2,
+   "players_with_both_colours": 601,
+   "board_sizes": {
+    "19": 100000
+   },
+   "sgf_properties_share": {
+    "SZ": 1.0,
+    "W": 1.0,
+    "B": 1.0
+   },
+   "moves_per_game": {
+    "p0": 100,
+    "p10": 148,
+    "p25": 184,
+    "p50": 227,
+    "p75": 261,
+    "p90": 285,
+    "p100": 426
+   },
+   "games_under_20_moves": 0,
+   "pass_moves_total": 0,
+   "non_alternating_games": 0,
+   "first_move_colour": {
+    "B": 100000
+   },
+   "empty_sgf": 0
+  },
+  "3D": {
+   "header": [
+    "player_id",
+    "game_id",
+    "rank",
+    "color",
+    "sgf_content"
+   ],
+   "header_ok": true,
+   "rows": 100000,
+   "rank_label_mismatch": 0,
+   "bad_colour_values": 0,
+   "duplicate_game_ids": 0,
+   "unique_players": 618,
+   "games_per_player": {
+    "p0": 2,
+    "p10": 22,
+    "p25": 34,
+    "p50": 65,
+    "p75": 203,
+    "p90": 418,
+    "p100": 1416
+   },
+   "players_with_at_least": {
+    "5": 617,
+    "20": 568,
+    "100": 267,
+    "200": 157
+   },
+   "colour_counts": {
+    "B": 50000,
+    "W": 50000
+   },
+   "colour_runs_in_row_order": 2,
+   "players_with_both_colours": 602,
+   "board_sizes": {
+    "19": 100000
+   },
+   "sgf_properties_share": {
+    "SZ": 1.0,
+    "W": 1.0,
+    "B": 1.0
+   },
+   "moves_per_game": {
+    "p0": 100,
+    "p10": 144,
+    "p25": 179,
+    "p50": 222,
+    "p75": 258,
+    "p90": 284,
+    "p100": 398
+   },
+   "games_under_20_moves": 0,
+   "pass_moves_total": 0,
+   "non_alternating_games": 0,
+   "first_move_colour": {
+    "B": 100000
+   },
+   "empty_sgf": 0
+  },
+  "4D": {
+   "header": [
+    "player_id",
+    "game_id",
+    "rank",
+    "color",
+    "sgf_content"
+   ],
+   "header_ok": true,
+   "rows": 100000,
+   "rank_label_mismatch": 0,
+   "bad_colour_values": 0,
+   "duplicate_game_ids": 0,
+   "unique_players": 640,
+   "games_per_player": {
+    "p0": 9,
+    "p10": 20,
+    "p25": 31,
+    "p50": 61,
+    "p75": 190,
+    "p90": 433,
+    "p100": 1800
+   },
+   "players_with_at_least": {
+    "5": 640,
+    "20": 576,
+    "100": 253,
+    "200": 152
+   },
+   "colour_counts": {
+    "B": 50000,
+    "W": 50000
+   },
+   "colour_runs_in_row_order": 2,
+   "players_with_both_colours": 629,
+   "board_sizes": {
+    "19": 100000
+   },
+   "sgf_properties_share": {
+    "SZ": 1.0,
+    "W": 1.0,
+    "B": 1.0
+   },
+   "moves_per_game": {
+    "p0": 100,
+    "p10": 142,
+    "p25": 177,
+    "p50": 221,
+    "p75": 259,
+    "p90": 285,
+    "p100": 396
+   },
+   "games_under_20_moves": 0,
+   "pass_moves_total": 0,
+   "non_alternating_games": 0,
+   "first_move_colour": {
+    "B": 100000
+   },
+   "empty_sgf": 0
+  },
+  "5D": {
+   "header": [
+    "player_id",
+    "game_id",
+    "rank",
+    "color",
+    "sgf_content"
+   ],
+   "header_ok": true,
+   "rows": 100000,
+   "rank_label_mismatch": 0,
+   "bad_colour_values": 0,
+   "duplicate_game_ids": 0,
+   "unique_players": 658,
+   "games_per_player": {
+    "p0": 3,
+    "p10": 23,
+    "p25": 36,
+    "p50": 64,
+    "p75": 201,
+    "p90": 407,
+    "p100": 1275
+   },
+   "players_with_at_least": {
+    "5": 656,
+    "20": 619,
+    "100": 269,
+    "200": 166
+   },
+   "colour_counts": {
+    "B": 50000,
+    "W": 50000
+   },
+   "colour_runs_in_row_order": 2,
+   "players_with_both_colours": 649,
+   "board_sizes": {
+    "19": 100000
+   },
+   "sgf_properties_share": {
+    "SZ": 1.0,
+    "W": 1.0,
+    "B": 1.0
+   },
+   "moves_per_game": {
+    "p0": 100,
+    "p10": 143,
+    "p25": 176,
+    "p50": 221,
+    "p75": 261,
+    "p90": 289,
+    "p100": 397
+   },
+   "games_under_20_moves": 0,
+   "pass_moves_total": 0,
+   "non_alternating_games": 0,
+   "first_move_colour": {
+    "B": 100000
+   },
+   "empty_sgf": 0
+  },
+  "6D": {
+   "header": [
+    "player_id",
+    "game_id",
+    "rank",
+    "color",
+    "sgf_content"
+   ],
+   "header_ok": true,
+   "rows": 100000,
+   "rank_label_mismatch": 0,
+   "bad_colour_values": 0,
+   "duplicate_game_ids": 0,
+   "unique_players": 711,
+   "games_per_player": {
+    "p0": 2,
+    "p10": 24,
+    "p25": 34,
+    "p50": 63,
+    "p75": 174,
+    "p90": 364,
+    "p100": 1442
+   },
+   "players_with_at_least": {
+    "5": 708,
+    "20": 676,
+    "100": 268,
+    "200": 157
+   },
+   "colour_counts": {
+    "B": 50000,
+    "W": 50000
+   },
+   "colour_runs_in_row_order": 2,
+   "players_with_both_colours": 690,
+   "board_sizes": {
+    "19": 100000
+   },
+   "sgf_properties_share": {
+    "SZ": 1.0,
+    "W": 1.0,
+    "B": 1.0
+   },
+   "moves_per_game": {
+    "p0": 100,
+    "p10": 138,
+    "p25": 170,
+    "p50": 213,
+    "p75": 258,
+    "p90": 287,
+    "p100": 383
+   },
+   "games_under_20_moves": 0,
+   "pass_moves_total": 0,
+   "non_alternating_games": 0,
+   "first_move_colour": {
+    "B": 100000
+   },
+   "empty_sgf": 0
+  },
+  "A": {
+   "header": [
+    "player_id",
+    "game_id",
+    "rank",
+    "color",
+    "sgf_content"
+   ],
+   "header_ok": true,
+   "rows": 100000,
+   "rank_label_mismatch": 0,
+   "bad_colour_values": 0,
+   "duplicate_game_ids": 0,
+   "unique_players": 1582,
+   "games_per_player": {
+    "p0": 1,
+    "p10": 7,
+    "p25": 12,
+    "p50": 24,
+    "p75": 83,
+    "p90": 172,
+    "p100": 924
+   },
+   "players_with_at_least": {
+    "5": 1541,
+    "20": 881,
+    "100": 340,
+    "200": 116
+   },
+   "colour_counts": {
+    "B": 50000,
+    "W": 50000
+   },
+   "colour_runs_in_row_order": 2,
+   "players_with_both_colours": 1539,
+   "board_sizes": {
+    "19": 100000
+   },
+   "sgf_properties_share": {
+    "SZ": 1.0,
+    "W": 1.0,
+    "B": 1.0
+   },
+   "moves_per_game": {
+    "p0": 100,
+    "p10": 151,
+    "p25": 189,
+    "p50": 230,
+    "p75": 261,
+    "p90": 285,
+    "p100": 417
+   },
+   "games_under_20_moves": 0,
+   "pass_moves_total": 0,
+   "non_alternating_games": 0,
+   "first_move_colour": {
+    "B": 100000
+   },
+   "empty_sgf": 0
+  },
+  "B": {
+   "header": [
+    "player_id",
+    "game_id",
+    "rank",
+    "color",
+    "sgf_content"
+   ],
+   "header_ok": true,
+   "rows": 100000,
+   "rank_label_mismatch": 0,
+   "bad_colour_values": 0,
+   "duplicate_game_ids": 0,
+   "unique_players": 1048,
+   "games_per_player": {
+    "p0": 1,
+    "p10": 10,
+    "p25": 16,
+    "p50": 37,
+    "p75": 138,
+    "p90": 263,
+    "p100": 674
+   },
+   "players_with_at_least": {
+    "5": 1037,
+    "20": 706,
+    "100": 324,
+    "200": 172
+   },
+   "colour_counts": {
+    "B": 50000,
+    "W": 50000
+   },
+   "colour_runs_in_row_order": 2,
+   "players_with_both_colours": 1030,
+   "board_sizes": {
+    "19": 100000
+   },
+   "sgf_properties_share": {
+    "SZ": 1.0,
+    "W": 1.0,
+    "B": 1.0
+   },
+   "moves_per_game": {
+    "p0": 100,
+    "p10": 154,
+    "p25": 195,
+    "p50": 234,
+    "p75": 263,
+    "p90": 285,
+    "p100": 380
+   },
+   "games_under_20_moves": 0,
+   "pass_moves_total": 0,
+   "non_alternating_games": 0,
+   "first_move_colour": {
+    "B": 100000
+   },
+   "empty_sgf": 0
+  },
+  "C": {
+   "header": [
+    "player_id",
+    "game_id",
+    "rank",
+    "color",
+    "sgf_content"
+   ],
+   "header_ok": true,
+   "rows": 100000,
+   "rank_label_mismatch": 0,
+   "bad_colour_values": 0,
+   "duplicate_game_ids": 0,
+   "unique_players": 817,
+   "games_per_player": {
+    "p0": 5,
+    "p10": 13,
+    "p25": 20,
+    "p50": 45,
+    "p75": 163,
+    "p90": 317,
+    "p100": 1545
+   },
+   "players_with_at_least": {
+    "5": 817,
+    "20": 624,
+    "100": 297,
+    "200": 174
+   },
+   "colour_counts": {
+    "B": 50000,
+    "W": 50000
+   },
+   "colour_runs_in_row_order": 2,
+   "players_with_both_colours": 809,
+   "board_sizes": {
+    "19": 100000
+   },
+   "sgf_properties_share": {
+    "SZ": 1.0,
+    "W": 1.0,
+    "B": 1.0
+   },
+   "moves_per_game": {
+    "p0": 100,
+    "p10": 157,
+    "p25": 198,
+    "p50": 234,
+    "p75": 262,
+    "p90": 284,
+    "p100": 445
+   },
+   "games_under_20_moves": 0,
+   "pass_moves_total": 0,
+   "non_alternating_games": 0,
+   "first_move_colour": {
+    "B": 100000
+   },
+   "empty_sgf": 0
+  },
+  "D": {
+   "header": [
+    "player_id",
+    "game_id",
+    "rank",
+    "color",
+    "sgf_content"
+   ],
+   "header_ok": true,
+   "rows": 100000,
+   "rank_label_mismatch": 0,
+   "bad_colour_values": 0,
+   "duplicate_game_ids": 0,
+   "unique_players": 890,
+   "games_per_player": {
+    "p0": 5,
+    "p10": 15,
+    "p25": 22,
+    "p50": 44,
+    "p75": 132,
+    "p90": 298,
+    "p100": 965
+   },
+   "players_with_at_least": {
+    "5": 890,
+    "20": 719,
+    "100": 278,
+    "200": 159
+   },
+   "colour_counts": {
+    "B": 50000,
+    "W": 50000
+   },
+   "colour_runs_in_row_order": 2,
+   "players_with_both_colours": 881,
+   "board_sizes": {
+    "19": 100000
+   },
+   "sgf_properties_share": {
+    "SZ": 1.0,
+    "W": 1.0,
+    "B": 1.0
+   },
+   "moves_per_game": {
+    "p0": 100,
+    "p10": 156,
+    "p25": 198,
+    "p50": 235,
+    "p75": 263,
+    "p90": 284,
+    "p100": 445
+   },
+   "games_under_20_moves": 0,
+   "pass_moves_total": 0,
+   "non_alternating_games": 0,
+   "first_move_colour": {
+    "B": 100000
+   },
+   "empty_sgf": 0
+  }
+ },
+ "overall": {
+  "files_found": [
+   "train_1D.csv",
+   "train_2D.csv",
+   "train_3D.csv",
+   "train_4D.csv",
+   "train_5D.csv",
+   "train_6D.csv",
+   "train_A.csv",
+   "train_B.csv",
+   "train_C.csv",
+   "train_D.csv"
+  ],
+  "levels_missing": [],
+  "total_rows": 1000000,
+  "unique_players": 8007,
+  "players_in_more_than_one_rank": 0,
+  "games_per_player": {
+   "p0": 1,
+   "p10": 13,
+   "p25": 23,
+   "p50": 51,
+   "p75": 155,
+   "p90": 327,
+   "p100": 1800
+  },
+  "players_with_at_least": {
+   "5": 7948,
+   "20": 6371,
+   "100": 2766,
+   "200": 1576
+  },
+  "game_ids_used_in_more_than_one_file": 100000,
+  "unique_sgf": 1000000,
+  "duplicate_sgf_groups": 0,
+  "duplicate_sgf_kinds": {}
+ }
+}

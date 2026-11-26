@@ -1,0 +1,95 @@
+{
+ "format": "c10-prereg34 explore stage0b v1",
+ "created": "2026-11-10T23:08:04+00:00",
+ "smoke": false,
+ "code": {
+  "head": "30ada9f40463e392baf09c4bd29dabeb8b8c83b5",
+  "dirty": "",
+  "sha256_lf": {
+   "results/prereg09/rank/check_report.json": "3dfe765d1b7aa1c7c9f33ac8c0d6f89e44a5abf0141ca1195fdaa0fc71fe00a0",
+   "results/prereg09/rank/frozen_config.json": "50d38d2787c94569d88ed87a482e872ed64be2d1d20e4f57ffbb07a216663ff5",
+   "results/prereg09/rank/p1e_map.npz": "b5a9e33023a48099cbbafa87e5c92a081b272a73402dbd7d0fba4c70323be5eb",
+   "results/prereg12/explore/finetune/ft_eval.py": "2e3302cad19ab4c6b3f4242278a7d9bd751cdfbd92b4672696a6af46860b8021",
+   "results/prereg19/explore/p19_lib.py": "bbdc4225687777b732df1275277c4f4986f77225b935808f02cc7aefd4256376",
+   "results/prereg19/explore/p19_train.py": "9493ef1367b01495769a40ab792dc2b57208a9555de25a8f118147501b7b10ed",
+   "results/prereg25/explore/p25_lib.py": "a5c2454dd69ff971e3f5fa29636b231b9fda0568704b62d78cc832b282ff774d",
+   "results/prereg25/explore/p25_train.py": "01a9bd738060ff7a25123503c7369ac692f69220c157b2817249c7aa9b87a23f",
+   "results/prereg25/explore/train_record.json": "c5197c54bbbc9c1981fbdbdf5912d556811bfa7ce9c9ae0a093f70480cb08d63",
+   "results/prereg25/rank/s25_seed0.npz": "733c69d050988e082d04305dd33d8ef2af26bf4211b8f539631ca6481d4797b2",
+   "results/prereg25/rank/s25_seed1.npz": "87daa77cef4da9df5caa8a234cad5237c083b4d71022c1d19d938724f97d3175",
+   "results/prereg25/rank/s25_seed2.npz": "790d6145d293c5cd9fb955afb35ed01fae0e9c5ec4fe3003ec162f4c71da8450",
+   "results/prereg29/explore/p29_lib.py": "d618af25c0e3c5d95ed7f55156d7e69186e76f249d5004d46f38b02a1eb5b4ce",
+   "results/prereg29/explore/p29_train.py": "d3b0b0ea3eb269a5673a69585e387e6fafbb33bf1e46cc64ffcf7c108873e1db",
+   "results/prereg31/explore/ram_watch.py": "b1b4e92657b342c9f0e9861bfd6e15e5dd21d5ea1f82ad7e1fb84badffcd94bc",
+   "results/prereg34/explore/PLAN.md": "8ed8333333f29adf378fac169575307423b9df1e7b1d99815fe16fc580fc884e",
+   "results/prereg34/explore/align_record.json": "7afde06c29d6b9855ffb3cc3d872ada8ad0e909aa5fbbc908350fca74a93cc42",
+   "results/prereg34/explore/p34_align.py": "1bfe28c224b1f7ca93ae5764c78b12268b2314a6323b0b4a768f3f2a21d121a6",
+   "results/prereg34/explore/p34_ogs.py": "57478dd0b692186f3ec7a4572255006add2daac77bb97c47ea2c6c6ce8c0bbe5",
+   "results/prereg34/explore/p34_prep.py": "1bf84383a135bf20a351eba0fcbf6396bae7dcd4a3d645465d6bc65c545b0fa2",
+   "results/prereg34/explore/p34_train.py": "d2072007272f124a8865d5304519d0459450621da16e9a70f3b2841d85f637e1",
+   "results/prereg34/explore/run_train.sh": "4dd267f156382ff233f5eea7b9d81f0643c790ad3f8489b6a2821f66d5294979",
+   "tools/c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "tools/decide.py": "cf66daf1231b3c2bd60c5b6484245627e133bd0f1cd7ff5557e978da3801d0e3",
+   "tools/p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "tools/p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+   "tools/p02_rank_opening.py": "a4195fece41aa3d50ecda82d1af93d9c04f49df5fd2157d69dd8a488dea93463",
+   "tools/p02_rank_pseudo.py": "16e5bfdfb2995874ddb11bde1f7a9e786a478b14443453f675a4fb3a480bb098",
+   "tools/p03_rank_fuse.py": "77abd7479d26f0f647a258b4a6d5d2e517808b4c187184f14ff599d70b8aca2f",
+   "tools/p04_rank_fuse.py": "c3a647b09c46760239d5b2ee274d56f7231987354fc1c1f6c3ff40102f4b26a2",
+   "tools/p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142",
+   "tools/p08_rank_fuse.py": "64f42bd956f7808947e0c85abe1f9fa60d9958cb8e769fc889c6283c188d481e",
+   "tools/p09_forward.py": "67124e0e534f575493aa8d72dbd2582335e4166718448e36bb5e105c61cb185d",
+   "tools/p09_map.py": "fff3ffe6ae6b8c32163803a6d307fa184c2857af5d6e1505e3c931a4e8831566",
+   "tools/p09_rank_fuse.py": "1486f7ce102450c1ed0b051234537286f6f9a0b38f7aaaf182a38458e4ddfb8b"
+  }
+ },
+ "smoke_note": null,
+ "what": "PLAN.md 5: GO iff mean over seeds 0-2 of the best held-out NLL, S34 - S25 (same seed) <= -0.010 and S34 lower in all 3 seeds; S25 = prereg25 train_record.json; pure function of the committed records; judged once",
+ "train_record": "results/prereg34/explore/train_record.json",
+ "train_record_sha256_lf": "ef9cc7c04274f4068c85c3741c5ec4a22230ed11c067acc40d6a796aeecfe5c1",
+ "train_record_checks": {
+  "format": true,
+  "smoke_flag": true,
+  "code_clean": true,
+  "seam_r_ok": true,
+  "seam_r_applicable": true,
+  "seam_p_ok": true,
+  "settings": true,
+  "seeds_present": true,
+  "port_checks": true,
+  "same_players_as_prereg25": true
+ },
+ "control_source": "results/prereg25/explore/train_record.json seeds.<s>.best_holdout_nll",
+ "holdout_questions": {
+  "5": 1000,
+  "10": 1000,
+  "15": 1000,
+  "20": 1000
+ },
+ "seeds": [
+  0,
+  1,
+  2
+ ],
+ "s34_best_holdout_nll": [
+  1.0342518608114388,
+  1.023891936671389,
+  1.0177141027678045
+ ],
+ "s25_best_holdout_nll": [
+  1.0073546251903926,
+  1.00711480947954,
+  1.004849481311173
+ ],
+ "pair_diff_s34_minus_s25": [
+  0.02689723562104618,
+  0.016777127191849095,
+  0.012864621456631475
+ ],
+ "mean_diff_s34_minus_s25": 0.01884632808984225,
+ "threshold_mean_diff": -0.01,
+ "condition_mean": false,
+ "seeds_s34_lower": 0,
+ "condition_all_lower": false,
+ "decision": "NO-GO"
+}

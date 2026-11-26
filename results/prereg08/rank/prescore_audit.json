@@ -1,0 +1,461 @@
+{
+ "format": "c10-prereg08 prescore_audit v1",
+ "what": "PREREG_08 2.7 pre-scoring audit of the validation apply outputs (independent agent; no labels, no scores)",
+ "outputs_sha256": {
+  "rank_val_probs.csv": "7a513367147227e3631bfb7bad36064f3e90fffb6ee358716e389698ce1ccd97",
+  "pred_A.csv": "e24699e989543bfbfc73b1b710677c93f018747193a9ba18d89fc004cdd17753",
+  "pred_B.csv": "b02d4f947910726fa25c292e9798e7407b1e802e2fed080d843f56b9beb48872",
+  "decide_summary.json": "001639061aec32504530a279192942e58952aa2659a6142c425b2608860e52df"
+ },
+ "outputs_sha_rule": "as apply_report.json / p08_rank_fuse.pin_sha: .csv/.json SHA-256 with CRLF folded to LF; the three .csv files have no CRLF (raw = LF SHA); decide_summary.json is CRLF in the working tree (decide.py writes text mode on Windows; index LF), raw working-file SHA c8da2dcb4a29d8360706d0269519b446cb54dac51ed1fbf1d3a9f8244fb2f854",
+ "inputs_sha256": {
+  "val_p1.npz": "11b1d38cc116401d44825883b864bf635b2d44e109baa17115fb4093055da4e0",
+  "p1_map.npz": "116923629b66198a79da06282aac9ca863acf77bf6a1e1f5d584b526fb54afb2",
+  "val_hs.npz": "ef2067e8cb633f521c205a09aa4638c79fef3ba0b4e90e6a54bdc046e5a5550f"
+ },
+ "inputs_sha_rule": "raw-byte SHA-256 of results/prereg08/feat/val_p1.npz, results/prereg08/rank/p1_map.npz, results/prereg07/hs/val_hs.npz (same keys and values as apply_report.json inputs_sha256)",
+ "program_errors_affecting_Q08": [],
+ "audited_commits": {
+  "freeze": "3df543c",
+  "validation_features": "2200013",
+  "apply": "2791f91"
+ },
+ "label_discipline": "data/local/rank_val_answers.csv and every answers / labels file never opened, listed or hashed; tools/score.py never run; no score or accuracy computed; results/score_ledger.csv and score_*.json not read. Only data/local/rank_val_questions.csv read (question_id, num_games, sgf_i, color_i): own regex move counts, slot / colour check, and check_submission.py --questions; p07_rank_fuse.q02_validation / check_question_file read the same file.",
+ "checks_performed": {
+  "sha_bindings_timing_chunks": {
+   "commit_exists_3df543c": {
+    "ok": true,
+    "detail": "2026-10-08T22:19:14+08:00 PREREG_08 step 5: tune PASSED (judged once): inner eval Q02H 0.6243 -> Q08 0.6986, G1 +0.0743,"
+   },
+   "commit_exists_2200013": {
+    "ok": true,
+    "detail": "2026-10-08T23:24:00+08:00 PREREG_08 step 6: validation P1 features on the 4090 (19,156 games, 0 failed, 4,287,074 positi"
+   },
+   "commit_exists_2791f91": {
+    "ok": true,
+    "detail": "2026-10-08T23:24:54+08:00 PREREG_08 step 7: apply (Q02/Q02H byte reproductions pass; hand-count cross-check mismatches 0"
+   },
+   "freeze_commit_is_3df543c": {
+    "ok": true,
+    "detail": {
+     "frozen_config": "3df543c",
+     "p1_map": "3df543c",
+     "time": "2026-10-08T22:19:14+08:00",
+     "val_report_records": "2026-10-08T22:19:14+08:00"
+    }
+   },
+   "only_commit_of_val_p1.npz_is_2200013": {
+    "ok": true,
+    "detail": [
+     "2200013"
+    ]
+   },
+   "only_commit_of_val_seam_feats.npz_is_2200013": {
+    "ok": true,
+    "detail": [
+     "2200013"
+    ]
+   },
+   "only_commit_of_val_report.json_is_2200013": {
+    "ok": true,
+    "detail": [
+     "2200013"
+    ]
+   },
+   "apply_outputs_only_commit_2791f91": {
+    "ok": true,
+    "detail": {
+     "rank_val_probs.csv": [
+      "2791f91"
+     ],
+     "pred_A.csv": [
+      "2791f91"
+     ],
+     "pred_B.csv": [
+      "2791f91"
+     ],
+     "decide_summary.json": [
+      "2791f91"
+     ],
+     "check_submission.txt": [
+      "2791f91"
+     ],
+     "val_lp_p1.npz": [
+      "2791f91"
+     ],
+     "apply_report.json": [
+      "2791f91"
+     ]
+    }
+   },
+   "worktree_clean_results_tools": {
+    "ok": true
+   },
+   "val_started_after_freeze_commit": {
+    "ok": true,
+    "detail": {
+     "freeze_commit": "2026-10-08T22:19:14+08:00",
+     "first_chunk_started_utc": "2026-10-08T14:22:45+00:00"
+    }
+   },
+   "chunks_96_listed": {
+    "ok": true,
+    "detail": {
+     "listed": 96,
+     "on_disk": 96
+    }
+   },
+   "chunks_sha_match_val_report": {
+    "ok": true
+   },
+   "chunk_metadata_registered": {
+    "ok": true
+   },
+   "chunks_created_after_freeze_commit": {
+    "ok": true,
+    "detail": {
+     "earliest_start_from_created_minus_seconds": "2026-10-08T14:22:45.574625+00:00"
+    }
+   },
+   "chunk_refs_0_to_n_in_order": {
+    "ok": true
+   },
+   "val_p1_sha_eq_val_report_apply": {
+    "ok": true,
+    "detail": "11b1d38cc116401d44825883b864bf635b2d44e109baa17115fb4093055da4e0"
+   },
+   "val_seam_sha_eq_val_report_apply": {
+    "ok": true,
+    "detail": "0a7b9b0010192a4c7f3878e914f9e514a18cfa338d94dc8c49936b6b625b9318"
+   },
+   "val_report_sha_eq_apply": {
+    "ok": true,
+    "detail": "2ce9e86f8e639217c38814541f7d1bfb083b609ac194b5e19c8c38c60e653535"
+   },
+   "frozen_config_sha_eq_apply_and_val_report": {
+    "ok": true,
+    "detail": "421bbeb4524bed8ccf73babd58cac6b16c82f45b1aa57acef2e55bd52be0ba70"
+   },
+   "p1_map_sha_eq_frozen_apply": {
+    "ok": true,
+    "detail": "116923629b66198a79da06282aac9ca863acf77bf6a1e1f5d584b526fb54afb2"
+   },
+   "val_hs_sha_eq_apply_and_p07_pin": {
+    "ok": true,
+    "detail": "ef2067e8cb633f521c205a09aa4638c79fef3ba0b4e90e6a54bdc046e5a5550f"
+   },
+   "design_records_sha_eq_frozen": {
+    "ok": true
+   },
+   "tools_now_eq_frozen": {
+    "ok": true,
+    "detail": {
+     "tools/p08_p1.py": "a10c77c4bd97472b464f39080816090f0f64986195384b28e1d95dfc76e6677f",
+     "tools/p08_rank_fuse.py": "64f42bd956f7808947e0c85abe1f9fa60d9958cb8e769fc889c6283c188d481e",
+     "results/prereg07/explore/pilot_humansl/hs_lib.py": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+     "results/prereg07/explore/pilot_humansl/pilot_run.py": "b0d127fd1d5a83af5b17ec3df1dccc85d94b11c3479d33cac07448a3796a3936",
+     "results/prereg07/explore/pilot_humansl/pilot_fuse.py": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+     "results/prereg05/explore/u1/u1_lib.py": "225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7",
+     "results/prereg08/p1/p1_lib.py": "062600168326f9eecd4ec1073e54881c475f8f276e376164eab20d373bbff511",
+     "results/prereg08/p1/p1_extract.py": "2ee8eb127150e672b62bcb30b70c4fac46b8cd6e32c7e4eb19d54f746a6e3f9c",
+     "results/prereg08/p1/p1_fuse.py": "ad356c8ca9f26e1e761677afa07b5aa369ca31e5318f61eb6a6cbda33b970953",
+     "results/prereg08/p1/p1_plan.json": "0cd46bf90c764cae3824f5906e72e13336ab7276ef5fa7edb2ec6831911b228d",
+     "results/prereg08/p2/p2_sets.py": "98bad3d85a32e80c065226b0cc8cd1065b423cdb39dce89829a54b0cbf381c8f",
+     "tools/p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142",
+     "tools/p07_hs.py": "b27ea371bdc1477558effb9ca86c540805dcced971d983226e15fb5e19b7b8dc"
+    }
+   },
+   "tools_now_eq_val_report": {
+    "ok": true
+   },
+   "tools_now_eq_apply": {
+    "ok": true
+   },
+   "p08_p1_eq_chunk_tool_sha": {
+    "ok": true
+   },
+   "tools_in_freeze_commit_tree_eq_now": {
+    "ok": true
+   },
+   "apply_tool_git_head_2200013": {
+    "ok": true
+   },
+   "val_keys_sha": {
+    "ok": true
+   },
+   "val_p1_keys_eq_val_keys": {
+    "ok": true
+   },
+   "val_p1_eq_chunks": {
+    "ok": true
+   },
+   "seam_feats_eq_first_400_of_chunks": {
+    "ok": true
+   },
+   "no_failed_no_zero_target": {
+    "ok": true,
+    "detail": {
+     "failed": 0,
+     "no_target": 0,
+     "no_move": 0,
+     "no_opponent_moves": 0
+    }
+   },
+   "question_file_columns": {
+    "ok": true
+   },
+   "question_file_slots_eq_val_keys": {
+    "ok": true,
+    "detail": 19156
+   },
+   "sgf_move_counts_eq_p1": {
+    "ok": true,
+    "detail": {
+     "total_mismatch": 0,
+     "target_mismatch": 0,
+     "opponent_mismatch": 0
+    }
+   },
+   "p1_map_format": {
+    "ok": true,
+    "detail": {
+     "lambda": 0.001,
+     "probe_used": "P1+P2"
+    }
+   },
+   "lp_P1TO_my_vs_apply": {
+    "ok": true,
+    "detail": {
+     "max_abs_diff": 0.0,
+     "bit_equal": true
+    }
+   },
+   "val_lp_p1_meta": {
+    "ok": true
+   },
+   "val_lp_usable_eq_parsed_and_p1": {
+    "ok": true,
+    "detail": {
+     "unusable": 0,
+     "unparsed": 0
+    }
+   },
+   "questions_1589_contiguous": {
+    "ok": true
+   }
+  },
+  "fusion_reproductions_decide_formats": {
+   "tool_q02_seam_passed": {
+    "ok": true,
+    "detail": {
+     "raw_equal": true,
+     "lf_equal": true,
+     "reference_sha256_lf": "3c7ab658dc558ce8c6aefdd7b0747de1a60de575d151e9eee96ca6775f442e5c",
+     "computed_sha256": "3c7ab658dc558ce8c6aefdd7b0747de1a60de575d151e9eee96ca6775f442e5c",
+     "passed": true
+    }
+   },
+   "question_order_eq": {
+    "ok": true
+   },
+   "pool_matrix_eq_my_groups": {
+    "ok": true,
+    "detail": {
+     "questions_ok": 1589
+    }
+   },
+   "basis_shape_and_eq_07": {
+    "ok": true,
+    "detail": [
+     10,
+     9
+    ]
+   },
+   "frozen_theta_layout": {
+    "ok": true,
+    "detail": {
+     "w": {
+      "OP": 1.1651053556861017,
+      "O4": 3.023118556668115,
+      "SWA": 0.4408620509030945,
+      "SWB": 0.0,
+      "HS": 0.0,
+      "P1TO": 4.0
+     }
+    }
+   },
+   "frozen_p1_scale_4_and_combo": {
+    "ok": true
+   },
+   "q02_my_fusion_vs_prereg04_probs": {
+    "ok": true,
+    "detail": {
+     "max_abs_diff": 1.1102230246251565e-16
+    }
+   },
+   "q02_tool_bytes_sha_eq_prereg04_lf": {
+    "ok": true
+   },
+   "E_HS_my_vs_pooled": {
+    "ok": true,
+    "detail": {
+     "max_abs_diff": 7.105427357601002e-15
+    }
+   },
+   "q02h_my_fusion_vs_prereg07_probs": {
+    "ok": true,
+    "detail": {
+     "max_abs_diff": 7.771561172376096e-16
+    }
+   },
+   "q02h_tool_bytes_eq_prereg07_file": {
+    "ok": true,
+    "detail": {
+     "sha": "6ae2db6025a903eb5c58af9418dc203c0b6e84dd664049f85dfa850e57dc28c1",
+     "raw_file_sha": "6ae2db6025a903eb5c58af9418dc203c0b6e84dd664049f85dfa850e57dc28c1"
+    }
+   },
+   "E_HS_my_vs_apply_core": {
+    "ok": true
+   },
+   "rank_val_probs_layout": {
+    "ok": true,
+    "detail": {
+     "header": [
+      "question_id",
+      "n_games",
+      "n_parsed",
+      "p_D",
+      "p_C",
+      "p_B",
+      "p_A",
+      "p_1D",
+      "p_2D",
+      "p_3D",
+      "p_4D",
+      "p_5D",
+      "p_6D"
+     ],
+     "max_rowsum_err": 4.440892098500626e-16
+    }
+   },
+   "Q08_my_fusion_x4_once_vs_rank_val_probs": {
+    "ok": true,
+    "detail": {
+     "max_abs_diff_scale4": 1.27675647831893e-15,
+     "max_abs_diff_if_scale1": 0.5521591075375447,
+     "max_abs_diff_if_scale16": 0.5798363333376805,
+     "w_P1TO": 4.0,
+     "effective_coefficient_on_mean_lp": 16.0
+    }
+   },
+   "Q08_my_csv_bytes_record": {
+    "ok": true,
+    "detail": {
+     "bytes_equal": false
+    }
+   },
+   "masked_E_P1_my_vs_pooled_vs_tool": {
+    "ok": true,
+    "detail": {
+     "my_vs_pooled": 4.263256414560601e-14,
+     "tool_vs_pooled_bit_equal": true,
+     "forced_mask_vs_pooled": 0.0,
+     "info": {
+      "games_in_questions": 19156,
+      "unusable_slots_in_questions": 0,
+      "path": "pooled",
+      "scale": 4.0
+     }
+    }
+   },
+   "direction_rho_recomputed": {
+    "ok": true,
+    "detail": {
+     "rho": 0.9683239283284883,
+     "threshold": 0.4814023614847099
+    }
+   },
+   "pred_A_rule_A": {
+    "ok": true,
+    "detail": {
+     "diffs": 0,
+     "header": [
+      "question_id",
+      "pred_rank"
+     ]
+    }
+   },
+   "pred_B_rule_B": {
+    "ok": true,
+    "detail": {
+     "diffs": 0
+    }
+   },
+   "ruleB_diff_count_vs_Q02H_eq_report": {
+    "ok": true,
+    "detail": 540
+   },
+   "decide_rerun_identical": {
+    "ok": true,
+    "detail": {
+     "pred_A.csv": {
+      "raw_equal": true,
+      "lf_equal": true
+     },
+     "pred_B.csv": {
+      "raw_equal": true,
+      "lf_equal": true
+     },
+     "decide_summary.json": {
+      "raw_equal": true,
+      "lf_equal": true
+     }
+    }
+   },
+   "check_submission_rerun": {
+    "ok": true,
+    "detail": {
+     "pred_A.csv": {
+      "exit": 0,
+      "tail": "OK: rank submission covers all 1589 questions and passes every strict check\n"
+     },
+     "pred_B.csv": {
+      "exit": 0,
+      "tail": "OK: rank submission covers all 1589 questions and passes every strict check\n"
+     }
+    }
+   },
+   "check_submission_txt_passes": {
+    "ok": true
+   },
+   "outputs_sha_eq_apply_report": {
+    "ok": true,
+    "detail": {
+     "rank_val_probs.csv": "7a513367147227e3631bfb7bad36064f3e90fffb6ee358716e389698ce1ccd97",
+     "pred_A.csv": "e24699e989543bfbfc73b1b710677c93f018747193a9ba18d89fc004cdd17753",
+     "pred_B.csv": "b02d4f947910726fa25c292e9798e7407b1e802e2fed080d843f56b9beb48872",
+     "decide_summary.json": "001639061aec32504530a279192942e58952aa2659a6142c425b2608860e52df",
+     "check_submission.txt": "b62dd5ca82e8d5cce25b20a3f87f35a4c3ba2d78cc683d3bfc2764dbcb932f54",
+     "val_lp_p1.npz": "8815db14654eefdb8c2a11cfbb709de4254272de734cec415b3dfc2dbb0e59a9"
+    }
+   }
+  }
+ },
+ "notes": [
+  "val chunks: all 96 files under data/prereg08/val/ re-hashed equal to val_report.json; every chunk is format 'c10-prereg08 val chunk v1', mode real, keys / questions / checkpoint / neutral-metadata / tool SHA as registered, fp16; refs 0..19155 in order; earliest chunk start (created_utc - seconds) 2026-10-08T14:22:45.57Z, later than the freeze commit 3df543c (2026-10-08T22:19:14+08:00 = 14:19:14Z). val_p1.npz, val_seam_feats.npz, val_report.json were committed only in 2200013; the apply outputs only in 2791f91; frozen_config.json and p1_map.npz last in 3df543c. Tool files now = frozen_config / val_report / apply_report records = the 3df543c tree (LF-folded).",
+  "val_p1.npz re-assembled from the chunks (counts, n_moves, failed; keys = val_keys.npz) equal; val_seam_feats.npz = the first 400 games' means (float32) and the first two chunk SHAs. 0 failed games, 0 games without a target move, 0 without an opponent move. Own regex move counts over the question file's SGF equal P1 n_moves / target / opponent counts for all 19,156 games (0 mismatches).",
+  "lp_P1TO recomputed with own numpy from the chunks' 770-dim target / opponent means (val_p1.npz does not carry the 1,540 features; the chunks are SHA-bound by val_report.json) and p1_map.npz (mu, sd, W, b; NaN / non-finite standardised -> 0; log-softmax): equal bit for bit to results/prereg08/rank/val_lp_p1.npz (max abs diff 0.0).",
+  "E_P1 = mean over each question's usable games (C5 parsed, not failed, >= 1 target move; all 19,156 usable, so masked == pooled) of 4 x lp_P1TO: own loop vs pooled S @ (4 lp) max diff 4.3e-14 (summation order); the tool's p1_term equals pooled bit for bit and its forced-mask path differs by 0.0.",
+  "x4 applied exactly once: with frozen theta (a, gamma, w OP 1.165 / O4 3.023 / SWA 0.441 / SWB 0 / HS 0 / P1TO 4.0, beta; basis 10x9) my fusion p = softmax(e^a (n/12)^gamma (m_C5 + B beta + sum_j w_j E_j)) with E_P1 = mean of 4 lp reproduces rank_val_probs.csv to 1.28e-15; with 1 x lp the max diff would be 0.552, with 16 x lp 0.580. The effective coefficient 16 on mean lp_P1TO (w_P1 4 at its PREREG_04 bound x scale 4) is the registered design (PREREG_08 lines 153 and 383). Not byte-identical only through summation order; rule A / B choices identical.",
+  "Q02: tool q02_validation bytes equal results/prereg04/rank/rank_val_probs.csv (raw and LF, SHA 3c7ab658...); my fusion with prereg04 theta 1.1e-16. Q02H: apply_core bytes equal results/prereg07/rank/rank_val_probs.csv (SHA 6ae2db60...), my fusion with 07 theta and own E_HS (from val_hs.npz + hs_map.npz) 7.8e-16.",
+  "decide: tools/decide.py re-run on rank_val_probs.csv into data/prereg08/tmp/audit/decide: pred_A.csv, pred_B.csv, decide_summary.json byte-identical to the committed working files; own rule A (argmax) / rule B (argmax p_k + e^-1 (p_{k-1} + p_{k+1})) 0 differences; rule-B changes vs Q02H 540 = report; check_submission.py re-run on both: exit 0; check_submission.txt shows two exit 0.",
+  "Direction check recomputed: Spearman rho 0.9683239283284883 >= threshold 0.4814023614847099 (max(0.5 x rho_eval 0.9628047229694198, 0.078))."
+ ],
+ "observations_not_errors": [
+  "decide_summary.json is CRLF in the working tree (raw SHA c8da2dcb...), LF in the index; the binding uses the LF-folded SHA (001639061a...) exactly as apply_report.json and apply --finalize (pin_sha) do.",
+  "Fitted weights HS = 0 and SWB = 0 in the Q08 theta: the HS term has no effect on Q08 (as in the pilot, where P1 covered HS); recorded, not an error."
+ ],
+ "auditor_note": "Independent pre-scoring audit agent (Claude, launched by the C10 main session). No program error affecting Q08's predictions was found. This file states facts only; it makes no recommendation.",
+ "created": "2026-10-08T15:29:32+00:00"
+}

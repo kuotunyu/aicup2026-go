@@ -1,0 +1,101 @@
+{
+ "format": "c10-test04 unpack v1",
+ "mode": "real",
+ "created": "2026-11-04T15:52:21+08:00",
+ "seconds": 0.6,
+ "zip": {
+  "path": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\test04\\test04_rank_results.zip",
+  "name": "test04_rank_results.zip",
+  "sha256": "86be53fc3a639675d15fafd25ec6192e14bde0214d0963be56cd932ce3bda979",
+  "bytes": 19621717
+ },
+ "members": 40,
+ "run_status": "completed",
+ "runs": [
+  {
+   "run": 1,
+   "status": "completed",
+   "start": "2026-11-04T07:46:34+00:00"
+  }
+ ],
+ "earlier_failed_runs": [],
+ "smoke": false,
+ "rehearsal": false,
+ "manifest_sha256": "b9e9e8a6a7fc8b7b696d2d4501563cb99aeac6a95e327f3a5e686d04bbdd0bbe",
+ "notebook_sha256": "efc0d03e1ce0810ed34cad8f9d276b3240e97b1e6eefa6149884d16aac3c15fe",
+ "notebook_identity": {
+  "repo_notebook": "colab/test04_rank.ipynb",
+  "repo_recorded": "efc0d03e1ce0810ed34cad8f9d276b3240e97b1e6eefa6149884d16aac3c15fe",
+  "repo_recomputed": "efc0d03e1ce0810ed34cad8f9d276b3240e97b1e6eefa6149884d16aac3c15fe",
+  "run_notebook_sha256": "efc0d03e1ce0810ed34cad8f9d276b3240e97b1e6eefa6149884d16aac3c15fe",
+  "same": true
+ },
+ "r20_first_upload": {
+  "id": 1,
+  "uploaded_at": "2026-11-04T15:30:35+08:00"
+ },
+ "attempt_number": 1,
+ "counted_archives": [],
+ "failed_attempts_seen": [],
+ "freshness": {
+  "archives": [],
+  "zip_sha256": "86be53fc3a639675d15fafd25ec6192e14bde0214d0963be56cd932ce3bda979",
+  "rule": "no archive yet: nothing to compare"
+ },
+ "rerun_gpu_check": {
+  "rule": "the registered rerun (one counted archive) is computed on G4 only (rev 3 items 4, 9)",
+  "applies": false,
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+ },
+ "drive_archives": {
+  "rule": "record only: Drive sw_failed_* / sw_exempt_* folders (config.json prior_sw_folders) vs the local archives (counted -> sw_failed_<N>, uncounted -> sw_exempt_<N>)",
+  "notebook_attempt": 1,
+  "checked": true,
+  "drive_sw_failed": [],
+  "local_archives_as_drive_names": [],
+  "equal": true
+ },
+ "allow_failed": false,
+ "warnings": [],
+ "checks": {
+  "own_files": {
+   "files": 3,
+   "rule": "tracked by git and unchanged against HEAD",
+   "git_head": "466816c74b19ccc7d60491a5d3902a751dd68f6e"
+  },
+  "notebook_file": {
+   "files": 1,
+   "rule": "tracked by git and unchanged against HEAD",
+   "git_head": "466816c74b19ccc7d60491a5d3902a751dd68f6e"
+  }
+ },
+ "tool": {
+  "git_head": "466816c74b19ccc7d60491a5d3902a751dd68f6e",
+  "files_sha256_rule": "sha256 of the file with CRLF folded to LF",
+  "files_sha256": {
+   "t04_rank.py": "f212879e5aaf6fe90060e2b8f03a5e61e8d8704c9dd8204e9c42e65b589940e4",
+   "check_submission.py": "b5c7c300cca4fcd5b243e4579417453699777e99bd4aff88dcbf6805e9346144",
+   "official_log.py": "a2c4f55f4a750b1b9cdf6fe37f4e89a69b6f8aaa64f0a4f0eb6be63aa61a4746",
+   "t02_rank.py": "e3485e073a20843654f622828283af4ae3985141e08378cefb59d6c6f2495874",
+   "t02_test_bundle.py": "18e41e952da39a68bc901bda5f5b9f0173848379a31056da6139382ac038e796",
+   "p04_opp.py": "b594e0eff135b539616d60f26403ca1a1a37ac3f44855785c36e2cc6be9768fa",
+   "p04_rank_fuse.py": "c3a647b09c46760239d5b2ee274d56f7231987354fc1c1f6c3ff40102f4b26a2",
+   "p03_rank_fuse.py": "77abd7479d26f0f647a258b4a6d5d2e517808b4c187184f14ff599d70b8aca2f",
+   "p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+   "p02_rank_opening.py": "a4195fece41aa3d50ecda82d1af93d9c04f49df5fd2157d69dd8a488dea93463",
+   "p02_rank_pseudo.py": "16e5bfdfb2995874ddb11bde1f7a9e786a478b14443453f675a4fb3a480bb098",
+   "p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "decide.py": "cf66daf1231b3c2bd60c5b6484245627e133bd0f1cd7ff5557e978da3801d0e3"
+  }
+ },
+ "environment": {
+  "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "executable": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\.venv\\Scripts\\python.exe",
+  "zlib": "1.3.1"
+ },
+ "git_head": "466816c74b19ccc7d60491a5d3902a751dd68f6e"
+}

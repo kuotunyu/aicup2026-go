@@ -1,0 +1,16 @@
+{
+ "format": "c10-test21 not used v1",
+ "registration": "docs/PREREG_21_PLAYER_EXACT_COPY.md",
+ "stage": "scan",
+ "reason": "S1 scan: no question has an exact same-pool, same-colour copy (PREREG_21 7 S1)",
+ "scan": "results/test21/scan/scan.json",
+ "provenance": {
+  "tool": "tools/t21_copy.py",
+  "tool_sha256_lf": "1579044fe903979aecd4b5aa351770cd73d3dbbcc14de307179aafa467e6590f",
+  "t02_checks_sha256_lf": "a6fb40f99e7af19bfe4eef3f5cbb1d0049a8f0c14a7cc95cddfac73884f99cc8",
+  "mode": "real",
+  "git_head": "de532450a2bbec65666fe89d3b80531f59dc7fd5",
+  "python": "3.12.13",
+  "created_utc": "2026-11-04T07:34:47+00:00"
+ }
+}

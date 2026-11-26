@@ -1,0 +1,86 @@
+{
+ "what": "Step 6 (side analysis): how much do more reference games per candidate help?\n\nRelevant only if the official candidates turn out to be training players whose other games we could\nlegitimately add (T2 / T3 on 11/04 decide; not assumed here). Pools: fit players with >= 220 black\ngames, up to 40 per level (fewer where a level has fewer), questions k 5/10/15/20 in equal shares.\nSame players and the same question games (shuffled black games 200 .. 200+k); candidate profiles\nbuilt from the first 100 vs the first 200 shuffled black games. Opening-only base term.",
+ "pool_sizes": [
+  332,
+  332,
+  332,
+  332,
+  332,
+  332,
+  332,
+  332,
+  332,
+  332
+ ],
+ "table": {
+  "50": {
+   "score": [
+    0.8882,
+    0.8746,
+    0.9018
+   ],
+   "top1": [
+    0.8654,
+    0.8508,
+    0.8799
+   ],
+   "diff_vs_100": [
+    -0.0404,
+    -0.046,
+    -0.0348
+   ]
+  },
+  "100": {
+   "score": [
+    0.9286,
+    0.9184,
+    0.9388
+   ],
+   "top1": [
+    0.913,
+    0.9019,
+    0.924
+   ],
+   "diff_vs_100": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "150": {
+   "score": [
+    0.9417,
+    0.9326,
+    0.9508
+   ],
+   "top1": [
+    0.9289,
+    0.9187,
+    0.9391
+   ],
+   "diff_vs_100": [
+    0.0131,
+    0.0068,
+    0.0194
+   ]
+  },
+  "200": {
+   "score": [
+    0.9528,
+    0.944,
+    0.9616
+   ],
+   "top1": [
+    0.9413,
+    0.9309,
+    0.9516
+   ],
+   "diff_vs_100": [
+    0.0242,
+    0.0179,
+    0.0305
+   ]
+  }
+ },
+ "seconds": 3.7
+}

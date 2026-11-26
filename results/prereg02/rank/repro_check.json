@@ -1,0 +1,55 @@
+{
+ "run": 1,
+ "time": "2026-09-26T05:19:10+00:00",
+ "smoke": false,
+ "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "torch": "2.11.0+cu128",
+ "cudnn": 91900,
+ "dump_gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "dump_torch": "2.11.0+cu128",
+ "dump_cudnn": 91900,
+ "dump_run": 1,
+ "p01_gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "p01_torch": "2.11.0+cu128",
+ "p01_cudnn": 91900,
+ "same_gpu_as_p01": true,
+ "same_gpu_rule": "寫出 val_p01e5_d4 的那次執行的 GPU（dumps/_DONE_val_p01e5_d4.json 的 gpu_name）和 prereg01 的 GPU 比",
+ "dump_gpu": {
+  "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "pass": true
+ },
+ "inner_acc": {
+  "dump": "inner_p01e5_d4 s=0",
+  "value_pct": 25.14818641579205,
+  "target_pct": 25.14818641579205,
+  "abs_diff_pp": 0.0,
+  "tolerance_pp": 0.05,
+  "games": 73556,
+  "pass": true
+ },
+ "val_c0_vs_p01": {
+  "dump": "val_p01e5_d4 s=0",
+  "reference": "prereg01/rank/rank_val_probs.csv",
+  "questions_compared": 1589,
+  "max_abs_diff": 8.940696716308594e-08,
+  "tolerance": 0.0001,
+  "pass": true
+ },
+ "rule_b_diff": {
+  "questions": 0,
+  "allowed": 4,
+  "question_ids": [],
+  "pass": true
+ },
+ "rule_a_diff_info_only": {
+  "questions": 0,
+  "question_ids": []
+ },
+ "counts": {
+  "problems": [],
+  "n_problems": 0,
+  "pass": true
+ },
+ "pass": true,
+ "earlier_runs": []
+}

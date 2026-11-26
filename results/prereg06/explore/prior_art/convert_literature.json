@@ -1,0 +1,157 @@
+{
+ "formula": "score = exact + e^-1 * (acc_pm1 - exact)",
+ "literature": {
+  "Kuboki2025_player_specific_proposed": {
+   "src": "arXiv 2505.00279 Table 4 (Go, Fox, 11 groups, player-specific sampling)",
+   "by_k": {
+    "5": {
+     "exact": 0.581,
+     "acc_pm1": 0.953,
+     "score": 0.7179
+    },
+    "10": {
+     "exact": 0.61,
+     "acc_pm1": 0.9620000000000001,
+     "score": 0.7395
+    },
+    "15": {
+     "exact": 0.632,
+     "acc_pm1": 0.966,
+     "score": 0.7549
+    }
+   }
+  },
+  "Kuboki2025_player_specific_ChenSE": {
+   "src": "arXiv 2505.00279 Table 4 (Chen et al. SE re-evaluated, player-specific)",
+   "by_k": {
+    "5": {
+     "exact": 0.516,
+     "acc_pm1": 0.9309999999999999,
+     "score": 0.6687
+    },
+    "10": {
+     "exact": 0.594,
+     "acc_pm1": 0.96,
+     "score": 0.7286
+    },
+    "15": {
+     "exact": 0.611,
+     "acc_pm1": 0.9690000000000001,
+     "score": 0.7427
+    }
+   }
+  },
+  "Kuboki2025_player_specific_no_strength": {
+   "src": "arXiv 2505.00279 Table 7 (w/o strength score = HumanSL priors + losses only)",
+   "by_k": {
+    "5": {
+     "exact": 0.531,
+     "acc_pm1": 0.93,
+     "score": 0.6778
+    },
+    "10": {
+     "exact": 0.565,
+     "acc_pm1": 0.945,
+     "score": 0.7048
+    },
+    "15": {
+     "exact": 0.578,
+     "acc_pm1": 0.951,
+     "score": 0.7152
+    }
+   }
+  },
+  "Kuboki2025_random_sampling_proposed": {
+   "src": "arXiv 2505.00279 Table 4 (random sampling of games from many players of a group)",
+   "by_k": {
+    "5": {
+     "exact": 0.7040000000000001,
+     "acc_pm1": 0.995,
+     "score": 0.8111
+    },
+    "10": {
+     "exact": 0.828,
+     "acc_pm1": 0.9990000000000001,
+     "score": 0.8909
+    },
+    "15": {
+     "exact": 0.894,
+     "acc_pm1": 1.0,
+     "score": 0.933
+    }
+   }
+  }
+ },
+ "ours": {
+  "Q00": {
+   "5": {
+    "questions": 37440,
+    "exact_rb": 0.3845,
+    "acc_pm1_rb": 0.7917,
+    "score_rb": 0.5343,
+    "u1_reference_score": 0.5343,
+    "reproduced": true
+   },
+   "10": {
+    "questions": 32288,
+    "exact_rb": 0.4281,
+    "acc_pm1_rb": 0.8496,
+    "score_rb": 0.5831,
+    "u1_reference_score": 0.5831,
+    "reproduced": true
+   },
+   "15": {
+    "questions": 27296,
+    "exact_rb": 0.4611,
+    "acc_pm1_rb": 0.8781,
+    "score_rb": 0.6145,
+    "u1_reference_score": 0.6145,
+    "reproduced": true
+   },
+   "20": {
+    "questions": 23520,
+    "exact_rb": 0.4715,
+    "acc_pm1_rb": 0.886,
+    "score_rb": 0.624,
+    "u1_reference_score": 0.624,
+    "reproduced": true
+   },
+   "mean_over_k_5_10_15_20": 0.589
+  },
+  "Q02": {
+   "5": {
+    "questions": 37440,
+    "exact_rb": 0.4001,
+    "acc_pm1_rb": 0.8197,
+    "score_rb": 0.5544,
+    "u1_reference_score": 0.5544,
+    "reproduced": true
+   },
+   "10": {
+    "questions": 32288,
+    "exact_rb": 0.4575,
+    "acc_pm1_rb": 0.8758,
+    "score_rb": 0.6114,
+    "u1_reference_score": 0.6114,
+    "reproduced": true
+   },
+   "15": {
+    "questions": 27296,
+    "exact_rb": 0.4979,
+    "acc_pm1_rb": 0.9041,
+    "score_rb": 0.6473,
+    "u1_reference_score": 0.6473,
+    "reproduced": true
+   },
+   "20": {
+    "questions": 23520,
+    "exact_rb": 0.5047,
+    "acc_pm1_rb": 0.9138,
+    "score_rb": 0.6552,
+    "u1_reference_score": 0.6552,
+    "reproduced": true
+   },
+   "mean_over_k_5_10_15_20": 0.6171
+  }
+ }
+}

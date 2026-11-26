@@ -1,0 +1,228 @@
+{
+ "format": "c10-prereg09 apply_audit v1",
+ "what": "PREREG_09 2.7 independent audit of apply (Q09 on the validation questions); no labels read, no score computed, tools/score.py not run, score ledger not read",
+ "auditor": "independent Claude Code subagent (own numpy forward pass and own P1 term / fusion; Q02/Q02H/Q08 by re-executing the registered code)",
+ "created": "2026-10-09T17:26:35+08:00",
+ "commits": {
+  "freeze": "a41753d",
+  "apply": "8e039f9"
+ },
+ "program_errors_affecting_predictions": [],
+ "all_checks_passed": true,
+ "outputs_sha256": {
+  "rank_val_probs.csv": "3f8d32f4b5b0431c9f4407199ae2c074595428ef9053ab807a5cf3b129e3b4fb",
+  "pred_A.csv": "5c412993c6f72a7169327c8a2575cc7b3be44195ad3e198d30712d73d62432e0",
+  "pred_B.csv": "d1a2f1d673a8b95425dfdc6b392a64a3e7484509d8bbaa3eb3c72f5ee283333b",
+  "decide_summary.json": "724ef2298e709726c2b555c0563842048e502cacca84a4c3fdca90dc80bf18a0",
+  "val_lp_p1e.npz": "dc70be8a0f57dddb51836f8fb47ab598ac02ffaac6803949fdf4770004463cdf"
+ },
+ "inputs_sha256": {
+  "frozen_config.json": "50d38d2787c94569d88ed87a482e872ed64be2d1d20e4f57ffbb07a216663ff5",
+  "map": "ecc9c9b1747b7b7d40cf53869b6c67c8e6f776ba7498498737fe3eede8e2edba",
+  "val_report.json (08)": "2ce9e86f8e639217c38814541f7d1bfb083b609ac194b5e19c8c38c60e653535"
+ },
+ "sha_rule": "csv/json LF-folded (CRLF->LF) SHA-256, npz raw; recomputed by the auditor and equal to apply_report.json and the HEAD blobs",
+ "checks": {
+  "1_bindings": {
+   "outputs_equal_apply_report": {
+    "rank_val_probs.csv": true,
+    "pred_A.csv": true,
+    "pred_B.csv": true,
+    "decide_summary.json": true,
+    "check_submission.txt": true,
+    "val_lp_p1e.npz": true
+   },
+   "outputs_equal_HEAD_blob": {
+    "rank_val_probs.csv": true,
+    "pred_A.csv": true,
+    "pred_B.csv": true,
+    "decide_summary.json": true,
+    "check_submission.txt": true,
+    "val_lp_p1e.npz": true
+   },
+   "inputs_equal_apply_report": {
+    "frozen_config.json": true,
+    "map": true,
+    "val_report.json (08)": true,
+    "val_p1.npz (08)": true,
+    "p1_map.npz (08)": true,
+    "frozen_config.json (08)": true
+   },
+   "frozen_config_equal_a41753d_blob": true,
+   "map_equal_a41753d_blob": true,
+   "map_equal_frozen_config_sha": true,
+   "train_report_equal_frozen_config": true
+  },
+  "1_val_chunks": {
+   "n": 96,
+   "games": 19156,
+   "sha_equal_val_report": true,
+   "sha_equal_val_lp_p1e": true,
+   "sha_equal_apply_report": true,
+   "refs_are_val_keys_order": true,
+   "chunk_meta_problems": [],
+   "keys_sha256": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+   "val_keys_sha_in_apply_report": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c"
+  },
+  "1_val_keys": {
+   "questions": 1589,
+   "games_from_question_file": 19156,
+   "question_id_order_equal": true,
+   "slot_seq_equal_(1-based)": true,
+   "slot_seq_equal_(0-based)": false
+  },
+  "2_lp_P1TO_E_recomputed": {
+   "usable_games": 19156,
+   "max_abs_diff_lp": 7.354117315117037e-13,
+   "max_abs_diff_lp_usable": 7.354117315117037e-13,
+   "unusable_rows_all_zero_in_apply": true,
+   "within_1e-12": true,
+   "stored_lp_is_normalised_logprob": 4.440892098500626e-16,
+   "stored_scale_field": 4.0,
+   "ex_inf_values": 0,
+   "ex_nan_raw_values": 8122,
+   "members": [
+    "mlpclm256",
+    "mlpclm256_s1",
+    "mlpclm256_s2",
+    "mlp512",
+    "mlp512_s1",
+    "lowrank3_ex"
+   ],
+   "kinds": [
+    "mlpclm",
+    "mlpclm",
+    "mlpclm",
+    "mlp",
+    "mlp",
+    "lowrank"
+   ],
+   "per_member_mean_maxprob": [
+    0.37515999347050666,
+    0.374901503965852,
+    0.3744456203253307,
+    0.39098751358671663,
+    0.3909796958781561,
+    0.3593505087532028
+   ],
+   "max_abs_diff_vs_each_single_member": [
+    6.151690169158461,
+    6.154223163914719,
+    6.111599305257175,
+    29.303785398541265,
+    30.126950124806342,
+    26.12385921502043
+   ],
+   "tolerance": 1e-12,
+   "method": "own numpy float64: X = TO means (opponent NaN if no opponent move) standardised with map mu_x/sd_x, non-finite -> 0; EX 44 own implementation of prep.py extra_features, rounded to float32, standardised with map mu_ex/sd_ex, NaN -> 0; float32 weights -> float64; mlpclm cumulative link (clamp 1e-12), mlp / lowrank log_softmax; ensemble log(mean of 6 member probs) clipped 1e-300; usable = not failed and >= 1 target move"
+  },
+  "3_masks": {
+   "counts_equal_val_p1": true,
+   "failed_equal_val_p1": true,
+   "n_moves_equal_val_p1": true,
+   "p1_ok_mine_equal_08": true,
+   "p1_ok_apply_equal_08": true,
+   "usable_apply_equal_08": true,
+   "failed_games": 0,
+   "no_target_move": 0,
+   "no_move": 0,
+   "unusable": 0,
+   "keys_equal_08": true,
+   "own_08_lr_lp_max_abs_diff_vs_val_lp_p1": 0.0
+  },
+  "4_fusion": {
+   "own_E_vs_tool_p1_term_max_abs": 2.1316282072803006e-14,
+   "own_fusion_max_abs_prob_diff_vs_committed": 1.7763568394002505e-15,
+   "tool_fusion_with_auditor_lp_bytes_equal_committed": false,
+   "own_rule_B_equal_committed_pred_B": true,
+   "scale_check": {
+    "x1": {
+     "max_abs_prob_diff_vs_committed": 0.4465167644101805,
+     "rule_B_differs_from_committed_pred_B": 274
+    },
+    "x4": {
+     "max_abs_prob_diff_vs_committed": 1.7763568394002505e-15,
+     "rule_B_differs_from_committed_pred_B": 0
+    },
+    "x16": {
+     "max_abs_prob_diff_vs_committed": 0.5724058496238043,
+     "rule_B_differs_from_committed_pred_B": 113
+    }
+   },
+   "theta": {
+    "a": -1.515767452161023,
+    "gamma": 0.2981737125711648,
+    "w": {
+     "OP": 1.1280461698788469,
+     "O4": 1.612682451127719,
+     "SWA": 0.0,
+     "SWB": 0.0,
+     "HS": 0.0,
+     "P1TO": 4.0
+    }
+   },
+   "stored_val_lp_is_unscaled": true,
+   "registered_tool_fusion_on_stored_val_lp_bytes_equal_committed": true,
+   "registered_tool_fusion_on_auditor_lp": {
+    "bytes_equal": false,
+    "differing_rows": 1313
+   },
+   "note": "auditor lp differs from stored lp by <= 7.4e-13, so repr() of some probabilities differs in the last digits (1,313 rows), max prob diff 1.8e-15, rule B identical; x4 applied exactly once (stored lp is the unscaled normalised log-prob; x1 / x16 would change rule B on 274 / 113 questions)"
+  },
+  "5_reproductions": {
+   "Q02": {
+    "raw_equal": true,
+    "lf_equal": true,
+    "reference_sha256_lf": "3c7ab658dc558ce8c6aefdd7b0747de1a60de575d151e9eee96ca6775f442e5c",
+    "computed_sha256": "3c7ab658dc558ce8c6aefdd7b0747de1a60de575d151e9eee96ca6775f442e5c",
+    "passed": true
+   },
+   "Q02H": {
+    "bytes_equal": true,
+    "sha256": "6ae2db6025a903eb5c58af9418dc203c0b6e84dd664049f85dfa850e57dc28c1",
+    "pinned": "6ae2db6025a903eb5c58af9418dc203c0b6e84dd664049f85dfa850e57dc28c1"
+   },
+   "Q08": {
+    "bytes_equal": true,
+    "sha256": "7a513367147227e3631bfb7bad36064f3e90fffb6ee358716e389698ce1ccd97",
+    "lp_equal_own_08_forward": 0.0
+   },
+   "note": "Q02/Q02H/Q08 by re-executing the registered p07/p08 code (not an independent implementation); Q08's lp also equals the auditor's own LR forward (max diff 0)"
+  },
+  "6_decide": {
+   "exit": 0,
+   "pred_A.csv_bytes_equal": true,
+   "pred_B.csv_bytes_equal": true,
+   "decide_summary.json_bytes_equal": true,
+   "check_submission": {
+    "pred_A.csv": {
+     "exit": 0,
+     "out": "OK: rank submission covers all 1589 questions and passes every strict check"
+    },
+    "pred_B.csv": {
+     "exit": 0,
+     "out": "OK: rank submission covers all 1589 questions and passes every strict check"
+    }
+   },
+   "rule_B_differs_from_Q08_pred_B_files": 283,
+   "rule_B_differs_own_from_probs": 283
+  },
+  "7_direction": {
+   "rho": 0.9698496797391194,
+   "questions": 1589,
+   "threshold": 0.4816955132344216,
+   "passed": true,
+   "rho_E_P1E_vs_E_P1_08": 0.9972951068681306,
+   "apply_report_rho": 0.9698496797391194
+  }
+ },
+ "not_checked": [
+  "validation-probe duplicate count (record only, 0 in apply_report.json) was not recomputed"
+ ],
+ "environment": {
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1"
+ },
+ "scripts": "data/prereg09/tmp/audit/{audit_apply.py,audit_part2.py,audit_part3.py,write_audit.py} (scratch, not committed)"
+}

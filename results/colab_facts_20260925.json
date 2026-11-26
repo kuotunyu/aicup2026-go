@@ -1,0 +1,347 @@
+{
+ "note": "Colab Pro+ facts researched and independently cross-checked on 2026-09-25 (workflow wf_c5224e9f-f87). Unit rates are second-hand measurements; Google publishes no rate table.",
+ "items": [
+  {
+   "question": "1. Colab Pro+ 目前可選哪些 GPU／加速器，各自的 VRAM",
+   "answer": "結論：研究者列的清單正確，有幾處要修正或補充。\n\n可選清單（官方，2026-09-25 讀取）：\n- GPU：T4、L4、A100（分標準版和高記憶體版）、H100、G4。G4 就是 NVIDIA RTX PRO 6000 Blackwell。\n- TPU：v5e-1、v6e-1。\n- 修正：研究者說「CLI 設計文件另外列了 V2-8」。這句屬實，但 CLI 原始碼的加速器清單裡已經沒有 V2-8，只有 G4、T4、L4、A100、H100、V5E1、V6E1。release notes 2025-10-14 還提過 V28 降價，現在能不能選：未確認。\n\n各加速器的 VRAM：\n- G4：96 GB（官方 release notes 2026-03-25；官方 X 公告 2026-03-04）。Qiita 2026-02-26 實測 95.6 GB。\n- A100：標準版 40 GB。高記憶體版的 GPU 記憶體和系統 RAM 都加倍，也就是 80 GB（官方 2025-10-14；G4 那則公告也拿「A100-80G」來比）。\n  - 在「變更執行階段類型」打開 High-RAM 就會拿到 80GB 版（McCormick 2026-03；Qiita 標為 A100 HM，實測 80.0 GB）。\n- TPU v6e-1：32 GB HBM。官方說是 v5e-1 的兩倍，所以 v5e-1 是 16 GB（官方 2025-05-12）。\n- L4：官方 2024-04-11 的 X 公告寫 24GB（只看到搜尋結果摘要，貼文本身打不開）。實際可用約 22.5 GB（McCormick、Qiita 實測）。\n- T4：可用 15 GB（標稱 16 GB）。\n- H100：80 GB（McCormick），Qiita 實測 79.6 GB。\n\n官方文件自相矛盾：\n- signup 頁和 research FAQ 都還寫「All GPU chips have the same memory profile」。\n- 這和 2025-10 推出高記憶體 A100（GPU 記憶體加倍）的公告衝突，應該是 FAQ 沒更新。以 release notes 為準。\n\n能不能真的拿到：\n- 官方 FAQ：可用的 GPU 類型會隨時間變動，要看當下有沒有空機和運算單元餘額。\n- release notes 2026-01-20：H100「正逐步開放給更多使用者」。\n- GitHub #6014（2026-06-09 開）：多位 Pro+ 使用者回報連不上 H100、G4、A100。\n  - 2026-06-15 帳號 spencersgoogle 留言：使用量暴增（有正常使用也有濫用），吃掉了備用容量。\n  - 這個名字和官方部落格作者 Spencer Shumway（Colab PM）相符，但 GitHub 沒標示他是成員，身分未驗證。\n  - 同一串最新一則（2026-09-25）是 Ultra 使用者說拿不到 H100。\n- note.com（2026-05-21 實測）：選 G4 被分到 A100，選 H100 被分到 G4。\n- 2026-09-22 官方部落格：Google AI 方案開始附帶 Colab 福利，Ultra 可以用「Premium GPU」；已經訂 Colab 的人，訂閱內容不變。\n\n已下架：V100 已移除（McCormick）。P100 也不在官方 CLI 清單裡，但研究者說 P100「已下架」，我找不到直接說明的來源。",
+   "status": "confirmed_official",
+   "sources": [
+    {
+     "url": "https://raw.githubusercontent.com/googlecolab/google-colab-cli/main/README.md",
+     "date": "2026-08（2026-09-25 讀取）",
+     "quote": "GPU (T4, L4, G4, H100, A100), or TPU (v5e1, v6e1)"
+    },
+    {
+     "url": "https://github.com/googlecolab/google-colab-cli/blob/main/src/colab_cli/client.py",
+     "date": "2026-09-25 讀取",
+     "quote": "class Accelerator: G4, T4, L4, A100, H100, V5E1, V6E1（無 V2-8）"
+    },
+    {
+     "url": "https://colab.research.google.com/notebooks/relnotes.ipynb",
+     "date": "2026-03-25",
+     "quote": "96 GB of VRAM (20% more than the A100-80G)"
+    },
+    {
+     "url": "https://colab.research.google.com/notebooks/relnotes.ipynb",
+     "date": "2025-10-14",
+     "quote": "Launched High memory A100s offering double the GPU and system RAM."
+    },
+    {
+     "url": "https://colab.research.google.com/notebooks/relnotes.ipynb",
+     "date": "2026-01-20",
+     "quote": "H100 is being rolled out for more users."
+    },
+    {
+     "url": "https://colab.research.google.com/notebooks/relnotes.ipynb",
+     "date": "2025-05-12",
+     "quote": "2x the high bandwidth memory as v5e-1 (32GB)"
+    },
+    {
+     "url": "https://qiita.com/jin0g/items/8fbfb209ac4e9343c13f",
+     "date": "2026-02-26（文中「2026年02月26日 現在」）",
+     "quote": "A100 HM | 12 | 167.1 | 80.0 ; G4 | 48 | 176.9 | 95.6 ; H100 | 12 | 230.0 | 79.6"
+    },
+    {
+     "url": "https://mccormickml.com/2024/04/23/colab-gpus-features-and-pricing/",
+     "date": "Updated March 2026",
+     "quote": "use the “High RAM” slider to select the 80GB version"
+    },
+    {
+     "url": "https://colab.research.google.com/signup?hl=en",
+     "date": "2026-09-25 讀取",
+     "quote": "Note that memory refers to system memory. All GPU chips have the same memory profile."
+    },
+    {
+     "url": "https://github.com/googlecolab/colabtools/issues/6014",
+     "date": "2026-06-15（留言）",
+     "quote": "usage spikes (some organic, some abusive) that are eating up our spare capacity"
+    },
+    {
+     "url": "https://note.com/sugamore/n/ncea37d829827",
+     "date": "2026-05-23",
+     "quote": "H100を選択 → H100が割り当てられずG4に"
+    },
+    {
+     "url": "https://developers.googleblog.com/colab-is-now-part-of-your-google-ai-plan/",
+     "date": "2026-09-22",
+     "quote": "If you already subscribe to Colab there are no changes to your subscription"
+    },
+    {
+     "url": "https://x.com/GoogleColab/status/1778535625840525400",
+     "date": "2024-04-11（由貼文 ID 推算；只看到搜尋摘要）",
+     "quote": "Colab now has NVIDIA L4 runtimes for our paid users! 24GB of VRAM!"
+    }
+   ]
+  },
+  {
+   "question": "2. 每種 GPU 執行階段配的 vCPU 數與系統 RAM（標準／高 RAM），特別是 A100、L4、H100",
+   "answer": "結論：官方仍然沒有公布每種 GPU 配幾顆 vCPU、多少 RAM。research FAQ 明寫這類限制「不公布」。\n\n研究者說 H100、G4、A100 80GB 的數字「未確認」，這點要修正：有一份 2026-02-26 的實測表把它們都補齊了。來源是 Qiita 的 jin0g，在日本測，文中列的是 Pro+ 價格。\n\nQiita 實測（格式：vCPU／系統 RAM／GPU 記憶體）：\n- CPU：2／12.7 GB\n- CPU 高 RAM：8／51.0 GB\n- T4：2／12.7／15.0 GB\n- T4 高 RAM：8／51.0／15.0 GB\n- L4：12／53.0／22.5 GB\n- A100（40GB）：12／83.5／40.0 GB\n- A100 高記憶體：12／167.1／80.0 GB\n- G4：48／176.9／95.6 GB\n- H100：12／230.0／79.6 GB\n\n可信度：\n- L4 和 A100 40GB 有多份資料互相吻合，可信：\n  - varlog（2024-09-30，Colab Pro）：L4 12 顆／53 GB，A100 12 顆／84 GB。\n  - aru-zakki 2025-01-07 的更新表：A100 83.5 GB，L4 53 GB。這張表沒有 CPU 數；A100 12 顆是同一篇 2023-10 那張表的數字。研究者這邊沒錯，只是提醒這個出處細節。\n- A100 高記憶體的系統 RAM 167.1 GB，剛好是標準版 83.5 GB 的兩倍，和官方「系統 RAM 加倍」一致。\n- H100、G4、A100 高記憶體目前只有 Qiita 這一份實測，而且只測一次。沒有官方數字，也找不到第二份 2025–2026 年的實測。\n- 值得注意：G4 配 48 vCPU，其他高階 GPU 都是 12 vCPU。資料前處理吃 CPU 的工作差很多，但這也是單一來源。\n\n官方講的原則：\n- 付費使用者可以用高記憶體機型，但要看有沒有空機和運算單元餘額（signup FAQ）。\n- pro.ipynb：比較強的 GPU 一律配高記憶體 VM。\n- 官方 CLI 文件（2026-08-09）：\n  - L4、v5e-1、v6e-1 只有一種機型。\n  - CPU、T4、A100 可以選高 RAM（shape=hm）。\n\n最準的做法：連上執行階段後自己跑 `nproc` 和 `free -g`（或 psutil），因為官方說這些配置會變。",
+   "status": "confirmed_secondary",
+   "sources": [
+    {
+     "url": "https://qiita.com/jin0g/items/8fbfb209ac4e9343c13f",
+     "date": "2026-02-26",
+     "quote": "L4 | 12 | 53.0 | 22.5 ; A100 | 12 | 83.5 | 40.0 ; H100 | 12 | 230.0 | 79.6"
+    },
+    {
+     "url": "https://qiita.com/jin0g/items/8fbfb209ac4e9343c13f",
+     "date": "2026-02-26",
+     "quote": "G4 | 48 | 176.9 | 95.6 | 8.71"
+    },
+    {
+     "url": "https://tech.aru-zakki.com/use-high-memory-of-colab-pro/",
+     "date": "2025-01-07（dateModified）",
+     "quote": "A100 GPU | 8.47 | 83.5GB/40GB ; L4 GPU | 2.40 | 53GB/22.5GB"
+    },
+    {
+     "url": "https://varlog.info/colab-credit-consumption-comparison-2024/",
+     "date": "2024-09-30",
+     "quote": "L4: 12 CPU, 53 GB; A100: 12 CPU, 84 GB (Colab Pro)"
+    },
+    {
+     "url": "https://research.google.com/colaboratory/faq.html",
+     "date": "2026-09-25 讀取",
+     "quote": "Colab does not publish these limits, in part because they can vary over time."
+    },
+    {
+     "url": "https://colab.research.google.com/notebooks/pro.ipynb",
+     "date": "2026-09-25 讀取（頁面無日期）",
+     "quote": "More powerful GPUs are always offered with high-memory VMs."
+    },
+    {
+     "url": "https://raw.githubusercontent.com/googlecolab/google-colab-cli/main/docs/01_session_management.md",
+     "date": "2026-08-09（文件 log）",
+     "quote": "Accelerators with only one shape (L4, v5e1, v6e1) ignore `--high-mem`."
+    },
+    {
+     "url": "https://colab.research.google.com/notebooks/relnotes.ipynb",
+     "date": "2025-10-14",
+     "quote": "High memory A100s offering double the GPU and system RAM."
+    }
+   ]
+  },
+  {
+   "question": "3. 每種加速器每小時扣多少運算單元，Pro+ 每月給多少單元，用完會怎樣",
+   "answer": "Pro+ 每月給多少（官方）：\n- 每月 600 個運算單元（Pro 的 100 個加上額外 500 個），單元 90 天後過期。\n- 官方 X 在 2025-04-18 宣布改成 600，release notes 2025-05-12 也有寫。\n\n價格（從台灣讀取官方頁）：\n- Pro+ 每月 US$52.49。\n- Pay As You Go：100 個單元 US$10.49，500 個單元 US$52.49。\n- 二手資料的美國價是 US$49.99 和 US$9.99。49.99×1.05＝52.49、9.99×1.05＝10.49，差額剛好 5%，很可能是台灣 5% 營業稅。這是我的推算，官方沒說明。\n- 日本 Qiita 寫 Pro+ 5,243 日圓。\n\n每小時扣多少：\n- 官方沒有費率表，只在 Colab 介面「查看資源」和 CLI 的 `colab usage` 顯示目前扣點速度。Zenn 2026-07-23 的作者也寫「公式のCU/hレート表は存在しない」。\n- 官方 2025-10-14 公告：A100、L4、T4 最多降價 13%；TPU（V28、V5E1、V6E1）最多降 10%；CPU 小漲。\n\n2026 年的二手實測（單位：運算單元／小時）：\n- McCormick（2026-03-10，南加州）：T4 1.19、L4 1.71、A100 40GB 5.40、A100 80GB 7.52、G4 8.71，H100 沒拿到。\n- Qiita（2026-02-26，日本）：\n  - CPU 0.07、CPU 高 RAM 0.24\n  - T4 1.19、T4 高 RAM 1.41\n  - L4 1.71\n  - A100 5.37、A100 高記憶體 7.52\n  - G4 8.71、H100 18.05\n- note.com（2026-05-21 實測）：G4 約 8.9、A100 約 7.52。\n- Zenn（2026-07-23，只測一次）：T4 1.15、L4 約 1.7（推估值）、A100 5.3。\n- 修正：研究者說 H100 費率「未知」。其實有一份實測：18.05／小時（Qiita，只有這一份）。Thunder Compute 2026-09-15 的文章仍寫 Unknown。\n- TPU 只有降價前的數字，已過時：v5e-1 約 4.5（aru-zakki 2025-01-07）、v6e-1 約 4.6（X 使用者 2025-05-03）。2025-10 降價後的費率：未確認。\n- 研究者引用的 2024 年數字（L4 3.00、A100 10.59）是降價前的，已過時。\n\n600 個單元大約能跑多久（用上面的費率直接換算，實際費率會浮動）：\n- T4：約 504 小時\n- L4：約 351 小時\n- A100 40GB：約 111 小時\n- A100 80GB：約 80 小時\n- G4：約 69 小時\n- H100：約 33 小時\n\n單元用完會怎樣（官方）：\n- 退回免費版的政策和限制，直到補充單元為止。\n- research FAQ 另外寫：Pro、Pro+、Pay As You Go 的單元用完，執行中的後端可能被終止。\n- 背景執行只給餘額大於 0 的 Pro+ 使用者。\n- 單元快用完時 Colab 會通知。買了新單元後，目前的執行階段可能不會保留、會重新指派，要先存檔。\n\n補充（官方，2026-09-22 起）：\n- Google AI 付費方案也開始送 Colab 運算單元，和 Pro+ 的單元加進同一個餘額。\n- 各方案送多少，官方 FAQ 和部落格都沒寫。",
+   "status": "confirmed_secondary",
+   "sources": [
+    {
+     "url": "https://colab.research.google.com/signup?hl=en",
+     "date": "2026-09-25 讀取",
+     "quote": "An additional 500 compute units per month, totaling 600 compute units per month."
+    },
+    {
+     "url": "https://colab.research.google.com/signup?hl=en",
+     "date": "2026-09-25 讀取（台灣）",
+     "quote": "Colab Pro+ US$52.49 per month; US$10.49 for 100 Compute Units"
+    },
+    {
+     "url": "https://colab.research.google.com/notebooks/relnotes.ipynb",
+     "date": "2025-05-12",
+     "quote": "Pro+ Subscriptions give 600 CCUs now"
+    },
+    {
+     "url": "https://colab.research.google.com/notebooks/relnotes.ipynb",
+     "date": "2025-10-14",
+     "quote": "GPUs (A100, L4, T4) up to 13% cost reduction"
+    },
+    {
+     "url": "https://mccormickml.com/2024/04/23/colab-gpus-features-and-pricing/",
+     "date": "2026-03-10（Date Checked）",
+     "quote": "T4 1.19 / L4 1.71 / A100 (40GB) 5.40 / A100 (80GB) 7.52 / G4 8.71 / H100 ?"
+    },
+    {
+     "url": "https://qiita.com/jin0g/items/8fbfb209ac4e9343c13f",
+     "date": "2026-02-26",
+     "quote": "H100 | 12 | 230.0 | 79.6 | 18.05"
+    },
+    {
+     "url": "https://zenn.dev/masayukikoba/articles/c734f89f782a99",
+     "date": "2026-07-23",
+     "quote": "公式のCU/hレート表は存在しない"
+    },
+    {
+     "url": "https://note.com/sugamore/n/ncea37d829827",
+     "date": "2026-05-23（實測 2026-05-21）",
+     "quote": "G4 GPU：約8.9 / h A100 GPU：約7.52 / h"
+    },
+    {
+     "url": "https://tech.aru-zakki.com/use-high-memory-of-colab-pro/",
+     "date": "2025-01-07",
+     "quote": "v5e-1 TPU | 4.5 | 47.1GB"
+    },
+    {
+     "url": "https://research.google.com/colaboratory/faq.html",
+     "date": "2026-09-25 讀取",
+     "quote": "will revert to the free-of-charge tier policies and restrictions until the balance is increased"
+    },
+    {
+     "url": "https://research.google.com/colaboratory/faq.html",
+     "date": "2026-09-25 讀取",
+     "quote": "compute units from each are added to the same balance"
+    },
+    {
+     "url": "https://colab.research.google.com/signup?hl=en",
+     "date": "2026-09-25 讀取",
+     "quote": "we may not be able to preserve your current runtime and may assign a fresh one"
+    }
+   ]
+  },
+  {
+   "question": "4. Pro+ 能同時開幾個執行階段；同時跑兩個 A100，或一個 A100 加一個 L4 是否允許",
+   "answer": "結論：上限有，但官方沒公布數字。同時開兩個 A100，或一個 A100 加一個 L4：未確認，找不到任何 2025–2026 年的官方或實測資料。\n\n官方說法：\n- 付費方案頁、FAQ、pro.ipynb 都沒寫 Pro+ 同時可以開幾個執行階段。\n- research FAQ 明寫使用限制「不公布」、會變動。\n\n新找到的官方證據（研究者沒有）：官方 client 程式碼證實後端有「同時執行階段數」的上限。\n- Colab VS Code 擴充的原始碼會處理後端回傳的錯誤 `TOO_MANY_ACTIVE_RUNTIMES`，並提示使用者「You have too many, remove one to continue」。\n- 官方 CLI 碰到後端拒絕分配（HTTP 412）時的提示：可能是同時開太多工作階段，或所選執行階段暫時有使用量或容量限制，建議 `colab stop` 釋放一個、稍後重試或換加速器。\n- 上限數字兩邊都沒寫。\n\n使用者實際同時開多個的回報（研究者列的三則都查證屬實）：\n- #5793（2026-02-03）：Pro+ 同時開 2 個 T4 執行階段。\n- #6101（2026-09-12）：付費帳號在 L4 上同時跑 3 個筆記本。原文寫「Pro/Pro+」，方案不確定。\n- #6101 的 2026-09-22 留言：Pro 使用者以前能同時跑兩個 L4，最近其中一個會提早被終止，問官方同時使用 GPU 的上限是不是改了。截至 2026-09-25 官方沒有回覆。\n\n舊資料，已過時：\n- #2236（2021-09-10）說 Pro+ 只能開一個 GPU／高 RAM 工作階段，後來被併入 #2232。這是運算單元制度之前的事。\n- tdulcet 的 README 說「免費版最多兩個 GPU 筆記本」，git blame 顯示是 2021-02 寫的。\n- 網路搜尋摘要把這些 2021 年的舊資料當成現況，不能用。\n\n多個執行階段怎麼扣點：\n- 官方沒有明文說明。\n- CLI 的 `colab usage` 顯示的是「帳號層級」的扣點速度。FAQ 說單元消耗取決於每台 VM 的設定和加速器。\n- 所以同時開兩台會照兩台的費率各自扣，這是推論，官方沒明講。\n\n穩定性：#6101（付費 L4 跑約 2–3 小時被終止，開 1 個或 3 個都一樣）仍未解決，官方沒回應。\n\n補充 Kaggle：\n- Kaggle 2025-04 公告：連結 Pro+ 後每週多 30 小時 Kaggle GPU（T4／P100），不扣 Colab 運算單元。\n- 公告自己寫是「limited time promotion」，Kaggle 人員也說不會增加 Kaggle 的平行工作階段數。\n- 2026 年還有沒有：未確認。",
+   "status": "outdated_or_unclear",
+   "sources": [
+    {
+     "url": "https://research.google.com/colaboratory/faq.html",
+     "date": "2026-09-25 讀取",
+     "quote": "Colab does not publish these limits, in part because they can vary over time."
+    },
+    {
+     "url": "https://github.com/googlecolab/colab-vscode/blob/main/src/colab/client/v2/index.ts",
+     "date": "2026-09-25 讀取",
+     "quote": "case 'TOO_MANY_ACTIVE_RUNTIMES': throw new TooManyAssignmentsError"
+    },
+    {
+     "url": "https://github.com/googlecolab/google-colab-cli/blob/main/src/colab_cli/commands/session.py",
+     "date": "2026-09-25 讀取",
+     "quote": "This can mean too many active sessions, or a temporary usage or capacity limit"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/googlecolab/google-colab-cli/main/README.md",
+     "date": "2026-08",
+     "quote": "`colab usage` | Show account compute-unit usage rate and balance"
+    },
+    {
+     "url": "https://github.com/googlecolab/colabtools/issues/5793",
+     "date": "2026-02-03（留言）",
+     "quote": "I run 2 runtimes at the same time with T4 GPU"
+    },
+    {
+     "url": "https://github.com/googlecolab/colabtools/issues/6101",
+     "date": "2026-09-12",
+     "quote": "same pattern was also observed with 3 notebooks running in parallel on the same account"
+    },
+    {
+     "url": "https://github.com/googlecolab/colabtools/issues/6101",
+     "date": "2026-09-22（留言）",
+     "quote": "Could the Colab team clarify whether concurrent GPU limits have changed"
+    },
+    {
+     "url": "https://github.com/googlecolab/colabtools/issues/2236",
+     "date": "2021-09-10",
+     "quote": "Only one active session with GPU and high-RAM usage possible"
+    },
+    {
+     "url": "https://www.kaggle.com/product-announcements/575468",
+     "date": "2025-04（頁面顯示 a year ago）",
+     "quote": "Colab Pro and Pro+ users will get 15 and 30 hours of extra GPU hours per week"
+    }
+   ]
+  },
+  {
+   "question": "5. 背景執行：Pro+ 關掉瀏覽器後能繼續多久；單一執行階段最長多久；閒置多久斷線",
+   "answer": "背景執行（官方 signup FAQ，已查證）：\n- Pro+ 只要運算單元餘額大於 0，就會自動開啟背景執行。\n- 關掉瀏覽器後，正在執行中的筆記本最多還能跑 24 小時。\n- 只在「執行中」有效：程式跑完、進入閒置後，VM 一樣會被刪除。\n- 每個儲存格跑完，輸出會存到 Drive。\n- 資源不保證，仍有使用限制。\n\n單一執行階段最長：\n- Pro+ 最多 24 小時（官方寫「up to」，是上限，不是保證），而且要有足夠的運算單元。\n- 修正補充：research FAQ 另外寫一般情況下筆記本最多 12 小時，Pro、Pro+、Pay As You Go 的單元用完，後端可能被終止。\n\n閒置多久刪除：\n- 修正：官方不公布。research FAQ 明寫閒置逾時、VM 最長壽命都「不公布」。\n- 研究者引的「約 90 分鐘」來自官方 CLI 的設計文件，是工具文件裡的描述，不是官方政策公告。Thunder Compute 也寫約 90 分鐘，但那是二手資料。\n- 官方 CLI 的 keep-alive 每 60 秒送一次訊號，避免 VM 因閒置被刪；24 小時後自動停止。\n  - CLI 的 SKILL.md 提醒：開著不關的工作階段會一直扣點，只有這個 24 小時上限會自動回收。\n\nColab 團隊的說明（2026-04-15，#5950，研究者引用屬實）：24 小時只適用於還有執行中、或瀏覽器還沒取回結果的儲存格；沒有執行中的工作，就照閒置規則刪除。\n\n已知問題（研究者漏了官方說「已修好」之後的回報）：\n- #5793：2026-01 Pro+ 跑 3–5 小時就被斷線。官方 2026-02-04 說已修好，但同一串之後還有人回報：\n  - 2026-02-06：H100 約 1.5 小時斷線\n  - 2026-03-26：分頁開著，8 小時後斷線\n  - 2026-07-02：分頁開著，約 2 小時斷線\n- #5950（2026-04）：官方查了記錄，一部分是閒置刪除，一部分是執行階段狀態異常，多半是記憶體不足（OOM）。\n- #6101（2026-09-12）：付費 L4 跑約 2–3 小時被終止，作者已排除閒置、OOM、單元用完三種原因。截至 2026-09-25 未解決。\n\n所以長時間訓練要定期把 checkpoint 存到 Drive，不能指望一定跑滿 24 小時。",
+   "status": "confirmed_official",
+   "sources": [
+    {
+     "url": "https://colab.research.google.com/signup?hl=en",
+     "date": "2026-09-25 讀取",
+     "quote": "your actively running notebook will continue running for up to 24hrs, even if you close your browser."
+    },
+    {
+     "url": "https://colab.research.google.com/signup?hl=en",
+     "date": "2026-09-25 讀取",
+     "quote": "Background execution only applies during an execution state: idle times will still result in VM deletion."
+    },
+    {
+     "url": "https://research.google.com/colaboratory/faq.html",
+     "date": "2026-09-25 讀取",
+     "quote": "Colab Pro+ supports continuous code execution for up to 24 hours if you have sufficient compute units."
+    },
+    {
+     "url": "https://research.google.com/colaboratory/faq.html",
+     "date": "2026-09-25 讀取",
+     "quote": "idle timeout periods, maximum VM lifetime ... Colab does not publish these limits"
+    },
+    {
+     "url": "https://github.com/googlecolab/colabtools/issues/5950",
+     "date": "2026-04-15（colaboratory-team 回覆）",
+     "quote": "the Pro+ 24h background execution applies while there's active/unacknowledged execution ongoing"
+    },
+    {
+     "url": "https://raw.githubusercontent.com/googlecolab/google-colab-cli/main/docs/01_session_management.md",
+     "date": "2026-08-10（文件 log）",
+     "quote": "idle timeouts (standard is ~90 minutes)"
+    },
+    {
+     "url": "https://github.com/googlecolab/google-colab-cli/blob/main/skills/colab-operator/SKILL.md",
+     "date": "2026-09-25 讀取",
+     "quote": "Nothing reclaims it automatically except a 24h keep-alive cap"
+    },
+    {
+     "url": "https://github.com/googlecolab/colabtools/issues/5793",
+     "date": "2026-02-04（colaboratory-team 回覆）",
+     "quote": "The issue should be fixed by now."
+    },
+    {
+     "url": "https://github.com/googlecolab/colabtools/issues/5793",
+     "date": "2026-07-02（留言）",
+     "quote": "It occurs even after leaving a Chrome tab open for only about two hours"
+    },
+    {
+     "url": "https://github.com/googlecolab/colabtools/issues/6101",
+     "date": "2026-09-12",
+     "quote": "runtime on an L4 GPU terminates unexpectedly after ~2-3 hours"
+    }
+   ]
+  },
+  {
+   "question": "6. Colab 預設 PyTorch 版本，以及是否預設啟用 TF32",
+   "answer": "PyTorch 版本（官方）：\n- 目前 GPU 執行階段是 torch 2.11.0+cu130，torchvision 0.26.0+cu130、torchaudio 2.11.0+cu130、triton 3.6.0。\n- 來源是 Colab 官方的 googlecolab/backend-info repo，最新 commit 2026-09-23。它的 README 說這裡可能比線上執行階段早 1–2 天。\n- 研究者結論（2.11.0，來自 release notes 2026-06-18）正確。\n\n研究者漏了 8–9 月執行階段的其他變動（release notes 最新一筆是 2026-08-06，沒寫這些）：\n- 2026-08-19：升到 Python 3.13（目前 3.13.15）\n- 2026-09-04：基底換成 Ubuntu 24.04\n- 2026-09-21：GPU 執行階段改用 CUDA 13.3.1\n\n固定舊版：\n- 2025-10-14 推出「執行階段版本選擇器」（Runtime Version Selector），可以固定用舊版環境。\n- backend-info README 列出可選的舊版，例如：\n  - 2026.07：Python 3.12.13、PyTorch 2.11.0\n  - 2026.04：PyTorch 2.10.0\n\nTF32：\n- Colab 有沒有另外改 PyTorch 的預設值：未確認。沒有官方說明；在 googlecolab 整個 GitHub 組織搜尋 tf32、TORCH_ALLOW_TF32、float32_matmul_precision，都沒有結果。\n- PyTorch 2.11 官方文件的預設值（已查證）：\n  - `torch.backends.cuda.matmul.allow_tf32` 預設 False（1.12 版起）。\n  - `torch.backends.cudnn.allow_tf32` 預設 True。\n  - 2.9 起有新的 `fp32_precision` 設定（可設 \"ieee\" 或 \"tf32\"），舊的 allow_tf32 旗標之後會淘汰，而且新舊設定不能混用。\n- 換句話說：在 Ampere 以後的 GPU 上，卷積預設走 TF32，矩陣乘法預設不走（這是照文件預設值推的）。\n- TF32 只在 Ampere 以後的 GPU 有作用：A100、L4、H100、G4 有，T4（Turing）沒有。\n\n建議：連上執行階段後直接印出 `torch.__version__`、`torch.version.cuda` 和上面兩個旗標確認。",
+   "status": "confirmed_official",
+   "sources": [
+    {
+     "url": "https://github.com/googlecolab/backend-info/blob/main/pip-freeze.gpu.txt",
+     "date": "repo 最新 commit 2026-09-23（2026-09-25 讀取）",
+     "quote": "torch==2.11.0+cu130"
+    },
+    {
+     "url": "https://github.com/googlecolab/backend-info/blob/main/README.md",
+     "date": "2026-09-25 讀取",
+     "quote": "There may be a one or two day delay to see the changes in Colab runtimes."
+    },
+    {
+     "url": "https://github.com/googlecolab/backend-info/commits/main/os-info-gpu.txt",
+     "date": "2026-08-19 / 2026-09-04 / 2026-09-21",
+     "quote": "Upgrade to Python 3.13 ; Update base container to Ubuntu 24.04 ; Update GPU runtime to cuda 13.3.1"
+    },
+    {
+     "url": "https://colab.research.google.com/notebooks/relnotes.ipynb",
+     "date": "2026-06-18",
+     "quote": "torch 2.10.0 -> 2.11.0"
+    },
+    {
+     "url": "https://colab.research.google.com/notebooks/relnotes.ipynb",
+     "date": "2025-10-14",
+     "quote": "Launched Runtime Version Selector"
+    },
+    {
+     "url": "https://docs.pytorch.org/docs/2.11/notes/cuda.html",
+     "date": "PyTorch 2.11 文件（2026-09-25 讀取）",
+     "quote": "This flag defaults to False in PyTorch 1.12 and later."
+    },
+    {
+     "url": "https://docs.pytorch.org/docs/2.11/notes/cuda.html",
+     "date": "PyTorch 2.11 文件（2026-09-25 讀取）",
+     "quote": "The flag below controls whether to allow TF32 on cuDNN. This flag defaults to True."
+    },
+    {
+     "url": "https://docs.pytorch.org/docs/2.11/notes/cuda.html",
+     "date": "PyTorch 2.11 文件（2026-09-25 讀取）",
+     "quote": "Old settings with allow_tf32 as follows is going to be deprecated."
+    }
+   ]
+  }
+ ]
+}

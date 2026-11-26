@@ -1,0 +1,54 @@
+Sat Sep 26 06:00:52 UTC 2026
+loaded 720307 fit games of 5767 players in 14s
+pool random           seed 0  rho raw 1.0150 canon 0.9991  open score raw 0.8804 canon 0.8370  b_c 0.503 b_q 0.509 (14s)
+pool random           seed 1  rho raw 1.0301 canon 1.0324  open score raw 0.8975 canon 0.8627  b_c 0.513 b_q 0.520 (14s)
+pool random           seed 2  rho raw 1.0141 canon 1.0110  open score raw 0.9250 canon 0.8978  b_c 0.502 b_q 0.497 (13s)
+pool fileorder        seed 0  rho raw 0.9052 canon 0.9208  open score raw 0.7670 canon 0.7389  b_c 0.869 b_q 0.585 (11s)
+pool fileorder        seed 1  rho raw 0.9133 canon 0.9337  open score raw 0.7651 canon 0.7456  b_c 0.891 b_q 0.629 (10s)
+pool fileorder        seed 2  rho raw 0.9003 canon 0.9267  open score raw 0.7369 canon 0.7324  b_c 0.872 b_q 0.565 (10s)
+pool colour_separated seed 0  rho raw 0.7386 canon 0.7952  open score raw 0.2297 canon 0.2270  b_c 0.869 b_q 0.018 (7s)
+pool colour_separated seed 1  rho raw 0.7571 canon 0.8167  open score raw 0.1843 canon 0.1856  b_c 0.891 b_q 0.024 (6s)
+pool colour_separated seed 2  rho raw 0.7460 canon 0.7889  open score raw 0.2088 canon 0.2113  b_c 0.872 b_q 0.016 (6s)
+{
+ "raw": {
+  "rho_R": 1.0197271503546743,
+  "rho_F": 0.9062854576832535,
+  "rho_X": 0.7472186307476288,
+  "theta1": 0.9630063040189639,
+  "theta2": 0.8267520442154412,
+  "theta_RX": 0.8834728905511515,
+  "gap1_R_minus_F": 0.11344169267142079,
+  "gap2_F_minus_X": 0.15906682693562468,
+  "gap_R_minus_X": 0.2725085196070455,
+  "theta1_enabled": true,
+  "theta2_enabled": true
+ },
+ "canon": {
+  "rho_R": 1.014179401069461,
+  "rho_F": 0.9270569559027629,
+  "rho_X": 0.8002793994990274,
+  "theta1": 0.9706181784861119,
+  "theta2": 0.8636681777008952,
+  "theta_RX": 0.9072294002842441,
+  "gap1_R_minus_F": 0.08712244516669798,
+  "gap2_F_minus_X": 0.12677755640373556,
+  "gap_R_minus_X": 0.21390000157043354,
+  "theta1_enabled": true,
+  "theta2_enabled": true
+ }
+}
+wrote D:\AI-Portfolio\competitions\aicup2026-go\results\prereg02\player\guard_calibration.json
+round 0: 400 pseudo-queries (3.3s)
+round 1: 400 pseudo-queries (0.8s)
+round 2: 400 pseudo-queries (0.8s)
+round 3: 400 pseudo-queries (0.8s)
+round 4: 400 pseudo-queries (0.8s)
+round 5: 400 pseudo-queries (0.8s)
+round 6: 400 pseudo-queries (0.8s)
+round 7: 400 pseudo-queries (0.8s)
+round 8: 400 pseudo-queries (0.8s)
+round 9: 400 pseudo-queries (0.8s)
+selected Q04 (best Q04 0.8998; Q00 0.4006) gate True -> D:\AI-Portfolio\competitions\aicup2026-go\results\prereg02\player\frozen_config.json
+commit frozen_config.json before apply, together with competition 2's frozen_config.json (PREREG_02 rev 3, section 7 item 6: both frozen before any apply)
+exit=0
+Sat Sep 26 06:02:52 UTC 2026

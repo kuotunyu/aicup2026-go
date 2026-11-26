@@ -1,0 +1,90 @@
+{
+ "format": "c10-prereg34 ogs parse v1",
+ "src": "ogs_games_2013_to_2025-05.json.gz",
+ "src_bytes": 45847026468,
+ "src_bytes_read": 45847026468,
+ "src_sha256": "d825b292202c4c21ec9c28fd209e5726adfd92afab583c87d61417fd4893728a",
+ "first_line_sha256": "54868ba3eae57ac260c638a5799c00e6140b8e7a0935698ec5aa3f6bb26107ce",
+ "last_line_sha256": "ff2e842afaa1d7c8b18da672b2a9eee3adaef4259d39aeb595db1a92938a444e",
+ "lines": 56412992,
+ "json_parsed_attempts": 23891357,
+ "json_errors": 0,
+ "error_rate_of_json_attempts": 0.0,
+ "error_rate_of_lines": 0.0,
+ "rejected_first_reason": {
+  "prefilter": 32521635,
+  "json_error": 0,
+  "not_object": 0,
+  "size": 6331,
+  "handicap": 1397343,
+  "ranked": 4439045,
+  "phase": 22831,
+  "outcome_cancellation": 1264411,
+  "initial_state": 106377,
+  "initial_player": 0,
+  "free_handicap_placement": 4846036,
+  "speed_correspondence": 1411066,
+  "start_time": 2938568,
+  "player_ids": 23,
+  "game_id": 0,
+  "professional": 82,
+  "rank_not_numeric": 0,
+  "bot_username": 18143,
+  "moves_type": 0,
+  "bad_coord": 0,
+  "middle_pass": 787833,
+  "too_few_moves": 1409548
+ },
+ "accepted_games": 5243720,
+ "rows_written": 10487440,
+ "players_seen": 222637,
+ "accepted_notes": {
+  "trailing_pass_games": 1483602
+ },
+ "date_window_epoch": [
+  1546272000,
+  1748707199
+ ],
+ "elapsed_s": 5482.3,
+ "seconds_per_million_lines": 97.2,
+ "outputs": {
+  "rows": "rows.csv.gz",
+  "rows_sha256": "fbe7cbd361a7df0c22323fc8495b72b9d3e85f5be79805b922640d7fe10f5c67",
+  "index": "rows_index.bin",
+  "index_sha256": "3f2ae02340bfdd9954751f7bfc58ab55d6c847531dff6a828632e402f2fe1c2a",
+  "index_dtype": [
+   [
+    "pid",
+    "<i8"
+   ],
+   [
+    "gid",
+    "<i8"
+   ],
+   [
+    "rank",
+    "<f8"
+   ],
+   [
+    "t",
+    "<i8"
+   ],
+   [
+    "row",
+    "<i8"
+   ],
+   [
+    "color",
+    "|i1"
+   ],
+   [
+    "speed",
+    "|i1"
+   ],
+   [
+    "nmoves",
+    "<i4"
+   ]
+  ]
+ }
+}

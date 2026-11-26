@@ -1,0 +1,53 @@
+{
+ "format": "c10-prereg12 ft smoke v1",
+ "created_utc": "2026-10-11T20:45:00+00:00",
+ "what": "CPU-only smoke of the fine-tuning pilot (no GPU used; tiny data; outputs under data/prereg12/smoke, never results)",
+ "eval_seams_reproduced_bit_for_bit": {
+  "Q02H": [
+   0.6242752597994481,
+   0.6242752597994481
+  ],
+  "Q08": [
+   0.6986195853659671,
+   0.6986195853659671
+  ],
+  "Q08_mono": [
+   0.6946737091777063,
+   0.6946737091777063
+  ],
+  "Q09": [
+   0.7114420614163589,
+   0.7114420614163589
+  ],
+  "Q09_mono": [
+   0.7145431684624712,
+   0.7145431684624712
+  ]
+ },
+ "eval_fake_ft": {
+  "definition": "lp_FT = lp_Q09_E + N(0, 0.5) noise, renormalised (no new information)",
+  "Q09+FT_minus_Q09": 0.0004827080256633032,
+  "G2_ci95": [
+   -0.0026163375484240217,
+   0.0041862161649174464
+  ],
+  "gates_passed": false,
+  "seconds": 76.8
+ },
+ "tests": "test_ft.py with C10_FT_REAL=1: 7 passed (featurize_turns == p1_lib.featurize_game bit for bit; packbits round trip; real checkpoint on CPU fp32: FTNet.trunk at-move + board-mean vs P1 ProbeScorer max abs diff <= 1e-5, 18 blocks; one training step: gradients only in blocks 14-17, norm_trunkfinal and the head, frozen params bit-identical, base stays in eval mode; bank cache counts == P1 bank chunk; FT outputs consistent with the cache)",
+ "pipeline_tiny_model": "sets -> cache train/holdout/bank/mono -> bench -> train (STOP at step 6, resumed, finished) -> extract bank/mono -> eval, through the launcher with FT_ROOT=data/prereg12/smoke/launch DEVICE=cpu (all rc=0)",
+ "real_checkpoint_cpu": "train 3 steps (batch 8 games, 256 positions; trainable params 6,026,920) and extract of 6 bank games ran on the CPU in fp32",
+ "launcher_refusals": {
+  "smoke variables without FT_ROOT": "rc 2",
+  "smoke flags on data/prereg12": "rc 2",
+  "gpu-free while another python compute process is on the GPU (2026-10-12 04:4x)": "rc 3 (busy, nothing started)"
+ },
+ "cpu_rates_measured_not_gpu": {
+  "cache_train_sampled_positions_per_s_4_workers": "about 470 (1,600 positions in 3.3-3.5 s per chunk)",
+  "tiny_bench_cpu": {
+   "infer_positions_per_s": 107.42553905889403,
+   "train_positions_per_s": 53.1641142135578
+  }
+ },
+ "not_done": "no GPU run, no real sets/caches under data/prereg12 (the launcher creates them)"
+}

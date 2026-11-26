@@ -1,0 +1,643 @@
+{
+ "format": "c10-prereg17 explore eval v1",
+ "smoke": false,
+ "code": {
+  "head": "e5aa41974b7c03b84d18415801c072bee39f53fd",
+  "dirty": "",
+  "sha256_lf": {
+   "results/prereg17/explore/PLAN.md": "c325bd10b5c3e83c73127f8d484d4d968ec222478bbd776db807ca2541cdc19d",
+   "results/prereg17/explore/p17_lib.py": "f8debb3f03f7962f33b06cc4d0e90d83d1aa652e90117db7f1922132473424f4",
+   "results/prereg17/explore/p17_prep.py": "964572debd016b0d5f8961e620ae78697359362e8bde5c0eb9ef9610a76ecb01",
+   "results/prereg17/explore/p17_tabicl.py": "e846dbf35d6bfaf7bfae03484e8af786135de01ae882df43d6c7867bf24652cc",
+   "results/prereg17/explore/run_p17_tabicl.sh": "5d955b1fcb887e001bb514b4477c1f4fcb4fa3b570b6c5885d6dbab8b2cc4df1",
+   "results/prereg17/explore/p17_eval.py": "4d7e22eea0b0adaf1a6d8e325961d52cdf3836e6dc11913d47c4ec7a8370e6ea",
+   "results/prereg17/explore/test_p17.py": "292071f1df0e350cd918895cc29b7e1d34fca6cf78399ae6280408faff42d88c",
+   "tools/p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+   "tools/p03_rank_fuse.py": "77abd7479d26f0f647a258b4a6d5d2e517808b4c187184f14ff599d70b8aca2f",
+   "tools/p04_rank_fuse.py": "c3a647b09c46760239d5b2ee274d56f7231987354fc1c1f6c3ff40102f4b26a2",
+   "tools/p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142",
+   "tools/p08_rank_fuse.py": "64f42bd956f7808947e0c85abe1f9fa60d9958cb8e769fc889c6283c188d481e",
+   "tools/p09_rank_fuse.py": "1486f7ce102450c1ed0b051234537286f6f9a0b38f7aaaf182a38458e4ddfb8b",
+   "tools/p09_forward.py": "67124e0e534f575493aa8d72dbd2582335e4166718448e36bb5e105c61cb185d",
+   "tools/p09_map.py": "fff3ffe6ae6b8c32163803a6d307fa184c2857af5d6e1505e3c931a4e8831566",
+   "results/prereg12/explore/finetune/ft_eval.py": "2e3302cad19ab4c6b3f4242278a7d9bd751cdfbd92b4672696a6af46860b8021",
+   "results/prereg05/explore/u1/u1_lib.py": "225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7",
+   "results/prereg07/explore/pilot_humansl/pilot_fuse.py": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+   "results/prereg07/explore/pilot_humansl/hs_lib.py": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+   "results/prereg08/p1/p1_fuse.py": "ad356c8ca9f26e1e761677afa07b5aa369ca31e5318f61eb6a6cbda33b970953",
+   "results/prereg08/p1/p1_lib.py": "062600168326f9eecd4ec1073e54881c475f8f276e376164eab20d373bbff511",
+   "tools/p02_rank_pseudo.py": "16e5bfdfb2995874ddb11bde1f7a9e786a478b14443453f675a4fb3a480bb098",
+   "tools/p02_rank_opening.py": "a4195fece41aa3d50ecda82d1af93d9c04f49df5fd2157d69dd8a488dea93463",
+   "tools/p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "results/prereg09/rank/p1e_map.npz": "b5a9e33023a48099cbbafa87e5c92a081b272a73402dbd7d0fba4c70323be5eb",
+   "results/prereg09/rank/check_report.json": "3dfe765d1b7aa1c7c9f33ac8c0d6f89e44a5abf0141ca1195fdaa0fc71fe00a0",
+   "results/prereg09/rank/tune_report.json": "30fe15a0bfec2160dfcb4a50e3a7f5ad7c7de13f3e8a35c341b9912d66abba83",
+   "results/prereg09/rank/frozen_config.json": "50d38d2787c94569d88ed87a482e872ed64be2d1d20e4f57ffbb07a216663ff5",
+   "results/prereg08/rank/p1_map.npz": "3f0d6904c5ccb938206884827b128c2a4ef2d83993f8635577dc43ffd52971fb",
+   "results/prereg08/feat/inner_manifest.json": "0ce2114d637f5205b666e46cfc2b05b9201982e06e231a85212f479f49a415d3",
+   "results/prereg09/feat/p3_manifest.json": "bd6b88c27034db4f39dc0fa65fd845c512a87b38b52a406caa1b2ccaac28004e"
+  }
+ },
+ "created": "2026-10-17T17:11:34+00:00",
+ "seconds": 160.0,
+ "smoke_note": null,
+ "rerun_reason": null,
+ "earlier_run_heads": null,
+ "what": "PLAN.md: inner-only judgement of Q09+T (TabICLv2 on PCA-128 of the 1,540 P1 features, 30,000 probe games in context, as a 7th equal-weight member of Q09's ensemble, fused as Q09); training players only, no validation scoring (competition 2 has none left)",
+ "status": "gates not passed: stop",
+ "seam": {
+  "Q02H": [
+   0.6242752597994481,
+   0.6242752597994481
+  ],
+  "Q08": [
+   0.6986195853659671,
+   0.6986195853659671
+  ],
+  "Q08_mono": [
+   0.6946737091777063,
+   0.6946737091777063
+  ],
+  "Q09": [
+   0.7114420614163589,
+   0.7114420614163589
+  ],
+  "Q09_mono": [
+   0.7145431684624712,
+   0.7145431684624712
+  ]
+ },
+ "seam_m": {
+  "members": 6,
+  "lse_mean_equal": true,
+  "with_members_lp_equal": true,
+  "ok": true
+ },
+ "seam_p": {
+  "ok": true,
+  "want": {
+   "probe_X.npy": "ee8ce70ec56b8ffb92952ca44ad271a420f1d145b8277f09ea6a611fb05701dc",
+   "probe_ex.npy": "13d7e3a0a501d22599ecae69ed622f5089cf3850da430e3acac6c18f76c0c0dd",
+   "probe_meta.npz": "28286a663dacc0dd545819b52ee7c2b9c73caa7f280b4aeccb1760122c0929ac",
+   "inner_X.npy": "333186ad6a56b1c432965672193d80b3983d98260bc6b54dd95c36df385c4460",
+   "inner_ex.npy": "a46b3fde784a8c2ceecc9d6c9a33001fe031509acb820bd037e90bfe45baa37c",
+   "inner_meta.npz": "6410e7ecb1b061d0e8c18d0b314fcce91fbced4f0c967ec7c2322f7b9b0ed381"
+  },
+  "got": {
+   "probe_X.npy": "ee8ce70ec56b8ffb92952ca44ad271a420f1d145b8277f09ea6a611fb05701dc",
+   "probe_ex.npy": "13d7e3a0a501d22599ecae69ed622f5089cf3850da430e3acac6c18f76c0c0dd",
+   "probe_meta.npz": "28286a663dacc0dd545819b52ee7c2b9c73caa7f280b4aeccb1760122c0929ac",
+   "inner_X.npy": "333186ad6a56b1c432965672193d80b3983d98260bc6b54dd95c36df385c4460",
+   "inner_ex.npy": "a46b3fde784a8c2ceecc9d6c9a33001fe031509acb820bd037e90bfe45baa37c",
+   "inner_meta.npz": "6410e7ecb1b061d0e8c18d0b314fcce91fbced4f0c967ec7c2322f7b9b0ed381"
+  },
+  "q12_inner_X_sha256": "333186ad6a56b1c432965672193d80b3983d98260bc6b54dd95c36df385c4460"
+ },
+ "seam_c": {
+  "ok": true,
+  "overlap_rank_player": 0,
+  "overlap_player_id_only_record": 0,
+  "context_players": 5397,
+  "context_per_level": [
+   3000,
+   3000,
+   3000,
+   3000,
+   3000,
+   3000,
+   3000,
+   3000,
+   3000,
+   3000
+  ]
+ },
+ "seam_t": {
+  "problems": [],
+  "chunks": 37,
+  "gpu_seconds_total": 1008.9,
+  "sessions": [
+   {
+    "started": "2026-10-17T16:51:54+00:00",
+    "pid": 34824,
+    "chunks_todo": 37,
+    "chunks_done": 37,
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "driver": "616.92",
+    "memory_used_mib_at_start": 1255,
+    "mem_get_info": [
+     [
+      "fit",
+      24154996736,
+      25756696576
+     ],
+     [
+      0,
+      24029167616,
+      25756696576
+     ],
+     [
+      2000,
+      20969422848,
+      25756696576
+     ],
+     [
+      4000,
+      20969422848,
+      25756696576
+     ],
+     [
+      6000,
+      20969422848,
+      25756696576
+     ],
+     [
+      8000,
+      20969422848,
+      25756696576
+     ],
+     [
+      10000,
+      20969422848,
+      25756696576
+     ],
+     [
+      12000,
+      20969422848,
+      25756696576
+     ],
+     [
+      14000,
+      20969422848,
+      25756696576
+     ],
+     [
+      16000,
+      20969422848,
+      25756696576
+     ],
+     [
+      18000,
+      20969422848,
+      25756696576
+     ],
+     [
+      20000,
+      20969422848,
+      25756696576
+     ],
+     [
+      22000,
+      20969422848,
+      25756696576
+     ],
+     [
+      24000,
+      20969422848,
+      25756696576
+     ],
+     [
+      26000,
+      20969422848,
+      25756696576
+     ],
+     [
+      28000,
+      20969422848,
+      25756696576
+     ],
+     [
+      30000,
+      20969422848,
+      25756696576
+     ],
+     [
+      32000,
+      20969422848,
+      25756696576
+     ],
+     [
+      34000,
+      20969422848,
+      25756696576
+     ],
+     [
+      36000,
+      20969422848,
+      25756696576
+     ],
+     [
+      38000,
+      20969422848,
+      25756696576
+     ],
+     [
+      40000,
+      20969422848,
+      25756696576
+     ],
+     [
+      42000,
+      20969422848,
+      25756696576
+     ],
+     [
+      44000,
+      20969422848,
+      25756696576
+     ],
+     [
+      46000,
+      20969422848,
+      25756696576
+     ],
+     [
+      48000,
+      20969422848,
+      25756696576
+     ],
+     [
+      50000,
+      20969422848,
+      25756696576
+     ],
+     [
+      52000,
+      20969422848,
+      25756696576
+     ],
+     [
+      54000,
+      20969422848,
+      25756696576
+     ],
+     [
+      56000,
+      20969422848,
+      25756696576
+     ],
+     [
+      58000,
+      20969422848,
+      25756696576
+     ],
+     [
+      60000,
+      20969422848,
+      25756696576
+     ],
+     [
+      62000,
+      20969422848,
+      25756696576
+     ],
+     [
+      64000,
+      20969422848,
+      25756696576
+     ],
+     [
+      66000,
+      20969422848,
+      25756696576
+     ],
+     [
+      68000,
+      20969422848,
+      25756696576
+     ],
+     [
+      70000,
+      20969422848,
+      25756696576
+     ],
+     [
+      72000,
+      20969422848,
+      25756696576
+     ]
+    ],
+    "fit_seconds": 4.8,
+    "seconds": 1008.9,
+    "status": "done"
+   }
+  ],
+  "versions": {
+   "tabicl": "2.2.0",
+   "torch": "2.11.0+cu128",
+   "numpy": "2.5.3",
+   "scipy": "1.18.1",
+   "scikit-learn": "1.9.1"
+  },
+  "raw_dtype": "float32",
+  "finite_nonnegative": true,
+  "row_sum_max_abs_dev": 1.8588616512715816e-07,
+  "ok": true
+ },
+ "feat_record": {
+  "head": "d7e080cf9fc413f0c218d6799fedd5b806f550fa",
+  "pca": {
+   "dim": 128,
+   "rows": 270000,
+   "sources": [
+    "p1_probe",
+    "p2_probe",
+    "p3_probe"
+   ],
+   "explained_ratio": 0.8530590652056963,
+   "eigvals_head": [
+    260.534666266218,
+    166.585865263457,
+    131.03284811131223,
+    114.75797261519776,
+    54.318942825633975,
+    38.95343237385505,
+    37.018486993045215,
+    34.398702754066925,
+    27.522929197277442,
+    26.61202631936365
+   ],
+   "pca_sha256": "2985fd9f6bdb71afb0b1742cf20a953cb2f42e20e0f520acc404c757cd665c1f"
+  },
+  "context": {
+   "rows": 30000,
+   "per_level": [
+    3000,
+    3000,
+    3000,
+    3000,
+    3000,
+    3000,
+    3000,
+    3000,
+    3000,
+    3000
+   ],
+   "seed": 20261017,
+   "players": 5397,
+   "sources": {
+    "p1_probe": 3407,
+    "p2_probe": 13256,
+    "p3_probe": 13337
+   }
+  },
+  "inner_rows": 73169,
+  "files_sha256": {
+   "Z_ctx.npy": "6dcef58605e36a5f8273aaf0ab2552fb2c86f0ac971b8e4243a2f79486e59c5f",
+   "y_ctx.npy": "cd8cef5637132cf9a987cdc9a5fe114190c888b048246f320c1c5da431a9a41f",
+   "Z_inner.npy": "219f9272fbafda5df347c27b8665997ed5a9923361bd948944b0a262ab643ba2",
+   "ctx_rows.npy": "42fa1fd373469373beca92491e451507442c52a2be6f3118671f3ca6199e0286",
+   "ctx_players.npy": "98373dfcdf1d08556e337db1a5c241ee89c41bc57ba9fd923545c897c7c439e3",
+   "inner_ref.npy": "56c1a939cba57c8ac905694d9cc281dab69a8e6ceb7b98d7d3403a0ca0a034d2"
+  }
+ },
+ "candidate": {
+  "name": "Q09+T",
+  "terms": [
+   "OP",
+   "O4",
+   "SWA",
+   "SWB",
+   "HS",
+   "P1TO"
+  ],
+  "inner_rank_balanced": 0.7109141926935111,
+  "inner_question_mean": 0.71552752435487,
+  "single_colour_rank_balanced": 0.7135849916484577,
+  "single_colour_by_colour": {
+   "B": 0.7080611105492142,
+   "W": 0.7191483668600486
+  },
+  "fusion_weights_by_fold": [
+   {
+    "OP": 1.0130404254684249,
+    "O4": 0.5721008332436435,
+    "SWA": 0.0,
+    "SWB": 0.0,
+    "HS": 0.0,
+    "P1TO": 4.0
+   },
+   {
+    "OP": 1.115908166846956,
+    "O4": 1.8608685327082852,
+    "SWA": 0.0,
+    "SWB": 0.0,
+    "HS": 0.0,
+    "P1TO": 4.0
+   },
+   {
+    "OP": 1.1035588397630327,
+    "O4": 1.3326551679014593,
+    "SWA": 0.0,
+    "SWB": 0.0,
+    "HS": 0.0,
+    "P1TO": 4.0
+   },
+   {
+    "OP": 1.049233517964637,
+    "O4": 1.6599664084697292,
+    "SWA": 0.0,
+    "SWB": 0.0,
+    "HS": 0.0,
+    "P1TO": 4.0
+   },
+   {
+    "OP": 1.2854088579769398,
+    "O4": 1.9764539168929327,
+    "SWA": 0.0,
+    "SWB": 0.0,
+    "HS": 0.0,
+    "P1TO": 4.0
+   }
+  ],
+  "vs": {
+   "inner_diff": -0.000527868722847824,
+   "inner_ci95": [
+    -0.0028370497853041133,
+    0.0015481907719539023
+   ],
+   "mono_diff": -0.000958176814013556,
+   "mono_ci95": [
+    -0.001923537437566597,
+    3.1566827283382744e-05
+   ],
+   "mono_by_colour": {
+    "B": -0.000983968966864479,
+    "W": -0.0009128388637963392
+   }
+  }
+ },
+ "baseline": {
+  "name": "Q09",
+  "inner_rank_balanced": 0.7114420614163589,
+  "inner_question_mean": 0.7156403984808404,
+  "single_colour_rank_balanced": 0.7145431684624712,
+  "single_colour_by_colour": {
+   "B": 0.7090450795160786,
+   "W": 0.7200612057238449
+  },
+  "fusion_weights_by_fold": [
+   {
+    "OP": 1.0272066532919533,
+    "O4": 0.7072460172192693,
+    "SWA": 0.0,
+    "SWB": 0.0,
+    "HS": 0.0,
+    "P1TO": 4.0
+   },
+   {
+    "OP": 1.1315773436287975,
+    "O4": 2.0301906879311646,
+    "SWA": 0.0,
+    "SWB": 0.0,
+    "HS": 0.0,
+    "P1TO": 4.0
+   },
+   {
+    "OP": 1.1128802702934195,
+    "O4": 1.4545399697776442,
+    "SWA": 0.0,
+    "SWB": 0.0,
+    "HS": 0.0,
+    "P1TO": 4.0
+   },
+   {
+    "OP": 1.0566043059302879,
+    "O4": 1.7608979614176903,
+    "SWA": 0.0,
+    "SWB": 0.0,
+    "HS": 0.0,
+    "P1TO": 4.0
+   },
+   {
+    "OP": 1.2952931392481675,
+    "O4": 2.115302464102284,
+    "SWA": 0.0,
+    "SWB": 0.0,
+    "HS": 0.0,
+    "P1TO": 4.0
+   }
+  ]
+ },
+ "gates": {
+  "G1": {
+   "threshold": 0.01,
+   "delta": -0.000527868722847824,
+   "passed": false
+  },
+  "G2": {
+   "ci95": [
+    -0.0028370497853041133,
+    0.0015481907719539023
+   ],
+   "passed": false
+  },
+  "G4": {
+   "mono_diff": -0.000958176814013556,
+   "mono_ci95": [
+    -0.001923537437566597,
+    3.1566827283382744e-05
+   ],
+   "by_colour": {
+    "B": -0.000983968966864479,
+    "W": -0.0009128388637963392
+   },
+   "passed": false
+  },
+  "passed": false
+ },
+ "record_only": {
+  "T_alone_x4_in_P1TO_slot": {
+   "inner_rank_balanced": 0.6915712713969244,
+   "inner_question_mean": 0.6968000111805628,
+   "single_colour_rank_balanced": 0.6941358461883368,
+   "single_colour_by_colour": {
+    "B": 0.6854742303311174,
+    "W": 0.7028851716705816
+   },
+   "fusion_weights_by_fold": [
+    {
+     "OP": 1.3407942700663738,
+     "O4": 1.0677163350133456,
+     "SWA": 0.37823999728687246,
+     "SWB": 0.0,
+     "HS": 0.0,
+     "P1TO": 4.0
+    },
+    {
+     "OP": 1.4368287934634891,
+     "O4": 2.2903654093977077,
+     "SWA": 0.4018012879943358,
+     "SWB": 0.0,
+     "HS": 0.0,
+     "P1TO": 4.0
+    },
+    {
+     "OP": 1.4762563336574022,
+     "O4": 2.0303903590105308,
+     "SWA": 0.07811979721458445,
+     "SWB": 0.037924176676051066,
+     "HS": 0.04467695666730683,
+     "P1TO": 4.0
+    },
+    {
+     "OP": 1.3949664998313087,
+     "O4": 2.5246400107658404,
+     "SWA": 0.16323605798570395,
+     "SWB": 0.0,
+     "HS": 0.0,
+     "P1TO": 4.0
+    },
+    {
+     "OP": 1.7672962220126673,
+     "O4": 2.3493006555750293,
+     "SWA": 2.146389811373418,
+     "SWB": 0.0,
+     "HS": 0.0,
+     "P1TO": 4.0
+    }
+   ],
+   "vs": {
+    "inner_diff": -0.01987079001943448,
+    "inner_ci95": [
+     -0.030932613656499092,
+     -0.010056778779059448
+    ],
+    "mono_diff": -0.020407322274134443,
+    "mono_ci95": [
+     -0.026217326108414214,
+     -0.01486027504186427
+    ],
+    "mono_by_colour": {
+     "B": -0.023570849184961218,
+     "W": -0.01717603405326329
+    }
+   }
+  },
+  "pca_explained_ratio_128": 0.8530590652056963,
+  "context": {
+   "rows": 30000,
+   "per_level": [
+    3000,
+    3000,
+    3000,
+    3000,
+    3000,
+    3000,
+    3000,
+    3000,
+    3000,
+    3000
+   ],
+   "seed": 20261017,
+   "players": 5397,
+   "sources": {
+    "p1_probe": 3407,
+    "p2_probe": 13256,
+    "p3_probe": 13337
+   }
+  },
+  "gpu_seconds_total": 1008.9,
+  "p_T_row_sum_max_abs_dev": 1.8588616512715816e-07
+ },
+ "q09_map_sha256": "ecc9c9b1747b7b7d40cf53869b6c67c8e6f776ba7498498737fe3eede8e2edba"
+}

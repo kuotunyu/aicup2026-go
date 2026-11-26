@@ -1,0 +1,10 @@
+inputs: fit 25400, eval 127200, single-colour 120544 questions; 73556 inner games
+T4_extra_term: -0.0000 [-0.0, 0.0] (30s)
+lengths loaded (696s)
+stack_bias: -0.0007 [-0.0033, 0.0019] (728s)
+stack_noise: -0.0004 [-0.003, 0.0023] (731s)
+stack_length: -0.0022 [-0.0065, 0.0017] (751s)
+stack_disp: -0.0001 [-0.0038, 0.0036] (759s)
+stack_all: -0.0026 [-0.0076, 0.002] (770s)
+trim_minmax: -0.0048 [-0.0081, -0.0011] (782s)
+D:\AI-Portfolio\competitions\aicup2026-go\results\prereg06\explore\c2_headroom\c_ideas.json

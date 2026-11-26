@@ -1,0 +1,179 @@
+{
+ "format": "c10-prereg09 rank check_report v1",
+ "what": "PREREG_09 2.2 check: are the inputs usable (no score)",
+ "created": "2026-10-09T06:24:03+00:00",
+ "seconds": 4.6,
+ "preview": false,
+ "precommit": false,
+ "rerun": null,
+ "status": "ok",
+ "problems": [],
+ "notes": [],
+ "p3_manifest": {
+  "sha256": "bd6b88c27034db4f39dc0fa65fd845c512a87b38b52a406caa1b2ccaac28004e",
+  "commit": {
+   "files": {
+    "results/prereg09/feat/p3_manifest.json": "bd6b88c27034db4f39dc0fa65fd845c512a87b38b52a406caa1b2ccaac28004e"
+   },
+   "commit_problems": [],
+   "precommit_skipped": false
+  },
+  "p3": {
+   "complete": true,
+   "chunks": 600,
+   "chunks_expected": 600,
+   "valid": true,
+   "failed": 0,
+   "failed_limit": 600,
+   "used": true,
+   "reason": "600/600 chunks, failed games 0 <= 600",
+   "cutoff": "2026-10-10T23:59:59+08:00",
+   "decided_at": "2026-10-09T06:19:59+00:00",
+   "rule": "PREREG_09 1.2: used iff 600/600 chunks present and valid at the manifest and failed <= 600",
+   "games": 120000,
+   "no_target_moves_record_only": 0
+  }
+ },
+ "probe_used": "P1+P2+P3",
+ "probe_sets": [
+  "p1_probe",
+  "p2_probe",
+  "p3_probe"
+ ],
+ "p08_chunks": {
+  "p08_sets_verified": [
+   "p1_probe",
+   "bank",
+   "mono",
+   "p2_probe"
+  ],
+  "problems": [],
+  "seconds": 1.8
+ },
+ "disjoint_p3": {
+  "probe_players_p3": 3845,
+  "inner_overlap": 0,
+  "validation_overlap": 0,
+  "p3_p1p2_game_overlap": 0,
+  "passed": true
+ },
+ "disjoint_p08": {
+  "probe_players_p1": 5767,
+  "probe_players_p2": 5740,
+  "inner_overlap": 0,
+  "validation_overlap": 0,
+  "p2_p1_game_overlap": 0,
+  "passed": true
+ },
+ "inner_usable_games": 73169,
+ "prep": {
+  "record_sha256": "886a549f1995b6a78d2c3f56c1030c14bac5fbdb3f1611190a663bed66e18ae8",
+  "files_sha256": {
+   "probe_X.npy": "ee8ce70ec56b8ffb92952ca44ad271a420f1d145b8277f09ea6a611fb05701dc",
+   "probe_ex.npy": "13d7e3a0a501d22599ecae69ed622f5089cf3850da430e3acac6c18f76c0c0dd",
+   "probe_meta.npz": "28286a663dacc0dd545819b52ee7c2b9c73caa7f280b4aeccb1760122c0929ac",
+   "inner_X.npy": "333186ad6a56b1c432965672193d80b3983d98260bc6b54dd95c36df385c4460",
+   "inner_ex.npy": "a46b3fde784a8c2ceecc9d6c9a33001fe031509acb820bd037e90bfe45baa37c",
+   "inner_meta.npz": "6410e7ecb1b061d0e8c18d0b314fcce91fbced4f0c967ec7c2322f7b9b0ed381"
+  },
+  "probe_used": "P1+P2+P3",
+  "limited": false,
+  "probe_rows": {
+   "p1_probe": 30000,
+   "p2_probe": 120000,
+   "p3_probe": 120000
+  },
+  "inner_rows": {
+   "bank": 11813,
+   "mono": 61356
+  },
+  "seconds_hashing": 1.6
+ },
+ "pinned_sha256": {
+  "results/prereg07/explore/pilot_humansl/hs_lib.py": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+  "results/prereg07/explore/pilot_humansl/pilot_run.py": "b0d127fd1d5a83af5b17ec3df1dccc85d94b11c3479d33cac07448a3796a3936",
+  "results/prereg07/explore/pilot_humansl/pilot_fuse.py": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+  "results/prereg05/explore/u1/u1_lib.py": "225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7",
+  "results/prereg08/p1/p1_lib.py": "062600168326f9eecd4ec1073e54881c475f8f276e376164eab20d373bbff511",
+  "results/prereg08/p1/p1_extract.py": "2ee8eb127150e672b62bcb30b70c4fac46b8cd6e32c7e4eb19d54f746a6e3f9c",
+  "results/prereg08/p1/p1_fuse.py": "ad356c8ca9f26e1e761677afa07b5aa369ca31e5318f61eb6a6cbda33b970953",
+  "results/prereg08/p1/p1_plan.json": "0cd46bf90c764cae3824f5906e72e13336ab7276ef5fa7edb2ec6831911b228d",
+  "results/prereg08/p2/p2_sets.py": "98bad3d85a32e80c065226b0cc8cd1065b423cdb39dce89829a54b0cbf381c8f",
+  "tools/p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142",
+  "tools/p07_hs.py": "b27ea371bdc1477558effb9ca86c540805dcced971d983226e15fb5e19b7b8dc",
+  "data/prereg08/p1/sets.json": "f0c494962788615d76080b5481de5b762d71f3ad37f8add55a09efef82acb7c7",
+  "data/prereg08/p2/sets.json": "2b68f7ae27b2b6bbe00a3920065495d2a5d6b73fd7df33854f4bf99ae5390049",
+  "data/prereg07/pilot/plan.json": "8494e9afd79c06249bd81545263b86caef7b9e77f3cd631a1e354368cfe33946",
+  "results/prereg08/rank/frozen_config.json": "421bbeb4524bed8ccf73babd58cac6b16c82f45b1aa57acef2e55bd52be0ba70",
+  "results/prereg08/rank/p1_map.npz": "116923629b66198a79da06282aac9ca863acf77bf6a1e1f5d584b526fb54afb2",
+  "results/prereg08/rank/rank_val_probs.csv": "7a513367147227e3631bfb7bad36064f3e90fffb6ee358716e389698ce1ccd97",
+  "results/prereg08/rank/pred_B.csv": "b02d4f947910726fa25c292e9798e7407b1e802e2fed080d843f56b9beb48872",
+  "results/prereg08/rank/val_lp_p1.npz": "8815db14654eefdb8c2a11cfbb709de4254272de734cec415b3dfc2dbb0e59a9",
+  "results/prereg08/rank/apply_report.json": "63980d79866d2653a4e600cef78cadd9d0d27c828a69e1b34d6ae2309eaf040f",
+  "results/prereg08/rank/score_H8R.json": "8ecd2425fe3eef784e28d7587184aec67c0b41b49503e95b42f8532757209047",
+  "results/prereg08/rank/tune_report.json": "995c7cd9cf8f4a01c4e888872c253f075e0246e9f603cbfa09f84bb015aa1b06",
+  "results/prereg08/feat/inner_manifest.json": "0ce2114d637f5205b666e46cfc2b05b9201982e06e231a85212f479f49a415d3",
+  "results/prereg08/feat/val_p1.npz": "11b1d38cc116401d44825883b864bf635b2d44e109baa17115fb4093055da4e0",
+  "results/prereg08/feat/val_report.json": "2ce9e86f8e639217c38814541f7d1bfb083b609ac194b5e19c8c38c60e653535",
+  "results/prereg08/feat/val_seam_feats.npz": "0a7b9b0010192a4c7f3878e914f9e514a18cfa338d94dc8c49936b6b625b9318",
+  "results/prereg09/explore/mapping/prep.py": "48fec73cb10014a4e775b6d425486d449fdd89dbfd4a4143c7f1e2a5827aa219",
+  "results/prereg09/explore/mapping/train.py": "5f53180992ada3a4f1fef433a0024ce4d2aa2c10613729cbca1484311e80a67b",
+  "results/prereg09/explore/mapping/combos.py": "de7690186b647f18f1be82db167a71080be8b0e0c3f936aa636acb2d3c608073",
+  "results/prereg09/explore/mapping/ev_lib.py": "0f2ccb9c2690f1256b53df370200bf0a32de3068c8d378934e1a7d3096c0bf1b",
+  "results/prereg09/explore/mapping/run_eval.py": "aff31dbf4e13b3bd7ca64e791fc68dccb579e92b4a4a9ed78e0ed401b37bbb10",
+  "results/prereg09/explore/p3/p3_sets.py": "7f77071747d5a3b2d85e4814cbc4834c7aee8f6b95a866da3f2d69e320dd5d6d",
+  "data/prereg09/p3/sets.json": "164d8bd7b0f212110e222f0a92aeb20079d91ae538c2f0414d563b8478d92eba",
+  "tools/p08_rank_fuse.py": "64f42bd956f7808947e0c85abe1f9fa60d9958cb8e769fc889c6283c188d481e",
+  "tools/p08_p1.py": "a10c77c4bd97472b464f39080816090f0f64986195384b28e1d95dfc76e6677f"
+ },
+ "tool": {
+  "git_head": "f2ab80dfa8aa12f0545608a3e18b663427d11a8f",
+  "dirty_or_untracked": [],
+  "files_sha256_rule": "sha256, CRLF folded to LF",
+  "files_sha256": {
+   "tools/p09_map.py": "fff3ffe6ae6b8c32163803a6d307fa184c2857af5d6e1505e3c931a4e8831566",
+   "tools/p09_rank_fuse.py": "1486f7ce102450c1ed0b051234537286f6f9a0b38f7aaaf182a38458e4ddfb8b",
+   "tools/p09_forward.py": "67124e0e534f575493aa8d72dbd2582335e4166718448e36bb5e105c61cb185d",
+   "tools/p08_rank_fuse.py": "64f42bd956f7808947e0c85abe1f9fa60d9958cb8e769fc889c6283c188d481e",
+   "tools/p08_p1.py": "a10c77c4bd97472b464f39080816090f0f64986195384b28e1d95dfc76e6677f",
+   "results/prereg07/explore/pilot_humansl/hs_lib.py": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+   "results/prereg07/explore/pilot_humansl/pilot_run.py": "b0d127fd1d5a83af5b17ec3df1dccc85d94b11c3479d33cac07448a3796a3936",
+   "results/prereg07/explore/pilot_humansl/pilot_fuse.py": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+   "results/prereg05/explore/u1/u1_lib.py": "225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7",
+   "results/prereg08/p1/p1_lib.py": "062600168326f9eecd4ec1073e54881c475f8f276e376164eab20d373bbff511",
+   "results/prereg08/p1/p1_extract.py": "2ee8eb127150e672b62bcb30b70c4fac46b8cd6e32c7e4eb19d54f746a6e3f9c",
+   "results/prereg08/p1/p1_fuse.py": "ad356c8ca9f26e1e761677afa07b5aa369ca31e5318f61eb6a6cbda33b970953",
+   "results/prereg08/p1/p1_plan.json": "0cd46bf90c764cae3824f5906e72e13336ab7276ef5fa7edb2ec6831911b228d",
+   "results/prereg08/p2/p2_sets.py": "98bad3d85a32e80c065226b0cc8cd1065b423cdb39dce89829a54b0cbf381c8f",
+   "tools/p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142",
+   "tools/p07_hs.py": "b27ea371bdc1477558effb9ca86c540805dcced971d983226e15fb5e19b7b8dc",
+   "results/prereg09/explore/mapping/prep.py": "48fec73cb10014a4e775b6d425486d449fdd89dbfd4a4143c7f1e2a5827aa219",
+   "results/prereg09/explore/mapping/train.py": "5f53180992ada3a4f1fef433a0024ce4d2aa2c10613729cbca1484311e80a67b",
+   "results/prereg09/explore/mapping/combos.py": "de7690186b647f18f1be82db167a71080be8b0e0c3f936aa636acb2d3c608073",
+   "results/prereg09/explore/mapping/ev_lib.py": "0f2ccb9c2690f1256b53df370200bf0a32de3068c8d378934e1a7d3096c0bf1b",
+   "results/prereg09/explore/mapping/run_eval.py": "aff31dbf4e13b3bd7ca64e791fc68dccb579e92b4a4a9ed78e0ed401b37bbb10",
+   "results/prereg09/explore/p3/p3_sets.py": "7f77071747d5a3b2d85e4814cbc4834c7aee8f6b95a866da3f2d69e320dd5d6d"
+  }
+ },
+ "environment": {
+  "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "blas_env": {
+   "OMP_NUM_THREADS": null,
+   "OPENBLAS_NUM_THREADS": null,
+   "MKL_NUM_THREADS": null
+  },
+  "cpu_count": 24,
+  "registered_venv": {
+   "python": "3.12.13",
+   "torch": "2.14.0+cpu",
+   "numpy": "2.5.3",
+   "scipy": "1.18.1",
+   "threads": 8
+  }
+ },
+ "no_pycache_after": true
+}

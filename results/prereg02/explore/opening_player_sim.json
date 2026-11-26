@@ -1,0 +1,868 @@
+{
+ "what": "Competition 1 opening-only player retrieval on simulated pools of FIT players (training data only, via tools/c10data.load_rows(part='fit'); no validation games, no answer files). Exploration used to freeze the PREREG_02 opening-token design.",
+ "data": {
+  "part": "fit",
+  "games": 720307,
+  "players": 5767,
+  "eligible_players_by_level": {
+   "D": 192,
+   "C": 210,
+   "B": 229,
+   "A": 232,
+   "1D": 146,
+   "2D": 187,
+   "3D": 189,
+   "4D": 178,
+   "5D": 189,
+   "6D": 185
+  },
+  "eligible_rule": "players with >= 105 fit games"
+ },
+ "setup": {
+  "own_moves_N": 10,
+  "moves_parsed": "first 60 moves found in the first 2000 SGF characters",
+  "pool": "40 players per level x 10 levels, chosen per seed by sha256('<seed>|<player_id>')",
+  "candidates_per_player": 100,
+  "query_size": "k = randint(5, 20) per player",
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "vector": "per player: counts over games, weight 1 + ln(count), times idf = ln((1 + 400) / (1 + df)) + 1 with df over the pool's candidate vectors, L2-normalised; cosine similarity query vs candidate vectors",
+  "metric": "official: rank r of the true player among 400, score e^-(r-1) for r <= 5, else 0; mean over the 400 queries; top1 / top5 = share with r = 1 / r <= 5; cells report the mean over seeds and the value for each seed"
+ },
+ "splits": {
+  "random": "shuffle the player's games (rng seeded 'pool|<seed>'); candidates = first 100, query = next k (fewer if the player has < 100 + k games)",
+  "fileorder": "games in file order, no shuffle; candidates = first 100, query = next k. In the training files each player's black games come first, then the white games",
+  "colour_separated": "games ordered black first then white, each colour in file order (for the eligible fit players this is exactly the file order, see colour_order_check); candidates = first 100, query = the LAST q = min(k, n - 100) games, so candidates and query never overlap and the query is mostly the opposite colour of the candidates"
+ },
+ "token_sets": {
+  "col": "colour-prefixed: own positional move 'B3:dd' + own unordered move 'B*:dd' for the first 10 own moves, plus bigrams 'Bq:Bdd>Wpp' of the first 10 moves of both colours (scratchpad name 'raw+seq')",
+  "nocol": "colour-free versions: 'o3:dd', 'o*:dd', bigrams 'q:dd>pp' (scratchpad name 'nocol')",
+  "both": "col + nocol",
+  "own": "supplementary: col without the bigrams (scratchpad name 'raw'); only used to reproduce the scratchpad numbers (raw-vs-canon comparison, and the scratchpad 'raw+seq fileorder' run, which silently had no bigrams, see reproduction_of_scratchpad)"
+ },
+ "orientations": {
+  "raw": "coordinates as in the SGF",
+  "canon": "each game is transformed by the D4 symmetry that makes the coordinate string of its first 6 moves lexicographically minimal (transform applied to all moves)"
+ },
+ "colour_order_check": {
+  "eligible_players": 1937,
+  "black_then_white_equals_file_order": 1937
+ },
+ "colour_diagnostics_by_split": {
+  "random": {
+   "candidate_black_share": 0.5051,
+   "query_black_share": 0.5063,
+   "query_colour_share_in_candidates": 0.5348,
+   "mean_query_games": 12.2815,
+   "note": "means over players and seeds; query_colour_share_in_candidates = for each query game, the share of that player's candidates with the same colour"
+  },
+  "fileorder": {
+   "candidate_black_share": 0.8756,
+   "query_black_share": 0.5744,
+   "query_colour_share_in_candidates": 0.6988,
+   "mean_query_games": 12.2695,
+   "note": "means over players and seeds; query_colour_share_in_candidates = for each query game, the share of that player's candidates with the same colour"
+  },
+  "colour_separated": {
+   "candidate_black_share": 0.8756,
+   "query_black_share": 0.0131,
+   "query_colour_share_in_candidates": 0.1375,
+   "mean_query_games": 12.2695,
+   "note": "means over players and seeds; query_colour_share_in_candidates = for each query game, the share of that player's candidates with the same colour"
+  }
+ },
+ "table_main_score_raw_orientation": {
+  "random": {
+   "col": 0.901,
+   "nocol": 0.8394,
+   "both": 0.8953
+  },
+  "fileorder": {
+   "col": 0.7232,
+   "nocol": 0.7713,
+   "both": 0.7436
+  },
+  "colour_separated": {
+   "col": 0.1973,
+   "nocol": 0.2479,
+   "both": 0.2082
+  }
+ },
+ "table_raw_vs_canon_random_split": {
+  "col": {
+   "raw": 0.901,
+   "canon": 0.8706
+  },
+  "nocol": {
+   "raw": 0.8394,
+   "canon": 0.8061
+  },
+  "both": {
+   "raw": 0.8953,
+   "canon": 0.8663
+  },
+  "own": {
+   "raw": 0.8385,
+   "canon": 0.7968
+  }
+ },
+ "table_supplementary_own_raw_orientation": {
+  "random": 0.8385,
+  "fileorder": 0.6384,
+  "colour_separated": 0.1395
+ },
+ "results": {
+  "random": {
+   "raw": {
+    "col": {
+     "score": 0.901,
+     "top1": 0.8785,
+     "top5": 0.966,
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "score_by_seed": [
+      0.8888,
+      0.9044,
+      0.937,
+      0.8746,
+      0.9004
+     ],
+     "top1_by_seed": [
+      0.865,
+      0.8775,
+      0.9225,
+      0.8525,
+      0.875
+     ],
+     "top5_by_seed": [
+      0.9575,
+      0.9775,
+      0.9825,
+      0.9475,
+      0.965
+     ]
+    },
+    "nocol": {
+     "score": 0.8394,
+     "top1": 0.813,
+     "top5": 0.9285,
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "score_by_seed": [
+      0.8298,
+      0.8432,
+      0.8631,
+      0.8313,
+      0.8295
+     ],
+     "top1_by_seed": [
+      0.805,
+      0.82,
+      0.845,
+      0.805,
+      0.79
+     ],
+     "top5_by_seed": [
+      0.9225,
+      0.9325,
+      0.935,
+      0.925,
+      0.9275
+     ]
+    },
+    "both": {
+     "score": 0.8953,
+     "top1": 0.8725,
+     "top5": 0.9635,
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "score_by_seed": [
+      0.8804,
+      0.8975,
+      0.925,
+      0.8775,
+      0.8962
+     ],
+     "top1_by_seed": [
+      0.855,
+      0.87,
+      0.91,
+      0.855,
+      0.8725
+     ],
+     "top5_by_seed": [
+      0.9525,
+      0.975,
+      0.9775,
+      0.95,
+      0.9625
+     ]
+    },
+    "own": {
+     "score": 0.8385,
+     "top1": 0.8115,
+     "top5": 0.9245,
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "score_by_seed": [
+      0.8104,
+      0.8451,
+      0.8731,
+      0.8137,
+      0.85
+     ],
+     "top1_by_seed": [
+      0.785,
+      0.81,
+      0.8475,
+      0.79,
+      0.825
+     ],
+     "top5_by_seed": [
+      0.89,
+      0.9325,
+      0.96,
+      0.9,
+      0.94
+     ]
+    }
+   },
+   "canon": {
+    "col": {
+     "score": 0.8706,
+     "top1": 0.8455,
+     "top5": 0.951,
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "score_by_seed": [
+      0.8376,
+      0.865,
+      0.9117,
+      0.8683,
+      0.8704
+     ],
+     "top1_by_seed": [
+      0.8025,
+      0.835,
+      0.895,
+      0.8475,
+      0.8475
+     ],
+     "top5_by_seed": [
+      0.94,
+      0.9625,
+      0.9725,
+      0.94,
+      0.94
+     ]
+    },
+    "nocol": {
+     "score": 0.8061,
+     "top1": 0.7775,
+     "top5": 0.909,
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "score_by_seed": [
+      0.7869,
+      0.802,
+      0.8363,
+      0.7933,
+      0.8124
+     ],
+     "top1_by_seed": [
+      0.7575,
+      0.7675,
+      0.8125,
+      0.765,
+      0.785
+     ],
+     "top5_by_seed": [
+      0.8925,
+      0.9275,
+      0.905,
+      0.9,
+      0.92
+     ]
+    },
+    "both": {
+     "score": 0.8663,
+     "top1": 0.8415,
+     "top5": 0.9485,
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "score_by_seed": [
+      0.837,
+      0.8627,
+      0.8978,
+      0.87,
+      0.8642
+     ],
+     "top1_by_seed": [
+      0.805,
+      0.8325,
+      0.88,
+      0.85,
+      0.84
+     ],
+     "top5_by_seed": [
+      0.9375,
+      0.95,
+      0.9675,
+      0.94,
+      0.9475
+     ]
+    },
+    "own": {
+     "score": 0.7968,
+     "top1": 0.7685,
+     "top5": 0.892,
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "score_by_seed": [
+      0.7531,
+      0.798,
+      0.8135,
+      0.7983,
+      0.8209
+     ],
+     "top1_by_seed": [
+      0.7225,
+      0.77,
+      0.7825,
+      0.775,
+      0.7925
+     ],
+     "top5_by_seed": [
+      0.86,
+      0.89,
+      0.915,
+      0.8775,
+      0.9175
+     ]
+    }
+   }
+  },
+  "fileorder": {
+   "raw": {
+    "col": {
+     "score": 0.7232,
+     "top1": 0.7,
+     "top5": 0.8,
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "score_by_seed": [
+      0.7389,
+      0.7502,
+      0.7127,
+      0.6964,
+      0.7175
+     ],
+     "top1_by_seed": [
+      0.715,
+      0.7325,
+      0.69,
+      0.6675,
+      0.695
+     ],
+     "top5_by_seed": [
+      0.8025,
+      0.825,
+      0.7975,
+      0.7925,
+      0.7825
+     ]
+    },
+    "nocol": {
+     "score": 0.7713,
+     "top1": 0.7435,
+     "top5": 0.857,
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "score_by_seed": [
+      0.7863,
+      0.7973,
+      0.7679,
+      0.7467,
+      0.7583
+     ],
+     "top1_by_seed": [
+      0.76,
+      0.775,
+      0.74,
+      0.7125,
+      0.73
+     ],
+     "top5_by_seed": [
+      0.86,
+      0.865,
+      0.8575,
+      0.8575,
+      0.845
+     ]
+    },
+    "both": {
+     "score": 0.7436,
+     "top1": 0.718,
+     "top5": 0.8205,
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "score_by_seed": [
+      0.767,
+      0.7651,
+      0.7369,
+      0.7188,
+      0.7301
+     ],
+     "top1_by_seed": [
+      0.745,
+      0.7425,
+      0.71,
+      0.6875,
+      0.705
+     ],
+     "top5_by_seed": [
+      0.8275,
+      0.8375,
+      0.815,
+      0.82,
+      0.8025
+     ]
+    },
+    "own": {
+     "score": 0.6384,
+     "top1": 0.6145,
+     "top5": 0.736,
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "score_by_seed": [
+      0.6513,
+      0.6705,
+      0.6152,
+      0.6132,
+      0.6417
+     ],
+     "top1_by_seed": [
+      0.635,
+      0.64,
+      0.5825,
+      0.59,
+      0.625
+     ],
+     "top5_by_seed": [
+      0.735,
+      0.7825,
+      0.7375,
+      0.7075,
+      0.7175
+     ]
+    }
+   }
+  },
+  "colour_separated": {
+   "raw": {
+    "col": {
+     "score": 0.1973,
+     "top1": 0.184,
+     "top5": 0.2455,
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "score_by_seed": [
+      0.2164,
+      0.1813,
+      0.1939,
+      0.1887,
+      0.206
+     ],
+     "top1_by_seed": [
+      0.2025,
+      0.17,
+      0.18,
+      0.175,
+      0.1925
+     ],
+     "top5_by_seed": [
+      0.265,
+      0.2275,
+      0.2525,
+      0.2275,
+      0.255
+     ]
+    },
+    "nocol": {
+     "score": 0.2479,
+     "top1": 0.2305,
+     "top5": 0.321,
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "score_by_seed": [
+      0.2595,
+      0.2321,
+      0.2519,
+      0.2278,
+      0.2682
+     ],
+     "top1_by_seed": [
+      0.2425,
+      0.215,
+      0.2375,
+      0.2075,
+      0.25
+     ],
+     "top5_by_seed": [
+      0.3275,
+      0.31,
+      0.3175,
+      0.3125,
+      0.3375
+     ]
+    },
+    "both": {
+     "score": 0.2082,
+     "top1": 0.1935,
+     "top5": 0.2595,
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "score_by_seed": [
+      0.2297,
+      0.1843,
+      0.2088,
+      0.2023,
+      0.2162
+     ],
+     "top1_by_seed": [
+      0.2125,
+      0.1675,
+      0.195,
+      0.1925,
+      0.2
+     ],
+     "top5_by_seed": [
+      0.2775,
+      0.25,
+      0.27,
+      0.235,
+      0.265
+     ]
+    },
+    "own": {
+     "score": 0.1395,
+     "top1": 0.125,
+     "top5": 0.2015,
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "score_by_seed": [
+      0.1616,
+      0.1465,
+      0.1286,
+      0.1296,
+      0.1312
+     ],
+     "top1_by_seed": [
+      0.1475,
+      0.1325,
+      0.1125,
+      0.115,
+      0.1175
+     ],
+     "top5_by_seed": [
+      0.2075,
+      0.2075,
+      0.205,
+      0.185,
+      0.2025
+     ]
+    }
+   }
+  }
+ },
+ "verify_seeds_random_raw": {
+  "col": {
+   "score": 0.9018,
+   "top1": 0.8842,
+   "top5": 0.9558,
+   "seeds": [
+    11,
+    12,
+    13
+   ],
+   "score_by_seed": [
+    0.9014,
+    0.9003,
+    0.9036
+   ],
+   "top1_by_seed": [
+    0.885,
+    0.8825,
+    0.885
+   ],
+   "top5_by_seed": [
+    0.955,
+    0.9525,
+    0.96
+   ]
+  },
+  "own": {
+   "score": 0.8313,
+   "top1": 0.805,
+   "top5": 0.9167,
+   "seeds": [
+    11,
+    12,
+    13
+   ],
+   "score_by_seed": [
+    0.8435,
+    0.8241,
+    0.8262
+   ],
+   "top1_by_seed": [
+    0.8275,
+    0.7925,
+    0.795
+   ],
+   "top5_by_seed": [
+    0.9175,
+    0.91,
+    0.9225
+   ]
+  }
+ },
+ "reproduction_of_scratchpad": {
+  "random|raw|col|seeds 0,1,2,3,4": {
+   "source": "judge/opening_sim_rerun.json 'raw+seq N=10'",
+   "old_score": 0.901,
+   "new_score_same_seeds": 0.901,
+   "old_score_by_seed": {
+    "0": 0.8888,
+    "1": 0.9044,
+    "2": 0.937,
+    "3": 0.8746,
+    "4": 0.9004
+   },
+   "new_score_by_seed": {
+    "0": 0.8888,
+    "1": 0.9044,
+    "2": 0.937,
+    "3": 0.8746,
+    "4": 0.9004
+   },
+   "identical": true
+  },
+  "random|raw|own|seeds 0,1": {
+   "source": "judge/opening_sim_rerun.json 'raw N=10'",
+   "old_score": 0.8278,
+   "new_score_same_seeds": 0.8278,
+   "old_score_by_seed": {
+    "0": 0.8104,
+    "1": 0.8451
+   },
+   "new_score_by_seed": {
+    "0": 0.8104,
+    "1": 0.8451
+   },
+   "identical": true
+  },
+  "random|canon|own|seeds 0,1": {
+   "source": "judge/opening_sim_rerun.json 'canon N=10'",
+   "old_score": 0.7756,
+   "new_score_same_seeds": 0.7756,
+   "old_score_by_seed": {
+    "0": 0.7531,
+    "1": 0.798
+   },
+   "new_score_by_seed": {
+    "0": 0.7531,
+    "1": 0.798
+   },
+   "identical": true
+  },
+  "random|raw|both|seeds 0,1": {
+   "source": "judge/opening_both.json 'both N=10'",
+   "old_score": 0.889,
+   "new_score_same_seeds": 0.889,
+   "old_score_by_seed": {
+    "0": 0.8804,
+    "1": 0.8975
+   },
+   "new_score_by_seed": {
+    "0": 0.8804,
+    "1": 0.8975
+   },
+   "identical": true
+  },
+  "fileorder|raw|both|seeds 0,1": {
+   "source": "judge/opening_both.json 'both fileorder N=10'",
+   "old_score": 0.7661,
+   "new_score_same_seeds": 0.7661,
+   "old_score_by_seed": {
+    "0": 0.767,
+    "1": 0.7651
+   },
+   "new_score_by_seed": {
+    "0": 0.767,
+    "1": 0.7651
+   },
+   "identical": true
+  },
+  "fileorder|raw|own|seeds 0,1": {
+   "source": "judge/opening_colour_robust.json 'raw+seq fileorder N=10'",
+   "old_score": 0.6609,
+   "new_score_same_seeds": 0.6609,
+   "old_score_by_seed": {
+    "0": 0.6513,
+    "1": 0.6705
+   },
+   "new_score_by_seed": {
+    "0": 0.6513,
+    "1": 0.6705
+   },
+   "identical": true,
+   "note": "scratchpad label 'raw+seq fileorder', but the bigrams were not added (mode.endswith('+seq') is False for 'raw+seq fileorder'), so it measured the 'own' set; the real col/fileorder value is in results.fileorder.raw.col"
+  },
+  "random|raw|nocol|seeds 0,1": {
+   "source": "judge/opening_colour_robust.json 'nocol N=10'",
+   "old_score": 0.8365,
+   "new_score_same_seeds": 0.8365,
+   "old_score_by_seed": {
+    "0": 0.8298,
+    "1": 0.8432
+   },
+   "new_score_by_seed": {
+    "0": 0.8298,
+    "1": 0.8432
+   },
+   "identical": true
+  },
+  "fileorder|raw|nocol|seeds 0,1": {
+   "source": "judge/opening_colour_robust.json 'nocol fileorder N=10'",
+   "old_score": 0.7918,
+   "new_score_same_seeds": 0.7918,
+   "old_score_by_seed": {
+    "0": 0.7863,
+    "1": 0.7973
+   },
+   "new_score_by_seed": {
+    "0": 0.7863,
+    "1": 0.7973
+   },
+   "identical": true
+  },
+  "random|raw|col|seeds 11,12,13": {
+   "source": "judge_meth/opening_sim_verify.json 'raw+seq N=10'",
+   "old_score": 0.9018,
+   "new_score_same_seeds": 0.9018,
+   "old_score_by_seed": {
+    "11": 0.9014,
+    "12": 0.9003,
+    "13": 0.9036
+   },
+   "new_score_by_seed": {
+    "11": 0.9014,
+    "12": 0.9003,
+    "13": 0.9036
+   },
+   "identical": true
+  },
+  "random|raw|own|seeds 11": {
+   "source": "judge_meth/opening_sim_verify.json 'raw N=10'",
+   "old_score": 0.8435,
+   "new_score_same_seeds": 0.8435,
+   "old_score_by_seed": {
+    "11": 0.8435
+   },
+   "new_score_by_seed": {
+    "11": 0.8435
+   },
+   "identical": true
+  }
+ },
+ "runtime_s": {
+  "load": 56,
+  "total": 249
+ }
+}

@@ -1,0 +1,213 @@
+{
+ "n_questions": 800,
+ "n_missing": 0,
+ "missing_question_ids": [],
+ "missing_rule": "n_parsed == 0 (no parsable game in the question); n_parsed > 0 with blank probabilities is an error",
+ "missing_with_probs_ignored": 0,
+ "missing_fallback": "D",
+ "n_A_ne_B": 10,
+ "A_to_B_changes": {
+  "1D->2D": 2,
+  "3D->2D": 1,
+  "4D->3D": 1,
+  "5D->4D": 2,
+  "A->1D": 2,
+  "A->B": 1,
+  "B->A": 1
+ },
+ "distribution_A": {
+  "D": 86,
+  "C": 95,
+  "B": 104,
+  "A": 87,
+  "1D": 73,
+  "2D": 58,
+  "3D": 78,
+  "4D": 70,
+  "5D": 81,
+  "6D": 68
+ },
+ "distribution_B": {
+  "D": 86,
+  "C": 95,
+  "B": 104,
+  "A": 85,
+  "1D": 73,
+  "2D": 61,
+  "3D": 78,
+  "4D": 71,
+  "5D": 79,
+  "6D": 68
+ },
+ "rule_A": "argmax p_k",
+ "rule_B": "argmax p_k + e^-1*(p_{k-1}+p_{k+1}), neighbours past D or 6D count as 0",
+ "e_minus_1": 0.36787944117144233,
+ "tie_break": "smallest level index (weaker level), same as numpy.argmax",
+ "sum_tolerance": 1e-05,
+ "levels": [
+  "D",
+  "C",
+  "B",
+  "A",
+  "1D",
+  "2D",
+  "3D",
+  "4D",
+  "5D",
+  "6D"
+ ],
+ "input": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\test59\\rank\\rank_test_probs.csv",
+ "input_sha256": "621822995dc5fa2b58030479d7c7dda86440e9f6b818dec36d99406d0bf33831",
+ "pred_A_sha256": "9476c415d3634fabca3285309fd0a9b5114e67c449e0ce8ca68f832e892fda49",
+ "pred_B_sha256": "244427fc75895eb0e0ed3d2debc0e4b9e12efad1d114992cbed6678eb720634b",
+ "prereg59_record": {
+  "what": "record only (PREREG_59 section 4): Q59 vs the uploaded 25, and the shift check of the term",
+  "inner_reference": {
+   "mean_max_q": 0.5803,
+   "hd_groups_of_question_games": [
+    58548,
+    12153,
+    2468
+   ],
+   "player_colour_of_question_games": [
+    35736,
+    37433
+   ]
+  },
+  "review_lines": {
+   "abs_mean_max_q_minus_inner": 0.05,
+   "changed_questions_per_pool": 100
+  },
+  "review_needed": false,
+  "sets": {
+   "public": {
+    "questions": 400,
+    "changed_vs_25": 40,
+    "changed_by_one_level": 40,
+    "changed_by_two_or_more": 0,
+    "moved_up": 19,
+    "moved_down": 21,
+    "changed_by_number_of_games": {
+     "5": [
+      13,
+      100
+     ],
+     "10": [
+      12,
+      100
+     ],
+     "15": [
+      6,
+      100
+     ],
+     "20": [
+      9,
+      100
+     ]
+    },
+    "predicted_25": {
+     "D": 49,
+     "C": 47,
+     "B": 47,
+     "A": 42,
+     "1D": 41,
+     "2D": 37,
+     "3D": 32,
+     "4D": 40,
+     "5D": 35,
+     "6D": 30
+    },
+    "predicted_59": {
+     "D": 52,
+     "C": 45,
+     "B": 52,
+     "A": 37,
+     "1D": 41,
+     "2D": 34,
+     "3D": 34,
+     "4D": 37,
+     "5D": 33,
+     "6D": 35
+    },
+    "mean_expected_level_25": 4.102046369315089,
+    "mean_expected_level_59": 4.092905175996588,
+    "mean_max_probability_25": 0.6372594853594201,
+    "mean_max_probability_59": 0.6492437247394011,
+    "opp2_vs_q25_spearman_expected_level": {
+     "rho": 0.970780567378546,
+     "questions": 400
+    },
+    "mean_max_q": 0.5755984209805485,
+    "mean_max_q_minus_inner": -0.004701579019451563,
+    "review": {
+     "max_q_shift_over_line": false,
+     "changed_over_line": false
+    }
+   },
+   "private": {
+    "questions": 400,
+    "changed_vs_25": 44,
+    "changed_by_one_level": 44,
+    "changed_by_two_or_more": 0,
+    "moved_up": 23,
+    "moved_down": 21,
+    "changed_by_number_of_games": {
+     "5": [
+      10,
+      100
+     ],
+     "10": [
+      14,
+      100
+     ],
+     "15": [
+      10,
+      100
+     ],
+     "20": [
+      10,
+      100
+     ]
+    },
+    "predicted_25": {
+     "D": 34,
+     "C": 45,
+     "B": 56,
+     "A": 45,
+     "1D": 36,
+     "2D": 29,
+     "3D": 42,
+     "4D": 42,
+     "5D": 40,
+     "6D": 31
+    },
+    "predicted_59": {
+     "D": 34,
+     "C": 50,
+     "B": 52,
+     "A": 48,
+     "1D": 32,
+     "2D": 27,
+     "3D": 44,
+     "4D": 34,
+     "5D": 46,
+     "6D": 33
+    },
+    "mean_expected_level_25": 4.311570234689326,
+    "mean_expected_level_59": 4.315956679713536,
+    "mean_max_probability_25": 0.612330937014313,
+    "mean_max_probability_59": 0.6264030711316926,
+    "opp2_vs_q25_spearman_expected_level": {
+     "rho": 0.9720649504059399,
+     "questions": 400
+    },
+    "mean_max_q": 0.5624793416534724,
+    "mean_max_q_minus_inner": -0.017820658346527685,
+    "review": {
+     "max_q_shift_over_line": false,
+     "changed_over_line": false
+    }
+   }
+  }
+ }
+}

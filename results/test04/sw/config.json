@@ -1,0 +1,671 @@
+{
+ "layout": "頂層：固定說明與跨執行的累計狀態；runs：每次執行各一筆的實際設定",
+ "smoke": false,
+ "smoke_cfg": null,
+ "format": "c10-test04 rank notebook config v1",
+ "prereg": "docs/PREREG_04_OPPONENT.md rev 3 section 11",
+ "rehearsal": false,
+ "test_kind": "official",
+ "kind": "official",
+ "notebook": "colab/test04_rank.ipynb",
+ "notebook_sha256": "efc0d03e1ce0810ed34cad8f9d276b3240e97b1e6eefa6149884d16aac3c15fe",
+ "notebook_sha256_rule": "sha256 of json.dumps([the source of every cell], ensure_ascii=False) with this value replaced by 64 zeros (colab/build_test04_rank_nb.py; tools/t02_rank.py notebook_source_sha256 recomputes it)",
+ "base_notebooks": {
+  "colab/test02_rank.ipynb": "53337a7acc396bdc1f94b3cbdc7dd0ce859766511099e8004697ff0d6a487b05",
+  "colab/prereg03_rank_a.ipynb": "85e0c2ae3269c68ad166310efb2525b2d48ed1279c9cf6eb6b428e59e8693557"
+ },
+ "changes_from_bases": [
+  "[新增] 第一格 markdown：用途、步驟、帳號、GPU、會停下的情況、輸出清單、斷線時怎麼辦（不接續）、這張差異表。",
+  "[設定（test02）] 測試集 zip 照 test02（同一份 `C10_test_v1.zip`，MANIFEST 的種類：正式 `official`／彩排 `rehearsal`，SMOKE 只收 `smoke`）。結果目錄改成 `test04`（彩排 `test04_rehearsal`，SMOKE `test04_smoke`）的 `sw/`（不是 `rank/`：test02 的解壓工具一定拒收這份 zip）。只讀目錄改成四個：`prereg01`、`prereg02`、`prereg03`，以及 test02 的 `rank` 子資料夾（正式 `test02/rank`、彩排 `test02_rehearsal/rank`、SMOKE `test02_smoke/rank`）；不放整個 `test02`，因為競賽一的 `test02_player` 會寫 `test02/player/`。`guard_write()` 只改註解（四個都擋）。`T02_CHANGES` 換成 `T04_CHANGES`，`NOTEBOOK_REL` 改成 `colab/test04_rank.ipynb`，另記這份 notebook 的 SHA-256（規則見 `NOTEBOOK_SHA256_RULE`）。`config.json` 加 `format`、`kind`，`prereg` 改指 PREREG_04 rev 3 第 11 節，`base_notebooks` 記兩個底稿的 SHA-256。`run_log.json` 的 `status` 開頭記 `running`，之前還是 `running` 的執行（停在 GPU 關卡或中途斷線）改記 `interrupted`。在寫任何紀錄之前（`NOTEBOOK_SHA256` 那一行之後），Colab 上（正式和彩排；SMOKE、本機不問）用輸入框請使用者核對 `notebook 版本`（`NOTEBOOK_SHA256` 前 12 碼）和 Claude 給的 12 碼，不是 `y` 就停下（還沒寫任何紀錄，不算一次執行）；最後多印一行 `notebook 版本`。",
+  "[底稿官方 2（test02）] 加 `IN_CHANNELS = 501`（03 兩臂的輸入；正式執行 assert）。GPU 關卡照舊，只接受 G4（RTX PRO 6000）或 A100；有 GPU 但查不到型號時，停下的訊息和 `device` 那一行寫「查不到 GPU 型號」（`GPU_MODEL_SHOWN`，照 prereg03）。最後的 `print` 多印輸入層數。「沒有 GPU」和「GPU 型號不對」兩則停下訊息都補上「Claude 說這次是重跑時只能選 G4」。",
+  "[新增 preflight] 在 GPU 關卡之後，任一項不符就記 `preflight_failed` 並停下（還沒開始算，不算一次執行）：① 兩臂權重 `prereg03/rank_{a,b}/ckpt/final.pth` 的 SHA-256 等於登記的值（SMOKE：等於 prereg03_smoke 完成標記記的）；② 接縫參照（兩臂的 `val_keys.npz`、`val_p03x_d4.npz`、`val_p03x_s0_swap.npz`）的 SHA-256 釘死，npz 記的權重等於①，03 的 GPU、torch、cuDNN 釘死；③ 打包檔的檔案清單和 SHA-256 等於 prereg01／02／03 用的那一份；④ 測試集 zip 照 test02 核對（7 個成員的 SHA-256 和大小、快速格式檢查）；⑤ test02 已完成、用的是同一份測試集（讀 test02 的 `rank/config.json`、`run_log.json`；SMOKE 有才核對）；⑥ 上一次執行的接縫沒過、這個資料夾之前有接縫類失敗的執行、這個資料夾已經跑完（最後一次有結果的執行是 `completed`、接縫通過、結果 zip 在：另一則訊息，請使用者下載那份 zip、不要改名）、`sw` 裡已有完成標記（斷線後不接續）、改名成 `sw_interrupted_*` 的資料夾其實是接縫失敗、占次數的封存已有 2 個（`sw_failed_*` 一律算，`sw_exempt_*` 不算，其他改過名而且自己有接縫類失敗紀錄的也算；和本機 `t04_rank.py` 同一個算法）：都停下；有改名成 `sw_failed_*` 的資料夾（重跑）而這次的 GPU 名稱不是 03 完成標記記的 G4 完整名稱：停下（登記的重跑只用 G4，和本機 `t04_rank.py`、`official_log.py` 同一個完整名稱判定；只有 `sw_exempt_*` 時照第一次的規則；名稱含 RTX PRO 6000 但不是完整名稱時，訊息開頭是「G4 的名稱和 03 記的不同」；SMOKE 不查）；⑦ 各組的 `_INPUT.json`（題目檔 SHA-256）已存在但不同就停；⑧ Drive 剩餘空間 ≥ 0.5 GB（不夠時請使用者截圖給 Claude，不自己刪檔或清垃圾桶）；⑨ TF32：記下這次的預設值，和 03 記的（卷積開、矩陣乘法關）不同才改成 03 的值，`cudnn.benchmark` 關掉；⑩ 四個只讀目錄的開頭指紋。`config.json` 頂層記 GPU、torch、cuDNN、兩臂權重、接縫參照、測試集、test02 的紀錄、各組題目檔、TF32。",
+  "[沿用 prereg03] 視角與 D4 的格子（`NUM_SYMS`、`d4`、`to_target_view`、`dump_input` 和單元檢查）和 prereg03 一字不改。",
+  "[新增模型工具] 從 prereg03 官方 14 格逐字取出 `state_dict_sha256`、`_nchw_output`、`channels_last` 三個函式；不建模型、不建 optimizer。",
+  "[底稿 dump 工具（test02）] 拿掉 `NUM_SYMS`、`d4` 和它的自我檢查（在視角與 D4 的格子）；`load_net` 換成 prereg03 的（501 層、channels_last，一字不改）；拿掉 test02 的 `dump_questions`，加入 prereg03 的 `dump_val_p03`（整個函式一字不改：每題一個 batch、8 種對稱加一次整題執色對調、fp32、不開 autocast），再加轉接 `QUESTIONS_PATH` 和 `parse_val()`（讀目前這一組的題目檔；`parse_questions` 依路徑快取，兩臂共用一份解析結果）。`NET` 改成 `NETS`（兩臂），`record_readonly_after()` 只改註解；其餘函式和 test02 逐字相同。",
+  "[新增三組逐盤輸出] `seam_val`（打包檔的本機驗證題 1,589 題）、`public`、`private` 各一格，內容相同、只有第一行不同：先指定 `DUMP_DIR`、`QUESTIONS_PATH`，兩臂的權重各載入一次，題目檔只解析一次，`write_keys('val_keys', …)`，再依序算 A、B 兩臂的 `dump_val_p03`；呼叫後核對兩臂完成標記的列數，`SET_LOG` 記這一組的題目檔路徑。",
+  "[新增接縫核對] `seam_val` 的逐盤輸出和 Drive 上 03 兩臂的比（PREREG_04 rev 3 第 11 節第 5 條）：每一臂 key 陣列完全相同；原方向正確執色（d4 的第 0 個對稱）和整題執色對調兩種 logits，每題可解析盤的 softmax float32 平均（C0，和 test02 同一個量）最大差 ≤ tol（算這份 dump 的 GPU 和 03 的相同時 1e-4，不同時 1e-3）；12 個完成標記和 npz 記的權重依臂相同；三組 × 兩臂的 12 個 logits 標記加 3 個 key 標記是同一個執行環境（GPU、torch、cuDNN）。逐位元組是否相同、8 種對稱和對調的 logits 最大差、E（每題 float64 log_softmax 平均）最大差、規則 B 不同題數只記錄。寫 `seam_check.json`；沒過就記結尾指紋、`status = seam_failed`、打包、送出 Drive 的寫入後停下。",
+  "[底稿結尾（test02，改寫）] 改成兩臂：每組核對 `val_keys` 和 4 個 logits 檔的完成標記、SHA-256、大小、形狀（d4 float32 [盤數, 8, 10]、對調 float32 [盤數, 10]）、權重、NaN 位置、`_INPUT.json`、題數，而且都是這次執行算的；有問題就 `status = final_check_failed`。記 `readonly_after.json` 並和開頭比對（不同就 `readonly_changed`）；補完 config／timings／run_log；打包 `test04/test04_rank_results.zip`（zip 內路徑從 `sw/` 起；跳過 `.pth`、`.pt`、`.tmp` 和 ≥ 100 MB 的檔），確認必要的檔都在；最後 `drive.flush_and_unmount()`。",
+  "[拿掉] test02 的 preflight、三組格子、接縫格（換成本版的新格）；prereg03 的讀訓練資料、特徵、loader、建模型、訓練、inner 和 key 檔相關的格子都沒有用。本版不訓練、不讀訓練資料。",
+  "[metadata] notebook metadata 沿用 test02。每格 cell id 是 `c10-rank-t04-NN`；cell metadata `c10` 記底稿（`base_nb` 是 test02 或 prereg03）、底稿的格號與 `c10`、是否改動，新格記 `new`。"
+ ],
+ "readonly_roots": {
+  "prereg01": "/content/drive/MyDrive/C10/results/prereg01",
+  "prereg02": "/content/drive/MyDrive/C10/results/prereg02",
+  "prereg03": "/content/drive/MyDrive/C10/results/prereg03",
+  "test02_rank": "/content/drive/MyDrive/C10/results/test02/rank"
+ },
+ "official_notebook": "third_party/aicup2026_tutorial/rank-prediction.ipynb",
+ "deviations_from_official": [
+  "[①] 官方 cell 4：改用 `c10data.load_rows(..., part=\"fit\")` 讀訓練資料（5,767 人、720,307 盤），`part=\"inner\"` 讀內部驗證（640 人、73,556 盤），各自轉成 DataFrame。`load_rows` 會 assert 人數、盤數，並確認沒有任何一盤出現在本機驗證檔。結果存 `leak_check.json`（每次執行各記一筆）。SMOKE 時等 `load_rows` 全部通過，才用固定 seed 縮小資料。",
+  "[②] 官方 cell 4：取代 `df.iloc[:VAL_SIZE]` 的切法：`df_train`、`df_val` 各自 `sample(frac=1.0, random_state=42)` 打散之後，才寫分片。",
+  "[③] 官方 cell 2、8、9：`VAL_SIZE` 改成內部驗證實際寫入的盤數：每個抽特徵的 worker 寫完後，把 `rows`、`written`、`bad` 寫進分片目錄的 `_count_w<N>.json`；`extract_split` 加總、核對後回傳；cell 9 設定 `VAL_SIZE` 並印出。cell 2 先設成 `None`。",
+  "[④] 官方 cell 20、21：`predict()` 改讀打包檔的 `local/rank_val_questions.csv`，拿掉 public／private 迴圈（內層程式因此少一層縮排，進度訊息不印 split 名稱）。每題另存 10 維平均機率到 `rank_val_probs.csv`（完整 float；沒有可解析棋譜的題 `n_parsed=0`、機率欄留空）。官方的 argmax 結果改存成 `pred_official_argmax.csv`（官方是 `./submission_rank.csv`）。`predict()` 因此多了題目檔、機率檔路徑和 `limit` 三個參數；SMOKE 時只推論前 12 題。",
+  "[營運性] 新增：最前面兩格 markdown：這份 notebook 的用途與操作說明，以及這張差異表。",
+  "[營運性] 新增：新增的程式格：設定（Colab 或本機、Drive 路徑、SMOKE 縮小設定、結果紀錄工具）、準備（解壓打包檔並逐檔核對 SHA-256、確認沒有答案檔、解開訓練資料、把打包檔的 `tools/`、`tutorial/` 加進 import 路徑）、環境紀錄（`env.json`）、分片備份工具、設定紀錄與接續工具、結尾核對，以及把結果目錄裡權重以外的檔案打成 `rank_results.zip`（放在結果目錄旁，方便下載）。",
+  "[營運性] 新增（準備格）：缺 `sgfmill` 或 `webdataset` 時才用 pip 安裝，版本固定為 `sgfmill==1.1.1`、`webdataset==1.0.2`（本機冒煙測試用的版本）。官方 notebook 只列出需要的套件，不安裝也不固定版本。Colab 內建的 torch、pandas、numpy、matplotlib 不動，實際版本記在 `env.json`。",
+  "[營運性] 新增（設定格）：在 Linux 上明確指定 multiprocessing 用 `fork`。官方的 worker 函式定義在 notebook 內，依賴 fork；Python 3.14 起 Linux 預設改成 forkserver。3.13 以前本來就是 fork，行為不變。實際的啟動方式記在 `config.json`。",
+  "[營運性] metadata：notebook metadata 加上 Colab 設定（GPU、A100、高 RAM），其餘沿用官方。官方格沿用官方的 cell id，新增的格用 `c10-rank-NN`；每格的 cell metadata 加 `c10` 對照欄（對應的官方格、是否改動）。官方原本就沒有存輸出。",
+  "[營運性] 官方 cell markdown 0、3、5、19、22：官方的說明原文不動，在後面附加一段「**本版**」說明：路徑由設定格決定（0）、① ② 的讀法（3）、分片會備份到 Drive（5）、④ 只預測本機驗證題（19）、分數不在這裡算（22）。",
+  "[營運性] 全部：工作目錄切到 `WORK`（Colab 是 `/content/c10`），官方的相對路徑 `./training`、`./rank-features` 照用。webdataset 會把 Windows 路徑的 `C:` 當成網址格式，本機冒煙測試只能用相對路徑。",
+  "[營運性] 全部：改過的格在開頭或行內加了說明註解（標 ①–④ 或「本版」）。",
+  "[營運性] 全部：紀錄檔都是每次執行各記一筆、不覆蓋前幾次：`timings.json`（各階段秒數）、`run_log.json`（每次執行與接續）、`env.json`、`leak_check.json`、`config.json`（頂層是固定說明與跨執行的累計狀態，每次執行的實際設定在 `runs`）。JSON 和 CSV 的 float 都寫完整精度。原生 Windows 的正式執行會直接報錯，因為官方的多進程依賴 Linux 的 fork。",
+  "[營運性] 官方 cell 2：`CKPT_DIR` 改到 Drive 的結果目錄 `ckpt/`，拿掉 `TEST_DIR`。`NPROC` 從寫死的 8 改成 `os.cpu_count()`（官方註解寫「設成 CPU 核數」）。加上 SMOKE 縮小設定（只在 SMOKE 生效）。最後的 `print` 多印 `NPROC`、batch、epoch 數。",
+  "[營運性] 官方 cell 4：不印官方的「全量 N 局」和全量的等級分布；改成逐一印 `fit`、`inner` 的人數與盤數，等級分布只印訓練集（`df_train`）。顯示前 3 列時不印棋譜欄，不讓棋譜內容進 notebook 輸出。",
+  "[營運性] 官方 cell 6：示範用的第一盤改取 `df_train`（本版沒有合併的 `df`）。",
+  "[營運性] 官方 cell 9：分片特徵抽完後備份到 Drive 的 `features_rank/`，全部核對後才寫完成標記。重跑時有完整且設定相符的備份，就複製回來、核對 SHA-256，不重抽；備份缺檔、大小或 SHA-256 不符時改成重抽。重抽前先清掉不完整的舊分片。",
+  "[營運性] 官方 cell 11、12：`pick_workers` 另外記下讀出的筆數（寫進 `config.json`）。本機冒煙測試的 worker 候選數是 0（Windows 的 spawn 無法 pickle notebook 內定義的函式）。多 worker 對不上時照官方退回 0，並用 0 個 worker 再數一次；還是對不上 `VAL_SIZE` 就停下來，因為這表示 ③ 沒有成立。",
+  "[營運性] 官方 cell 16：每個 epoch 結束，把 model、optimizer、epoch、最佳分數、history 存成 `ckpt/state.pt`。重跑時從最後完成的 epoch 接續；`state.pt` 讀不進來、或設定和上次不同，就停下來並說明處理方式。另外記最佳 epoch 的編號，結束時一併印出。history 多記 loss、步數、樣本數、秒數和第幾次執行。官方的 `epoch_N.pth`、`best_model.pth`、`history.csv` 照樣存在 `ckpt/`。",
+  "[營運性] 官方 cell 16：`sync_best()` 把最佳 epoch 的 `epoch_N.pth` 複製成 `best_model.pth`：接續時做一次（中斷時可能留下寫一半的 `best_model.pth`），正常訓練結束時也做一次。複製來源和官方存的 `best_model.pth` 是同一個 epoch 結束時的同一份權重。找不到那個 `epoch_N.pth` 就停下來並說明處理方式。",
+  "[營運性] 官方 cell 16：每次執行記下有沒有讀 `state.pt`、是否接續訓練、實際訓練了哪些 epoch（`run_log.json`、`config.json` 的 `runs`），頂層的 `resumed` 表示是否曾經接續訓練。",
+  "[營運性] 官方 cell 18：訓練曲線另存 `ckpt/history.png`。非 Colab 時用不開視窗的 Agg 後端，不 `show()`，畫完就 `close()`。",
+  "[營運性] 官方 cell 20：`predict()` 讀題目檔時 `question_id` 以字串讀入（`dtype={'question_id': str}`），代號原樣照抄，不會被轉成數字。每題 assert 非空的 `sgf_` 欄數等於 `num_games`，題目檔格式不對就停。兩者都不改變預測。",
+  "[營運性] 官方 cell 21：推論用的權重、題目檔、題數寫進 `config.json`，秒數寫進 `timings.json`；輸出路徑指向 Drive 的結果目錄。"
+ ],
+ "resumed": false,
+ "resume_count": 0,
+ "runs": [
+  {
+   "run": 1,
+   "start": "2026-11-04T07:46:34+00:00",
+   "end": "2026-11-04T07:49:50+00:00",
+   "in_colab": true,
+   "mp_start_method": "fork",
+   "preflight": {
+    "weights": {
+     "a": {
+      "label": "prereg03/rank_a/ckpt/final.pth",
+      "sha256": "790b767c5425e262130d6c103c71e89238edb17f927fa48e2a2770db788e50ac"
+     },
+     "b": {
+      "label": "prereg03/rank_b/ckpt/final.pth",
+      "sha256": "8e88f6ec6cbaad5372e5d62607b99ece3d77dc7a20af86a9197553f1a6c59a42"
+     }
+    },
+    "seam_reference_sha256": {
+     "a": {
+      "val_keys.npz": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+      "val_p03a_d4.npz": "1e4e5957442596358b087e5f4e69c1fcf9f22f2c7933cc2049066bfab3075ecd",
+      "val_p03a_s0_swap.npz": "b355c26bf68069feb0e48ee95c46bd211c2bdbc6b5a48416c8408a210aec3848"
+     },
+     "b": {
+      "val_keys.npz": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+      "val_p03b_d4.npz": "bad2277dd20bf832c02213be781768ba9d8a304922693bee383a28aa3531a627",
+      "val_p03b_s0_swap.npz": "0cadff4bae36b2a41f02fddf4366a2081d9912ede4a3063c8b50fd28a2647527"
+     }
+    },
+    "p03_reference_env": {
+     "a": {
+      "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "torch": "2.11.0+cu128",
+      "cudnn": 91900
+     },
+     "b": {
+      "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "torch": "2.11.0+cu128",
+      "cudnn": 91900
+     }
+    },
+    "test_zip_sha256": "136266e387064d34514ae4c3371edec9634932d627248dcefc35ad9475125d7d",
+    "test_manifest_sha256": "b9e9e8a6a7fc8b7b696d2d4501563cb99aeac6a95e327f3a5e686d04bbdd0bbe",
+    "test_kind": "official",
+    "sets": {
+     "seam_val": {
+      "set": "seam_val",
+      "question_file": "bundle local/rank_val_questions.csv",
+      "sha256": "73e51bbfd7b051e73cbb62af4b180c403d2422f122240c5e67e9c92303776db5"
+     },
+     "public": {
+      "set": "public",
+      "question_file": "tests/rank_prediction_test_public.csv",
+      "sha256": "75baefaded49ad40584bc52d8bd345410a5c6601c4034ff903746e0d92252bb4"
+     },
+     "private": {
+      "set": "private",
+      "question_file": "tests/rank_prediction_test_private.csv",
+      "sha256": "c8a6a1923af7324fcae6b22987711d1e57b5efe9f882a2a7b42604399d3e2edc"
+     }
+    },
+    "test02_record": {
+     "config_sha256": "ed11044631d6132b357472e967a6f0436a2c40825dde59a0a7aef4d2d7d94fdc",
+     "manifest_sha256": "b9e9e8a6a7fc8b7b696d2d4501563cb99aeac6a95e327f3a5e686d04bbdd0bbe",
+     "run_log_status": "completed"
+    },
+    "prior_sw_folders": {},
+    "attempt": 1,
+    "tf32": {
+     "recorded_03": {
+      "cudnn": true,
+      "matmul": false
+     },
+     "default": {
+      "cudnn": true,
+      "matmul": false
+     },
+     "benchmark_default": false,
+     "deterministic_default": false,
+     "cudnn_conv_fp32_precision_default": "tf32",
+     "used": {
+      "cudnn": true,
+      "matmul": false
+     },
+     "benchmark_used": false,
+     "deterministic_used": false,
+     "cudnn_conv_fp32_precision_used": "tf32",
+     "changed": false
+    },
+    "drive_free_bytes": 197003640832,
+    "readonly_files_fingerprinted": {
+     "prereg01": 996,
+     "prereg02": 54,
+     "prereg03": 46,
+     "test02_rank": 22
+    }
+   },
+   "view_d4_check": {
+    "view_black_unchanged": true,
+    "view_white_swapped": true,
+    "colour_plane_constant": true,
+    "d4_gather_equals_d4": 8,
+    "colour_plane_d4_invariant": true,
+    "train_input_equals_dump_input": true,
+    "device": "cuda"
+   },
+   "dumps": {
+    "seam_val": {
+     "questions_path": "/content/c10/C10_bundle_v1/local/rank_val_questions.csv",
+     "questions": 1589,
+     "rows": 19156,
+     "games_unparsed": 0,
+     "status": {
+      "keys": "written",
+      "a": "written",
+      "b": "written"
+     },
+     "done_rows": {
+      "a": {
+       "d4": 19156,
+       "s0_swap": 19156
+      },
+      "b": {
+       "d4": 19156,
+       "s0_swap": 19156
+      }
+     },
+     "net_state_sha256": {
+      "a": "7fbf4346da4f88af1e49c181b896eb284f5d05f299eb36fa273f103bd66e4fe7",
+      "b": "fa3197a5d54ce270112e82aef7a7c00e5da8bf685f80c9714e88f4e5bd86d254"
+     },
+     "seconds": 97.31161332130432
+    },
+    "public": {
+     "questions_path": "/content/c10/tests/rank_prediction_test_public.csv",
+     "questions": 400,
+     "rows": 5000,
+     "games_unparsed": 0,
+     "status": {
+      "keys": "written",
+      "a": "written",
+      "b": "written"
+     },
+     "done_rows": {
+      "a": {
+       "d4": 5000,
+       "s0_swap": 5000
+      },
+      "b": {
+       "d4": 5000,
+       "s0_swap": 5000
+      }
+     },
+     "net_state_sha256": {
+      "a": "7fbf4346da4f88af1e49c181b896eb284f5d05f299eb36fa273f103bd66e4fe7",
+      "b": "fa3197a5d54ce270112e82aef7a7c00e5da8bf685f80c9714e88f4e5bd86d254"
+     },
+     "seconds": 24.95295548439026
+    },
+    "private": {
+     "questions_path": "/content/c10/tests/rank_prediction_test_private.csv",
+     "questions": 400,
+     "rows": 5000,
+     "games_unparsed": 0,
+     "status": {
+      "keys": "written",
+      "a": "written",
+      "b": "written"
+     },
+     "done_rows": {
+      "a": {
+       "d4": 5000,
+       "s0_swap": 5000
+      },
+      "b": {
+       "d4": 5000,
+       "s0_swap": 5000
+      }
+     },
+     "net_state_sha256": {
+      "a": "7fbf4346da4f88af1e49c181b896eb284f5d05f299eb36fa273f103bd66e4fe7",
+      "b": "fa3197a5d54ce270112e82aef7a7c00e5da8bf685f80c9714e88f4e5bd86d254"
+     },
+     "seconds": 25.006718158721924
+    }
+   },
+   "seam_check": {
+    "passed": true,
+    "tol": 0.0001,
+    "bitwise_equal": true,
+    "same_gpu": true,
+    "keys_equal": true,
+    "weights_ok": true,
+    "env_same": true
+   },
+   "outputs": {
+    "dumps": {
+     "seam_val": {
+      "questions": 1589,
+      "games": 19156,
+      "games_unparsed": 0,
+      "files": {
+       "val_keys": {
+        "rows": 19156,
+        "syms": null,
+        "bytes": 939646,
+        "sha256": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+        "weights_sha256": null,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "torch": "2.11.0+cu128",
+        "cudnn": 91900,
+        "run": 1
+       },
+       "val_p03a_d4": {
+        "rows": 19156,
+        "syms": 8,
+        "bytes": 6130950,
+        "sha256": "1e4e5957442596358b087e5f4e69c1fcf9f22f2c7933cc2049066bfab3075ecd",
+        "weights_sha256": "790b767c5425e262130d6c103c71e89238edb17f927fa48e2a2770db788e50ac",
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "torch": "2.11.0+cu128",
+        "cudnn": 91900,
+        "run": 1
+       },
+       "val_p03a_s0_swap": {
+        "rows": 19156,
+        "syms": 1,
+        "bytes": 767330,
+        "sha256": "b355c26bf68069feb0e48ee95c46bd211c2bdbc6b5a48416c8408a210aec3848",
+        "weights_sha256": "790b767c5425e262130d6c103c71e89238edb17f927fa48e2a2770db788e50ac",
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "torch": "2.11.0+cu128",
+        "cudnn": 91900,
+        "run": 1
+       },
+       "val_p03b_d4": {
+        "rows": 19156,
+        "syms": 8,
+        "bytes": 6130950,
+        "sha256": "bad2277dd20bf832c02213be781768ba9d8a304922693bee383a28aa3531a627",
+        "weights_sha256": "8e88f6ec6cbaad5372e5d62607b99ece3d77dc7a20af86a9197553f1a6c59a42",
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "torch": "2.11.0+cu128",
+        "cudnn": 91900,
+        "run": 1
+       },
+       "val_p03b_s0_swap": {
+        "rows": 19156,
+        "syms": 1,
+        "bytes": 767330,
+        "sha256": "0cadff4bae36b2a41f02fddf4366a2081d9912ede4a3063c8b50fd28a2647527",
+        "weights_sha256": "8e88f6ec6cbaad5372e5d62607b99ece3d77dc7a20af86a9197553f1a6c59a42",
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "torch": "2.11.0+cu128",
+        "cudnn": 91900,
+        "run": 1
+       }
+      },
+      "input": {
+       "set": "seam_val",
+       "question_file": "bundle local/rank_val_questions.csv",
+       "sha256": "73e51bbfd7b051e73cbb62af4b180c403d2422f122240c5e67e9c92303776db5"
+      },
+      "problems": []
+     },
+     "public": {
+      "questions": 400,
+      "games": 5000,
+      "games_unparsed": 0,
+      "files": {
+       "val_keys": {
+        "rows": 5000,
+        "syms": null,
+        "bytes": 246002,
+        "sha256": "01fc5858d1607d56fc1b72cfc5aac658c85cef7704c05b39e3ac7220732208fa",
+        "weights_sha256": null,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "torch": "2.11.0+cu128",
+        "cudnn": 91900,
+        "run": 1
+       },
+       "val_p03a_d4": {
+        "rows": 5000,
+        "syms": 8,
+        "bytes": 1601030,
+        "sha256": "a88d21a1046b05c6e3cb7c35d403c4bcbd54fcf81f166cac2d19434ca97e9659",
+        "weights_sha256": "790b767c5425e262130d6c103c71e89238edb17f927fa48e2a2770db788e50ac",
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "torch": "2.11.0+cu128",
+        "cudnn": 91900,
+        "run": 1
+       },
+       "val_p03a_s0_swap": {
+        "rows": 5000,
+        "syms": 1,
+        "bytes": 201090,
+        "sha256": "5301c80d1b2a84389aa26b62fc6e7786108b4cf2642a2b156bb53c6f33e5e67c",
+        "weights_sha256": "790b767c5425e262130d6c103c71e89238edb17f927fa48e2a2770db788e50ac",
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "torch": "2.11.0+cu128",
+        "cudnn": 91900,
+        "run": 1
+       },
+       "val_p03b_d4": {
+        "rows": 5000,
+        "syms": 8,
+        "bytes": 1601030,
+        "sha256": "9810e25a2683300a1e6d0d98c86a5fc1a3bc6fcf6d86b13db8c98c6cc90e0adf",
+        "weights_sha256": "8e88f6ec6cbaad5372e5d62607b99ece3d77dc7a20af86a9197553f1a6c59a42",
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "torch": "2.11.0+cu128",
+        "cudnn": 91900,
+        "run": 1
+       },
+       "val_p03b_s0_swap": {
+        "rows": 5000,
+        "syms": 1,
+        "bytes": 201090,
+        "sha256": "3bcf1ee59038c714706cb539b4bb9594afb4de2e12c38422aef1da3e192dd988",
+        "weights_sha256": "8e88f6ec6cbaad5372e5d62607b99ece3d77dc7a20af86a9197553f1a6c59a42",
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "torch": "2.11.0+cu128",
+        "cudnn": 91900,
+        "run": 1
+       }
+      },
+      "input": {
+       "set": "public",
+       "question_file": "tests/rank_prediction_test_public.csv",
+       "sha256": "75baefaded49ad40584bc52d8bd345410a5c6601c4034ff903746e0d92252bb4"
+      },
+      "problems": []
+     },
+     "private": {
+      "questions": 400,
+      "games": 5000,
+      "games_unparsed": 0,
+      "files": {
+       "val_keys": {
+        "rows": 5000,
+        "syms": null,
+        "bytes": 266002,
+        "sha256": "94037ca1d286480aeb32c535af7fab53407017f052ed23b0b9f87cebebb1eede",
+        "weights_sha256": null,
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "torch": "2.11.0+cu128",
+        "cudnn": 91900,
+        "run": 1
+       },
+       "val_p03a_d4": {
+        "rows": 5000,
+        "syms": 8,
+        "bytes": 1601030,
+        "sha256": "9f4260bf830c871d27ac18cfd4ddcff556289c321f49f98f1b4d3ed510525d50",
+        "weights_sha256": "790b767c5425e262130d6c103c71e89238edb17f927fa48e2a2770db788e50ac",
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "torch": "2.11.0+cu128",
+        "cudnn": 91900,
+        "run": 1
+       },
+       "val_p03a_s0_swap": {
+        "rows": 5000,
+        "syms": 1,
+        "bytes": 201090,
+        "sha256": "6e03331969fefda6bc704906b4a354bdc347ad2bc9a3bdec52cf8df3877b143d",
+        "weights_sha256": "790b767c5425e262130d6c103c71e89238edb17f927fa48e2a2770db788e50ac",
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "torch": "2.11.0+cu128",
+        "cudnn": 91900,
+        "run": 1
+       },
+       "val_p03b_d4": {
+        "rows": 5000,
+        "syms": 8,
+        "bytes": 1601030,
+        "sha256": "9768f041b0acd9c640bbc447785a7d474a381e2ff1e7f83cd5913821fc1a62d9",
+        "weights_sha256": "8e88f6ec6cbaad5372e5d62607b99ece3d77dc7a20af86a9197553f1a6c59a42",
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "torch": "2.11.0+cu128",
+        "cudnn": 91900,
+        "run": 1
+       },
+       "val_p03b_s0_swap": {
+        "rows": 5000,
+        "syms": 1,
+        "bytes": 201090,
+        "sha256": "50469cf3335fc6030228153c83630b8ffa698505d93611d72cc35e3d153012c5",
+        "weights_sha256": "8e88f6ec6cbaad5372e5d62607b99ece3d77dc7a20af86a9197553f1a6c59a42",
+        "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+        "torch": "2.11.0+cu128",
+        "cudnn": 91900,
+        "run": 1
+       }
+      },
+      "input": {
+       "set": "private",
+       "question_file": "tests/rank_prediction_test_private.csv",
+       "sha256": "c8a6a1923af7324fcae6b22987711d1e57b5efe9f882a2a7b42604399d3e2edc"
+      },
+      "problems": []
+     }
+    },
+    "final_problems": [],
+    "seam_check_passed": true,
+    "seam_bitwise_equal": true,
+    "readonly_unchanged": true,
+    "readonly_changed_files": {},
+    "files": {
+     "config.json": 27324,
+     "env.json": 1626,
+     "readonly_after.json": 110612,
+     "readonly_before.json": 110561,
+     "run_log.json": 326,
+     "seam_check.json": 7095,
+     "timings.json": 547
+    }
+   }
+  }
+ ],
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "torch": "2.11.0+cu128",
+ "cudnn": 91900,
+ "device": "cuda",
+ "weights": {
+  "a": {
+   "label": "prereg03/rank_a/ckpt/final.pth",
+   "sha256": "790b767c5425e262130d6c103c71e89238edb17f927fa48e2a2770db788e50ac"
+  },
+  "b": {
+   "label": "prereg03/rank_b/ckpt/final.pth",
+   "sha256": "8e88f6ec6cbaad5372e5d62607b99ece3d77dc7a20af86a9197553f1a6c59a42"
+  }
+ },
+ "seam_reference": {
+  "a": {
+   "val_keys.npz": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+   "val_p03a_d4.npz": "1e4e5957442596358b087e5f4e69c1fcf9f22f2c7933cc2049066bfab3075ecd",
+   "val_p03a_s0_swap.npz": "b355c26bf68069feb0e48ee95c46bd211c2bdbc6b5a48416c8408a210aec3848"
+  },
+  "b": {
+   "val_keys.npz": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+   "val_p03b_d4.npz": "bad2277dd20bf832c02213be781768ba9d8a304922693bee383a28aa3531a627",
+   "val_p03b_s0_swap.npz": "0cadff4bae36b2a41f02fddf4366a2081d9912ede4a3063c8b50fd28a2647527"
+  },
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "env": {
+   "a": {
+    "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "torch": "2.11.0+cu128",
+    "cudnn": 91900
+   },
+   "b": {
+    "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "torch": "2.11.0+cu128",
+    "cudnn": 91900
+   }
+  }
+ },
+ "test_bundle": {
+  "zip_sha256": "136266e387064d34514ae4c3371edec9634932d627248dcefc35ad9475125d7d",
+  "manifest_sha256": "b9e9e8a6a7fc8b7b696d2d4501563cb99aeac6a95e327f3a5e686d04bbdd0bbe",
+  "kind": "official",
+  "t1": {
+   "rank": "PASS",
+   "player": "PASS"
+  },
+  "files": {
+   "rank_prediction_test_public.csv": "75baefaded49ad40584bc52d8bd345410a5c6601c4034ff903746e0d92252bb4",
+   "rank_prediction_test_private.csv": "c8a6a1923af7324fcae6b22987711d1e57b5efe9f882a2a7b42604399d3e2edc",
+   "player_identification_test_public.csv": "0e59f7f72376cfa2e81ae913d61092caeb1240d95abb43a581207ed29f1647a8",
+   "player_identification_test_private.csv": "4b07a403b36875f44007adb22aaa8da3c75ec3994e165f36c29a9400e6efcd11",
+   "player_identification_candidates_public.csv": "8175aeb08235536a1435bb6ba4c55088f906096cc14e7048e8898e3d7a3597a6",
+   "player_identification_candidates_private.csv": "7a8926ca83b43b1dca0e32c23513cbbff2731d623be151cf80ed912a91d91e57"
+  }
+ },
+ "test02_record": {
+  "config_sha256": "ed11044631d6132b357472e967a6f0436a2c40825dde59a0a7aef4d2d7d94fdc",
+  "manifest_sha256": "b9e9e8a6a7fc8b7b696d2d4501563cb99aeac6a95e327f3a5e686d04bbdd0bbe",
+  "run_log_status": "completed"
+ },
+ "sets": {
+  "seam_val": {
+   "questions": "bundle local/rank_val_questions.csv",
+   "questions_sha256": "73e51bbfd7b051e73cbb62af4b180c403d2422f122240c5e67e9c92303776db5",
+   "questions_count": 1589,
+   "rows": 1589
+  },
+  "public": {
+   "questions": "tests/rank_prediction_test_public.csv",
+   "questions_sha256": "75baefaded49ad40584bc52d8bd345410a5c6601c4034ff903746e0d92252bb4",
+   "questions_count": 400,
+   "rows": 400
+  },
+  "private": {
+   "questions": "tests/rank_prediction_test_private.csv",
+   "questions_sha256": "c8a6a1923af7324fcae6b22987711d1e57b5efe9f882a2a7b42604399d3e2edc",
+   "questions_count": 400,
+   "rows": 400
+  }
+ },
+ "tf32": {
+  "recorded_03": {
+   "cudnn": true,
+   "matmul": false
+  },
+  "default": {
+   "cudnn": true,
+   "matmul": false
+  },
+  "benchmark_default": false,
+  "deterministic_default": false,
+  "cudnn_conv_fp32_precision_default": "tf32",
+  "used": {
+   "cudnn": true,
+   "matmul": false
+  },
+  "benchmark_used": false,
+  "deterministic_used": false,
+  "cudnn_conv_fp32_precision_used": "tf32",
+  "changed": false
+ },
+ "attempt": 1,
+ "prior_sw_folders": {},
+ "dumps": {
+  "seam_val": {
+   "questions_path": "/content/c10/C10_bundle_v1/local/rank_val_questions.csv",
+   "questions": 1589,
+   "rows": 19156,
+   "games_unparsed": 0,
+   "status": {
+    "keys": "written",
+    "a": "written",
+    "b": "written"
+   },
+   "done_rows": {
+    "a": {
+     "d4": 19156,
+     "s0_swap": 19156
+    },
+    "b": {
+     "d4": 19156,
+     "s0_swap": 19156
+    }
+   },
+   "net_state_sha256": {
+    "a": "7fbf4346da4f88af1e49c181b896eb284f5d05f299eb36fa273f103bd66e4fe7",
+    "b": "fa3197a5d54ce270112e82aef7a7c00e5da8bf685f80c9714e88f4e5bd86d254"
+   },
+   "seconds": 97.31161332130432
+  },
+  "public": {
+   "questions_path": "/content/c10/tests/rank_prediction_test_public.csv",
+   "questions": 400,
+   "rows": 5000,
+   "games_unparsed": 0,
+   "status": {
+    "keys": "written",
+    "a": "written",
+    "b": "written"
+   },
+   "done_rows": {
+    "a": {
+     "d4": 5000,
+     "s0_swap": 5000
+    },
+    "b": {
+     "d4": 5000,
+     "s0_swap": 5000
+    }
+   },
+   "net_state_sha256": {
+    "a": "7fbf4346da4f88af1e49c181b896eb284f5d05f299eb36fa273f103bd66e4fe7",
+    "b": "fa3197a5d54ce270112e82aef7a7c00e5da8bf685f80c9714e88f4e5bd86d254"
+   },
+   "seconds": 24.95295548439026
+  },
+  "private": {
+   "questions_path": "/content/c10/tests/rank_prediction_test_private.csv",
+   "questions": 400,
+   "rows": 5000,
+   "games_unparsed": 0,
+   "status": {
+    "keys": "written",
+    "a": "written",
+    "b": "written"
+   },
+   "done_rows": {
+    "a": {
+     "d4": 5000,
+     "s0_swap": 5000
+    },
+    "b": {
+     "d4": 5000,
+     "s0_swap": 5000
+    }
+   },
+   "net_state_sha256": {
+    "a": "7fbf4346da4f88af1e49c181b896eb284f5d05f299eb36fa273f103bd66e4fe7",
+    "b": "fa3197a5d54ce270112e82aef7a7c00e5da8bf685f80c9714e88f4e5bd86d254"
+   },
+   "seconds": 25.006718158721924
+  }
+ },
+ "status": "completed"
+}

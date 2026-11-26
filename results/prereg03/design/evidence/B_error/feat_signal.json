@@ -1,0 +1,1066 @@
+{
+ "what": "cheap SGF features: level signal on fit/inner and value on top of R20 (inner OOF)",
+ "games": {
+  "fit": 720307,
+  "inner": 73556
+ },
+ "per_feature": {
+  "t_own_adjacent": {
+   "mi_bits_fit": 0.0533,
+   "mi_bits_inner": 0.0644,
+   "bins": 20,
+   "bias_bits_fit": 0.0002,
+   "spearman_with_level_fit": -0.2593,
+   "mean_by_level_fit": [
+    0.2023,
+    0.1969,
+    0.1893,
+    0.1843,
+    0.1797,
+    0.1783,
+    0.1756,
+    0.1717,
+    0.1664,
+    0.1617
+   ]
+  },
+  "t_mean_dist_own": {
+   "mi_bits_fit": 0.0393,
+   "mi_bits_inner": 0.0475,
+   "bins": 20,
+   "bias_bits_fit": 0.0002,
+   "spearman_with_level_fit": 0.2013,
+   "mean_by_level_fit": [
+    3.7399,
+    3.771,
+    3.8527,
+    3.9248,
+    3.9603,
+    4.0143,
+    4.0494,
+    4.0997,
+    4.1366,
+    4.189
+   ]
+  },
+  "t_mean_dist_prev": {
+   "mi_bits_fit": 0.0343,
+   "mi_bits_inner": 0.0403,
+   "bins": 20,
+   "bias_bits_fit": 0.0002,
+   "spearman_with_level_fit": 0.1983,
+   "mean_by_level_fit": [
+    2.9602,
+    2.9783,
+    3.0446,
+    3.0911,
+    3.1018,
+    3.1402,
+    3.1786,
+    3.2067,
+    3.2446,
+    3.2661
+   ]
+  },
+  "o_tenuki": {
+   "mi_bits_fit": 0.0312,
+   "mi_bits_inner": 0.0388,
+   "bins": 20,
+   "bias_bits_fit": 0.0002,
+   "spearman_with_level_fit": 0.1915,
+   "mean_by_level_fit": [
+    0.1815,
+    0.1843,
+    0.1893,
+    0.1944,
+    0.1969,
+    0.2007,
+    0.2018,
+    0.2077,
+    0.2114,
+    0.2182
+   ]
+  },
+  "t_tenuki": {
+   "mi_bits_fit": 0.031,
+   "mi_bits_inner": 0.0356,
+   "bins": 20,
+   "bias_bits_fit": 0.0002,
+   "spearman_with_level_fit": 0.1887,
+   "mean_by_level_fit": [
+    0.1812,
+    0.1827,
+    0.19,
+    0.1949,
+    0.1959,
+    0.2005,
+    0.205,
+    0.2075,
+    0.2121,
+    0.2143
+   ]
+  },
+  "t_tenuki_mid": {
+   "mi_bits_fit": 0.0241,
+   "mi_bits_inner": 0.0256,
+   "bins": 13,
+   "bias_bits_fit": 0.0001,
+   "spearman_with_level_fit": 0.1844,
+   "mean_by_level_fit": [
+    0.1276,
+    0.1279,
+    0.1341,
+    0.1391,
+    0.1395,
+    0.1447,
+    0.1515,
+    0.1529,
+    0.1564,
+    0.163
+   ]
+  },
+  "t_captured_rate": {
+   "mi_bits_fit": 0.019,
+   "mi_bits_inner": 0.0203,
+   "bins": 15,
+   "bias_bits_fit": 0.0001,
+   "spearman_with_level_fit": 0.1156,
+   "mean_by_level_fit": [
+    0.0144,
+    0.0148,
+    0.0168,
+    0.0177,
+    0.019,
+    0.0189,
+    0.0197,
+    0.022,
+    0.0239,
+    0.0239
+   ]
+  },
+  "replay_rate": {
+   "mi_bits_fit": 0.019,
+   "mi_bits_inner": 0.0202,
+   "bins": 17,
+   "bias_bits_fit": 0.0001,
+   "spearman_with_level_fit": 0.1089,
+   "mean_by_level_fit": [
+    0.0144,
+    0.0149,
+    0.0167,
+    0.0177,
+    0.019,
+    0.0191,
+    0.0196,
+    0.022,
+    0.0238,
+    0.024
+   ]
+  },
+  "o_captured_rate": {
+   "mi_bits_fit": 0.0188,
+   "mi_bits_inner": 0.0191,
+   "bins": 15,
+   "bias_bits_fit": 0.0001,
+   "spearman_with_level_fit": 0.114,
+   "mean_by_level_fit": [
+    0.0143,
+    0.015,
+    0.0166,
+    0.0178,
+    0.019,
+    0.0193,
+    0.0195,
+    0.0221,
+    0.0237,
+    0.024
+   ]
+  },
+  "t_line1": {
+   "mi_bits_fit": 0.0169,
+   "mi_bits_inner": 0.0191,
+   "bins": 20,
+   "bias_bits_fit": 0.0002,
+   "spearman_with_level_fit": -0.1363,
+   "mean_by_level_fit": [
+    0.1046,
+    0.1026,
+    0.0996,
+    0.096,
+    0.0941,
+    0.0917,
+    0.0904,
+    0.0893,
+    0.087,
+    0.0814
+   ]
+  },
+  "o_line1": {
+   "mi_bits_fit": 0.0164,
+   "mi_bits_inner": 0.0175,
+   "bins": 20,
+   "bias_bits_fit": 0.0002,
+   "spearman_with_level_fit": -0.1351,
+   "mean_by_level_fit": [
+    0.1042,
+    0.1024,
+    0.0995,
+    0.096,
+    0.0945,
+    0.0916,
+    0.0896,
+    0.0891,
+    0.0874,
+    0.0817
+   ]
+  },
+  "o_contact": {
+   "mi_bits_fit": 0.0161,
+   "mi_bits_inner": 0.0203,
+   "bins": 20,
+   "bias_bits_fit": 0.0002,
+   "spearman_with_level_fit": -0.1392,
+   "mean_by_level_fit": [
+    0.2753,
+    0.272,
+    0.2672,
+    0.2643,
+    0.2625,
+    0.2611,
+    0.2601,
+    0.2575,
+    0.2558,
+    0.251
+   ]
+  },
+  "ko_points": {
+   "mi_bits_fit": 0.0156,
+   "mi_bits_inner": 0.0172,
+   "bins": 17,
+   "bias_bits_fit": 0.0001,
+   "spearman_with_level_fit": 0.1564,
+   "mean_by_level_fit": [
+    0.4235,
+    0.4629,
+    0.5642,
+    0.6359,
+    0.7072,
+    0.716,
+    0.7419,
+    0.8664,
+    0.9526,
+    0.9571
+   ]
+  },
+  "t_contact": {
+   "mi_bits_fit": 0.0136,
+   "mi_bits_inner": 0.02,
+   "bins": 20,
+   "bias_bits_fit": 0.0002,
+   "spearman_with_level_fit": -0.1263,
+   "mean_by_level_fit": [
+    0.2747,
+    0.2721,
+    0.2664,
+    0.2641,
+    0.2617,
+    0.2605,
+    0.2601,
+    0.2579,
+    0.2559,
+    0.2538
+   ]
+  },
+  "n_moves": {
+   "mi_bits_fit": 0.0132,
+   "mi_bits_inner": 0.0133,
+   "bins": 20,
+   "bias_bits_fit": 0.0002,
+   "spearman_with_level_fit": -0.0874,
+   "mean_by_level_fit": [
+    228.5999,
+    227.5643,
+    226.5024,
+    224.0167,
+    224.3316,
+    221.0424,
+    218.0021,
+    218.0507,
+    219.1851,
+    213.2552
+   ]
+  },
+  "unique_points_frac": {
+   "mi_bits_fit": 0.0126,
+   "mi_bits_inner": 0.0137,
+   "bins": 20,
+   "bias_bits_fit": 0.0002,
+   "spearman_with_level_fit": -0.1061,
+   "mean_by_level_fit": [
+    0.6231,
+    0.6199,
+    0.6156,
+    0.6081,
+    0.608,
+    0.5989,
+    0.5902,
+    0.5887,
+    0.5904,
+    0.5742
+   ]
+  },
+  "t_early_line1_count": {
+   "mi_bits_fit": 0.0115,
+   "mi_bits_inner": 0.0161,
+   "bins": 7,
+   "bias_bits_fit": 0.0001,
+   "spearman_with_level_fit": -0.086,
+   "mean_by_level_fit": [
+    1.9446,
+    1.8623,
+    1.7043,
+    1.5695,
+    1.4931,
+    1.4317,
+    1.4465,
+    1.355,
+    1.2854,
+    1.2584
+   ]
+  },
+  "t_diag_contact": {
+   "mi_bits_fit": 0.0113,
+   "mi_bits_inner": 0.0155,
+   "bins": 20,
+   "bias_bits_fit": 0.0002,
+   "spearman_with_level_fit": -0.122,
+   "mean_by_level_fit": [
+    0.1646,
+    0.1646,
+    0.1601,
+    0.1586,
+    0.1583,
+    0.1561,
+    0.1534,
+    0.1525,
+    0.1507,
+    0.1486
+   ]
+  },
+  "t_line3": {
+   "mi_bits_fit": 0.0084,
+   "mi_bits_inner": 0.0078,
+   "bins": 20,
+   "bias_bits_fit": 0.0002,
+   "spearman_with_level_fit": 0.1002,
+   "mean_by_level_fit": [
+    0.1825,
+    0.1833,
+    0.1851,
+    0.1863,
+    0.1874,
+    0.1891,
+    0.191,
+    0.1903,
+    0.192,
+    0.1966
+   ]
+  },
+  "t_early_line12": {
+   "mi_bits_fit": 0.0069,
+   "mi_bits_inner": 0.0111,
+   "bins": 11,
+   "bias_bits_fit": 0.0001,
+   "spearman_with_level_fit": -0.0759,
+   "mean_by_level_fit": [
+    0.1946,
+    0.1903,
+    0.1843,
+    0.1769,
+    0.1743,
+    0.1718,
+    0.1749,
+    0.1659,
+    0.1634,
+    0.1653
+   ]
+  },
+  "t_first_other": {
+   "mi_bits_fit": 0.0068,
+   "mi_bits_inner": 0.0151,
+   "bins": 2,
+   "bias_bits_fit": 0.0,
+   "spearman_with_level_fit": 0.1186,
+   "mean_by_level_fit": [
+    0.0385,
+    0.0455,
+    0.0341,
+    0.0517,
+    0.0492,
+    0.0411,
+    0.0558,
+    0.0727,
+    0.0555,
+    0.1248
+   ]
+  },
+  "t_early_center": {
+   "mi_bits_fit": 0.005,
+   "mi_bits_inner": 0.0077,
+   "bins": 13,
+   "bias_bits_fit": 0.0001,
+   "spearman_with_level_fit": 0.0811,
+   "mean_by_level_fit": [
+    0.2163,
+    0.2199,
+    0.2275,
+    0.2351,
+    0.2412,
+    0.2424,
+    0.2396,
+    0.2506,
+    0.2499,
+    0.2419
+   ]
+  },
+  "t_first_44": {
+   "mi_bits_fit": 0.0038,
+   "mi_bits_inner": 0.0078,
+   "bins": 2,
+   "bias_bits_fit": 0.0,
+   "spearman_with_level_fit": 0.0093,
+   "mean_by_level_fit": [
+    0.7174,
+    0.6803,
+    0.6975,
+    0.6997,
+    0.7132,
+    0.695,
+    0.6637,
+    0.6437,
+    0.6729,
+    0.5954
+   ]
+  },
+  "last20_t_line12": {
+   "mi_bits_fit": 0.0034,
+   "mi_bits_inner": 0.0046,
+   "bins": 11,
+   "bias_bits_fit": 0.0001,
+   "spearman_with_level_fit": -0.0549,
+   "mean_by_level_fit": [
+    0.4262,
+    0.428,
+    0.4232,
+    0.4119,
+    0.4107,
+    0.4005,
+    0.3957,
+    0.3946,
+    0.3924,
+    0.3786
+   ]
+  },
+  "last20_mean_line": {
+   "mi_bits_fit": 0.0032,
+   "mi_bits_inner": 0.0051,
+   "bins": 20,
+   "bias_bits_fit": 0.0002,
+   "spearman_with_level_fit": 0.063,
+   "mean_by_level_fit": [
+    3.6505,
+    3.637,
+    3.6584,
+    3.7026,
+    3.7074,
+    3.7625,
+    3.7969,
+    3.7932,
+    3.8078,
+    3.8798
+   ]
+  },
+  "first_replay_frac": {
+   "mi_bits_fit": 0.0026,
+   "mi_bits_inner": 0.0062,
+   "bins": 17,
+   "bias_bits_fit": 0.0001,
+   "spearman_with_level_fit": -0.0386,
+   "mean_by_level_fit": [
+    0.6817,
+    0.6855,
+    0.678,
+    0.6794,
+    0.6735,
+    0.6851,
+    0.6783,
+    0.6586,
+    0.6461,
+    0.6453
+   ]
+  },
+  "t_first10_corner": {
+   "mi_bits_fit": 0.0026,
+   "mi_bits_inner": 0.007,
+   "bins": 11,
+   "bias_bits_fit": 0.0001,
+   "spearman_with_level_fit": 0.028,
+   "mean_by_level_fit": [
+    0.5096,
+    0.5,
+    0.504,
+    0.5071,
+    0.503,
+    0.5036,
+    0.5063,
+    0.5031,
+    0.5073,
+    0.5162
+   ]
+  },
+  "t_line2": {
+   "mi_bits_fit": 0.0023,
+   "mi_bits_inner": 0.0039,
+   "bins": 20,
+   "bias_bits_fit": 0.0002,
+   "spearman_with_level_fit": 0.0358,
+   "mean_by_level_fit": [
+    0.1603,
+    0.1609,
+    0.1619,
+    0.1614,
+    0.1626,
+    0.1619,
+    0.1648,
+    0.1635,
+    0.1633,
+    0.1649
+   ]
+  },
+  "o_line2": {
+   "mi_bits_fit": 0.0019,
+   "mi_bits_inner": 0.0045,
+   "bins": 20,
+   "bias_bits_fit": 0.0002,
+   "spearman_with_level_fit": 0.0316,
+   "mean_by_level_fit": [
+    0.1618,
+    0.1616,
+    0.1611,
+    0.1625,
+    0.1617,
+    0.1619,
+    0.163,
+    0.1624,
+    0.1639,
+    0.1654
+   ]
+  },
+  "t_line5plus": {
+   "mi_bits_fit": 0.0018,
+   "mi_bits_inner": 0.005,
+   "bins": 20,
+   "bias_bits_fit": 0.0002,
+   "spearman_with_level_fit": -0.0004,
+   "mean_by_level_fit": [
+    0.3919,
+    0.393,
+    0.3938,
+    0.3951,
+    0.396,
+    0.3965,
+    0.3932,
+    0.3952,
+    0.3945,
+    0.3931
+   ]
+  },
+  "t_first_33": {
+   "mi_bits_fit": 0.0018,
+   "mi_bits_inner": 0.0031,
+   "bins": 2,
+   "bias_bits_fit": 0.0,
+   "spearman_with_level_fit": 0.102,
+   "mean_by_level_fit": [
+    0.0045,
+    0.0038,
+    0.005,
+    0.0069,
+    0.0128,
+    0.0065,
+    0.0211,
+    0.0062,
+    0.0109,
+    0.0104
+   ]
+  },
+  "t_line4": {
+   "mi_bits_fit": 0.0015,
+   "mi_bits_inner": 0.0054,
+   "bins": 20,
+   "bias_bits_fit": 0.0002,
+   "spearman_with_level_fit": 0.0261,
+   "mean_by_level_fit": [
+    0.1607,
+    0.1601,
+    0.1596,
+    0.1612,
+    0.1598,
+    0.1607,
+    0.1606,
+    0.1617,
+    0.1631,
+    0.164
+   ]
+  },
+  "t_endgame_mean_line": {
+   "mi_bits_fit": 0.0012,
+   "mi_bits_inner": 0.0029,
+   "bins": 20,
+   "bias_bits_fit": 0.0002,
+   "spearman_with_level_fit": 0.0154,
+   "mean_by_level_fit": [
+    3.9524,
+    3.9434,
+    3.9344,
+    3.9391,
+    3.9287,
+    3.9577,
+    3.968,
+    3.9628,
+    3.9652,
+    4.0078
+   ]
+  },
+  "t_first_34": {
+   "mi_bits_fit": 0.0009,
+   "mi_bits_inner": 0.0108,
+   "bins": 2,
+   "bias_bits_fit": 0.0,
+   "spearman_with_level_fit": 0.0724,
+   "mean_by_level_fit": [
+    0.2396,
+    0.2705,
+    0.2634,
+    0.2416,
+    0.2248,
+    0.2573,
+    0.2594,
+    0.2774,
+    0.2607,
+    0.2695
+   ]
+  },
+  "t_early_line34": {
+   "mi_bits_fit": 0.0006,
+   "mi_bits_inner": 0.0035,
+   "bins": 11,
+   "bias_bits_fit": 0.0001,
+   "spearman_with_level_fit": 0.0094,
+   "mean_by_level_fit": [
+    0.5892,
+    0.5898,
+    0.5882,
+    0.5879,
+    0.5845,
+    0.5858,
+    0.5855,
+    0.5835,
+    0.5866,
+    0.5928
+   ]
+  },
+  "target_moved_last": {
+   "mi_bits_fit": 0.0002,
+   "mi_bits_inner": 0.0004,
+   "bins": 2,
+   "bias_bits_fit": 0.0,
+   "spearman_with_level_fit": 0.0592,
+   "mean_by_level_fit": [
+    0.4822,
+    0.4912,
+    0.4955,
+    0.5008,
+    0.5157,
+    0.5016,
+    0.5042,
+    0.4962,
+    0.5122,
+    0.5002
+   ]
+  },
+  "is_black": {
+   "mi_bits_fit": 0.0001,
+   "mi_bits_inner": 0.0013,
+   "bins": 2,
+   "bias_bits_fit": 0.0,
+   "spearman_with_level_fit": 0.049,
+   "mean_by_level_fit": [
+    0.4975,
+    0.498,
+    0.5036,
+    0.499,
+    0.5043,
+    0.5106,
+    0.5017,
+    0.4954,
+    0.4928,
+    0.5031
+   ]
+  }
+ },
+ "n_moves_by_level_fit": {
+  "D": {
+   "mean": 228.5999,
+   "median": 236.0,
+   "frac_lt150": 0.0824,
+   "frac_eq100": 0.0012
+  },
+  "C": {
+   "mean": 227.5643,
+   "median": 235.0,
+   "frac_lt150": 0.0822,
+   "frac_eq100": 0.0013
+  },
+  "B": {
+   "mean": 226.5024,
+   "median": 233.0,
+   "frac_lt150": 0.0881,
+   "frac_eq100": 0.001
+  },
+  "A": {
+   "mean": 224.0167,
+   "median": 230.0,
+   "frac_lt150": 0.0951,
+   "frac_eq100": 0.0011
+  },
+  "1D": {
+   "mean": 224.3316,
+   "median": 230.0,
+   "frac_lt150": 0.095,
+   "frac_eq100": 0.001
+  },
+  "2D": {
+   "mean": 221.0424,
+   "median": 226.0,
+   "frac_lt150": 0.105,
+   "frac_eq100": 0.001
+  },
+  "3D": {
+   "mean": 218.0021,
+   "median": 222.0,
+   "frac_lt150": 0.1213,
+   "frac_eq100": 0.0016
+  },
+  "4D": {
+   "mean": 218.0507,
+   "median": 222.0,
+   "frac_lt150": 0.1267,
+   "frac_eq100": 0.0014
+  },
+  "5D": {
+   "mean": 219.1851,
+   "median": 222.0,
+   "frac_lt150": 0.1251,
+   "frac_eq100": 0.0015
+  },
+  "6D": {
+   "mean": 213.2552,
+   "median": 213.0,
+   "frac_lt150": 0.1487,
+   "frac_eq100": 0.0017
+  }
+ },
+ "per_game_inner": {
+  "CNN_C5_per_game": {
+   "ce_nats_level_balanced": 1.9064,
+   "info_bits": 0.5716,
+   "acc_level_balanced": 0.2523
+  },
+  "opening_per_game (no-score games uniform)": {
+   "ce_nats_level_balanced": 3.8514,
+   "info_bits": -2.2344,
+   "acc_level_balanced": 0.1716
+  },
+  "features[length_ending] binned-MLR": {
+   "ce_nats_level_balanced": 2.2815,
+   "info_bits": 0.0304,
+   "acc_level_balanced": 0.128,
+   "fit_ce": 2.2763
+  },
+  "features[lines] binned-MLR": {
+   "ce_nats_level_balanced": 2.2787,
+   "info_bits": 0.0344,
+   "acc_level_balanced": 0.1274,
+   "fit_ce": 2.2715
+  },
+  "features[locality_tenuki] binned-MLR": {
+   "ce_nats_level_balanced": 2.2414,
+   "info_bits": 0.0883,
+   "acc_level_balanced": 0.1458,
+   "fit_ce": 2.2405
+  },
+  "features[captures] binned-MLR": {
+   "ce_nats_level_balanced": 2.2887,
+   "info_bits": 0.02,
+   "acc_level_balanced": 0.1215,
+   "fit_ce": 2.2852
+  },
+  "features[first_moves] binned-MLR": {
+   "ce_nats_level_balanced": 2.3105,
+   "info_bits": -0.0114,
+   "acc_level_balanced": 0.1045,
+   "fit_ce": 2.2938
+  },
+  "features[all] binned-MLR": {
+   "ce_nats_level_balanced": 2.1855,
+   "info_bits": 0.1689,
+   "acc_level_balanced": 0.1676,
+   "fit_ce": 2.1587
+  }
+ },
+ "question_level": {
+  "R20_oof_rank_balanced": 0.5855,
+  "R20_per_level": {
+   "D": 0.7425,
+   "C": 0.618,
+   "B": 0.5768,
+   "A": 0.5359,
+   "1D": 0.467,
+   "2D": 0.488,
+   "3D": 0.4721,
+   "4D": 0.5759,
+   "5D": 0.6315,
+   "6D": 0.747
+  },
+  "length_ending": {
+   "features_only_calibrated": 0.2803,
+   "R20_plus_features": 0.5858,
+   "diff_vs_R20": 0.0003,
+   "question_mean_diff": 0.0007,
+   "w_feat_by_fold": [
+    0.0,
+    0.1693,
+    0.0137,
+    0.0,
+    0.0
+   ],
+   "w_open_by_fold": [
+    0.1132,
+    0.1097,
+    0.1295,
+    0.1123,
+    0.1166
+   ],
+   "ci95": [
+    -0.0008,
+    0.002
+   ],
+   "frac_le0": 0.388
+  },
+  "lines": {
+   "features_only_calibrated": 0.2898,
+   "R20_plus_features": 0.5852,
+   "diff_vs_R20": -0.0002,
+   "question_mean_diff": -0.0002,
+   "w_feat_by_fold": [
+    0.0,
+    0.0,
+    0.1202,
+    0.0,
+    0.0
+   ],
+   "w_open_by_fold": [
+    0.1132,
+    0.1089,
+    0.13,
+    0.1123,
+    0.1166
+   ],
+   "ci95": [
+    -0.0005,
+    -0.0
+   ],
+   "frac_le0": 0.984
+  },
+  "locality_tenuki": {
+   "features_only_calibrated": 0.3239,
+   "R20_plus_features": 0.587,
+   "diff_vs_R20": 0.0016,
+   "question_mean_diff": 0.0015,
+   "w_feat_by_fold": [
+    0.0,
+    0.1048,
+    0.0,
+    0.1443,
+    0.0949
+   ],
+   "w_open_by_fold": [
+    0.1132,
+    0.1099,
+    0.1295,
+    0.1137,
+    0.1175
+   ],
+   "ci95": [
+    -0.0002,
+    0.0039
+   ],
+   "frac_le0": 0.054
+  },
+  "captures": {
+   "features_only_calibrated": 0.2694,
+   "R20_plus_features": 0.5867,
+   "diff_vs_R20": 0.0013,
+   "question_mean_diff": 0.0017,
+   "w_feat_by_fold": [
+    0.5697,
+    0.9388,
+    0.4582,
+    0.3062,
+    0.9016
+   ],
+   "w_open_by_fold": [
+    0.1149,
+    0.1118,
+    0.1312,
+    0.1133,
+    0.1191
+   ],
+   "ci95": [
+    -0.001,
+    0.0038
+   ],
+   "frac_le0": 0.153
+  },
+  "first_moves": {
+   "features_only_calibrated": 0.1889,
+   "R20_plus_features": 0.5855,
+   "diff_vs_R20": 0.0,
+   "question_mean_diff": 0.0,
+   "w_feat_by_fold": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "w_open_by_fold": [
+    0.1132,
+    0.1089,
+    0.1295,
+    0.1123,
+    0.1166
+   ],
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "frac_le0": 1.0
+  },
+  "all": {
+   "features_only_calibrated": 0.3933,
+   "R20_plus_features": 0.5855,
+   "diff_vs_R20": -0.0,
+   "question_mean_diff": -0.0,
+   "w_feat_by_fold": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "w_open_by_fold": [
+    0.1132,
+    0.109,
+    0.1295,
+    0.1123,
+    0.1166
+   ],
+   "ci95": [
+    -0.0,
+    0.0
+   ],
+   "frac_le0": 1.0,
+   "per_level_R20_plus_all": {
+    "D": 0.7425,
+    "C": 0.618,
+    "B": 0.5768,
+    "A": 0.5359,
+    "1D": 0.467,
+    "2D": 0.488,
+    "3D": 0.4721,
+    "4D": 0.5759,
+    "5D": 0.6315,
+    "6D": 0.747
+   },
+   "per_level_diff": {
+    "D": 0.0,
+    "C": 0.0,
+    "B": 0.0,
+    "A": -0.0,
+    "1D": 0.0,
+    "2D": 0.0,
+    "3D": 0.0,
+    "4D": 0.0,
+    "5D": 0.0,
+    "6D": 0.0
+   },
+   "per_level_ci95": {
+    "D": [
+     0.0,
+     0.0
+    ],
+    "C": [
+     0.0,
+     0.0
+    ],
+    "B": [
+     0.0,
+     0.0
+    ],
+    "A": [
+     -0.0,
+     0.0
+    ],
+    "1D": [
+     0.0,
+     0.0
+    ],
+    "2D": [
+     0.0,
+     0.0
+    ],
+    "3D": [
+     0.0,
+     0.0
+    ],
+    "4D": [
+     0.0,
+     0.0
+    ],
+    "5D": [
+     0.0,
+     0.0
+    ],
+    "6D": [
+     0.0,
+     0.0
+    ]
+   },
+   "features_only_per_level": {
+    "D": 0.559,
+    "C": 0.4903,
+    "B": 0.3267,
+    "A": 0.2941,
+    "1D": 0.3285,
+    "2D": 0.252,
+    "3D": 0.2626,
+    "4D": 0.352,
+    "5D": 0.5205,
+    "6D": 0.5472
+   }
+  }
+ },
+ "seconds": 403.0
+}

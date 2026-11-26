@@ -1,0 +1,719 @@
+{
+ "format": "c10-test08 rank apply v1",
+ "what": "test08 competition 2 apply (PREREG_08 5.2): frozen Q08 per set, rule B, submission_rank.csv = pred_B.csv (public then private)",
+ "mode": "real",
+ "created": "2026-11-04T10:54:31+00:00",
+ "exit_code": 0,
+ "usable": true,
+ "unusable_reasons": [],
+ "combo": {
+  "id": "Q08",
+  "sources": [
+   "C5",
+   "OP",
+   "O4",
+   "SWA",
+   "SWB",
+   "HS",
+   "P1TO"
+  ],
+  "terms": [
+   "OP",
+   "O4",
+   "SWA",
+   "SWB",
+   "HS",
+   "P1TO"
+  ],
+  "p1_scale": 4.0
+ },
+ "method": "prereg08 Q08 = Q02H + 4 x P1TO, rule B (甲)",
+ "theta": [
+  -1.5782906138621513,
+  0.38476138165512164,
+  1.1651053556861017,
+  3.023118556668115,
+  0.4408620509030945,
+  0.0,
+  0.0,
+  4.0,
+  0.05387697503432896,
+  0.02882166471409971,
+  0.005328599933338606,
+  -0.054177351481715444,
+  0.038371301878140994,
+  -0.001297483968814341,
+  0.03749016836690935,
+  0.011646021742180442,
+  0.016796756272075684
+ ],
+ "h8r": {
+  "A_rank_balanced": 0.632702198843505,
+  "A_mean": 0.6345453305055525,
+  "B_rank_balanced": 0.6939334976916056,
+  "questions": 1589,
+  "ci95": [
+   0.04362529514309842,
+   0.07930192015461503
+  ],
+  "rule": "PREREG_08 3: lower bound of Q08 - Q02H > 0, 1,589 questions, reference re-read equal to H7R's B row (|A - H7R| <= 1e-12), Q08 >= 0.57",
+  "holds": true
+ },
+ "t1_verdict": "PASS",
+ "test02": {
+  "fallback_used": false,
+  "apply_test_report_sha256": "1479233446b99c2cacc6c4bf95de3ab6f697990296cb50334a8c9b5974e84468",
+  "r20_first_upload_id": 1,
+  "r20_first_uploaded_at": "2026-11-04T15:30:35+08:00"
+ },
+ "test07": {
+  "t07_apply_report_sha256": "cf78bf03ddd3b347e3de66a9d7977f4fa1d83a82986b57ce0e9ec2b8f7f59cf9",
+  "exit_code": 0,
+  "usable": true,
+  "seam_local": {
+   "verdict": "passed",
+   "passed": true,
+   "max_abs_diff": 0.0,
+   "tol": 0.0001,
+   "rule_b_differences": 0,
+   "byte_identical_probs": true,
+   "byte_identical_pred_B": true,
+   "required_byte_identical": true
+  },
+  "inputs_bound_checked": 54
+ },
+ "test04": {
+  "t04_apply_report_sha256": "fac8aced89bf38f030270f4959899b5022ad5b125449b0af9e9650d309250297",
+  "exit_code": 0,
+  "usable": true,
+  "seam_local_tol": 0.0001
+ },
+ "p1_sets": {
+  "seam": {
+   "report_sha256": "6cd8741d2c98fa0123284a36c5f45020a89937b86d56971693d961ce230a10a3",
+   "npz_sha256": "920a08ad10da9e95905f9e46ad6553b2f2609f8aacecbf7a950d20b971c0f2b6",
+   "games": 400,
+   "failed_or_no_move": 0,
+   "earliest_chunk_created_utc": "2026-11-04T10:20:46+00:00",
+   "fake_from_val": false,
+   "positions_per_s": 761.7
+  },
+  "public": {
+   "report_sha256": "621781ec3ca44fd6761cfd5dd009e9f048420f2111568653c30622876599f774",
+   "npz_sha256": "d5aeb012273e0814b2d8920e3d402120f3543bf6ed30b450df2fd38958e636b3",
+   "games": 5000,
+   "failed_or_no_move": 0,
+   "earliest_chunk_created_utc": "2026-11-04T10:23:18+00:00",
+   "fake_from_val": false,
+   "positions_per_s": 1104.9
+  },
+  "private": {
+   "report_sha256": "6f729dba371643a9ed54e363c18ade6dcd3022c166f0860aa5879a79a1230794",
+   "npz_sha256": "3380c6a785d4cd4856b500e3f711227eda8887eb9c023e3d30d2a0597aab52fc",
+   "games": 5000,
+   "failed_or_no_move": 0,
+   "earliest_chunk_created_utc": "2026-11-04T10:40:16+00:00",
+   "fake_from_val": false,
+   "positions_per_s": 1296.9
+  }
+ },
+ "p1_environment": {
+  "torch": "2.11.0+cu128",
+  "cudnn": "91900",
+  "gpu": "NVIDIA GeForce RTX 4090"
+ },
+ "earliest_p1_chunk_created_utc": "2026-11-04T10:20:46+00:00",
+ "gpu_seam": {
+  "passed": true,
+  "counts_equal": true,
+  "max_abs_std_feature": 0.009569825109513985,
+  "max_abs_lp_p1": 0.005462575287179305,
+  "bitwise_equal_means": false,
+  "usable_games": 400
+ },
+ "gpu_seam_tolerances": {
+  "std_feature": 0.05,
+  "lp_p1": 0.04
+ },
+ "q02h_vs_07": {
+  "equal": true,
+  "computed_sha256": "a3a65246280d8980a57ad41b075afe314a39bcd6d07020cd4981363caae0ecc0",
+  "t07_rank_test_probs_sha256": "a3a65246280d8980a57ad41b075afe314a39bcd6d07020cd4981363caae0ecc0",
+  "t07_inputs_bound_checked": 54
+ },
+ "move_cross_check": {
+  "public": {
+   "vs_t07_hs": {
+    "compared": 5000,
+    "mismatches": 0,
+    "first_mismatches": [],
+    "only_hs_failed": 0,
+    "only_o4_failed": 0,
+    "both_failed": 0
+   },
+   "vs_t04_o4": {
+    "compared": 5000,
+    "mismatches": 0,
+    "first_mismatches": [],
+    "only_hs_failed": 0,
+    "only_o4_failed": 0,
+    "both_failed": 0
+   },
+   "mismatches": 0
+  },
+  "private": {
+   "vs_t07_hs": {
+    "compared": 5000,
+    "mismatches": 0,
+    "first_mismatches": [],
+    "only_hs_failed": 0,
+    "only_o4_failed": 0,
+    "both_failed": 0
+   },
+   "vs_t04_o4": {
+    "compared": 5000,
+    "mismatches": 0,
+    "first_mismatches": [],
+    "only_hs_failed": 0,
+    "only_o4_failed": 0,
+    "both_failed": 0
+   },
+   "mismatches": 0
+  }
+ },
+ "seam_local": {
+  "verdict": "passed",
+  "passed": true,
+  "max_abs_diff": 0.0,
+  "tol": 0.0001,
+  "rule_b_differences": 0,
+  "byte_identical_probs": true,
+  "byte_identical_pred_B": true,
+  "required_byte_identical": true
+ },
+ "p1_failures": {
+  "public": {
+   "failed_or_no_move": 0,
+   "games": 5000,
+   "ok": true
+  },
+  "private": {
+   "failed_or_no_move": 0,
+   "games": 5000,
+   "ok": true
+  }
+ },
+ "p1_direction": {
+  "public": {
+   "rho": 0.9725792661204132,
+   "questions": 400,
+   "reference": 0.9673017067776464,
+   "floor": 0.155,
+   "threshold": 0.4836508533888232,
+   "passed": true,
+   "rule": "rho >= max(0.5 x reference, floor) (spec 4.6)"
+  },
+  "private": {
+   "rho": 0.9670020437627734,
+   "questions": 400,
+   "reference": 0.9673017067776464,
+   "floor": 0.155,
+   "threshold": 0.4836508533888232,
+   "passed": true,
+   "rule": "rho >= max(0.5 x reference, floor) (spec 4.6)"
+  },
+  "seam_val_record_only": {
+   "rho": 0.9683239283284883,
+   "questions": 1589,
+   "reference": 0.9628047229694198,
+   "floor": 0.078,
+   "threshold": 0.4814023614847099,
+   "passed": true,
+   "rule": "rho >= max(0.5 x reference, floor) (spec 4.6)",
+   "equal_to_prereg08_apply": true
+  }
+ },
+ "rho_mono": 0.9673017067776464,
+ "rho_floor": 0.155,
+ "sets": {
+  "public": {
+   "questions": 400,
+   "questions_without_parsed_game": 0,
+   "questions_without_parsed_game_ids": [],
+   "games": 5000,
+   "games_parsed": 5000,
+   "o4_mask_games": 5000,
+   "o4_replay_failed": 0,
+   "questions_with_empty_o4_mask": 0,
+   "masked_E_P1": {
+    "games_in_questions": 5000,
+    "unusable_slots_in_questions": 0,
+    "path": "pooled",
+    "scale": 4.0
+   },
+   "unusable_p1_games": 0,
+   "p1_not_ok": 0,
+   "questions_without_usable_p1_game": 0,
+   "rule_B_differs_from_Q02H": 125,
+   "p1_failed": 0,
+   "p1_failed_or_no_move": 0
+  },
+  "private": {
+   "questions": 400,
+   "questions_without_parsed_game": 0,
+   "questions_without_parsed_game_ids": [],
+   "games": 5000,
+   "games_parsed": 5000,
+   "o4_mask_games": 5000,
+   "o4_replay_failed": 0,
+   "questions_with_empty_o4_mask": 0,
+   "masked_E_P1": {
+    "games_in_questions": 5000,
+    "unusable_slots_in_questions": 0,
+    "path": "pooled",
+    "scale": 4.0
+   },
+   "unusable_p1_games": 0,
+   "p1_not_ok": 0,
+   "questions_without_usable_p1_game": 0,
+   "rule_B_differs_from_Q02H": 120,
+   "p1_failed": 0,
+   "p1_failed_or_no_move": 0
+  }
+ },
+ "rule_b_differences": {
+  "07": {
+   "public": 125,
+   "all": 245,
+   "file_sha256": "ee2ea02bfb2e4bdbce5e2e0725de883b25a3184916b829a1a3c1259befc7aaeb"
+  },
+  "04": {
+   "public": 155,
+   "all": 314,
+   "file_sha256": "6fea3ed27f6251494f8934fd2b8a85f423e3cfe53ae3ffd7ffc2d120e19ee3ce"
+  },
+  "R20": {
+   "public": 160,
+   "all": 319,
+   "file_sha256": "711b3d1b73a31d50e243df03458e70970d0f7d50faf7b6e1e2d9eaae60b9558a"
+  }
+ },
+ "questions_without_parsed_game": {
+  "public": [],
+  "private": []
+ },
+ "check_submission": {
+  "mode": "official",
+  "questions": [
+   "data/test/rank_prediction_test_public.csv",
+   "data/test/rank_prediction_test_private.csv"
+  ],
+  "errors": []
+ },
+ "outputs_sha256": {
+  "rank_test_probs.csv": "c7ef06be08a057c6e3c97fc83498410c0a66e115b911714ce36363cd0f05a96f",
+  "pred_A.csv": "3f4c7690e687b9acad693b4679764027402617a293e31bf61a28aa261ddb0da8",
+  "pred_B.csv": "c84c1a52f7512bb5a7117cde26fec91399eb26a8cfcb5ffff43ef677efd9a3ba",
+  "decide_summary.json": "d48c39573383652546808304aa57b975f92fb0e255786b6e9d88de871b5b98bc",
+  "submission_rank.csv": "c84c1a52f7512bb5a7117cde26fec91399eb26a8cfcb5ffff43ef677efd9a3ba",
+  "test_lp_p1.npz": "22fda1afd8a2dea377ac33f3827dc2ca37a0a49d470b2293d4538d4028420c24"
+ },
+ "decide_summary": {
+  "n_questions": 800,
+  "n_missing": 0,
+  "missing_question_ids": [],
+  "n_A_ne_B": 52,
+  "distribution_B": {
+   "D": 79,
+   "C": 93,
+   "B": 111,
+   "A": 69,
+   "1D": 85,
+   "2D": 74,
+   "3D": 60,
+   "4D": 80,
+   "5D": 84,
+   "6D": 65
+  }
+ },
+ "level_summary": {
+  "public": {
+   "rule_b_distribution": {
+    "D": 51,
+    "C": 39,
+    "B": 60,
+    "A": 34,
+    "1D": 43,
+    "2D": 36,
+    "3D": 26,
+    "4D": 43,
+    "5D": 34,
+    "6D": 34
+   },
+   "mean_probability_per_level": {
+    "D": 0.12263863145012782,
+    "C": 0.10700551520155167,
+    "B": 0.1290662573598608,
+    "A": 0.1026944428840318,
+    "1D": 0.10137770804257956,
+    "2D": 0.09175001884471529,
+    "3D": 0.08208394458557138,
+    "4D": 0.08893845305855151,
+    "5D": 0.08967067526198125,
+    "6D": 0.08477435331102899
+   }
+  },
+  "private": {
+   "rule_b_distribution": {
+    "D": 28,
+    "C": 54,
+    "B": 51,
+    "A": 35,
+    "1D": 42,
+    "2D": 38,
+    "3D": 34,
+    "4D": 37,
+    "5D": 50,
+    "6D": 31
+   },
+   "mean_probability_per_level": {
+    "D": 0.08292644077723685,
+    "C": 0.11951631989315552,
+    "B": 0.1223748858606826,
+    "A": 0.10063533146295434,
+    "1D": 0.09643413938787206,
+    "2D": 0.09345087676939544,
+    "3D": 0.08912229436008073,
+    "4D": 0.10034070065087411,
+    "5D": 0.10235219342421037,
+    "6D": 0.09284681741353806
+   }
+  }
+ },
+ "inputs_bound": {
+  "results/test02/rank/apply_test_report.json": "1479233446b99c2cacc6c4bf95de3ab6f697990296cb50334a8c9b5974e84468",
+  "results/test02/rank/opening_test.npz": "6863ccd053837d30be070a2e0d0d3e3968b69636936dd33414221513886d0e07",
+  "results/test02/checks/rank/t1.json": "9ddf1cc98c4085493c7ec81f539acaba5e8a2701ba849d41bf168368a8bcfb2c",
+  "results/test04/rank/t04_apply_report.json": "fac8aced89bf38f030270f4959899b5022ad5b125449b0af9e9650d309250297",
+  "results/test04/rank/rank_test_probs.csv": "e52a69e419c518cc03c3e9886ff9cf531109f491e8f28a20b790a1944357774e",
+  "results/test04/rank/seam_val/seam_local.json": "7d012bcb8954a29d80d71995097902b7d5653357d33434276ae13f4afc5048fd",
+  "results/test07/rank/t07_apply_report.json": "cf78bf03ddd3b347e3de66a9d7977f4fa1d83a82986b57ce0e9ec2b8f7f59cf9",
+  "results/test07/rank/rank_test_probs.csv": "a3a65246280d8980a57ad41b075afe314a39bcd6d07020cd4981363caae0ecc0",
+  "results/test07/rank/submission_rank.csv": "ee2ea02bfb2e4bdbce5e2e0725de883b25a3184916b829a1a3c1259befc7aaeb",
+  "results/test07/rank/seam_val/seam_local.json": "2bbf7bb1c158610bfdf7e414441a597e0e6e26c770c54a879f7e73203d362bc1",
+  "results/test07/hs/gpu_seam.json": "02d2bf2699e94de565873a14a242c52ce7456c15a02233dc7c9d8961e4c6d22e",
+  "results/prereg04/rank/frozen_config.json": "ae728e9c936a55dfeced255e9b05b5ac6a4955a7101f108e78c53c679e162661",
+  "results/test08/p1/gpu_seam.json": "afb700842a27da2906141cb40aea56527cac3bd5c7d804978436aee418974446",
+  "results/test08/rank/seam_val/seam_local.json": "e85b3c049fd3502897a771fedefd20678a6d19a05fdb23fb9b97abff21aa2f40",
+  "results/prereg07/rank/frozen_config.json": "93a0ac29615260865d554ee61aec258c633820a87aeb7dfcf8047a5dfd200c0b",
+  "results/prereg07/rank/hs_map.npz": "a4334e79c490e4d8102dd5136ac08c0de1060315981f4ccc527ebffa1b84a3e4",
+  "results/prereg07/hs/val_hs.npz": "ef2067e8cb633f521c205a09aa4638c79fef3ba0b4e90e6a54bdc046e5a5550f",
+  "results/prereg07/hs/val_seam_moves.npz": "3e55fbfa70b43c36c2ebe30bdbca63ea6c68968a1521ec6d63fd2b698f6598ab",
+  "results/prereg07/hs/val_report.json": "11745c5c6e8fedd7c01611331b4f4c69ec1c00f423d3c39e267823bc3c56c7ca",
+  "results/prereg07/rank/rank_val_probs.csv": "6ae2db6025a903eb5c58af9418dc203c0b6e84dd664049f85dfa850e57dc28c1",
+  "results/prereg07/rank/pred_B.csv": "51d7dbf82d50c3848acadb6934069580bd3ade7e6ca71ad5d1023633a18a26fa",
+  "results/prereg07/rank/pred_A.csv": "b229be2c414f7af22310bc304d6da9de5b6406698ec8ce9c0d40e7c146b40a41",
+  "results/prereg07/rank/apply_report.json": "3ed7f7b0580f02d9c4c9c9255634a689213017e65190dce492465aad332fad6b",
+  "results/prereg07/rank/score_H7R.json": "32686f6c91fb0a14301c85ecc1c299844d9346fb2efb8f0fd0b5891f5609cbf5",
+  "results/prereg08/rank/frozen_config.json": "421bbeb4524bed8ccf73babd58cac6b16c82f45b1aa57acef2e55bd52be0ba70",
+  "results/prereg08/rank/p1_map.npz": "116923629b66198a79da06282aac9ca863acf77bf6a1e1f5d584b526fb54afb2",
+  "results/prereg08/rank/rank_val_probs.csv": "7a513367147227e3631bfb7bad36064f3e90fffb6ee358716e389698ce1ccd97",
+  "results/prereg08/rank/pred_B.csv": "b02d4f947910726fa25c292e9798e7407b1e802e2fed080d843f56b9beb48872",
+  "results/prereg08/rank/pred_A.csv": "e24699e989543bfbfc73b1b710677c93f018747193a9ba18d89fc004cdd17753",
+  "results/prereg08/rank/apply_report.json": "63980d79866d2653a4e600cef78cadd9d0d27c828a69e1b34d6ae2309eaf040f",
+  "results/prereg08/rank/score_H8R.json": "8ecd2425fe3eef784e28d7587184aec67c0b41b49503e95b42f8532757209047",
+  "results/prereg08/rank/val_lp_p1.npz": "8815db14654eefdb8c2a11cfbb709de4254272de734cec415b3dfc2dbb0e59a9",
+  "results/prereg08/feat/val_seam_feats.npz": "0a7b9b0010192a4c7f3878e914f9e514a18cfa338d94dc8c49936b6b625b9318",
+  "results/prereg08/feat/val_p1.npz": "11b1d38cc116401d44825883b864bf635b2d44e109baa17115fb4093055da4e0",
+  "results/prereg08/feat/val_report.json": "2ce9e86f8e639217c38814541f7d1bfb083b609ac194b5e19c8c38c60e653535",
+  "results/test07/hs/seam_hs.npz": "81d774ca73b1bf4df766499184d602a454457f0bbf2551dd801c9a873b0a5b7a",
+  "results/test08/p1/seam_p1.npz": "920a08ad10da9e95905f9e46ad6553b2f2609f8aacecbf7a950d20b971c0f2b6",
+  "results/test08/p1/p1_seam_report.json": "6cd8741d2c98fa0123284a36c5f45020a89937b86d56971693d961ce230a10a3",
+  "results/test07/hs/public_hs.npz": "b413e51086f96fbf8a44ac6b2d60bed0725af6ddf3c0d9569b8e2876d793d0ce",
+  "results/test08/p1/public_p1.npz": "d5aeb012273e0814b2d8920e3d402120f3543bf6ed30b450df2fd38958e636b3",
+  "results/test08/p1/p1_public_report.json": "621781ec3ca44fd6761cfd5dd009e9f048420f2111568653c30622876599f774",
+  "results/test07/hs/private_hs.npz": "ff557320a8ea7e916f9cc4c64677be28d55e2f72826b992cc797bbdbc124fe4a",
+  "results/test08/p1/private_p1.npz": "3380c6a785d4cd4856b500e3f711227eda8887eb9c023e3d30d2a0597aab52fc",
+  "results/test08/p1/p1_private_report.json": "6f729dba371643a9ed54e363c18ade6dcd3022c166f0860aa5879a79a1230794",
+  "results/test02/rank/seam_val/dumps/val_keys.npz": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+  "results/test02/rank/seam_val/dumps/val_p02e9_d4.npz": "ec0b729d805eb9f3458f7a497444b099b8ec47e5cec73703ae4b8bf9cf0a11b2",
+  "results/test04/opp/o4_seam_val.npz": "30d312c02c357f6761567099003885be5e08635b6e6c0b49d71baac137cd9cd4",
+  "results/test02/rank/public/dumps/val_keys.npz": "01fc5858d1607d56fc1b72cfc5aac658c85cef7704c05b39e3ac7220732208fa",
+  "results/test02/rank/public/dumps/val_p02e9_d4.npz": "5f6159946fa0277aea3f44b409811b16374e5238da276147fc4f23d37f8473db",
+  "results/test04/opp/o4_public.npz": "1ace66d5a42745086430dfccd47d58d2ee9ccd3cb871818c1e920725891b7b24",
+  "results/test02/rank/private/dumps/val_keys.npz": "94037ca1d286480aeb32c535af7fab53407017f052ed23b0b9f87cebebb1eede",
+  "results/test02/rank/private/dumps/val_p02e9_d4.npz": "63b782f98e8d294d7ab3d4f1f016399658778ef4b550a61920169319dbc9bb39",
+  "results/test04/opp/o4_private.npz": "5d1b50fbb00855da597d43134ab09f6df942464f3640cefcd9538d873a11dcb9"
+ },
+ "inputs_bound_paths": {
+  "results/test02/rank/apply_test_report.json": "results/test02/rank/apply_test_report.json",
+  "results/test02/rank/opening_test.npz": "results/test02/rank/opening_test.npz",
+  "results/test02/checks/rank/t1.json": "results/test02/checks/rank/t1.json",
+  "results/test04/rank/t04_apply_report.json": "results/test04/rank/t04_apply_report.json",
+  "results/test04/rank/rank_test_probs.csv": "results/test04/rank/rank_test_probs.csv",
+  "results/test04/rank/seam_val/seam_local.json": "results/test04/rank/seam_val/seam_local.json",
+  "results/test07/rank/t07_apply_report.json": "results/test07/rank/t07_apply_report.json",
+  "results/test07/rank/rank_test_probs.csv": "results/test07/rank/rank_test_probs.csv",
+  "results/test07/rank/submission_rank.csv": "results/test07/rank/submission_rank.csv",
+  "results/test07/rank/seam_val/seam_local.json": "results/test07/rank/seam_val/seam_local.json",
+  "results/test07/hs/gpu_seam.json": "results/test07/hs/gpu_seam.json",
+  "results/prereg04/rank/frozen_config.json": "results/prereg04/rank/frozen_config.json",
+  "results/test08/p1/gpu_seam.json": "results/test08/p1/gpu_seam.json",
+  "results/test08/rank/seam_val/seam_local.json": "results/test08/rank/seam_val/seam_local.json",
+  "results/prereg07/rank/frozen_config.json": "results/prereg07/rank/frozen_config.json",
+  "results/prereg07/rank/hs_map.npz": "results/prereg07/rank/hs_map.npz",
+  "results/prereg07/hs/val_hs.npz": "results/prereg07/hs/val_hs.npz",
+  "results/prereg07/hs/val_seam_moves.npz": "results/prereg07/hs/val_seam_moves.npz",
+  "results/prereg07/hs/val_report.json": "results/prereg07/hs/val_report.json",
+  "results/prereg07/rank/rank_val_probs.csv": "results/prereg07/rank/rank_val_probs.csv",
+  "results/prereg07/rank/pred_B.csv": "results/prereg07/rank/pred_B.csv",
+  "results/prereg07/rank/pred_A.csv": "results/prereg07/rank/pred_A.csv",
+  "results/prereg07/rank/apply_report.json": "results/prereg07/rank/apply_report.json",
+  "results/prereg07/rank/score_H7R.json": "results/prereg07/rank/score_H7R.json",
+  "results/prereg08/rank/frozen_config.json": "results/prereg08/rank/frozen_config.json",
+  "results/prereg08/rank/p1_map.npz": "results/prereg08/rank/p1_map.npz",
+  "results/prereg08/rank/rank_val_probs.csv": "results/prereg08/rank/rank_val_probs.csv",
+  "results/prereg08/rank/pred_B.csv": "results/prereg08/rank/pred_B.csv",
+  "results/prereg08/rank/pred_A.csv": "results/prereg08/rank/pred_A.csv",
+  "results/prereg08/rank/apply_report.json": "results/prereg08/rank/apply_report.json",
+  "results/prereg08/rank/score_H8R.json": "results/prereg08/rank/score_H8R.json",
+  "results/prereg08/rank/val_lp_p1.npz": "results/prereg08/rank/val_lp_p1.npz",
+  "results/prereg08/feat/val_seam_feats.npz": "results/prereg08/feat/val_seam_feats.npz",
+  "results/prereg08/feat/val_p1.npz": "results/prereg08/feat/val_p1.npz",
+  "results/prereg08/feat/val_report.json": "results/prereg08/feat/val_report.json",
+  "results/test07/hs/seam_hs.npz": "results/test07/hs/seam_hs.npz",
+  "results/test08/p1/seam_p1.npz": "results/test08/p1/seam_p1.npz",
+  "results/test08/p1/p1_seam_report.json": "results/test08/p1/p1_seam_report.json",
+  "results/test07/hs/public_hs.npz": "results/test07/hs/public_hs.npz",
+  "results/test08/p1/public_p1.npz": "results/test08/p1/public_p1.npz",
+  "results/test08/p1/p1_public_report.json": "results/test08/p1/p1_public_report.json",
+  "results/test07/hs/private_hs.npz": "results/test07/hs/private_hs.npz",
+  "results/test08/p1/private_p1.npz": "results/test08/p1/private_p1.npz",
+  "results/test08/p1/p1_private_report.json": "results/test08/p1/p1_private_report.json",
+  "results/test02/rank/seam_val/dumps/val_keys.npz": "results/test02/rank/seam_val/dumps/val_keys.npz",
+  "results/test02/rank/seam_val/dumps/val_p02e9_d4.npz": "results/test02/rank/seam_val/dumps/val_p02e9_d4.npz",
+  "results/test04/opp/o4_seam_val.npz": "results/test04/opp/o4_seam_val.npz",
+  "results/test02/rank/public/dumps/val_keys.npz": "results/test02/rank/public/dumps/val_keys.npz",
+  "results/test02/rank/public/dumps/val_p02e9_d4.npz": "results/test02/rank/public/dumps/val_p02e9_d4.npz",
+  "results/test04/opp/o4_public.npz": "results/test04/opp/o4_public.npz",
+  "results/test02/rank/private/dumps/val_keys.npz": "results/test02/rank/private/dumps/val_keys.npz",
+  "results/test02/rank/private/dumps/val_p02e9_d4.npz": "results/test02/rank/private/dumps/val_p02e9_d4.npz",
+  "results/test04/opp/o4_private.npz": "results/test04/opp/o4_private.npz"
+ },
+ "inputs_bound_rule": ".csv / .json: sha256 with CRLF folded to LF; other files (.npz): raw bytes",
+ "checks": {
+  "git": {
+   "clean": true,
+   "head": "e3166c8bce2ec25cd9049a58532de569eb3e0c7f",
+   "own_files": {
+    "committed": [
+     "tools/t08_rank.py",
+     "tools/t07_rank.py",
+     "tools/t04_rank.py",
+     "tools/p07_rank_fuse.py",
+     "tools/p08_rank_fuse.py",
+     "tools/check_submission.py",
+     "tools/official_log.py"
+    ]
+   }
+  },
+  "venv": {
+   "equal": true,
+   "versions": {
+    "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "zlib": "1.3.1"
+   },
+   "rule": "python / numpy / scipy = val_report.json environment; zlib = 1.3.1 (design-time measurement)"
+  },
+  "blas_env": {
+   "OMP_NUM_THREADS": null,
+   "OPENBLAS_NUM_THREADS": null,
+   "MKL_NUM_THREADS": null
+  },
+  "prereg07": {
+   "prereg07_sha256": {
+    "results/prereg07/rank/frozen_config.json": "93a0ac29615260865d554ee61aec258c633820a87aeb7dfcf8047a5dfd200c0b",
+    "results/prereg07/rank/hs_map.npz": "a4334e79c490e4d8102dd5136ac08c0de1060315981f4ccc527ebffa1b84a3e4",
+    "results/prereg07/hs/val_hs.npz": "ef2067e8cb633f521c205a09aa4638c79fef3ba0b4e90e6a54bdc046e5a5550f",
+    "results/prereg07/hs/val_seam_moves.npz": "3e55fbfa70b43c36c2ebe30bdbca63ea6c68968a1521ec6d63fd2b698f6598ab",
+    "results/prereg07/hs/val_report.json": "11745c5c6e8fedd7c01611331b4f4c69ec1c00f423d3c39e267823bc3c56c7ca",
+    "results/prereg07/rank/rank_val_probs.csv": "6ae2db6025a903eb5c58af9418dc203c0b6e84dd664049f85dfa850e57dc28c1",
+    "results/prereg07/rank/pred_B.csv": "51d7dbf82d50c3848acadb6934069580bd3ade7e6ca71ad5d1023633a18a26fa",
+    "results/prereg07/rank/pred_A.csv": "b229be2c414f7af22310bc304d6da9de5b6406698ec8ce9c0d40e7c146b40a41",
+    "results/prereg07/rank/apply_report.json": "3ed7f7b0580f02d9c4c9c9255634a689213017e65190dce492465aad332fad6b",
+    "results/prereg07/rank/score_H7R.json": "32686f6c91fb0a14301c85ecc1c299844d9346fb2efb8f0fd0b5891f5609cbf5"
+   },
+   "pinned_files": {
+    "results/prereg07/explore/pilot_humansl/hs_lib.py": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+    "results/prereg07/explore/pilot_humansl/pilot_run.py": "b0d127fd1d5a83af5b17ec3df1dccc85d94b11c3479d33cac07448a3796a3936",
+    "results/prereg07/explore/pilot_humansl/pilot_fuse.py": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+    "results/prereg05/explore/u1/u1_lib.py": "225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7"
+   },
+   "katago": {
+    "source_txt_sha256": "039d5a1cbc815b4d69b68dc8c01163354820ac00b5070ef136c14a040b5ba20b",
+    "files": 15,
+    "differing": []
+   }
+  },
+  "prereg08": {
+   "prereg08_sha256": {
+    "results/prereg08/rank/frozen_config.json": "421bbeb4524bed8ccf73babd58cac6b16c82f45b1aa57acef2e55bd52be0ba70",
+    "results/prereg08/rank/p1_map.npz": "116923629b66198a79da06282aac9ca863acf77bf6a1e1f5d584b526fb54afb2",
+    "results/prereg08/rank/rank_val_probs.csv": "7a513367147227e3631bfb7bad36064f3e90fffb6ee358716e389698ce1ccd97",
+    "results/prereg08/rank/pred_B.csv": "b02d4f947910726fa25c292e9798e7407b1e802e2fed080d843f56b9beb48872",
+    "results/prereg08/rank/pred_A.csv": "e24699e989543bfbfc73b1b710677c93f018747193a9ba18d89fc004cdd17753",
+    "results/prereg08/rank/apply_report.json": "63980d79866d2653a4e600cef78cadd9d0d27c828a69e1b34d6ae2309eaf040f",
+    "results/prereg08/rank/score_H8R.json": "8ecd2425fe3eef784e28d7587184aec67c0b41b49503e95b42f8532757209047",
+    "results/prereg08/rank/val_lp_p1.npz": "8815db14654eefdb8c2a11cfbb709de4254272de734cec415b3dfc2dbb0e59a9",
+    "results/prereg08/feat/val_seam_feats.npz": "0a7b9b0010192a4c7f3878e914f9e514a18cfa338d94dc8c49936b6b625b9318",
+    "results/prereg08/feat/val_p1.npz": "11b1d38cc116401d44825883b864bf635b2d44e109baa17115fb4093055da4e0",
+    "results/prereg08/feat/val_report.json": "2ce9e86f8e639217c38814541f7d1bfb083b609ac194b5e19c8c38c60e653535"
+   },
+   "pinned_code": {
+    "results/prereg07/explore/pilot_humansl/hs_lib.py": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+    "results/prereg07/explore/pilot_humansl/pilot_run.py": "b0d127fd1d5a83af5b17ec3df1dccc85d94b11c3479d33cac07448a3796a3936",
+    "results/prereg07/explore/pilot_humansl/pilot_fuse.py": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+    "results/prereg05/explore/u1/u1_lib.py": "225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7",
+    "results/prereg08/p1/p1_lib.py": "062600168326f9eecd4ec1073e54881c475f8f276e376164eab20d373bbff511",
+    "results/prereg08/p1/p1_extract.py": "2ee8eb127150e672b62bcb30b70c4fac46b8cd6e32c7e4eb19d54f746a6e3f9c",
+    "results/prereg08/p1/p1_fuse.py": "ad356c8ca9f26e1e761677afa07b5aa369ca31e5318f61eb6a6cbda33b970953",
+    "results/prereg08/p1/p1_plan.json": "0cd46bf90c764cae3824f5906e72e13336ab7276ef5fa7edb2ec6831911b228d",
+    "results/prereg08/p2/p2_sets.py": "98bad3d85a32e80c065226b0cc8cd1065b423cdb39dce89829a54b0cbf381c8f",
+    "tools/p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142",
+    "tools/p07_hs.py": "b27ea371bdc1477558effb9ca86c540805dcced971d983226e15fb5e19b7b8dc",
+    "data/prereg08/p1/sets.json": "f0c494962788615d76080b5481de5b762d71f3ad37f8add55a09efef82acb7c7",
+    "data/prereg08/p2/sets.json": "2b68f7ae27b2b6bbe00a3920065495d2a5d6b73fd7df33854f4bf99ae5390049",
+    "data/prereg07/pilot/plan.json": "8494e9afd79c06249bd81545263b86caef7b9e77f3cd631a1e354368cfe33946"
+   },
+   "p07_pins": {
+    "results/prereg07/rank/frozen_config.json": "93a0ac29615260865d554ee61aec258c633820a87aeb7dfcf8047a5dfd200c0b",
+    "results/prereg07/rank/hs_map.npz": "a4334e79c490e4d8102dd5136ac08c0de1060315981f4ccc527ebffa1b84a3e4",
+    "results/prereg07/rank/rank_val_probs.csv": "6ae2db6025a903eb5c58af9418dc203c0b6e84dd664049f85dfa850e57dc28c1",
+    "results/prereg07/rank/pred_B.csv": "51d7dbf82d50c3848acadb6934069580bd3ade7e6ca71ad5d1023633a18a26fa",
+    "results/prereg07/hs/val_hs.npz": "ef2067e8cb633f521c205a09aa4638c79fef3ba0b4e90e6a54bdc046e5a5550f",
+    "results/prereg04/opp/val_o4.npz": "30d312c02c357f6761567099003885be5e08635b6e6c0b49d71baac137cd9cd4",
+    "results/prereg04/rank/rank_val_probs.csv": "3c7ab658dc558ce8c6aefdd7b0747de1a60de575d151e9eee96ca6775f442e5c"
+   }
+  },
+  "prereg04_frozen": {
+   "path": "results/prereg04/rank/frozen_config.json",
+   "sha256": "ae728e9c936a55dfeced255e9b05b5ac6a4955a7101f108e78c53c679e162661",
+   "commit_check": {
+    "path": "results/prereg04/rank/frozen_config.json",
+    "sha256": "ae728e9c936a55dfeced255e9b05b5ac6a4955a7101f108e78c53c679e162661",
+    "git_head": "e3166c8bce2ec25cd9049a58532de569eb3e0c7f",
+    "state": "committed and unchanged",
+    "combo": "Q02"
+   }
+  },
+  "h7r": {
+   "A_rank_balanced": 0.6236017652948923,
+   "A_mean": 0.6245054776753989,
+   "B_rank_balanced": 0.632702198843505,
+   "questions": 1589,
+   "rule": "PREREG_07 rev 3: H7R scored, Q02H >= 0.57, reference re-read equal (|A - H4R| <= 1e-12)",
+   "B_minus_A_rank_balanced": {
+    "n": 1589,
+    "strata": 10,
+    "mean_diff": 0.009100433548612638,
+    "ci95": [
+     -0.0017358146176694208,
+     0.020036739728021998
+    ],
+    "share_resamples_leq_0": 0.0507
+   },
+   "holds": true
+  },
+  "h8r": {
+   "A_rank_balanced": 0.632702198843505,
+   "A_mean": 0.6345453305055525,
+   "B_rank_balanced": 0.6939334976916056,
+   "questions": 1589,
+   "ci95": [
+    0.04362529514309842,
+    0.07930192015461503
+   ],
+   "rule": "PREREG_08 3: lower bound of Q08 - Q02H > 0, 1,589 questions, reference re-read equal to H7R's B row (|A - H7R| <= 1e-12), Q08 >= 0.57",
+   "holds": true
+  },
+  "k6_08": {
+   "now": "2026-11-04T18:54:25.370553+08:00",
+   "k6_08": "2026-11-19T23:59:59+08:00",
+   "passed": false
+  },
+  "t1": {
+   "path": "results/test02/checks/rank/t1.json",
+   "sha256": "9ddf1cc98c4085493c7ec81f539acaba5e8a2701ba849d41bf168368a8bcfb2c",
+   "verdict": "PASS"
+  },
+  "test02": {
+   "report_sha256": "1479233446b99c2cacc6c4bf95de3ab6f697990296cb50334a8c9b5974e84468",
+   "fallback_used": false
+  },
+  "r20_first_upload": {
+   "id": 1,
+   "uploaded_at": "2026-11-04T15:30:35+08:00",
+   "sha256": "711b3d1b73a31d50e243df03458e70970d0f7d50faf7b6e1e2d9eaae60b9558a",
+   "log_sha256": "733890ba905e65b4b68f4c53f70f55d85954e2fdeb08963cf1344b8e84f71a44"
+  },
+  "t07_apply_report": {
+   "path": "results/test07/rank/t07_apply_report.json",
+   "sha256": "cf78bf03ddd3b347e3de66a9d7977f4fa1d83a82986b57ce0e9ec2b8f7f59cf9",
+   "exit_code": 0,
+   "usable": true,
+   "submission_sha256": "ee2ea02bfb2e4bdbce5e2e0725de883b25a3184916b829a1a3c1259befc7aaeb"
+  },
+  "t04_apply_report": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\test04\\rank\\t04_apply_report.json"
+ },
+ "rerun": {
+  "reason": null,
+  "replaced": {},
+  "bug_revision": null
+ },
+ "paths": {
+  "R8": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\test08",
+  "H": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\data\\test08\\p1",
+  "R7": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\test07",
+  "R4": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\test04",
+  "D2": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\test02",
+  "O2": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\test02\\rank",
+  "T": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\data\\test",
+  "C": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\test02\\checks"
+ },
+ "tool": {
+  "git_head": "e3166c8bce2ec25cd9049a58532de569eb3e0c7f",
+  "files_sha256_rule": "sha256 of the file with CRLF folded to LF",
+  "files_sha256": {
+   "t08_rank.py": "70cb6dfa720866d3c88df962db135c4053fd7a4c2b11559c3dc95ed231cdef7f",
+   "t07_rank.py": "2c02e5c5d462c58393856bb286ca910881fb9677a5d15bf49e767909174f9f27",
+   "t04_rank.py": "f212879e5aaf6fe90060e2b8f03a5e61e8d8704c9dd8204e9c42e65b589940e4",
+   "p08_rank_fuse.py": "64f42bd956f7808947e0c85abe1f9fa60d9958cb8e769fc889c6283c188d481e",
+   "p08_p1.py": "a10c77c4bd97472b464f39080816090f0f64986195384b28e1d95dfc76e6677f",
+   "p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142",
+   "p07_hs.py": "b27ea371bdc1477558effb9ca86c540805dcced971d983226e15fb5e19b7b8dc",
+   "check_submission.py": "b5c7c300cca4fcd5b243e4579417453699777e99bd4aff88dcbf6805e9346144",
+   "official_log.py": "a2c4f55f4a750b1b9cdf6fe37f4e89a69b6f8aaa64f0a4f0eb6be63aa61a4746",
+   "t02_rank.py": "e3485e073a20843654f622828283af4ae3985141e08378cefb59d6c6f2495874",
+   "t02_test_bundle.py": "18e41e952da39a68bc901bda5f5b9f0173848379a31056da6139382ac038e796",
+   "p04_opp.py": "b594e0eff135b539616d60f26403ca1a1a37ac3f44855785c36e2cc6be9768fa",
+   "p04_rank_fuse.py": "c3a647b09c46760239d5b2ee274d56f7231987354fc1c1f6c3ff40102f4b26a2",
+   "p03_rank_fuse.py": "77abd7479d26f0f647a258b4a6d5d2e517808b4c187184f14ff599d70b8aca2f",
+   "p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+   "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "decide.py": "cf66daf1231b3c2bd60c5b6484245627e133bd0f1cd7ff5557e978da3801d0e3"
+  }
+ },
+ "environment": {
+  "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "executable": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\.venv\\Scripts\\python.exe",
+  "zlib": "1.3.1"
+ },
+ "git_head": "e3166c8bce2ec25cd9049a58532de569eb3e0c7f",
+ "record_only": "level_summary, rule_b_differences (all 800) and the seam_val direction are recorded; nothing is chosen from them",
+ "seconds": 7.1
+}

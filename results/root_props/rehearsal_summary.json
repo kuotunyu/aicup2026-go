@@ -1,0 +1,862 @@
+{
+ "inputs": {
+  "fake_tree": "W:/reh/F",
+  "FAKE_TREE_sha256": "3e2a70d7f4944fdf1bdca288697ec7e490153677454794d62fe8df80b46e53e6",
+  "clean_sha256": {
+   "rank_prediction_test_public.csv": "7184828eb33e0e0eafbdcaa70eae3172133d28fd86ba68ad39402582146b58ec",
+   "rank_prediction_test_private.csv": "3af4134630db31d1c737dd1979c1a71be6fefca0e0993382bbb2b618ec4934da",
+   "player_identification_test_public.csv": "85e792275231219c1f1c5366355dae51a89ef961ba541610b2836269ff060e0c",
+   "player_identification_candidates_public.csv": "8ff3a1ee9e50a720cec87896e0a6d683251bf45a1bf4559a5ff65c0e7b53a99d",
+   "player_identification_test_private.csv": "2e1edd26bb54e85726991566171da01ed40cf5501512047f71642847d7302869",
+   "player_identification_candidates_private.csv": "14f4db30a881789e145abbfa37f23097700e99474fea10835ec2a8db4edb575e"
+  }
+ },
+ "injected_H": {
+  "rank_prediction_test_public.csv": {
+   "games": 5000,
+   "hd": {
+    "0": 3989,
+    "1": 805,
+    "2": 26,
+    "3": 26,
+    "4": 25,
+    "5": 22,
+    "6": 23,
+    "7": 29,
+    "8": 22,
+    "9": 33
+   },
+   "forms": {
+    "hd": 3477,
+    "hd_ca_re": 788,
+    "ca_first": 735
+   }
+  },
+  "rank_prediction_test_private.csv": {
+   "games": 5000,
+   "hd": {
+    "0": 4018,
+    "1": 762,
+    "2": 29,
+    "3": 19,
+    "4": 31,
+    "5": 26,
+    "6": 26,
+    "7": 27,
+    "8": 30,
+    "9": 32
+   },
+   "forms": {
+    "hd": 3536,
+    "hd_ca_re": 722,
+    "ca_first": 742
+   }
+  },
+  "player_identification_test_public.csv": {
+   "games": 5000,
+   "hd": {
+    "0": 3924,
+    "1": 858,
+    "2": 35,
+    "3": 25,
+    "4": 31,
+    "5": 26,
+    "6": 25,
+    "7": 26,
+    "8": 29,
+    "9": 21
+   },
+   "forms": {
+    "hd": 3491,
+    "hd_ca_re": 769,
+    "ca_first": 740
+   }
+  },
+  "player_identification_candidates_public.csv": {
+   "games": 40000,
+   "hd": {
+    "0": 32065,
+    "1": 6370,
+    "2": 198,
+    "3": 199,
+    "4": 188,
+    "5": 214,
+    "6": 197,
+    "7": 187,
+    "8": 181,
+    "9": 201
+   },
+   "forms": {
+    "hd": 28002,
+    "hd_ca_re": 6027,
+    "ca_first": 5971
+   }
+  },
+  "player_identification_test_private.csv": {
+   "games": 5000,
+   "hd": {
+    "0": 3953,
+    "1": 850,
+    "2": 13,
+    "3": 29,
+    "4": 20,
+    "5": 25,
+    "6": 30,
+    "7": 30,
+    "8": 26,
+    "9": 24
+   },
+   "forms": {
+    "hd": 3466,
+    "hd_ca_re": 783,
+    "ca_first": 751
+   }
+  },
+  "player_identification_candidates_private.csv": {
+   "games": 40000,
+   "hd": {
+    "0": 32019,
+    "1": 6404,
+    "2": 210,
+    "3": 196,
+    "4": 200,
+    "5": 207,
+    "6": 203,
+    "7": 198,
+    "8": 180,
+    "9": 183
+   },
+   "forms": {
+    "hd": 27871,
+    "hd_ca_re": 6075,
+    "ca_first": 6054
+   }
+  }
+ },
+ "injected_P": {
+  "rank_prediction_test_public.csv": {
+   "trailing": 1540,
+   "mid": 0
+  },
+  "rank_prediction_test_private.csv": {
+   "trailing": 1510,
+   "mid": 0
+  },
+  "player_identification_test_public.csv": {
+   "trailing": 1531,
+   "mid": 0
+  },
+  "player_identification_candidates_public.csv": {
+   "trailing": 12017,
+   "mid": 0
+  },
+  "player_identification_test_private.csv": {
+   "trailing": 1535,
+   "mid": 0
+  },
+  "player_identification_candidates_private.csv": {
+   "trailing": 12168,
+   "mid": 0
+  }
+ },
+ "injected_HP": {
+  "rank_prediction_test_public.csv": {
+   "trailing": 1540,
+   "mid": 0
+  },
+  "rank_prediction_test_private.csv": {
+   "trailing": 1510,
+   "mid": 0
+  },
+  "player_identification_test_public.csv": {
+   "trailing": 1531,
+   "mid": 0
+  },
+  "player_identification_candidates_public.csv": {
+   "trailing": 12017,
+   "mid": 0
+  },
+  "player_identification_test_private.csv": {
+   "trailing": 1535,
+   "mid": 0
+  },
+  "player_identification_candidates_private.csv": {
+   "trailing": 12168,
+   "mid": 0
+  }
+ },
+ "H_sha256": {
+  "rank_prediction_test_public.csv": "dd6f21bca2e11d203a68ad3e6927e1f82e94ec2b48ee06114bbf0ae4a7ecd2f5",
+  "rank_prediction_test_private.csv": "0c13fa9a342fd1fdfe0fd337615c4614c47edfd6de5c0a923c8c47e889480f0c",
+  "player_identification_test_public.csv": "be5bd68b9a061c012af2319f94541e9778dc8e695295d39c0113f17071000c91",
+  "player_identification_candidates_public.csv": "c69fa74ae931df9a706c2e008d59d8800709d7af2c1c582a7dcf50e6b868b007",
+  "player_identification_test_private.csv": "567f6e0fc15c641674a11cc2487b7ac00ae0381d6a9c9fb272683ecc5d2ea98a",
+  "player_identification_candidates_private.csv": "e9d565eb627001d18dca2165922f86ab8f3deb7cd01c5b017d2a6c5cbeecdfea"
+ },
+ "sample_H_cells": [
+  "(;SZ[19]HD[0];B[pd];W[dp];B[pq];W[dc];B[qn];W[oq];B[pr];W[pp",
+  "(;SZ[19]HD[0];B[pd];W[dq];B[pq];W[cd];B[qn];W[nc];B[jd];W[qc",
+  "(;SZ[19]HD[0];B[pd];W[dp];B[pq];W[dc];B[qn];W[nc];B[jd];W[qf",
+  "(;SZ[19]HD[8];B[pd];W[dq];B[pq];W[dc];B[de];W[dh];B[ec];W[eb",
+  "(;SZ[19]HD[0];B[pd];W[ed];B[pq];W[md];B[dp];W[pf];B[oe];W[pi",
+  "(;SZ[19]HD[1]CA[UTF-8]RE[W+T];B[pd];W[dd];B[qp];W[cp];B[nq];"
+ ],
+ "parsers_raw_H_vs_clean": {
+  "rank_prediction_test_public.csv": {
+   "p02_moves.parse_moves": {
+    "games": 5000,
+    "differ": 0
+   },
+   "p02_player_open.game_tokens(raw)": {
+    "games": 5000,
+    "differ": 0
+   },
+   "p02_rank_opening.game_string": {
+    "games": 5000,
+    "differ": 0
+   },
+   "p04_opp.encode_one": {
+    "games": 5000,
+    "differ": 0
+   },
+   "p06_style.parse_all": {
+    "games": 5000,
+    "differ": 0
+   },
+   "t02_checks.game_keys": {
+    "games": 5000,
+    "differ": 0
+   },
+   "t02_checks.sgf_check.moves+reasons": {
+    "games": 5000,
+    "differ": 0
+   },
+   "sgfmill rank features (every 50th)": {
+    "games": 100,
+    "differ": 0
+   },
+   "sgfmill player features (every 50th)": {
+    "games": 100,
+    "differ": 0
+   },
+   "hs_lib.parse_moves (KataGo input)": {
+    "games": 5000,
+    "clean_ok": 5000,
+    "H_ok": 0,
+    "identical": 0
+   }
+  },
+  "rank_prediction_test_private.csv": {
+   "p02_moves.parse_moves": {
+    "games": 5000,
+    "differ": 0
+   },
+   "p02_player_open.game_tokens(raw)": {
+    "games": 5000,
+    "differ": 0
+   },
+   "p02_rank_opening.game_string": {
+    "games": 5000,
+    "differ": 0
+   },
+   "p04_opp.encode_one": {
+    "games": 5000,
+    "differ": 0
+   },
+   "p06_style.parse_all": {
+    "games": 5000,
+    "differ": 0
+   },
+   "t02_checks.game_keys": {
+    "games": 5000,
+    "differ": 0
+   },
+   "t02_checks.sgf_check.moves+reasons": {
+    "games": 5000,
+    "differ": 0
+   },
+   "sgfmill rank features (every 50th)": {
+    "games": 100,
+    "differ": 0
+   },
+   "sgfmill player features (every 50th)": {
+    "games": 100,
+    "differ": 0
+   },
+   "hs_lib.parse_moves (KataGo input)": {
+    "games": 5000,
+    "clean_ok": 5000,
+    "H_ok": 0,
+    "identical": 0
+   }
+  },
+  "player_identification_test_public.csv": {
+   "p02_moves.parse_moves": {
+    "games": 5000,
+    "differ": 0
+   },
+   "p02_player_open.game_tokens(raw)": {
+    "games": 5000,
+    "differ": 0
+   },
+   "p02_rank_opening.game_string": {
+    "games": 5000,
+    "differ": 0
+   },
+   "p04_opp.encode_one": {
+    "games": 5000,
+    "differ": 0
+   },
+   "p06_style.parse_all": {
+    "games": 5000,
+    "differ": 0
+   },
+   "t02_checks.game_keys": {
+    "games": 5000,
+    "differ": 0
+   },
+   "t02_checks.sgf_check.moves+reasons": {
+    "games": 5000,
+    "differ": 0
+   },
+   "sgfmill rank features (every 50th)": {
+    "games": 100,
+    "differ": 0
+   },
+   "sgfmill player features (every 50th)": {
+    "games": 100,
+    "differ": 0
+   },
+   "hs_lib.parse_moves (KataGo input)": {
+    "games": 5000,
+    "clean_ok": 5000,
+    "H_ok": 0,
+    "identical": 0
+   }
+  },
+  "player_identification_candidates_public.csv": {
+   "p02_moves.parse_moves": {
+    "games": 40000,
+    "differ": 0
+   },
+   "p02_player_open.game_tokens(raw)": {
+    "games": 40000,
+    "differ": 0
+   },
+   "p02_rank_opening.game_string": {
+    "games": 40000,
+    "differ": 0
+   },
+   "p04_opp.encode_one": {
+    "games": 40000,
+    "differ": 0
+   },
+   "p06_style.parse_all": {
+    "games": 40000,
+    "differ": 0
+   },
+   "t02_checks.game_keys": {
+    "games": 40000,
+    "differ": 0
+   },
+   "t02_checks.sgf_check.moves+reasons": {
+    "games": 40000,
+    "differ": 0
+   },
+   "sgfmill rank features (every 50th)": {
+    "games": 800,
+    "differ": 0
+   },
+   "sgfmill player features (every 50th)": {
+    "games": 800,
+    "differ": 0
+   },
+   "hs_lib.parse_moves (KataGo input)": {
+    "games": 40000,
+    "clean_ok": 40000,
+    "H_ok": 0,
+    "identical": 0
+   }
+  },
+  "player_identification_test_private.csv": {
+   "p02_moves.parse_moves": {
+    "games": 5000,
+    "differ": 0
+   },
+   "p02_player_open.game_tokens(raw)": {
+    "games": 5000,
+    "differ": 0
+   },
+   "p02_rank_opening.game_string": {
+    "games": 5000,
+    "differ": 0
+   },
+   "p04_opp.encode_one": {
+    "games": 5000,
+    "differ": 0
+   },
+   "p06_style.parse_all": {
+    "games": 5000,
+    "differ": 0
+   },
+   "t02_checks.game_keys": {
+    "games": 5000,
+    "differ": 0
+   },
+   "t02_checks.sgf_check.moves+reasons": {
+    "games": 5000,
+    "differ": 0
+   },
+   "sgfmill rank features (every 50th)": {
+    "games": 100,
+    "differ": 0
+   },
+   "sgfmill player features (every 50th)": {
+    "games": 100,
+    "differ": 0
+   },
+   "hs_lib.parse_moves (KataGo input)": {
+    "games": 5000,
+    "clean_ok": 5000,
+    "H_ok": 0,
+    "identical": 0
+   }
+  },
+  "player_identification_candidates_private.csv": {
+   "p02_moves.parse_moves": {
+    "games": 40000,
+    "differ": 0
+   },
+   "p02_player_open.game_tokens(raw)": {
+    "games": 40000,
+    "differ": 0
+   },
+   "p02_rank_opening.game_string": {
+    "games": 40000,
+    "differ": 0
+   },
+   "p04_opp.encode_one": {
+    "games": 40000,
+    "differ": 0
+   },
+   "p06_style.parse_all": {
+    "games": 40000,
+    "differ": 0
+   },
+   "t02_checks.game_keys": {
+    "games": 40000,
+    "differ": 0
+   },
+   "t02_checks.sgf_check.moves+reasons": {
+    "games": 40000,
+    "differ": 0
+   },
+   "sgfmill rank features (every 50th)": {
+    "games": 800,
+    "differ": 0
+   },
+   "sgfmill player features (every 50th)": {
+    "games": 800,
+    "differ": 0
+   },
+   "hs_lib.parse_moves (KataGo input)": {
+    "games": 40000,
+    "clean_ok": 40000,
+    "H_ok": 0,
+    "identical": 0
+   }
+  }
+ },
+ "A": {
+  "t1": {
+   "rank": [
+    0,
+    "PASS"
+   ],
+   "player": [
+    0,
+    "PASS"
+   ]
+  },
+  "rp_prepare_exit": 2,
+  "rootprops_dir_exists": false,
+  "built_sha256": {
+   "rank_prediction_test_public.csv": "7184828eb33e0e0eafbdcaa70eae3172133d28fd86ba68ad39402582146b58ec",
+   "rank_prediction_test_private.csv": "3af4134630db31d1c737dd1979c1a71be6fefca0e0993382bbb2b618ec4934da",
+   "player_identification_test_public.csv": "85e792275231219c1f1c5366355dae51a89ef961ba541610b2836269ff060e0c",
+   "player_identification_candidates_public.csv": "8ff3a1ee9e50a720cec87896e0a6d683251bf45a1bf4559a5ff65c0e7b53a99d",
+   "player_identification_test_private.csv": "2e1edd26bb54e85726991566171da01ed40cf5501512047f71642847d7302869",
+   "player_identification_candidates_private.csv": "14f4db30a881789e145abbfa37f23097700e99474fea10835ec2a8db4edb575e"
+  },
+  "t4_t5": {
+   "rank/t4": "1e954f1ffccd31385d3fd83605af4e8fcc429898113173abd45942c2fc3f50c4",
+   "rank/t5": "9debd4c6f27a04edbff3f482819f600f9501e1ad32fdc703a7e515775402ec78",
+   "player/t4": "8364186a65c5e8e7ad0f6f60927f2b2077e97e3500ba3aeea904597a27ddba29",
+   "player/t5": "2f732472d414a895c34564be531af3cbbdf703c1051ad60b95aafd1812691d21"
+  }
+ },
+ "H": {
+  "t1_raw": {
+   "rank": [
+    0,
+    "PASS"
+   ],
+   "player": [
+    0,
+    "PASS"
+   ]
+  },
+  "t1_raw_equals_A_except_other_props": {
+   "rank": true,
+   "player": true
+  },
+  "t1_raw_other_props": {
+   "rank": {
+    "rank_prediction_test_public.csv": {
+     "HD": 5000,
+     "CA": 1523,
+     "RE": 1523
+    },
+    "rank_prediction_test_private.csv": {
+     "HD": 5000,
+     "CA": 1464,
+     "RE": 1464
+    }
+   },
+   "player": {
+    "player_identification_test_public.csv": {
+     "HD": 5000,
+     "CA": 1509,
+     "RE": 1509
+    },
+    "player_identification_candidates_public.csv": {
+     "HD": 40000,
+     "CA": 11998,
+     "RE": 11998
+    },
+    "player_identification_test_private.csv": {
+     "CA": 1534,
+     "HD": 5000,
+     "RE": 1534
+    },
+    "player_identification_candidates_private.csv": {
+     "CA": 12129,
+     "HD": 40000,
+     "RE": 12129
+    }
+   }
+  },
+  "rp_prepare_exit": 0,
+  "decisions": {
+   "rank": "apply",
+   "player": "apply"
+  },
+  "files": {
+   "rank_prediction_test_public.csv": {
+    "games": 5000,
+    "games_edited": 5000,
+    "counts": {
+     "plain": 0,
+     "root_props": 5000,
+     "unusual_cell": 0,
+     "root_unparsed": 0,
+     "parse_error": 0,
+     "check_mismatch": 0,
+     "non_root_other_props": 0
+    },
+    "removed_props": {
+     "CA": 1523,
+     "HD": 5000,
+     "RE": 1523
+    },
+    "hd_values": {
+     "0": 3989,
+     "1": 805,
+     "2": 26,
+     "3": 26,
+     "4": 25,
+     "5": 22,
+     "6": 23,
+     "7": 29,
+     "8": 22,
+     "9": 33
+    },
+    "plain_form_before": 0,
+    "plain_form_after": 5000
+   },
+   "rank_prediction_test_private.csv": {
+    "games": 5000,
+    "games_edited": 5000,
+    "counts": {
+     "plain": 0,
+     "root_props": 5000,
+     "unusual_cell": 0,
+     "root_unparsed": 0,
+     "parse_error": 0,
+     "check_mismatch": 0,
+     "non_root_other_props": 0
+    },
+    "removed_props": {
+     "CA": 1464,
+     "HD": 5000,
+     "RE": 1464
+    },
+    "hd_values": {
+     "0": 4018,
+     "1": 762,
+     "2": 29,
+     "3": 19,
+     "4": 31,
+     "5": 26,
+     "6": 26,
+     "7": 27,
+     "8": 30,
+     "9": 32
+    },
+    "plain_form_before": 0,
+    "plain_form_after": 5000
+   },
+   "player_identification_test_public.csv": {
+    "games": 5000,
+    "games_edited": 5000,
+    "counts": {
+     "plain": 0,
+     "root_props": 5000,
+     "unusual_cell": 0,
+     "root_unparsed": 0,
+     "parse_error": 0,
+     "check_mismatch": 0,
+     "non_root_other_props": 0
+    },
+    "removed_props": {
+     "CA": 1509,
+     "HD": 5000,
+     "RE": 1509
+    },
+    "hd_values": {
+     "0": 3924,
+     "1": 858,
+     "2": 35,
+     "3": 25,
+     "4": 31,
+     "5": 26,
+     "6": 25,
+     "7": 26,
+     "8": 29,
+     "9": 21
+    },
+    "plain_form_before": 0,
+    "plain_form_after": 5000
+   },
+   "player_identification_candidates_public.csv": {
+    "games": 40000,
+    "games_edited": 40000,
+    "counts": {
+     "plain": 0,
+     "root_props": 40000,
+     "unusual_cell": 0,
+     "root_unparsed": 0,
+     "parse_error": 0,
+     "check_mismatch": 0,
+     "non_root_other_props": 0
+    },
+    "removed_props": {
+     "CA": 11998,
+     "HD": 40000,
+     "RE": 11998
+    },
+    "hd_values": {
+     "0": 32065,
+     "1": 6370,
+     "2": 198,
+     "3": 199,
+     "4": 188,
+     "5": 214,
+     "6": 197,
+     "7": 187,
+     "8": 181,
+     "9": 201
+    },
+    "plain_form_before": 0,
+    "plain_form_after": 40000
+   },
+   "player_identification_test_private.csv": {
+    "games": 5000,
+    "games_edited": 5000,
+    "counts": {
+     "plain": 0,
+     "root_props": 5000,
+     "unusual_cell": 0,
+     "root_unparsed": 0,
+     "parse_error": 0,
+     "check_mismatch": 0,
+     "non_root_other_props": 0
+    },
+    "removed_props": {
+     "CA": 1534,
+     "HD": 5000,
+     "RE": 1534
+    },
+    "hd_values": {
+     "0": 3953,
+     "1": 850,
+     "2": 13,
+     "3": 29,
+     "4": 20,
+     "5": 25,
+     "6": 30,
+     "7": 30,
+     "8": 26,
+     "9": 24
+    },
+    "plain_form_before": 0,
+    "plain_form_after": 5000
+   },
+   "player_identification_candidates_private.csv": {
+    "games": 40000,
+    "games_edited": 40000,
+    "counts": {
+     "plain": 0,
+     "root_props": 40000,
+     "unusual_cell": 0,
+     "root_unparsed": 0,
+     "parse_error": 0,
+     "check_mismatch": 0,
+     "non_root_other_props": 0
+    },
+    "removed_props": {
+     "CA": 12129,
+     "HD": 40000,
+     "RE": 12129
+    },
+    "hd_values": {
+     "0": 32019,
+     "1": 6404,
+     "2": 210,
+     "3": 196,
+     "4": 200,
+     "5": 207,
+     "6": 203,
+     "7": 198,
+     "8": 180,
+     "9": 183
+    },
+    "plain_form_before": 0,
+    "plain_form_after": 40000
+   }
+  },
+  "normalised_equals_clean_bytes": {
+   "rank_prediction_test_public.csv": true,
+   "rank_prediction_test_private.csv": true,
+   "player_identification_test_public.csv": true,
+   "player_identification_candidates_public.csv": true,
+   "player_identification_test_private.csv": true,
+   "player_identification_candidates_private.csv": true
+  },
+  "verify_before_ingest_exit": 1,
+  "t1_copy": {
+   "rank": [
+    0,
+    "PASS"
+   ],
+   "player": [
+    0,
+    "PASS"
+   ]
+  },
+  "verify_exit": 0,
+  "prepare_again_exit_refused": 1,
+  "built_equals_A": {
+   "rank_prediction_test_public.csv": true,
+   "rank_prediction_test_private.csv": true,
+   "player_identification_test_public.csv": true,
+   "player_identification_candidates_public.csv": true,
+   "player_identification_test_private.csv": true,
+   "player_identification_candidates_private.csv": true
+  },
+  "t4_t5_equal_A": {
+   "rank/t4": true,
+   "rank/t5": true,
+   "player/t4": true,
+   "player/t5": true
+  }
+ },
+ "HP": {
+  "t1_raw": {
+   "rank": [
+    2,
+    "FAIL_OPENING"
+   ],
+   "player": [
+    2,
+    "FAIL_OPENING"
+   ]
+  },
+  "rp_before_rev9_exit_refused": 1,
+  "tp_prepare_exit": 0,
+  "rev9_copy_equals_H_bytes": {
+   "rank_prediction_test_public.csv": true,
+   "rank_prediction_test_private.csv": true,
+   "player_identification_test_public.csv": true,
+   "player_identification_candidates_public.csv": true,
+   "player_identification_test_private.csv": true,
+   "player_identification_candidates_private.csv": true
+  },
+  "t1_rev9": {
+   "rank": [
+    0,
+    "PASS"
+   ],
+   "player": [
+    0,
+    "PASS"
+   ]
+  },
+  "rp_before_rev9_verify_exit_refused": 1,
+  "tp_verify_exit": 0,
+  "rp_prepare_exit": 0,
+  "normalised_equals_clean_bytes": {
+   "rank_prediction_test_public.csv": true,
+   "rank_prediction_test_private.csv": true,
+   "player_identification_test_public.csv": true,
+   "player_identification_candidates_public.csv": true,
+   "player_identification_test_private.csv": true,
+   "player_identification_candidates_private.csv": true
+  },
+  "t1_copy": {
+   "rank": [
+    0,
+    "PASS"
+   ],
+   "player": [
+    0,
+    "PASS"
+   ]
+  },
+  "verify_exit": 0,
+  "built_equals_A": {
+   "rank_prediction_test_public.csv": true,
+   "rank_prediction_test_private.csv": true,
+   "player_identification_test_public.csv": true,
+   "player_identification_candidates_public.csv": true,
+   "player_identification_test_private.csv": true,
+   "player_identification_candidates_private.csv": true
+  },
+  "rev11_then_rev9_equals_clean": {
+   "rank_prediction_test_public.csv": true,
+   "rank_prediction_test_private.csv": true,
+   "player_identification_test_public.csv": true,
+   "player_identification_candidates_public.csv": true,
+   "player_identification_test_private.csv": true,
+   "player_identification_candidates_private.csv": true
+  },
+  "rev11_idempotent": {
+   "rank_prediction_test_public.csv": true,
+   "rank_prediction_test_private.csv": true,
+   "player_identification_test_public.csv": true,
+   "player_identification_candidates_public.csv": true,
+   "player_identification_test_private.csv": true,
+   "player_identification_candidates_private.csv": true
+  }
+ }
+}

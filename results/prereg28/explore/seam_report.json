@@ -1,0 +1,181 @@
+{
+ "what": "prereg28 seam S1 (PLAN 4): N = 400, seeds 600-619, 11 structures, this program vs results/prereg06/design/switch_report.json",
+ "passed": true,
+ "rows": 220,
+ "max_abs_diff_rows": 0.0,
+ "max_abs_diff_pseudo": 0.0,
+ "tolerance": 1e-12,
+ "problems": [],
+ "usability_problems": [],
+ "usability_recomputed": {
+  "V2|E0": {
+   "usable": true,
+   "o2o_open_share": 0.95,
+   "non_o2o_pools": 120,
+   "non_o2o_opens": 0,
+   "near_o2o": {
+    "d1": {
+     "mean": 0.0027713807018275582,
+     "min": -7.9242399305679e-05,
+     "opens": 10
+    },
+    "d2": {
+     "mean": 0.00010183151476903519,
+     "min": -0.004159543796377285,
+     "opens": 3
+    },
+    "d3": {
+     "mean": 0.0002937236665657428,
+     "min": -0.0015803013970713264,
+     "opens": 2
+    },
+    "d5": {
+     "mean": 0.0,
+     "min": 0.0,
+     "opens": 0
+    }
+   },
+   "opening_v2_only_non_o2o_opens": 0,
+   "conditions": {
+    "o2o_open_share_ge_0.8": true,
+    "no_false_open": true,
+    "near_o2o_ok": true,
+    "opening_v2_only_no_false_open": true
+   }
+  },
+  "V2|PA": {
+   "usable": true,
+   "o2o_open_share": 1.0,
+   "non_o2o_pools": 120,
+   "non_o2o_opens": 0,
+   "near_o2o": {
+    "d1": {
+     "mean": 0.006043460050220367,
+     "min": -0.0017840114672966756,
+     "opens": 13
+    },
+    "d2": {
+     "mean": 0.003356753395884232,
+     "min": 0.0,
+     "opens": 8
+    },
+    "d3": {
+     "mean": 0.0009296013677365711,
+     "min": -0.0009989410022342993,
+     "opens": 4
+    },
+    "d5": {
+     "mean": 0.0,
+     "min": 0.0,
+     "opens": 0
+    }
+   },
+   "opening_v2_only_non_o2o_opens": 0,
+   "conditions": {
+    "o2o_open_share_ge_0.8": true,
+    "no_false_open": true,
+    "near_o2o_ok": true,
+    "opening_v2_only_no_false_open": true
+   }
+  },
+  "V3|E0": {
+   "usable": true,
+   "o2o_open_share": 0.9,
+   "non_o2o_pools": 120,
+   "non_o2o_opens": 0,
+   "near_o2o": {
+    "d1": {
+     "mean": 0.00473107140024317,
+     "min": -7.9242399305679e-05,
+     "opens": 13
+    },
+    "d2": {
+     "mean": 9.789758608415578e-05,
+     "min": -0.003364312864368335,
+     "opens": 2
+    },
+    "d3": {
+     "mean": 0.00011252504162763688,
+     "min": -0.003160602794142875,
+     "opens": 2
+    },
+    "d5": {
+     "mean": 0.0,
+     "min": 0.0,
+     "opens": 0
+    }
+   },
+   "opening_v2_only_non_o2o_opens": 0,
+   "conditions": {
+    "o2o_open_share_ge_0.8": true,
+    "no_false_open": true,
+    "near_o2o_ok": true,
+    "opening_v2_only_no_false_open": true
+   }
+  },
+  "V3|PA": {
+   "usable": true,
+   "o2o_open_share": 0.95,
+   "non_o2o_pools": 120,
+   "non_o2o_opens": 0,
+   "near_o2o": {
+    "d1": {
+     "mean": 0.006661140044850561,
+     "min": 0.0,
+     "opens": 14
+    },
+    "d2": {
+     "mean": 0.003104756881744941,
+     "min": -0.0007063918913646772,
+     "opens": 7
+    },
+    "d3": {
+     "mean": 0.0013856102346965383,
+     "min": -0.002365371862133925,
+     "opens": 5
+    },
+    "d5": {
+     "mean": 0.0,
+     "min": 0.0,
+     "opens": 0
+    }
+   },
+   "opening_v2_only_non_o2o_opens": 0,
+   "conditions": {
+    "o2o_open_share_ge_0.8": true,
+    "no_false_open": true,
+    "near_o2o_ok": true,
+    "opening_v2_only_no_false_open": true
+   }
+  }
+ },
+ "switch_report_sha256": "1856ac9547ab8e46bd96856692d4d69e996e0edd160c2bddd1cf93a5313bfbe4",
+ "code_sha256": "351820ce248a6077b25bf2e7a2ef64d0cea9d4090527dd5ffcc84f7cd62443dc",
+ "per_job_seconds": {
+  "std_n400_s600": 71.9,
+  "std_n400_s601": 71.3,
+  "std_n400_s602": 70.7,
+  "std_n400_s603": 71.5,
+  "std_n400_s604": 71.2,
+  "std_n400_s605": 71.6,
+  "std_n400_s606": 34.7,
+  "std_n400_s607": 34.2,
+  "std_n400_s608": 34.1,
+  "std_n400_s609": 35.4,
+  "std_n400_s610": 35.3,
+  "std_n400_s611": 34.9,
+  "std_n400_s612": 37.1,
+  "std_n400_s613": 36.5,
+  "std_n400_s614": 36.4,
+  "std_n400_s615": 36.6,
+  "std_n400_s616": 36.5,
+  "std_n400_s617": 36.9,
+  "std_n400_s618": 24.5,
+  "std_n400_s619": 24.5
+ },
+ "lda_players": [
+  682
+ ],
+ "seconds": 168.8,
+ "git_head": "f32380f1087d7d76225d7f09eb04e14df12336d5"
+}

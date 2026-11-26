@@ -1,0 +1,4225 @@
+{
+ "runs": [
+  {
+   "run": 1,
+   "time": "2026-09-28T15:41:06+00:00",
+   "roots": {
+    "prereg01": "/content/drive/MyDrive/C10/results/prereg01",
+    "prereg02": "/content/drive/MyDrive/C10/results/prereg02",
+    "test02": "/content/drive/MyDrive/C10/results/test02"
+   },
+   "n_files": {
+    "prereg01": 996,
+    "prereg02": 54,
+    "test02": 0
+   },
+   "files": {
+    "prereg01": {
+     "player_results.zip": [
+      804317,
+      1790364586000000000
+     ],
+     "rank_results.zip": [
+      212191,
+      1790364121000000000
+     ],
+     "features_rank/_COMPLETE.json": [
+      136395,
+      1790361876000000000
+     ],
+     "features_rank/train/_count_w0.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w1.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w10.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w11.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w12.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w13.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w14.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w15.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w16.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w17.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w18.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w19.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w2.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w20.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w21.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w22.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w23.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w24.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w25.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w26.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w27.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w28.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w29.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w3.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w30.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w31.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w32.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w33.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w34.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w35.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w36.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w37.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w38.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w39.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w4.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w40.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w41.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w42.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w43.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w44.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w45.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w46.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w47.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w5.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w6.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w7.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w8.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/_count_w9.json": [
+      43,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w0-000000.tar.gz": [
+      1701847,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w0-000001.tar.gz": [
+      1700039,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w0-000002.tar.gz": [
+      1700848,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w0-000003.tar.gz": [
+      1697071,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w0-000004.tar.gz": [
+      1687233,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w0-000005.tar.gz": [
+      1691655,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w0-000006.tar.gz": [
+      1692872,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w0-000007.tar.gz": [
+      1693912,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w0-000008.tar.gz": [
+      1706838,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w0-000009.tar.gz": [
+      1692289,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w0-000010.tar.gz": [
+      1709114,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w0-000011.tar.gz": [
+      1695177,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w0-000012.tar.gz": [
+      1685524,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w0-000013.tar.gz": [
+      1700420,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w0-000014.tar.gz": [
+      1687338,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w0-000015.tar.gz": [
+      13179,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w1-000000.tar.gz": [
+      1685656,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w1-000001.tar.gz": [
+      1699210,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w1-000002.tar.gz": [
+      1695847,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w1-000003.tar.gz": [
+      1700691,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w1-000004.tar.gz": [
+      1705957,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w1-000005.tar.gz": [
+      1699645,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w1-000006.tar.gz": [
+      1701706,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w1-000007.tar.gz": [
+      1677787,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w1-000008.tar.gz": [
+      1701749,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w1-000009.tar.gz": [
+      1692677,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w1-000010.tar.gz": [
+      1697959,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w1-000011.tar.gz": [
+      1689980,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w1-000012.tar.gz": [
+      1690842,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w1-000013.tar.gz": [
+      1699782,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w1-000014.tar.gz": [
+      1694373,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w1-000015.tar.gz": [
+      12454,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w10-000000.tar.gz": [
+      1687851,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w10-000001.tar.gz": [
+      1690850,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w10-000002.tar.gz": [
+      1704452,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w10-000003.tar.gz": [
+      1696363,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w10-000004.tar.gz": [
+      1695621,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w10-000005.tar.gz": [
+      1702250,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w10-000006.tar.gz": [
+      1706227,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w10-000007.tar.gz": [
+      1684358,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w10-000008.tar.gz": [
+      1703578,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w10-000009.tar.gz": [
+      1702235,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w10-000010.tar.gz": [
+      1694136,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w10-000011.tar.gz": [
+      1697411,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w10-000012.tar.gz": [
+      1702243,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w10-000013.tar.gz": [
+      1702094,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w10-000014.tar.gz": [
+      1692874,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w10-000015.tar.gz": [
+      12070,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w11-000000.tar.gz": [
+      1689676,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w11-000001.tar.gz": [
+      1696732,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w11-000002.tar.gz": [
+      1691126,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w11-000003.tar.gz": [
+      1695687,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w11-000004.tar.gz": [
+      1704032,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w11-000005.tar.gz": [
+      1692375,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w11-000006.tar.gz": [
+      1695645,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w11-000007.tar.gz": [
+      1684483,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w11-000008.tar.gz": [
+      1691152,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w11-000009.tar.gz": [
+      1694436,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w11-000010.tar.gz": [
+      1691925,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w11-000011.tar.gz": [
+      1697754,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w11-000012.tar.gz": [
+      1713022,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w11-000013.tar.gz": [
+      1700262,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w11-000014.tar.gz": [
+      1691378,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w11-000015.tar.gz": [
+      12599,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w12-000000.tar.gz": [
+      1693206,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w12-000001.tar.gz": [
+      1701681,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w12-000002.tar.gz": [
+      1684926,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w12-000003.tar.gz": [
+      1703446,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w12-000004.tar.gz": [
+      1699636,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w12-000005.tar.gz": [
+      1697535,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w12-000006.tar.gz": [
+      1695034,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w12-000007.tar.gz": [
+      1687167,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w12-000008.tar.gz": [
+      1702440,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w12-000009.tar.gz": [
+      1683452,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w12-000010.tar.gz": [
+      1705782,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w12-000011.tar.gz": [
+      1700204,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w12-000012.tar.gz": [
+      1684026,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w12-000013.tar.gz": [
+      1689452,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w12-000014.tar.gz": [
+      1687653,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w12-000015.tar.gz": [
+      11451,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w13-000000.tar.gz": [
+      1692991,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w13-000001.tar.gz": [
+      1698962,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w13-000002.tar.gz": [
+      1697075,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w13-000003.tar.gz": [
+      1690872,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w13-000004.tar.gz": [
+      1681131,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w13-000005.tar.gz": [
+      1691183,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w13-000006.tar.gz": [
+      1690216,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w13-000007.tar.gz": [
+      1692220,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w13-000008.tar.gz": [
+      1700597,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w13-000009.tar.gz": [
+      1708125,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w13-000010.tar.gz": [
+      1691686,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w13-000011.tar.gz": [
+      1697000,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w13-000012.tar.gz": [
+      1689697,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w13-000013.tar.gz": [
+      1685738,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w13-000014.tar.gz": [
+      1691278,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w13-000015.tar.gz": [
+      12145,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w14-000000.tar.gz": [
+      1696985,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w14-000001.tar.gz": [
+      1683598,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w14-000002.tar.gz": [
+      1702997,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w14-000003.tar.gz": [
+      1689055,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w14-000004.tar.gz": [
+      1686199,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w14-000005.tar.gz": [
+      1698898,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w14-000006.tar.gz": [
+      1694520,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w14-000007.tar.gz": [
+      1693165,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w14-000008.tar.gz": [
+      1697156,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w14-000009.tar.gz": [
+      1697359,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w14-000010.tar.gz": [
+      1692757,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w14-000011.tar.gz": [
+      1694836,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w14-000012.tar.gz": [
+      1706098,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w14-000013.tar.gz": [
+      1696625,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w14-000014.tar.gz": [
+      1689795,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w14-000015.tar.gz": [
+      12970,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w15-000000.tar.gz": [
+      1691201,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w15-000001.tar.gz": [
+      1698544,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w15-000002.tar.gz": [
+      1701854,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w15-000003.tar.gz": [
+      1698883,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w15-000004.tar.gz": [
+      1681120,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w15-000005.tar.gz": [
+      1691529,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w15-000006.tar.gz": [
+      1690459,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w15-000007.tar.gz": [
+      1690611,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w15-000008.tar.gz": [
+      1698833,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w15-000009.tar.gz": [
+      1694781,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w15-000010.tar.gz": [
+      1688360,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w15-000011.tar.gz": [
+      1701405,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w15-000012.tar.gz": [
+      1703866,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w15-000013.tar.gz": [
+      1696598,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w15-000014.tar.gz": [
+      1693874,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w15-000015.tar.gz": [
+      12983,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w16-000000.tar.gz": [
+      1694879,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w16-000001.tar.gz": [
+      1691812,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w16-000002.tar.gz": [
+      1692224,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w16-000003.tar.gz": [
+      1701140,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w16-000004.tar.gz": [
+      1707771,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w16-000005.tar.gz": [
+      1704319,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w16-000006.tar.gz": [
+      1707535,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w16-000007.tar.gz": [
+      1690495,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w16-000008.tar.gz": [
+      1707108,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w16-000009.tar.gz": [
+      1697561,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w16-000010.tar.gz": [
+      1695283,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w16-000011.tar.gz": [
+      1689831,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w16-000012.tar.gz": [
+      1702978,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w16-000013.tar.gz": [
+      1701859,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w16-000014.tar.gz": [
+      1704717,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w16-000015.tar.gz": [
+      12343,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w17-000000.tar.gz": [
+      1693236,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w17-000001.tar.gz": [
+      1689274,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w17-000002.tar.gz": [
+      1698493,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w17-000003.tar.gz": [
+      1702779,
+      1790361871000000000
+     ],
+     "features_rank/train/train-w17-000004.tar.gz": [
+      1687608,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w17-000005.tar.gz": [
+      1696954,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w17-000006.tar.gz": [
+      1699808,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w17-000007.tar.gz": [
+      1699111,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w17-000008.tar.gz": [
+      1687685,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w17-000009.tar.gz": [
+      1704103,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w17-000010.tar.gz": [
+      1684439,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w17-000011.tar.gz": [
+      1699707,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w17-000012.tar.gz": [
+      1703327,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w17-000013.tar.gz": [
+      1694945,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w17-000014.tar.gz": [
+      1700223,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w17-000015.tar.gz": [
+      12461,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w18-000000.tar.gz": [
+      1694353,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w18-000001.tar.gz": [
+      1690104,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w18-000002.tar.gz": [
+      1695415,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w18-000003.tar.gz": [
+      1703244,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w18-000004.tar.gz": [
+      1693067,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w18-000005.tar.gz": [
+      1697927,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w18-000006.tar.gz": [
+      1698383,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w18-000007.tar.gz": [
+      1701743,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w18-000008.tar.gz": [
+      1698306,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w18-000009.tar.gz": [
+      1695845,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w18-000010.tar.gz": [
+      1703355,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w18-000011.tar.gz": [
+      1693271,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w18-000012.tar.gz": [
+      1680574,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w18-000013.tar.gz": [
+      1701891,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w18-000014.tar.gz": [
+      1709309,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w18-000015.tar.gz": [
+      9943,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w19-000000.tar.gz": [
+      1689933,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w19-000001.tar.gz": [
+      1699100,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w19-000002.tar.gz": [
+      1690307,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w19-000003.tar.gz": [
+      1703549,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w19-000004.tar.gz": [
+      1691529,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w19-000005.tar.gz": [
+      1700459,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w19-000006.tar.gz": [
+      1704695,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w19-000007.tar.gz": [
+      1694381,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w19-000008.tar.gz": [
+      1688304,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w19-000009.tar.gz": [
+      1696699,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w19-000010.tar.gz": [
+      1704554,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w19-000011.tar.gz": [
+      1707224,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w19-000012.tar.gz": [
+      1693811,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w19-000013.tar.gz": [
+      1686571,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w19-000014.tar.gz": [
+      1701812,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w19-000015.tar.gz": [
+      10932,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w2-000000.tar.gz": [
+      1698674,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w2-000001.tar.gz": [
+      1702095,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w2-000002.tar.gz": [
+      1696880,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w2-000003.tar.gz": [
+      1695146,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w2-000004.tar.gz": [
+      1691615,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w2-000005.tar.gz": [
+      1682180,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w2-000006.tar.gz": [
+      1675346,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w2-000007.tar.gz": [
+      1686468,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w2-000008.tar.gz": [
+      1697728,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w2-000009.tar.gz": [
+      1696923,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w2-000010.tar.gz": [
+      1703601,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w2-000011.tar.gz": [
+      1688756,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w2-000012.tar.gz": [
+      1687216,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w2-000013.tar.gz": [
+      1698854,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w2-000014.tar.gz": [
+      1692351,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w2-000015.tar.gz": [
+      11238,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w20-000000.tar.gz": [
+      1686723,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w20-000001.tar.gz": [
+      1694277,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w20-000002.tar.gz": [
+      1704367,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w20-000003.tar.gz": [
+      1687788,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w20-000004.tar.gz": [
+      1694776,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w20-000005.tar.gz": [
+      1707162,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w20-000006.tar.gz": [
+      1692569,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w20-000007.tar.gz": [
+      1679905,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w20-000008.tar.gz": [
+      1692450,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w20-000009.tar.gz": [
+      1697283,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w20-000010.tar.gz": [
+      1696827,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w20-000011.tar.gz": [
+      1694195,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w20-000012.tar.gz": [
+      1697017,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w20-000013.tar.gz": [
+      1684666,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w20-000014.tar.gz": [
+      1692802,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w20-000015.tar.gz": [
+      10171,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w21-000000.tar.gz": [
+      1710329,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w21-000001.tar.gz": [
+      1697797,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w21-000002.tar.gz": [
+      1703193,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w21-000003.tar.gz": [
+      1707253,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w21-000004.tar.gz": [
+      1698219,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w21-000005.tar.gz": [
+      1692240,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w21-000006.tar.gz": [
+      1704579,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w21-000007.tar.gz": [
+      1695220,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w21-000008.tar.gz": [
+      1678690,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w21-000009.tar.gz": [
+      1695763,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w21-000010.tar.gz": [
+      1697654,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w21-000011.tar.gz": [
+      1701978,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w21-000012.tar.gz": [
+      1694416,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w21-000013.tar.gz": [
+      1688422,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w21-000014.tar.gz": [
+      1703662,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w21-000015.tar.gz": [
+      11426,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w22-000000.tar.gz": [
+      1695274,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w22-000001.tar.gz": [
+      1689855,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w22-000002.tar.gz": [
+      1688439,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w22-000003.tar.gz": [
+      1699836,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w22-000004.tar.gz": [
+      1692957,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w22-000005.tar.gz": [
+      1703403,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w22-000006.tar.gz": [
+      1705163,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w22-000007.tar.gz": [
+      1687683,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w22-000008.tar.gz": [
+      1703767,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w22-000009.tar.gz": [
+      1685631,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w22-000010.tar.gz": [
+      1698449,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w22-000011.tar.gz": [
+      1699164,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w22-000012.tar.gz": [
+      1706393,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w22-000013.tar.gz": [
+      1674543,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w22-000014.tar.gz": [
+      1697536,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w22-000015.tar.gz": [
+      10450,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w23-000000.tar.gz": [
+      1699159,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w23-000001.tar.gz": [
+      1704093,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w23-000002.tar.gz": [
+      1695394,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w23-000003.tar.gz": [
+      1694222,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w23-000004.tar.gz": [
+      1710087,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w23-000005.tar.gz": [
+      1711825,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w23-000006.tar.gz": [
+      1693569,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w23-000007.tar.gz": [
+      1693631,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w23-000008.tar.gz": [
+      1697263,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w23-000009.tar.gz": [
+      1685029,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w23-000010.tar.gz": [
+      1706276,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w23-000011.tar.gz": [
+      1705028,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w23-000012.tar.gz": [
+      1698776,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w23-000013.tar.gz": [
+      1710623,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w23-000014.tar.gz": [
+      1694190,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w23-000015.tar.gz": [
+      9918,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w24-000000.tar.gz": [
+      1710106,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w24-000001.tar.gz": [
+      1702093,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w24-000002.tar.gz": [
+      1688621,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w24-000003.tar.gz": [
+      1691471,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w24-000004.tar.gz": [
+      1676723,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w24-000005.tar.gz": [
+      1696687,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w24-000006.tar.gz": [
+      1696910,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w24-000007.tar.gz": [
+      1690785,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w24-000008.tar.gz": [
+      1694134,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w24-000009.tar.gz": [
+      1689307,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w24-000010.tar.gz": [
+      1691707,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w24-000011.tar.gz": [
+      1700383,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w24-000012.tar.gz": [
+      1694456,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w24-000013.tar.gz": [
+      1693147,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w24-000014.tar.gz": [
+      1696399,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w24-000015.tar.gz": [
+      10237,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w25-000000.tar.gz": [
+      1699525,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w25-000001.tar.gz": [
+      1694903,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w25-000002.tar.gz": [
+      1689105,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w25-000003.tar.gz": [
+      1696547,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w25-000004.tar.gz": [
+      1701465,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w25-000005.tar.gz": [
+      1686947,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w25-000006.tar.gz": [
+      1694849,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w25-000007.tar.gz": [
+      1697350,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w25-000008.tar.gz": [
+      1704249,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w25-000009.tar.gz": [
+      1694766,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w25-000010.tar.gz": [
+      1701197,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w25-000011.tar.gz": [
+      1694987,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w25-000012.tar.gz": [
+      1692378,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w25-000013.tar.gz": [
+      1686452,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w25-000014.tar.gz": [
+      1702139,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w25-000015.tar.gz": [
+      10220,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w26-000000.tar.gz": [
+      1696753,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w26-000001.tar.gz": [
+      1700127,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w26-000002.tar.gz": [
+      1681623,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w26-000003.tar.gz": [
+      1704189,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w26-000004.tar.gz": [
+      1684261,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w26-000005.tar.gz": [
+      1697205,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w26-000006.tar.gz": [
+      1696442,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w26-000007.tar.gz": [
+      1696333,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w26-000008.tar.gz": [
+      1711199,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w26-000009.tar.gz": [
+      1701045,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w26-000010.tar.gz": [
+      1716224,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w26-000011.tar.gz": [
+      1693388,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w26-000012.tar.gz": [
+      1693124,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w26-000013.tar.gz": [
+      1694998,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w26-000014.tar.gz": [
+      1705292,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w26-000015.tar.gz": [
+      10732,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w27-000000.tar.gz": [
+      1690211,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w27-000001.tar.gz": [
+      1707948,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w27-000002.tar.gz": [
+      1688619,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w27-000003.tar.gz": [
+      1694409,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w27-000004.tar.gz": [
+      1689768,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w27-000005.tar.gz": [
+      1691336,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w27-000006.tar.gz": [
+      1689178,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w27-000007.tar.gz": [
+      1692314,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w27-000008.tar.gz": [
+      1697023,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w27-000009.tar.gz": [
+      1687360,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w27-000010.tar.gz": [
+      1699481,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w27-000011.tar.gz": [
+      1697082,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w27-000012.tar.gz": [
+      1696207,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w27-000013.tar.gz": [
+      1686640,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w27-000014.tar.gz": [
+      1691971,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w27-000015.tar.gz": [
+      10943,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w28-000000.tar.gz": [
+      1695666,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w28-000001.tar.gz": [
+      1697325,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w28-000002.tar.gz": [
+      1697497,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w28-000003.tar.gz": [
+      1695932,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w28-000004.tar.gz": [
+      1697935,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w28-000005.tar.gz": [
+      1695936,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w28-000006.tar.gz": [
+      1691455,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w28-000007.tar.gz": [
+      1706885,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w28-000008.tar.gz": [
+      1688656,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w28-000009.tar.gz": [
+      1699134,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w28-000010.tar.gz": [
+      1703588,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w28-000011.tar.gz": [
+      1698854,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w28-000012.tar.gz": [
+      1698389,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w28-000013.tar.gz": [
+      1679366,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w28-000014.tar.gz": [
+      1697745,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w28-000015.tar.gz": [
+      9559,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w29-000000.tar.gz": [
+      1696245,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w29-000001.tar.gz": [
+      1700503,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w29-000002.tar.gz": [
+      1694155,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w29-000003.tar.gz": [
+      1704101,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w29-000004.tar.gz": [
+      1701938,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w29-000005.tar.gz": [
+      1685219,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w29-000006.tar.gz": [
+      1700375,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w29-000007.tar.gz": [
+      1691682,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w29-000008.tar.gz": [
+      1703531,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w29-000009.tar.gz": [
+      1708221,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w29-000010.tar.gz": [
+      1695352,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w29-000011.tar.gz": [
+      1691312,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w29-000012.tar.gz": [
+      1691878,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w29-000013.tar.gz": [
+      1697101,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w29-000014.tar.gz": [
+      1694595,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w29-000015.tar.gz": [
+      10370,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w3-000000.tar.gz": [
+      1697861,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w3-000001.tar.gz": [
+      1689856,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w3-000002.tar.gz": [
+      1689027,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w3-000003.tar.gz": [
+      1702700,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w3-000004.tar.gz": [
+      1695389,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w3-000005.tar.gz": [
+      1709008,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w3-000006.tar.gz": [
+      1701712,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w3-000007.tar.gz": [
+      1690641,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w3-000008.tar.gz": [
+      1697259,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w3-000009.tar.gz": [
+      1705738,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w3-000010.tar.gz": [
+      1687015,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w3-000011.tar.gz": [
+      1708662,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w3-000012.tar.gz": [
+      1703544,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w3-000013.tar.gz": [
+      1695220,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w3-000014.tar.gz": [
+      1685381,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w3-000015.tar.gz": [
+      12269,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w30-000000.tar.gz": [
+      1699656,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w30-000001.tar.gz": [
+      1705113,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w30-000002.tar.gz": [
+      1689894,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w30-000003.tar.gz": [
+      1688860,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w30-000004.tar.gz": [
+      1692914,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w30-000005.tar.gz": [
+      1689375,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w30-000006.tar.gz": [
+      1696677,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w30-000007.tar.gz": [
+      1698273,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w30-000008.tar.gz": [
+      1701959,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w30-000009.tar.gz": [
+      1701125,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w30-000010.tar.gz": [
+      1695062,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w30-000011.tar.gz": [
+      1694429,
+      1790361872000000000
+     ],
+     "features_rank/train/train-w30-000012.tar.gz": [
+      1688920,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w30-000013.tar.gz": [
+      1692043,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w30-000014.tar.gz": [
+      1696227,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w30-000015.tar.gz": [
+      10652,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w31-000000.tar.gz": [
+      1699891,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w31-000001.tar.gz": [
+      1692896,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w31-000002.tar.gz": [
+      1698232,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w31-000003.tar.gz": [
+      1696525,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w31-000004.tar.gz": [
+      1685989,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w31-000005.tar.gz": [
+      1698265,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w31-000006.tar.gz": [
+      1694748,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w31-000007.tar.gz": [
+      1686075,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w31-000008.tar.gz": [
+      1693817,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w31-000009.tar.gz": [
+      1693012,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w31-000010.tar.gz": [
+      1698852,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w31-000011.tar.gz": [
+      1693443,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w31-000012.tar.gz": [
+      1691737,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w31-000013.tar.gz": [
+      1694373,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w31-000014.tar.gz": [
+      1696793,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w31-000015.tar.gz": [
+      10699,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w32-000000.tar.gz": [
+      1692466,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w32-000001.tar.gz": [
+      1691113,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w32-000002.tar.gz": [
+      1697750,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w32-000003.tar.gz": [
+      1689517,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w32-000004.tar.gz": [
+      1699370,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w32-000005.tar.gz": [
+      1695792,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w32-000006.tar.gz": [
+      1687249,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w32-000007.tar.gz": [
+      1689116,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w32-000008.tar.gz": [
+      1686674,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w32-000009.tar.gz": [
+      1688251,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w32-000010.tar.gz": [
+      1692354,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w32-000011.tar.gz": [
+      1698773,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w32-000012.tar.gz": [
+      1696203,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w32-000013.tar.gz": [
+      1702885,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w32-000014.tar.gz": [
+      1693256,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w32-000015.tar.gz": [
+      9587,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w33-000000.tar.gz": [
+      1703066,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w33-000001.tar.gz": [
+      1695761,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w33-000002.tar.gz": [
+      1687707,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w33-000003.tar.gz": [
+      1705558,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w33-000004.tar.gz": [
+      1693290,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w33-000005.tar.gz": [
+      1701420,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w33-000006.tar.gz": [
+      1689411,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w33-000007.tar.gz": [
+      1704187,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w33-000008.tar.gz": [
+      1690329,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w33-000009.tar.gz": [
+      1692606,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w33-000010.tar.gz": [
+      1694933,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w33-000011.tar.gz": [
+      1693859,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w33-000012.tar.gz": [
+      1705659,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w33-000013.tar.gz": [
+      1701660,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w33-000014.tar.gz": [
+      1696776,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w33-000015.tar.gz": [
+      10760,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w34-000000.tar.gz": [
+      1700144,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w34-000001.tar.gz": [
+      1706115,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w34-000002.tar.gz": [
+      1709746,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w34-000003.tar.gz": [
+      1705527,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w34-000004.tar.gz": [
+      1692668,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w34-000005.tar.gz": [
+      1700315,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w34-000006.tar.gz": [
+      1697997,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w34-000007.tar.gz": [
+      1687681,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w34-000008.tar.gz": [
+      1701650,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w34-000009.tar.gz": [
+      1690281,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w34-000010.tar.gz": [
+      1684676,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w34-000011.tar.gz": [
+      1694098,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w34-000012.tar.gz": [
+      1695086,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w34-000013.tar.gz": [
+      1698736,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w34-000014.tar.gz": [
+      1689055,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w34-000015.tar.gz": [
+      10625,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w35-000000.tar.gz": [
+      1701534,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w35-000001.tar.gz": [
+      1703950,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w35-000002.tar.gz": [
+      1686355,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w35-000003.tar.gz": [
+      1685131,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w35-000004.tar.gz": [
+      1696480,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w35-000005.tar.gz": [
+      1686362,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w35-000006.tar.gz": [
+      1690159,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w35-000007.tar.gz": [
+      1694954,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w35-000008.tar.gz": [
+      1693173,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w35-000009.tar.gz": [
+      1689681,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w35-000010.tar.gz": [
+      1693933,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w35-000011.tar.gz": [
+      1690173,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w35-000012.tar.gz": [
+      1703890,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w35-000013.tar.gz": [
+      1691792,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w35-000014.tar.gz": [
+      1699350,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w35-000015.tar.gz": [
+      11153,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w36-000000.tar.gz": [
+      1700024,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w36-000001.tar.gz": [
+      1689792,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w36-000002.tar.gz": [
+      1706551,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w36-000003.tar.gz": [
+      1695045,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w36-000004.tar.gz": [
+      1687030,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w36-000005.tar.gz": [
+      1699474,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w36-000006.tar.gz": [
+      1695458,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w36-000007.tar.gz": [
+      1674205,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w36-000008.tar.gz": [
+      1699697,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w36-000009.tar.gz": [
+      1689608,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w36-000010.tar.gz": [
+      1684263,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w36-000011.tar.gz": [
+      1698695,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w36-000012.tar.gz": [
+      1685161,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w36-000013.tar.gz": [
+      1690459,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w36-000014.tar.gz": [
+      1686180,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w36-000015.tar.gz": [
+      10711,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w37-000000.tar.gz": [
+      1696382,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w37-000001.tar.gz": [
+      1697081,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w37-000002.tar.gz": [
+      1702194,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w37-000003.tar.gz": [
+      1700643,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w37-000004.tar.gz": [
+      1690323,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w37-000005.tar.gz": [
+      1702516,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w37-000006.tar.gz": [
+      1697172,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w37-000007.tar.gz": [
+      1696681,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w37-000008.tar.gz": [
+      1700291,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w37-000009.tar.gz": [
+      1702090,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w37-000010.tar.gz": [
+      1693533,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w37-000011.tar.gz": [
+      1695701,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w37-000012.tar.gz": [
+      1702001,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w37-000013.tar.gz": [
+      1688830,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w37-000014.tar.gz": [
+      1707958,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w37-000015.tar.gz": [
+      9527,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w38-000000.tar.gz": [
+      1709082,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w38-000001.tar.gz": [
+      1694905,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w38-000002.tar.gz": [
+      1689046,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w38-000003.tar.gz": [
+      1692208,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w38-000004.tar.gz": [
+      1691550,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w38-000005.tar.gz": [
+      1695311,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w38-000006.tar.gz": [
+      1694269,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w38-000007.tar.gz": [
+      1697135,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w38-000008.tar.gz": [
+      1693351,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w38-000009.tar.gz": [
+      1701702,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w38-000010.tar.gz": [
+      1678846,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w38-000011.tar.gz": [
+      1700237,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w38-000012.tar.gz": [
+      1688690,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w38-000013.tar.gz": [
+      1708352,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w38-000014.tar.gz": [
+      1694536,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w38-000015.tar.gz": [
+      10152,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w39-000000.tar.gz": [
+      1699910,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w39-000001.tar.gz": [
+      1695709,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w39-000002.tar.gz": [
+      1693701,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w39-000003.tar.gz": [
+      1691694,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w39-000004.tar.gz": [
+      1682121,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w39-000005.tar.gz": [
+      1704262,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w39-000006.tar.gz": [
+      1695703,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w39-000007.tar.gz": [
+      1697690,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w39-000008.tar.gz": [
+      1685180,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w39-000009.tar.gz": [
+      1691254,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w39-000010.tar.gz": [
+      1703227,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w39-000011.tar.gz": [
+      1698486,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w39-000012.tar.gz": [
+      1697863,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w39-000013.tar.gz": [
+      1698338,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w39-000014.tar.gz": [
+      1687339,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w39-000015.tar.gz": [
+      9654,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w4-000000.tar.gz": [
+      1699770,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w4-000001.tar.gz": [
+      1705290,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w4-000002.tar.gz": [
+      1692247,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w4-000003.tar.gz": [
+      1688778,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w4-000004.tar.gz": [
+      1696539,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w4-000005.tar.gz": [
+      1695085,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w4-000006.tar.gz": [
+      1686941,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w4-000007.tar.gz": [
+      1706202,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w4-000008.tar.gz": [
+      1697068,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w4-000009.tar.gz": [
+      1695609,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w4-000010.tar.gz": [
+      1698594,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w4-000011.tar.gz": [
+      1704347,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w4-000012.tar.gz": [
+      1688772,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w4-000013.tar.gz": [
+      1695618,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w4-000014.tar.gz": [
+      1686832,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w4-000015.tar.gz": [
+      11813,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w40-000000.tar.gz": [
+      1697110,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w40-000001.tar.gz": [
+      1701821,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w40-000002.tar.gz": [
+      1700337,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w40-000003.tar.gz": [
+      1694728,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w40-000004.tar.gz": [
+      1695384,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w40-000005.tar.gz": [
+      1697269,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w40-000006.tar.gz": [
+      1700806,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w40-000007.tar.gz": [
+      1693650,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w40-000008.tar.gz": [
+      1698682,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w40-000009.tar.gz": [
+      1698872,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w40-000010.tar.gz": [
+      1701062,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w40-000011.tar.gz": [
+      1691358,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w40-000012.tar.gz": [
+      1691964,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w40-000013.tar.gz": [
+      1688064,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w40-000014.tar.gz": [
+      1703929,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w40-000015.tar.gz": [
+      9992,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w41-000000.tar.gz": [
+      1694718,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w41-000001.tar.gz": [
+      1696809,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w41-000002.tar.gz": [
+      1688240,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w41-000003.tar.gz": [
+      1694093,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w41-000004.tar.gz": [
+      1695361,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w41-000005.tar.gz": [
+      1693701,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w41-000006.tar.gz": [
+      1694635,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w41-000007.tar.gz": [
+      1697199,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w41-000008.tar.gz": [
+      1690181,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w41-000009.tar.gz": [
+      1700057,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w41-000010.tar.gz": [
+      1703716,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w41-000011.tar.gz": [
+      1696485,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w41-000012.tar.gz": [
+      1703000,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w41-000013.tar.gz": [
+      1699802,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w41-000014.tar.gz": [
+      1695436,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w41-000015.tar.gz": [
+      10298,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w42-000000.tar.gz": [
+      1697149,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w42-000001.tar.gz": [
+      1686381,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w42-000002.tar.gz": [
+      1698222,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w42-000003.tar.gz": [
+      1682892,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w42-000004.tar.gz": [
+      1696349,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w42-000005.tar.gz": [
+      1681273,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w42-000006.tar.gz": [
+      1693628,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w42-000007.tar.gz": [
+      1688171,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w42-000008.tar.gz": [
+      1712292,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w42-000009.tar.gz": [
+      1696509,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w42-000010.tar.gz": [
+      1690701,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w42-000011.tar.gz": [
+      1687149,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w42-000012.tar.gz": [
+      1695293,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w42-000013.tar.gz": [
+      1685048,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w42-000014.tar.gz": [
+      1701914,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w42-000015.tar.gz": [
+      9897,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w43-000000.tar.gz": [
+      1704180,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w43-000001.tar.gz": [
+      1706044,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w43-000002.tar.gz": [
+      1693390,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w43-000003.tar.gz": [
+      1698921,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w43-000004.tar.gz": [
+      1692420,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w43-000005.tar.gz": [
+      1689278,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w43-000006.tar.gz": [
+      1685288,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w43-000007.tar.gz": [
+      1680970,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w43-000008.tar.gz": [
+      1717356,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w43-000009.tar.gz": [
+      1682943,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w43-000010.tar.gz": [
+      1687869,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w43-000011.tar.gz": [
+      1694836,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w43-000012.tar.gz": [
+      1696998,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w43-000013.tar.gz": [
+      1693194,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w43-000014.tar.gz": [
+      1695861,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w43-000015.tar.gz": [
+      9447,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w44-000000.tar.gz": [
+      1696143,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w44-000001.tar.gz": [
+      1706138,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w44-000002.tar.gz": [
+      1695306,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w44-000003.tar.gz": [
+      1700464,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w44-000004.tar.gz": [
+      1689659,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w44-000005.tar.gz": [
+      1689356,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w44-000006.tar.gz": [
+      1685401,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w44-000007.tar.gz": [
+      1700092,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w44-000008.tar.gz": [
+      1697912,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w44-000009.tar.gz": [
+      1695743,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w44-000010.tar.gz": [
+      1705161,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w44-000011.tar.gz": [
+      1704880,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w44-000012.tar.gz": [
+      1696628,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w44-000013.tar.gz": [
+      1695067,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w44-000014.tar.gz": [
+      1699712,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w44-000015.tar.gz": [
+      10152,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w45-000000.tar.gz": [
+      1688656,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w45-000001.tar.gz": [
+      1699349,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w45-000002.tar.gz": [
+      1700363,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w45-000003.tar.gz": [
+      1695109,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w45-000004.tar.gz": [
+      1691457,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w45-000005.tar.gz": [
+      1703213,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w45-000006.tar.gz": [
+      1695586,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w45-000007.tar.gz": [
+      1697582,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w45-000008.tar.gz": [
+      1698474,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w45-000009.tar.gz": [
+      1703385,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w45-000010.tar.gz": [
+      1703924,
+      1790361873000000000
+     ],
+     "features_rank/train/train-w45-000011.tar.gz": [
+      1701163,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w45-000012.tar.gz": [
+      1698996,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w45-000013.tar.gz": [
+      1695053,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w45-000014.tar.gz": [
+      1704783,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w45-000015.tar.gz": [
+      9924,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w46-000000.tar.gz": [
+      1693249,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w46-000001.tar.gz": [
+      1702642,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w46-000002.tar.gz": [
+      1694422,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w46-000003.tar.gz": [
+      1690892,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w46-000004.tar.gz": [
+      1704240,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w46-000005.tar.gz": [
+      1699216,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w46-000006.tar.gz": [
+      1688966,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w46-000007.tar.gz": [
+      1705955,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w46-000008.tar.gz": [
+      1687608,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w46-000009.tar.gz": [
+      1709193,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w46-000010.tar.gz": [
+      1692395,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w46-000011.tar.gz": [
+      1686342,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w46-000012.tar.gz": [
+      1713884,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w46-000013.tar.gz": [
+      1701990,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w46-000014.tar.gz": [
+      1693215,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w46-000015.tar.gz": [
+      10044,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w47-000000.tar.gz": [
+      1699269,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w47-000001.tar.gz": [
+      1699738,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w47-000002.tar.gz": [
+      1691350,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w47-000003.tar.gz": [
+      1694837,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w47-000004.tar.gz": [
+      1692378,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w47-000005.tar.gz": [
+      1712209,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w47-000006.tar.gz": [
+      1687175,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w47-000007.tar.gz": [
+      1711231,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w47-000008.tar.gz": [
+      1705749,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w47-000009.tar.gz": [
+      1689609,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w47-000010.tar.gz": [
+      1701337,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w47-000011.tar.gz": [
+      1695183,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w47-000012.tar.gz": [
+      1696238,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w47-000013.tar.gz": [
+      1710845,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w47-000014.tar.gz": [
+      1700838,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w47-000015.tar.gz": [
+      9260,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w5-000000.tar.gz": [
+      1692780,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w5-000001.tar.gz": [
+      1698353,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w5-000002.tar.gz": [
+      1701684,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w5-000003.tar.gz": [
+      1697466,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w5-000004.tar.gz": [
+      1692370,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w5-000005.tar.gz": [
+      1697205,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w5-000006.tar.gz": [
+      1698052,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w5-000007.tar.gz": [
+      1699059,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w5-000008.tar.gz": [
+      1686788,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w5-000009.tar.gz": [
+      1700103,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w5-000010.tar.gz": [
+      1702173,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w5-000011.tar.gz": [
+      1700068,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w5-000012.tar.gz": [
+      1688986,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w5-000013.tar.gz": [
+      1687854,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w5-000014.tar.gz": [
+      1707215,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w5-000015.tar.gz": [
+      11855,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w6-000000.tar.gz": [
+      1699849,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w6-000001.tar.gz": [
+      1694181,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w6-000002.tar.gz": [
+      1685869,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w6-000003.tar.gz": [
+      1695376,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w6-000004.tar.gz": [
+      1688521,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w6-000005.tar.gz": [
+      1706278,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w6-000006.tar.gz": [
+      1685512,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w6-000007.tar.gz": [
+      1695711,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w6-000008.tar.gz": [
+      1704441,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w6-000009.tar.gz": [
+      1697429,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w6-000010.tar.gz": [
+      1681727,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w6-000011.tar.gz": [
+      1697894,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w6-000012.tar.gz": [
+      1705153,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w6-000013.tar.gz": [
+      1697709,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w6-000014.tar.gz": [
+      1689418,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w6-000015.tar.gz": [
+      11320,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w7-000000.tar.gz": [
+      1706488,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w7-000001.tar.gz": [
+      1687142,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w7-000002.tar.gz": [
+      1696994,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w7-000003.tar.gz": [
+      1685969,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w7-000004.tar.gz": [
+      1683594,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w7-000005.tar.gz": [
+      1703104,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w7-000006.tar.gz": [
+      1696116,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w7-000007.tar.gz": [
+      1708345,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w7-000008.tar.gz": [
+      1709522,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w7-000009.tar.gz": [
+      1700956,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w7-000010.tar.gz": [
+      1698359,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w7-000011.tar.gz": [
+      1686144,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w7-000012.tar.gz": [
+      1694136,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w7-000013.tar.gz": [
+      1687161,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w7-000014.tar.gz": [
+      1697098,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w7-000015.tar.gz": [
+      11615,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w8-000000.tar.gz": [
+      1700383,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w8-000001.tar.gz": [
+      1685248,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w8-000002.tar.gz": [
+      1698379,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w8-000003.tar.gz": [
+      1689884,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w8-000004.tar.gz": [
+      1697676,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w8-000005.tar.gz": [
+      1692794,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w8-000006.tar.gz": [
+      1689452,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w8-000007.tar.gz": [
+      1701711,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w8-000008.tar.gz": [
+      1695596,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w8-000009.tar.gz": [
+      1707954,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w8-000010.tar.gz": [
+      1696941,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w8-000011.tar.gz": [
+      1706959,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w8-000012.tar.gz": [
+      1703607,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w8-000013.tar.gz": [
+      1703753,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w8-000014.tar.gz": [
+      1695029,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w8-000015.tar.gz": [
+      11022,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w9-000000.tar.gz": [
+      1698131,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w9-000001.tar.gz": [
+      1687064,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w9-000002.tar.gz": [
+      1692465,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w9-000003.tar.gz": [
+      1697553,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w9-000004.tar.gz": [
+      1691500,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w9-000005.tar.gz": [
+      1695045,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w9-000006.tar.gz": [
+      1699536,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w9-000007.tar.gz": [
+      1699595,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w9-000008.tar.gz": [
+      1691123,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w9-000009.tar.gz": [
+      1693308,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w9-000010.tar.gz": [
+      1703923,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w9-000011.tar.gz": [
+      1696408,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w9-000012.tar.gz": [
+      1677446,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w9-000013.tar.gz": [
+      1694172,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w9-000014.tar.gz": [
+      1683965,
+      1790361874000000000
+     ],
+     "features_rank/train/train-w9-000015.tar.gz": [
+      11603,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w0.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w1.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w10.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w11.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w12.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w13.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w14.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w15.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w16.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w17.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w18.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w19.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w2.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w20.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w21.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w22.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w23.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w24.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w25.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w26.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w27.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w28.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w29.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w3.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w30.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w31.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w32.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w33.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w34.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w35.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w36.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w37.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w38.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w39.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w4.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w40.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w41.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w42.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w43.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w44.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w45.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w46.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w47.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w5.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w6.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w7.json": [
+      41,
+      1790361874000000000
+     ],
+     "features_rank/val/_count_w8.json": [
+      41,
+      1790361875000000000
+     ],
+     "features_rank/val/_count_w9.json": [
+      41,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w0-000000.tar.gz": [
+      1692398,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w0-000001.tar.gz": [
+      901351,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w1-000000.tar.gz": [
+      1687140,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w1-000001.tar.gz": [
+      894674,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w10-000000.tar.gz": [
+      1681716,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w10-000001.tar.gz": [
+      891306,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w11-000000.tar.gz": [
+      1697238,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w11-000001.tar.gz": [
+      906994,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w12-000000.tar.gz": [
+      1691968,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w12-000001.tar.gz": [
+      898409,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w13-000000.tar.gz": [
+      1695710,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w13-000001.tar.gz": [
+      894589,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w14-000000.tar.gz": [
+      1684572,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w14-000001.tar.gz": [
+      891050,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w15-000000.tar.gz": [
+      1695314,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w15-000001.tar.gz": [
+      896580,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w16-000000.tar.gz": [
+      1700965,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w16-000001.tar.gz": [
+      902463,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w17-000000.tar.gz": [
+      1690332,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w17-000001.tar.gz": [
+      899432,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w18-000000.tar.gz": [
+      1673415,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w18-000001.tar.gz": [
+      893272,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w19-000000.tar.gz": [
+      1689904,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w19-000001.tar.gz": [
+      892049,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w2-000000.tar.gz": [
+      1693595,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w2-000001.tar.gz": [
+      907034,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w20-000000.tar.gz": [
+      1676165,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w20-000001.tar.gz": [
+      904275,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w21-000000.tar.gz": [
+      1696333,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w21-000001.tar.gz": [
+      905065,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w22-000000.tar.gz": [
+      1691901,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w22-000001.tar.gz": [
+      907523,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w23-000000.tar.gz": [
+      1698320,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w23-000001.tar.gz": [
+      896434,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w24-000000.tar.gz": [
+      1706384,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w24-000001.tar.gz": [
+      894140,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w25-000000.tar.gz": [
+      1691561,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w25-000001.tar.gz": [
+      889571,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w26-000000.tar.gz": [
+      1696280,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w26-000001.tar.gz": [
+      898561,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w27-000000.tar.gz": [
+      1689980,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w27-000001.tar.gz": [
+      895058,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w28-000000.tar.gz": [
+      1668884,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w28-000001.tar.gz": [
+      898272,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w29-000000.tar.gz": [
+      1687202,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w29-000001.tar.gz": [
+      906696,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w3-000000.tar.gz": [
+      1700432,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w3-000001.tar.gz": [
+      893836,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w30-000000.tar.gz": [
+      1681901,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w30-000001.tar.gz": [
+      894997,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w31-000000.tar.gz": [
+      1697671,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w31-000001.tar.gz": [
+      893014,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w32-000000.tar.gz": [
+      1693173,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w32-000001.tar.gz": [
+      900147,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w33-000000.tar.gz": [
+      1687191,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w33-000001.tar.gz": [
+      898648,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w34-000000.tar.gz": [
+      1689648,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w34-000001.tar.gz": [
+      893482,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w35-000000.tar.gz": [
+      1694993,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w35-000001.tar.gz": [
+      891472,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w36-000000.tar.gz": [
+      1683522,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w36-000001.tar.gz": [
+      904302,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w37-000000.tar.gz": [
+      1682277,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w37-000001.tar.gz": [
+      901599,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w38-000000.tar.gz": [
+      1688280,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w38-000001.tar.gz": [
+      894730,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w39-000000.tar.gz": [
+      1681816,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w39-000001.tar.gz": [
+      889020,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w4-000000.tar.gz": [
+      1682417,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w4-000001.tar.gz": [
+      897781,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w40-000000.tar.gz": [
+      1692292,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w40-000001.tar.gz": [
+      898008,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w41-000000.tar.gz": [
+      1696673,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w41-000001.tar.gz": [
+      905129,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w42-000000.tar.gz": [
+      1683579,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w42-000001.tar.gz": [
+      901132,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w43-000000.tar.gz": [
+      1690564,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w43-000001.tar.gz": [
+      906820,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w44-000000.tar.gz": [
+      1695473,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w44-000001.tar.gz": [
+      898354,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w45-000000.tar.gz": [
+      1682594,
+      1790361875000000000
+     ],
+     "features_rank/val/val-w45-000001.tar.gz": [
+      894928,
+      1790361876000000000
+     ],
+     "features_rank/val/val-w46-000000.tar.gz": [
+      1691069,
+      1790361876000000000
+     ],
+     "features_rank/val/val-w46-000001.tar.gz": [
+      896265,
+      1790361876000000000
+     ],
+     "features_rank/val/val-w47-000000.tar.gz": [
+      1682879,
+      1790361876000000000
+     ],
+     "features_rank/val/val-w47-000001.tar.gz": [
+      897774,
+      1790361876000000000
+     ],
+     "features_rank/val/val-w5-000000.tar.gz": [
+      1696581,
+      1790361876000000000
+     ],
+     "features_rank/val/val-w5-000001.tar.gz": [
+      894850,
+      1790361876000000000
+     ],
+     "features_rank/val/val-w6-000000.tar.gz": [
+      1687226,
+      1790361876000000000
+     ],
+     "features_rank/val/val-w6-000001.tar.gz": [
+      899493,
+      1790361876000000000
+     ],
+     "features_rank/val/val-w7-000000.tar.gz": [
+      1683843,
+      1790361876000000000
+     ],
+     "features_rank/val/val-w7-000001.tar.gz": [
+      903830,
+      1790361876000000000
+     ],
+     "features_rank/val/val-w8-000000.tar.gz": [
+      1697690,
+      1790361876000000000
+     ],
+     "features_rank/val/val-w8-000001.tar.gz": [
+      892520,
+      1790361876000000000
+     ],
+     "features_rank/val/val-w9-000000.tar.gz": [
+      1701999,
+      1790361876000000000
+     ],
+     "features_rank/val/val-w9-000001.tar.gz": [
+      905930,
+      1790361876000000000
+     ],
+     "player/config.json": [
+      10736,
+      1790361813000000000
+     ],
+     "player/env.json": [
+      1063,
+      1790361512000000000
+     ],
+     "player/leak_check.json": [
+      959,
+      1790361806000000000
+     ],
+     "player/loss_curve.png": [
+      19905,
+      1790364328000000000
+     ],
+     "player/player_val_embeddings.npz": [
+      873032,
+      1790364586000000000
+     ],
+     "player/player_val_top5.csv": [
+      50842,
+      1790364586000000000
+     ],
+     "player/predict_summary.json": [
+      826,
+      1790364586000000000
+     ],
+     "player/run_log.json": [
+      2107,
+      1790364595000000000
+     ],
+     "player/timings.json": [
+      452,
+      1790364595000000000
+     ],
+     "player/ckpt/best_model.pth": [
+      19212521,
+      1790364342000000000
+     ],
+     "player/ckpt/epoch_1.pth": [
+      19212521,
+      1790362315000000000
+     ],
+     "player/ckpt/epoch_2.pth": [
+      19212521,
+      1790362818000000000
+     ],
+     "player/ckpt/epoch_3.pth": [
+      19212521,
+      1790363322000000000
+     ],
+     "player/ckpt/epoch_4.pth": [
+      19212521,
+      1790363825000000000
+     ],
+     "player/ckpt/epoch_5.pth": [
+      19212521,
+      1790364328000000000
+     ],
+     "player/ckpt/history.csv": [
+      216,
+      1790364328000000000
+     ],
+     "player/ckpt/train_state.pt": [
+      57539576,
+      1790364344000000000
+     ],
+     "rank/config.json": [
+      10718,
+      1790364129000000000
+     ],
+     "rank/env.json": [
+      1626,
+      1790361497000000000
+     ],
+     "rank/leak_check.json": [
+      1322,
+      1790361515000000000
+     ],
+     "rank/pred_official_argmax.csv": [
+      21448,
+      1790364121000000000
+     ],
+     "rank/rank_val_probs.csv": [
+      343570,
+      1790364121000000000
+     ],
+     "rank/run_log.json": [
+      345,
+      1790364129000000000
+     ],
+     "rank/timings.json": [
+      551,
+      1790364129000000000
+     ],
+     "rank/ckpt/best_model.pth": [
+      105579435,
+      1790364096000000000
+     ],
+     "rank/ckpt/epoch_1.pth": [
+      105579435,
+      1790362337000000000
+     ],
+     "rank/ckpt/epoch_2.pth": [
+      105579435,
+      1790362774000000000
+     ],
+     "rank/ckpt/epoch_3.pth": [
+      105579435,
+      1790363210000000000
+     ],
+     "rank/ckpt/epoch_4.pth": [
+      105579435,
+      1790363647000000000
+     ],
+     "rank/ckpt/epoch_5.pth": [
+      105579435,
+      1790364083000000000
+     ],
+     "rank/ckpt/history.csv": [
+      609,
+      1790364083000000000
+     ],
+     "rank/ckpt/history.png": [
+      52136,
+      1790364084000000000
+     ],
+     "rank/ckpt/state.pt": [
+      316526167,
+      1790364113000000000
+     ]
+    },
+    "prereg02": {
+     "player_results.zip": [
+      43003790,
+      1790400223000000000
+     ],
+     "rank_results.zip": [
+      70425029,
+      1790401880000000000
+     ],
+     "player/config.json": [
+      9829,
+      1790399966000000000
+     ],
+     "player/env.json": [
+      973,
+      1790399960000000000
+     ],
+     "player/p01_readonly_after.json": [
+      107797,
+      1790400223000000000
+     ],
+     "player/p01_readonly_before.json": [
+      107797,
+      1790399963000000000
+     ],
+     "player/player_val_top5_repro.csv": [
+      50842,
+      1790400222000000000
+     ],
+     "player/repro_check.json": [
+      1722,
+      1790400222000000000
+     ],
+     "player/run_log.json": [
+      1651,
+      1790400231000000000
+     ],
+     "player/timings.json": [
+      295,
+      1790400229000000000
+     ],
+     "player/dumps/cand_games.npz": [
+      46721772,
+      1790400194000000000
+     ],
+     "player/dumps/query_games.npz": [
+      5336749,
+      1790400222000000000
+     ],
+     "rank/config.json": [
+      26478,
+      1790401887000000000
+     ],
+     "rank/env.json": [
+      1626,
+      1790399571000000000
+     ],
+     "rank/leak_check.json": [
+      1322,
+      1790399589000000000
+     ],
+     "rank/p01_readonly_after.json": [
+      95966,
+      1790401878000000000
+     ],
+     "rank/p01_readonly_before.json": [
+      95915,
+      1790399543000000000
+     ],
+     "rank/repro_check.json": [
+      1364,
+      1790399950000000000
+     ],
+     "rank/run_log.json": [
+      494,
+      1790401887000000000
+     ],
+     "rank/timings.json": [
+      698,
+      1790401887000000000
+     ],
+     "rank/ckpt/epoch_6.pth": [
+      105581163,
+      1790400396000000000
+     ],
+     "rank/ckpt/epoch_7.pth": [
+      105581163,
+      1790400841000000000
+     ],
+     "rank/ckpt/epoch_8.pth": [
+      105581163,
+      1790401287000000000
+     ],
+     "rank/ckpt/epoch_9.pth": [
+      105581163,
+      1790401732000000000
+     ],
+     "rank/ckpt/history.csv": [
+      612,
+      1790401759000000000
+     ],
+     "rank/ckpt/state.pt": [
+      316528727,
+      1790401758000000000
+     ],
+     "rank/dumps/_DONE_inner_keys.json": [
+      414,
+      1790399693000000000
+     ],
+     "rank/dumps/_DONE_inner_p01e1.json": [
+      499,
+      1790399722000000000
+     ],
+     "rank/dumps/_DONE_inner_p01e2.json": [
+      498,
+      1790399747000000000
+     ],
+     "rank/dumps/_DONE_inner_p01e3.json": [
+      498,
+      1790399773000000000
+     ],
+     "rank/dumps/_DONE_inner_p01e4.json": [
+      497,
+      1790399799000000000
+     ],
+     "rank/dumps/_DONE_inner_p01e5_d4.json": [
+      503,
+      1790399909000000000
+     ],
+     "rank/dumps/_DONE_inner_p02e9_d4.json": [
+      502,
+      1790401836000000000
+     ],
+     "rank/dumps/_DONE_val_keys.json": [
+      411,
+      1790399701000000000
+     ],
+     "rank/dumps/_DONE_val_p01e1.json": [
+      496,
+      1790399728000000000
+     ],
+     "rank/dumps/_DONE_val_p01e2.json": [
+      495,
+      1790399753000000000
+     ],
+     "rank/dumps/_DONE_val_p01e3.json": [
+      495,
+      1790399779000000000
+     ],
+     "rank/dumps/_DONE_val_p01e4.json": [
+      495,
+      1790399805000000000
+     ],
+     "rank/dumps/_DONE_val_p01e5_d4.json": [
+      500,
+      1790399950000000000
+     ],
+     "rank/dumps/_DONE_val_p02e9_d4.json": [
+      500,
+      1790401878000000000
+     ],
+     "rank/dumps/inner_keys.npz": [
+      8313070,
+      1790399693000000000
+     ],
+     "rank/dumps/inner_p01e1.npz": [
+      2943270,
+      1790399722000000000
+     ],
+     "rank/dumps/inner_p01e2.npz": [
+      2943270,
+      1790399747000000000
+     ],
+     "rank/dumps/inner_p01e3.npz": [
+      2943270,
+      1790399773000000000
+     ],
+     "rank/dumps/inner_p01e4.npz": [
+      2943270,
+      1790399799000000000
+     ],
+     "rank/dumps/inner_p01e5_d4.npz": [
+      23538950,
+      1790399909000000000
+     ],
+     "rank/dumps/inner_p02e9_d4.npz": [
+      23538950,
+      1790401836000000000
+     ],
+     "rank/dumps/val_keys.npz": [
+      939646,
+      1790399701000000000
+     ],
+     "rank/dumps/val_p01e1.npz": [
+      767270,
+      1790399728000000000
+     ],
+     "rank/dumps/val_p01e2.npz": [
+      767270,
+      1790399753000000000
+     ],
+     "rank/dumps/val_p01e3.npz": [
+      767270,
+      1790399779000000000
+     ],
+     "rank/dumps/val_p01e4.npz": [
+      767270,
+      1790399805000000000
+     ],
+     "rank/dumps/val_p01e5_d4.npz": [
+      6130950,
+      1790399950000000000
+     ],
+     "rank/dumps/val_p02e9_d4.npz": [
+      6130950,
+      1790401878000000000
+     ]
+    },
+    "test02": {}
+   }
+  }
+ ]
+}

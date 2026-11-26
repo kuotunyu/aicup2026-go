@@ -1,0 +1,241 @@
+{
+ "injected": {
+  "rank_prediction_test_public.csv": {
+   "games": 5000,
+   "HD1": 1025
+  },
+  "rank_prediction_test_private.csv": {
+   "games": 5000,
+   "HD1": 1026
+  },
+  "player_identification_test_public.csv": {
+   "games": 5000,
+   "HD1": 967
+  },
+  "player_identification_candidates_public.csv": {
+   "games": 40000,
+   "HD1": 7979
+  },
+  "player_identification_test_private.csv": {
+   "games": 5000,
+   "HD1": 988
+  },
+  "player_identification_candidates_private.csv": {
+   "games": 40000,
+   "HD1": 8064
+  }
+ },
+ "hs_lib_parse_raw_H01": {
+  "rank_prediction_test_public.csv": {
+   "games": 5000,
+   "clean_ok": 5000,
+   "H01_ok": 0
+  },
+  "rank_prediction_test_private.csv": {
+   "games": 5000,
+   "clean_ok": 5000,
+   "H01_ok": 0
+  },
+  "player_identification_test_public.csv": {
+   "games": 5000,
+   "clean_ok": 5000,
+   "H01_ok": 0
+  },
+  "player_identification_candidates_public.csv": {
+   "games": 40000,
+   "clean_ok": 40000,
+   "H01_ok": 0
+  },
+  "player_identification_test_private.csv": {
+   "games": 5000,
+   "clean_ok": 5000,
+   "H01_ok": 0
+  },
+  "player_identification_candidates_private.csv": {
+   "games": 40000,
+   "clean_ok": 40000,
+   "H01_ok": 0
+  }
+ },
+ "sample": [
+  "(;SZ[19]HD[1];B[pd];W[dp",
+  "(;SZ[19]HD[0];B[pd];W[dq",
+  "(;SZ[19]HD[1];B[pd];W[dp"
+ ],
+ "t1_raw": {
+  "rank": [
+   0,
+   "PASS"
+  ],
+  "player": [
+   0,
+   "PASS"
+  ]
+ },
+ "t1_raw_equals_clean_except_other_props": {
+  "rank": true,
+  "player": true
+ },
+ "rp_prepare_exit": 0,
+ "files": {
+  "rank_prediction_test_public.csv": {
+   "games": 5000,
+   "games_edited": 5000,
+   "removed_props": {
+    "HD": 5000
+   },
+   "hd_values": {
+    "0": 3975,
+    "1": 1025
+   },
+   "plain_form_before": 0,
+   "plain_form_after": 5000,
+   "counts": {
+    "plain": 0,
+    "root_props": 5000,
+    "unusual_cell": 0,
+    "root_unparsed": 0,
+    "parse_error": 0,
+    "check_mismatch": 0,
+    "non_root_other_props": 0
+   }
+  },
+  "rank_prediction_test_private.csv": {
+   "games": 5000,
+   "games_edited": 5000,
+   "removed_props": {
+    "HD": 5000
+   },
+   "hd_values": {
+    "0": 3974,
+    "1": 1026
+   },
+   "plain_form_before": 0,
+   "plain_form_after": 5000,
+   "counts": {
+    "plain": 0,
+    "root_props": 5000,
+    "unusual_cell": 0,
+    "root_unparsed": 0,
+    "parse_error": 0,
+    "check_mismatch": 0,
+    "non_root_other_props": 0
+   }
+  },
+  "player_identification_test_public.csv": {
+   "games": 5000,
+   "games_edited": 5000,
+   "removed_props": {
+    "HD": 5000
+   },
+   "hd_values": {
+    "0": 4033,
+    "1": 967
+   },
+   "plain_form_before": 0,
+   "plain_form_after": 5000,
+   "counts": {
+    "plain": 0,
+    "root_props": 5000,
+    "unusual_cell": 0,
+    "root_unparsed": 0,
+    "parse_error": 0,
+    "check_mismatch": 0,
+    "non_root_other_props": 0
+   }
+  },
+  "player_identification_candidates_public.csv": {
+   "games": 40000,
+   "games_edited": 40000,
+   "removed_props": {
+    "HD": 40000
+   },
+   "hd_values": {
+    "0": 32021,
+    "1": 7979
+   },
+   "plain_form_before": 0,
+   "plain_form_after": 40000,
+   "counts": {
+    "plain": 0,
+    "root_props": 40000,
+    "unusual_cell": 0,
+    "root_unparsed": 0,
+    "parse_error": 0,
+    "check_mismatch": 0,
+    "non_root_other_props": 0
+   }
+  },
+  "player_identification_test_private.csv": {
+   "games": 5000,
+   "games_edited": 5000,
+   "removed_props": {
+    "HD": 5000
+   },
+   "hd_values": {
+    "0": 4012,
+    "1": 988
+   },
+   "plain_form_before": 0,
+   "plain_form_after": 5000,
+   "counts": {
+    "plain": 0,
+    "root_props": 5000,
+    "unusual_cell": 0,
+    "root_unparsed": 0,
+    "parse_error": 0,
+    "check_mismatch": 0,
+    "non_root_other_props": 0
+   }
+  },
+  "player_identification_candidates_private.csv": {
+   "games": 40000,
+   "games_edited": 40000,
+   "removed_props": {
+    "HD": 40000
+   },
+   "hd_values": {
+    "0": 31936,
+    "1": 8064
+   },
+   "plain_form_before": 0,
+   "plain_form_after": 40000,
+   "counts": {
+    "plain": 0,
+    "root_props": 40000,
+    "unusual_cell": 0,
+    "root_unparsed": 0,
+    "parse_error": 0,
+    "check_mismatch": 0,
+    "non_root_other_props": 0
+   }
+  }
+ },
+ "normalised_equals_clean": {
+  "rank_prediction_test_public.csv": true,
+  "rank_prediction_test_private.csv": true,
+  "player_identification_test_public.csv": true,
+  "player_identification_candidates_public.csv": true,
+  "player_identification_test_private.csv": true,
+  "player_identification_candidates_private.csv": true
+ },
+ "t1_copy": {
+  "rank": [
+   0,
+   "PASS"
+  ],
+  "player": [
+   0,
+   "PASS"
+  ]
+ },
+ "verify_exit": 0,
+ "built_equals_A": {
+  "rank_prediction_test_public.csv": true,
+  "rank_prediction_test_private.csv": true,
+  "player_identification_test_public.csv": true,
+  "player_identification_candidates_public.csv": true,
+  "player_identification_test_private.csv": true,
+  "player_identification_candidates_private.csv": true
+ }
+}

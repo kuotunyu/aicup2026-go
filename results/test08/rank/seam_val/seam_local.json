@@ -1,0 +1,65 @@
+{
+ "format": "c10-test08 seam_local v1",
+ "what": "test08 local Q08 seam (PREREG_08 5.2): Q08 on the seam_val inputs + val_hs.npz + val_lp_p1.npz vs results/prereg08/rank",
+ "mode": "real",
+ "created": "2026-11-04T10:54:31+00:00",
+ "passed": true,
+ "questions": 1589,
+ "max_abs_diff": 0.0,
+ "tol": 0.0001,
+ "rule_b_differences": 0,
+ "rule_b_max": 4,
+ "rule_b_differing_questions": [],
+ "count_mismatch_questions": [],
+ "problems": [],
+ "byte_identical_probs": true,
+ "byte_identical_pred_B": true,
+ "byte_identical_pred_A": true,
+ "t07_seam_byte_identical": true,
+ "required_byte_identical": true,
+ "q02h_equal_to_t07_seam_val_record_only": true,
+ "usable_equal_to_prereg08": true,
+ "verdict": "passed",
+ "tol_source": "test04 t04_apply_report.json seam_local.tol (as 07)",
+ "set": {
+  "questions": 1589,
+  "questions_without_parsed_game": 0,
+  "questions_without_parsed_game_ids": [],
+  "games": 19156,
+  "games_parsed": 19156,
+  "o4_mask_games": 19156,
+  "o4_replay_failed": 0,
+  "questions_with_empty_o4_mask": 0,
+  "masked_E_P1": {
+   "games_in_questions": 19156,
+   "unusable_slots_in_questions": 0,
+   "path": "pooled",
+   "scale": 4.0
+  },
+  "unusable_p1_games": 0,
+  "p1_not_ok": 0,
+  "questions_without_usable_p1_game": 0,
+  "rule_B_differs_from_Q02H": 540
+ },
+ "direction": {
+  "rho": 0.9683239283284883,
+  "questions": 1589,
+  "reference": 0.9628047229694198,
+  "floor": 0.078,
+  "threshold": 0.4814023614847099,
+  "passed": true,
+  "rule": "rho >= max(0.5 x reference, floor) (spec 4.6)",
+  "equal_to_prereg08_apply": true
+ },
+ "reference_sha256": {
+  "rank_val_probs.csv": "7a513367147227e3631bfb7bad36064f3e90fffb6ee358716e389698ce1ccd97",
+  "pred_B.csv": "b02d4f947910726fa25c292e9798e7407b1e802e2fed080d843f56b9beb48872",
+  "pred_A.csv": "e24699e989543bfbfc73b1b710677c93f018747193a9ba18d89fc004cdd17753"
+ },
+ "outputs_sha256": {
+  "rank_val_probs.csv": "7a513367147227e3631bfb7bad36064f3e90fffb6ee358716e389698ce1ccd97",
+  "pred_A.csv": "e24699e989543bfbfc73b1b710677c93f018747193a9ba18d89fc004cdd17753",
+  "pred_B.csv": "b02d4f947910726fa25c292e9798e7407b1e802e2fed080d843f56b9beb48872",
+  "decide_summary.json": "df0fd8c2961576c478b88aafc4129c33f1bea3beda505b475ba3193a87206a0e"
+ }
+}

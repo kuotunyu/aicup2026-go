@@ -1,0 +1,330 @@
+{
+ "format": "c10-prereg07 prescore_audit v1",
+ "what": "PREREG_07 2.7 pre-scoring audit of the validation apply outputs (independent agent; no labels, no scores)",
+ "outputs_sha256": {
+  "rank_val_probs.csv": "6ae2db6025a903eb5c58af9418dc203c0b6e84dd664049f85dfa850e57dc28c1",
+  "pred_A.csv": "b229be2c414f7af22310bc304d6da9de5b6406698ec8ce9c0d40e7c146b40a41",
+  "pred_B.csv": "51d7dbf82d50c3848acadb6934069580bd3ade7e6ca71ad5d1023633a18a26fa",
+  "decide_summary.json": "49e778c525760f011f1ba07226b485b0b24a7d6b54ebe211367d3d434b64479d"
+ },
+ "inputs_sha256": {
+  "val_hs.npz": "ef2067e8cb633f521c205a09aa4638c79fef3ba0b4e90e6a54bdc046e5a5550f",
+  "hs_map.npz": "a4334e79c490e4d8102dd5136ac08c0de1060315981f4ccc527ebffa1b84a3e4"
+ },
+ "program_errors_affecting_Q02H": [],
+ "audited_commits": {
+  "freeze": "973c107",
+  "validation_hs": "c22b8ad",
+  "apply": "1dc4552"
+ },
+ "label_discipline": "data/local/rank_val_answers.csv and every answers file never opened; tools/score.py never run; no score computed. Only data/local/rank_val_questions.csv read (question_id, num_games, sgf_i, color_i; PREREG_07 1.7) for the slot / colour / move-count cross-check and check_submission.py.",
+ "checks_performed": {
+  "sha_bindings_timing_mapping": {
+   "frozen_config_sha_bound": {
+    "ok": true,
+    "detail": "93a0ac29615260865d554ee61aec258c633820a87aeb7dfcf8047a5dfd200c0b"
+   },
+   "hs_map_sha_bound": {
+    "ok": true,
+    "detail": "a4334e79c490e4d8102dd5136ac08c0de1060315981f4ccc527ebffa1b84a3e4"
+   },
+   "val_hs_sha_bound": {
+    "ok": true,
+    "detail": "ef2067e8cb633f521c205a09aa4638c79fef3ba0b4e90e6a54bdc046e5a5550f"
+   },
+   "val_seam_sha_bound": {
+    "ok": true,
+    "detail": "3e55fbfa70b43c36c2ebe30bdbca63ea6c68968a1521ec6d63fd2b698f6598ab"
+   },
+   "val_report_sha_bound": {
+    "ok": true,
+    "detail": "11745c5c6e8fedd7c01611331b4f4c69ec1c00f423d3c39e267823bc3c56c7ca"
+   },
+   "val_keys_sha": {
+    "ok": true
+   },
+   "val_o4_sha": {
+    "ok": true
+   },
+   "prereg04_frozen_sha": {
+    "ok": true
+   },
+   "prereg04_probs_sha_lf": {
+    "ok": true
+   },
+   "questions_sha": {
+    "ok": true,
+    "detail": "73e51bbfd7b051e73cbb62af4b180c403d2422f122240c5e67e9c92303776db5"
+   },
+   "tools_now_eq_frozen": {
+    "ok": true,
+    "detail": {
+     "tools/p07_hs.py": "b27ea371bdc1477558effb9ca86c540805dcced971d983226e15fb5e19b7b8dc",
+     "tools/p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142",
+     "results/prereg07/explore/pilot_humansl/hs_lib.py": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+     "results/prereg07/explore/pilot_humansl/pilot_run.py": "b0d127fd1d5a83af5b17ec3df1dccc85d94b11c3479d33cac07448a3796a3936",
+     "results/prereg07/explore/pilot_humansl/pilot_fuse.py": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+     "results/prereg05/explore/u1/u1_lib.py": "225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7"
+    }
+   },
+   "tools_now_eq_apply": {
+    "ok": true
+   },
+   "p07_hs_eq_val_report": {
+    "ok": true
+   },
+   "tools_in_freeze_commit_tree_eq": {
+    "ok": true
+   },
+   "pinned_eq_registration": {
+    "ok": true
+   },
+   "clean:results/prereg07/rank/frozen_config.json": {
+    "ok": true,
+    "detail": ""
+   },
+   "clean:results/prereg07/rank/hs_map.npz": {
+    "ok": true,
+    "detail": ""
+   },
+   "clean:results/prereg07/hs/val_hs.npz": {
+    "ok": true,
+    "detail": ""
+   },
+   "clean:results/prereg07/hs/val_report.json": {
+    "ok": true,
+    "detail": ""
+   },
+   "clean:results/prereg07/hs/val_seam_moves.npz": {
+    "ok": true,
+    "detail": ""
+   },
+   "clean:results/prereg07/rank/apply_report.json": {
+    "ok": true,
+    "detail": ""
+   },
+   "clean:results/prereg07/rank/rank_val_probs.csv": {
+    "ok": true,
+    "detail": ""
+   },
+   "clean:results/prereg07/rank/pred_A.csv": {
+    "ok": true,
+    "detail": ""
+   },
+   "clean:results/prereg07/rank/pred_B.csv": {
+    "ok": true,
+    "detail": ""
+   },
+   "clean:results/prereg07/rank/decide_summary.json": {
+    "ok": true,
+    "detail": ""
+   },
+   "clean:results/prereg07/rank/check_submission.txt": {
+    "ok": true,
+    "detail": ""
+   },
+   "freeze_commit": {
+    "ok": true,
+    "detail": [
+     "973c107",
+     "973c107",
+     "2026-10-05T13:29:57+08:00"
+    ]
+   },
+   "val_started_after_freeze_commit": {
+    "ok": true,
+    "detail": {
+     "freeze_commit": "2026-10-05T13:29:57+08:00",
+     "first_chunk_started_utc": "2026-10-05T05:30:40+00:00",
+     "earliest_chunk_start_from_created_minus_seconds": "2026-10-05T05:30:40.987639+00:00",
+     "val_hs_commits": [
+      "c22b8ad 2026-10-05T18:28:05+08:00"
+     ]
+    }
+   },
+   "val_report_freeze_time_matches_git": {
+    "ok": true
+   },
+   "chunks_96_sha_match_val_report": {
+    "ok": true,
+    "detail": []
+   },
+   "chunk_metadata_registered": {
+    "ok": true,
+    "detail": []
+   },
+   "chunks_created_after_freeze": {
+    "ok": true,
+    "detail": []
+   },
+   "chunk_refs_0_to_n": {
+    "ok": true
+   },
+   "val_hs_equals_chunks": {
+    "ok": true
+   },
+   "target_turn_parity_matches_colour": {
+    "ok": true,
+    "detail": 0
+   },
+   "per_move_counts_eq_counts": {
+    "ok": true,
+    "detail": 0
+   },
+   "per_move_logp_sum_close_to_sums": {
+    "ok": true,
+    "detail": {
+     "max_abs_diff_float32_vs_float64": 0.0
+    }
+   },
+   "val_hs_keys_eq_val_keys": {
+    "ok": true
+   },
+   "counts_1589_19156": {
+    "ok": true
+   },
+   "question_file_slots_eq_val_hs": {
+    "ok": true,
+    "detail": 19156
+   },
+   "sgf_move_counts_eq_hs": {
+    "ok": true,
+    "detail": {
+     "total_mismatch": 0,
+     "target_mismatch": 0
+    }
+   },
+   "o4_cross_check_independent": {
+    "ok": true
+   },
+   "no_failed_games": {
+    "ok": true
+   }
+  },
+  "fusion_hs_decide_formats": {
+   "all_games_parsed_all_questions_ok": {
+    "ok": true,
+    "detail": 0
+   },
+   "n_eq_parsed_games_per_question": {
+    "ok": true
+   },
+   "basis_shape": {
+    "ok": true,
+    "detail": [
+     10,
+     9
+    ]
+   },
+   "q02_my_fusion_vs_prereg04_probs": {
+    "ok": true,
+    "detail": {
+     "max_abs_diff": 1.1102230246251565e-16,
+     "bytes_equal": false
+    }
+   },
+   "q02_seam_tool_passed": {
+    "ok": true
+   },
+   "E_O4_my_pool": {
+    "ok": true,
+    "detail": 5.329070518200751e-15
+   },
+   "hs_map_profiles_order": {
+    "ok": true
+   },
+   "hs_map_lambda": {
+    "ok": true
+   },
+   "lp_HS_my_vs_tool": {
+    "ok": true,
+    "detail": 0.0
+   },
+   "E_HS_my_vs_tool_pooled_and_masked": {
+    "ok": true,
+    "detail": {
+     "pooled": 7.105427357601002e-15,
+     "masked_vs_pooled": 0.0,
+     "info": {
+      "games_in_questions": 19156,
+      "unusable_slots_in_questions": 0,
+      "path": "pooled"
+     }
+    }
+   },
+   "frozen_theta_layout": {
+    "ok": true
+   },
+   "Q02H_my_fusion_vs_rank_val_probs": {
+    "ok": true,
+    "detail": {
+     "max_abs_diff": 7.771561172376096e-16,
+     "bytes_equal": false
+    }
+   },
+   "rank_val_probs_layout": {
+    "ok": true,
+    "detail": 4.440892098500626e-16
+   },
+   "pred_A_rule_A": {
+    "ok": true,
+    "detail": 0
+   },
+   "pred_B_rule_B": {
+    "ok": true,
+    "detail": 0
+   },
+   "pred_B_rule_B_on_my_probs": {
+    "ok": true
+   },
+   "direction_rho_recomputed": {
+    "ok": true,
+    "detail": {
+     "rho": 0.9482508617162649,
+     "threshold": 0.4735043091251207
+    }
+   },
+   "outputs_sha_eq_apply_report": {
+    "ok": true,
+    "detail": {
+     "rank_val_probs.csv": "6ae2db6025a903eb5c58af9418dc203c0b6e84dd664049f85dfa850e57dc28c1",
+     "pred_A.csv": "b229be2c414f7af22310bc304d6da9de5b6406698ec8ce9c0d40e7c146b40a41",
+     "pred_B.csv": "51d7dbf82d50c3848acadb6934069580bd3ade7e6ca71ad5d1023633a18a26fa",
+     "decide_summary.json": "49e778c525760f011f1ba07226b485b0b24a7d6b54ebe211367d3d434b64479d",
+     "check_submission.txt": "f3ad400ac52d3b10070200f312ad089d3b6b14b44bd78d865a446eb70d2835f8"
+    }
+   },
+   "ruleB_diff_count_eq_report": {
+    "ok": true,
+    "detail": 229
+   },
+   "check_submission_rerun": {
+    "ok": true,
+    "detail": {
+     "pred_A.csv": {
+      "exit": 0,
+      "tail": "OK: rank submission covers all 1589 questions and passes every strict check\n"
+     },
+     "pred_B.csv": {
+      "exit": 0,
+      "tail": "OK: rank submission covers all 1589 questions and passes every strict check\n"
+     }
+    }
+   }
+  }
+ },
+ "method_notes": [
+  "Validation HS chunks: all 96 chunk files re-hashed against val_report.json; val_hs.npz re-assembled from the chunks (side 0 = target) and equal bit for bit; opponent side all zero.",
+  "Colour / slot: per-move records in every chunk have target turns of parity matching the question colour (B even, W odd), 0 violations; per-move counts and log p sums reproduce counts / sums; val_hs keys == val_keys.npz == question-file slots (1,589 questions, 19,156 games); total and target move counts from a regex over the question file's SGF equal HS n_moves / counts for all 19,156 games; equal to val_o4.npz moves_parsed / n_moves[:,0,:] as well.",
+  "Freeze before validation HS: frozen_config.json and hs_map.npz last committed in 973c107 (2026-10-05T13:29:57+08:00 = 05:29:57Z); first chunk started 05:30:40Z; every chunk created after; val_hs.npz first committed in c22b8ad. Tool files in the 973c107 tree equal the current ones and the SHAs frozen_config, val_report and apply_report record.",
+  "Fusion: independent numpy re-implementation of p = softmax(e^a (n/12)^gamma (m_C5 + sum_j w_j E_j + B beta)) with prereg04's theta reproduces results/prereg04/rank/rank_val_probs.csv to 1.1e-16; with frozen_config's theta (terms OP, O4, SWA, SWB, HS; a, gamma, w, beta equal to the params record and within the registered bounds) and E_HS = mean of my own lp_HS over each question's C5-parsed usable games it reproduces results/prereg07/rank/rank_val_probs.csv to 7.8e-16 (not byte-identical only because of summation order; rule A / B choices identical). lp_HS recomputed from hs_map.npz (mu, sd, W, b; lambda 1e-4; profile order as registered) equals the tool's exactly. Masked E_HS equals pooled E_HS (0 unusable games).",
+  "m_C5, OP, SWA, SWB inputs come from prereg04's readers via p07_rank_fuse.q02_validation (whose Q02 output is byte-identical to the committed prereg04 probabilities); E_O4 was also recomputed independently from val_o4.npz.",
+  "decide: pred_A = argmax, pred_B = argmax p_k + e^-1 (p_{k-1} + p_{k+1}) with zero edges, recomputed independently, 0 differences; decide_summary.json SHA fields equal the files; check_submission.py re-run on both predictions with the question file: exit 0.",
+  "Direction check recomputed: Spearman rho 0.9482508617162649 >= threshold 0.4735043091251207 (max(0.5 x rho_eval 0.9470086182502414, 0.078))."
+ ],
+ "observations_not_errors": [
+  "frozen_config.json's tool record lists tools/p07_hs.py and tools/p07_rank_fuse.py as dirty at tune time (the --precommit order deviation disclosed in PREREG_07 rev 2); their SHAs equal the committed 3be5349 / 973c107 versions, so this does not affect Q02H."
+ ],
+ "auditor_note": "Independent pre-scoring audit agent (Claude, launched by the C10 main session). No program error affecting Q02H's predictions was found. This file states facts only; it makes no recommendation.",
+ "created": "2026-10-05T10:32:15+00:00"
+}

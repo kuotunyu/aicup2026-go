@@ -1,0 +1,61 @@
+{
+ "what": "PREREG_08 5.1 step 3: the baseline of the R20, 04 and 07 fake-test dry runs that the 08 test-day kit must leave byte-identical until it is merged. The baseline is the existing results/test07/design/t07_fake_golden.json (files_sha256 r20 / t04 / t07, 27 files; its R20 part equals results/test04/design/r20_fake_golden.json), pinned by tests/test_t07_hygiene.py Golden and by results/test07/design/p07_path_fingerprint.json. This record only adds the re-run on main before the 08 branch: 'C10_SLOW=1 C10_KEEP=1 pytest tests/test_t07_dryrun.py' (CPU, fake scorer, no GPU), tree outside the repository; every file equals the golden. Before merging p08-testday, run the same command (and C10_SLOW=1 tests/test_t04_dryrun.py if 04 files are touched) and require the same SHA-256 values.",
+ "recorded": "2026-10-09",
+ "git_head": "2c371e4fd37b3f59eda95556fafdae9715a7758f",
+ "golden": {
+  "path": "results/test07/design/t07_fake_golden.json",
+  "sha256_lf": "3b20c99ee162475eccc10d55fce17235604e2424034fd42c5da8331eab6eb9c9"
+ },
+ "command": "C10_SLOW=1 C10_KEEP=1 .venv/Scripts/python.exe -m pytest -q -p no:cacheprovider tests/test_t07_dryrun.py",
+ "pytest": "25 passed, 29 subtests passed in 271.20s (T07DryRun.test_golden included)",
+ "n_files": 27,
+ "mismatches_vs_golden": [],
+ "files_sha256": {
+  "r20": {
+   "out/rank/rank_test_probs.csv": "bb76e6cf7b2bbed94113c536d1b7d4596230125d987c46ffd01eeb9b354d5b59",
+   "out/rank/pred_A.csv": "e04031de197e4ec603e6cc90e949e227b293b2528d823f1402d2a25230776553",
+   "out/rank/pred_B.csv": "d9b9801b3df85c75e5932ce228eebbeb8a76c43b40d2efd02700ce8807490d97",
+   "out/rank/submission_rank.csv": "d9b9801b3df85c75e5932ce228eebbeb8a76c43b40d2efd02700ce8807490d97",
+   "out/rank/seam_val/rank_val_probs.csv": "a83700432fce5d7d26653fdaee345b0c894729fdff0029a244ed94e06c803b63",
+   "out/rank/seam_val/pred_A.csv": "6729fe1dd62eda19a46d05daa9a0abd522e73bf9bcb412e72888c839fbe7f8b2",
+   "out/rank/seam_val/pred_B.csv": "863a62582424adddc9c2e1821fcc056008bd651e103c19ec8ada98a14f87a2fd"
+  },
+  "t04": {
+   "results/test04/opp/o4_seam_val.npz": "30d312c02c357f6761567099003885be5e08635b6e6c0b49d71baac137cd9cd4",
+   "results/test04/opp/o4_public.npz": "2d54353ce03370c4ccae46a9917d5b8a180c68b5f6799c953c005dfe9f929fb4",
+   "results/test04/opp/o4_private.npz": "2edfd1cdb27c9da116b97b34fbe79a13683019456a6ed6adfd66fca4a2bca036",
+   "results/test04/rank/rank_test_probs.csv": "0324e141f3e296e3178a8f3581e262cb5522e38e3e3f8b1fc355ed2413d1252e",
+   "results/test04/rank/pred_A.csv": "8fa9c69dff3c1d99809141bbc6ea0135607186ac20c0bf53709fa09825836b57",
+   "results/test04/rank/pred_B.csv": "a42c09fa99f4c570dcb95270d73f3cacd2ee47bad0ea886fa5f574f6451a7dce",
+   "results/test04/rank/submission_rank.csv": "a42c09fa99f4c570dcb95270d73f3cacd2ee47bad0ea886fa5f574f6451a7dce",
+   "results/test04/rank/seam_val/rank_val_probs.csv": "3c7ab658dc558ce8c6aefdd7b0747de1a60de575d151e9eee96ca6775f442e5c",
+   "results/test04/rank/seam_val/pred_A.csv": "6a6bb3c2e63761bc7196661c99999cec499fae1b38bbb3a7bb9d512e26487739",
+   "results/test04/rank/seam_val/pred_B.csv": "27b6d225d0afc8db9183ae970ee19946ff819ec5ccb2be6a1816ef4338efff79"
+  },
+  "t07": {
+   "results/test07/hs/seam_hs.npz": "ae65b55bfa9538769198bff884765faa82e6ec74ca98d1e83f73d746af069340",
+   "results/test07/hs/public_hs.npz": "571cfd730bafd4150eae62dc41763423ab520e03386677d958eac3754e811e82",
+   "results/test07/hs/private_hs.npz": "26a8910c4f1e03a246ba5ed3fecf3d8cce3f192024433667a01a1f2f40489f1e",
+   "results/test07/rank/rank_test_probs.csv": "ede52634862ed421b0fd76a0b163e39a6596ad7e4e321d59b8f9ad9cf8ebe44c",
+   "results/test07/rank/pred_A.csv": "605e64fd4eb52e2be4685cd967157b85decfe7ced7b3fead9bf3b88cf6154585",
+   "results/test07/rank/pred_B.csv": "d3bcad47e43d41c7106fd4f98260ad881b1165b843ef5e81370d5c26327cb7c6",
+   "results/test07/rank/submission_rank.csv": "d3bcad47e43d41c7106fd4f98260ad881b1165b843ef5e81370d5c26327cb7c6",
+   "results/test07/rank/seam_val/rank_val_probs.csv": "6ae2db6025a903eb5c58af9418dc203c0b6e84dd664049f85dfa850e57dc28c1",
+   "results/test07/rank/seam_val/pred_A.csv": "b229be2c414f7af22310bc304d6da9de5b6406698ec8ce9c0d40e7c146b40a41",
+   "results/test07/rank/seam_val/pred_B.csv": "51d7dbf82d50c3848acadb6934069580bd3ade7e6ca71ad5d1023633a18a26fa"
+  }
+ },
+ "tools_sha256_lf": {
+  "tools/t02_fake_tests.py": "17cf88024ac8b34c5f473d9bf5ca8d1201f1e2779e6d7b535e9b3fac8fbf34d7",
+  "tools/t02_checks.py": "a6fb40f99e7af19bfe4eef3f5cbb1d0049a8f0c14a7cc95cddfac73884f99cc8",
+  "tools/t02_rank.py": "e3485e073a20843654f622828283af4ae3985141e08378cefb59d6c6f2495874",
+  "tools/t04_fake_tests.py": "928d6989b3db72a4161aebc159a05b1b9078c99fc6541b1ddff46aae2bf1b5bc",
+  "tools/t04_rank.py": "f212879e5aaf6fe90060e2b8f03a5e61e8d8704c9dd8204e9c42e65b589940e4",
+  "tools/t07_fake_tests.py": "934efe1268ebb776aab5aab95b31ad299da804a1933ce7261238097083c9948c",
+  "tools/t07_rank.py": "2c02e5c5d462c58393856bb286ca910881fb9677a5d15bf49e767909174f9f27",
+  "tools/p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142",
+  "tools/check_submission.py": "b5c7c300cca4fcd5b243e4579417453699777e99bd4aff88dcbf6805e9346144",
+  "tests/test_t04_dryrun.py": "81cb12ec16a6588c8aac213390008104f881b29165ed2ec255593764af163520",
+  "tests/test_t07_dryrun.py": "b4a25e91549ac71bdc85ea87c5210a7e1f86f405a24b084558a7d17cfdd10514"
+ }
+}

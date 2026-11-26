@@ -1,0 +1,5 @@
+{
+ "set": "public",
+ "question_file": "tests/rank_prediction_test_public.csv",
+ "sha256": "75baefaded49ad40584bc52d8bd345410a5c6601c4034ff903746e0d92252bb4"
+}

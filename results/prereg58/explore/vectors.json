@@ -1,0 +1,86 @@
+{
+ "format": "c10-prereg58 vectors v1",
+ "created": "2026-11-20T15:45:15",
+ "head": {
+  "classes": 3685,
+  "ckpt_sha256": "49c1c8f10c927922ca9f3ab3f7d2aaa37a24ba852d6acf77d3042ce1fd495939",
+  "ckpt_step": 320000,
+  "class_ids_sha256": "9c1db9001568040a648276d3993c6012afc914abd2466f7d9c5411d667cfa066",
+  "sha256": "66bb7d35fa187da47609f05cc8a8bb4c8544f75f2be1f0be0cab3f298f4ab723",
+  "classes_per_rank": [
+   428,
+   361,
+   415,
+   544,
+   220,
+   325,
+   318,
+   322,
+   354,
+   398
+  ]
+ },
+ "inner_opponent_side": {
+  "file": "data/prereg58/emb_opp_inner/V2_step_320000_raw_tta1/rows_inner.npz",
+  "sha256": "dbe1ad449e2a3e6c0f84f89f4d7902cc2520ba0fb92dfcd96ecd01b466b7a2c2",
+  "games": 73169,
+  "rows_equal_inner_rows": true,
+  "games_without_sample": 0,
+  "ckpt_is_s0": true,
+  "weights": "raw",
+  "tta": 1,
+  "mode": null,
+  "side": "opp",
+  "cache_dir": "data/prereg44/cache/inner",
+  "finite": true,
+  "ok": true
+ },
+ "kernel_opponent_side": {
+  "D": {
+   "file": "data/prereg58/emb_opp_D/V2_step_320000_raw_tta1/store_D.npz",
+   "sha256": "b70f5782b2fa16c3698e3aa9846e59370f1533f8052524e72652188faf7cdc4f",
+   "games": 94015,
+   "games_without_sample": 0,
+   "ckpt_is_s0": true,
+   "weights": "raw",
+   "tta": 1
+  },
+  "E": {
+   "file": "data/prereg58/emb_opp_E/V2_step_320000_raw_tta1/store_E.npz",
+   "sha256": "876058667746a58b26ae06720462791f5a0dd384fb443b9c602ae0f86458f62d",
+   "games": 193736,
+   "games_without_sample": 0,
+   "ckpt_is_s0": true,
+   "weights": "raw",
+   "tta": 1
+  }
+ },
+ "sanity": {
+  "references_same_games": true,
+  "own_vs_S0_store_D": {
+   "games": 64,
+   "rows_equal": true,
+   "count_equal": true,
+   "max_abs_diff": 0.05041694641113281,
+   "min_cosine": 0.9999984791663632,
+   "ref_abs_mean": 6.265330791473389,
+   "side": "own",
+   "device_note": "this wrapper on CPU fp32, the reference on cuda fp16 autocast",
+   "ok": true
+  },
+  "opp_vs_chain_store_D": {
+   "games": 64,
+   "rows_equal": true,
+   "count_equal": true,
+   "max_abs_diff": 0.04721641540527344,
+   "min_cosine": 0.9999981921780112,
+   "ref_abs_mean": 5.429958343505859,
+   "side": "opp",
+   "device_note": "this wrapper on CPU fp32, the reference on cuda fp16 autocast",
+   "ok": true
+  },
+  "own_vs_opp_mean_cosine_record": 0.12679770001207902
+ },
+ "ok": true,
+ "peak_working_set_gb": 0.39
+}

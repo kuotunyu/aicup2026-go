@@ -1,0 +1,38 @@
+Sat Sep 26 06:00:52 UTC 2026
+inner_keys: 73556 games
+bank: 636 players, 11813 games; fit players 508 {'D': 58, 'C': 48, 'B': 58, 'A': 70, '1D': 33, '2D': 46, '3D': 44, '4D': 47, '5D': 51, '6D': 53}
+questions: fit 25400, eval 127200
+wrote D:\AI-Portfolio\competitions\aicup2026-go\results\prereg02\rank\pseudo_inner.json
+inner: 73556 games (12s)
+val slots: 19156 (12s)
+fit: 720307 games parsed (42s)
+counted: 429548 contexts, 515494 entries (47s)
+inner games 73556 (with score 73556), val slots 19156 (with score 19156)
+per-game argmax accuracy of the opening alone on inner: 0.1751318723149709
+build_id c0cb86b47cd3f95c75940cc71b3b7ca24d43c3390c1a510bf96c6ae68e0f93a6; wrote opening_inner.npz, opening_val.npz, opening_report.json in D:\AI-Portfolio\competitions\aicup2026-go\results\prereg02\rank
+inputs ready: fit 25400 questions, eval 127200 questions, sources ['C1', 'C2', 'C3', 'C4', 'C5'] (4s)
+R00 C1 prob cal=0 op=0: OOF rank-balanced 0.4962, question mean 0.4982 (4s)
+R01 C1 prob cal=1 op=0: OOF rank-balanced 0.5274, question mean 0.5316 (6s)
+R02 C1 log  cal=1 op=0: OOF rank-balanced 0.5365, question mean 0.5408 (8s)
+R03 C4 prob cal=1 op=0: OOF rank-balanced 0.5408, question mean 0.5466 (10s)
+R04 C4 log  cal=1 op=0: OOF rank-balanced 0.5634, question mean 0.5666 (12s)
+R05 C3 prob cal=1 op=0: OOF rank-balanced 0.5278, question mean 0.5300 (14s)
+R06 C3 log  cal=1 op=0: OOF rank-balanced 0.5302, question mean 0.5343 (17s)
+R07 C2 prob cal=1 op=0: OOF rank-balanced 0.5373, question mean 0.5432 (19s)
+R08 C2 log  cal=1 op=0: OOF rank-balanced 0.5455, question mean 0.5540 (21s)
+R09 C5 prob cal=1 op=0: OOF rank-balanced 0.5590, question mean 0.5645 (24s)
+R10 C5 log  cal=1 op=0: OOF rank-balanced 0.5687, question mean 0.5748 (25s)
+R11 C1 prob cal=1 op=1: OOF rank-balanced 0.5479, question mean 0.5502 (27s)
+R12 C1 log  cal=1 op=1: OOF rank-balanced 0.5563, question mean 0.5590 (29s)
+R13 C4 prob cal=1 op=1: OOF rank-balanced 0.5588, question mean 0.5636 (31s)
+R14 C4 log  cal=1 op=1: OOF rank-balanced 0.5751, question mean 0.5777 (33s)
+R15 C3 prob cal=1 op=1: OOF rank-balanced 0.5487, question mean 0.5496 (35s)
+R16 C3 log  cal=1 op=1: OOF rank-balanced 0.5519, question mean 0.5554 (37s)
+R17 C2 prob cal=1 op=1: OOF rank-balanced 0.5571, question mean 0.5618 (39s)
+R18 C2 log  cal=1 op=1: OOF rank-balanced 0.5611, question mean 0.5680 (42s)
+R19 C5 prob cal=1 op=1: OOF rank-balanced 0.5761, question mean 0.5814 (44s)
+R20 C5 log  cal=1 op=1: OOF rank-balanced 0.5855, question mean 0.5906 (46s)
+selected R20 (OOF rank-balanced 0.5855; best R20 0.5855; R00 0.4962); gate PASSED (delta +0.0893, need 0.01)
+wrote tune_report.json and frozen_config.json in D:\AI-Portfolio\competitions\aicup2026-go\results\prereg02\rank; commit frozen_config.json before apply, together with competition 1's frozen_config.json (PREREG_02 rev 3, section 7 item 6: both frozen before any apply)
+exit=0
+Sat Sep 26 06:02:43 UTC 2026

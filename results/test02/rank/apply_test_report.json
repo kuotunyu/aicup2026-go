@@ -1,0 +1,353 @@
+{
+ "what": "test02 competition 2 apply (PREREG_02 rev 5 section 9 items 3 and 5): frozen R20 per set, rule B, submission_rank.csv = pred_B.csv (public rows then private rows)",
+ "created": "2026-11-04T15:13:30+08:00",
+ "seconds": 1.2,
+ "mode": "real",
+ "combo": {
+  "id": "R20",
+  "source": "C5",
+  "pool": "log",
+  "calibrated": true,
+  "opening": true
+ },
+ "params": {
+  "a": 1.1602079071066613,
+  "gamma": 0.438654254867862,
+  "w": 0.11638934532134285,
+  "beta": [
+   0.1831710576335903,
+   0.17373812758386764,
+   0.23477712341286536,
+   0.1556856202566642,
+   0.2128731851817358,
+   0.09182149799190883,
+   0.09707244014432542,
+   -0.09104100845360842,
+   -0.4582006134934143
+  ],
+  "b": [
+   0.3100139637054239,
+   0.05097096976577672,
+   -0.03229241398791922,
+   -0.16153309764287382,
+   -0.13227195954645776,
+   -0.22621339836523235,
+   -0.13106620918270362,
+   -0.149830824384337,
+   0.037535700460622094,
+   0.434687269177701
+  ]
+ },
+ "fallback_used": false,
+ "fallback": null,
+ "seam_combo": {
+  "id": "R20",
+  "source": "C5",
+  "pool": "log",
+  "calibrated": true,
+  "opening": true
+ },
+ "gate": {
+  "threshold": 0.01,
+  "selected_minus_R00": 0.08930484391883226,
+  "passed": true,
+  "meaning": "only when passed is the local validation set scored (PREREG_02 1.2); otherwise record 'not submitted' and keep this scoring slot"
+ },
+ "seam_local": {
+  "passed": true,
+  "max_abs_diff": 0.0,
+  "tol": 0.0001,
+  "tol_check": {
+   "tol": 0.0001,
+   "notebook_tol": 0.0001,
+   "seam_dump_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "prereg02_dump_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "same_gpu": true,
+   "rule": "1e-4 when the seam_val dump's GPU (its _DONE marker) equals the prereg02 dump's GPU, else 1e-3"
+  },
+  "rule_b_differences": 0,
+  "byte_identical_probs": true,
+  "byte_identical_pred_B": true,
+  "warnings": []
+ },
+ "sets": {
+  "seam_val": {
+   "combo": "R20",
+   "questions": 1589,
+   "questions_without_parsed_game": 0,
+   "questions_without_parsed_game_ids": [],
+   "games": 19156,
+   "games_parsed": 19156,
+   "inputs_sha256": {
+    "val_keys.npz": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+    "val_p02e9_d4.npz": "ec0b729d805eb9f3458f7a497444b099b8ec47e5cec73703ae4b8bf9cf0a11b2",
+    "questions": "73e51bbfd7b051e73cbb62af4b180c403d2422f122240c5e67e9c92303776db5"
+   },
+   "dump_weights_sha256": "423581b4fddd5c2c160ebf691f4e86b9e00c4fe743d5cfb23df7891f4a2ca939",
+   "dump_marker": {
+    "file": "_DONE_val_p02e9_d4.json",
+    "sha256_matches_file": true,
+    "rows": 19156,
+    "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "torch": "2.11.0+cu128",
+    "cudnn": 91900,
+    "run": 1
+   }
+  },
+  "public": {
+   "combo": "R20",
+   "questions": 400,
+   "questions_without_parsed_game": 0,
+   "questions_without_parsed_game_ids": [],
+   "games": 5000,
+   "games_parsed": 5000,
+   "inputs_sha256": {
+    "val_keys.npz": "01fc5858d1607d56fc1b72cfc5aac658c85cef7704c05b39e3ac7220732208fa",
+    "val_p02e9_d4.npz": "5f6159946fa0277aea3f44b409811b16374e5238da276147fc4f23d37f8473db",
+    "questions": "75baefaded49ad40584bc52d8bd345410a5c6601c4034ff903746e0d92252bb4"
+   },
+   "dump_weights_sha256": "423581b4fddd5c2c160ebf691f4e86b9e00c4fe743d5cfb23df7891f4a2ca939",
+   "dump_marker": {
+    "file": "_DONE_val_p02e9_d4.json",
+    "sha256_matches_file": true,
+    "rows": 5000,
+    "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "torch": "2.11.0+cu128",
+    "cudnn": 91900,
+    "run": 1
+   },
+   "rule_b_distribution": {
+    "D": 45,
+    "C": 47,
+    "B": 49,
+    "A": 45,
+    "1D": 52,
+    "2D": 27,
+    "3D": 27,
+    "4D": 41,
+    "5D": 37,
+    "6D": 30
+   },
+   "mean_probability_per_level": {
+    "D": 0.11909771367537703,
+    "C": 0.11098077985906299,
+    "B": 0.12215051005456484,
+    "A": 0.10566140719868936,
+    "1D": 0.11102576085651783,
+    "2D": 0.08957112539965201,
+    "3D": 0.08451803434884426,
+    "4D": 0.08770817789285423,
+    "5D": 0.086175747722108,
+    "6D": 0.0831107429923289
+   }
+  },
+  "private": {
+   "combo": "R20",
+   "questions": 400,
+   "questions_without_parsed_game": 0,
+   "questions_without_parsed_game_ids": [],
+   "games": 5000,
+   "games_parsed": 5000,
+   "inputs_sha256": {
+    "val_keys.npz": "94037ca1d286480aeb32c535af7fab53407017f052ed23b0b9f87cebebb1eede",
+    "val_p02e9_d4.npz": "63b782f98e8d294d7ab3d4f1f016399658778ef4b550a61920169319dbc9bb39",
+    "questions": "c8a6a1923af7324fcae6b22987711d1e57b5efe9f882a2a7b42604399d3e2edc"
+   },
+   "dump_weights_sha256": "423581b4fddd5c2c160ebf691f4e86b9e00c4fe743d5cfb23df7891f4a2ca939",
+   "dump_marker": {
+    "file": "_DONE_val_p02e9_d4.json",
+    "sha256_matches_file": true,
+    "rows": 5000,
+    "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "torch": "2.11.0+cu128",
+    "cudnn": 91900,
+    "run": 1
+   },
+   "rule_b_distribution": {
+    "D": 30,
+    "C": 48,
+    "B": 50,
+    "A": 41,
+    "1D": 47,
+    "2D": 24,
+    "3D": 42,
+    "4D": 34,
+    "5D": 46,
+    "6D": 38
+   },
+   "mean_probability_per_level": {
+    "D": 0.08974315203897372,
+    "C": 0.10831515688832068,
+    "B": 0.11705739300043883,
+    "A": 0.10460058824018548,
+    "1D": 0.10282675156555354,
+    "2D": 0.08871012203299551,
+    "3D": 0.09331738150822586,
+    "4D": 0.0993429070447262,
+    "5D": 0.1036367693781182,
+    "6D": 0.09244977830246175
+   }
+  }
+ },
+ "questions_without_parsed_game": {
+  "public": 0,
+  "private": 0
+ },
+ "missing_fill": "D",
+ "games_parsed": {
+  "public": 5000,
+  "private": 5000
+ },
+ "decide_summary": {
+  "n_questions": 800,
+  "n_missing": 0,
+  "n_A_ne_B": 101,
+  "distribution_B": {
+   "D": 75,
+   "C": 95,
+   "B": 99,
+   "A": 86,
+   "1D": 99,
+   "2D": 51,
+   "3D": 69,
+   "4D": 75,
+   "5D": 83,
+   "6D": 68
+  }
+ },
+ "check_submission": {
+  "mode": "official",
+  "questions": [
+   "data/test/rank_prediction_test_public.csv",
+   "data/test/rank_prediction_test_private.csv"
+  ],
+  "errors": []
+ },
+ "checks": {
+  "frozen_config": {
+   "path": "results/prereg02/rank/frozen_config.json",
+   "sha256": "44a16e09679cc6815d41d9a1255882f4a38599cd97cbf66996d447709b4f2efa",
+   "commit_check": {
+    "frozen_config": "results/prereg02/rank/frozen_config.json",
+    "git_head": "7d53aa9feba8c1e74317032f8a46de8b652cec34"
+   }
+  },
+  "own_files_commit_check": {
+   "files": 3,
+   "rule": "tracked by git and unchanged against HEAD",
+   "git_head": "7d53aa9feba8c1e74317032f8a46de8b652cec34"
+  },
+  "notebook_outputs_commit_check": {
+   "files": 22,
+   "rule": "tracked by git and unchanged against HEAD",
+   "git_head": "7d53aa9feba8c1e74317032f8a46de8b652cec34"
+  },
+  "notebook": {
+   "config_sha256": "ed11044631d6132b357472e967a6f0436a2c40825dde59a0a7aef4d2d7d94fdc",
+   "run_log_status": "completed",
+   "seam_check_passed": true,
+   "seam_check_tol": 0.0001,
+   "seam_check_bitwise_equal": true,
+   "smoke": false,
+   "rehearsal": false,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "torch": "2.11.0+cu128",
+   "cudnn": 91900,
+   "weights": {
+    "path": "prereg02/rank/ckpt/epoch_9.pth",
+    "sha256": "423581b4fddd5c2c160ebf691f4e86b9e00c4fe743d5cfb23df7891f4a2ca939"
+   },
+   "notebook": "colab/test02_rank.ipynb",
+   "notebook_sha256": "dc7526bef020a0bec2ba23168c109a067c62013bf4a457a80514c3f7f9024551",
+   "same_as_repo_notebook": true
+  },
+  "test_files_sha256": {
+   "MANIFEST.json": "b9e9e8a6a7fc8b7b696d2d4501563cb99aeac6a95e327f3a5e686d04bbdd0bbe",
+   "rank_prediction_test_public.csv": "75baefaded49ad40584bc52d8bd345410a5c6601c4034ff903746e0d92252bb4",
+   "rank_prediction_test_private.csv": "c8a6a1923af7324fcae6b22987711d1e57b5efe9f882a2a7b42604399d3e2edc"
+  },
+  "sets": {
+   "seam_val": {
+    "questions": "data/local/rank_val_questions.csv",
+    "questions_sha256": "73e51bbfd7b051e73cbb62af4b180c403d2422f122240c5e67e9c92303776db5"
+   },
+   "public": {
+    "questions": "data/test/rank_prediction_test_public.csv",
+    "questions_sha256": "75baefaded49ad40584bc52d8bd345410a5c6601c4034ff903746e0d92252bb4"
+   },
+   "private": {
+    "questions": "data/test/rank_prediction_test_private.csv",
+    "questions_sha256": "c8a6a1923af7324fcae6b22987711d1e57b5efe9f882a2a7b42604399d3e2edc"
+   }
+  },
+  "t1": {
+   "path": "results/test02/checks/rank/t1.json",
+   "sha256": "9ddf1cc98c4085493c7ec81f539acaba5e8a2701ba849d41bf168368a8bcfb2c",
+   "verdict": "PASS"
+  },
+  "dump_env": {
+   "same": true,
+   "keys": [
+    "gpu_name",
+    "torch",
+    "cudnn"
+   ],
+   "env": {
+    "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "torch": "2.11.0+cu128",
+    "cudnn": 91900
+   }
+  }
+ },
+ "rerun": {
+  "rerun": false,
+  "reason": null,
+  "replaced_sha256": {}
+ },
+ "paths": {
+  "results_dir": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\test02",
+  "rank_dir": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\test02\\rank",
+  "tests_dir": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\data\\test",
+  "out_dir": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\test02\\rank",
+  "checks_dir": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\test02\\checks"
+ },
+ "inputs_sha256": {
+  "opening_test.npz": "6863ccd053837d30be070a2e0d0d3e3968b69636936dd33414221513886d0e07",
+  "prereg02 rank_val_probs.csv": "a83700432fce5d7d26653fdaee345b0c894729fdff0029a244ed94e06c803b63",
+  "prereg02 pred_B.csv": "863a62582424adddc9c2e1821fcc056008bd651e103c19ec8ada98a14f87a2fd"
+ },
+ "outputs_sha256": {
+  "rank_test_probs.csv": "400a571f6a9646d3e9853b3ae280c37c4acb0933643e9797cac121f43a819f66",
+  "pred_A.csv": "3c5aaacfebf7b2f9334fc1360baf396f42a3bb772b3792b8ebebca87ef8c1e7f",
+  "pred_B.csv": "711b3d1b73a31d50e243df03458e70970d0f7d50faf7b6e1e2d9eaae60b9558a",
+  "decide_summary.json": "29455637a55ef487a34455e31073ad5d4a033122d8a93a7e8db055b4fd178cb9",
+  "submission_rank.csv": "711b3d1b73a31d50e243df03458e70970d0f7d50faf7b6e1e2d9eaae60b9558a"
+ },
+ "tool": {
+  "git_head": "7d53aa9feba8c1e74317032f8a46de8b652cec34",
+  "t02_rank.py_sha256": "e3485e073a20843654f622828283af4ae3985141e08378cefb59d6c6f2495874",
+  "t02_rank.py_tracked": true,
+  "check_submission.py_sha256": "b5c7c300cca4fcd5b243e4579417453699777e99bd4aff88dcbf6805e9346144",
+  "sha256_rule": "sha256 of the file with CRLF folded to LF",
+  "frozen_tools": {
+   "git_head": "7d53aa9feba8c1e74317032f8a46de8b652cec34",
+   "dirty_or_untracked": [],
+   "files_sha256_rule": "sha256 of the file with CRLF folded to LF",
+   "files_sha256": {
+    "p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+    "p02_rank_pseudo.py": "16e5bfdfb2995874ddb11bde1f7a9e786a478b14443453f675a4fb3a480bb098",
+    "p02_rank_opening.py": "a4195fece41aa3d50ecda82d1af93d9c04f49df5fd2157d69dd8a488dea93463",
+    "p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+    "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+    "decide.py": "cf66daf1231b3c2bd60c5b6484245627e133bd0f1cd7ff5557e978da3801d0e3"
+   }
+  }
+ },
+ "environment": {
+  "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1"
+ },
+ "record_only": "rule_b_distribution and mean_probability_per_level per set are recorded for VALIDATION rev 2's check of the official per-level counts; nothing is chosen from them"
+}

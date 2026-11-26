@@ -1,0 +1,195 @@
+{
+ "what": "PREREG_10 4.1 step 2: the baseline of the competition-2 fake-test dry runs (R20, 04, 07, 08, 09) and the competition-1 fake-test dry runs (Q04, 06-OFF, 06-ON) that the 10 test-day kit (branch p10-testday) must leave byte-identical until it is merged (done the way PREREG_09 5.1 recorded results/test09/design/baseline_pre09.json). Competition 2: re-run on main of 'C10_SLOW=1 C10_KEEP=1 pytest tests/test_t09_dryrun.py' (R20 -> 04 -> 07 tree of tests/test_t07_dryrun.py, then 08 and 09; CPU, fake scorer, no GPU), tree outside the repository; all 46 files equal results/test09/design/t09_fake_golden.json, whose r20 / t04 / t07 / t08 parts equal baseline_pre09.json. Competition 1: re-run on main of 'C10_SLOW=1 C10_KEEP=1 pytest tests/test_t06_dryrun.py' (trees q04golden, t06_fromval, t06_official, t06_official_dup outside the repository); Q04 equals results/test06/design/q04_fake_golden.json (files_sha256; the normalised reports are checked by Q04Golden itself); 06 has no golden file, so its outputs are recorded here for the first time: the seam_val top5_off / top5_on equal results/prereg06/player/player_val_top5.csv / player_val_top5_switch.csv byte for byte, and the 06-OFF (from-val and official) and 06-ON (official) submissions equal the SHA prefixes recorded in results/test06/design/build_review.md (62c88e217cb1, c3cabb1f1c4c, bb9dd7588b15). Before merging p10-testday, run the same two commands and require the same SHA-256 values (raw bytes).",
+ "recorded": "2026-10-10",
+ "git_head": "9e819c48267f613fd18718bcf5caa1ac6ca9a004",
+ "golden": {
+  "t09": {
+   "path": "results/test09/design/t09_fake_golden.json",
+   "sha256_lf": "77a3601064405c8dff1234a8c1a9a492adc0c9b1b9a3c7b20e69f733915aebaf"
+  },
+  "pre09": {
+   "path": "results/test09/design/baseline_pre09.json",
+   "sha256_lf": "0e9e01fdb27fba9a8dd4b2fb67617e29c69e9eca820bbaa0c9ab38da1af39db3"
+  },
+  "q04": {
+   "path": "results/test06/design/q04_fake_golden.json",
+   "sha256_lf": "d24d3d583b6bf5e4ba23130afccc0f7c60cbdc6823d86877ccfd0a115847d12a"
+  },
+  "h6p_top5": {
+   "path": "results/prereg06/player/player_val_top5.csv",
+   "sha256": "094223f69bf445a4c450212cc9b4a3eceda9c69e992d1ed7f7c6e02105b818be"
+  },
+  "h6p_top5_switch": {
+   "path": "results/prereg06/player/player_val_top5_switch.csv",
+   "sha256": "9dfc8e1b5500d632f4a7f035dd50832723a72556caabb3ba1e57f779a3c7dcb6"
+  }
+ },
+ "competition2": {
+  "command": "C10_SLOW=1 C10_KEEP=1 C10_DRYRUN_DIR=<folder outside the repository> PYTHONDONTWRITEBYTECODE=1 .venv/Scripts/python.exe -m pytest -q -p no:cacheprovider tests/test_t09_dryrun.py",
+  "pytest": "22 passed, 46 subtests passed in 332.30s (T09DryRun.test_golden included)",
+  "n_files": 46,
+  "mismatches_vs_golden": [],
+  "files_sha256": {
+   "r20": {
+    "out/rank/rank_test_probs.csv": "bb76e6cf7b2bbed94113c536d1b7d4596230125d987c46ffd01eeb9b354d5b59",
+    "out/rank/pred_A.csv": "e04031de197e4ec603e6cc90e949e227b293b2528d823f1402d2a25230776553",
+    "out/rank/pred_B.csv": "d9b9801b3df85c75e5932ce228eebbeb8a76c43b40d2efd02700ce8807490d97",
+    "out/rank/submission_rank.csv": "d9b9801b3df85c75e5932ce228eebbeb8a76c43b40d2efd02700ce8807490d97",
+    "out/rank/seam_val/rank_val_probs.csv": "a83700432fce5d7d26653fdaee345b0c894729fdff0029a244ed94e06c803b63",
+    "out/rank/seam_val/pred_A.csv": "6729fe1dd62eda19a46d05daa9a0abd522e73bf9bcb412e72888c839fbe7f8b2",
+    "out/rank/seam_val/pred_B.csv": "863a62582424adddc9c2e1821fcc056008bd651e103c19ec8ada98a14f87a2fd"
+   },
+   "t04": {
+    "results/test04/opp/o4_seam_val.npz": "30d312c02c357f6761567099003885be5e08635b6e6c0b49d71baac137cd9cd4",
+    "results/test04/opp/o4_public.npz": "2d54353ce03370c4ccae46a9917d5b8a180c68b5f6799c953c005dfe9f929fb4",
+    "results/test04/opp/o4_private.npz": "2edfd1cdb27c9da116b97b34fbe79a13683019456a6ed6adfd66fca4a2bca036",
+    "results/test04/rank/rank_test_probs.csv": "0324e141f3e296e3178a8f3581e262cb5522e38e3e3f8b1fc355ed2413d1252e",
+    "results/test04/rank/pred_A.csv": "8fa9c69dff3c1d99809141bbc6ea0135607186ac20c0bf53709fa09825836b57",
+    "results/test04/rank/pred_B.csv": "a42c09fa99f4c570dcb95270d73f3cacd2ee47bad0ea886fa5f574f6451a7dce",
+    "results/test04/rank/submission_rank.csv": "a42c09fa99f4c570dcb95270d73f3cacd2ee47bad0ea886fa5f574f6451a7dce",
+    "results/test04/rank/seam_val/rank_val_probs.csv": "3c7ab658dc558ce8c6aefdd7b0747de1a60de575d151e9eee96ca6775f442e5c",
+    "results/test04/rank/seam_val/pred_A.csv": "6a6bb3c2e63761bc7196661c99999cec499fae1b38bbb3a7bb9d512e26487739",
+    "results/test04/rank/seam_val/pred_B.csv": "27b6d225d0afc8db9183ae970ee19946ff819ec5ccb2be6a1816ef4338efff79"
+   },
+   "t07": {
+    "results/test07/hs/seam_hs.npz": "ae65b55bfa9538769198bff884765faa82e6ec74ca98d1e83f73d746af069340",
+    "results/test07/hs/public_hs.npz": "571cfd730bafd4150eae62dc41763423ab520e03386677d958eac3754e811e82",
+    "results/test07/hs/private_hs.npz": "26a8910c4f1e03a246ba5ed3fecf3d8cce3f192024433667a01a1f2f40489f1e",
+    "results/test07/rank/rank_test_probs.csv": "ede52634862ed421b0fd76a0b163e39a6596ad7e4e321d59b8f9ad9cf8ebe44c",
+    "results/test07/rank/pred_A.csv": "605e64fd4eb52e2be4685cd967157b85decfe7ced7b3fead9bf3b88cf6154585",
+    "results/test07/rank/pred_B.csv": "d3bcad47e43d41c7106fd4f98260ad881b1165b843ef5e81370d5c26327cb7c6",
+    "results/test07/rank/submission_rank.csv": "d3bcad47e43d41c7106fd4f98260ad881b1165b843ef5e81370d5c26327cb7c6",
+    "results/test07/rank/seam_val/rank_val_probs.csv": "6ae2db6025a903eb5c58af9418dc203c0b6e84dd664049f85dfa850e57dc28c1",
+    "results/test07/rank/seam_val/pred_A.csv": "b229be2c414f7af22310bc304d6da9de5b6406698ec8ce9c0d40e7c146b40a41",
+    "results/test07/rank/seam_val/pred_B.csv": "51d7dbf82d50c3848acadb6934069580bd3ade7e6ca71ad5d1023633a18a26fa"
+   },
+   "t08": {
+    "results/test08/p1/seam_p1.npz": "572eeda45d3dfb1da5d4528654065f0d202693ef0480b5252dc6a5b1f5a953a0",
+    "results/test08/p1/public_p1.npz": "d86d15bf80d5c8e6d52225cbbd6961d330e716352c39fb2d98323f2d295c3b00",
+    "results/test08/p1/private_p1.npz": "5ceef68ef3959255fb91beee45f78dc94b37ec833c871f82054046512decb621",
+    "results/test08/rank/rank_test_probs.csv": "3454356ed985701ea3ffc915156d9e87365ff880357a5dd93afd6eb6cb527eee",
+    "results/test08/rank/pred_A.csv": "a3aed84c405ef5183825a64ac3fff9e8fd772b1d8984dec2f8e42951088ef205",
+    "results/test08/rank/pred_B.csv": "457c85428cb3fc85ffdcf01bfd08bbc5a4200f44ba0acf8577545203ac52433a",
+    "results/test08/rank/submission_rank.csv": "457c85428cb3fc85ffdcf01bfd08bbc5a4200f44ba0acf8577545203ac52433a",
+    "results/test08/rank/test_lp_p1.npz": "350b915e4cf8a6935f3ba39b282cc05251940ca3dfb8264a3ce28e66bdbff03b",
+    "results/test08/rank/seam_val/rank_val_probs.csv": "7a513367147227e3631bfb7bad36064f3e90fffb6ee358716e389698ce1ccd97",
+    "results/test08/rank/seam_val/pred_A.csv": "e24699e989543bfbfc73b1b710677c93f018747193a9ba18d89fc004cdd17753",
+    "results/test08/rank/seam_val/pred_B.csv": "b02d4f947910726fa25c292e9798e7407b1e802e2fed080d843f56b9beb48872"
+   },
+   "t09": {
+    "results/test09/rank/rank_test_probs.csv": "f375361e3dc4a83dee1bab7af4697db90934a4177855a0d6630ea5b8b411cd0b",
+    "results/test09/rank/pred_A.csv": "dedcfbd67e6f87cfad4fcc76307c05b81ab74bf38bfb681bf4a0d9bb3f4d2c08",
+    "results/test09/rank/pred_B.csv": "eabba882a04d4bf03dd43e2f576b53e5b75baedf5fc17c3b301d2c8f5af26f56",
+    "results/test09/rank/submission_rank.csv": "eabba882a04d4bf03dd43e2f576b53e5b75baedf5fc17c3b301d2c8f5af26f56",
+    "results/test09/rank/test_lp_p1e.npz": "60526f904bf8cd03370cfcd9a42dc35a7aab8bfcdaf547d2c0387121dc24db9a",
+    "results/test09/rank/seam_val/rank_val_probs.csv": "3f8d32f4b5b0431c9f4407199ae2c074595428ef9053ab807a5cf3b129e3b4fb",
+    "results/test09/rank/seam_val/pred_A.csv": "5c412993c6f72a7169327c8a2575cc7b3be44195ad3e198d30712d73d62432e0",
+    "results/test09/rank/seam_val/pred_B.csv": "d1a2f1d673a8b95425dfdc6b392a64a3e7484509d8bbaa3eb3c72f5ee283333b"
+   }
+  }
+ },
+ "competition1": {
+  "command": "C10_SLOW=1 C10_KEEP=1 C10_DRYRUN_DIR=<folder outside the repository> PYTHONDONTWRITEBYTECODE=1 .venv/Scripts/python.exe -m pytest -q -p no:cacheprovider tests/test_t06_dryrun.py",
+  "pytest": "26 passed in 1399.30s (Q04Golden 2, FromValDrills 20, OfficialShapeDrills 4)",
+  "mismatches_vs_golden": [],
+  "q04": {
+   "tree": "q04golden (equal in t06_fromval)",
+   "files_sha256": {
+    "out/player/private/top5.csv": "ec461436fa8c0e9886a998008768e3fda4dfbdedc15716fc12b8613165bb30a5",
+    "out/player/public/top5.csv": "ad589e4fdb4251b7b0af4a2f63a755c48dcf12c1adda209ea21f7be598c47abb",
+    "out/player/seam_val/top5.csv": "69ca74a61ce34f8ffa8949df731df433d474347dce9aabb535156ab8197ead6c",
+    "out/player/submission_player.csv": "b5d7473e1011c299f509a5ac269d60471068fc3f6cfbe1430ddafcd50ee9b8b4"
+   }
+  },
+  "from_val": {
+   "tree": "t06_fromval: from-val tree, both pools at guard level 1; no T2, so no 06-ON submission",
+   "06_off": {
+    "o6/off/submission_player.csv": "62c88e217cb18a927a239e337f8619fa08b5f2ecc622b30d23bb4ba25e7c486a",
+    "o6/private/top5_off.csv": "185f10fb92a2544d212dfdf0eeb8f385d29da1315eb1fc0b7e1744a256fd2cf2",
+    "o6/public/top5_off.csv": "c25daae91cf1abfe06b0a234b3e55c70b8a5b78929584d76803632e6dac1195b",
+    "o6/seam_val/top5_off.csv": "094223f69bf445a4c450212cc9b4a3eceda9c69e992d1ed7f7c6e02105b818be"
+   },
+   "06_on_top5": {
+    "o6/private/top5_on.csv": "ff1730f3f9699132419d002d68cc52f09e7abe6ae31e3041466223374ee5f06c",
+    "o6/public/top5_on.csv": "27c7b3ff73f9150dee97c061003ab93543f61822e89594638aee1559a27c4669",
+    "o6/seam_val/top5_on.csv": "9dfc8e1b5500d632f4a7f035dd50832723a72556caabb3ba1e57f779a3c7dcb6"
+   }
+  },
+  "official": {
+   "tree": "t06_official: t06_fake_tests.py official, black only, one question per candidate; 06-ON produced",
+   "q04": {
+    "out/player/private/top5.csv": "f1ad42d7e1b95dff38cb6c4fc544c21eba43eca25402c4d9495bdfb6b96404e1",
+    "out/player/public/top5.csv": "d4b64a12f28b5e7e33e45905bda6717fe7279b1450b82e8207945939da03bcb9",
+    "out/player/seam_val/top5.csv": "69ca74a61ce34f8ffa8949df731df433d474347dce9aabb535156ab8197ead6c",
+    "out/player/submission_player.csv": "1e39c354c20ab38d182b4b5a0f7f90511077f177543ee4fd7c29983088f471db"
+   },
+   "06_off": {
+    "o6/off/submission_player.csv": "c3cabb1f1c4c9286828f68342a5bd0e0fafcfb2289fe1eb03fb520a9f700d8e0",
+    "o6/private/top5_off.csv": "ba2271af198caf040624d59d9dae58c117df8c9bf8b44b07902be866725f4f3e",
+    "o6/public/top5_off.csv": "b754db5526b396e6a3b9c1b98ebec049602336e1b12ec1d4a1f6f856b7d1d701",
+    "o6/seam_val/top5_off.csv": "094223f69bf445a4c450212cc9b4a3eceda9c69e992d1ed7f7c6e02105b818be"
+   },
+   "06_on": {
+    "o6/on/submission_player.csv": "bb9dd7588b152fcd084c34082a7fdb5a9960091260c534e486235643f8e2e379",
+    "o6/private/top5_on.csv": "9708bf87c45bfcf0e9b7d1178926c948f58b7aa9145efa596c36691c28ebfb88",
+    "o6/public/top5_on.csv": "348c2f5926a98a4019a25a63fdcfb0537028e7bd5ef67ae50bd1eb28caa73aaa",
+    "o6/seam_val/top5_on.csv": "9dfc8e1b5500d632f4a7f035dd50832723a72556caabb3ba1e57f779a3c7dcb6"
+   }
+  },
+  "official_dup": {
+   "tree": "t06_official_dup: t06_fake_tests.py official --dup 80; no 06-ON submission",
+   "q04": {
+    "out/player/private/top5.csv": "95d6342ef47375bb9f96e9a09ab70ca440131dada85824f0a8c16f385e4d2ba9",
+    "out/player/public/top5.csv": "23625d0b65f5d0471ba694b20864141fed7d3aba53f3f8075ef590bbf86756b1",
+    "out/player/seam_val/top5.csv": "69ca74a61ce34f8ffa8949df731df433d474347dce9aabb535156ab8197ead6c",
+    "out/player/submission_player.csv": "1889df639435a4c0367c2bb43b41780daaeb05ab30c0e969f9e502634e906a7d"
+   },
+   "06_off": {
+    "o6/off/submission_player.csv": "8cd8b06cd82d694d546d95391eab1ca9ba5db1f5680cf33cf856d743b3711808",
+    "o6/private/top5_off.csv": "9cca5a1ac15802a025adba439c58ffb6ad4a3c8733d5d167ef001b8d62567274",
+    "o6/public/top5_off.csv": "6cfe1826691f293ed3dc8b9eea0ec4a709077fd665f4fa8b67f755d353badcbf",
+    "o6/seam_val/top5_off.csv": "094223f69bf445a4c450212cc9b4a3eceda9c69e992d1ed7f7c6e02105b818be"
+   },
+   "06_on_top5": {
+    "o6/public/top5_on.csv": "39a4353f9698d4a5d1aa3adfdec2fe03e3818614bb891a419a3431f10da57d0d",
+    "o6/seam_val/top5_on.csv": "9dfc8e1b5500d632f4a7f035dd50832723a72556caabb3ba1e57f779a3c7dcb6"
+   }
+  }
+ },
+ "tools_sha256_lf": {
+  "tools/t02_fake_tests.py": "17cf88024ac8b34c5f473d9bf5ca8d1201f1e2779e6d7b535e9b3fac8fbf34d7",
+  "tools/t02_checks.py": "a6fb40f99e7af19bfe4eef3f5cbb1d0049a8f0c14a7cc95cddfac73884f99cc8",
+  "tools/t02_rank.py": "e3485e073a20843654f622828283af4ae3985141e08378cefb59d6c6f2495874",
+  "tools/t02_player.py": "b83a979615ee978792e18eecb32f60936622dcbc6c10068dbda00f2a33207bdf",
+  "tools/t02_test_bundle.py": "18e41e952da39a68bc901bda5f5b9f0173848379a31056da6139382ac038e796",
+  "tools/t04_fake_tests.py": "928d6989b3db72a4161aebc159a05b1b9078c99fc6541b1ddff46aae2bf1b5bc",
+  "tools/t04_rank.py": "f212879e5aaf6fe90060e2b8f03a5e61e8d8704c9dd8204e9c42e65b589940e4",
+  "tools/t06_fake_tests.py": "cecfb2e78924ad4ac9da4fb90c93c1b108328f5030bcc37c5879f7dc5c462609",
+  "tools/t06_player.py": "d1e48050f827495579fc22b5ceff9b4d8eba8f18ab471909436ceb4d16f3b0f6",
+  "tools/t07_fake_tests.py": "934efe1268ebb776aab5aab95b31ad299da804a1933ce7261238097083c9948c",
+  "tools/t07_rank.py": "2c02e5c5d462c58393856bb286ca910881fb9677a5d15bf49e767909174f9f27",
+  "tools/t08_fake_tests.py": "56c98853c7df9073cf05786ed9b9d08c732d4452cdec5925733ccb370a99cb60",
+  "tools/t08_rank.py": "70cb6dfa720866d3c88df962db135c4053fd7a4c2b11559c3dc95ed231cdef7f",
+  "tools/t09_fake_tests.py": "4907c8ee2ac440df09c43ee8b59f7537874ab4df03028780040b2a6da8d10f80",
+  "tools/t09_rank.py": "f1a9ab0417bb0480f663ff1f3829571d9f5fff6e28f87966b173b7eb3c0c61fa",
+  "tools/p02_player_fuse.py": "cb1cc1a2ba626a80ed49e7ae8269715f1e123f33777b6ed135380dbd07b35d5b",
+  "tools/p02_player_open.py": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+  "tools/p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+  "tools/p06_player.py": "b25636878ee87ca828a9c65177965dc60466ac4e9aa348acd88785ca11075590",
+  "tools/p06_sim.py": "21deeea1eb08b1d6580ba78c47505789f66dbdd10c8891973e14f523ef443eeb",
+  "tools/p06_style.py": "78beb8138c27853da70081e469e534508174265852a64ebada21e354ae72058a",
+  "tools/p07_hs.py": "b27ea371bdc1477558effb9ca86c540805dcced971d983226e15fb5e19b7b8dc",
+  "tools/p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142",
+  "tools/p08_p1.py": "a10c77c4bd97472b464f39080816090f0f64986195384b28e1d95dfc76e6677f",
+  "tools/p08_rank_fuse.py": "64f42bd956f7808947e0c85abe1f9fa60d9958cb8e769fc889c6283c188d481e",
+  "tools/p09_forward.py": "67124e0e534f575493aa8d72dbd2582335e4166718448e36bb5e105c61cb185d",
+  "tools/p09_rank_fuse.py": "1486f7ce102450c1ed0b051234537286f6f9a0b38f7aaaf182a38458e4ddfb8b",
+  "tools/check_submission.py": "b5c7c300cca4fcd5b243e4579417453699777e99bd4aff88dcbf6805e9346144",
+  "tools/c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+  "tools/official_log.py": "8d1653e542c36d29a07a50f5f3ce5495c80f2c8c5ec717639b75194f442f109f",
+  "tests/test_t04_dryrun.py": "81cb12ec16a6588c8aac213390008104f881b29165ed2ec255593764af163520",
+  "tests/test_t07_dryrun.py": "b4a25e91549ac71bdc85ea87c5210a7e1f86f405a24b084558a7d17cfdd10514",
+  "tests/test_t09_dryrun.py": "e720888da8f4fbcc8d37cf7908cfc413316da613e422de5dd207857a3e285dc6",
+  "tests/test_t06_dryrun.py": "cad52289f71197f0412422985b91504d8bebb15e141d0f1e8f13f284d7a617de"
+ }
+}

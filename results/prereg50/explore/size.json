@@ -1,0 +1,7 @@
+{
+ "rule": "PLAN.md 3: corrected hours = 320000 / (bench steps/s * 2.9 / B10C128 bench steps/s) / 3600; pick the first candidate <= 36 h",
+ "bench_4090_workers4_300steps": {"B10C128": 2.954, "B20C160": "killed after 19 min: VRAM 24 GB full, spilled to shared memory", "B15C160": 1.182, "B15C128": 2.016, "B12C128": 2.483},
+ "corrected_hours": {"B15C160": 76.6, "B15C128": 44.91, "B12C128": 36.47, "B10C128_reference": 30.65},
+ "chosen": null,
+ "verdict": "no candidate <= 36 h on the 4090 -> prereg50 is not run (PLAN.md 3); Colab A100 not used (about 12 units/h x 30+ h would use the shared 352 units). Nothing trained, no vector, no score; E pool not used."
+}

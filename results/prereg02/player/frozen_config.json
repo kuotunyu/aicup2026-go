@@ -1,0 +1,293 @@
+{
+ "what": "PREREG_02 2.2 competition 1: combination chosen by candidate-pool self-retrieval (candidate file + cand_games.npz only). apply uses exactly this file.",
+ "smoke": false,
+ "cnn": true,
+ "no_cnn_reason": null,
+ "no_cnn_basis": null,
+ "notebook_results_commit_check": {
+  "files": 10,
+  "git_head": "75308b7ee031ef79d9e6bea81a5a15ee3847e57e",
+  "rule": "dumps/* and the notebook run records tracked by git and unchanged"
+ },
+ "combination_list": [
+  "Q00",
+  "Q01",
+  "Q02",
+  "Q03",
+  "Q04",
+  "Q05",
+  "Q06",
+  "Q07",
+  "Q08",
+  "Q09",
+  "Q10",
+  "Q11",
+  "Q12",
+  "Q13",
+  "Q14",
+  "Q15",
+  "Q16",
+  "Q17",
+  "Q18",
+  "Q19",
+  "Q20",
+  "Q21",
+  "Q22",
+  "Q23"
+ ],
+ "combinations": [
+  {
+   "id": "Q00",
+   "e": "E0",
+   "o": null,
+   "w": null
+  },
+  {
+   "id": "Q01",
+   "e": "E1",
+   "o": null,
+   "w": null
+  },
+  {
+   "id": "Q02",
+   "e": "E0",
+   "o": "raw",
+   "w": 0.25
+  },
+  {
+   "id": "Q03",
+   "e": "E0",
+   "o": "raw",
+   "w": 0.5
+  },
+  {
+   "id": "Q04",
+   "e": "E0",
+   "o": "raw",
+   "w": 1.0
+  },
+  {
+   "id": "Q05",
+   "e": "E0",
+   "o": "raw",
+   "w": 2.0
+  },
+  {
+   "id": "Q06",
+   "e": "E0",
+   "o": "raw",
+   "w": 4.0
+  },
+  {
+   "id": "Q07",
+   "e": "E1",
+   "o": "raw",
+   "w": 0.25
+  },
+  {
+   "id": "Q08",
+   "e": "E1",
+   "o": "raw",
+   "w": 0.5
+  },
+  {
+   "id": "Q09",
+   "e": "E1",
+   "o": "raw",
+   "w": 1.0
+  },
+  {
+   "id": "Q10",
+   "e": "E1",
+   "o": "raw",
+   "w": 2.0
+  },
+  {
+   "id": "Q11",
+   "e": "E1",
+   "o": "raw",
+   "w": 4.0
+  },
+  {
+   "id": "Q12",
+   "e": "E0",
+   "o": "canon",
+   "w": 0.25
+  },
+  {
+   "id": "Q13",
+   "e": "E0",
+   "o": "canon",
+   "w": 0.5
+  },
+  {
+   "id": "Q14",
+   "e": "E0",
+   "o": "canon",
+   "w": 1.0
+  },
+  {
+   "id": "Q15",
+   "e": "E0",
+   "o": "canon",
+   "w": 2.0
+  },
+  {
+   "id": "Q16",
+   "e": "E0",
+   "o": "canon",
+   "w": 4.0
+  },
+  {
+   "id": "Q17",
+   "e": "E1",
+   "o": "canon",
+   "w": 0.25
+  },
+  {
+   "id": "Q18",
+   "e": "E1",
+   "o": "canon",
+   "w": 0.5
+  },
+  {
+   "id": "Q19",
+   "e": "E1",
+   "o": "canon",
+   "w": 1.0
+  },
+  {
+   "id": "Q20",
+   "e": "E1",
+   "o": "canon",
+   "w": 2.0
+  },
+  {
+   "id": "Q21",
+   "e": "E1",
+   "o": "canon",
+   "w": 4.0
+  },
+  {
+   "id": "Q22",
+   "e": null,
+   "o": "raw",
+   "w": null
+  },
+  {
+   "id": "Q23",
+   "e": null,
+   "o": "canon",
+   "w": null
+  }
+ ],
+ "selected": {
+  "id": "Q04",
+  "e": "E0",
+  "o": "raw",
+  "w": 1.0
+ },
+ "best": {
+  "id": "Q04",
+  "mean": 0.8997649863787647
+ },
+ "selection_rule": "highest self-retrieval mean; the earliest combination in list order within 0.003 of it",
+ "self_retrieval_mean": {
+  "Q00": 0.4006408144088361,
+  "Q01": 0.41851795222199245,
+  "Q02": 0.8398472864017018,
+  "Q03": 0.8884133695878574,
+  "Q04": 0.8997649863787647,
+  "Q05": 0.8946139102540719,
+  "Q06": 0.8888518421700574,
+  "Q07": 0.8891980534047155,
+  "Q08": 0.8990957479943468,
+  "Q09": 0.8956138153296292,
+  "Q10": 0.8897830842585049,
+  "Q11": 0.8831827248453515,
+  "Q12": 0.825984938070641,
+  "Q13": 0.8716072584751837,
+  "Q14": 0.8806167618698892,
+  "Q15": 0.8743424743846737,
+  "Q16": 0.8627769232001054,
+  "Q17": 0.8730912415328705,
+  "Q18": 0.8783617403883031,
+  "Q19": 0.8734210965758108,
+  "Q20": 0.864881334927103,
+  "Q21": 0.8560342075453578,
+  "Q22": 0.8759945696309837,
+  "Q23": 0.8414360028016726
+ },
+ "gate": {
+  "q00_mean": 0.4006408144088361,
+  "selected_mean": 0.8997649863787647,
+  "selected_minus_q00": 0.4991241719699286,
+  "threshold": 0.02,
+  "passed": true
+ },
+ "sr_max_cos_median": {
+  "raw": 0.22665843779803582,
+  "canon": 0.22122531121305591
+ },
+ "guard": {
+  "source": "OUT_DIR/guard_calibration.json",
+  "sha256": "793c16a79080e57d4c60941a1fc311f3c0d950e19c42bafaff16a54f7ad43a28",
+  "smoke": false,
+  "thresholds": {
+   "raw": {
+    "rho_R": 1.0197271503546743,
+    "rho_F": 0.9062854576832535,
+    "rho_X": 0.7472186307476288,
+    "theta1": 0.9630063040189639,
+    "theta2": 0.8267520442154412,
+    "theta_RX": 0.8834728905511515,
+    "gap1_R_minus_F": 0.11344169267142079,
+    "gap2_F_minus_X": 0.15906682693562468,
+    "gap_R_minus_X": 0.2725085196070455,
+    "theta1_enabled": true,
+    "theta2_enabled": true
+   },
+   "canon": {
+    "rho_R": 1.014179401069461,
+    "rho_F": 0.9270569559027629,
+    "rho_X": 0.8002793994990274,
+    "theta1": 0.9706181784861119,
+    "theta2": 0.8636681777008952,
+    "theta_RX": 0.9072294002842441,
+    "gap1_R_minus_F": 0.08712244516669798,
+    "gap2_F_minus_X": 0.12677755640373556,
+    "gap_R_minus_X": 0.21390000157043354,
+    "theta1_enabled": true,
+    "theta2_enabled": true
+   }
+  }
+ },
+ "guard_rule": "PREREG_02 rev 2 three-level guard. rho = median over the questions of max_c cosO (full candidate games) / sr_max_cos_median, orientation of the selected combination; b_c / b_q = black share of the candidate / question games. Q00, Q01 exempt. level 3 (rho < theta2 or |b_c - b_q| > 0.5): CNN only, the E part (Q22 / Q23 -> Q00); level 2 (theta2 <= rho < theta1): w = min(w, 1), Q22 -> Q04, Q23 -> Q14; level 1: as selected. theta1 disabled: no level 2; theta2 disabled: theta_RX is the only threshold (below it level 3)",
+ "self_retrieval": "per candidate: games sorted by sha256('c10-prereg02|sr|<player_id>|<game_id>'), 5 parts by position (100 -> 5 x 20); round r = 0..9 uses part r mod 5, rng = random.Random(int(sha256('c10-prereg02|sr-k|<r>').hexdigest()[:16], 16)), candidates in sorted id order draw k = rng.randint(5, 20) and query = rng.sample(part, k); references = the other 4 parts (80 games); IDF and CNN centroids from the references only",
+ "inputs": {
+  "candidates_csv": {
+   "path": "data/local/player_val_candidates.csv",
+   "sha256": "7cd2897593ee9add20dce4ff5d4b0dcf8699b6d51a3f10950dc399a757dd3ad5"
+  },
+  "cand_games_npz": {
+   "path": "results/prereg02/player/dumps/cand_games.npz",
+   "sha256": "56ed03d12e9a79871a21b5f69dc4bd4bb8c8aa69b1544cb8ec799e80227cfdea",
+   "weights_sha256": "356eb4f65488925e2a552ea382979780c903ef515b85d329a3805db837b7773b"
+  },
+  "repro_local_json": {
+   "path": "OUT_DIR/repro_local.json",
+   "passed": true,
+   "n_top5_identical": 400,
+   "n_questions": 400,
+   "max_abs_centroid_diff": 7.80775765985009e-08,
+   "query_games_npz_sha256": "665d0888a93f6632eb19edac76abf996d5499cd27c683d9844b97cb274b6f689"
+  }
+ },
+ "tools_sha256": {
+  "p02_player_open.py": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+  "p02_player_fuse.py": "cb1cc1a2ba626a80ed49e7ae8269715f1e123f33777b6ed135380dbd07b35d5b",
+  "p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+  "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495"
+ },
+ "git_head_at_select": "75308b7ee031ef79d9e6bea81a5a15ee3847e57e"
+}

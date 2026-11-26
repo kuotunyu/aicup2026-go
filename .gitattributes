@@ -1,0 +1,71 @@
+# Byte-exact files: SHA-pinned notebooks, test-day outputs and the upload log.
+# Never convert their line endings on checkout (this machine has core.autocrlf=true).
+colab/*.ipynb -text
+results/test02/** -text
+results/official_scores.json -text
+# test04 (PREREG_04 rev 3): the apply report binds the submission and its inputs by SHA-256
+results/test04/** -text
+# K5 gate round 1: the text files that tests/test_t02_hygiene.py pins by raw SHA-256 (PINS). A fresh checkout with
+# core.autocrlf=true wrote them as CRLF and turned the 04 gate (C10_T04_GATE=1) red for no frozen-file change.
+# Per file on purpose: other results/prereg0* text files are CRLF in this working tree, and a folder-wide -text would
+# show them as modified.
+results/prereg02/rank/frozen_config.json -text
+results/prereg02/rank/rank_val_probs.csv -text
+results/prereg02/rank/pred_B.csv -text
+results/prereg02/player/frozen_config.json -text
+results/prereg02/player/guard_calibration.json -text
+results/prereg02/player/sr_report.json -text
+results/prereg02/player/player_val_top5.csv -text
+results/test06/** -text
+results/prereg07/** -text
+# test07 (PREREG_07 rev 4): the apply report binds the HS sets, the submission and its inputs by SHA-256
+results/test07/** -text
+# test08 (PREREG_08 rev 3): the apply report binds the P1 sets, the submission and its inputs by SHA-256
+results/test08/** -text
+# test09 (PREREG_09 rev 3): the apply report binds the 08 inputs, the submission and its inputs by SHA-256
+results/test09/** -text
+# test10 (PREREG_10 rev 3): the submit report binds the 06 / test02 inputs, the 10 rows and the submission by SHA-256
+results/test10/** -text
+# test11 (PREREG_11, Colab GPU fallback): the import records bind the Colab chunks and the HS / P1 sets by SHA-256
+results/test11/** -text
+colab_gpu/** -text
+# PREREG_10 rev 4 (section 14): tools/p10_apply.py compares the 06 reference file byte for byte; never CRLF on checkout
+results/prereg06/player/player_val_top5.csv -text
+# PREREG_10 rev 4: the 4090 launcher is run by Git Bash (LF on every checkout)
+tools/t10_p1_launch.sh text eol=lf
+# PREREG_13 (5.1, 10): view_report.json binds the two view Top-5 files by SHA-256; never CRLF on checkout
+results/prereg13/** -text
+# test14 (PREREG_14): the apply report binds the base file, the 14 file and the index pins by SHA-256
+results/test14/** -text
+# test19 (PREREG_19 rev 3): the apply report binds the 09 inputs, the submission and its inputs by SHA-256
+results/test19/** -text
+# test21 (PREREG_21): the apply report binds the base file and the 21 file by SHA-256
+results/test21/** -text
+# test25 (PREREG_25 rev 3): the apply report binds the submission and its inputs by SHA-256
+results/test25/** -text
+# PREREG_27: the v1 test-day outputs moved byte for byte into the archive
+results/archive_testset_v1/** -text
+# prereg33: the launchers are run by Git Bash (LF on every checkout)
+results/prereg33/explore/*.sh text eol=lf
+results/prereg34/explore/*.sh text eol=lf
+# prereg35 / v2 uploads: submission files are uploaded byte for byte (LF)
+results/prereg35/apply/** -text
+# prereg36: launcher run by Git Bash; v2 submission files byte for byte
+results/prereg36/explore/*.sh text eol=lf
+results/prereg36/apply/** -text
+# prereg37: launcher run by Git Bash; v2 submission files byte for byte
+results/prereg37/explore/*.sh text eol=lf
+results/prereg37/apply/** -text
+# prereg38: v2 submission files byte for byte
+results/prereg38/apply/** -text
+# prereg42: launch scripts run by Git Bash (a CRLF checkout would break them)
+results/prereg42/explore/*.sh text eol=lf
+# prereg39: launcher run by Git Bash; v2 submission files byte for byte
+results/prereg39/explore/*.sh text eol=lf
+results/prereg39/apply/** -text
+# prereg59: competition-2 submission files byte for byte
+results/test59/** -text
+# prereg64: competition-2 submission files byte for byte
+results/test64/** -text
+# prereg69: competition-2 submission files byte for byte
+results/test69/** -text

@@ -1,0 +1,69 @@
+{
+ "format": "c10-prereg08 p1 plan v1",
+ "what": "prereg08 P1 (competition 2): neutral-metadata KataGo HumanSL strength probe, fused on top of Q02H (07 = Q02 + HS) on the inner pseudo-questions. Exploration gate only; no validation scoring, no data/local, no score.py.",
+ "written_before_any_p1_feature_of_bank_or_mono_exists": true,
+ "fixed_before_results": {
+  "primary_variant": "TO",
+  "primary_combination": "Q02H+P1TO",
+  "why_primary_is_TO": "One mapping on the concatenated target and opponent features. The opponent's level correlates with the target's (matched games), the mapping is learned on fit players only (disjoint from inner), its regularisation is chosen by player-grouped CV, and the fusion adds one weight in [0, 4]; so extra opponent features can only hurt through mapping overfit, which CV controls. Validation and test-day extraction score both sides anyway (one forward per position).",
+  "record_only_combinations": ["Q02H+P1T", "Q02H+P1T+P1O", "Q02+P1TO", "R20+P1TO"],
+  "baseline": "Q02H = terms OP, O4, SWA, SWB, HS with lp_HS from the PREREG_07 pilot mapping (pilot_fuse.fit_mapping on data/prereg07/pilot fitmap curves, lambda 1e-4); must reproduce the pilot's inner eval rank-balanced 0.6242752597994481 within 1e-12 (seam), and Q02 must equal results/prereg05/explore/u1/u1_oof.npz bit for bit"
+ },
+ "network": {
+  "checkpoint": "data/katago/b18c384nbt-humanv0.ckpt",
+  "bytes": 323752318,
+  "sha256": "84b23476b56a73a775a0f09bad7d1c5c435690adb343aa851e80bf198c0c8b27",
+  "weights": "model (not swa_model), through hs_lib.load_model",
+  "katago_commit": "d91ea855110dae533f0aada947b2b7d78cc8a4e1",
+  "rules": "hs_lib.RULES: Japanese, komi 6.5",
+  "metadata": "neutral: the C++ rank_<r> preset of the pilot (both human, ratedness unknown, byo-yomi 1200 s + 5 x 30 s, KGS, 2020-03-01) except both ranks unknown (bRankIsUnknown = wRankIsUnknown = true, inverse ranks 0); one forward per position",
+  "precision": "fp16 autocast, channels_last, batch 1024 positions, every pass padded to 1024 rows"
+ },
+ "features_per_side": {
+  "dims": 770,
+  "layout": {"trunk_at_move": [0, 384], "board_mean": [384, 768], "logp": [768, 769], "entropy": [769, 770]},
+  "trunk": "output of model.act_trunkfinal (after the final trunk norm and activation), 384 channels",
+  "trunk_at_move": "the 384-vector at the board point of the move actually played",
+  "board_mean": "the 384-vector averaged over all 361 points",
+  "logp": "log p(played move) from policy head 0, illegal moves (occupied, simple ko, suicide) masked before log-softmax",
+  "entropy": "entropy of that masked policy",
+  "pooling": "mean over the side's moves in the game; sides: target (the row's player) and opponent, separately"
+ },
+ "sets": {
+  "sets_json": "data/prereg08/p1/sets.json",
+  "sets_json_sha256": "f0c494962788615d76080b5481de5b762d71f3ad37f8add55a09efef82acb7c7",
+  "probe": {"source": "fit players only (tools/c10data part fit; disjoint from inner and from validation)", "games": 30000, "per_level": 3000, "players": 5767, "max_games_per_player": 10, "seed": 20261006, "rule": "per level: players in a seeded order, round robin, one random untaken game per turn"},
+  "bank": {"games": 11813, "rule": "the PREREG_07 pilot bank rows (data/prereg07/pilot/plan.json, SHA-256 8494e9af...)"},
+  "mono": {"games": 61356, "rule": "the PREREG_07 pilot mono rows (same plan.json)"},
+  "order_tonight": ["probe", "bank", "mono"]
+ },
+ "mapping": {
+  "model": "multinomial logistic regression over the 10 levels, L2 on the weights (pilot_fuse.mlr_obj), features standardised with probe means / SDs",
+  "variants": {
+   "T": "target side, 770 features",
+   "O": "opponent side, 770 features (record only, inside Q02H+P1T+P1O)",
+   "TO": "target and opponent concatenated, 1540 features (primary)"
+  },
+  "unusable": "a game that failed to replay, or has no target move, is not used for fitting and gets lp = 0 (neutral) in the fusion; an opponent side with no move is set to the probe mean (0 after standardising)",
+  "lambdas": [1.0, 0.3, 0.1, 0.03, 0.01, 0.003, 0.001, 0.0003, 0.0001],
+  "cv": "5 folds by PLAYER (probe players shuffled with numpy default_rng(0), fold = position % 5), lambda by mean CV log-loss, warm starts from the larger lambda; refit on all probe games with the chosen lambda. (pilot_fuse.fit_mapping folds by game; the probe has up to 10 games per player, so folds by player.)",
+  "optimizer": "scipy L-BFGS-B, maxiter 2000"
+ },
+ "fusion": {
+  "how": "exactly the PREREG_07 pilot: lp[P1x] per inner game, u1_lib.run_gen(d, terms) = p04 generalised calibration, 5 player folds out of fold, fit pseudo-questions of the other folds' players; rule B",
+  "questions": "inner eval pseudo-questions (127,200; prereg02 eval rounds) and the PREREG_03 single-colour inner pseudo-questions (120,544)"
+ },
+ "gates_on_primary_vs_Q02H": {
+  "G1": "inner eval rank-balanced rule-B score difference >= +0.010",
+  "G2": "paired PlayerBootstrap (players within level, 1000 draws, default_rng(0)) 95 % lower bound > 0",
+  "G4": "on all 120,544 single-colour questions (mono set complete): paired PlayerBootstrap 95 % lower bound > 0 and the black and the white rank-balanced differences each > 0 (pilot rule)",
+  "pass": "G1 and G2 and G4; a partial mono run reports G4 as incomplete (not passed)",
+  "after": "pass: consider fine-tuning / PREREG_08 (one candidate, the 4th and last competition-2 validation score, only after 07 is independently checked). fail: P1 stops; record-only rows do not rescue it"
+ },
+ "costs_validation_scoring": false,
+ "estimate": {
+  "positions": {"probe": 6840000, "bank": 2633636, "mono": 13499445},
+  "measured_gpu_smoke_2026_10_06": "1,050-1,190 positions/s steady (RTX 4090, fp16, batch 1024, 20 or 10 workers; GPU-bound, desktop apps on the same GPU)",
+  "hours": {"probe": 1.65, "bank": 0.64, "mono": 3.26, "fuse_cpu": "0.5-2 (worst case 2,000 L-BFGS iterations per fit, 45 fits per variant, 40 ms per objective)", "total": "about 6-7.5"}
+ }
+}

@@ -1,0 +1,144 @@
+infer 32/24827 games, 1s
+infer 6432/24827 games, 18s
+infer 12832/24827 games, 35s
+infer 19232/24827 games, 52s
+{"out": "/content/drive/MyDrive/C10/p44/logits/s140000_raw/hold.npz", "games": 24827, "bad": 0, "positions": 2671287, "seconds": 66.6}
+infer 32/73556 games, 0s
+infer 6432/73556 games, 17s
+infer 12832/73556 games, 34s
+infer 19232/73556 games, 51s
+infer 25632/73556 games, 68s
+infer 32032/73556 games, 85s
+infer 38432/73556 games, 102s
+infer 44832/73556 games, 119s
+infer 51232/73556 games, 135s
+infer 57632/73556 games, 152s
+infer 64032/73556 games, 169s
+infer 70432/73556 games, 186s
+{"out": "/content/drive/MyDrive/C10/p44/logits/s140000_raw/inner.npz", "games": 73556, "bad": 0, "positions": 7848542, "seconds": 194.2}
+infer 32/24827 games, 0s
+infer 6432/24827 games, 18s
+infer 12832/24827 games, 35s
+infer 19232/24827 games, 52s
+{"out": "/content/drive/MyDrive/C10/p44/logits/s140000_ema/hold.npz", "games": 24827, "bad": 0, "positions": 2671287, "seconds": 66.2}
+infer 32/73556 games, 0s
+infer 6432/73556 games, 17s
+infer 12832/73556 games, 34s
+infer 19232/73556 games, 51s
+infer 25632/73556 games, 68s
+infer 32032/73556 games, 85s
+infer 38432/73556 games, 102s
+infer 44832/73556 games, 119s
+infer 51232/73556 games, 135s
+infer 57632/73556 games, 152s
+infer 64032/73556 games, 169s
+infer 70432/73556 games, 186s
+{"out": "/content/drive/MyDrive/C10/p44/logits/s140000_ema/inner.npz", "games": 73556, "bad": 0, "positions": 7848542, "seconds": 194.2}
+infer 32/24827 games, 0s
+infer 6432/24827 games, 18s
+infer 12832/24827 games, 35s
+infer 19232/24827 games, 52s
+{"out": "/content/drive/MyDrive/C10/p44/logits/s160000_raw/hold.npz", "games": 24827, "bad": 0, "positions": 2671287, "seconds": 66.2}
+infer 32/73556 games, 0s
+infer 6432/73556 games, 17s
+infer 12832/73556 games, 34s
+infer 19232/73556 games, 51s
+infer 25632/73556 games, 68s
+infer 32032/73556 games, 85s
+infer 38432/73556 games, 102s
+infer 44832/73556 games, 119s
+infer 51232/73556 games, 135s
+infer 57632/73556 games, 152s
+infer 64032/73556 games, 169s
+infer 70432/73556 games, 186s
+{"out": "/content/drive/MyDrive/C10/p44/logits/s160000_raw/inner.npz", "games": 73556, "bad": 0, "positions": 7848542, "seconds": 194.1}
+infer 32/24827 games, 0s
+infer 6432/24827 games, 18s
+infer 12832/24827 games, 35s
+infer 19232/24827 games, 52s
+{"out": "/content/drive/MyDrive/C10/p44/logits/s160000_ema/hold.npz", "games": 24827, "bad": 0, "positions": 2671287, "seconds": 66.2}
+infer 32/73556 games, 0s
+infer 6432/73556 games, 17s
+infer 12832/73556 games, 34s
+infer 19232/73556 games, 51s
+infer 25632/73556 games, 68s
+infer 32032/73556 games, 85s
+infer 38432/73556 games, 102s
+infer 44832/73556 games, 119s
+infer 51232/73556 games, 135s
+infer 57632/73556 games, 152s
+infer 64032/73556 games, 169s
+infer 70432/73556 games, 186s
+{"out": "/content/drive/MyDrive/C10/p44/logits/s160000_ema/inner.npz", "games": 73556, "bad": 0, "positions": 7848542, "seconds": 194.2}
+infer 32/24827 games, 0s
+infer 6432/24827 games, 18s
+infer 12832/24827 games, 35s
+infer 19232/24827 games, 52s
+{"out": "/content/drive/MyDrive/C10/p44/logits/s180000_raw/hold.npz", "games": 24827, "bad": 0, "positions": 2671287, "seconds": 66.3}
+infer 32/73556 games, 0s
+infer 6432/73556 games, 17s
+infer 12832/73556 games, 34s
+infer 19232/73556 games, 51s
+infer 25632/73556 games, 68s
+infer 32032/73556 games, 85s
+infer 38432/73556 games, 102s
+infer 44832/73556 games, 119s
+infer 51232/73556 games, 135s
+infer 57632/73556 games, 152s
+infer 64032/73556 games, 169s
+infer 70432/73556 games, 186s
+{"out": "/content/drive/MyDrive/C10/p44/logits/s180000_raw/inner.npz", "games": 73556, "bad": 0, "positions": 7848542, "seconds": 194.2}
+infer 32/24827 games, 0s
+infer 6432/24827 games, 18s
+infer 12832/24827 games, 35s
+infer 19232/24827 games, 52s
+{"out": "/content/drive/MyDrive/C10/p44/logits/s180000_ema/hold.npz", "games": 24827, "bad": 0, "positions": 2671287, "seconds": 66.2}
+infer 32/73556 games, 0s
+infer 6432/73556 games, 17s
+infer 12832/73556 games, 34s
+infer 19232/73556 games, 51s
+infer 25632/73556 games, 68s
+infer 32032/73556 games, 85s
+infer 38432/73556 games, 102s
+infer 44832/73556 games, 119s
+infer 51232/73556 games, 135s
+infer 57632/73556 games, 152s
+infer 64032/73556 games, 169s
+infer 70432/73556 games, 186s
+{"out": "/content/drive/MyDrive/C10/p44/logits/s180000_ema/inner.npz", "games": 73556, "bad": 0, "positions": 7848542, "seconds": 194.2}
+infer 32/24827 games, 0s
+infer 6432/24827 games, 18s
+infer 12832/24827 games, 35s
+infer 19232/24827 games, 52s
+{"out": "/content/drive/MyDrive/C10/p44/logits/s200000_raw/hold.npz", "games": 24827, "bad": 0, "positions": 2671287, "seconds": 66.3}
+infer 32/73556 games, 0s
+infer 6432/73556 games, 17s
+infer 12832/73556 games, 34s
+infer 19232/73556 games, 51s
+infer 25632/73556 games, 68s
+infer 32032/73556 games, 85s
+infer 38432/73556 games, 102s
+infer 44832/73556 games, 119s
+infer 51232/73556 games, 135s
+infer 57632/73556 games, 152s
+infer 64032/73556 games, 169s
+infer 70432/73556 games, 186s
+{"out": "/content/drive/MyDrive/C10/p44/logits/s200000_raw/inner.npz", "games": 73556, "bad": 0, "positions": 7848542, "seconds": 194.2}
+infer 32/24827 games, 0s
+infer 6432/24827 games, 18s
+infer 12832/24827 games, 35s
+infer 19232/24827 games, 52s
+{"out": "/content/drive/MyDrive/C10/p44/logits/s200000_ema/hold.npz", "games": 24827, "bad": 0, "positions": 2671287, "seconds": 66.2}
+infer 32/73556 games, 0s
+infer 6432/73556 games, 17s
+infer 12832/73556 games, 34s
+infer 19232/73556 games, 51s
+infer 25632/73556 games, 68s
+infer 32032/73556 games, 85s
+infer 38432/73556 games, 102s
+infer 44832/73556 games, 119s
+infer 51232/73556 games, 135s
+infer 57632/73556 games, 152s
+infer 64032/73556 games, 169s
+infer 70432/73556 games, 186s
+{"out": "/content/drive/MyDrive/C10/p44/logits/s200000_ema/inner.npz", "games": 73556, "bad": 0, "positions": 7848542, "seconds": 194.2}

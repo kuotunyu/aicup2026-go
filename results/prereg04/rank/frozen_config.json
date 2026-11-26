@@ -1,0 +1,1235 @@
+{
+ "format": "c10-prereg04 rank frozen_config v1",
+ "what": "PREREG_04 competition 2 frozen configuration (selected on inner; commit before p04_opp.py val and apply)",
+ "created": "2026-09-29T17:08:29+08:00",
+ "smoke": false,
+ "preview": false,
+ "design_input": false,
+ "combo": {
+  "id": "Q02",
+  "sources": [
+   "C5",
+   "OP",
+   "O4",
+   "SWA",
+   "SWB"
+  ],
+  "terms": [
+   "OP",
+   "O4",
+   "SWA",
+   "SWB"
+  ],
+  "path": "gen",
+  "pool": "log",
+  "calibrated": true,
+  "opening": true
+ },
+ "source_definitions": {
+  "C5": "prereg02 epoch 9, 8 symmetries (committed; R20's source)",
+  "OP": "opening term, prereg02 opening_{inner,val}.npz (M = 12, alpha = 20, fit counts only)",
+  "O4": "opponent's moves scored with the target level's pattern-count tables (p04_opp.py, fit counts)",
+  "SWA": "prereg03 arm A final.pth, original orientation, whole question colour swapped (committed dump)",
+  "SWB": "prereg03 arm B final.pth, original orientation, whole question colour swapped (committed dump)"
+ },
+ "source_sha256": {
+  "C5": {
+   "inner_p02e9_d4.npz": "d042fca41e04a365dd9f7f4ebc31d244d39b24e803a1191cb06ecaaf3d056de5",
+   "weights_sha256": "423581b4fddd5c2c160ebf691f4e86b9e00c4fe743d5cfb23df7891f4a2ca939"
+  },
+  "OP": {
+   "opening_inner.npz": "054689536524f7d8ea41a19d19b49ae47e7eedd128bd9cad98c429e5f80fdee5",
+   "opening_build_id": "c0cb86b47cd3f95c75940cc71b3b7ca24d43c3390c1a510bf96c6ae68e0f93a6"
+  },
+  "O4": {
+   "inner": "100a889367e147696a056d6cd70fab583926062a9b4fbbedd49acc42a2da9ce7",
+   "design_input": false,
+   "count_report": {
+    "file": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg04\\opp\\count_report.json",
+    "sha256": "adfdd2ac59ca508098e63eb17e499cc485402157699425452263d83299869ad4",
+    "facts": {
+     "games": 720307,
+     "target_moves": 79985811,
+     "opponent_moves": 79985352,
+     "anomalies": 0,
+     "n_cells": 557928
+    },
+    "status": "ok",
+    "preview": false,
+    "counts_sha256": "f6c6debe90639585763b9812c235743a6b7f89d8db1c6422ece7bccd550a08a5"
+   },
+   "counts_npz": {
+    "file": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\data\\prereg04\\counts_fit.npz",
+    "sha256": "f6c6debe90639585763b9812c235743a6b7f89d8db1c6422ece7bccd550a08a5",
+    "via": "recomputed here",
+    "equal_to_count_report_counts_sha256": true,
+    "equal_to_design_array_by_array": true,
+    "arrays": [
+     "A_o",
+     "A_t",
+     "C_o",
+     "C_t"
+    ],
+    "differing": [],
+    "extra_arrays": [],
+    "cells": 557928
+   },
+   "dupcheck": {
+    "file": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg04\\opp\\dupcheck.json",
+    "present": true,
+    "sha256": "62019d61a304b966e44cfcc5447273c7d0576daa85d14a970134bc1d2c6bcd4d",
+    "status": "ok",
+    "preview": false,
+    "slots": 19156,
+    "slots_in_fit_any": 0,
+    "slots_in_fit_same_target_colour": 0,
+    "slots_in_fit_other_target_colour": 0,
+    "inner_vs_fit_record_only": {
+     "games": 73556,
+     "also_in_fit": 0,
+     "also_in_fit_same_colour": 0,
+     "also_in_fit_other_colour": 0,
+     "without_moves": 0,
+     "design": "dupcheck.py all: games 73,556, also_in_fit 0, also_in_fit_other_colour 0"
+    },
+    "stop_fraction": 0.01,
+    "fraction": 0.0
+   },
+   "selftest": {
+    "file": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg04\\opp\\selftest.json",
+    "present": true,
+    "sha256": "ed12e591f057423ee5fe97e6fef2ea287eb9484e85903f1d0bdf07b1c2a76cdd",
+    "format": "c10-prereg04 opp selftest v1",
+    "passed": true,
+    "preview": false,
+    "problems": [],
+    "capture_games_with_mismatch": 0,
+    "feature_positions": 379,
+    "feature_mismatches": 0
+   },
+   "tables_sha256": "f380e0d720edd4429e4858ab87a3e1a5efbbd9de84982c002ab214f19f120de5",
+   "inner_report_p04_opp_sha256": "b594e0eff135b539616d60f26403ca1a1a37ac3f44855785c36e2cc6be9768fa",
+   "p04_opp_tool_sha256": "b594e0eff135b539616d60f26403ca1a1a37ac3f44855785c36e2cc6be9768fa"
+  },
+  "SWA": {
+   "inner": "743825209569aeb922b0246587ec5801f3c2e0a10083bfb6111a327dd5ff1071",
+   "val_pinned": "b355c26bf68069feb0e48ee95c46bd211c2bdbc6b5a48416c8408a210aec3848",
+   "weights_sha256": "790b767c5425e262130d6c103c71e89238edb17f927fa48e2a2770db788e50ac"
+  },
+  "SWB": {
+   "inner": "106887321cc9d54316e0d7d96e776c2060dc309c54720a8c7345f280056d2056",
+   "val_pinned": "0cadff4bae36b2a41f02fddf4366a2081d9912ede4a3063c8b50fd28a2647527",
+   "weights_sha256": "8e88f6ec6cbaad5372e5d62607b99ece3d77dc7a20af86a9197553f1a6c59a42"
+  }
+ },
+ "params": {
+  "path": "gen",
+  "terms": [
+   "OP",
+   "O4",
+   "SWA",
+   "SWB"
+  ],
+  "a": -0.002868204430466803,
+  "gamma": 0.44924502702246777,
+  "w": {
+   "OP": 0.36530333634893786,
+   "O4": 1.1879617321448344,
+   "SWA": 1.391189442106492,
+   "SWB": 0.9644033187249899
+  },
+  "beta": [
+   0.38429025128283867,
+   0.18266455494042838,
+   0.21582357012464126,
+   0.12909177353336326,
+   0.2652776225638259,
+   0.15481418192563182,
+   0.16399880959505675,
+   0.0715243670892457,
+   -0.37639167475059143
+  ],
+  "b": [
+   0.5004659481206654,
+   -0.043002537131289854,
+   0.005014228646370861,
+   -0.09505237940594,
+   -0.05247267542085266,
+   -0.22760655879730707,
+   -0.15266075724741898,
+   -0.18465277798896096,
+   -0.10710898613641402,
+   0.3570764953611474
+  ],
+  "theta": [
+   -0.002868204430466803,
+   0.44924502702246777,
+   0.36530333634893786,
+   1.1879617321448344,
+   1.391189442106492,
+   0.9644033187249899,
+   0.38429025128283867,
+   0.18266455494042838,
+   0.21582357012464126,
+   0.12909177353336326,
+   0.2652776225638259,
+   0.15481418192563182,
+   0.16399880959505675,
+   0.0715243670892457,
+   -0.37639167475059143
+  ]
+ },
+ "folds": [
+  {
+   "fold": 0,
+   "loss": 1.2506416129102622,
+   "params": {
+    "path": "gen",
+    "terms": [
+     "OP",
+     "O4",
+     "SWA",
+     "SWB"
+    ],
+    "a": 0.04189161090619739,
+    "gamma": 0.454254001618074,
+    "w": {
+     "OP": 0.3384994136901169,
+     "O4": 1.0310816540021088,
+     "SWA": 1.4229414778618097,
+     "SWB": 0.7293613141778824
+    },
+    "beta": [
+     0.37929699616966717,
+     0.153034709728438,
+     0.190465804465873,
+     0.10444609248599554,
+     0.23567784963888935,
+     0.15603204896148332,
+     0.19643172416899646,
+     0.11220583393754088,
+     -0.34180407809120245
+    ],
+    "b": [
+     0.47956575837221244,
+     -0.05684119777830665,
+     0.023933804412147926,
+     -0.07104484529089623,
+     -0.022870901462668628,
+     -0.18762362545256317,
+     -0.14101404286012117,
+     -0.20655078193250417,
+     -0.1418179880979777,
+     0.3242638200906773
+    ],
+    "theta": [
+     0.04189161090619739,
+     0.454254001618074,
+     0.3384994136901169,
+     1.0310816540021088,
+     1.4229414778618097,
+     0.7293613141778824,
+     0.37929699616966717,
+     0.153034709728438,
+     0.190465804465873,
+     0.10444609248599554,
+     0.23567784963888935,
+     0.15603204896148332,
+     0.19643172416899646,
+     0.11220583393754088,
+     -0.34180407809120245
+    ]
+   }
+  },
+  {
+   "fold": 1,
+   "loss": 1.2406099365628296,
+   "params": {
+    "path": "gen",
+    "terms": [
+     "OP",
+     "O4",
+     "SWA",
+     "SWB"
+    ],
+    "a": 0.10602494283274115,
+    "gamma": 0.4657870624451662,
+    "w": {
+     "OP": 0.3139364170430689,
+     "O4": 1.1035386947432777,
+     "SWA": 1.2630058855341486,
+     "SWB": 0.7101773652299364
+    },
+    "beta": [
+     0.3880692390927918,
+     0.19204984072674983,
+     0.20353965967383977,
+     0.10361920165189076,
+     0.2447132499903454,
+     0.10796247990609567,
+     0.10968531781669051,
+     0.008548719140365079,
+     -0.3387948968423413
+    ],
+    "b": [
+     0.47602717646452236,
+     -0.07278560460031101,
+     -0.03359127154955274,
+     -0.11181058783535958,
+     -0.05138986121411836,
+     -0.22677996402719,
+     -0.12000115836508071,
+     -0.13730586148371784,
+     -0.04377192748826806,
+     0.32140906009907594
+    ],
+    "theta": [
+     0.10602494283274115,
+     0.4657870624451662,
+     0.3139364170430689,
+     1.1035386947432777,
+     1.2630058855341486,
+     0.7101773652299364,
+     0.3880692390927918,
+     0.19204984072674983,
+     0.20353965967383977,
+     0.10361920165189076,
+     0.2447132499903454,
+     0.10796247990609567,
+     0.10968531781669051,
+     0.008548719140365079,
+     -0.3387948968423413
+    ]
+   }
+  },
+  {
+   "fold": 2,
+   "loss": 1.2274801372872421,
+   "params": {
+    "path": "gen",
+    "terms": [
+     "OP",
+     "O4",
+     "SWA",
+     "SWB"
+    ],
+    "a": -0.16776363277411482,
+    "gamma": 0.41493364477537065,
+    "w": {
+     "OP": 0.4659092005537002,
+     "O4": 1.5531151062856272,
+     "SWA": 1.4155843093218763,
+     "SWB": 1.564406907504374
+    },
+    "beta": [
+     0.3922265145980777,
+     0.18000205830501276,
+     0.19258680213626672,
+     0.12227568972353198,
+     0.2907280388455946,
+     0.1827244563899345,
+     0.19377618565684704,
+     0.06762101517938914,
+     -0.38904169850772485
+    ],
+    "b": [
+     0.5078977373430729,
+     -0.046794319123857314,
+     0.01009511136061361,
+     -0.06531390758487585,
+     -0.035237221610006655,
+     -0.2443471298729514,
+     -0.17631492510145091,
+     -0.21430040678244236,
+     -0.10476230024758404,
+     0.36907736161948207
+    ],
+    "theta": [
+     -0.16776363277411482,
+     0.41493364477537065,
+     0.4659092005537002,
+     1.5531151062856272,
+     1.4155843093218763,
+     1.564406907504374,
+     0.3922265145980777,
+     0.18000205830501276,
+     0.19258680213626672,
+     0.12227568972353198,
+     0.2907280388455946,
+     0.1827244563899345,
+     0.19377618565684704,
+     0.06762101517938914,
+     -0.38904169850772485
+    ]
+   }
+  },
+  {
+   "fold": 3,
+   "loss": 1.2510257159729081,
+   "params": {
+    "path": "gen",
+    "terms": [
+     "OP",
+     "O4",
+     "SWA",
+     "SWB"
+    ],
+    "a": -0.18741265086893974,
+    "gamma": 0.4442833457933931,
+    "w": {
+     "OP": 0.4060640854161829,
+     "O4": 1.472975215284863,
+     "SWA": 1.4373745215857623,
+     "SWB": 1.540380331285523
+    },
+    "beta": [
+     0.37887388438437397,
+     0.1807189832005657,
+     0.23564650758014974,
+     0.13445675715042618,
+     0.23093246298532255,
+     0.1147096610032918,
+     0.09448188159433465,
+     0.020717404175874376,
+     -0.43910698776950263
+    ],
+    "b": [
+     0.46841693379022314,
+     -0.0673916519351345,
+     -0.02082200691045128,
+     -0.1453667241884435,
+     -0.09161808682221849,
+     -0.2243301456877809,
+     -0.1374192083864013,
+     -0.13222407864395616,
+     -0.06581849657003529,
+     0.41657346535419837
+    ],
+    "theta": [
+     -0.18741265086893974,
+     0.4442833457933931,
+     0.4060640854161829,
+     1.472975215284863,
+     1.4373745215857623,
+     1.540380331285523,
+     0.37887388438437397,
+     0.1807189832005657,
+     0.23564650758014974,
+     0.13445675715042618,
+     0.23093246298532255,
+     0.1147096610032918,
+     0.09448188159433465,
+     0.020717404175874376,
+     -0.43910698776950263
+    ]
+   }
+  },
+  {
+   "fold": 4,
+   "loss": 1.229518603875281,
+   "params": {
+    "path": "gen",
+    "terms": [
+     "OP",
+     "O4",
+     "SWA",
+     "SWB"
+    ],
+    "a": 0.2015680627894415,
+    "gamma": 0.46975324523446177,
+    "w": {
+     "OP": 0.3149878356743481,
+     "O4": 0.8909513374793332,
+     "SWA": 1.3344758954459162,
+     "SWB": 0.5222044288262366
+    },
+    "beta": [
+     0.36708425509897297,
+     0.204437820058985,
+     0.2509781904170963,
+     0.1832519495562968,
+     0.3192804371211417,
+     0.2115490116694325,
+     0.2234473657783803,
+     0.1392806493989525,
+     -0.36871636719905393
+    ],
+    "b": [
+     0.5547994626440994,
+     0.03566393054950685,
+     0.04484752496108467,
+     -0.07803434554450782,
+     -0.06556276495607527,
+     -0.25141143363189666,
+     -0.1884486526019732,
+     -0.23146760743135328,
+     -0.17018117326848742,
+     0.34979505927960275
+    ],
+    "theta": [
+     0.2015680627894415,
+     0.46975324523446177,
+     0.3149878356743481,
+     0.8909513374793332,
+     1.3344758954459162,
+     0.5222044288262366,
+     0.36708425509897297,
+     0.204437820058985,
+     0.2509781904170963,
+     0.1832519495562968,
+     0.3192804371211417,
+     0.2115490116694325,
+     0.2234473657783803,
+     0.1392806493989525,
+     -0.36871636719905393
+    ]
+   }
+  }
+ ],
+ "basis": [
+  [
+   0.7071067811865475,
+   0.4082482904638631,
+   0.2886751345948129,
+   0.22360679774997896,
+   0.18257418583505536,
+   0.1543033499620919,
+   0.1336306209562122,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   -0.7071067811865475,
+   0.4082482904638631,
+   0.2886751345948129,
+   0.22360679774997896,
+   0.18257418583505536,
+   0.1543033499620919,
+   0.1336306209562122,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   -0.8164965809277261,
+   0.2886751345948129,
+   0.22360679774997896,
+   0.18257418583505536,
+   0.1543033499620919,
+   0.1336306209562122,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   0.0,
+   -0.8660254037844387,
+   0.22360679774997896,
+   0.18257418583505536,
+   0.1543033499620919,
+   0.1336306209562122,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   -0.8944271909999159,
+   0.18257418583505536,
+   0.1543033499620919,
+   0.1336306209562122,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   -0.9128709291752769,
+   0.1543033499620919,
+   0.1336306209562122,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   -0.9258200997725514,
+   0.1336306209562122,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   -0.9354143466934853,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   -0.9428090415820635,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   -0.9486832980505138
+  ]
+ ],
+ "formula": "p = softmax(e^a (n/12)^gamma (m_C5 + sum_j w_j E_j + b)), E_j = mean over the question's parsed games of log_softmax(per-game 10-vector), b = B beta",
+ "decision_rule": "B, tools/decide.py (argmax p_k + e^-1 (p_{k-1} + p_{k+1}))",
+ "opening_build_id": "c0cb86b47cd3f95c75940cc71b3b7ca24d43c3390c1a510bf96c6ae68e0f93a6",
+ "selection": {
+  "rule": "highest inner OOF rank-balanced mean (rule B); within 0.003 of the best -> the earliest in the list Q00..Q02 (compared with 1e-12 float slack)",
+  "best_id": "Q02",
+  "best_rank_balanced": 0.6101211982700248,
+  "selected": "Q02",
+  "selected_rank_balanced": 0.6101211982700248,
+  "within_tolerance": [
+   "Q02"
+  ]
+ },
+ "gates": {
+  "selected": "Q02",
+  "G1": {
+   "threshold": 0.01,
+   "delta": 0.024650946164443077,
+   "passed": true
+  },
+  "G2": {
+   "ci95": [
+    0.013889486536097137,
+    0.0351869621167156
+   ],
+   "se": 0.005576766483826525,
+   "passed": true,
+   "bootstrap": "players within each level, 1000 draws, default_rng(0), paired"
+  },
+  "G3": {
+   "question_mean_difference": 0.024785127028358337,
+   "passed": true,
+   "note": "mean of the per-question score differences on the inner eval rounds, >= 0 with 1e-12 slack"
+  },
+  "G4": {
+   "rank_balanced_difference": 0.027412749480596466,
+   "ci95": [
+    0.02118094400409241,
+    0.03329202526691168
+   ],
+   "by_colour_point_estimates": {
+    "B": 0.03020455583634707,
+    "W": 0.024683483461816813
+   },
+   "passed": true,
+   "questions": 120544,
+   "rule": "single-colour inner pseudo-questions: paired PlayerBootstrap 95 % CI lower bound > 0 and the black and white point estimates > 0"
+  },
+  "passed": true,
+  "reason": "all four gates passed"
+ },
+ "score_allowed": true,
+ "score_blocked_reasons": [],
+ "score_pending_at_apply": [
+  "O4: validation single-colour sub-question dkappa (T4 - O4) > 0, computed by apply"
+ ],
+ "se_val": {
+  "se_val": 0.007378616638272913,
+  "adoption_probability": 0.9163394318197154,
+  "delta": 0.024650946164443077,
+  "N_l": {
+   "D": 178,
+   "C": 163,
+   "B": 207,
+   "A": 308,
+   "1D": 87,
+   "2D": 122,
+   "3D": 124,
+   "4D": 128,
+   "5D": 131,
+   "6D": 141
+  },
+  "per_level_var_over_N": {
+   "D": 0.00028715886707914387,
+   "C": 0.0004710811341190387,
+   "B": 0.00044353848229513964,
+   "A": 0.00020604063314885298,
+   "1D": 0.0009848359463351095,
+   "2D": 0.0006417062436353462,
+   "3D": 0.0007266053215805386,
+   "4D": 0.0006731952218514957,
+   "5D": 0.0006310014263984547,
+   "6D": 0.0003792350730166653
+  },
+  "formula": "sqrt(sum_l Var_l(d, ddof 1) / N_l) / 10; Phi(delta / SE_val - 1.96)",
+  "adoption_probability_at_fraction_of_delta": {
+   "1.0": 0.9163394318197154,
+   "0.75": 0.7073457405054264,
+   "0.5": 0.38607315425651506
+  }
+ },
+ "oof": {
+  "rank_balanced": 0.6101211982700248,
+  "question_mean": 0.6153422886830255,
+  "per_level": {
+   "D": 0.7362421082503544,
+   "C": 0.6495084610681661,
+   "B": 0.6254617093710375,
+   "A": 0.5547197287270311,
+   "1D": 0.4719128922423052,
+   "2D": 0.5087625276236363,
+   "3D": 0.5152484748351563,
+   "4D": 0.6175449080522255,
+   "5D": 0.6636355184216776,
+   "6D": 0.7581756541086576
+  },
+  "per_n_bin": {
+   "5-7": {
+    "n_questions": 26849,
+    "rank_balanced": 0.5764850736457999,
+    "levels_present": 10,
+    "question_mean": 0.5722952908195527,
+    "pred_distribution": {
+     "D": 2283,
+     "C": 3011,
+     "B": 3886,
+     "A": 3526,
+     "1D": 2905,
+     "2D": 2435,
+     "3D": 2160,
+     "4D": 2058,
+     "5D": 2297,
+     "6D": 2288
+    },
+    "true_distribution": {
+     "D": 2649,
+     "C": 2428,
+     "B": 4237,
+     "A": 6446,
+     "1D": 1254,
+     "2D": 2032,
+     "3D": 1798,
+     "4D": 1929,
+     "5D": 1962,
+     "6D": 2114
+    }
+   },
+   "8-12": {
+    "n_questions": 42850,
+    "rank_balanced": 0.6056215539579756,
+    "levels_present": 10,
+    "question_mean": 0.6120738635521255,
+    "pred_distribution": {
+     "D": 3689,
+     "C": 5211,
+     "B": 5597,
+     "A": 5852,
+     "1D": 4779,
+     "2D": 3864,
+     "3D": 3459,
+     "4D": 3613,
+     "5D": 3485,
+     "6D": 3301
+    },
+    "true_distribution": {
+     "D": 4640,
+     "C": 4702,
+     "B": 5719,
+     "A": 9227,
+     "1D": 2119,
+     "2D": 2990,
+     "3D": 3068,
+     "4D": 3319,
+     "5D": 3374,
+     "6D": 3692
+    }
+   },
+   "13-20": {
+    "n_questions": 57501,
+    "rank_balanced": 0.628411324854089,
+    "levels_present": 10,
+    "question_mean": 0.6378779117590668,
+    "pred_distribution": {
+     "D": 5796,
+     "C": 6380,
+     "B": 6555,
+     "A": 7193,
+     "1D": 5042,
+     "2D": 5347,
+     "3D": 4939,
+     "4D": 5925,
+     "5D": 5063,
+     "6D": 5261
+    },
+    "true_distribution": {
+     "D": 6911,
+     "C": 5870,
+     "B": 6644,
+     "A": 8927,
+     "1D": 3427,
+     "2D": 4778,
+     "3D": 4934,
+     "4D": 5152,
+     "5D": 5264,
+     "6D": 5594
+    }
+   }
+  },
+  "pred_distribution": {
+   "D": 11768,
+   "C": 14602,
+   "B": 16038,
+   "A": 16571,
+   "1D": 12726,
+   "2D": 11646,
+   "3D": 10558,
+   "4D": 11596,
+   "5D": 10845,
+   "6D": 10850
+  }
+ },
+ "Q00_oof_rank_balanced": 0.5854702521055817,
+ "single_colour": {
+  "questions_sha256": "45d0f14acd98786adfd7cae040edc551420f095aaf6118d52edb47ddf91a5622",
+  "selected": {
+   "rank_balanced": 0.6106683012815998,
+   "question_mean": 0.6167844080112607,
+   "se": 0.0086616744553355,
+   "n_questions": 120544,
+   "per_level": {
+    "D": 0.7331922690079664,
+    "C": 0.6310191245480559,
+    "B": 0.6344347675823905,
+    "A": 0.5712785266408967,
+    "1D": 0.5129189649730952,
+    "2D": 0.5104863736190067,
+    "3D": 0.5330279475349502,
+    "4D": 0.5797806666950991,
+    "5D": 0.6583560407937703,
+    "6D": 0.7421883314207665
+   },
+   "by_colour": {
+    "B": {
+     "rank_balanced": 0.5948578637392231,
+     "question_mean": 0.5992386392410246,
+     "n_questions": 59744
+    },
+    "W": {
+     "rank_balanced": 0.6264176947657274,
+     "question_mean": 0.634025434481803,
+     "n_questions": 60800
+    }
+   },
+   "by_k": {
+    "5": {
+     "rank_balanced": 0.5544275154314748,
+     "question_mean": 0.560007656120624,
+     "n_questions": 37440
+    },
+    "10": {
+     "rank_balanced": 0.6114099738948394,
+     "question_mean": 0.619453543356769,
+     "n_questions": 32288
+    },
+    "15": {
+     "rank_balanced": 0.6473295642845462,
+     "question_mean": 0.6531147385106226,
+     "n_questions": 27296
+    },
+    "20": {
+     "rank_balanced": 0.6552392087243932,
+     "question_mean": 0.6613366124091808,
+     "n_questions": 23520
+    }
+   }
+  },
+  "Q00": {
+   "rank_balanced": 0.5832555518010033,
+   "question_mean": 0.5901676426238993,
+   "se": 0.008980286076752867,
+   "n_questions": 120544,
+   "per_level": {
+    "D": 0.7331853513718004,
+    "C": 0.6050653721352892,
+    "B": 0.580824600245356,
+    "A": 0.548219355898549,
+    "1D": 0.4836286034119141,
+    "2D": 0.46197791317745907,
+    "3D": 0.48948446977420734,
+    "4D": 0.5507523426239923,
+    "5D": 0.6365108948088859,
+    "6D": 0.7429066145625792
+   },
+   "by_colour": {
+    "B": {
+     "rank_balanced": 0.564653307902876,
+     "question_mean": 0.5701725990267568,
+     "n_questions": 59744
+    },
+    "W": {
+     "rank_balanced": 0.6017342113039106,
+     "question_mean": 0.6098154038848811,
+     "n_questions": 60800
+    }
+   },
+   "by_k": {
+    "5": {
+     "rank_balanced": 0.5343177993037568,
+     "question_mean": 0.5402205148043768,
+     "n_questions": 37440
+    },
+    "10": {
+     "rank_balanced": 0.5831440219206478,
+     "question_mean": 0.5919388865210254,
+     "n_questions": 32288
+    },
+    "15": {
+     "rank_balanced": 0.6145364119429145,
+     "question_mean": 0.6214397757170476,
+     "n_questions": 27296
+    },
+    "20": {
+     "rank_balanced": 0.6239642174615407,
+     "question_mean": 0.6309510779003422,
+     "n_questions": 23520
+    }
+   }
+  },
+  "selected_minus_Q00": {
+   "rank_balanced": 0.027412749480596466,
+   "question_mean": 0.026616765387361352,
+   "ci95": [
+    0.02118094400409241,
+    0.03329202526691168
+   ],
+   "se": 0.0032063798083090105,
+   "n_questions": 120544,
+   "by_colour": {
+    "B": {
+     "rank_balanced": 0.03020455583634707,
+     "question_mean": 0.02906604021426784,
+     "ci95": [
+      0.02211730975823813,
+      0.03880824358504353
+     ],
+     "se": 0.004284823200417625,
+     "n_questions": 59744
+    },
+    "W": {
+     "rank_balanced": 0.024683483461816813,
+     "question_mean": 0.02421003059692195,
+     "ci95": [
+      0.016184066562991244,
+      0.03357396561509813
+     ],
+     "se": 0.004377984046629706,
+     "n_questions": 60800
+    }
+   },
+   "by_k": {
+    "5": {
+     "rank_balanced": 0.020109716127718058
+    },
+    "10": {
+     "rank_balanced": 0.028265951974191572
+    },
+    "15": {
+     "rank_balanced": 0.032793152341631715
+    },
+    "20": {
+     "rank_balanced": 0.03127499126285249
+    }
+   },
+   "bootstrap": "paired, players within each level, 1000 draws, default_rng(0); the colour splits draw their own players"
+  },
+  "kappa_reference": {
+   "O4": {
+    "inner": {
+     "reference": -2.56319283464963,
+     "source": -2.660234834891537,
+     "dkappa": 0.09704200024190619,
+     "ci95": [
+      0.07589691247576799,
+      0.11771567270294893
+     ],
+     "questions": 120544,
+     "questions_sha256": "45d0f14acd98786adfd7cae040edc551420f095aaf6118d52edb47ddf91a5622",
+     "bootstrap": "PlayerBootstrap draws (players within each level, 1000, default_rng(0)) of the plain question mean; colour splits draw their own",
+     "by_colour": {
+      "B": {
+       "dkappa": 0.10234238322172168,
+       "questions": 59744,
+       "ci95": [
+        0.07691252401779168,
+        0.1269019250543247
+       ]
+      },
+      "W": {
+       "dkappa": 0.09183367654542435,
+       "questions": 60800,
+       "ci95": [
+        0.06777205065080812,
+        0.11333375274227886
+       ]
+      }
+     },
+     "by_k": {
+      "5": {
+       "dkappa": 0.09834853003649024,
+       "questions": 37440
+      },
+      "10": {
+       "dkappa": 0.09566534711206162,
+       "questions": 32288
+      },
+      "15": {
+       "dkappa": 0.09763741855201469,
+       "questions": 27296
+      },
+      "20": {
+       "dkappa": 0.09616106327568484,
+       "questions": 23520
+      }
+     }
+    },
+    "val_sub_questions": "deferred to apply (needs the validation O4, PREREG_04 2.2 item 2 / 2.6)",
+    "reference": "T4",
+    "reasons_not_usable": [],
+    "rule": "usable when the single-colour inner dkappa CI lower bound > 0 and (SWA, SWB) the validation sub-question dkappa > 0; O4's validation dkappa is required at apply"
+   },
+   "SWA": {
+    "inner": {
+     "reference": -2.201407185187655,
+     "source": -2.22879327936768,
+     "dkappa": 0.027386094180024707,
+     "ci95": [
+      0.02202004938420615,
+      0.032455503780070574
+     ],
+     "questions": 120544,
+     "questions_sha256": "45d0f14acd98786adfd7cae040edc551420f095aaf6118d52edb47ddf91a5622",
+     "bootstrap": "PlayerBootstrap draws (players within each level, 1000, default_rng(0)) of the plain question mean; colour splits draw their own",
+     "by_colour": {
+      "B": {
+       "dkappa": 0.033606405275047546,
+       "questions": 59744,
+       "ci95": [
+        0.02635646159336034,
+        0.0410191613309154
+       ]
+      },
+      "W": {
+       "dkappa": 0.021273820067178578,
+       "questions": 60800,
+       "ci95": [
+        0.01460950305273679,
+        0.028202367155978153
+       ]
+      }
+     },
+     "by_k": {
+      "5": {
+       "dkappa": 0.03052059791204529,
+       "questions": 37440
+      },
+      "10": {
+       "dkappa": 0.026967739373500613,
+       "questions": 32288
+      },
+      "15": {
+       "dkappa": 0.02553615259605779,
+       "questions": 27296
+      },
+      "20": {
+       "dkappa": 0.025117727927565527,
+       "questions": 23520
+      }
+     }
+    },
+    "val_sub_questions": {
+     "reference": -2.2593724671800923,
+     "source": -2.2956842255766543,
+     "dkappa": 0.03631175839656169,
+     "sub_questions": 2986,
+     "questions_with_a_sub_question": 1589,
+     "question_bootstrap_ci95_recorded_only": [
+      0.02654678947797059,
+      0.04676403909506975
+     ],
+     "definition": "each validation question's parsed games split by the question file's colour (val_keys.npz; no label); sub-questions with >= 2 parsed games; plain mean over sub-questions",
+     "by_colour": {
+      "B": {
+       "dkappa": 0.043956558286033766,
+       "sub_questions": 1492
+      },
+      "W": {
+       "dkappa": 0.02867719250961903,
+       "sub_questions": 1494
+      }
+     }
+    },
+    "prereg03_record_abs_diff": {
+     "inner_dkappa": 0.0,
+     "val_dkappa": 0.0
+    },
+    "reference": "A0",
+    "reasons_not_usable": [],
+    "rule": "usable when the single-colour inner dkappa CI lower bound > 0 and (SWA, SWB) the validation sub-question dkappa > 0; O4's validation dkappa is required at apply"
+   },
+   "SWB": {
+    "inner": {
+     "reference": -2.2054795704669896,
+     "source": -2.2304155206723526,
+     "dkappa": 0.024935950205362854,
+     "ci95": [
+      0.02057552378726974,
+      0.030183097876318746
+     ],
+     "questions": 120544,
+     "questions_sha256": "45d0f14acd98786adfd7cae040edc551420f095aaf6118d52edb47ddf91a5622",
+     "bootstrap": "PlayerBootstrap draws (players within each level, 1000, default_rng(0)) of the plain question mean; colour splits draw their own",
+     "by_colour": {
+      "B": {
+       "dkappa": 0.031016916640869217,
+       "questions": 59744,
+       "ci95": [
+        0.023626754305674857,
+        0.038248932495079095
+       ]
+      },
+      "W": {
+       "dkappa": 0.018960600555315284,
+       "questions": 60800,
+       "ci95": [
+        0.012311974443811654,
+        0.025662236377935316
+       ]
+      }
+     },
+     "by_k": {
+      "5": {
+       "dkappa": 0.025437633483279844,
+       "questions": 37440
+      },
+      "10": {
+       "dkappa": 0.02479638214021003,
+       "questions": 32288
+      },
+      "15": {
+       "dkappa": 0.024840617310774502,
+       "questions": 27296
+      },
+      "20": {
+       "dkappa": 0.024439587894696444,
+       "questions": 23520
+      }
+     }
+    },
+    "val_sub_questions": {
+     "reference": -2.2684751118276982,
+     "source": -2.3028317289806655,
+     "dkappa": 0.034356617152967346,
+     "sub_questions": 2986,
+     "questions_with_a_sub_question": 1589,
+     "question_bootstrap_ci95_recorded_only": [
+      0.02612958510174813,
+      0.04300622636804331
+     ],
+     "definition": "each validation question's parsed games split by the question file's colour (val_keys.npz; no label); sub-questions with >= 2 parsed games; plain mean over sub-questions",
+     "by_colour": {
+      "B": {
+       "dkappa": 0.03763988300203986,
+       "sub_questions": 1492
+      },
+      "W": {
+       "dkappa": 0.03107774657276909,
+       "sub_questions": 1494
+      }
+     }
+    },
+    "prereg03_record_abs_diff": {
+     "inner_dkappa": 0.0,
+     "val_dkappa": 0.0
+    },
+    "reference": "B0",
+    "reasons_not_usable": [],
+    "rule": "usable when the single-colour inner dkappa CI lower bound > 0 and (SWA, SWB) the validation sub-question dkappa > 0; O4's validation dkappa is required at apply"
+   }
+  },
+  "note": "kappa references for the test-day colour check (PREREG_04 5.2): dkappa = kappa(target-side reference) - kappa(opponent-side source)"
+ },
+ "fail_opening": {
+  "policy": "04 does not play; test02's rule applies (T1 = FAIL_OPENING -> R10)",
+  "note": "PREREG_04 2.5: no no-opening fallback of 04 is fitted for use; the no-opening versions are recorded only"
+ },
+ "check": {
+  "usable_sources": [
+   "C5",
+   "OP",
+   "O4",
+   "SWA",
+   "SWB"
+  ],
+  "check_report_sha256": "e80b3806197514c6d3d6ebf1ea115e62106291e851e07b45474f62a975eff1c9",
+  "selfcheck_sha256": "25542e480ced56ce32f2a75b3ea4317d106f30a388073d016bfd3751fd1724d6"
+ },
+ "inputs_sha256": {
+  "inner_keys.npz": "b686872d459161330af26132fc0ec2617d104be6cd72eae509250ffef0c03ab6",
+  "pseudo_inner.json": "3a51b3dd4edf8e5745f6a7ff52ca925d4a0eacd6a24950ee1b6e3b48fd0b7923",
+  "opening_inner.npz": "054689536524f7d8ea41a19d19b49ae47e7eedd128bd9cad98c429e5f80fdee5",
+  "players_split.csv": "69554875064ecbd83d790b3215c8ba8f9540f217ec4af3e4a8c43228ac2a3dfc",
+  "inner_p02e9_d4.npz": "d042fca41e04a365dd9f7f4ebc31d244d39b24e803a1191cb06ecaaf3d056de5",
+  "O4_inner": "100a889367e147696a056d6cd70fab583926062a9b4fbbedd49acc42a2da9ce7",
+  "inner_p03a_d4.npz": "3b26a39952bfe8dc2df9676ff9b15cab472861a66b628c3a4ee49c4010626cab",
+  "inner_p03a_s0_swap.npz": "743825209569aeb922b0246587ec5801f3c2e0a10083bfb6111a327dd5ff1071",
+  "inner_p03b_d4.npz": "a9c9b1509328d2c77c74ad09bcd63424c1be1979a85f372e755e3931a414ca54",
+  "inner_p03b_s0_swap.npz": "106887321cc9d54316e0d7d96e776c2060dc309c54720a8c7345f280056d2056",
+  "check_report.json": "e80b3806197514c6d3d6ebf1ea115e62106291e851e07b45474f62a975eff1c9",
+  "selfcheck.json": "25542e480ced56ce32f2a75b3ea4317d106f30a388073d016bfd3751fd1724d6"
+ },
+ "tool": {
+  "git_head": "961c945891462c17ffccadb163d24174d6746a1c",
+  "dirty_or_untracked": [],
+  "files_sha256_rule": "sha256 of the file with CRLF folded to LF",
+  "files_sha256": {
+   "p04_rank_fuse.py": "c3a647b09c46760239d5b2ee274d56f7231987354fc1c1f6c3ff40102f4b26a2",
+   "p04_opp.py": "b594e0eff135b539616d60f26403ca1a1a37ac3f44855785c36e2cc6be9768fa",
+   "p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "p02_player_fuse.py": "cb1cc1a2ba626a80ed49e7ae8269715f1e123f33777b6ed135380dbd07b35d5b",
+   "p02_player_open.py": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+   "p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+   "p02_rank_opening.py": "a4195fece41aa3d50ecda82d1af93d9c04f49df5fd2157d69dd8a488dea93463",
+   "p02_rank_pseudo.py": "16e5bfdfb2995874ddb11bde1f7a9e786a478b14443453f675a4fb3a480bb098",
+   "p03_rank_fuse.py": "77abd7479d26f0f647a258b4a6d5d2e517808b4c187184f14ff599d70b8aca2f",
+   "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "decide.py": "cf66daf1231b3c2bd60c5b6484245627e133bd0f1cd7ff5557e978da3801d0e3"
+  }
+ },
+ "environment": {
+  "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1"
+ }
+}

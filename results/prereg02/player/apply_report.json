@@ -1,0 +1,118 @@
+{
+ "what": "PREREG_02 2.2 competition 1 apply: frozen combination on the full candidate pool and the question file, with the guard",
+ "smoke": false,
+ "frozen_config": {
+  "path": "results/prereg02/player/frozen_config.json",
+  "sha256": "d70726ab198643c749b8dadc78f37b52c69bd831513e36ec564a9d04e2c7f3de",
+  "git_head": "f84e505471a3a9536e9f80de43ed9c09698317d6"
+ },
+ "selected": {
+  "id": "Q04",
+  "e": "E0",
+  "o": "raw",
+  "w": 1.0
+ },
+ "applied": {
+  "id": "Q04",
+  "e": "E0",
+  "o": "raw",
+  "w": 1.0
+ },
+ "guard_level": 1,
+ "guard_reason": "rho 1.0068 >= theta1 0.9630, colour shares within 0.5",
+ "guard_changed_combination": false,
+ "b_c_candidate_black_share": 0.502725,
+ "b_q_question_black_share": 0.5094224924012158,
+ "rho": {
+  "raw": 1.0068420434547063,
+  "canon": 0.98879379491075
+ },
+ "rho_numerator_max_cos_median": {
+  "raw": 0.2282092446788258,
+  "canon": 0.21874621500466926
+ },
+ "rho_denominator_sr_max_cos_median": {
+  "raw": 0.22665843779803582,
+  "canon": 0.22122531121305591
+ },
+ "guard": {
+  "source": "OUT_DIR/guard_calibration.json",
+  "sha256": "793c16a79080e57d4c60941a1fc311f3c0d950e19c42bafaff16a54f7ad43a28",
+  "smoke": false,
+  "thresholds": {
+   "raw": {
+    "rho_R": 1.0197271503546743,
+    "rho_F": 0.9062854576832535,
+    "rho_X": 0.7472186307476288,
+    "theta1": 0.9630063040189639,
+    "theta2": 0.8267520442154412,
+    "theta_RX": 0.8834728905511515,
+    "gap1_R_minus_F": 0.11344169267142079,
+    "gap2_F_minus_X": 0.15906682693562468,
+    "gap_R_minus_X": 0.2725085196070455,
+    "theta1_enabled": true,
+    "theta2_enabled": true
+   },
+   "canon": {
+    "rho_R": 1.014179401069461,
+    "rho_F": 0.9270569559027629,
+    "rho_X": 0.8002793994990274,
+    "theta1": 0.9706181784861119,
+    "theta2": 0.8636681777008952,
+    "theta_RX": 0.9072294002842441,
+    "gap1_R_minus_F": 0.08712244516669798,
+    "gap2_F_minus_X": 0.12677755640373556,
+    "gap_R_minus_X": 0.21390000157043354,
+    "theta1_enabled": true,
+    "theta2_enabled": true
+   }
+  }
+ },
+ "n_questions": 400,
+ "n_candidates": 400,
+ "n_candidate_games": 40000,
+ "n_question_games": 4935,
+ "n_questions_without_term": {
+  "raw": 0,
+  "canon": 0,
+  "E0": 0,
+  "E1": 0
+ },
+ "n_candidates_without_windows": {
+  "E0": 0,
+  "E1": 0
+ },
+ "n_fallback_questions": 0,
+ "inputs": {
+  "candidates_csv": {
+   "path": "data/local/player_val_candidates.csv",
+   "sha256": "7cd2897593ee9add20dce4ff5d4b0dcf8699b6d51a3f10950dc399a757dd3ad5"
+  },
+  "cand_games_npz": {
+   "path": "results/prereg02/player/dumps/cand_games.npz",
+   "sha256": "56ed03d12e9a79871a21b5f69dc4bd4bb8c8aa69b1544cb8ec799e80227cfdea"
+  },
+  "questions_csv": {
+   "path": "data/local/player_val_questions.csv",
+   "sha256": "d893a559f175b6535dc0d5f749314408b110149462f6a78a1b8cf7e9332cd676"
+  },
+  "query_games_npz": {
+   "path": "results/prereg02/player/dumps/query_games.npz",
+   "sha256": "665d0888a93f6632eb19edac76abf996d5499cd27c683d9844b97cb274b6f689"
+  }
+ },
+ "output": {
+  "path": "results/prereg02/player/player_val_top5.csv",
+  "sha256": "69ca74a61ce34f8ffa8949df731df433d474347dce9aabb535156ab8197ead6c"
+ },
+ "tools_sha256": {
+  "p02_player_open.py": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+  "p02_player_fuse.py": "cb1cc1a2ba626a80ed49e7ae8269715f1e123f33777b6ed135380dbd07b35d5b",
+  "p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+  "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495"
+ },
+ "tools_changed_since_select": [],
+ "runtime_s": 5.4,
+ "score_allowed": true,
+ "score_blocked_reasons": []
+}

@@ -1,0 +1,193 @@
+{
+ "format": "c10-prereg60 eval v1",
+ "e_seeds": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19
+ ],
+ "e_pools_use_number": 8,
+ "earlier_e_judgements": {
+  "through_prereg49": [
+   "prereg36",
+   "prereg37",
+   "prereg38",
+   "prereg39",
+   "prereg43",
+   "prereg49"
+  ],
+  "later": [
+   "prereg51/eval_B.json"
+  ],
+  "count": 7
+ },
+ "e_reused": true,
+ "development_set": null,
+ "vectors": {
+  "file": "data/prereg60/emb/p60_step_030000_raw_tta1/store_E.npz",
+  "file_sha256": "cc3d15600d35d25f98f1a3264ab7d97594c0df0c44ed9ce7ee8414f851092f7d",
+  "ckpt": "data/prereg60/S0/ckpt/step_030000.pt",
+  "ckpt_sha256": "6077c2a6e4be2366677755af58cbe9278bcf7746c1ae3698de09a04ca44640a8",
+  "embed_cfg": {
+   "chunk": 16,
+   "ckpt_sha256": "6077c2a6e4be2366677755af58cbe9278bcf7746c1ae3698de09a04ca44640a8",
+   "games": 193736,
+   "mode": null,
+   "moves": 43238718,
+   "part_items": 128,
+   "spec": {
+    "head": "cos",
+    "name": "se_gpool_trunk",
+    "pool": "mean",
+    "sampler": "game",
+    "trunk": "gpse"
+   },
+   "tta": 1,
+   "weights": "raw"
+  },
+  "same_games_as": "data/prereg49/emb/V2_step_320000_raw_tta1/store_E.npz",
+  "more_samples_total": 679300,
+  "more_samples_per_game_mean": 3.506317875872321,
+  "games_with_vector": 193736,
+  "games_with_vector_c49": 193736
+ },
+ "train_record_sha256": "3e866438ba1141c97d282ebf767c7c8e62c36d38e66bbf1a4e2d851924ac2156",
+ "train_seconds": 10126.0,
+ "seam_sha256": "c37d25876015e1a50e60addeb76470ee407f10f2a890303edb67a7fb048ed0fb",
+ "seam_a_device": "gpu",
+ "seam_a_max_abs_diff": 7.62939453125e-06,
+ "base": {
+  "name": "c49 (v2-7)",
+  "eval": "results/prereg49/explore/eval.json",
+  "e_mean": 0.7035676497986656,
+  "vectors_E": {
+   "file": "data/prereg49/emb/V2_step_320000_raw_tta1/store_E.npz",
+   "file_sha256": "27ce57a23c1b99a6968bf71689fea35e46f3f6cd4b8f7bb244be33a154e010f6",
+   "ckpt_sha256": "c091d3af1797a19ce98dc0a670eea211ceca2de4b58ee4a3c62b73b854748e12"
+  }
+ },
+ "cfg": {
+  "gnorm": true,
+  "pool_w": "mean",
+  "centre_colour": false,
+  "whiten": {
+   "lam": 0.7,
+   "lda": null
+  },
+  "sim": "proto",
+  "alpha": null,
+  "pair": null,
+  "krecip": null,
+  "aqe": null,
+  "qsmooth": null,
+  "wE": 8,
+  "gmul": null,
+  "rowz": false,
+  "norm": [
+   "csls",
+   10
+  ]
+ },
+ "wP": 8,
+ "k": 20,
+ "seam_base_E_identical": true,
+ "git_head": "3d6f53e62cca479c71aefb5389ce117d8852e1ae",
+ "p1_sets": {
+  "E": {
+   "games": 56934,
+   "usable": 56934,
+   "failed_fresh": 0
+  },
+  "E2": {
+   "games": 35769,
+   "usable": 35769,
+   "failed_fresh": 0
+  }
+ },
+ "means": {
+  "p60": 0.7069292980478077,
+  "base": 0.7035676497986656
+ },
+ "per_pool": {
+  "p60": [
+   0.6989699604620034,
+   0.7094892797307907,
+   0.7104946177394865,
+   0.6806153475835041,
+   0.7002236956205132,
+   0.7061223310571535,
+   0.7001567890163455,
+   0.7274030425370455,
+   0.7233508451125722,
+   0.7005044727618529,
+   0.7016905353905372,
+   0.6815419836482118,
+   0.718665381000576,
+   0.717802938019819,
+   0.697487634265837,
+   0.703815777315902,
+   0.7207269699743353,
+   0.7311273206014016,
+   0.722477983283841,
+   0.6859190558344231
+  ],
+  "base": [
+   0.6901487548737176,
+   0.7063302884392315,
+   0.7056482370599799,
+   0.6844300761910879,
+   0.6922684143991793,
+   0.6995414658344743,
+   0.6973744547130798,
+   0.7363471042936672,
+   0.7244048407752041,
+   0.6961455205477606,
+   0.6927652374058825,
+   0.6844290285141121,
+   0.7225981546390352,
+   0.7187727273724797,
+   0.6853203157595424,
+   0.6982242564541186,
+   0.7128487558241156,
+   0.7266402172301448,
+   0.7195124382510306,
+   0.6776027073954682
+  ]
+ },
+ "by_k": {
+  "p60": {
+   "1": 0.46661883412088834,
+   "2": 0.6783778123691865,
+   "3": 0.7944274563845476,
+   "5": 0.888293089316608
+  }
+ },
+ "p60_minus_base": {
+  "mean": 0.0033616482491419797,
+  "ci95": [
+   0.000946874145721807,
+   0.005666027683685405
+  ],
+  "pools_higher": 14
+ },
+ "rule": "adopt A60 if mean difference >= 0.01 and ci95 low > 0 and higher in >= 18 of 20 pools (pool bootstrap, 10000 samples, seed 43)",
+ "adopt": false,
+ "peak_working_set_mb": 1952.6,
+ "seconds": 119.5
+}

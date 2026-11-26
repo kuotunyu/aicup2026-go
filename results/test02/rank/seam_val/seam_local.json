@@ -1,0 +1,73 @@
+{
+ "what": "test02 local seam (PREREG_02 rev 5 section 9 item 2): R20 on the seam dumps vs results/prereg02/rank/rank_val_probs.csv and pred_B.csv",
+ "created": "2026-11-04T15:13:30+08:00",
+ "mode": "real",
+ "passed": true,
+ "questions": 1589,
+ "max_abs_diff": 0.0,
+ "tol": 0.0001,
+ "rule_b_differences": 0,
+ "rule_b_max": 4,
+ "rule_b_differing_questions": [],
+ "count_mismatch_questions": [],
+ "problems": [],
+ "byte_identical_probs": true,
+ "byte_identical_pred_B": true,
+ "required": true,
+ "notebook_seam_bitwise_equal": true,
+ "warnings": [],
+ "reference_sha256": {
+  "rank_val_probs.csv": "a83700432fce5d7d26653fdaee345b0c894729fdff0029a244ed94e06c803b63",
+  "pred_B.csv": "863a62582424adddc9c2e1821fcc056008bd651e103c19ec8ada98a14f87a2fd"
+ },
+ "set": {
+  "combo": "R20",
+  "questions": 1589,
+  "questions_without_parsed_game": 0,
+  "questions_without_parsed_game_ids": [],
+  "games": 19156,
+  "games_parsed": 19156,
+  "inputs_sha256": {
+   "val_keys.npz": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+   "val_p02e9_d4.npz": "ec0b729d805eb9f3458f7a497444b099b8ec47e5cec73703ae4b8bf9cf0a11b2",
+   "questions": "73e51bbfd7b051e73cbb62af4b180c403d2422f122240c5e67e9c92303776db5"
+  },
+  "dump_weights_sha256": "423581b4fddd5c2c160ebf691f4e86b9e00c4fe743d5cfb23df7891f4a2ca939",
+  "dump_marker": {
+   "file": "_DONE_val_p02e9_d4.json",
+   "sha256_matches_file": true,
+   "rows": 19156,
+   "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "torch": "2.11.0+cu128",
+   "cudnn": 91900,
+   "run": 1
+  }
+ },
+ "tol_check": {
+  "tol": 0.0001,
+  "notebook_tol": 0.0001,
+  "seam_dump_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "prereg02_dump_gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "same_gpu": true,
+  "rule": "1e-4 when the seam_val dump's GPU (its _DONE marker) equals the prereg02 dump's GPU, else 1e-3"
+ },
+ "dump_env": {
+  "same": true,
+  "keys": [
+   "gpu_name",
+   "torch",
+   "cudnn"
+  ],
+  "env": {
+   "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "torch": "2.11.0+cu128",
+   "cudnn": 91900
+  }
+ },
+ "outputs_sha256": {
+  "rank_val_probs.csv": "a83700432fce5d7d26653fdaee345b0c894729fdff0029a244ed94e06c803b63",
+  "pred_A.csv": "6729fe1dd62eda19a46d05daa9a0abd522e73bf9bcb412e72888c839fbe7f8b2",
+  "pred_B.csv": "863a62582424adddc9c2e1821fcc056008bd651e103c19ec8ada98a14f87a2fd",
+  "decide_summary.json": "583d42443d147a9328fb488caa02f4999609a7eb88d3977b74c8e7af9f5827db"
+ }
+}

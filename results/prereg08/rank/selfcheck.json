@@ -1,0 +1,303 @@
+{
+ "format": "c10-prereg08 rank selfcheck v1",
+ "what": "PREREG_08 2.3 selfcheck: the main-branch tool reproduces P1 (a check of the port, P1 probe only)",
+ "created": "2026-10-08T12:55:06+00:00",
+ "seconds": 662.6,
+ "preview": false,
+ "precommit": false,
+ "rerun": null,
+ "passed": true,
+ "problems": [],
+ "check_report": {
+  "sha256": "1b3b06ba614a7bc1a3d550a0b591801fd582cf034c15d58f3d661c2dbd74533d",
+  "commit": {
+   "files": {
+    "results/prereg08/rank/check_report.json": "1b3b06ba614a7bc1a3d550a0b591801fd582cf034c15d58f3d661c2dbd74533d"
+   },
+   "commit_problems": [],
+   "precommit_skipped": false
+  }
+ },
+ "inner_manifest_sha256": "0ce2114d637f5205b666e46cfc2b05b9201982e06e231a85212f479f49a415d3",
+ "reference": {
+  "Q02H": 0.6242752597994481,
+  "lambda": 0.01,
+  "cv_logloss": 1.6790734173594255,
+  "refit_loss": 1.585088334325938,
+  "x1": {
+   "rank_balanced": 0.675034627957959,
+   "diff": 0.0507593681585109,
+   "ci95": [
+    0.03701489044315354,
+    0.06537945687999477
+   ],
+   "mono_diff": 0.04964601127852308,
+   "mono_B": 0.055909493750024186,
+   "mono_W": 0.04309679963025359
+  },
+  "x4": {
+   "rank_balanced": 0.6767709161878595,
+   "diff": 0.05249565638841136,
+   "ci95": [
+    0.0386137095020332,
+    0.06756280199569697
+   ],
+   "mono_diff": 0.05075085423026038
+  }
+ },
+ "seam": {
+  "Q02_eval_P_equal_u1": true,
+  "Q02_mono_P_equal_u1": true,
+  "Q02H_rank_balanced": 0.6242752597994481
+ },
+ "hs_mapping": {
+  "lambda": 0.0001,
+  "cv_logloss": 1.7571755879185869,
+  "refit_loss": 1.7425066323027925
+ },
+ "p1_only_mapping": {
+  "lambda": 0.01,
+  "cv": {
+   "1.0": {
+    "logloss": 1.959635913906072,
+    "top1": 0.26813333333333333,
+    "rule_b_score_per_game": 0.4034438137803655,
+    "nit": [
+     66,
+     52,
+     60,
+     62,
+     52
+    ]
+   },
+   "0.3": {
+    "logloss": 1.845575544578751,
+    "top1": 0.29023333333333334,
+    "rule_b_score_per_game": 0.43501237926271974,
+    "nit": [
+     88,
+     89,
+     90,
+     89,
+     103
+    ]
+   },
+   "0.1": {
+    "logloss": 1.7565410109407562,
+    "top1": 0.3044,
+    "rule_b_score_per_game": 0.45530338751273397,
+    "nit": [
+     124,
+     145,
+     143,
+     145,
+     138
+    ]
+   },
+   "0.03": {
+    "logloss": 1.6947451126745088,
+    "top1": 0.3151,
+    "rule_b_score_per_game": 0.46360547004115216,
+    "nit": [
+     181,
+     165,
+     168,
+     173,
+     155
+    ]
+   },
+   "0.01": {
+    "logloss": 1.6790734173594255,
+    "top1": 0.31453333333333333,
+    "rule_b_score_per_game": 0.465501145676455,
+    "nit": [
+     189,
+     191,
+     180,
+     171,
+     185
+    ]
+   },
+   "0.003": {
+    "logloss": 1.705716341402872,
+    "top1": 0.31446666666666667,
+    "rule_b_score_per_game": 0.4618189210588263,
+    "nit": [
+     252,
+     245,
+     256,
+     244,
+     231
+    ]
+   },
+   "0.001": {
+    "logloss": 1.7620519796360412,
+    "top1": 0.3106,
+    "rule_b_score_per_game": 0.45583376856373586,
+    "nit": [
+     322,
+     326,
+     323,
+     332,
+     330
+    ]
+   },
+   "0.0003": {
+    "logloss": 1.8456742911513284,
+    "top1": 0.30566666666666664,
+    "rule_b_score_per_game": 0.45013529995396245,
+    "nit": [
+     519,
+     549,
+     529,
+     545,
+     526
+    ]
+   },
+   "0.0001": {
+    "logloss": 1.9276636746474658,
+    "top1": 0.3023,
+    "rule_b_score_per_game": 0.44465964153731,
+    "nit": [
+     748,
+     749,
+     774,
+     760,
+     769
+    ]
+   }
+  },
+  "refit_loss": 1.585088334325938,
+  "games": {
+   "games": 30000,
+   "players": 5767
+  },
+  "success": true,
+  "nit": 229
+ },
+ "x1": {
+  "rank_balanced": 0.675034627957959,
+  "diff": 0.0507593681585109,
+  "ci95": [
+   0.03701489044315354,
+   0.06537945687999477
+  ],
+  "mono_diff": 0.04964601127852308,
+  "mono_B": 0.055909493750024186,
+  "mono_W": 0.04309679963025359
+ },
+ "x4": {
+  "rank_balanced": 0.6767709161878595,
+  "diff": 0.05249565638841136,
+  "ci95": [
+   0.0386137095020332,
+   0.06756280199569697
+  ],
+  "mono_diff": 0.05075085423026038
+ },
+ "mono_coverage": "120544/120544 questions",
+ "masked_equal": {
+  "E_HS": {
+   "fit": true,
+   "eval": true,
+   "mono": true
+  },
+  "E_P1": {
+   "fit": true,
+   "eval": true,
+   "mono": true
+  },
+  "Q08_P_equal_x4": {
+   "eval": true,
+   "mono": true
+  }
+ },
+ "masked_info": {
+  "HS": {
+   "fit": {
+    "games_in_questions": 10160,
+    "unusable_slots_in_questions": 0,
+    "path": "pooled"
+   },
+   "eval": {
+    "games_in_questions": 11813,
+    "unusable_slots_in_questions": 0,
+    "path": "pooled"
+   },
+   "mono": {
+    "games_in_questions": 72908,
+    "unusable_slots_in_questions": 0,
+    "path": "pooled"
+   }
+  },
+  "P1": {
+   "fit": {
+    "games_in_questions": 10160,
+    "unusable_slots_in_questions": 0,
+    "path": "pooled",
+    "scale": 4.0
+   },
+   "eval": {
+    "games_in_questions": 11813,
+    "unusable_slots_in_questions": 0,
+    "path": "pooled",
+    "scale": 4.0
+   },
+   "mono": {
+    "games_in_questions": 72908,
+    "unusable_slots_in_questions": 0,
+    "path": "pooled",
+    "scale": 4.0
+   }
+  }
+ },
+ "pinned_sha256": {
+  "results/prereg07/explore/pilot_humansl/hs_lib.py": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+  "results/prereg07/explore/pilot_humansl/pilot_run.py": "b0d127fd1d5a83af5b17ec3df1dccc85d94b11c3479d33cac07448a3796a3936",
+  "results/prereg07/explore/pilot_humansl/pilot_fuse.py": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+  "results/prereg05/explore/u1/u1_lib.py": "225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7",
+  "results/prereg08/p1/p1_lib.py": "062600168326f9eecd4ec1073e54881c475f8f276e376164eab20d373bbff511",
+  "results/prereg08/p1/p1_extract.py": "2ee8eb127150e672b62bcb30b70c4fac46b8cd6e32c7e4eb19d54f746a6e3f9c",
+  "results/prereg08/p1/p1_fuse.py": "ad356c8ca9f26e1e761677afa07b5aa369ca31e5318f61eb6a6cbda33b970953",
+  "results/prereg08/p1/p1_plan.json": "0cd46bf90c764cae3824f5906e72e13336ab7276ef5fa7edb2ec6831911b228d",
+  "results/prereg08/p2/p2_sets.py": "98bad3d85a32e80c065226b0cc8cd1065b423cdb39dce89829a54b0cbf381c8f",
+  "tools/p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142",
+  "tools/p07_hs.py": "b27ea371bdc1477558effb9ca86c540805dcced971d983226e15fb5e19b7b8dc",
+  "data/prereg08/p1/sets.json": "f0c494962788615d76080b5481de5b762d71f3ad37f8add55a09efef82acb7c7",
+  "data/prereg08/p2/sets.json": "2b68f7ae27b2b6bbe00a3920065495d2a5d6b73fd7df33854f4bf99ae5390049",
+  "data/prereg07/pilot/plan.json": "8494e9afd79c06249bd81545263b86caef7b9e77f3cd631a1e354368cfe33946"
+ },
+ "tool": {
+  "git_head": "713c8e93f14cb9ef1941b4e85ea89995d105a96a",
+  "dirty_or_untracked": [],
+  "files_sha256_rule": "sha256, CRLF folded to LF",
+  "files_sha256": {
+   "tools/p08_p1.py": "a10c77c4bd97472b464f39080816090f0f64986195384b28e1d95dfc76e6677f",
+   "tools/p08_rank_fuse.py": "64f42bd956f7808947e0c85abe1f9fa60d9958cb8e769fc889c6283c188d481e",
+   "results/prereg07/explore/pilot_humansl/hs_lib.py": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+   "results/prereg07/explore/pilot_humansl/pilot_run.py": "b0d127fd1d5a83af5b17ec3df1dccc85d94b11c3479d33cac07448a3796a3936",
+   "results/prereg07/explore/pilot_humansl/pilot_fuse.py": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+   "results/prereg05/explore/u1/u1_lib.py": "225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7",
+   "results/prereg08/p1/p1_lib.py": "062600168326f9eecd4ec1073e54881c475f8f276e376164eab20d373bbff511",
+   "results/prereg08/p1/p1_extract.py": "2ee8eb127150e672b62bcb30b70c4fac46b8cd6e32c7e4eb19d54f746a6e3f9c",
+   "results/prereg08/p1/p1_fuse.py": "ad356c8ca9f26e1e761677afa07b5aa369ca31e5318f61eb6a6cbda33b970953",
+   "results/prereg08/p1/p1_plan.json": "0cd46bf90c764cae3824f5906e72e13336ab7276ef5fa7edb2ec6831911b228d",
+   "results/prereg08/p2/p2_sets.py": "98bad3d85a32e80c065226b0cc8cd1065b423cdb39dce89829a54b0cbf381c8f",
+   "tools/p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142",
+   "tools/p07_hs.py": "b27ea371bdc1477558effb9ca86c540805dcced971d983226e15fb5e19b7b8dc"
+  }
+ },
+ "environment": {
+  "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "blas_env": {
+   "OMP_NUM_THREADS": null,
+   "OPENBLAS_NUM_THREADS": null,
+   "MKL_NUM_THREADS": null
+  },
+  "cpu_count": 24
+ }
+}

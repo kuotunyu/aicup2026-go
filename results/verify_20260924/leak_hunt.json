@@ -1,0 +1,2046 @@
+{
+ "format_flags": {
+  "header_D": 1,
+  "header_C": 1,
+  "header_B": 1,
+  "header_A": 1,
+  "header_1D": 1,
+  "header_2D": 1,
+  "header_3D": 1,
+  "header_4D": 1,
+  "header_5D": 1,
+  "header_6D": 1
+ },
+ "rows": 1000000,
+ "full_moves_dup_raw": {
+  "groups": 0,
+  "games_in_groups": 0,
+  "pairs_total": 0,
+  "pairs_same_player": 0,
+  "pairs_diff_player_same_level": 0,
+  "pairs_cross_level": 0,
+  "pairs_diff_colour_diff_player": 0,
+  "pairs_diff_colour_same_player": 0,
+  "largest_group": 0,
+  "group_size_hist_top": {},
+  "groups_size_gt_10": 0
+ },
+ "full_moves_dup_symmetry": {
+  "groups": 0,
+  "games_in_groups": 0,
+  "pairs_total": 0,
+  "pairs_same_player": 0,
+  "pairs_diff_player_same_level": 0,
+  "pairs_cross_level": 0,
+  "pairs_diff_colour_diff_player": 0,
+  "pairs_diff_colour_same_player": 0,
+  "largest_group": 0,
+  "group_size_hist_top": {},
+  "groups_size_gt_10": 0
+ },
+ "prefix_pairs_raw": {
+  "10": {
+   "groups": 76830,
+   "games_in_groups": 364692,
+   "pairs_total": 19925173,
+   "pairs_same_player": 204055,
+   "pairs_diff_player_same_level": 2299839,
+   "pairs_cross_level": 17421279,
+   "pairs_diff_colour_diff_player": 9921758,
+   "pairs_diff_colour_same_player": 5133,
+   "largest_group": 3865,
+   "group_size_hist_top": {
+    "2": 42438,
+    "3": 13251,
+    "4": 6281,
+    "5": 3546,
+    "6": 2376,
+    "7": 1549,
+    "8": 1185,
+    "9": 877,
+    "10": 705,
+    "11": 540
+   },
+   "groups_size_gt_10": 4622
+  },
+  "20": {
+   "groups": 8239,
+   "games_in_groups": 21531,
+   "pairs_total": 41458,
+   "pairs_same_player": 17660,
+   "pairs_diff_player_same_level": 7758,
+   "pairs_cross_level": 16040,
+   "pairs_diff_colour_diff_player": 13771,
+   "pairs_diff_colour_same_player": 9,
+   "largest_group": 95,
+   "group_size_hist_top": {
+    "2": 6238,
+    "3": 1088,
+    "4": 406,
+    "5": 187,
+    "6": 101,
+    "7": 59,
+    "8": 39,
+    "9": 33,
+    "10": 19,
+    "11": 10
+   },
+   "groups_size_gt_10": 69
+  },
+  "30": {
+   "groups": 648,
+   "games_in_groups": 1769,
+   "pairs_total": 6171,
+   "pairs_same_player": 5247,
+   "pairs_diff_player_same_level": 587,
+   "pairs_cross_level": 337,
+   "pairs_diff_colour_diff_player": 451,
+   "pairs_diff_colour_same_player": 0,
+   "largest_group": 52,
+   "group_size_hist_top": {
+    "2": 528,
+    "3": 69,
+    "4": 18,
+    "5": 8,
+    "6": 3,
+    "7": 6,
+    "8": 2,
+    "9": 4,
+    "10": 1,
+    "11": 1
+   },
+   "groups_size_gt_10": 9
+  },
+  "40": {
+   "groups": 137,
+   "games_in_groups": 529,
+   "pairs_total": 2001,
+   "pairs_same_player": 1794,
+   "pairs_diff_player_same_level": 188,
+   "pairs_cross_level": 19,
+   "pairs_diff_colour_diff_player": 29,
+   "pairs_diff_colour_same_player": 0,
+   "largest_group": 23,
+   "group_size_hist_top": {
+    "2": 92,
+    "3": 10,
+    "4": 6,
+    "5": 9,
+    "6": 4,
+    "7": 2,
+    "8": 1,
+    "9": 3,
+    "10": 1,
+    "11": 1
+   },
+   "groups_size_gt_10": 9
+  },
+  "50": {
+   "groups": 65,
+   "games_in_groups": 293,
+   "pairs_total": 1047,
+   "pairs_same_player": 921,
+   "pairs_diff_player_same_level": 121,
+   "pairs_cross_level": 5,
+   "pairs_diff_colour_diff_player": 6,
+   "pairs_diff_colour_same_player": 0,
+   "largest_group": 19,
+   "group_size_hist_top": {
+    "2": 31,
+    "3": 7,
+    "4": 4,
+    "5": 11,
+    "6": 2,
+    "8": 2,
+    "9": 2,
+    "11": 1,
+    "12": 1,
+    "15": 1
+   },
+   "groups_size_gt_10": 6
+  },
+  "60": {
+   "groups": 56,
+   "games_in_groups": 202,
+   "pairs_total": 383,
+   "pairs_same_player": 343,
+   "pairs_diff_player_same_level": 37,
+   "pairs_cross_level": 3,
+   "pairs_diff_colour_diff_player": 4,
+   "pairs_diff_colour_same_player": 0,
+   "largest_group": 12,
+   "group_size_hist_top": {
+    "2": 23,
+    "3": 12,
+    "4": 7,
+    "5": 5,
+    "6": 4,
+    "7": 2,
+    "8": 1,
+    "9": 1,
+    "12": 1
+   },
+   "groups_size_gt_10": 1
+  },
+  "80": {
+   "groups": 24,
+   "games_in_groups": 56,
+   "pairs_total": 44,
+   "pairs_same_player": 43,
+   "pairs_diff_player_same_level": 1,
+   "pairs_cross_level": 0,
+   "pairs_diff_colour_diff_player": 1,
+   "pairs_diff_colour_same_player": 0,
+   "largest_group": 5,
+   "group_size_hist_top": {
+    "2": 19,
+    "3": 3,
+    "4": 1,
+    "5": 1
+   },
+   "groups_size_gt_10": 0
+  },
+  "100": {
+   "groups": 6,
+   "games_in_groups": 15,
+   "pairs_total": 15,
+   "pairs_same_player": 14,
+   "pairs_diff_player_same_level": 1,
+   "pairs_cross_level": 0,
+   "pairs_diff_colour_diff_player": 1,
+   "pairs_diff_colour_same_player": 0,
+   "largest_group": 5,
+   "group_size_hist_top": {
+    "2": 5,
+    "5": 1
+   },
+   "groups_size_gt_10": 0
+  }
+ },
+ "prefix_pairs_symmetry": {
+  "10": {
+   "groups": 80582,
+   "games_in_groups": 405823,
+   "pairs_total": 26225199,
+   "pairs_same_player": 249032,
+   "pairs_diff_player_same_level": 3001607,
+   "pairs_cross_level": 22974560,
+   "pairs_diff_colour_diff_player": 13025450,
+   "pairs_diff_colour_same_player": 6038,
+   "largest_group": 4570,
+   "group_size_hist_top": {
+    "2": 43278,
+    "3": 13969,
+    "4": 6685,
+    "5": 3882,
+    "6": 2590,
+    "7": 1778,
+    "8": 1321,
+    "9": 961,
+    "10": 771,
+    "11": 632
+   },
+   "groups_size_gt_10": 5347
+  },
+  "20": {
+   "groups": 8936,
+   "games_in_groups": 23763,
+   "pairs_total": 61447,
+   "pairs_same_player": 30200,
+   "pairs_diff_player_same_level": 10575,
+   "pairs_cross_level": 20672,
+   "pairs_diff_colour_diff_player": 16199,
+   "pairs_diff_colour_same_player": 9,
+   "largest_group": 135,
+   "group_size_hist_top": {
+    "2": 6708,
+    "3": 1201,
+    "4": 456,
+    "5": 199,
+    "6": 111,
+    "7": 69,
+    "8": 51,
+    "9": 37,
+    "10": 20,
+    "11": 18
+   },
+   "groups_size_gt_10": 84
+  },
+  "30": {
+   "groups": 682,
+   "games_in_groups": 1926,
+   "pairs_total": 12006,
+   "pairs_same_player": 10175,
+   "pairs_diff_player_same_level": 1437,
+   "pairs_cross_level": 394,
+   "pairs_diff_colour_diff_player": 481,
+   "pairs_diff_colour_same_player": 0,
+   "largest_group": 86,
+   "group_size_hist_top": {
+    "2": 556,
+    "3": 74,
+    "4": 19,
+    "5": 11,
+    "6": 2,
+    "7": 3,
+    "8": 2,
+    "9": 4,
+    "10": 2,
+    "12": 1
+   },
+   "groups_size_gt_10": 9
+  },
+  "40": {
+   "groups": 126,
+   "games_in_groups": 568,
+   "pairs_total": 4237,
+   "pairs_same_player": 3630,
+   "pairs_diff_player_same_level": 588,
+   "pairs_cross_level": 19,
+   "pairs_diff_colour_diff_player": 29,
+   "pairs_diff_colour_same_player": 0,
+   "largest_group": 53,
+   "group_size_hist_top": {
+    "2": 88,
+    "3": 13,
+    "4": 3,
+    "5": 4,
+    "6": 3,
+    "8": 1,
+    "9": 1,
+    "10": 1,
+    "11": 2,
+    "12": 1
+   },
+   "groups_size_gt_10": 12
+  },
+  "50": {
+   "groups": 63,
+   "games_in_groups": 325,
+   "pairs_total": 2329,
+   "pairs_same_player": 1972,
+   "pairs_diff_player_same_level": 352,
+   "pairs_cross_level": 5,
+   "pairs_diff_colour_diff_player": 6,
+   "pairs_diff_colour_same_player": 0,
+   "largest_group": 46,
+   "group_size_hist_top": {
+    "2": 34,
+    "3": 9,
+    "4": 6,
+    "5": 3,
+    "7": 1,
+    "9": 1,
+    "10": 2,
+    "11": 1,
+    "13": 1,
+    "17": 1
+   },
+   "groups_size_gt_10": 7
+  },
+  "60": {
+   "groups": 46,
+   "games_in_groups": 216,
+   "pairs_total": 854,
+   "pairs_same_player": 732,
+   "pairs_diff_player_same_level": 119,
+   "pairs_cross_level": 3,
+   "pairs_diff_colour_diff_player": 4,
+   "pairs_diff_colour_same_player": 0,
+   "largest_group": 27,
+   "group_size_hist_top": {
+    "2": 20,
+    "3": 7,
+    "4": 1,
+    "5": 5,
+    "6": 4,
+    "7": 4,
+    "9": 1,
+    "11": 1,
+    "12": 1,
+    "15": 1
+   },
+   "groups_size_gt_10": 4
+  },
+  "80": {
+   "groups": 24,
+   "games_in_groups": 66,
+   "pairs_total": 77,
+   "pairs_same_player": 76,
+   "pairs_diff_player_same_level": 1,
+   "pairs_cross_level": 0,
+   "pairs_diff_colour_diff_player": 1,
+   "pairs_diff_colour_same_player": 0,
+   "largest_group": 6,
+   "group_size_hist_top": {
+    "2": 16,
+    "3": 3,
+    "4": 2,
+    "5": 1,
+    "6": 2
+   },
+   "groups_size_gt_10": 0
+  },
+  "100": {
+   "groups": 7,
+   "games_in_groups": 17,
+   "pairs_total": 16,
+   "pairs_same_player": 15,
+   "pairs_diff_player_same_level": 1,
+   "pairs_cross_level": 0,
+   "pairs_diff_colour_diff_player": 1,
+   "pairs_diff_colour_same_player": 0,
+   "largest_group": 5,
+   "group_size_hist_top": {
+    "2": 6,
+    "5": 1
+   },
+   "groups_size_gt_10": 0
+  }
+ },
+ "pass2_games_loaded": 216,
+ "prefix60_pairs_detail_raw": {
+  "pairs": 383,
+  "common_prefix_length_buckets": {
+   "60-69": 229,
+   "70-79": 110,
+   "80-99": 29,
+   "200+": 1,
+   "100-149": 1,
+   "150-199": 13
+  },
+  "by_kind_player_colour": {
+   "diverge|same_player|same_colour": 343,
+   "diverge|diff_player_same_level|same_colour": 36,
+   "diverge|cross_level|diff_colour": 3,
+   "diverge|diff_player_same_level|diff_colour": 1
+  },
+  "note": null
+ },
+ "prefix60_pairs_detail_symmetry": {
+  "pairs": 854,
+  "common_prefix_length_buckets": {
+   "60-69": 550,
+   "70-79": 227,
+   "80-99": 61,
+   "200+": 1,
+   "100-149": 1,
+   "one_is_prefix_of_other": 1,
+   "150-199": 13
+  },
+  "by_kind_player_colour": {
+   "diverge|same_player|same_colour": 731,
+   "diverge|diff_player_same_level|same_colour": 118,
+   "diverge|cross_level|diff_colour": 3,
+   "one_is_prefix_of_other|same_player|same_colour": 1,
+   "diverge|diff_player_same_level|diff_colour": 1
+  },
+  "note": null
+ },
+ "prefix60_touch_raw": {
+  "players_touched": 8,
+  "games_by_level": {
+   "3D": 2,
+   "4D": 1,
+   "5D": 3,
+   "6D": 196
+  },
+  "top5_groups": [
+   {
+    "size": 12,
+    "players": 1,
+    "levels": {
+     "6D": 12
+    },
+    "colours": {
+     "B": 12
+    },
+    "moves_min": 105,
+    "moves_max": 187
+   },
+   {
+    "size": 9,
+    "players": 2,
+    "levels": {
+     "6D": 9
+    },
+    "colours": {
+     "B": 9
+    },
+    "moves_min": 105,
+    "moves_max": 227
+   },
+   {
+    "size": 8,
+    "players": 2,
+    "levels": {
+     "6D": 8
+    },
+    "colours": {
+     "B": 8
+    },
+    "moves_min": 110,
+    "moves_max": 213
+   },
+   {
+    "size": 7,
+    "players": 1,
+    "levels": {
+     "6D": 7
+    },
+    "colours": {
+     "B": 7
+    },
+    "moves_min": 108,
+    "moves_max": 247
+   },
+   {
+    "size": 7,
+    "players": 2,
+    "levels": {
+     "6D": 7
+    },
+    "colours": {
+     "B": 7
+    },
+    "moves_min": 117,
+    "moves_max": 220
+   }
+  ]
+ },
+ "prefix60_touch_symmetry": {
+  "players_touched": 8,
+  "games_by_level": {
+   "3D": 6,
+   "4D": 1,
+   "5D": 3,
+   "6D": 206
+  },
+  "top5_groups": [
+   {
+    "size": 27,
+    "players": 2,
+    "levels": {
+     "6D": 27
+    },
+    "colours": {
+     "B": 27
+    },
+    "moves_min": 105,
+    "moves_max": 227
+   },
+   {
+    "size": 15,
+    "players": 3,
+    "levels": {
+     "6D": 15
+    },
+    "colours": {
+     "B": 15
+    },
+    "moves_min": 117,
+    "moves_max": 291
+   },
+   {
+    "size": 12,
+    "players": 2,
+    "levels": {
+     "6D": 12
+    },
+    "colours": {
+     "B": 12
+    },
+    "moves_min": 106,
+    "moves_max": 213
+   },
+   {
+    "size": 11,
+    "players": 1,
+    "levels": {
+     "6D": 11
+    },
+    "colours": {
+     "B": 11
+    },
+    "moves_min": 108,
+    "moves_max": 247
+   },
+   {
+    "size": 9,
+    "players": 1,
+    "levels": {
+     "6D": 9
+    },
+    "colours": {
+     "B": 9
+    },
+    "moves_min": 105,
+    "moves_max": 244
+   }
+  ]
+ },
+ "row_order": {
+  "D": {
+   "game_id_is_g_rowindex_plus1_all_rows": true,
+   "game_id_min": 1,
+   "game_id_max": 100000,
+   "game_id_unparsable": 0,
+   "player_runs": 99649,
+   "players": 890,
+   "adjacent_rows_same_player": 351,
+   "adjacent_rows_same_player_expected_if_shuffled": 321.7,
+   "players_ge100_span_fraction_of_file": {
+    "p0": 0.49591,
+    "p10": 0.97525,
+    "p25": 0.98555,
+    "p50": 0.99243,
+    "p75": 0.99596,
+    "p90": 0.998,
+    "p100": 0.99977
+   },
+   "colour_runs": 2,
+   "colour_runs_expected_if_shuffled": 50001.0,
+   "deciles": [
+    {
+     "B_share": 1.0,
+     "mean_moves": 227.9,
+     "mean_games_of_player": 317.4,
+     "distinct_players": 815
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 227.2,
+     "mean_games_of_player": 323.0,
+     "distinct_players": 821
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 228.1,
+     "mean_games_of_player": 314.9,
+     "distinct_players": 823
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 227.8,
+     "mean_games_of_player": 321.0,
+     "distinct_players": 820
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 228.5,
+     "mean_games_of_player": 323.6,
+     "distinct_players": 829
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 227.4,
+     "mean_games_of_player": 326.4,
+     "distinct_players": 820
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 227.6,
+     "mean_games_of_player": 322.0,
+     "distinct_players": 824
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 227.7,
+     "mean_games_of_player": 325.3,
+     "distinct_players": 816
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 227.8,
+     "mean_games_of_player": 327.9,
+     "distinct_players": 831
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 228.1,
+     "mean_games_of_player": 325.2,
+     "distinct_players": 824
+    }
+   ],
+   "within_player_colour_runs(players>=20)": 1430,
+   "within_player_colour_runs_expected": 45670.0,
+   "within_player_players": 719,
+   "consecutive_same_player_same_first20": [
+    3,
+    96788
+   ],
+   "random_same_player_same_first20": [
+    3,
+    96788
+   ],
+   "players_colour_balanced_within_1": 94,
+   "B_share_of_players_ge50_games": {
+    "p0": 0.0,
+    "p10": 0.35064935064935066,
+    "p25": 0.4146341463414634,
+    "p50": 0.47619047619047616,
+    "p75": 0.5609756097560976,
+    "p90": 0.6966666666666667,
+    "p100": 1.0
+   }
+  },
+  "C": {
+   "game_id_is_g_rowindex_plus1_all_rows": true,
+   "game_id_min": 1,
+   "game_id_max": 100000,
+   "game_id_unparsable": 0,
+   "player_runs": 99629,
+   "players": 817,
+   "adjacent_rows_same_player": 371,
+   "adjacent_rows_same_player_expected_if_shuffled": 348.0,
+   "players_ge100_span_fraction_of_file": {
+    "p0": 0.48501,
+    "p10": 0.97898,
+    "p25": 0.98661,
+    "p50": 0.99315,
+    "p75": 0.99617,
+    "p90": 0.99828,
+    "p100": 0.99982
+   },
+   "colour_runs": 2,
+   "colour_runs_expected_if_shuffled": 50001.0,
+   "deciles": [
+    {
+     "B_share": 1.0,
+     "mean_moves": 226.7,
+     "mean_games_of_player": 353.9,
+     "distinct_players": 746
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 227.5,
+     "mean_games_of_player": 351.9,
+     "distinct_players": 731
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 226.5,
+     "mean_games_of_player": 349.8,
+     "distinct_players": 739
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 226.6,
+     "mean_games_of_player": 348.3,
+     "distinct_players": 733
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 227.0,
+     "mean_games_of_player": 353.8,
+     "distinct_players": 742
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 227.7,
+     "mean_games_of_player": 344.1,
+     "distinct_players": 750
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 227.6,
+     "mean_games_of_player": 347.4,
+     "distinct_players": 743
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 227.5,
+     "mean_games_of_player": 348.2,
+     "distinct_players": 754
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 227.6,
+     "mean_games_of_player": 345.7,
+     "distinct_players": 745
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 227.8,
+     "mean_games_of_player": 347.0,
+     "distinct_players": 741
+    }
+   ],
+   "within_player_colour_runs(players>=20)": 1244,
+   "within_player_colour_runs_expected": 46307.0,
+   "within_player_players": 624,
+   "consecutive_same_player_same_first20": [
+    2,
+    96722
+   ],
+   "random_same_player_same_first20": [
+    2,
+    96722
+   ],
+   "players_colour_balanced_within_1": 90,
+   "B_share_of_players_ge50_games": {
+    "p0": 0.0,
+    "p10": 0.36,
+    "p25": 0.4260869565217391,
+    "p50": 0.4782608695652174,
+    "p75": 0.5444444444444444,
+    "p90": 0.6260162601626016,
+    "p100": 1.0
+   }
+  },
+  "B": {
+   "game_id_is_g_rowindex_plus1_all_rows": true,
+   "game_id_min": 1,
+   "game_id_max": 100000,
+   "game_id_unparsable": 0,
+   "player_runs": 99735,
+   "players": 1048,
+   "adjacent_rows_same_player": 265,
+   "adjacent_rows_same_player_expected_if_shuffled": 247.2,
+   "players_ge100_span_fraction_of_file": {
+    "p0": 0.49656,
+    "p10": 0.97608,
+    "p25": 0.98544,
+    "p50": 0.99214,
+    "p75": 0.99569,
+    "p90": 0.99814,
+    "p100": 0.99949
+   },
+   "colour_runs": 2,
+   "colour_runs_expected_if_shuffled": 50001.0,
+   "deciles": [
+    {
+     "B_share": 1.0,
+     "mean_moves": 226.7,
+     "mean_games_of_player": 244.4,
+     "distinct_players": 907
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 225.8,
+     "mean_games_of_player": 251.5,
+     "distinct_players": 924
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 226.0,
+     "mean_games_of_player": 245.7,
+     "distinct_players": 925
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 226.5,
+     "mean_games_of_player": 249.7,
+     "distinct_players": 911
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 225.9,
+     "mean_games_of_player": 248.2,
+     "distinct_players": 896
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 226.0,
+     "mean_games_of_player": 248.6,
+     "distinct_players": 933
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 227.3,
+     "mean_games_of_player": 248.7,
+     "distinct_players": 911
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 227.0,
+     "mean_games_of_player": 250.4,
+     "distinct_players": 897
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 227.3,
+     "mean_games_of_player": 247.1,
+     "distinct_players": 925
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 227.5,
+     "mean_games_of_player": 247.9,
+     "distinct_players": 911
+    }
+   ],
+   "within_player_colour_runs(players>=20)": 1407,
+   "within_player_colour_runs_expected": 45894.3,
+   "within_player_players": 706,
+   "consecutive_same_player_same_first20": [
+    1,
+    95072
+   ],
+   "random_same_player_same_first20": [
+    2,
+    95072
+   ],
+   "players_colour_balanced_within_1": 137,
+   "B_share_of_players_ge50_games": {
+    "p0": 0.1,
+    "p10": 0.38372093023255816,
+    "p25": 0.44660194174757284,
+    "p50": 0.4863013698630137,
+    "p75": 0.5389221556886228,
+    "p90": 0.6565656565656566,
+    "p100": 1.0
+   }
+  },
+  "A": {
+   "game_id_is_g_rowindex_plus1_all_rows": true,
+   "game_id_min": 1,
+   "game_id_max": 100000,
+   "game_id_unparsable": 0,
+   "player_runs": 99842,
+   "players": 1582,
+   "adjacent_rows_same_player": 158,
+   "adjacent_rows_same_player_expected_if_shuffled": 176.6,
+   "players_ge100_span_fraction_of_file": {
+    "p0": 0.48645,
+    "p10": 0.9674,
+    "p25": 0.98212,
+    "p50": 0.99086,
+    "p75": 0.99537,
+    "p90": 0.99721,
+    "p100": 0.99973
+   },
+   "colour_runs": 2,
+   "colour_runs_expected_if_shuffled": 50001.0,
+   "deciles": [
+    {
+     "B_share": 1.0,
+     "mean_moves": 223.4,
+     "mean_games_of_player": 180.5,
+     "distinct_players": 1297
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 224.3,
+     "mean_games_of_player": 177.5,
+     "distinct_players": 1303
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 223.7,
+     "mean_games_of_player": 176.9,
+     "distinct_players": 1302
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 224.3,
+     "mean_games_of_player": 177.7,
+     "distinct_players": 1295
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 223.6,
+     "mean_games_of_player": 179.2,
+     "distinct_players": 1290
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 223.6,
+     "mean_games_of_player": 175.6,
+     "distinct_players": 1290
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 223.9,
+     "mean_games_of_player": 176.9,
+     "distinct_players": 1310
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 223.8,
+     "mean_games_of_player": 177.3,
+     "distinct_players": 1321
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 223.9,
+     "mean_games_of_player": 174.1,
+     "distinct_players": 1306
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 224.3,
+     "mean_games_of_player": 180.5,
+     "distinct_players": 1291
+    }
+   ],
+   "within_player_colour_runs(players>=20)": 1755,
+   "within_player_colour_runs_expected": 44368.0,
+   "within_player_players": 881,
+   "consecutive_same_player_same_first20": [
+    2,
+    91410
+   ],
+   "random_same_player_same_first20": [
+    1,
+    91410
+   ],
+   "players_colour_balanced_within_1": 324,
+   "B_share_of_players_ge50_games": {
+    "p0": 0.0,
+    "p10": 0.4033898305084746,
+    "p25": 0.44642857142857145,
+    "p50": 0.48695652173913045,
+    "p75": 0.531496062992126,
+    "p90": 0.6029411764705882,
+    "p100": 1.0
+   }
+  },
+  "1D": {
+   "game_id_is_g_rowindex_plus1_all_rows": true,
+   "game_id_min": 1,
+   "game_id_max": 100000,
+   "game_id_unparsable": 0,
+   "player_runs": 99407,
+   "players": 433,
+   "adjacent_rows_same_player": 593,
+   "adjacent_rows_same_player_expected_if_shuffled": 592.6,
+   "players_ge100_span_fraction_of_file": {
+    "p0": 0.49277,
+    "p10": 0.97889,
+    "p25": 0.99,
+    "p50": 0.99475,
+    "p75": 0.99776,
+    "p90": 0.99887,
+    "p100": 0.99962
+   },
+   "colour_runs": 2,
+   "colour_runs_expected_if_shuffled": 50001.0,
+   "deciles": [
+    {
+     "B_share": 1.0,
+     "mean_moves": 223.4,
+     "mean_games_of_player": 594.1,
+     "distinct_players": 426
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 223.1,
+     "mean_games_of_player": 590.9,
+     "distinct_players": 424
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 223.5,
+     "mean_games_of_player": 590.4,
+     "distinct_players": 424
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 223.5,
+     "mean_games_of_player": 595.3,
+     "distinct_players": 423
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 223.0,
+     "mean_games_of_player": 590.3,
+     "distinct_players": 424
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 225.1,
+     "mean_games_of_player": 598.9,
+     "distinct_players": 414
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 224.5,
+     "mean_games_of_player": 593.8,
+     "distinct_players": 421
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 224.4,
+     "mean_games_of_player": 596.9,
+     "distinct_players": 418
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 224.8,
+     "mean_games_of_player": 595.1,
+     "distinct_players": 416
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 224.1,
+     "mean_games_of_player": 590.7,
+     "distinct_players": 417
+    }
+   ],
+   "within_player_colour_runs(players>=20)": 851,
+   "within_player_colour_runs_expected": 47307.8,
+   "within_player_players": 430,
+   "consecutive_same_player_same_first20": [
+    2,
+    99537
+   ],
+   "random_same_player_same_first20": [
+    3,
+    99537
+   ],
+   "players_colour_balanced_within_1": 38,
+   "B_share_of_players_ge50_games": {
+    "p0": 0.0,
+    "p10": 0.3582089552238806,
+    "p25": 0.4485294117647059,
+    "p50": 0.5007974481658692,
+    "p75": 0.5396825396825397,
+    "p90": 0.6016949152542372,
+    "p100": 1.0
+   }
+  },
+  "2D": {
+   "game_id_is_g_rowindex_plus1_all_rows": true,
+   "game_id_min": 1,
+   "game_id_max": 100000,
+   "game_id_unparsable": 0,
+   "player_runs": 99536,
+   "players": 610,
+   "adjacent_rows_same_player": 464,
+   "adjacent_rows_same_player_expected_if_shuffled": 416.4,
+   "players_ge100_span_fraction_of_file": {
+    "p0": 0.4948,
+    "p10": 0.97917,
+    "p25": 0.98771,
+    "p50": 0.99327,
+    "p75": 0.99605,
+    "p90": 0.99823,
+    "p100": 0.99967
+   },
+   "colour_runs": 2,
+   "colour_runs_expected_if_shuffled": 50001.0,
+   "deciles": [
+    {
+     "B_share": 1.0,
+     "mean_moves": 220.2,
+     "mean_games_of_player": 415.5,
+     "distinct_players": 586
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 220.9,
+     "mean_games_of_player": 414.6,
+     "distinct_players": 591
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 221.7,
+     "mean_games_of_player": 423.5,
+     "distinct_players": 588
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 220.7,
+     "mean_games_of_player": 422.3,
+     "distinct_players": 588
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 220.9,
+     "mean_games_of_player": 417.2,
+     "distinct_players": 586
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 222.7,
+     "mean_games_of_player": 414.6,
+     "distinct_players": 582
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 222.7,
+     "mean_games_of_player": 414.9,
+     "distinct_players": 587
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 222.1,
+     "mean_games_of_player": 420.2,
+     "distinct_players": 588
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 222.4,
+     "mean_games_of_player": 417.8,
+     "distinct_players": 586
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 221.8,
+     "mean_games_of_player": 413.6,
+     "distinct_players": 587
+    }
+   ],
+   "within_player_colour_runs(players>=20)": 1136,
+   "within_player_colour_runs_expected": 47118.9,
+   "within_player_players": 572,
+   "consecutive_same_player_same_first20": [
+    6,
+    98843
+   ],
+   "random_same_player_same_first20": [
+    3,
+    98843
+   ],
+   "players_colour_balanced_within_1": 53,
+   "B_share_of_players_ge50_games": {
+    "p0": 0.006060606060606061,
+    "p10": 0.38271604938271603,
+    "p25": 0.4574742268041237,
+    "p50": 0.5,
+    "p75": 0.5373831775700935,
+    "p90": 0.6162464985994398,
+    "p100": 1.0
+   }
+  },
+  "3D": {
+   "game_id_is_g_rowindex_plus1_all_rows": true,
+   "game_id_min": 1,
+   "game_id_max": 100000,
+   "game_id_unparsable": 0,
+   "player_runs": 99561,
+   "players": 618,
+   "adjacent_rows_same_player": 439,
+   "adjacent_rows_same_player_expected_if_shuffled": 437.7,
+   "players_ge100_span_fraction_of_file": {
+    "p0": 0.49352,
+    "p10": 0.9687,
+    "p25": 0.985,
+    "p50": 0.99229,
+    "p75": 0.99717,
+    "p90": 0.99845,
+    "p100": 0.99971
+   },
+   "colour_runs": 2,
+   "colour_runs_expected_if_shuffled": 50001.0,
+   "deciles": [
+    {
+     "B_share": 1.0,
+     "mean_moves": 217.0,
+     "mean_games_of_player": 445.2,
+     "distinct_players": 583
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 216.7,
+     "mean_games_of_player": 442.5,
+     "distinct_players": 584
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 216.6,
+     "mean_games_of_player": 443.5,
+     "distinct_players": 589
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 218.6,
+     "mean_games_of_player": 441.7,
+     "distinct_players": 580
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 217.5,
+     "mean_games_of_player": 439.8,
+     "distinct_players": 591
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 219.2,
+     "mean_games_of_player": 437.4,
+     "distinct_players": 577
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 219.5,
+     "mean_games_of_player": 431.7,
+     "distinct_players": 585
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 218.7,
+     "mean_games_of_player": 440.0,
+     "distinct_players": 585
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 219.5,
+     "mean_games_of_player": 428.7,
+     "distinct_players": 587
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 219.0,
+     "mean_games_of_player": 436.7,
+     "distinct_players": 587
+    }
+   ],
+   "within_player_colour_runs(players>=20)": 1122,
+   "within_player_colour_runs_expected": 46690.9,
+   "within_player_players": 568,
+   "consecutive_same_player_same_first20": [
+    9,
+    98617
+   ],
+   "random_same_player_same_first20": [
+    3,
+    98617
+   ],
+   "players_colour_balanced_within_1": 60,
+   "B_share_of_players_ge50_games": {
+    "p0": 0.0,
+    "p10": 0.3939393939393939,
+    "p25": 0.45454545454545453,
+    "p50": 0.4892966360856269,
+    "p75": 0.5260416666666666,
+    "p90": 0.6031746031746031,
+    "p100": 1.0
+   }
+  },
+  "4D": {
+   "game_id_is_g_rowindex_plus1_all_rows": true,
+   "game_id_min": 1,
+   "game_id_max": 100000,
+   "game_id_unparsable": 0,
+   "player_runs": 99540,
+   "players": 640,
+   "adjacent_rows_same_player": 460,
+   "adjacent_rows_same_player_expected_if_shuffled": 453.8,
+   "players_ge100_span_fraction_of_file": {
+    "p0": 0.49908,
+    "p10": 0.97865,
+    "p25": 0.98757,
+    "p50": 0.99382,
+    "p75": 0.99718,
+    "p90": 0.99862,
+    "p100": 0.99992
+   },
+   "colour_runs": 2,
+   "colour_runs_expected_if_shuffled": 50001.0,
+   "deciles": [
+    {
+     "B_share": 1.0,
+     "mean_moves": 217.7,
+     "mean_games_of_player": 459.3,
+     "distinct_players": 614
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 216.2,
+     "mean_games_of_player": 453.1,
+     "distinct_players": 609
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 219.1,
+     "mean_games_of_player": 460.8,
+     "distinct_players": 606
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 217.3,
+     "mean_games_of_player": 461.9,
+     "distinct_players": 615
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 217.8,
+     "mean_games_of_player": 458.8,
+     "distinct_players": 621
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 217.5,
+     "mean_games_of_player": 451.8,
+     "distinct_players": 600
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 216.9,
+     "mean_games_of_player": 452.1,
+     "distinct_players": 595
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 217.7,
+     "mean_games_of_player": 445.6,
+     "distinct_players": 600
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 217.3,
+     "mean_games_of_player": 450.0,
+     "distinct_players": 589
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 217.9,
+     "mean_games_of_player": 454.9,
+     "distinct_players": 600
+    }
+   ],
+   "within_player_colour_runs(players>=20)": 1141,
+   "within_player_colour_runs_expected": 47744.4,
+   "within_player_players": 576,
+   "consecutive_same_player_same_first20": [
+    12,
+    98458
+   ],
+   "random_same_player_same_first20": [
+    4,
+    98458
+   ],
+   "players_colour_balanced_within_1": 78,
+   "B_share_of_players_ge50_games": {
+    "p0": 0.005263157894736842,
+    "p10": 0.4166666666666667,
+    "p25": 0.45454545454545453,
+    "p50": 0.4918032786885246,
+    "p75": 0.5284552845528455,
+    "p90": 0.5818181818181818,
+    "p100": 1.0
+   }
+  },
+  "5D": {
+   "game_id_is_g_rowindex_plus1_all_rows": true,
+   "game_id_min": 1,
+   "game_id_max": 100000,
+   "game_id_unparsable": 0,
+   "player_runs": 99574,
+   "players": 658,
+   "adjacent_rows_same_player": 426,
+   "adjacent_rows_same_player_expected_if_shuffled": 392.0,
+   "players_ge100_span_fraction_of_file": {
+    "p0": 0.60394,
+    "p10": 0.97608,
+    "p25": 0.98753,
+    "p50": 0.99314,
+    "p75": 0.99627,
+    "p90": 0.99811,
+    "p100": 0.99993
+   },
+   "colour_runs": 2,
+   "colour_runs_expected_if_shuffled": 50001.0,
+   "deciles": [
+    {
+     "B_share": 1.0,
+     "mean_moves": 216.6,
+     "mean_games_of_player": 399.0,
+     "distinct_players": 630
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 217.8,
+     "mean_games_of_player": 407.0,
+     "distinct_players": 635
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 216.9,
+     "mean_games_of_player": 413.7,
+     "distinct_players": 629
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 217.7,
+     "mean_games_of_player": 408.4,
+     "distinct_players": 632
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 217.4,
+     "mean_games_of_player": 409.8,
+     "distinct_players": 627
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 219.2,
+     "mean_games_of_player": 380.7,
+     "distinct_players": 634
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 219.2,
+     "mean_games_of_player": 370.5,
+     "distinct_players": 632
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 220.1,
+     "mean_games_of_player": 379.8,
+     "distinct_players": 631
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 220.1,
+     "mean_games_of_player": 375.6,
+     "distinct_players": 631
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 220.2,
+     "mean_games_of_player": 385.1,
+     "distinct_players": 628
+    }
+   ],
+   "within_player_colour_runs(players>=20)": 1230,
+   "within_player_colour_runs_expected": 46055.9,
+   "within_player_players": 619,
+   "consecutive_same_player_same_first20": [
+    11,
+    98787
+   ],
+   "random_same_player_same_first20": [
+    4,
+    98787
+   ],
+   "players_colour_balanced_within_1": 63,
+   "B_share_of_players_ge50_games": {
+    "p0": 0.07964601769911504,
+    "p10": 0.36363636363636365,
+    "p25": 0.43609022556390975,
+    "p50": 0.4755244755244755,
+    "p75": 0.5206611570247934,
+    "p90": 0.6120689655172413,
+    "p100": 1.0
+   }
+  },
+  "6D": {
+   "game_id_is_g_rowindex_plus1_all_rows": true,
+   "game_id_min": 1,
+   "game_id_max": 100000,
+   "game_id_unparsable": 0,
+   "player_runs": 99606,
+   "players": 711,
+   "adjacent_rows_same_player": 394,
+   "adjacent_rows_same_player_expected_if_shuffled": 370.0,
+   "players_ge100_span_fraction_of_file": {
+    "p0": 0.49266,
+    "p10": 0.97185,
+    "p25": 0.98407,
+    "p50": 0.99219,
+    "p75": 0.9965,
+    "p90": 0.99791,
+    "p100": 0.99971
+   },
+   "colour_runs": 2,
+   "colour_runs_expected_if_shuffled": 50001.0,
+   "deciles": [
+    {
+     "B_share": 1.0,
+     "mean_moves": 212.3,
+     "mean_games_of_player": 372.6,
+     "distinct_players": 653
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 213.2,
+     "mean_games_of_player": 375.2,
+     "distinct_players": 659
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 213.1,
+     "mean_games_of_player": 368.0,
+     "distinct_players": 666
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 212.5,
+     "mean_games_of_player": 368.9,
+     "distinct_players": 663
+    },
+    {
+     "B_share": 1.0,
+     "mean_moves": 214.6,
+     "mean_games_of_player": 375.5,
+     "distinct_players": 656
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 214.2,
+     "mean_games_of_player": 368.0,
+     "distinct_players": 688
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 213.9,
+     "mean_games_of_player": 370.7,
+     "distinct_players": 680
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 213.8,
+     "mean_games_of_player": 368.3,
+     "distinct_players": 684
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 213.9,
+     "mean_games_of_player": 371.1,
+     "distinct_players": 685
+    },
+    {
+     "B_share": 0.0,
+     "mean_moves": 213.6,
+     "mean_games_of_player": 371.9,
+     "distinct_players": 679
+    }
+   ],
+   "within_player_colour_runs(players>=20)": 1335,
+   "within_player_colour_runs_expected": 45138.3,
+   "within_player_players": 676,
+   "consecutive_same_player_same_first20": [
+    46,
+    98836
+   ],
+   "random_same_player_same_first20": [
+    51,
+    98836
+   ],
+   "players_colour_balanced_within_1": 64,
+   "B_share_of_players_ge50_games": {
+    "p0": 0.0,
+    "p10": 0.3103448275862069,
+    "p25": 0.46153846153846156,
+    "p50": 0.5289855072463768,
+    "p75": 0.5806451612903226,
+    "p90": 0.6451612903225806,
+    "p100": 1.0
+   }
+  }
+ },
+ "game_id_shared_across_files": 100000,
+ "game_id_distinct_numbers_all_files": 100000,
+ "player_id": {
+  "n_players": 8007,
+  "length_counts": {
+   "16": 8007
+  },
+  "charset": {
+   "lower_hex": 8007
+  },
+  "case_insensitive_collisions": 0,
+  "pairs_hamming_distance_1": 0,
+  "pairs_sharing_prefix_k": {
+   "4": 478,
+   "5": 33,
+   "6": 1,
+   "8": 0
+  },
+  "expected_prefix_pairs_if_random_hex": {
+   "4": 489.08,
+   "5": 30.57,
+   "6": 1.91,
+   "8": 0.01
+  },
+  "char_freq_min_max": [
+   7818,
+   8145
+  ],
+  "players_in_more_than_one_level": 0
+ },
+ "moves": {
+  "by_level": {
+   "D": {
+    "mean": 227.84,
+    "median": 235.0,
+    "stdev": 48.37,
+    "min": 100,
+    "max": 445,
+    "exactly_100": 113,
+    "moves_100_to_104": [
+     113,
+     128,
+     94,
+     132,
+     99
+    ],
+    "moves_95_to_99": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "le_120": 2841,
+    "ge_300": 4086,
+    "odd_move_count_share": 0.5015,
+    "last_move_by_the_labelled_player_share": 0.4848
+   },
+   "C": {
+    "mean": 227.26,
+    "median": 234.0,
+    "stdev": 48.28,
+    "min": 100,
+    "max": 445,
+    "exactly_100": 123,
+    "moves_100_to_104": [
+     123,
+     116,
+     119,
+     132,
+     126
+    ],
+    "moves_95_to_99": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "le_120": 2838,
+    "ge_300": 4064,
+    "odd_move_count_share": 0.5037,
+    "last_move_by_the_labelled_player_share": 0.4907
+   },
+   "B": {
+    "mean": 226.59,
+    "median": 234.0,
+    "stdev": 49.33,
+    "min": 100,
+    "max": 380,
+    "exactly_100": 112,
+    "moves_100_to_104": [
+     112,
+     131,
+     106,
+     155,
+     121
+    ],
+    "moves_95_to_99": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "le_120": 2805,
+    "ge_300": 4472,
+    "odd_move_count_share": 0.5038,
+    "last_move_by_the_labelled_player_share": 0.4988
+   },
+   "A": {
+    "mean": 223.88,
+    "median": 230.0,
+    "stdev": 50.31,
+    "min": 100,
+    "max": 417,
+    "exactly_100": 106,
+    "moves_100_to_104": [
+     106,
+     110,
+     101,
+     121,
+     116
+    ],
+    "moves_95_to_99": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "le_120": 2914,
+    "ge_300": 4461,
+    "odd_move_count_share": 0.5039,
+    "last_move_by_the_labelled_player_share": 0.4983
+   },
+   "1D": {
+    "mean": 223.96,
+    "median": 230.0,
+    "stdev": 51.16,
+    "min": 100,
+    "max": 382,
+    "exactly_100": 99,
+    "moves_100_to_104": [
+     99,
+     123,
+     104,
+     135,
+     129
+    ],
+    "moves_95_to_99": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "le_120": 2894,
+    "ge_300": 5142,
+    "odd_move_count_share": 0.51,
+    "last_move_by_the_labelled_player_share": 0.5175
+   },
+   "2D": {
+    "mean": 221.61,
+    "median": 227.0,
+    "stdev": 51.48,
+    "min": 100,
+    "max": 426,
+    "exactly_100": 100,
+    "moves_100_to_104": [
+     100,
+     124,
+     102,
+     155,
+     120
+    ],
+    "moves_95_to_99": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "le_120": 3026,
+    "ge_300": 4878,
+    "odd_move_count_share": 0.5055,
+    "last_move_by_the_labelled_player_share": 0.5012
+   },
+   "3D": {
+    "mean": 218.23,
+    "median": 222.0,
+    "stdev": 52.42,
+    "min": 100,
+    "max": 398,
+    "exactly_100": 153,
+    "moves_100_to_104": [
+     153,
+     167,
+     149,
+     172,
+     134
+    ],
+    "moves_95_to_99": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "le_120": 3710,
+    "ge_300": 4665,
+    "odd_move_count_share": 0.5117,
+    "last_move_by_the_labelled_player_share": 0.5041
+   },
+   "4D": {
+    "mean": 217.54,
+    "median": 221.0,
+    "stdev": 53.64,
+    "min": 100,
+    "max": 396,
+    "exactly_100": 145,
+    "moves_100_to_104": [
+     145,
+     186,
+     127,
+     192,
+     129
+    ],
+    "moves_95_to_99": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "le_120": 3899,
+    "ge_300": 5119,
+    "odd_move_count_share": 0.5074,
+    "last_move_by_the_labelled_player_share": 0.4967
+   },
+   "5D": {
+    "mean": 218.52,
+    "median": 221.0,
+    "stdev": 54.91,
+    "min": 100,
+    "max": 397,
+    "exactly_100": 153,
+    "moves_100_to_104": [
+     153,
+     142,
+     140,
+     161,
+     151
+    ],
+    "moves_95_to_99": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "le_120": 3779,
+    "ge_300": 6181,
+    "odd_move_count_share": 0.5088,
+    "last_move_by_the_labelled_player_share": 0.5082
+   },
+   "6D": {
+    "mean": 213.52,
+    "median": 213.0,
+    "stdev": 55.72,
+    "min": 100,
+    "max": 383,
+    "exactly_100": 172,
+    "moves_100_to_104": [
+     172,
+     207,
+     179,
+     194,
+     162
+    ],
+    "moves_95_to_99": [
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "le_120": 4544,
+    "ge_300": 5745,
+    "odd_move_count_share": 0.5047,
+    "last_move_by_the_labelled_player_share": 0.5038
+   }
+  },
+  "all_exactly_100": 1276,
+  "all_min": 100,
+  "all_lt_100": 0
+ },
+ "pool_sizes": {
+  "by_level": {
+   "D": {
+    "ge5": 890,
+    "ge20": 719,
+    "ge25": 629,
+    "ge100": 278,
+    "ge105": 266,
+    "ge120": 243,
+    "ge200": 159,
+    "games_in_players_ge120": 74213,
+    "players": 890
+   },
+   "C": {
+    "ge5": 817,
+    "ge20": 624,
+    "ge25": 532,
+    "ge100": 297,
+    "ge105": 291,
+    "ge120": 264,
+    "ge200": 174,
+    "games_in_players_ge120": 79675,
+    "players": 817
+   },
+   "B": {
+    "ge5": 1037,
+    "ge20": 706,
+    "ge25": 615,
+    "ge100": 324,
+    "ge105": 318,
+    "ge120": 292,
+    "ge200": 172,
+    "games_in_players_ge120": 74625,
+    "players": 1048
+   },
+   "A": {
+    "ge5": 1541,
+    "ge20": 881,
+    "ge25": 789,
+    "ge100": 340,
+    "ge105": 323,
+    "ge120": 272,
+    "ge200": 116,
+    "games_in_players_ge120": 58384,
+    "players": 1582
+   },
+   "1D": {
+    "ge5": 432,
+    "ge20": 430,
+    "ge25": 416,
+    "ge100": 205,
+    "ge105": 203,
+    "ge120": 195,
+    "ge200": 152,
+    "games_in_players_ge120": 87402,
+    "players": 433
+   },
+   "2D": {
+    "ge5": 610,
+    "ge20": 572,
+    "ge25": 534,
+    "ge100": 265,
+    "ge105": 260,
+    "ge120": 242,
+    "ge200": 171,
+    "games_in_players_ge120": 82777,
+    "players": 610
+   },
+   "3D": {
+    "ge5": 617,
+    "ge20": 568,
+    "ge25": 541,
+    "ge100": 267,
+    "ge105": 263,
+    "ge120": 247,
+    "ge200": 157,
+    "games_in_players_ge120": 83656,
+    "players": 618
+   },
+   "4D": {
+    "ge5": 640,
+    "ge20": 576,
+    "ge25": 530,
+    "ge100": 253,
+    "ge105": 248,
+    "ge120": 227,
+    "ge200": 152,
+    "games_in_players_ge120": 81661,
+    "players": 640
+   },
+   "5D": {
+    "ge5": 656,
+    "ge20": 619,
+    "ge25": 581,
+    "ge100": 269,
+    "ge105": 262,
+    "ge120": 242,
+    "ge200": 166,
+    "games_in_players_ge120": 80279,
+    "players": 658
+   },
+   "6D": {
+    "ge5": 708,
+    "ge20": 676,
+    "ge25": 636,
+    "ge100": 268,
+    "ge105": 257,
+    "ge120": 237,
+    "ge200": 157,
+    "games_in_players_ge120": 77092,
+    "players": 711
+   }
+  },
+  "total": {
+   "ge5": 7948,
+   "ge20": 6371,
+   "ge25": 5803,
+   "ge100": 2766,
+   "ge105": 2691,
+   "ge120": 2461,
+   "ge200": 1576,
+   "games_in_players_ge120": 779764,
+   "players": 8007
+  }
+ }
+}

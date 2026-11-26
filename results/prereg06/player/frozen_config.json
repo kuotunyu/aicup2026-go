@@ -1,0 +1,289 @@
+{
+ "what": "PREREG_06 frozen configuration (competition 1); written by tools/p06_player.py freeze",
+ "mode": "real",
+ "precommit_preview": false,
+ "combinations": {
+  "order": [
+   "V2",
+   "V3",
+   "V0"
+  ],
+  "V2": [
+   2.66,
+   0.5,
+   0.5
+  ],
+  "V1": null,
+  "V1_reasons": [
+   "best grid point beats V2 by 0.0008 < 0.003 on the tuning pools",
+   "best grid point below V2 on the evaluation pools"
+  ],
+  "V3": [
+   1.33,
+   0.25,
+   0.25
+  ],
+  "V0": null,
+  "base": "Q04 = z(E0) + 1 z(O_raw)"
+ },
+ "k_star": 10,
+ "k_switch_rest": 3,
+ "switch": {
+  "V2": {
+   "r_star": 2.2515761243137895,
+   "usable": true,
+   "thresholds_by_source": {
+    "E0": 2.6203503067133855,
+    "PA": 2.2515761243137895
+   }
+  },
+  "V3": {
+   "r_star": 2.2678004868728294,
+   "usable": true,
+   "thresholds_by_source": {
+    "E0": 2.539483749910997,
+    "PA": 2.2678004868728294
+   }
+  },
+  "V0": {
+   "r_star": 1.8690961267414,
+   "usable": false,
+   "thresholds_by_source": {
+    "E0": 2.3095065411712143,
+    "PA": 1.8690961267414
+   }
+  }
+ },
+ "switch_used_at_all": true,
+ "switch_f_sources": [
+  "E0",
+  "PA"
+ ],
+ "lda": {
+  "B": {
+   "file": "results/prereg06/player/lda_B.npz",
+   "sha256": "ecfee95d0c7d8fdeb499ca9f89a8a6bb840e9a3cf0e999b1baa14ff78d69faa5",
+   "vocab_size": 220
+  },
+  "W": {
+   "file": "results/prereg06/player/lda_W.npz",
+   "sha256": "e8bc63331a749bce83cc7cab8b7852bec70c6644f38fe89982f0dbbad581292d",
+   "vocab_size": 226
+  }
+ },
+ "e0_cap": {
+  "cap": 0.5,
+  "value": 0.4208253466042676,
+  "cnn_representative": true
+ },
+ "cnn_fit_report_sha256": "9b3e4e4fd01bc9d05aeb59de17511de2b870ef19e799429cb051a0e4c3f493fa",
+ "cnn_available": true,
+ "dmix": {
+  "passed": true,
+  "main_diff": [
+   0.05514,
+   0.04868,
+   0.0616
+  ]
+ },
+ "selfcheck": {
+  "passed": true,
+  "v2_means_rounded": {
+   "v2_nopost": 0.9819,
+   "v2_csls10": 0.9869
+  }
+ },
+ "select_tolerance": 0.003,
+ "gate_min_vs_V0": 0.005,
+ "seeds": {
+  "tune": [
+   300,
+   301,
+   302,
+   303,
+   304,
+   305,
+   306,
+   307,
+   308,
+   309,
+   310,
+   311,
+   312,
+   313,
+   314,
+   315,
+   316,
+   317,
+   318,
+   319
+  ],
+  "tune_eval": [
+   400,
+   401,
+   402,
+   403,
+   404,
+   405,
+   406,
+   407,
+   408,
+   409,
+   410,
+   411,
+   412,
+   413,
+   414,
+   415,
+   416,
+   417,
+   418,
+   419
+  ],
+  "switch_selection": [
+   500,
+   501,
+   502,
+   503,
+   504,
+   505,
+   506,
+   507,
+   508,
+   509,
+   510,
+   511,
+   512,
+   513,
+   514,
+   515,
+   516,
+   517,
+   518,
+   519,
+   520,
+   521,
+   522,
+   523,
+   524,
+   525,
+   526,
+   527,
+   528,
+   529
+  ],
+  "switch_eval": [
+   600,
+   601,
+   602,
+   603,
+   604,
+   605,
+   606,
+   607,
+   608,
+   609,
+   610,
+   611,
+   612,
+   613,
+   614,
+   615,
+   616,
+   617,
+   618,
+   619
+  ],
+  "dmix": [
+   700,
+   701,
+   702,
+   703,
+   704,
+   705,
+   706,
+   707,
+   708,
+   709
+  ]
+ },
+ "salts": {
+  "sr": "c10-prereg06|sr",
+  "sr_k": "c10-prereg06|sr-k"
+ },
+ "sr_rounds": 10,
+ "reports": {
+  "leakcheck_report.json": {
+   "sha256": "5170de47df21aaacd97c13944ab3297683110055a08644fa9d33b8343b7ac4b9",
+   "committed": true
+  },
+  "build_report.json": {
+   "sha256": "5a103fa0726e82b00b573db71350cd3fcb49dfb785a63891f5c1b8dda2a1dbf4",
+   "committed": true
+  },
+  "lda_report.json": {
+   "sha256": "07dd419d1c4acf3290768c42bde3452b895ee3d082c82e62979b975a654d7633",
+   "committed": true
+  },
+  "selfcheck_report.json": {
+   "sha256": "ac174a7fc7ccecba32e7d1a0aeb71f1e2409c7d0df5c07012977f692328ce157",
+   "committed": true
+  },
+  "cnn_fit_report.json": {
+   "sha256": "9b3e4e4fd01bc9d05aeb59de17511de2b870ef19e799429cb051a0e4c3f493fa",
+   "committed": true
+  },
+  "tune_report.json": {
+   "sha256": "8681b154db310c0855fea68ef41535a9401e5e109b7165743e9cdeee6e84a21c",
+   "committed": true
+  },
+  "switch_report.json": {
+   "sha256": "1856ac9547ab8e46bd96856692d4d69e996e0edd160c2bddd1cf93a5313bfbe4",
+   "committed": true
+  },
+  "dmix_report.json": {
+   "sha256": "9c952de9ce0b8df80494b226d6204b92f5e206ff68031bcc7f0e6c991694b2f3",
+   "committed": true
+  }
+ },
+ "leakcheck_report_sha256": "5170de47df21aaacd97c13944ab3297683110055a08644fa9d33b8343b7ac4b9",
+ "dependency_sha256": {
+  "tools/p06_cnn_fit.py": "bf2ff36176239acd372c338a91098a928fca0a49a4eae607fd2b10570962cf18",
+  "tools/p02_player_fuse.py": "cb1cc1a2ba626a80ed49e7ae8269715f1e123f33777b6ed135380dbd07b35d5b",
+  "tools/p02_player_open.py": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+  "tools/p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+  "tools/c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495"
+ },
+ "prereg02_inputs": {
+  "cand_games.npz": "56ed03d12e9a79871a21b5f69dc4bd4bb8c8aa69b1544cb8ec799e80227cfdea",
+  "query_games.npz": "665d0888a93f6632eb19edac76abf996d5499cd27c683d9844b97cb274b6f689"
+ },
+ "prereg02_top5_sha256": "69ca74a61ce34f8ffa8949df731df433d474347dce9aabb535156ab8197ead6c",
+ "problems_at_freeze": [],
+ "command": "freeze",
+ "precommit": false,
+ "created": "2026-10-03T11:37:00+08:00",
+ "git_head": "6bf4c225663d7900cade0f12e8339e4a623c3e09",
+ "tools": {
+  "tools/p06_style.py": {
+   "sha256_lf": "78beb8138c27853da70081e469e534508174265852a64ebada21e354ae72058a",
+   "committed_and_clean": true
+  },
+  "tools/p06_sim.py": {
+   "sha256_lf": "21deeea1eb08b1d6580ba78c47505789f66dbdd10c8891973e14f523ef443eeb",
+   "committed_and_clean": true
+  },
+  "tools/p06_player.py": {
+   "sha256_lf": "b25636878ee87ca828a9c65177965dc60466ac4e9aa348acd88785ca11075590",
+   "committed_and_clean": true
+  }
+ },
+ "env": {
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "executable": ".venv/Scripts/python.exe"
+ },
+ "inputs": {},
+ "seconds": 2.9
+}

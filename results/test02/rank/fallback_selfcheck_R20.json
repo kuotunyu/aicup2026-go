@@ -1,0 +1,175 @@
+{
+ "format": "c10-test02 rank fallback_selfcheck_R20 v1",
+ "what": "R20 refit with the frozen functions on the committed inner inputs vs frozen_config.json",
+ "combo": {
+  "id": "R20",
+  "source": "C5",
+  "pool": "log",
+  "calibrated": true,
+  "opening": true
+ },
+ "params": {
+  "a": 1.1602079071066613,
+  "gamma": 0.438654254867862,
+  "w": 0.11638934532134285,
+  "beta": [
+   0.1831710576335903,
+   0.17373812758386764,
+   0.23477712341286536,
+   0.1556856202566642,
+   0.2128731851817358,
+   0.09182149799190883,
+   0.09707244014432542,
+   -0.09104100845360842,
+   -0.4582006134934143
+  ],
+  "b": [
+   0.3100139637054239,
+   0.05097096976577672,
+   -0.03229241398791922,
+   -0.16153309764287382,
+   -0.13227195954645776,
+   -0.22621339836523235,
+   -0.13106620918270362,
+   -0.149830824384337,
+   0.037535700460622094,
+   0.434687269177701
+  ]
+ },
+ "frozen_params": {
+  "a": 1.1602079071066613,
+  "gamma": 0.438654254867862,
+  "w": 0.11638934532134285,
+  "beta": [
+   0.1831710576335903,
+   0.17373812758386764,
+   0.23477712341286536,
+   0.1556856202566642,
+   0.2128731851817358,
+   0.09182149799190883,
+   0.09707244014432542,
+   -0.09104100845360842,
+   -0.4582006134934143
+  ],
+  "b": [
+   0.3100139637054239,
+   0.05097096976577672,
+   -0.03229241398791922,
+   -0.16153309764287382,
+   -0.13227195954645776,
+   -0.22621339836523235,
+   -0.13106620918270362,
+   -0.149830824384337,
+   0.037535700460622094,
+   0.434687269177701
+  ]
+ },
+ "max_abs_diff": 0.0,
+ "tolerance": 1e-12,
+ "passed": true,
+ "refit": {
+  "loss": 1.294020404166363,
+  "starts": [
+   {
+    "start_a": 0.0,
+    "loss": 1.2940204068859902,
+    "nit": 17,
+    "success": true,
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   },
+   {
+    "start_a": 1.0,
+    "loss": 1.294020404166363,
+    "nit": 17,
+    "success": true,
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+   }
+  ],
+  "params": {
+   "a": 1.1602079071066613,
+   "gamma": 0.438654254867862,
+   "w": 0.11638934532134285,
+   "beta": [
+    0.1831710576335903,
+    0.17373812758386764,
+    0.23477712341286536,
+    0.1556856202566642,
+    0.2128731851817358,
+    0.09182149799190883,
+    0.09707244014432542,
+    -0.09104100845360842,
+    -0.4582006134934143
+   ],
+   "b": [
+    0.3100139637054239,
+    0.05097096976577672,
+    -0.03229241398791922,
+    -0.16153309764287382,
+    -0.13227195954645776,
+    -0.22621339836523235,
+    -0.13106620918270362,
+    -0.149830824384337,
+    0.037535700460622094,
+    0.434687269177701
+   ]
+  },
+  "fit_questions": 25400
+ },
+ "frozen_refit_loss": 1.294020404166363,
+ "frozen_refit_fit_questions": 25400,
+ "created": "2026-09-26T17:42:12+08:00",
+ "inputs_sha256": {
+  "inner_keys.npz": "b686872d459161330af26132fc0ec2617d104be6cd72eae509250ffef0c03ab6",
+  "pseudo_inner.json": "3a51b3dd4edf8e5745f6a7ff52ca925d4a0eacd6a24950ee1b6e3b48fd0b7923",
+  "opening_inner.npz": "054689536524f7d8ea41a19d19b49ae47e7eedd128bd9cad98c429e5f80fdee5",
+  "players_split.csv": "69554875064ecbd83d790b3215c8ba8f9540f217ec4af3e4a8c43228ac2a3dfc",
+  "inner_p02e9_d4.npz": "d042fca41e04a365dd9f7f4ebc31d244d39b24e803a1191cb06ecaaf3d056de5"
+ },
+ "frozen_config": {
+  "path": "results/prereg02/rank/frozen_config.json",
+  "sha256": "44a16e09679cc6815d41d9a1255882f4a38599cd97cbf66996d447709b4f2efa",
+  "commit_check": {
+   "frozen_config": "results/prereg02/rank/frozen_config.json",
+   "git_head": "5a5572e807edc33165cb5fb59d517a251f738c02"
+  }
+ },
+ "tune_report": {
+  "path": "results/prereg02/rank/tune_report.json",
+  "sha256": "297384f87aadebe43851737c1ca1b23bc72b8e3f3b18e669f1c3a91810c33238"
+ },
+ "procedure": "p02_rank_fuse.cmd_tune fit-round preparation (load_inner_keys, load_pseudo(verify=True), load_opening(opening_inner.npz, 'inner'), build_qset of the fit rounds 0-49) and its refit on all fit questions (source_logprobs, pooled, fit: two starts, L-BFGS-B); no OOF, no eval rounds, no validation input",
+ "rerun": {
+  "rerun": true,
+  "reason": "review fixes 2026-09-26: t02_rank.py changed (apply/seam guards only); regenerate with the current tool SHA",
+  "replaced_sha256": {
+   "results/test02/rank/fallback_selfcheck_R20.json": "7bc93c7b877d6a72280fcc78888b4e083f90a782897ab9050ea2ba2a4738f699"
+  }
+ },
+ "tool": {
+  "git_head": "5a5572e807edc33165cb5fb59d517a251f738c02",
+  "t02_rank.py_sha256": "347fee37640e0c2c17493e42d18e38fb8af3083ca24b736ba6690199b5e7c4ea",
+  "t02_rank.py_tracked": false,
+  "check_submission.py_sha256": "b5c7c300cca4fcd5b243e4579417453699777e99bd4aff88dcbf6805e9346144",
+  "sha256_rule": "sha256 of the file with CRLF folded to LF",
+  "frozen_tools": {
+   "git_head": "5a5572e807edc33165cb5fb59d517a251f738c02",
+   "dirty_or_untracked": [],
+   "files_sha256_rule": "sha256 of the file with CRLF folded to LF",
+   "files_sha256": {
+    "p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+    "p02_rank_pseudo.py": "16e5bfdfb2995874ddb11bde1f7a9e786a478b14443453f675a4fb3a480bb098",
+    "p02_rank_opening.py": "a4195fece41aa3d50ecda82d1af93d9c04f49df5fd2157d69dd8a488dea93463",
+    "p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+    "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+    "decide.py": "cf66daf1231b3c2bd60c5b6484245627e133bd0f1cd7ff5557e978da3801d0e3"
+   }
+  }
+ },
+ "environment": {
+  "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1"
+ },
+ "seconds": 2.0
+}

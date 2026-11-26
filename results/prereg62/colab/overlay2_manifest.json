@@ -1,0 +1,69 @@
+{
+ "format": "c10-prereg62 colab overlay2 v1",
+ "zip_sha256": "f9f7416f7cd7fe236344c2ff7bba3112e23790e9b555843a87a6113a37155cbd",
+ "zip_bytes": 69610460,
+ "files": {
+  "results/prereg60/explore/p60_lib.py": "431e2b5276470a59644d2d3226ff9f06cfe4f2e18a6dfedb51f6bd10c8b21f23",
+  "results/prereg60/explore/p60_run.py": "d87ae4b63ca241267213f6d17aa6dd25e6e42a1011db17111ff7d430f23ffc1a",
+  "results/prereg61/explore/p61_run.py": "654f6f7a55cd2f83062e2c418fd25f4db7b7e6a268086d63711d8670bc3c6d63",
+  "data/prereg49/S0/ckpt/step_320000.pt": "c091d3af1797a19ce98dc0a670eea211ceca2de4b58ee4a3c62b73b854748e12"
+ },
+ "parts": [
+  [
+   "overlay2.part000",
+   "2e5a00b64c9a9721835142cb512aca5d6539ae6d4fc74235c062519ef06ec389",
+   7340032
+  ],
+  [
+   "overlay2.part001",
+   "feceb44a0d7a80ac80ac872ce9adbb98d2712aff88cb88a4aedda3f6d2affeb0",
+   7340032
+  ],
+  [
+   "overlay2.part002",
+   "dc96e0692864d02779a789c42fe2502f0745f78b504d681b967e2f397fac043e",
+   7340032
+  ],
+  [
+   "overlay2.part003",
+   "b12144f608016d4abebc70c3334e39da75204ac58a5d585d7c46192cf0c4118d",
+   7340032
+  ],
+  [
+   "overlay2.part004",
+   "813d5dc3fd208b8d933dd648a0899fe0a437cfbbd3cf7624806c190aef5871c3",
+   7340032
+  ],
+  [
+   "overlay2.part005",
+   "62c0b58c64cea3815d50d6da19c7bcaa88bb917b8b52416cc7b05187eef68cf7",
+   7340032
+  ],
+  [
+   "overlay2.part006",
+   "89517ae4667e7a688a9e98faf6dd449c6e50cb8d9e58ac28093467f627c59ca7",
+   7340032
+  ],
+  [
+   "overlay2.part007",
+   "3c0b79d880c0c00729d08d69465724f195e1bff108ea8d2602385e14ddb249ae",
+   7340032
+  ],
+  [
+   "overlay2.part008",
+   "842c2f4193f139942bb4b61d7d552ebe7977ae35bc80a6013972105c40bae45a",
+   7340032
+  ],
+  [
+   "overlay2.part009",
+   "9db777710a37ab7146b19a3819576f34f2d8d28ca9b226d80cc79c193f375094",
+   3550172
+  ]
+ ],
+ "p62_run_sha256": "a563aadb6c0ca325724f94581a28a80db87f4c6e9ce2faa7f654d8b8d4534ea6",
+ "notebooks_sha256": {
+  "S1": "eeac4b4eef65adb77276b1b184424473f351f8a9048f02b65b1e434f51d14eb7",
+  "S2": "b035a037d165e0acfa022d736cc0c5b4c779a98452737b3b89a3a76bccbe85c9",
+  "X": "82c22e4f197ec2e8ecb3c0b9a1133fddc71630edf09cb4187fefb42908590ebd"
+ }
+}

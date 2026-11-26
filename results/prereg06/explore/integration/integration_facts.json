@@ -1,0 +1,316 @@
+{
+ "budget": {
+  "season_max_new_methods_per_competition": 4,
+  "source": "docs/PREREG_02_OPENING_FUSION.md section 3 (line 160)",
+  "used": {
+   "rank": 2,
+   "player": 1
+  },
+  "used_notes": {
+   "rank": [
+    "prereg02 H2R (A = prereg01 B, reference re-read)",
+    "prereg04 H4R (A = prereg02 R20, reference re-read)"
+   ],
+   "player": [
+    "prereg02 H2P (A = prereg01 player, reference re-read)"
+   ]
+  },
+  "left": {
+   "rank": 2,
+   "player": 3
+  },
+  "ledger_data_rows": 25,
+  "rows_per_compare_command": 2,
+  "ledger_rows_pinned_by_gate": 25,
+  "pinned_by": "tests/test_t04_hygiene.py LEDGER_ROWS_AT_BASE (runs with C10_T04_GATE=1 or C10_K5=1)"
+ },
+ "weekdays": {
+  "2026-10-02": "五",
+  "2026-10-09": "五",
+  "2026-10-12": "一",
+  "2026-10-15": "四",
+  "2026-10-16": "五",
+  "2026-10-18": "日",
+  "2026-10-19": "一",
+  "2026-10-21": "三",
+  "2026-10-23": "五",
+  "2026-10-27": "二",
+  "2026-10-30": "五",
+  "2026-10-31": "六",
+  "2026-11-01": "日",
+  "2026-11-02": "一",
+  "2026-11-03": "二",
+  "2026-11-04": "三",
+  "2026-11-05": "四",
+  "2026-11-07": "六",
+  "2026-11-08": "日",
+  "2026-11-10": "二",
+  "2026-11-15": "日",
+  "2026-11-16": "一",
+  "2026-11-18": "三",
+  "2026-11-19": "四",
+  "2026-11-20": "五",
+  "2026-11-21": "六",
+  "2026-11-22": "日",
+  "2026-11-23": "一",
+  "2026-11-24": "二",
+  "2026-11-25": "三"
+ },
+ "gaps_days": {
+  "10/02 -> 11/03 (days to the K5-type merge deadline)": 32,
+  "10/02 -> 11/04 (days to the test set)": 33,
+  "10/27 -> 11/03 (latest recommended H6R -> merge)": 7,
+  "11/16 -> 11/23 (K6 -> last-upload target)": 7,
+  "11/19 -> 11/23 (proposed K6' -> last-upload target)": 4
+ },
+ "commit_times": {
+  "9d64e54": {
+   "time": "2026-09-26T18:00:01+08:00",
+   "subject": "Test-day kit (test02): inference-only test notebooks and builders, local tools t02_rank/t02_player, "
+  },
+  "74486a2": {
+   "time": "2026-09-26T18:57:31+08:00",
+   "subject": "Test-day kit after a real-mode end-to-end run in a throwaway worktree: full raw T1 and recorded T2-T"
+  },
+  "9e4f8da": {
+   "time": "2026-09-26T22:53:40+08:00",
+   "subject": "Prereg 03 rev 1 (competition 2 only): recipe v2 two-arm retrain (target perspective + colour plane, "
+  },
+  "39ebccb": {
+   "time": "2026-09-27T05:59:43+08:00",
+   "subject": "Prereg 03 implementation: two-arm recipe-v2 notebook builder and notebooks, p03_rank_fuse (P00 repro"
+  },
+  "e55b019": {
+   "time": "2026-09-29T01:57:26+08:00",
+   "subject": "Prereg 03 Colab results unpacked (before any tuning): arms A and B, both G4 (RTX PRO 6000 Blackwell)"
+  },
+  "1218ba8": {
+   "time": "2026-09-29T02:00:23+08:00",
+   "subject": "Prereg 03 tune: selected P01 (C5+C6A); gates not passed; score_allowed false; frozen_config.json com"
+  },
+  "cdec913": {
+   "time": "2026-09-29T12:22:20+08:00",
+   "subject": "Prereg 04 rev 1 (competition 2): opponent-move evidence O4 (CPU pattern counts) and prereg03 models "
+  },
+  "82027fa": {
+   "time": "2026-09-29T16:23:46+08:00",
+   "subject": "Prereg 04 implementation and rev 2: p04_opp (verbatim port of the design O4 counts; selftest/count/i"
+  },
+  "e8b24f2": {
+   "time": "2026-09-29T17:10:34+08:00",
+   "subject": "Prereg 04 H4R (the one registered validation scoring): R20 0.5891 -> Q02 0.6236 rank-balanced (+0.03"
+  },
+  "608d702": {
+   "time": "2026-09-29T17:23:50+08:00",
+   "subject": "Prereg 04 RESULTS (H4R adopted: 0.5891 -> 0.6236 rank-balanced, +0.0345 [0.0206, 0.0481]), verified "
+  },
+  "6ec5e68": {
+   "time": "2026-09-29T17:46:21+08:00",
+   "subject": "CLAUDE.md: transcript of the 9/29 session (prereg 04)"
+  },
+  "9f63acd": {
+   "time": "2026-09-30T03:55:40+08:00",
+   "subject": "test04 design (PREREG_04 section 5 test-day extension): four understand notes, spec.md after a 3-len"
+  },
+  "62ca557": {
+   "time": "2026-09-30T17:35:29+08:00",
+   "subject": "Prereg 04 test-day extension (PREREG_04 rev 3, section 11): tools/t04_rank.py (unpack/opp/apply/stat"
+  },
+  "62794a3": {
+   "time": "2026-09-30T21:44:54+08:00",
+   "subject": "K5 gate round 1 fixes: unpack freshness compares the runs that computed the outputs (producing_runs)"
+  },
+  "5bc8774": {
+   "time": "2026-10-01T01:10:26+08:00",
+   "subject": "K5 gate round 2 fixes: apply --rerun after an exit-1 apply on the registered rerun (a counted archiv"
+  },
+  "f4853e5": {
+   "time": "2026-10-01T01:54:04+08:00",
+   "subject": "Merge p04-testday: PREREG_04 rev 3 test-day extension (t04_rank, test04 notebook, additive official_"
+  },
+  "73138bb": {
+   "time": "2026-10-01T16:38:18+08:00",
+   "subject": "Colab rehearsal 10/1 (test02 rank, test02 player, test04 on G4): all expectations met byte for byte "
+  }
+ },
+ "elapsed_hours": {
+  "test02 kit 9d64e54 -> real-mode fixes 74486a2": 0.96,
+  "prereg03 rev1 9e4f8da -> implementation 39ebccb": 7.1,
+  "prereg03 implementation 39ebccb -> Colab results unpacked e55b019 (user's Colab run incl. waiting)": 43.96,
+  "prereg03 unpacked e55b019 -> tune/frozen_config 1218ba8": 0.05,
+  "prereg04 rev1 cdec913 -> implementation rev2 82027fa": 4.02,
+  "prereg04 rev1 cdec913 -> H4R scored e8b24f2": 4.8,
+  "test04 branch point 6ec5e68 -> design 9f63acd": 10.16,
+  "test04 design 9f63acd -> implementation 62ca557": 13.66,
+  "test04 implementation 62ca557 -> merge f4853e5 (K5 gate rounds 1-2)": 8.31,
+  "test04 branch point 6ec5e68 -> merge f4853e5 (whole test-day extension)": 32.13
+ },
+ "official_log_probe": {
+  "rank:results/test06/rank/submission_rank.csv": {
+   "is_t04_file": false,
+   "report_it_would_require_next_to_the_file": "apply_test_report.json",
+   "method_label_it_would_write_without_--method": "prereg02 R20 rule B (甲)"
+  },
+  "rank:results/test04/rank/submission_rank.csv": {
+   "is_t04_file": true,
+   "report_it_would_require_next_to_the_file": "t04_apply_report.json",
+   "method_label_it_would_write_without_--method": "prereg04 Q02 = R20 + O4 + SWA + SWB, rule B (甲)"
+  },
+  "rank:results/test02/rank/submission_rank.csv": {
+   "is_t04_file": false,
+   "report_it_would_require_next_to_the_file": "apply_test_report.json",
+   "method_label_it_would_write_without_--method": "prereg02 R20 rule B (甲)"
+  },
+  "player:results/test06/player/submission_player.csv": {
+   "is_t04_file": false,
+   "report_it_would_require_next_to_the_file": "submit_report.json",
+   "method_label_it_would_write_without_--method": "prereg02 per-pool self-retrieval + guard (甲)"
+  }
+ },
+ "official_log_constants": {
+  "RANK_COMBOS": [
+   "R20",
+   "R10"
+  ],
+  "T04_DIR": "results/test04/rank",
+  "K6": "2026-11-16T23:59:59+08:00",
+  "FINAL_TARGET": "2026-11-23T23:59:00+08:00",
+  "DEADLINE": "2026-11-24T23:59:00+08:00",
+  "MAX_PER_DAY": 5,
+  "DROP_ALERT": 0.05,
+  "P04_MIN_REV": 4,
+  "BASELINES": {
+   "rank": 0.4631,
+   "player": 0.2845
+  }
+ },
+ "fingerprint": {
+  "n_files": 39,
+  "patterns": [
+   "tools/t02_*.py",
+   "tools/check_submission.py",
+   "tools/official_log.py",
+   "colab/*test02*",
+   "results/test02/*",
+   "docs/TESTDAY.md"
+  ]
+ },
+ "name_checks": {
+  "docs/PREREG_06_EXAMPLE.md": [
+   "OK (no hygiene test is affected)"
+  ],
+  "docs/TESTDAY_06.md": [
+   "OK (no hygiene test is affected)"
+  ],
+  "tools/p06_rank_fuse.py": [
+   "OK (no hygiene test is affected)"
+  ],
+  "tools/t06_rank.py": [
+   "OK (no hygiene test is affected)"
+  ],
+  "tools/t06_player.py": [
+   "OK (no hygiene test is affected)"
+  ],
+  "tools/t06_fake_tests.py": [
+   "OK (no hygiene test is affected)"
+  ],
+  "colab/build_prereg06_rank_nb.py": [
+   "OK (no hygiene test is affected)"
+  ],
+  "colab/prereg06_rank.ipynb": [
+   "OK (no hygiene test is affected)"
+  ],
+  "colab/build_test06_rank_nb.py": [
+   "OK (no hygiene test is affected)"
+  ],
+  "colab/test06_rank.ipynb": [
+   "OK (no hygiene test is affected)"
+  ],
+  "tests/test_p06_hygiene.py": [
+   "OK (no hygiene test is affected)"
+  ],
+  "tests/test_t06_rank.py": [
+   "OK (no hygiene test is affected)"
+  ],
+  "results/prereg06/design/p04_path_fingerprint.json": [
+   "OK (no hygiene test is affected)"
+  ],
+  "results/test06/rank/submission_rank.csv": [
+   "OK (no hygiene test is affected)"
+  ],
+  "results/test06/player/submission_player.csv": [
+   "OK (no hygiene test is affected)"
+  ],
+  "tools/t02_rank06.py": [
+   "FAIL test_t04_hygiene R20PathNoNewFiles (new file on the R20 test-day path)"
+  ],
+  "colab/test06_from_test02.ipynb": [
+   "FAIL test_t04_hygiene R20PathNoNewFiles (new file on the R20 test-day path)"
+  ],
+  "results/test02/design/p06_notes.md": [
+   "FAIL test_t04_hygiene R20PathNoNewFiles (new file on the R20 test-day path)"
+  ],
+  "results/test02/rank06/apply.json": [
+   "passes the tests, but only test02's own tools write results/test02 (PREREG_04 rev 3: t04 never writes there; the same rule should hold for 06)"
+  ],
+  "tools/p02_rank_fuse06.py": [
+   "FAIL test_t04_hygiene FrozenTools (every tools/p02_*.py must be listed in prereg04 frozen_config)"
+  ],
+  "results/prereg04/rank/q06.json": [
+   "FAIL test_t04_hygiene FrozenPrereg04 (results/prereg01-04 must equal 6ec5e68, no new file)"
+  ],
+  "results/prereg04/design/p04_path_fingerprint.json": [
+   "FAIL test_p04_hygiene FrozenResults (new file in a frozen result folder)",
+   "FAIL test_t04_hygiene FrozenPrereg04 (results/prereg01-04 must equal 6ec5e68, no new file)"
+  ],
+  "results/prereg05/explore/x.md": [
+   "not tested, but frozen by CLAUDE.md (results/prereg01-05/**)"
+  ],
+  "results/test04/rank06/x.json": [
+   "not caught by a test, but results/test04 belongs to the 04 test day (official_log treats results/test04/rank/ files as 04 files): keep 06 out"
+  ],
+  "tools/t04_rank06.py": [
+   "caught by the test04 source rules (t04 import rules / label scan): use a t06 / p06 name"
+  ]
+ },
+ "colab_run_heading_ok": {
+  "# 測試集 06（test06）（使用者操作步驟）": true,
+  "# 測試集 04（test04）之後：06": false
+ },
+ "p04_test_day_path_files": [
+  "colab/build_test04_rank_nb.py",
+  "colab/make_test04_smoke_tree.py",
+  "colab/test04_rank.ipynb",
+  "docs/TESTDAY_04.md",
+  "results/test04/design/build_review.md",
+  "results/test04/design/r20_fake_golden.json",
+  "results/test04/design/rev3_draft.md",
+  "results/test04/design/rev3_final.md",
+  "results/test04/design/spec.md",
+  "results/test04/design/understand_nb.md",
+  "results/test04/design/understand_p04.md",
+  "results/test04/design/understand_protocol.md",
+  "results/test04/design/understand_t02.md",
+  "results/test04/notebook_diff_rank.txt",
+  "tests/test_t04_dryrun.py",
+  "tests/test_t04_hygiene.py",
+  "tests/test_t04_nb.py",
+  "tests/test_t04_official_log.py",
+  "tests/test_t04_rank.py",
+  "tools/t04_fake_tests.py",
+  "tools/t04_rank.py"
+ ],
+ "p04_test_day_path_count": 21,
+ "local_tags": [
+  "r20-testday-pre04"
+ ],
+ "official_test_design": {
+  "rank_games_per_question_file": 5000,
+  "rank_question_files": 2,
+  "rank_test_games_total": 10000,
+  "player_candidate_games_per_pool": 40000,
+  "player_pools": 2,
+  "player_query_games_per_pool": 5000,
+  "source": "docs/DATA.md 官方資料說明 (5/10/15/20 games x 100 questions; 400 candidates x 100 games)"
+ }
+}

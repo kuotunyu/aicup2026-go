@@ -1,0 +1,59 @@
+{
+ "rank": {
+  "constant_D": {
+   "mean": 0.14975729950342723,
+   "rank_balanced_mean": 0.1367879441171441
+  },
+  "constant_C": {
+   "mean": 0.19171402444997315,
+   "rank_balanced_mean": 0.17357588823428816
+  },
+  "constant_B": {
+   "mean": 0.23931479974307893,
+   "rank_balanced_mean": 0.1735758882342881
+  },
+  "constant_A": {
+   "mean": 0.2618983988070523,
+   "rank_balanced_mean": 0.17357588823428832
+  },
+  "constant_1D": {
+   "mean": 0.15430343593689244,
+   "rank_balanced_mean": 0.17357588823428818
+  },
+  "constant_2D": {
+   "mean": 0.1256277923770767,
+   "rank_balanced_mean": 0.17357588823428843
+  },
+  "constant_3D": {
+   "mean": 0.13591558231142953,
+   "rank_balanced_mean": 0.17357588823428832
+  },
+  "constant_4D": {
+   "mean": 0.1395904704208424,
+   "rank_balanced_mean": 0.17357588823428832
+  },
+  "constant_5D": {
+   "mean": 0.14471967883896728,
+   "rank_balanced_mean": 0.1735758882342883
+  },
+  "constant_6D": {
+   "mean": 0.11906369212930099,
+   "rank_balanced_mean": 0.13678794411714415
+  },
+  "oracle": {
+   "mean": 1.0,
+   "rank_balanced_mean": 1.0
+  }
+ },
+ "player": {
+  "random_top5_seed0": {
+   "mean": 0.005338338208091532
+  },
+  "order_only": {
+   "mean": 0.002223524511170579
+  },
+  "oracle": {
+   "mean": 1.0
+  }
+ }
+}

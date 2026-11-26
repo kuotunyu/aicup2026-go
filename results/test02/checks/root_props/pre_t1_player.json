@@ -1,0 +1,506 @@
+{
+ "format": "c10-test02 t1 v1",
+ "comp": "player",
+ "verdict": "PASS",
+ "consequence": "none; the raw files are used as they are",
+ "normalize": {},
+ "normalize_transforms": [],
+ "normalize_note": "per official file name, only the files that need a transform (whitelist order); empty when the verdict is PASS",
+ "normalize_whitelist": [
+  "strip_bom",
+  "crlf_to_lf",
+  "upper_colour",
+  "reorder_columns_to_readme",
+  "clear_slots_after_num_games_if_empty_whitespace",
+  "clear_colour_after_num_games_if_sgf_empty"
+ ],
+ "subchecks_run": [
+  "T1.1",
+  "T1.2",
+  "T1.3",
+  "T1.4",
+  "T1.5"
+ ],
+ "complete": true,
+ "tests_dir": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\data\\test\\raw",
+ "files": {
+  "player_identification_test_public.csv": {
+   "sha256": "fbf6f14de57bc37bbec6e3d732143a2561887d37b1f36271223ad1a14810ac74",
+   "bytes": 6705235,
+   "rows": 400,
+   "bom": false,
+   "line_ending": "CRLF",
+   "line_counts": {
+    "crlf": 401,
+    "lf": 0,
+    "cr": 0
+   },
+   "blank_rows": 0,
+   "rows_with_other_width": 0,
+   "header": [
+    "question_id",
+    "num_games",
+    "sgf_1",
+    "sgf_2",
+    "sgf_3",
+    "sgf_4",
+    "sgf_5",
+    "sgf_6",
+    "sgf_7",
+    "sgf_8",
+    "sgf_9",
+    "sgf_10",
+    "sgf_11",
+    "sgf_12",
+    "sgf_13",
+    "sgf_14",
+    "sgf_15",
+    "sgf_16",
+    "sgf_17",
+    "sgf_18",
+    "sgf_19",
+    "sgf_20",
+    "color_1",
+    "color_2",
+    "color_3",
+    "color_4",
+    "color_5",
+    "color_6",
+    "color_7",
+    "color_8",
+    "color_9",
+    "color_10",
+    "color_11",
+    "color_12",
+    "color_13",
+    "color_14",
+    "color_15",
+    "color_16",
+    "color_17",
+    "color_18",
+    "color_19",
+    "color_20"
+   ],
+   "error": null
+  },
+  "player_identification_candidates_public.csv": {
+   "sha256": "e662242cb0f0b2be2009c129abd291c9c852af7fae25d8f1e1c00208785ee24d",
+   "bytes": 54956081,
+   "rows": 40000,
+   "bom": false,
+   "line_ending": "CRLF",
+   "line_counts": {
+    "crlf": 40001,
+    "lf": 0,
+    "cr": 0
+   },
+   "blank_rows": 0,
+   "rows_with_other_width": 0,
+   "header": [
+    "game_id",
+    "player_id",
+    "sgf_content",
+    "color"
+   ],
+   "error": null
+  },
+  "player_identification_test_private.csv": {
+   "sha256": "eedd2630731070633dfa264897ac739aec03879f90ac57149bba033d9bd53dee",
+   "bytes": 6756005,
+   "rows": 400,
+   "bom": false,
+   "line_ending": "CRLF",
+   "line_counts": {
+    "crlf": 401,
+    "lf": 0,
+    "cr": 0
+   },
+   "blank_rows": 0,
+   "rows_with_other_width": 0,
+   "header": [
+    "question_id",
+    "num_games",
+    "sgf_1",
+    "sgf_2",
+    "sgf_3",
+    "sgf_4",
+    "sgf_5",
+    "sgf_6",
+    "sgf_7",
+    "sgf_8",
+    "sgf_9",
+    "sgf_10",
+    "sgf_11",
+    "sgf_12",
+    "sgf_13",
+    "sgf_14",
+    "sgf_15",
+    "sgf_16",
+    "sgf_17",
+    "sgf_18",
+    "sgf_19",
+    "sgf_20",
+    "color_1",
+    "color_2",
+    "color_3",
+    "color_4",
+    "color_5",
+    "color_6",
+    "color_7",
+    "color_8",
+    "color_9",
+    "color_10",
+    "color_11",
+    "color_12",
+    "color_13",
+    "color_14",
+    "color_15",
+    "color_16",
+    "color_17",
+    "color_18",
+    "color_19",
+    "color_20"
+   ],
+   "error": null
+  },
+  "player_identification_candidates_private.csv": {
+   "sha256": "db2cfe33be9c1e36355fac5664b758909ef80bce1be257e55bae056fba40d963",
+   "bytes": 55008481,
+   "rows": 40000,
+   "bom": false,
+   "line_ending": "CRLF",
+   "line_counts": {
+    "crlf": 40001,
+    "lf": 0,
+    "cr": 0
+   },
+   "blank_rows": 0,
+   "rows_with_other_width": 0,
+   "header": [
+    "game_id",
+    "player_id",
+    "sgf_content",
+    "color"
+   ],
+   "error": null
+  }
+ },
+ "subchecks": {
+  "T1.1": {
+   "verdict": "PASS",
+   "files": {
+    "player_identification_test_public.csv": {
+     "expected_order": true,
+     "missing": [],
+     "extra": [],
+     "duplicated": []
+    },
+    "player_identification_candidates_public.csv": {
+     "expected_order": true,
+     "missing": [],
+     "extra": [],
+     "duplicated": []
+    },
+    "player_identification_test_private.csv": {
+     "expected_order": true,
+     "missing": [],
+     "extra": [],
+     "duplicated": []
+    },
+    "player_identification_candidates_private.csv": {
+     "expected_order": true,
+     "missing": [],
+     "extra": [],
+     "duplicated": []
+    }
+   },
+   "problems": []
+  },
+  "T1.2": {
+   "verdict": "PASS",
+   "files": {
+    "cross": {
+     "question_ids_in_both_files": 0,
+     "player_ids_in_both_pools": 0,
+     "game_ids_in_both_pools": 0
+    }
+   },
+   "problems": []
+  },
+  "T1.3": {
+   "verdict": "PASS",
+   "files": {
+    "player_identification_test_public.csv": {
+     "bom": false,
+     "line_ending": "CRLF",
+     "counts": {},
+     "official_colour_design_record_only": {
+      "counts": {
+       "used_slots_colour_B": 5000,
+       "questions": 400,
+       "questions_single_colour_B": 400
+      },
+      "colour_letters_after_num_games": {},
+      "questions_with_both_colours": 0,
+      "used_slots_not_B": 0,
+      "colour_after_num_games_not_the_question_colour": 0,
+      "official_design": "competition 1: every colour (candidates' color, questions' color_1..color_20) is B",
+      "matches_official_design": true,
+      "note": "record only (PREREG_02 rev 8): a difference from the official design never changes a verdict"
+     }
+    },
+    "player_identification_candidates_public.csv": {
+     "bom": false,
+     "line_ending": "CRLF",
+     "counts": {},
+     "official_colour_design_record_only": {
+      "counts": {
+       "rows_colour_B": 40000
+      },
+      "rows_not_B": 0,
+      "official_design": "competition 1: every colour (candidates' color, questions' color_1..color_20) is B",
+      "matches_official_design": true,
+      "note": "record only (PREREG_02 rev 8): a difference from the official design never changes a verdict"
+     }
+    },
+    "player_identification_test_private.csv": {
+     "bom": false,
+     "line_ending": "CRLF",
+     "counts": {},
+     "official_colour_design_record_only": {
+      "counts": {
+       "used_slots_colour_B": 5000,
+       "questions": 400,
+       "questions_single_colour_B": 400
+      },
+      "colour_letters_after_num_games": {},
+      "questions_with_both_colours": 0,
+      "used_slots_not_B": 0,
+      "colour_after_num_games_not_the_question_colour": 0,
+      "official_design": "competition 1: every colour (candidates' color, questions' color_1..color_20) is B",
+      "matches_official_design": true,
+      "note": "record only (PREREG_02 rev 8): a difference from the official design never changes a verdict"
+     }
+    },
+    "player_identification_candidates_private.csv": {
+     "bom": false,
+     "line_ending": "CRLF",
+     "counts": {},
+     "official_colour_design_record_only": {
+      "counts": {
+       "rows_colour_B": 40000
+      },
+      "rows_not_B": 0,
+      "official_design": "competition 1: every colour (candidates' color, questions' color_1..color_20) is B",
+      "matches_official_design": true,
+      "note": "record only (PREREG_02 rev 8): a difference from the official design never changes a verdict"
+     }
+    }
+   },
+   "problems": []
+  },
+  "T1.4": {
+   "verdict": "PASS",
+   "files": {
+    "player_identification_test_public.csv": {
+     "games": 5000,
+     "violating_games": 0,
+     "share": 0.0,
+     "max_share": 0.01,
+     "fails": false,
+     "counts": {
+      "sz_missing_record_only": 0,
+      "parse_error_record_only": 0,
+      "regex_vs_parse_mismatch_record_only": 0,
+      "bad_move_values_record_only": 0
+     },
+     "other_properties_record_only": {
+      "HD": 5000
+     },
+     "examples": []
+    },
+    "player_identification_candidates_public.csv": {
+     "games": 40000,
+     "violating_games": 0,
+     "share": 0.0,
+     "max_share": 0.01,
+     "fails": false,
+     "counts": {
+      "sz_missing_record_only": 0,
+      "parse_error_record_only": 0,
+      "regex_vs_parse_mismatch_record_only": 0,
+      "bad_move_values_record_only": 0
+     },
+     "other_properties_record_only": {
+      "HD": 40000
+     },
+     "examples": []
+    },
+    "player_identification_test_private.csv": {
+     "games": 5000,
+     "violating_games": 0,
+     "share": 0.0,
+     "max_share": 0.01,
+     "fails": false,
+     "counts": {
+      "sz_missing_record_only": 0,
+      "parse_error_record_only": 0,
+      "regex_vs_parse_mismatch_record_only": 0,
+      "bad_move_values_record_only": 0
+     },
+     "other_properties_record_only": {
+      "HD": 5000
+     },
+     "examples": []
+    },
+    "player_identification_candidates_private.csv": {
+     "games": 40000,
+     "violating_games": 0,
+     "share": 0.0,
+     "max_share": 0.01,
+     "fails": false,
+     "counts": {
+      "sz_missing_record_only": 0,
+      "parse_error_record_only": 0,
+      "regex_vs_parse_mismatch_record_only": 0,
+      "bad_move_values_record_only": 0
+     },
+     "other_properties_record_only": {
+      "HD": 40000
+     },
+     "examples": []
+    }
+   },
+   "problems": []
+  },
+  "T1.5": {
+   "verdict": "PASS",
+   "files": {
+    "player_identification_test_public.csv": {
+     "games": 5000,
+     "first_move_in_S99": 4980,
+     "share": 0.996,
+     "min_share": 0.95,
+     "fails": false
+    },
+    "player_identification_candidates_public.csv": {
+     "games": 40000,
+     "first_move_in_S99": 39860,
+     "share": 0.9965,
+     "min_share": 0.95,
+     "fails": false
+    },
+    "player_identification_test_private.csv": {
+     "games": 5000,
+     "first_move_in_S99": 4984,
+     "share": 0.9968,
+     "min_share": 0.95,
+     "fails": false
+    },
+    "player_identification_candidates_private.csv": {
+     "games": 40000,
+     "first_move_in_S99": 39853,
+     "share": 0.996325,
+     "min_share": 0.95,
+     "fails": false
+    }
+   },
+   "problems": []
+  }
+ },
+ "record_only": {
+  "move_counts": {
+   "player_identification_test_public.csv": {
+    "min": 100,
+    "p1": 105.0,
+    "median": 225.0,
+    "max": 363,
+    "games": 5000
+   },
+   "player_identification_candidates_public.csv": {
+    "min": 100,
+    "p1": 107.0,
+    "median": 228.0,
+    "max": 409,
+    "games": 40000
+   },
+   "player_identification_test_private.csv": {
+    "min": 100,
+    "p1": 105.0,
+    "median": 229.0,
+    "max": 368,
+    "games": 5000
+   },
+   "player_identification_candidates_private.csv": {
+    "min": 100,
+    "p1": 107.0,
+    "median": 227.0,
+    "max": 391,
+    "games": 40000
+   }
+  },
+  "line_ending_note": "uniform CRLF or LF is accepted as is (every reader parses both the same); only mixed line ends ask for crlf_to_lf"
+ },
+ "rules": {
+  "T1.3": "slots 1..num_games: sgf non-empty and color B/W (b/w -> upper_colour); slots after num_games: an sgf with content is FAIL_STRUCT; whitespace-only cells -> clear_slots_after_num_games_if_empty_whitespace; a colour letter B/W/b/w with an empty or whitespace-only sgf -> clear_colour_after_num_games_if_sgf_empty (PREREG_02 rev 8); any other colour value there is FAIL_STRUCT. The official colour design (competition 1 all B, competition 2 one colour per question) is recorded only",
+  "T1.4": "FAIL_OPENING iff more than 1% of a file's games violate (a) no AB/AW/AE/HA/PL and SZ = 19 (a missing SZ is recorded only) or (b) at least one move, first move B, strictly alternating, no pass (B[] / B[tt])",
+  "T1.5": "PASS iff the share of games whose first-move D4 class is in S99 = ['cc', 'cd', 'ce', 'cf', 'dd', 'de', 'df', 'jj'] is >= 0.95"
+ },
+ "provenance": {
+  "tool": "tools/t02_checks.py",
+  "tool_sha256": "a6fb40f99e7af19bfe4eef3f5cbb1d0049a8f0c14a7cc95cddfac73884f99cc8",
+  "tool_committed_clean": true,
+  "c10data_sha256": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+  "p02_moves_sha256": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+  "p02_player_open_sha256": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+  "git_head": "a3edd9090b4a304be4d8966af082b49d75b5c4c0",
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "mode": "real",
+  "argv": [
+   "t1",
+   "--comp",
+   "player"
+  ],
+  "created": "2026-11-04T14:18:30+0800",
+  "inputs": {
+   "player_identification_test_public.csv": "fbf6f14de57bc37bbec6e3d732143a2561887d37b1f36271223ad1a14810ac74",
+   "player_identification_candidates_public.csv": "e662242cb0f0b2be2009c129abd291c9c852af7fae25d8f1e1c00208785ee24d",
+   "player_identification_test_private.csv": "eedd2630731070633dfa264897ac739aec03879f90ac57149bba033d9bd53dee",
+   "player_identification_candidates_private.csv": "db2cfe33be9c1e36355fac5664b758909ef80bce1be257e55bae056fba40d963",
+   "SOURCE.json": "df1773124e3c7f9b37039f0c8814409ee0e7281c5105f94888811d30f923c028"
+  },
+  "rerun_reason": null,
+  "validation_hash_guard": {
+   "available": true,
+   "rule": "real mode: hits are recorded; a file with share >= 0.50 of local validation games is refused (validation-derived tree)",
+   "games_checked": 90000,
+   "validation_hashes": 61558,
+   "hits": 0,
+   "files": {
+    "player_identification_test_public.csv": {
+     "games": 5000,
+     "validation_hits": 0,
+     "share": 0.0
+    },
+    "player_identification_candidates_public.csv": {
+     "games": 40000,
+     "validation_hits": 0,
+     "share": 0.0
+    },
+    "player_identification_test_private.csv": {
+     "games": 5000,
+     "validation_hits": 0,
+     "share": 0.0
+    },
+    "player_identification_candidates_private.csv": {
+     "games": 40000,
+     "validation_hits": 0,
+     "share": 0.0
+    }
+   }
+  }
+ },
+ "stage": "raw"
+}

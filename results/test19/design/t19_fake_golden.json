@@ -1,0 +1,15 @@
+{
+ "what": "PREREG_19 rev 3: the 19 outputs of the first passing dry run (tests/test_t19_dryrun.py) on the from-val fake tree; later runs must equal them byte for byte",
+ "files_sha256": {
+  "t19": {
+   "results/test19/rank/rank_test_probs.csv": "c9168daf6b342941c0037043408a3c704192840a894e66e23fdcb4477c98f831",
+   "results/test19/rank/pred_A.csv": "b52951cd7bf0153e89bb5bdece5d022ba8b5a0b19c7fc2ec8aad80cc5dbcef40",
+   "results/test19/rank/pred_B.csv": "c95be47460069b71f86a919507ae553ab8f9554aa159125e13482c200f4bf60a",
+   "results/test19/rank/submission_rank.csv": "c95be47460069b71f86a919507ae553ab8f9554aa159125e13482c200f4bf60a",
+   "results/test19/rank/test_lp_set.npz": "cfa021b9a149e2e7d114f87d651c8476728907e3fbe22aec56a457ea3d83893f",
+   "results/test19/rank/seam_val/rank_val_probs.csv": "9833ad333deb5bfcf9097e32e98b5d661f4f61b2f9a16ee0a0e68aba81c30790",
+   "results/test19/rank/seam_val/pred_A.csv": "70580eab800124bbe5d153767956f9c68178e2d6d67a64477f6af811af751ecc",
+   "results/test19/rank/seam_val/pred_B.csv": "e48b341bfa1de3068b8a283750f32d309ce9def885f519b3934befc44e147942"
+  }
+ }
+}

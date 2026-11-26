@@ -1,0 +1,68 @@
+{
+ "format": "c10-prereg60 train v1",
+ "config": {
+  "variant": "V2",
+  "spec": {
+   "name": "se_gpool_trunk",
+   "sampler": "game",
+   "trunk": "gpse",
+   "pool": "mean",
+   "head": "cos"
+  },
+  "p60": {
+   "base_ckpt_sha256": "c091d3af1797a19ce98dc0a670eea211ceca2de4b58ee4a3c62b73b854748e12",
+   "base_step": 320000,
+   "n_planes": 18,
+   "early_moves": true,
+   "action_plane": true,
+   "total_steps": 200000,
+   "lr": 0.001,
+   "warmup": 2000,
+   "schedule": "linear warm-up, cosine to 0 at total_steps",
+   "weight_decay": 0.0001,
+   "ema_decay": 0.999,
+   "seed": 2,
+   "scale": 30.0,
+   "fp16": true,
+   "n_classes": 5771,
+   "T_sha256_sorted_ids": "a23c64d297803a4d6a5e98229a006cc12791571fc99830e49015e0c71130ed4b",
+   "cache_codes_sha256": "2447f0e05a42c3634a3ba16ba2666affeed95e90c4c8724ed29d8a4ee849a09a",
+   "batch_games": 96,
+   "moves": 24,
+   "first_batch": 320000,
+   "start_weights": "raw",
+   "smoke": false
+  }
+ },
+ "finished": true,
+ "steps": 200000,
+ "smoke": false,
+ "base_ckpt": "data/prereg49/S0/ckpt/step_320000.pt",
+ "base_ckpt_sha256": "c091d3af1797a19ce98dc0a670eea211ceca2de4b58ee4a3c62b73b854748e12",
+ "model": "raw weights of step_200000.pt",
+ "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "workers": 12,
+ "git_head": "",
+ "code_sha256": {
+  "p60_lib.py": "431e2b5276470a59644d2d3226ff9f06cfe4f2e18a6dfedb51f6bd10c8b21f23",
+  "p60_run.py": "d87ae4b63ca241267213f6d17aa6dd25e6e42a1011db17111ff7d430f23ffc1a",
+  "p42_lib.py": "b5045f8b8222e1c3e6891675eb4b3296fe4254b974421c71853ea8a43cea6eea",
+  "p42_train.py": "ec5d7baf7bf16753cd9d0fb7369e3ff4cb5a9a271d8ed28cf264691bb2359c80",
+  "p42_embed.py": "23b60a6f71d1aad5881acd10c87ef2c31a9ed81e6ac2d369c3d29615452b69fd",
+  "p36_lib.py": "8df27b37a6b3de786b54af25908d3d91ffe4c030dceb7350d9dd130a14ce241f",
+  "p61_run.py": "654f6f7a55cd2f83062e2c418fd25f4db7b7e6a268086d63711d8670bc3c6d63",
+  "p62_run.py": "a563aadb6c0ca325724f94581a28a80db87f4c6e9ce2faa7f654d8b8d4534ea6"
+ },
+ "torch": "2.11.0+cu128",
+ "counts": {
+  "T_players": 5771,
+  "positions_seen": 460800000
+ },
+ "seconds": 40858.3,
+ "checkpoints": {
+  "step_050000.pt": "dbe477203a1cc4f83645788f0815052df9d1e34b464172912504cd14080c98a6",
+  "step_100000.pt": "9cb57bd1fc7d7b2a4d4a0f6141b521b77cfbbdd24c461cc87210ad22a22029d6",
+  "step_150000.pt": "4bb82ca005d230185e3c69128a19ae19197389f0664f975e0edca7b9ce9c77f5",
+  "step_200000.pt": "5d3e4165e9ea70c9a42a8da08fe767fbf6a7927930334e1e03a011f694ea1bff"
+ }
+}

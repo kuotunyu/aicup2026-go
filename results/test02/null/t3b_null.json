@@ -1,0 +1,592 @@
+{
+ "format": "c10-test02 t3b null v1",
+ "what": "T3b null (PREREG_02 rev 8) for black-only candidate pools, from training players only: split-v1 part 'train' read through c10data.load_rows; no validation game, no label file",
+ "definitions": {
+  "when": "competition 1, per candidate pool, when the pool's candidate black share b_c (T4) is exactly 1 (the official design: candidates black only); otherwise the registered T3 (flagged low_power when max(b_c, 1 - b_c) >= 0.9)",
+  "reference_R_b": "all fit players (the T3 reference players), each profiled on their BLACK fit games only",
+  "tokens": "p02_player_open.game_tokens(colour, p02_player_open.moves_of(sgf), orient): colour-prefixed and colour-free sets together, own first 10 moves and whole-game first 10 moves; orient raw or canon (p02_moves.canon(mv, 10))",
+  "vocabulary": "tokens of every training game (fit + inner) in load_rows order; tokens seen only in inner games have df = 0 (the same vocabulary as T3)",
+  "weights": "as T3, with df over R_b: idf = ln((1 + 5767) / (1 + df_black)) + 1, df_black = the number of fit players (R_b rows) with the token in at least one of their BLACK fit games (players, as T3's df; not games); a token in no black fit game has df_black = 0",
+  "statistic": "S2(c) = top1 - top2 of the cosine between the candidate profile (its 100 pool games) and the 5,767 R_b rows, per orientation",
+  "null": "fit players with >= 100 black fit games, profile = their first 100 BLACK games in sha256('c10-t3|cand|{pid}|{gid}') order, own R_b column left out; q99 = np.quantile(null, 0.99, method='higher')",
+  "holdout": "inner players with >= 100 black games (never in R_b), same profile rule (false positives)",
+  "positives": "the null players with their own R_b column replaced by the profile of their other black games (m = 20 / 50 / 100 / all)",
+  "power": "a 400-candidate pool with a share pi of training players, each in R_b with probability 5767/8007 (as T3); 5,000 draws per pi"
+ },
+ "reference": {
+  "players": 5767,
+  "black_games": 360581,
+  "sha256_sorted_player_ids": "9940feed82f435a770030a17b32b5bbf7dc1002daa61616a989b24580bdf664f"
+ },
+ "orient": {
+  "raw": {
+   "n_null": 1133,
+   "n_holdout_inner": 112,
+   "vocab": 146421,
+   "vocab_sha256": "63974765eeed627eaaaaabbdb47ff3e04621092696564dd87ca834ae486f4cb3",
+   "idf_sha256": "660f78032ebf7e8296c6e2b9f55ec5d72b29f410fc8deb832836bdaf321c92b3",
+   "idf_sha256_rule": "sha256 of the idf vector (df over the fit players' BLACK games) as little-endian float64 bytes, vocabulary order = first appearance over all training games in load_rows order (the T3 vocabulary)",
+   "S2_q99": 0.11054835109258787,
+   "S1_q99": 0.5102085100155941,
+   "null_n_exceed": 11,
+   "null_S2_quantiles": {
+    "0.5": 0.009313443464076088,
+    "0.9": 0.03639442823366042,
+    "0.95": 0.049480252994850635,
+    "0.99": 0.10922191258728291,
+    "0.995": 0.14116630478809647,
+    "0.999": 0.19625909428307692
+   },
+   "null_S2_max": 0.20036170166699624,
+   "null_S2_exceed_by_level": {
+    "D": 0.0,
+    "C": 0.016,
+    "B": 0.0077,
+    "A": 0.0116,
+    "1D": 0.027,
+    "2D": 0.0165,
+    "3D": 0.0,
+    "4D": 0.018,
+    "5D": 0.0,
+    "6D": 0.0
+   },
+   "null_worst_level_P_declare": 2.529403864012551e-12,
+   "holdout_inner_exceed": 0.0,
+   "holdout_inner_n_exceed": 0,
+   "holdout_inner_P_declare_400_binomial": 0.0,
+   "pos": {
+    "20": {
+     "n": 926,
+     "tpr": 0.0745,
+     "tpr_by_level": {
+      "D": 0.087,
+      "C": 0.068,
+      "B": 0.05,
+      "A": 0.123,
+      "1D": 0.053,
+      "2D": 0.057,
+      "3D": 0.061,
+      "4D": 0.065,
+      "5D": 0.073,
+      "6D": 0.14
+     }
+    },
+    "50": {
+     "n": 679,
+     "tpr": 0.2784,
+     "tpr_by_level": {
+      "D": 0.312,
+      "C": 0.355,
+      "B": 0.211,
+      "A": 0.179,
+      "1D": 0.226,
+      "2D": 0.266,
+      "3D": 0.263,
+      "4D": 0.32,
+      "5D": 0.247,
+      "6D": 0.343
+     }
+    },
+    "100": {
+     "n": 424,
+     "tpr": 0.5212,
+     "tpr_by_level": {
+      "D": 0.548,
+      "C": 0.556,
+      "B": 0.556,
+      "A": 0.444,
+      "1D": 0.333,
+      "2D": 0.491,
+      "3D": 0.615,
+      "4D": 0.674,
+      "5D": 0.426,
+      "6D": 0.6
+     }
+    },
+    "all": {
+     "n": 1127,
+     "tpr": 0.3718,
+     "tpr_by_level": {
+      "D": 0.456,
+      "C": 0.395,
+      "B": 0.217,
+      "A": 0.247,
+      "1D": 0.404,
+      "2D": 0.342,
+      "3D": 0.442,
+      "4D": 0.414,
+      "5D": 0.388,
+      "6D": 0.409
+     }
+    }
+   },
+   "pos_all_tpr_by_ref_games": {
+    "1-20": {
+     "n": 208,
+     "tpr": 0.0337
+    },
+    "21-50": {
+     "n": 247,
+     "tpr": 0.1457
+    },
+    "51-100": {
+     "n": 248,
+     "tpr": 0.371
+    },
+    "101-200": {
+     "n": 242,
+     "tpr": 0.6281
+    },
+    "201-1000000": {
+     "n": 182,
+     "tpr": 0.7253
+    }
+   },
+   "power_pool_rule": {
+    "0.0": {
+     "P_declare": 0.0,
+     "mean_share_above": 0.0097,
+     "p05_share": 0.0025
+    },
+    "0.1": {
+     "P_declare": 0.0,
+     "mean_share_above": 0.0359,
+     "p05_share": 0.02
+    },
+    "0.2": {
+     "P_declare": 0.0016,
+     "mean_share_above": 0.0618,
+     "p05_share": 0.0425
+    },
+    "0.3": {
+     "P_declare": 0.2188,
+     "mean_share_above": 0.0879,
+     "p05_share": 0.065
+    },
+    "0.4": {
+     "P_declare": 0.8362,
+     "mean_share_above": 0.114,
+     "p05_share": 0.0875
+    },
+    "0.5": {
+     "P_declare": 0.9942,
+     "mean_share_above": 0.1399,
+     "p05_share": 0.1125
+    },
+    "0.75": {
+     "P_declare": 1.0,
+     "mean_share_above": 0.2053,
+     "p05_share": 0.1725
+    },
+    "1.0": {
+     "P_declare": 1.0,
+     "mean_share_above": 0.2705,
+     "p05_share": 0.235
+    }
+   },
+   "registered_T3_on_black_only_profiles": {
+    "registered_q99": 0.1004267242871777,
+    "null_players": 1133,
+    "null_share_above": 0.0071,
+    "positive_tpr": 0.1253,
+    "positive_definition": "own registered column replaced by the profile of all the player's other fit games (both colours), as the registered R holds all fit games",
+    "power_pool_rule": {
+     "0.0": {
+      "P_declare": 0.0,
+      "mean_share_above": 0.0071,
+      "p05_share": 0.0
+     },
+     "0.2": {
+      "P_declare": 0.0,
+      "mean_share_above": 0.0241,
+      "p05_share": 0.0125
+     },
+     "0.3": {
+      "P_declare": 0.0,
+      "mean_share_above": 0.0328,
+      "p05_share": 0.02
+     },
+     "0.5": {
+      "P_declare": 0.0,
+      "mean_share_above": 0.0499,
+      "p05_share": 0.0325
+     },
+     "1.0": {
+      "P_declare": 0.3214,
+      "mean_share_above": 0.0922,
+      "p05_share": 0.0675
+     }
+    },
+    "note": "record only: the registered T3 (mixed-colour reference) applied to black-only 100-game profiles"
+   },
+   "t_null_s": 9.2,
+   "t_orient_s": 25.8
+  },
+  "canon": {
+   "n_null": 1133,
+   "n_holdout_inner": 112,
+   "vocab": 144097,
+   "vocab_sha256": "7715531569bdf0e87f2c0d7dc632641e377da1dd8e2850504e3f17fb29dac055",
+   "idf_sha256": "ab64b00fb5fc0ee3dc288f8a412df3824a48cd1031ac88d8f266f3b030118d23",
+   "idf_sha256_rule": "sha256 of the idf vector (df over the fit players' BLACK games) as little-endian float64 bytes, vocabulary order = first appearance over all training games in load_rows order (the T3 vocabulary)",
+   "S2_q99": 0.08269886422035472,
+   "S1_q99": 0.5083116277996627,
+   "null_n_exceed": 11,
+   "null_S2_quantiles": {
+    "0.5": 0.009470465682751728,
+    "0.9": 0.032318638223362964,
+    "0.95": 0.04574326981876187,
+    "0.99": 0.08192983144756859,
+    "0.995": 0.10754368717588654,
+    "0.999": 0.14490335102437438
+   },
+   "null_S2_max": 0.1595115499715275,
+   "null_S2_exceed_by_level": {
+    "D": 0.0,
+    "C": 0.008,
+    "B": 0.0,
+    "A": 0.0,
+    "1D": 0.018,
+    "2D": 0.0413,
+    "3D": 0.0,
+    "4D": 0.009,
+    "5D": 0.0,
+    "6D": 0.0182
+   },
+   "null_worst_level_P_declare": 3.5208697377664785e-07,
+   "holdout_inner_exceed": 0.0,
+   "holdout_inner_n_exceed": 0,
+   "holdout_inner_P_declare_400_binomial": 0.0,
+   "pos": {
+    "20": {
+     "n": 926,
+     "tpr": 0.0821,
+     "tpr_by_level": {
+      "D": 0.087,
+      "C": 0.097,
+      "B": 0.05,
+      "A": 0.123,
+      "1D": 0.053,
+      "2D": 0.067,
+      "3D": 0.071,
+      "4D": 0.065,
+      "5D": 0.062,
+      "6D": 0.174
+     }
+    },
+    "50": {
+     "n": 679,
+     "tpr": 0.299,
+     "tpr_by_level": {
+      "D": 0.281,
+      "C": 0.368,
+      "B": 0.175,
+      "A": 0.143,
+      "1D": 0.226,
+      "2D": 0.304,
+      "3D": 0.303,
+      "4D": 0.36,
+      "5D": 0.315,
+      "6D": 0.403
+     }
+    },
+    "100": {
+     "n": 424,
+     "tpr": 0.5755,
+     "tpr_by_level": {
+      "D": 0.571,
+      "C": 0.533,
+      "B": 0.519,
+      "A": 0.556,
+      "1D": 0.444,
+      "2D": 0.566,
+      "3D": 0.673,
+      "4D": 0.717,
+      "5D": 0.489,
+      "6D": 0.7
+     }
+    },
+    "all": {
+     "n": 1127,
+     "tpr": 0.4144,
+     "tpr_by_level": {
+      "D": 0.466,
+      "C": 0.427,
+      "B": 0.209,
+      "A": 0.212,
+      "1D": 0.505,
+      "2D": 0.442,
+      "3D": 0.483,
+      "4D": 0.477,
+      "5D": 0.448,
+      "6D": 0.455
+     }
+    }
+   },
+   "pos_all_tpr_by_ref_games": {
+    "1-20": {
+     "n": 208,
+     "tpr": 0.024
+    },
+    "21-50": {
+     "n": 247,
+     "tpr": 0.166
+    },
+    "51-100": {
+     "n": 248,
+     "tpr": 0.4113
+    },
+    "101-200": {
+     "n": 242,
+     "tpr": 0.6983
+    },
+    "201-1000000": {
+     "n": 182,
+     "tpr": 0.8242
+    }
+   },
+   "power_pool_rule": {
+    "0.0": {
+     "P_declare": 0.0,
+     "mean_share_above": 0.0097,
+     "p05_share": 0.0025
+    },
+    "0.1": {
+     "P_declare": 0.0,
+     "mean_share_above": 0.0389,
+     "p05_share": 0.0249
+    },
+    "0.2": {
+     "P_declare": 0.0126,
+     "mean_share_above": 0.068,
+     "p05_share": 0.0475
+    },
+    "0.3": {
+     "P_declare": 0.4452,
+     "mean_share_above": 0.097,
+     "p05_share": 0.0725
+    },
+    "0.4": {
+     "P_declare": 0.9542,
+     "mean_share_above": 0.1263,
+     "p05_share": 0.1
+    },
+    "0.5": {
+     "P_declare": 0.9998,
+     "mean_share_above": 0.1551,
+     "p05_share": 0.125
+    },
+    "0.75": {
+     "P_declare": 1.0,
+     "mean_share_above": 0.2281,
+     "p05_share": 0.195
+    },
+    "1.0": {
+     "P_declare": 1.0,
+     "mean_share_above": 0.3012,
+     "p05_share": 0.2625
+    }
+   },
+   "registered_T3_on_black_only_profiles": {
+    "registered_q99": 0.08085695648061325,
+    "null_players": 1133,
+    "null_share_above": 0.0079,
+    "positive_tpr": 0.1359,
+    "positive_definition": "own registered column replaced by the profile of all the player's other fit games (both colours), as the registered R holds all fit games",
+    "power_pool_rule": {
+     "0.0": {
+      "P_declare": 0.0,
+      "mean_share_above": 0.008,
+      "p05_share": 0.0025
+     },
+     "0.2": {
+      "P_declare": 0.0,
+      "mean_share_above": 0.0264,
+      "p05_share": 0.015
+     },
+     "0.3": {
+      "P_declare": 0.0,
+      "mean_share_above": 0.0357,
+      "p05_share": 0.0225
+     },
+     "0.5": {
+      "P_declare": 0.0,
+      "mean_share_above": 0.0542,
+      "p05_share": 0.035
+     },
+     "1.0": {
+      "P_declare": 0.5254,
+      "mean_share_above": 0.1001,
+      "p05_share": 0.075
+     }
+    },
+    "note": "record only: the registered T3 (mixed-colour reference) applied to black-only 100-game profiles"
+   },
+   "t_null_s": 9.2,
+   "t_orient_s": 26.5
+  }
+ },
+ "either": {
+  "null_exceed_raw_or_canon_per_candidate": 0.01500441306266549,
+  "null_exceed_raw_and_canon": 0.00441306266548985,
+  "holdout_exceed_raw_or_canon": 0.0,
+  "note": "the pool rule is applied per orientation (>= 40 above that orientation's q99); overlap if raw OR canon fires",
+  "P_declare_raw_or_canon": {
+   "0.0": 0.0,
+   "0.2": 0.0124,
+   "0.3": 0.4484,
+   "0.4": 0.965,
+   "0.5": 0.9996,
+   "1.0": 1.0
+  }
+ },
+ "false_positive": {
+  "null_fit_leave_own_out": {
+   "n": 1133,
+   "share_above_raw": 0.0097,
+   "share_above_canon": 0.0097,
+   "share_above_raw_or_canon": 0.015,
+   "P_declare_400_binomial_raw": 1.9710820429256417e-27,
+   "P_declare_400_binomial_canon": 1.9710820429256417e-27,
+   "P_declare_400_binomial_raw_or_canon_bound": 3.9421640858512834e-27
+  },
+  "holdout_inner": {
+   "n": 112,
+   "share_above_raw": 0.0,
+   "share_above_canon": 0.0,
+   "share_above_raw_or_canon": 0.0,
+   "P_declare_400_binomial_raw": 0.0,
+   "P_declare_400_binomial_canon": 0.0,
+   "P_declare_400_binomial_raw_or_canon_bound": 0.0
+  },
+  "P_declare_simulated_pi_0": {
+   "raw": {
+    "P_declare": 0.0,
+    "mean_share_above": 0.0097,
+    "p05_share": 0.0025
+   },
+   "canon": {
+    "P_declare": 0.0,
+    "mean_share_above": 0.0097,
+    "p05_share": 0.0025
+   }
+  },
+  "note": "per candidate, about 1% of null players exceed q99 by construction (method 'higher'); a pool needs >= 40 of 400 in one orientation"
+ },
+ "registered_reference_check": {
+  "orient": {
+   "raw": {
+    "S2_q99": [
+     0.1004267242871777,
+     0.1004267242871777
+    ],
+    "vocab": [
+     146421,
+     146421
+    ],
+    "n_null": [
+     1985,
+     1985
+    ]
+   },
+   "canon": {
+    "S2_q99": [
+     0.08085695648061325,
+     0.08085695648061325
+    ],
+    "vocab": [
+     144097,
+     144097
+    ],
+    "n_null": [
+     1985,
+     1985
+    ]
+   }
+  },
+  "all_match": true,
+  "what": "the registered T3 reference rebuilt in the same run equals its pins (the T3b and T3 references share the token matrix)"
+ },
+ "audit_scratch_q99": {
+  "values": {
+   "raw": 0.11054835109258787,
+   "canon": 0.08269886422035472
+  },
+  "source": "results/test02/design/official_structure/sim_t3b.json (scratch audit, 2026-09-28)",
+  "reproduced": {
+   "raw": true,
+   "canon": true
+  }
+ },
+ "rule": {
+  "per_pool": "n_raw = #{S2_raw > q99_raw}, n_canon = #{S2_canon > q99_canon}; overlap iff n_raw >= ceil(0.10 x candidates) OR n_canon >= ceil(0.10 x candidates) (40 of 400) (q99 and S2 of T3b)",
+  "test_day": "rebuild R_b; vocabulary size, vocab_sha256, idf_sha256, q99, the null player ids and the null S2 vector must equal this committed file; T1 FAIL_OPENING -> not evaluable",
+  "consequence": "consider 乙 under a new registration; uploads of 甲 continue",
+  "pools_left_on_T3": "a pool on the registered T3 with max(b_c, 1 - b_c) >= 0.9 (b_c not exactly 1) is flagged low_power: without a declared overlap its conclusion is 'not determinable (low power)' and T3's verdict LOW_POWER instead of PASS (PREREG_02 rev 8); a declared overlap stays OVERLAP",
+  "registration": "PREREG_02 rev 8 (written before any test data)"
+ },
+ "pins": {
+  "expected": {
+   "reference": {
+    "players": 5767,
+    "black_games": 360581,
+    "sha256_sorted_player_ids": "9940feed82f435a770030a17b32b5bbf7dc1002daa61616a989b24580bdf664f"
+   },
+   "raw": {
+    "S2_q99": 0.11054835109258787,
+    "vocab": 146421,
+    "n_null": 1133,
+    "n_holdout_inner": 112,
+    "null_n_exceed": 11,
+    "holdout_inner_n_exceed": 0
+   },
+   "canon": {
+    "S2_q99": 0.08269886422035472,
+    "vocab": 144097,
+    "n_null": 1133,
+    "n_holdout_inner": 112,
+    "null_n_exceed": 11,
+    "holdout_inner_n_exceed": 0
+   }
+  },
+  "all_match": true,
+  "mismatches": []
+ },
+ "provenance": {
+  "tool": "tools/t02_checks.py",
+  "tool_sha256": "a6fb40f99e7af19bfe4eef3f5cbb1d0049a8f0c14a7cc95cddfac73884f99cc8",
+  "tool_committed_clean": false,
+  "c10data_sha256": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+  "p02_moves_sha256": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+  "p02_player_open_sha256": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+  "git_head": "a270cc0a4163b533e0d8b7845c39c2d9693722ad",
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "mode": "real",
+  "argv": [
+   "precompute",
+   "--part",
+   "t3b",
+   "--rerun",
+   "--reason",
+   "PREREG_02 rev 8 review fixes (2026-09-28): T3B_DEFINITIONS weights wording (df = fit players, not games) and the low-power rule text for pools left on T3; the tool changed after the first t3b run, the arrays must not"
+  ],
+  "created": "2026-09-28T20:26:53+0800",
+  "inputs": {
+   "split_csv": "results/split_v1/players_split.csv fc20f6bf1338ed454222f9097c39d58dc2eba2cac4d89be4014b368c74646b8c"
+  },
+  "rerun_reason": "PREREG_02 rev 8 review fixes (2026-09-28): T3B_DEFINITIONS weights wording (df = fit players, not games) and the low-power rule text for pools left on T3; the tool changed after the first t3b run, the arrays must not",
+  "runtime_s": {
+   "load": 60.4,
+   "parse_and_hash": 69.6,
+   "total": 338.9
+  },
+  "peak_wset_mb": 1982,
+  "part": "t3b"
+ },
+ "npz_sha256": {
+  "t3b_null_raw.npz": "e42318ca89298213175920b0600bc93ec9ed0707d6ea7a063100f7f49c988db7",
+  "t3b_null_canon.npz": "46589ca3a1d0fadbed9c5831959fbd3f237ade1b18842dbcf340e64c434279fc"
+ }
+}

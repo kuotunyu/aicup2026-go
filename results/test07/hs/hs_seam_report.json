@@ -1,0 +1,234 @@
+{
+ "format": "c10-test07 hs report v1",
+ "what": "PREREG_07 5.2 test-day HS of one set (no score)",
+ "set": "seam",
+ "mode": "real",
+ "created": "2026-11-04T07:44:30+00:00",
+ "fake_scorer": false,
+ "fake_from_val": false,
+ "games": 400,
+ "questions": 33,
+ "max_games_drill": false,
+ "failed": 0,
+ "failed_or_no_move": 0,
+ "no_target_moves": 0,
+ "chunks": [
+  {
+   "file": "chunk_00000.npz",
+   "sha256": "7429de98ea3ba037b293c9072a1891d5fd3be57d75c36a0e4f2315562f05dba4",
+   "games": 200,
+   "failed": 0,
+   "no_target_moves": 0,
+   "created_utc": "2026-11-04T07:41:26+00:00",
+   "seconds": 210.54458808898926,
+   "evals": 323232,
+   "errors": [],
+   "torch": "2.11.0+cu128",
+   "cudnn": "91900",
+   "gpu_name": "NVIDIA GeForce RTX 4090",
+   "driver": "616.92"
+  },
+  {
+   "file": "chunk_00001.npz",
+   "sha256": "b999c48acdeee92aebb9a495de216e23f81fb8e08fefec0afa624875ace48a91",
+   "games": 200,
+   "failed": 0,
+   "no_target_moves": 0,
+   "created_utc": "2026-11-04T07:44:30+00:00",
+   "seconds": 184.32905650138855,
+   "evals": 308910,
+   "errors": [],
+   "torch": "2.11.0+cu128",
+   "cudnn": "91900",
+   "gpu_name": "NVIDIA GeForce RTX 4090",
+   "driver": "616.92"
+  }
+ ],
+ "chunk_dir": "data/test07/hs/seam",
+ "earliest_chunk_created_utc": "2026-11-04T07:41:26+00:00",
+ "latest_chunk_created_utc": "2026-11-04T07:44:30+00:00",
+ "chunk_environments": [
+  [
+   "2.11.0+cu128",
+   "91900",
+   "NVIDIA GeForce RTX 4090"
+  ]
+ ],
+ "evals": 632142,
+ "gpu_seconds": 394.9,
+ "evals_per_s": 1600.9,
+ "environment": {
+  "python": "3.12.13",
+  "torch": "2.11.0+cu128",
+  "numpy": "2.5.3",
+  "cuda": true,
+  "cudnn": 91900,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "driver": "616.92"
+ },
+ "keys": {
+  "questions_file": "data/local/rank_val_questions.csv",
+  "questions_sha256": "73e51bbfd7b051e73cbb62af4b180c403d2422f122240c5e67e9c92303776db5",
+  "keys_file": "results/prereg02/rank/dumps/val_keys.npz",
+  "keys_sha256": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+  "games": 400,
+  "questions": 33
+ },
+ "output": {
+  "file": "seam_hs.npz",
+  "sha256": "81d774ca73b1bf4df766499184d602a454457f0bbf2551dd801c9a873b0a5b7a"
+ },
+ "prerequisites": {
+  "git": {
+   "clean": true,
+   "head": "50407ac4ccb04cbd4e65c024fd2d1d9d26f38ab0",
+   "own_files": {
+    "committed": [
+     "tools/t07_rank.py",
+     "tools/t04_rank.py",
+     "tools/p07_rank_fuse.py",
+     "tools/check_submission.py",
+     "tools/official_log.py"
+    ]
+   }
+  },
+  "prereg07": {
+   "prereg07_sha256": {
+    "results/prereg07/rank/frozen_config.json": "93a0ac29615260865d554ee61aec258c633820a87aeb7dfcf8047a5dfd200c0b",
+    "results/prereg07/rank/hs_map.npz": "a4334e79c490e4d8102dd5136ac08c0de1060315981f4ccc527ebffa1b84a3e4",
+    "results/prereg07/hs/val_hs.npz": "ef2067e8cb633f521c205a09aa4638c79fef3ba0b4e90e6a54bdc046e5a5550f",
+    "results/prereg07/hs/val_seam_moves.npz": "3e55fbfa70b43c36c2ebe30bdbca63ea6c68968a1521ec6d63fd2b698f6598ab",
+    "results/prereg07/hs/val_report.json": "11745c5c6e8fedd7c01611331b4f4c69ec1c00f423d3c39e267823bc3c56c7ca",
+    "results/prereg07/rank/rank_val_probs.csv": "6ae2db6025a903eb5c58af9418dc203c0b6e84dd664049f85dfa850e57dc28c1",
+    "results/prereg07/rank/pred_B.csv": "51d7dbf82d50c3848acadb6934069580bd3ade7e6ca71ad5d1023633a18a26fa",
+    "results/prereg07/rank/pred_A.csv": "b229be2c414f7af22310bc304d6da9de5b6406698ec8ce9c0d40e7c146b40a41",
+    "results/prereg07/rank/apply_report.json": "3ed7f7b0580f02d9c4c9c9255634a689213017e65190dce492465aad332fad6b",
+    "results/prereg07/rank/score_H7R.json": "32686f6c91fb0a14301c85ecc1c299844d9346fb2efb8f0fd0b5891f5609cbf5"
+   },
+   "pinned_files": {
+    "results/prereg07/explore/pilot_humansl/hs_lib.py": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+    "results/prereg07/explore/pilot_humansl/pilot_run.py": "b0d127fd1d5a83af5b17ec3df1dccc85d94b11c3479d33cac07448a3796a3936",
+    "results/prereg07/explore/pilot_humansl/pilot_fuse.py": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+    "results/prereg05/explore/u1/u1_lib.py": "225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7"
+   },
+   "katago": {
+    "source_txt_sha256": "039d5a1cbc815b4d69b68dc8c01163354820ac00b5070ef136c14a040b5ba20b",
+    "files": 15,
+    "differing": []
+   }
+  },
+  "prereg04_frozen": {
+   "path": "results/prereg04/rank/frozen_config.json",
+   "sha256": "ae728e9c936a55dfeced255e9b05b5ac6a4955a7101f108e78c53c679e162661",
+   "commit_check": {
+    "path": "results/prereg04/rank/frozen_config.json",
+    "sha256": "ae728e9c936a55dfeced255e9b05b5ac6a4955a7101f108e78c53c679e162661",
+    "git_head": "50407ac4ccb04cbd4e65c024fd2d1d9d26f38ab0",
+    "state": "committed and unchanged",
+    "combo": "Q02"
+   }
+  },
+  "h7r": {
+   "A_rank_balanced": 0.6236017652948923,
+   "A_mean": 0.6245054776753989,
+   "B_rank_balanced": 0.632702198843505,
+   "questions": 1589,
+   "rule": "PREREG_07 rev 3: H7R scored, Q02H >= 0.57, reference re-read equal (|A - H4R| <= 1e-12)",
+   "B_minus_A_rank_balanced": {
+    "n": 1589,
+    "strata": 10,
+    "mean_diff": 0.009100433548612638,
+    "ci95": [
+     -0.0017358146176694208,
+     0.020036739728021998
+    ],
+    "share_resamples_leq_0": 0.0507
+   },
+   "holds": true
+  },
+  "k6_07": {
+   "now": "2026-11-04T15:37:12.649057+08:00",
+   "k6_07": "2026-11-19T23:59:59+08:00",
+   "passed": false
+  },
+  "t1": {
+   "path": "results/test02/checks/rank/t1.json",
+   "sha256": "9ddf1cc98c4085493c7ec81f539acaba5e8a2701ba849d41bf168368a8bcfb2c",
+   "verdict": "PASS"
+  },
+  "test02": {
+   "report_sha256": "1479233446b99c2cacc6c4bf95de3ab6f697990296cb50334a8c9b5974e84468",
+   "fallback_used": false
+  },
+  "r20_first_upload": {
+   "id": 1,
+   "uploaded_at": "2026-11-04T15:30:35+08:00",
+   "sha256": "711b3d1b73a31d50e243df03458e70970d0f7d50faf7b6e1e2d9eaae60b9558a",
+   "log_sha256": "2e5acc259b6f5e69baa0cebfe5ba9c447112eb38a007f1cf0f758b822dc76aa5"
+  },
+  "nvidia_compute_processes_before": [],
+  "gpu_env": {
+   "equal": true,
+   "reference": {
+    "python": "3.12.13",
+    "torch": "2.11.0+cu128",
+    "cudnn": 91900,
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "numpy": "2.5.3",
+    "sources": "torch: the pilot chunks' torch field; python / cuDNN / GPU / numpy: hs_gpu_bench.json environment (committed)"
+   },
+   "driver_record_only": "616.92"
+  }
+ },
+ "rerun": null,
+ "run": {
+  "precision": "fp16",
+  "batch": 1024,
+  "channels_last": true,
+  "group_batches": 16,
+  "workers": 8,
+  "cudnn_benchmark": true,
+  "sides": [
+   "target"
+  ],
+  "chunk": 200
+ },
+ "profiles": [
+  "rank_20k",
+  "rank_15k",
+  "rank_12k",
+  "rank_10k",
+  "rank_8k",
+  "rank_6k",
+  "rank_4k",
+  "rank_2k",
+  "rank_1d",
+  "rank_2d",
+  "rank_3d",
+  "rank_5d",
+  "rank_7d",
+  "rank_9d"
+ ],
+ "tool": {
+  "git_head": "466816c74b19ccc7d60491a5d3902a751dd68f6e",
+  "files_sha256_rule": "sha256 of the file with CRLF folded to LF",
+  "files_sha256": {
+   "t07_rank.py": "2c02e5c5d462c58393856bb286ca910881fb9677a5d15bf49e767909174f9f27",
+   "t04_rank.py": "f212879e5aaf6fe90060e2b8f03a5e61e8d8704c9dd8204e9c42e65b589940e4",
+   "p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142",
+   "p07_hs.py": "b27ea371bdc1477558effb9ca86c540805dcced971d983226e15fb5e19b7b8dc",
+   "check_submission.py": "b5c7c300cca4fcd5b243e4579417453699777e99bd4aff88dcbf6805e9346144",
+   "official_log.py": "a2c4f55f4a750b1b9cdf6fe37f4e89a69b6f8aaa64f0a4f0eb6be63aa61a4746",
+   "t02_rank.py": "e3485e073a20843654f622828283af4ae3985141e08378cefb59d6c6f2495874",
+   "t02_test_bundle.py": "18e41e952da39a68bc901bda5f5b9f0173848379a31056da6139382ac038e796",
+   "p04_opp.py": "b594e0eff135b539616d60f26403ca1a1a37ac3f44855785c36e2cc6be9768fa",
+   "p04_rank_fuse.py": "c3a647b09c46760239d5b2ee274d56f7231987354fc1c1f6c3ff40102f4b26a2",
+   "p03_rank_fuse.py": "77abd7479d26f0f647a258b4a6d5d2e517808b4c187184f14ff599d70b8aca2f",
+   "p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+   "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "decide.py": "cf66daf1231b3c2bd60c5b6484245627e133bd0f1cd7ff5557e978da3801d0e3"
+  }
+ },
+ "seconds_this_call": 438.5,
+ "next": "commit results/test07/hs/seam_hs.npz and hs_seam_report.json"
+}

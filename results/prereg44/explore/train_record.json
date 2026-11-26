@@ -1,0 +1,74 @@
+{
+ "format": "c10-prereg44 train v1",
+ "config": {
+  "plan": "PLAN.md 3",
+  "total_steps": 200000,
+  "ckpt_every": 20000,
+  "lr": 0.002,
+  "weight_decay": 0.0001,
+  "onecycle_pct": 0.05,
+  "weight_seed": 0,
+  "sampler_seed": 44,
+  "batch_games": 96,
+  "moves": 24,
+  "min_player_games": 5,
+  "trunk": {
+   "name": "GPSENet (prereg42 V2)",
+   "blocks": 10,
+   "channels": 128,
+   "emb_dim": 256,
+   "se_ratio": 8,
+   "gpool_blocks": [
+    2,
+    5,
+    8
+   ],
+   "gpool_ch": 32,
+   "source": "results/prereg42/explore/p42_lib.py @ 249d1f5 (branch p42-recipe): SE, GPSEBlock, GPSENet, Ema"
+  },
+  "head": "Linear(256, 10) on the mean of the per-move vectors; cross-entropy",
+  "fp16": true,
+  "ema_decay": 0.999,
+  "cache_codes_sha256": "79c649e6a3b4e9b5f80bef3ecdccc769830ce9e794891c13b2b1dd49af1f77ba",
+  "sampled_players_per_level": [
+   730,
+   678,
+   865,
+   1277,
+   359,
+   503,
+   503,
+   525,
+   542,
+   588
+  ],
+  "small": null
+ },
+ "finished": true,
+ "steps": 200000,
+ "smoke": false,
+ "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "workers": 12,
+ "git_head": null,
+ "code_sha256": {
+  "p44_lib.py": "92a2893e9b84a3bd3882e67773286b777dba4e6194c83945c0b07a392d9e213a",
+  "p44_train.py": "29aeb34928e5e1377d08d379359da2258a1dcbecadaa12800f43f3730dd21480",
+  "p36_lib.py": "8df27b37a6b3de786b54af25908d3d91ffe4c030dceb7350d9dd130a14ce241f"
+ },
+ "torch": "2.14.1+cu130",
+ "parameters": 3223370,
+ "positions_seen": 460800000,
+ "seconds": 44549.9,
+ "checkpoints": {
+  "step_020000.pt": "05b0cb458118bc28b9f514b9039ef2aa65d383e524265b5bd7b1e9b776f22200",
+  "step_040000.pt": "e7aa45f6f2af9ee157a4853df9dbaf74fa85afb382cf1d61addcdfa8d784b1b6",
+  "step_060000.pt": "19a126c1c2779d4846ead6f09ab4e8bc0c8a7e7eb9169b117d232879a1564758",
+  "step_080000.pt": "1402ab41ccd107485f6371fd634028929bcc9f833e898b8fa55a70911215cb18",
+  "step_100000.pt": "1e9873917f67a790122983004a45a93fb23242ab90335ca44b180f3f772c12a4",
+  "step_120000.pt": "40301dd9c2003ec10e9830b97ca91ee5a3220aad5b5f719c4a010d2b9c814439",
+  "step_140000.pt": "a307061d24dd50004d4446bfdbc25b7773c146f27e8e4f96877f1f109542e4ca",
+  "step_160000.pt": "634c04fc247b759ea91b341fbe605f8f2862c4671d6ad0ab7452c5e723d28e20",
+  "step_180000.pt": "2bfff0da1a4c91454af09dee779eef10fbaa4b991406cf63bddffbc3bf53ba45",
+  "step_200000.pt": "749a8837a51f662fc392b0b1ea58302f88aac802446dfb512611f0aa0d3f270b"
+ }
+}

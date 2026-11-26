@@ -1,0 +1,269 @@
+{
+ "format": "c10-prereg31 explore hd naive bayes v1",
+ "created": "2026-11-10T08:45:54+00:00",
+ "code": {
+  "head": "17d7f69ba7e83ffd2c2ea5ff260534edd1a5feb4",
+  "dirty": "",
+  "sha256_lf": {
+   "results/prereg09/rank/check_report.json": "3dfe765d1b7aa1c7c9f33ac8c0d6f89e44a5abf0141ca1195fdaa0fc71fe00a0",
+   "results/prereg09/rank/frozen_config.json": "50d38d2787c94569d88ed87a482e872ed64be2d1d20e4f57ffbb07a216663ff5",
+   "results/prereg09/rank/p1e_map.npz": "b5a9e33023a48099cbbafa87e5c92a081b272a73402dbd7d0fba4c70323be5eb",
+   "results/prereg12/explore/finetune/ft_eval.py": "2e3302cad19ab4c6b3f4242278a7d9bd751cdfbd92b4672696a6af46860b8021",
+   "results/prereg19/explore/p19_lib.py": "bbdc4225687777b732df1275277c4f4986f77225b935808f02cc7aefd4256376",
+   "results/prereg19/explore/p19_train.py": "9493ef1367b01495769a40ab792dc2b57208a9555de25a8f118147501b7b10ed",
+   "results/prereg25/explore/p25_lib.py": "a5c2454dd69ff971e3f5fa29636b231b9fda0568704b62d78cc832b282ff774d",
+   "results/prereg25/explore/p25_train.py": "01a9bd738060ff7a25123503c7369ac692f69220c157b2817249c7aa9b87a23f",
+   "results/prereg25/explore/train_record.json": "c5197c54bbbc9c1981fbdbdf5912d556811bfa7ce9c9ae0a093f70480cb08d63",
+   "results/prereg25/rank/s25_seed0.npz": "733c69d050988e082d04305dd33d8ef2af26bf4211b8f539631ca6481d4797b2",
+   "results/prereg25/rank/s25_seed1.npz": "87daa77cef4da9df5caa8a234cad5237c083b4d71022c1d19d938724f97d3175",
+   "results/prereg25/rank/s25_seed2.npz": "790d6145d293c5cd9fb955afb35ed01fae0e9c5ec4fe3003ec162f4c71da8450",
+   "results/prereg29/explore/p29_lib.py": "d618af25c0e3c5d95ed7f55156d7e69186e76f249d5004d46f38b02a1eb5b4ce",
+   "results/prereg29/explore/p29_train.py": "d3b0b0ea3eb269a5673a69585e387e6fafbb33bf1e46cc64ffcf7c108873e1db",
+   "results/prereg29/explore/train_record.json": "a5305c269c7e02d3454659a06438ec0593fbb5c958d2dcd673c56924eee7670c",
+   "results/prereg31/explore/PLAN.md": "4ae15f876cbbe23fa11e9c04f2105b08fb17cf4d972a76b044892eab11b104fd",
+   "results/prereg31/explore/hd_stats.json": "f98f3166b38384399ef45da80561f1dbde17c609b2c1388ba77fa7f0498f819f",
+   "results/prereg31/explore/p31_hd.py": "ce47318425b3950d8440e8fb47e3377f9de9375fb95f01b4068c985ebcfd9162",
+   "results/prereg31/explore/p31_lib.py": "2d71c3ac95a4b7c03cdeef64dff6bb25c3ae94779888fa9d0375a19f2f4d1360",
+   "results/prereg31/explore/p31_train.py": "6be281d7f9a05bf0974d5613b9dc451a73c3f94e5f504ac039cbaecd8150f67e",
+   "results/prereg31/explore/ram_watch.py": "b1b4e92657b342c9f0e9861bfd6e15e5dd21d5ea1f82ad7e1fb84badffcd94bc",
+   "results/prereg31/explore/run_train.sh": "bba5a60bcf04cad37ed167e4a9eeae22669a1db6975a2fe6e8097ef275c8d140",
+   "tools/c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "tools/decide.py": "cf66daf1231b3c2bd60c5b6484245627e133bd0f1cd7ff5557e978da3801d0e3",
+   "tools/p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "tools/p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+   "tools/p02_rank_opening.py": "a4195fece41aa3d50ecda82d1af93d9c04f49df5fd2157d69dd8a488dea93463",
+   "tools/p02_rank_pseudo.py": "16e5bfdfb2995874ddb11bde1f7a9e786a478b14443453f675a4fb3a480bb098",
+   "tools/p03_rank_fuse.py": "77abd7479d26f0f647a258b4a6d5d2e517808b4c187184f14ff599d70b8aca2f",
+   "tools/p04_rank_fuse.py": "c3a647b09c46760239d5b2ee274d56f7231987354fc1c1f6c3ff40102f4b26a2",
+   "tools/p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142",
+   "tools/p08_rank_fuse.py": "64f42bd956f7808947e0c85abe1f9fa60d9958cb8e769fc889c6283c188d481e",
+   "tools/p09_forward.py": "67124e0e534f575493aa8d72dbd2582335e4166718448e36bb5e105c61cb185d",
+   "tools/p09_map.py": "fff3ffe6ae6b8c32163803a6d307fa184c2857af5d6e1505e3c931a4e8831566",
+   "tools/p09_rank_fuse.py": "1486f7ce102450c1ed0b051234537286f6f9a0b38f7aaaf182a38458e4ddfb8b"
+  }
+ },
+ "what": "PLAN.md revision 1 item 1 (record-only, no threshold, decides nothing): P(flag | level r, colour c) from the role-A training rows with add-1 smoothing; posterior over levels on the held-out questions of stage 0b ~ prod_k P(z_k | r, c_k) with a uniform prior; mean NLL of the true level against ln 10",
+ "encoding": "Z",
+ "table_sha256": "74785e385a54dc17076939fd7454f32a01c30a1b3e3eca526037e450d729e570",
+ "seam_a": {
+  "table_sha256": "74785e385a54dc17076939fd7454f32a01c30a1b3e3eca526037e450d729e570",
+  "table_sha256_hd_stats": "74785e385a54dc17076939fd7454f32a01c30a1b3e3eca526037e450d729e570",
+  "table_is_hd_stats": true,
+  "table_rows": 1000000,
+  "probe_rows": 270000,
+  "probe_rows_expected": 270000,
+  "v_rows": 74946,
+  "v_rows_expected": 74946,
+  "rows_agree": {
+   "rows": 344946,
+   "key_mismatch": 0,
+   "level_mismatch": 0,
+   "colour_mismatch": 0,
+   "ok": true
+  },
+  "join": {
+   "rows": 344946,
+   "joined": 344946,
+   "missing": 0,
+   "player_mismatch": 0,
+   "colour_mismatch": 0,
+   "hd_groups": [
+    264664,
+    63456,
+    16826
+   ],
+   "ok": true
+  },
+  "ok": true
+ },
+ "players": {
+  "A_players": 6619,
+  "A_games": 311086,
+  "H_players": 748,
+  "H_games": 33860,
+  "A_and_H": 0,
+  "probe_rows": 270000,
+  "v_rows": 74946,
+  "probe_V_overlap": {
+   "probe_and_V_keys": 0,
+   "probe_and_V_player_id": 0
+  },
+  "holdout_questions": {
+   "5": 1000,
+   "10": 1000,
+   "15": 1000,
+   "20": 1000
+  },
+  "holdout_sampling": {
+   "colour_switched": 0,
+   "level_missing": 0
+  },
+  "same_as_prereg25": true
+ },
+ "ranks": [
+  "D",
+  "C",
+  "B",
+  "A",
+  "1D",
+  "2D",
+  "3D",
+  "4D",
+  "5D",
+  "6D"
+ ],
+ "colours": [
+  "B",
+  "W"
+ ],
+ "n_role_a": [
+  [
+   15408,
+   15426
+  ],
+  [
+   15353,
+   15909
+  ],
+  [
+   15703,
+   15682
+  ],
+  [
+   15523,
+   15782
+  ],
+  [
+   15785,
+   15568
+  ],
+  [
+   15551,
+   15533
+  ],
+  [
+   15390,
+   15469
+  ],
+  [
+   15734,
+   15315
+  ],
+  [
+   15150,
+   15702
+  ],
+  [
+   15409,
+   15694
+  ]
+ ],
+ "n_flag_role_a": [
+  [
+   5553,
+   4948
+  ],
+  [
+   4053,
+   4289
+  ],
+  [
+   3526,
+   3514
+  ],
+  [
+   2533,
+   2755
+  ],
+  [
+   1838,
+   2866
+  ],
+  [
+   1841,
+   2837
+  ],
+  [
+   1598,
+   2114
+  ],
+  [
+   1757,
+   1515
+  ],
+  [
+   1949,
+   2154
+  ],
+  [
+   2508,
+   3190
+  ]
+ ],
+ "p_flag": [
+  [
+   0.3604153147306944,
+   0.32078039927404717
+  ],
+  [
+   0.26401823510257244,
+   0.269624787882597
+  ],
+  [
+   0.22457815982171284,
+   0.22411374649324153
+  ],
+  [
+   0.16322061191626408,
+   0.17460719716168271
+  ],
+  [
+   0.11648824982580604,
+   0.18413615928066795
+  ],
+  [
+   0.11843374268629846,
+   0.1826842613453492
+  ],
+  [
+   0.10388513513513513,
+   0.13670738801628854
+  ],
+  [
+   0.11171835282155566,
+   0.09897499510347979
+  ],
+  [
+   0.1286958817317846,
+   0.13722618441161488
+  ],
+  [
+   0.16280578807345403,
+   0.20330020387359837
+  ]
+ ],
+ "holdout": {
+  "questions": 4000,
+  "mean_nll": 2.5240024391121993,
+  "uniform_nll": 2.302585092994046,
+  "mean_nll_minus_uniform": 0.22141734611815345,
+  "per_n": {
+   "5": {
+    "questions": 1000,
+    "mean_nll": 2.2929240435844402
+   },
+   "10": {
+    "questions": 1000,
+    "mean_nll": 2.3876855804605612
+   },
+   "15": {
+    "questions": 1000,
+    "mean_nll": 2.5783713952422724
+   },
+   "20": {
+    "questions": 1000,
+    "mean_nll": 2.837028737161523
+   }
+  }
+ }
+}

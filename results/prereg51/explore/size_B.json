@@ -1,0 +1,18 @@
+{
+ "bench_B15C128": {
+  "variant": "V2",
+  "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "workers": 12,
+  "steps_timed": 300,
+  "steps_per_s": 3.28,
+  "positions_per_s": 7556.2,
+  "projected_hours_320000_steps": 27.1,
+  "budget_hours": 1000000000.0,
+  "ok": true,
+  "embed_net_parameters": 4810960,
+  "torch": "2.11.0+cu128"
+ },
+ "hours_B15C128": 27.1,
+ "size": "B15C128",
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition"
+}

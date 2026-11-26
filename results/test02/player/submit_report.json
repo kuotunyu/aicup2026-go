@@ -1,0 +1,145 @@
+{
+ "what": "PREREG_02 rev 5 9.5: submission_player.csv = public rows then private rows (question-file order), question_id,top_1..top_5, UTF-8 without BOM, LF",
+ "mode": "real",
+ "pools": {
+  "public": {
+   "selected": "Q04",
+   "gate_passed": true,
+   "effective": "Q04",
+   "applied": "Q04",
+   "guard_level": 1,
+   "guard_reason": "rho 1.0141 >= theta1 0.9630, colour shares within 0.5",
+   "rho": {
+    "raw": 1.0141349870255896,
+    "canon": 1.0133071838740575
+   },
+   "b_c": 1.0,
+   "b_q": 1.0,
+   "n_fallback": 0,
+   "cnn": true,
+   "rows": 400,
+   "top5": {
+    "path": "results/test02/player/public/top5.csv",
+    "sha256": "33f69f12e5faf9417c8e9dc253f47b471992979d1a80e882f9d5b27d5a073ef8"
+   },
+   "pool_select_sha256": "756d7cfaa922fe974f1bfeab968ebe8ff1184c9f9bd0706d1e548adbcc237436",
+   "apply_report_sha256": "f3373b0c385e0c5d3e59d1ebc02ee657ce25d10914bde3a959f84f9618558412",
+   "inputs": {
+    "questions": {
+     "path": "data/test/player_identification_test_public.csv",
+     "sha256": "0e59f7f72376cfa2e81ae913d61092caeb1240d95abb43a581207ed29f1647a8"
+    },
+    "candidates": {
+     "path": "data/test/player_identification_candidates_public.csv",
+     "sha256": "8175aeb08235536a1435bb6ba4c55088f906096cc14e7048e8898e3d7a3597a6"
+    }
+   }
+  },
+  "private": {
+   "selected": "Q04",
+   "gate_passed": true,
+   "effective": "Q04",
+   "applied": "Q04",
+   "guard_level": 1,
+   "guard_reason": "rho 1.0053 >= theta1 0.9630, colour shares within 0.5",
+   "rho": {
+    "raw": 1.0053424148391843,
+    "canon": 1.0044821728477922
+   },
+   "b_c": 1.0,
+   "b_q": 1.0,
+   "n_fallback": 0,
+   "cnn": true,
+   "rows": 400,
+   "top5": {
+    "path": "results/test02/player/private/top5.csv",
+    "sha256": "bd63ad26ec38d4c73f74ab8d0b3497527ba2f9ef7557a89945876d3753692ed2"
+   },
+   "pool_select_sha256": "06e311ccf081177cc389310ab8fdec23ff5367b35c35ebba8a454ed3a7182e6d",
+   "apply_report_sha256": "d78c3ab22f5cf841002190b06e87dd750e39e4843d1571d84e0bc8becc54d2b5",
+   "inputs": {
+    "questions": {
+     "path": "data/test/player_identification_test_private.csv",
+     "sha256": "4b07a403b36875f44007adb22aaa8da3c75ec3994e165f36c29a9400e6efcd11"
+    },
+    "candidates": {
+     "path": "data/test/player_identification_candidates_private.csv",
+     "sha256": "7a8926ca83b43b1dca0e32c23513cbbff2731d623be151cf80ed912a91d91e57"
+    }
+   }
+  }
+ },
+ "t1": {
+  "path": "results/test02/checks/player/t1.json",
+  "sha256": "cc0ddcf72f857ed4c5ab335cf14e17a4747fe0c82e4fa6db73ffca76ec0c42cd",
+  "verdict": "PASS",
+  "normalize": {},
+  "checked": true,
+  "fail_opening": false,
+  "rule": null
+ },
+ "frozen_config": {
+  "path": "results/prereg02/player/frozen_config.json",
+  "sha256": "d70726ab198643c749b8dadc78f37b52c69bd831513e36ec564a9d04e2c7f3de",
+  "git_head": "3de23e08e8a02fb9ced2259e0857cfd80a0e5062",
+  "guard_calibration_sha256": "793c16a79080e57d4c60941a1fc311f3c0d950e19c42bafaff16a54f7ad43a28"
+ },
+ "frozen_tools": {
+  "now": {
+   "p02_player_open.py": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+   "p02_player_fuse.py": "cb1cc1a2ba626a80ed49e7ae8269715f1e123f33777b6ed135380dbd07b35d5b",
+   "p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495"
+  },
+  "changed": []
+ },
+ "real_mode_checks": {
+  "files_tracked_and_clean": 17
+ },
+ "rerun": null,
+ "seam_local": {
+  "path": "results/test02/player/seam_val/seam_local.json",
+  "sha256": "76cd1626a7e017c42f0abb5024fd42ab88cf4d141468b25a8ed2f8db37206dac"
+ },
+ "check_submission": {
+  "official": true,
+  "errors": [],
+  "n_errors": 0,
+  "passed": true,
+  "question_files": [
+   {
+    "path": "data/test/player_identification_test_public.csv",
+    "sha256": "0e59f7f72376cfa2e81ae913d61092caeb1240d95abb43a581207ed29f1647a8"
+   },
+   {
+    "path": "data/test/player_identification_test_private.csv",
+    "sha256": "4b07a403b36875f44007adb22aaa8da3c75ec3994e165f36c29a9400e6efcd11"
+   }
+  ]
+ },
+ "provenance": {
+  "git_head": "3de23e08e8a02fb9ced2259e0857cfd80a0e5062",
+  "tool": "tools/t02_player.py",
+  "tool_sha256": "b83a979615ee978792e18eecb32f60936622dcbc6c10068dbda00f2a33207bdf",
+  "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "frozen_tools_sha256": {
+   "p02_player_open.py": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+   "p02_player_fuse.py": "cb1cc1a2ba626a80ed49e7ae8269715f1e123f33777b6ed135380dbd07b35d5b",
+   "p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495"
+  },
+  "argv": [
+   "submit"
+  ],
+  "created": "2026-11-04T15:26:22+08:00"
+ },
+ "output": {
+  "path": "results/test02/player/submission_player.csv",
+  "sha256": "e87aaa91df9ddb3f5838b8ce18fd56715c6edaa55d6902de1ceaa0afc3d5bc79",
+  "rows": 800,
+  "bytes": 55242
+ },
+ "runtime_s": 1.1
+}

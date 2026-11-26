@@ -1,0 +1,8668 @@
+{
+ "what": "prereg20 dev calibration of r*_B (PLAN section 3)",
+ "inputs": {
+  "sha256": {
+   "p1_side0.npy": "e01c04413ef501325aca2fb248e34c1379833110ccb822c13ea806954013349b",
+   "mock_points.json": "6a7ed1d362f6c6c2addde2ea7d1f2ebaad2257df73e02e9be5245851093dcff4",
+   "sets.json": "167c5a518cb2d2b01e4c85bf77d6d308abec76e40d2313f59233d905b84425bc"
+  },
+  "usable": 123114,
+  "total": 123114
+ },
+ "split": {
+  "dev_players": 449,
+  "eval_players": 477,
+  "dev_by_level": {
+   "D": 46,
+   "C": 51,
+   "B": 50,
+   "A": 17,
+   "1D": 47,
+   "2D": 52,
+   "3D": 49,
+   "4D": 46,
+   "5D": 48,
+   "6D": 43
+  },
+  "eval_by_level": {
+   "D": 46,
+   "C": 52,
+   "B": 50,
+   "A": 40,
+   "1D": 48,
+   "2D": 53,
+   "3D": 50,
+   "4D": 47,
+   "5D": 48,
+   "6D": 43
+  },
+  "salt": "c10-prereg20|split|"
+ },
+ "seeds": [
+  1000,
+  1001,
+  1002,
+  1003,
+  1004,
+  1005,
+  1006,
+  1007,
+  1008,
+  1009,
+  1010,
+  1011,
+  1012,
+  1013,
+  1014,
+  1015,
+  1016,
+  1017,
+  1018,
+  1019,
+  1020,
+  1021,
+  1022,
+  1023,
+  1024,
+  1025,
+  1026,
+  1027,
+  1028,
+  1029
+ ],
+ "structures": [
+  "o2o",
+  "u390",
+  "u375",
+  "u350",
+  "d80",
+  "u300",
+  "wr",
+  "d1",
+  "d2",
+  "d3",
+  "d5"
+ ],
+ "thresholds": {
+  "E0": {
+   "thr": 4.013546614762044,
+   "feasible_thresholds": 38,
+   "best_objective": 0.00021847407179667383
+  },
+  "PA": {
+   "thr": 3.6519820570685297,
+   "feasible_thresholds": 38,
+   "best_objective": 0.0002121282020346254
+  }
+ },
+ "r_star_B": 3.6519820570685297,
+ "summary": {
+  "B|E0": {
+   "o2o": {
+    "off_mean": 0.9977773318307541,
+    "on_mean": 1.0,
+    "gain_if_on_mean": 0.002222668169245919,
+    "open_share_at_r_star": 0.9,
+    "gain_at_r_star_mean": 0.001920527243411548,
+    "r_median": 0.48508577155930466
+   },
+   "u390": {
+    "off_mean": 0.9977149222746764,
+    "on_mean": 0.9798223328633472,
+    "gain_if_on_mean": -0.017892589411329034,
+    "open_share_at_r_star": 0.0,
+    "gain_at_r_star_mean": 0.0,
+    "r_median": 70.63784996077592
+   },
+   "u375": {
+    "off_mean": 0.9981185687984759,
+    "on_mean": 0.9563096758677926,
+    "gain_if_on_mean": -0.04180889293068314,
+    "open_share_at_r_star": 0.0,
+    "gain_at_r_star_mean": 0.0,
+    "r_median": 146.6891997249209
+   },
+   "u350": {
+    "off_mean": 0.9975553470375416,
+    "on_mean": 0.9164289557434914,
+    "gain_if_on_mean": -0.08112639129405011,
+    "open_share_at_r_star": 0.0,
+    "gain_at_r_star_mean": 0.0,
+    "r_median": 260.6445856959718
+   },
+   "d80": {
+    "off_mean": 0.9972477449741041,
+    "on_mean": 0.8698158294271542,
+    "gain_if_on_mean": -0.1274319155469497,
+    "open_share_at_r_star": 0.0,
+    "gain_at_r_star_mean": 0.0,
+    "r_median": 399.9388376609252
+   },
+   "u300": {
+    "off_mean": 0.9962912237774463,
+    "on_mean": 0.8385561935718806,
+    "gain_if_on_mean": -0.15773503020556554,
+    "open_share_at_r_star": 0.0,
+    "gain_at_r_star_mean": 0.0,
+    "r_median": 479.8148968543452
+   },
+   "wr": {
+    "off_mean": 0.9960285551641046,
+    "on_mean": 0.7879772792992157,
+    "gain_if_on_mean": -0.20805127586488897,
+    "open_share_at_r_star": 0.0,
+    "gain_at_r_star_mean": 0.0,
+    "r_median": 635.6897830325494
+   },
+   "d1": {
+    "off_mean": 0.9975984155021652,
+    "on_mean": 0.9970209737419434,
+    "gain_if_on_mean": -0.0005774417602220232,
+    "open_share_at_r_star": 0.26666666666666666,
+    "gain_at_r_star_mean": 0.00022063498959947378,
+    "r_median": 11.65773215238095
+   },
+   "d2": {
+    "off_mean": 0.9982336738619765,
+    "on_mean": 0.995123085762217,
+    "gain_if_on_mean": -0.0031105880997594295,
+    "open_share_at_r_star": 0.06666666666666667,
+    "gain_at_r_star_mean": 0.00011794177062515546,
+    "r_median": 16.576751979425293
+   },
+   "d3": {
+    "off_mean": 0.9977026350243803,
+    "on_mean": 0.992777492278228,
+    "gain_if_on_mean": -0.004925142746152555,
+    "open_share_at_r_star": 0.0,
+    "gain_at_r_star_mean": 0.0,
+    "r_median": 20.571814959778255
+   },
+   "d5": {
+    "off_mean": 0.9983961916062789,
+    "on_mean": 0.9898275963370279,
+    "gain_if_on_mean": -0.008568595269251144,
+    "open_share_at_r_star": 0.0,
+    "gain_at_r_star_mean": 0.0,
+    "r_median": 41.19493046708075
+   }
+  },
+  "B|PA": {
+   "o2o": {
+    "off_mean": 0.9977707367888943,
+    "on_mean": 1.0,
+    "gain_if_on_mean": 0.0022292632111055514,
+    "open_share_at_r_star": 0.9333333333333333,
+    "gain_at_r_star_mean": 0.0020851524249783206,
+    "r_median": 0.6282825893711237
+   },
+   "u390": {
+    "off_mean": 0.997836778274122,
+    "on_mean": 0.9794887588895773,
+    "gain_if_on_mean": -0.018348019384544396,
+    "open_share_at_r_star": 0.0,
+    "gain_at_r_star_mean": 0.0,
+    "r_median": 73.46867944256957
+   },
+   "u375": {
+    "off_mean": 0.9981379474783038,
+    "on_mean": 0.9562913935038473,
+    "gain_if_on_mean": -0.04184655397445642,
+    "open_share_at_r_star": 0.0,
+    "gain_at_r_star_mean": 0.0,
+    "r_median": 129.4395589037715
+   },
+   "u350": {
+    "off_mean": 0.9976717625049258,
+    "on_mean": 0.9165644112084722,
+    "gain_if_on_mean": -0.08110735129645374,
+    "open_share_at_r_star": 0.0,
+    "gain_at_r_star_mean": 0.0,
+    "r_median": 237.57394411347687
+   },
+   "d80": {
+    "off_mean": 0.9973598699420626,
+    "on_mean": 0.8702796673444112,
+    "gain_if_on_mean": -0.1270802025976514,
+    "open_share_at_r_star": 0.0,
+    "gain_at_r_star_mean": 0.0,
+    "r_median": 396.66958536330486
+   },
+   "u300": {
+    "off_mean": 0.9963898969675569,
+    "on_mean": 0.8387195584436056,
+    "gain_if_on_mean": -0.15767033852395138,
+    "open_share_at_r_star": 0.0,
+    "gain_at_r_star_mean": 0.0,
+    "r_median": 423.25095068088115
+   },
+   "wr": {
+    "off_mean": 0.9956301332730094,
+    "on_mean": 0.7879208299342212,
+    "gain_if_on_mean": -0.2077093033387882,
+    "open_share_at_r_star": 0.0,
+    "gain_at_r_star_mean": 0.0,
+    "r_median": 574.8405028071086
+   },
+   "d1": {
+    "off_mean": 0.9977762149093294,
+    "on_mean": 0.9967295561747905,
+    "gain_if_on_mean": -0.001046658734539115,
+    "open_share_at_r_star": 0.26666666666666666,
+    "gain_at_r_star_mean": 0.0001762024043389432,
+    "r_median": 12.470418301898597
+   },
+   "d2": {
+    "off_mean": 0.9985913094139841,
+    "on_mean": 0.995071935352222,
+    "gain_if_on_mean": -0.003519374061762315,
+    "open_share_at_r_star": 0.06666666666666667,
+    "gain_at_r_star_mean": 7.205539306361548e-05,
+    "r_median": 15.281647443731213
+   },
+   "d3": {
+    "off_mean": 0.9979701469073808,
+    "on_mean": 0.992844427027275,
+    "gain_if_on_mean": -0.005125719880105769,
+    "open_share_at_r_star": 0.0,
+    "gain_at_r_star_mean": 0.0,
+    "r_median": 18.46671841658639
+   },
+   "d5": {
+    "off_mean": 0.9989073696933986,
+    "on_mean": 0.9895932184934761,
+    "gain_if_on_mean": -0.009314151199922405,
+    "open_share_at_r_star": 0.0,
+    "gain_at_r_star_mean": 0.0,
+    "r_median": 38.27191735404166
+   }
+  }
+ },
+ "rows": [
+  {
+   "seed": 1000,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9962580368110201,
+     "on": 1.0,
+     "forced_cost": 0.0005662954200396195,
+     "r_forced_cost": 0.320467229906225
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 1.0,
+     "forced_cost": 0.0003398757629783877,
+     "r_forced_cost": 0.23664679305559677
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1000,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9826166846322146,
+     "forced_cost": 0.039845643170978044,
+     "r_forced_cost": 22.5486953257398
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9826166846322146,
+     "forced_cost": 0.03752313276549101,
+     "r_forced_cost": 26.126396764918727
+    }
+   },
+   "info": {
+    "n_repairs": 15,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 10
+   }
+  },
+  {
+   "seed": 1000,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9557515608820011,
+     "forced_cost": 0.05881199839076141,
+     "r_forced_cost": 33.28177757153336
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9573318622790724,
+     "forced_cost": 0.055480561384927185,
+     "r_forced_cost": 38.62969460844453
+    }
+   },
+   "info": {
+    "n_repairs": 25,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 25
+   }
+  },
+  {
+   "seed": 1000,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9976244676709197,
+     "on": 0.9169504178465807,
+     "forced_cost": 0.1401687556247883,
+     "r_forced_cost": 79.32166011749807
+    },
+    "B|PA": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9154487950232073,
+     "forced_cost": 0.13385188568291487,
+     "r_forced_cost": 93.1976414373518
+    }
+   },
+   "info": {
+    "n_repairs": 39,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 48
+   }
+  },
+  {
+   "seed": 1000,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9962580368110201,
+     "on": 0.8729945278394513,
+     "forced_cost": 0.16675501549245667,
+     "r_forced_cost": 94.36685517269142
+    },
+    "B|PA": {
+     "off_10": 0.9952590958087858,
+     "on": 0.8719955868372172,
+     "forced_cost": 0.15756777632855912,
+     "r_forced_cost": 109.71040897501767
+    }
+   },
+   "info": {
+    "n_repairs": 79,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1000,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9946777354139488,
+     "on": 0.8370651763142066,
+     "forced_cost": 0.23156813930591624,
+     "r_forced_cost": 131.04467652716292
+    },
+    "B|PA": {
+     "off_10": 0.9940963750191116,
+     "on": 0.8370651763142066,
+     "forced_cost": 0.2195567694102418,
+     "r_forced_cost": 152.8717579602308
+    }
+   },
+   "info": {
+    "n_repairs": 109,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 84
+   }
+  },
+  {
+   "seed": 1000,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9960441662738484,
+     "on": 0.7899449456860324,
+     "forced_cost": 0.28375533609840486,
+     "r_forced_cost": 160.57747125025955
+    },
+    "B|PA": {
+     "off_10": 0.9952489353418393,
+     "on": 0.7896523965751625,
+     "forced_cost": 0.2697979894598598,
+     "r_forced_cost": 187.85343332229152
+    }
+   },
+   "info": {
+    "n_repairs": 194,
+    "n_fallback_owner_moves": 15,
+    "n_distinct_owner": 268,
+    "players_2plus": 96
+   }
+  },
+  {
+   "seed": 1000,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9943851863030789,
+     "on": 0.9984196986029287,
+     "forced_cost": 0.005334083079782076,
+     "r_forced_cost": 3.0185637534342646
+    },
+    "B|PA": {
+     "off_10": 0.9944638648767768,
+     "on": 0.9984196986029287,
+     "forced_cost": 0.005205454572195535,
+     "r_forced_cost": 3.6244247607176354
+    }
+   },
+   "info": {
+    "n_repairs": 3,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1000,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9938825044819397,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.0044231438178009225,
+     "r_forced_cost": 2.503062176749259
+    },
+    "B|PA": {
+     "off_10": 0.9946777354139488,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.004332110182695873,
+     "r_forced_cost": 3.016337419634314
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1000,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9976244676709197,
+     "on": 0.992098493014643,
+     "forced_cost": 0.010778739549327199,
+     "r_forced_cost": 6.099701115385839
+    },
+    "B|PA": {
+     "off_10": 0.9962580368110201,
+     "on": 0.992098493014643,
+     "forced_cost": 0.010046862407373378,
+     "r_forced_cost": 6.995373097924986
+    }
+   },
+   "info": {
+    "n_repairs": 3,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1000,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.992098493014643,
+     "forced_cost": 0.016379194260140957,
+     "r_forced_cost": 9.269004881367538
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9873575888234288,
+     "forced_cost": 0.01572447808713463,
+     "r_forced_cost": 10.948551550673644
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  },
+  {
+   "seed": 1001,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 1.0,
+     "forced_cost": 0.00014842857634723484,
+     "r_forced_cost": 0.4088519087495921
+    },
+    "B|PA": {
+     "off_10": 0.9952590958087858,
+     "on": 1.0,
+     "forced_cost": 0.0002404355931404961,
+     "r_forced_cost": 1.0567329136208148
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1001,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9975457890972218,
+     "on": 0.9706348762497862,
+     "forced_cost": 0.030849198534033447,
+     "r_forced_cost": 84.97523869344627
+    },
+    "B|PA": {
+     "off_10": 0.9960441662738482,
+     "on": 0.9738412681411509,
+     "forced_cost": 0.029434266987263674,
+     "r_forced_cost": 129.3658659579936
+    }
+   },
+   "info": {
+    "n_repairs": 15,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 10
+   }
+  },
+  {
+   "seed": 1001,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9976244676709197,
+     "on": 0.9564579527733656,
+     "forced_cost": 0.07485379980574156,
+     "r_forced_cost": 206.18751241096453
+    },
+    "B|PA": {
+     "off_10": 0.9959654877001505,
+     "on": 0.9579924650732151,
+     "forced_cost": 0.07241021498176066,
+     "r_forced_cost": 318.2484608627511
+    }
+   },
+   "info": {
+    "n_repairs": 25,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 23
+   }
+  },
+  {
+   "seed": 1001,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9194046287493589,
+     "forced_cost": 0.12421454372828478,
+     "r_forced_cost": 342.15347574958406
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9209849301464302,
+     "forced_cost": 0.11728251348318537,
+     "r_forced_cost": 515.4656620138519
+    }
+   },
+   "info": {
+    "n_repairs": 45,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 46
+   }
+  },
+  {
+   "seed": 1001,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9968393972058572,
+     "on": 0.8714142264423799,
+     "forced_cost": 0.21327210550149878,
+     "r_forced_cost": 587.4657667897021
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.8704152854401457,
+     "forced_cost": 0.20371241531695716,
+     "r_forced_cost": 895.3317242544493
+    }
+   },
+   "info": {
+    "n_repairs": 73,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1001,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.8395943279637802,
+     "forced_cost": 0.23889423644283425,
+     "r_forced_cost": 658.0428578014098
+    },
+    "B|PA": {
+     "off_10": 0.9978383382080915,
+     "on": 0.8380140265667089,
+     "forced_cost": 0.22774534590783163,
+     "r_forced_cost": 1000.9583015611689
+    }
+   },
+   "info": {
+    "n_repairs": 90,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 88
+   }
+  },
+  {
+   "seed": 1001,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.7866593113953619,
+     "forced_cost": 0.322403760316503,
+     "r_forced_cost": 888.0728767826918
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.7882396127924332,
+     "forced_cost": 0.3075015493018246,
+     "r_forced_cost": 1351.4929461660538
+    }
+   },
+   "info": {
+    "n_repairs": 163,
+    "n_fallback_owner_moves": 10,
+    "n_distinct_owner": 266,
+    "players_2plus": 103
+   }
+  },
+  {
+   "seed": 1001,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9984196986029287,
+     "forced_cost": 0.006581466119169333,
+     "r_forced_cost": 18.128887653669672
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9984196986029287,
+     "forced_cost": 0.006187626029267512,
+     "r_forced_cost": 27.195092028171743
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1001,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.004920570057308616,
+     "r_forced_cost": 13.553889079689984
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.004228660057741748,
+     "r_forced_cost": 18.58528600180357
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1001,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.992098493014643,
+     "forced_cost": 0.010105251065773644,
+     "r_forced_cost": 27.835281374457335
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.992098493014643,
+     "forced_cost": 0.00958224607815043,
+     "r_forced_cost": 42.1147080801742
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1001,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9889378902205002,
+     "forced_cost": 0.014588187946817537,
+     "r_forced_cost": 40.18369396268387
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9889378902205002,
+     "forced_cost": 0.013543521960699065,
+     "r_forced_cost": 59.52482007875601
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  },
+  {
+   "seed": 1002,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9962580368110201,
+     "on": 1.0,
+     "forced_cost": 0.0038623062967366047,
+     "r_forced_cost": 2.7157578237623774
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 1.0,
+     "forced_cost": 0.0037174320579684904,
+     "r_forced_cost": 2.9008010487665308
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1002,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9946777354139488,
+     "on": 0.9802411523031342,
+     "forced_cost": 0.030421096191438037,
+     "r_forced_cost": 21.390413820657123
+    },
+    "B|PA": {
+     "off_10": 0.9952590958087858,
+     "on": 0.9788747214432348,
+     "forced_cost": 0.02835074724411218,
+     "r_forced_cost": 22.12276540811295
+    }
+   },
+   "info": {
+    "n_repairs": 9,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 10
+   }
+  },
+  {
+   "seed": 1002,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9573318622790724,
+     "forced_cost": 0.07946332124842805,
+     "r_forced_cost": 55.874164243499045
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9573318622790724,
+     "forced_cost": 0.07457917515044574,
+     "r_forced_cost": 58.19591215630215
+    }
+   },
+   "info": {
+    "n_repairs": 20,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 25
+   }
+  },
+  {
+   "seed": 1002,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9946777354139488,
+     "on": 0.915662665560379,
+     "forced_cost": 0.11589609287767083,
+     "r_forced_cost": 81.49165208413562
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9146637245581448,
+     "forced_cost": 0.11037805288177277,
+     "r_forced_cost": 86.13063172840589
+    }
+   },
+   "info": {
+    "n_repairs": 46,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 48
+   }
+  },
+  {
+   "seed": 1002,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9946777354139488,
+     "on": 0.8702515056527059,
+     "forced_cost": 0.20019581987460774,
+     "r_forced_cost": 140.76650641829374
+    },
+    "B|PA": {
+     "off_10": 0.9946777354139488,
+     "on": 0.8702515056527059,
+     "forced_cost": 0.19286899638684074,
+     "r_forced_cost": 150.50028575350444
+    }
+   },
+   "info": {
+    "n_repairs": 69,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1002,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 0.991517132619806,
+     "on": 0.8352710043799633,
+     "forced_cost": 0.23259530462328754,
+     "r_forced_cost": 163.5480124491443
+    },
+    "B|PA": {
+     "off_10": 0.992098493014643,
+     "on": 0.8354848749171353,
+     "forced_cost": 0.22066475052506235,
+     "r_forced_cost": 172.18997678163655
+    }
+   },
+   "info": {
+    "n_repairs": 116,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 82
+   }
+  },
+  {
+   "seed": 1002,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9935441662738483,
+     "on": 0.7865246832574957,
+     "forced_cost": 0.33469735147510915,
+     "r_forced_cost": 235.34046267358
+    },
+    "B|PA": {
+     "off_10": 0.9934196986029287,
+     "on": 0.7864002155865759,
+     "forced_cost": 0.31897081375513503,
+     "r_forced_cost": 248.90054657043373
+    }
+   },
+   "info": {
+    "n_repairs": 182,
+    "n_fallback_owner_moves": 14,
+    "n_distinct_owner": 267,
+    "players_2plus": 100
+   }
+  },
+  {
+   "seed": 1002,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9984196986029287,
+     "forced_cost": 0.0030608302677982953,
+     "r_forced_cost": 2.152204695418747
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9984196986029287,
+     "forced_cost": 0.002862245016653288,
+     "r_forced_cost": 2.233478168978821
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1002,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9962580368110201,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.004604884372785206,
+     "r_forced_cost": 3.237897204962504
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.003956236528055105,
+     "r_forced_cost": 3.087145882101817
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1002,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9946777354139488,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.009630258820001824,
+     "r_forced_cost": 6.771459518209248
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.008981090823462812,
+     "r_forced_cost": 7.00815973863569
+    }
+   },
+   "info": {
+    "n_repairs": 4,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1002,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9889378902205002,
+     "forced_cost": 0.025810274918972184,
+     "r_forced_cost": 18.148342119805925
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9857772874263574,
+     "forced_cost": 0.024268273252968955,
+     "r_forced_cost": 18.937113417598283
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  },
+  {
+   "seed": 1003,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9975457890972218,
+     "on": 1.0,
+     "forced_cost": 0.0002713835338461607,
+     "r_forced_cost": 1.2546764399164816
+    },
+    "B|PA": {
+     "off_10": 0.9975457890972218,
+     "on": 1.0,
+     "forced_cost": 0.0003205472940656734,
+     "r_forced_cost": 0.7184444365097852
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1003,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9975,
+     "on": 0.9785363832351434,
+     "forced_cost": 0.03238399795839482,
+     "r_forced_cost": 149.7196189203365
+    },
+    "B|PA": {
+     "off_10": 0.9975,
+     "on": 0.9785363832351434,
+     "forced_cost": 0.03105653043196048,
+     "r_forced_cost": 69.60717472650853
+    }
+   },
+   "info": {
+    "n_repairs": 7,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 10
+   }
+  },
+  {
+   "seed": 1003,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9589121636761437,
+     "forced_cost": 0.07725021155356405,
+     "r_forced_cost": 357.1477570550178
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9557515608820009,
+     "forced_cost": 0.07456725380213164,
+     "r_forced_cost": 167.12800148916165
+    }
+   },
+   "info": {
+    "n_repairs": 22,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 25
+   }
+  },
+  {
+   "seed": 1003,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9962580368110201,
+     "on": 0.9180280374225128,
+     "forced_cost": 0.18090173288478162,
+     "r_forced_cost": 836.3556144097691
+    },
+    "B|PA": {
+     "off_10": 0.9962580368110201,
+     "on": 0.9148674346283702,
+     "forced_cost": 0.17589465362671924,
+     "r_forced_cost": 394.233667385261
+    }
+   },
+   "info": {
+    "n_repairs": 35,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 47
+   }
+  },
+  {
+   "seed": 1003,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9954628058790113,
+     "on": 0.8592643366200017,
+     "forced_cost": 0.27274802541915444,
+     "r_forced_cost": 1260.9848382368834
+    },
+    "B|PA": {
+     "off_10": 0.9938825044819398,
+     "on": 0.8618435790193074,
+     "forced_cost": 0.2638535361465978,
+     "r_forced_cost": 591.3764009473091
+    }
+   },
+   "info": {
+    "n_repairs": 71,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1003,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9960441662738484,
+     "on": 0.8395943279637804,
+     "forced_cost": 0.28828272321491133,
+     "r_forced_cost": 1332.8057739042904
+    },
+    "B|PA": {
+     "off_10": 0.9978383382080915,
+     "on": 0.8398081985009521,
+     "forced_cost": 0.2750062489073272,
+     "r_forced_cost": 616.3730382088801
+    }
+   },
+   "info": {
+    "n_repairs": 116,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 88
+   }
+  },
+  {
+   "seed": 1003,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9946777354139488,
+     "on": 0.7854965906056877,
+     "forced_cost": 0.32095185058569287,
+     "r_forced_cost": 1483.843620024998
+    },
+    "B|PA": {
+     "off_10": 0.9944638648767768,
+     "on": 0.7857854018896551,
+     "forced_cost": 0.3082521235523163,
+     "r_forced_cost": 690.8872023206524
+    }
+   },
+   "info": {
+    "n_repairs": 177,
+    "n_fallback_owner_moves": 11,
+    "n_distinct_owner": 265,
+    "players_2plus": 105
+   }
+  },
+  {
+   "seed": 1003,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9960441662738482,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.010865511151032167,
+     "r_forced_cost": 50.23407520582235
+    },
+    "B|PA": {
+     "off_10": 0.9975457890972218,
+     "on": 0.9911787944117144,
+     "forced_cost": 0.010664295137196543,
+     "r_forced_cost": 23.901944120131898
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1003,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.007463132164144994,
+     "r_forced_cost": 34.503994997882586
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.0067657202695515254,
+     "r_forced_cost": 15.164046543612073
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1003,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9920984930146429,
+     "forced_cost": 0.015043396565221792,
+     "r_forced_cost": 69.54952269655297
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9915171326198059,
+     "forced_cost": 0.013774242130671334,
+     "r_forced_cost": 30.87228564747148
+    }
+   },
+   "info": {
+    "n_repairs": 3,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1003,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9897229606855626,
+     "forced_cost": 0.019317780236385865,
+     "r_forced_cost": 89.31110664885492
+    },
+    "B|PA": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9897229606855626,
+     "forced_cost": 0.018739794183107478,
+     "r_forced_cost": 42.001605134229
+    }
+   },
+   "info": {
+    "n_repairs": 5,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  },
+  {
+   "seed": 1004,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 1.0,
+     "forced_cost": 0.00010085440648876453,
+     "r_forced_cost": 0.11077422556591213
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 1.0,
+     "forced_cost": 4.345855599687809e-05,
+     "r_forced_cost": 0.05586091128308062
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1004,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9810363832351433,
+     "forced_cost": 0.04332983096661547,
+     "r_forced_cost": 47.591658474173066
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9778757804410004,
+     "forced_cost": 0.041565573298493384,
+     "r_forced_cost": 53.42770253628123
+    }
+   },
+   "info": {
+    "n_repairs": 6,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 10
+   }
+  },
+  {
+   "seed": 1004,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9573318622790723,
+     "forced_cost": 0.06494393251425444,
+     "r_forced_cost": 71.33167582789594
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9589121636761437,
+     "forced_cost": 0.0612708389557655,
+     "r_forced_cost": 78.7565260887593
+    }
+   },
+   "info": {
+    "n_repairs": 25,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 23
+   }
+  },
+  {
+   "seed": 1004,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9944638648767768,
+     "on": 0.9132084546576009,
+     "forced_cost": 0.14525394227586486,
+     "r_forced_cost": 159.54080268963904
+    },
+    "B|PA": {
+     "off_10": 0.9944638648767768,
+     "on": 0.9132084546576009,
+     "forced_cost": 0.138054575502908,
+     "r_forced_cost": 177.45307494674447
+    }
+   },
+   "info": {
+    "n_repairs": 57,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 47
+   }
+  },
+  {
+   "seed": 1004,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.8704152854401457,
+     "forced_cost": 0.19378298913223205,
+     "r_forced_cost": 212.84306056931644
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.8704152854401458,
+     "forced_cost": 0.1826390628385122,
+     "r_forced_cost": 234.7612398069558
+    }
+   },
+   "info": {
+    "n_repairs": 76,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1004,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9952590958087859,
+     "on": 0.8398081985009523,
+     "forced_cost": 0.23293923597763122,
+     "r_forced_cost": 255.85063030648993
+    },
+    "B|PA": {
+     "off_10": 0.994463864876777,
+     "on": 0.8395156493900825,
+     "forced_cost": 0.22370484946299263,
+     "r_forced_cost": 287.5465247935258
+    }
+   },
+   "info": {
+    "n_repairs": 109,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 86
+   }
+  },
+  {
+   "seed": 1004,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9968393972058572,
+     "on": 0.790818855191739,
+     "forced_cost": 0.2908050645824069,
+     "r_forced_cost": 319.4080153884985
+    },
+    "B|PA": {
+     "off_10": 0.9952590958087859,
+     "on": 0.790237494796902,
+     "forced_cost": 0.27498337322700905,
+     "r_forced_cost": 353.4590936997462
+    }
+   },
+   "info": {
+    "n_repairs": 185,
+    "n_fallback_owner_moves": 19,
+    "n_distinct_owner": 268,
+    "players_2plus": 97
+   }
+  },
+  {
+   "seed": 1004,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.004666552426806671,
+     "r_forced_cost": 5.125544328098591
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.004223291173176918,
+     "r_forced_cost": 5.428548835456031
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1004,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.008575400666528472,
+     "r_forced_cost": 9.418858340690582
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.007929841090324737,
+     "r_forced_cost": 10.192886981044163
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1004,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.007975119109677804,
+     "r_forced_cost": 8.759534401393585
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.0073193134140435824,
+     "r_forced_cost": 9.408124773044042
+    }
+   },
+   "info": {
+    "n_repairs": 3,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1004,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9905181916175717,
+     "forced_cost": 0.014955490460813277,
+     "r_forced_cost": 16.42647982802354
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9905181916175717,
+     "forced_cost": 0.013957985943742575,
+     "r_forced_cost": 17.941364976551487
+    }
+   },
+   "info": {
+    "n_repairs": 4,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  },
+  {
+   "seed": 1005,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 1.0,
+     "forced_cost": 0.00017145370736620092,
+     "r_forced_cost": 0.45231493038480247
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 1.0,
+     "forced_cost": 0.00011240786785149393,
+     "r_forced_cost": 0.16753958396427898
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1005,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9810363832351433,
+     "forced_cost": 0.054451636300118934,
+     "r_forced_cost": 143.64978431071307
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.979456081838072,
+     "forced_cost": 0.05200075746512321,
+     "r_forced_cost": 77.50511986442176
+    }
+   },
+   "info": {
+    "n_repairs": 9,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 10
+   }
+  },
+  {
+   "seed": 1005,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9604924650732152,
+     "forced_cost": 0.07705285784141316,
+     "r_forced_cost": 203.2744497968165
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9589121636761437,
+     "forced_cost": 0.07330582027472377,
+     "r_forced_cost": 109.25949282494287
+    }
+   },
+   "info": {
+    "n_repairs": 21,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 25
+   }
+  },
+  {
+   "seed": 1005,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9172429669574506,
+     "forced_cost": 0.13408185923850674,
+     "r_forced_cost": 353.72362463878454
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9194046287493589,
+     "forced_cost": 0.12794142432265532,
+     "r_forced_cost": 190.69174971927978
+    }
+   },
+   "info": {
+    "n_repairs": 49,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 46
+   }
+  },
+  {
+   "seed": 1005,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.8704152854401457,
+     "forced_cost": 0.24891150811145146,
+     "r_forced_cost": 656.6576669172788
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.871995586837217,
+     "forced_cost": 0.23706254225636583,
+     "r_forced_cost": 353.33255992025283
+    }
+   },
+   "info": {
+    "n_repairs": 82,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1005,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.8419698602928608,
+     "forced_cost": 0.24817510456645103,
+     "r_forced_cost": 654.7149482481482
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.8419698602928607,
+     "forced_cost": 0.23540146764451955,
+     "r_forced_cost": 350.8567923897271
+    }
+   },
+   "info": {
+    "n_repairs": 99,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 83
+   }
+  },
+  {
+   "seed": 1005,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9959196986029286,
+     "on": 0.7873199141895045,
+     "forced_cost": 0.3580171392883769,
+     "r_forced_cost": 944.4910811284752
+    },
+    "B|PA": {
+     "off_10": 0.9943393972058573,
+     "on": 0.7851582523975961,
+     "forced_cost": 0.34438621177828493,
+     "r_forced_cost": 513.2943427109146
+    }
+   },
+   "info": {
+    "n_repairs": 199,
+    "n_fallback_owner_moves": 19,
+    "n_distinct_owner": 267,
+    "players_2plus": 99
+   }
+  },
+  {
+   "seed": 1005,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9959196986029286,
+     "on": 0.9984196986029287,
+     "forced_cost": 0.0013837916176801441,
+     "r_forced_cost": 3.6506041125212474
+    },
+    "B|PA": {
+     "off_10": 0.9959654877001505,
+     "on": 0.9984196986029287,
+     "forced_cost": 0.0012294315055775002,
+     "r_forced_cost": 1.832420157894615
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1005,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.009468185553237418,
+     "r_forced_cost": 24.97818072977531
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.008878054704285336,
+     "r_forced_cost": 13.232397518056
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1005,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.01135035796021882,
+     "r_forced_cost": 29.94357164673961
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.010640893443579057,
+     "r_forced_cost": 15.859840548712674
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1005,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9873575888234288,
+     "forced_cost": 0.023690390690878495,
+     "r_forced_cost": 62.498021073680526
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9873575888234288,
+     "forced_cost": 0.02317552834595575,
+     "r_forced_cost": 34.542229573854314
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  },
+  {
+   "seed": 1006,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 1.0,
+     "forced_cost": 0.0,
+     "r_forced_cost": 0.0
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 1.0,
+     "forced_cost": 0.0,
+     "r_forced_cost": 0.0
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1006,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9826166846322146,
+     "forced_cost": 0.03566933991530843,
+     "r_forced_cost": 28.855168777436187
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9810363832351433,
+     "forced_cost": 0.03392745826587802,
+     "r_forced_cost": 31.10781915022736
+    }
+   },
+   "info": {
+    "n_repairs": 8,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 10
+   }
+  },
+  {
+   "seed": 1006,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9604924650732152,
+     "forced_cost": 0.07764829284963931,
+     "r_forced_cost": 62.81457971400646
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9604924650732153,
+     "forced_cost": 0.07445818286494436,
+     "r_forced_cost": 68.27012117046088
+    }
+   },
+   "info": {
+    "n_repairs": 30,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 25
+   }
+  },
+  {
+   "seed": 1006,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9946777354139488,
+     "on": 0.9132871332312987,
+     "forced_cost": 0.13620287948244159,
+     "r_forced_cost": 110.18306155286946
+    },
+    "B|PA": {
+     "off_10": 0.9946777354139488,
+     "on": 0.9132871332312987,
+     "forced_cost": 0.12867045055395715,
+     "r_forced_cost": 117.97692224520034
+    }
+   },
+   "info": {
+    "n_repairs": 40,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 46
+   }
+  },
+  {
+   "seed": 1006,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9937580368110202,
+     "on": 0.8720748292365228,
+     "forced_cost": 0.18162611827825528,
+     "r_forced_cost": 146.9287715935667
+    },
+    "B|PA": {
+     "off_10": 0.993176676416183,
+     "on": 0.871860958699351,
+     "forced_cost": 0.1738302980262639,
+     "r_forced_cost": 159.38363055241385
+    }
+   },
+   "info": {
+    "n_repairs": 70,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1006,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9962580368110201,
+     "on": 0.8376465367090435,
+     "forced_cost": 0.25420472070803785,
+     "r_forced_cost": 205.6421603951073
+    },
+    "B|PA": {
+     "off_10": 0.995676676416183,
+     "on": 0.8374326661718718,
+     "forced_cost": 0.24288715447751033,
+     "r_forced_cost": 222.70131809428048
+    }
+   },
+   "info": {
+    "n_repairs": 100,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 84
+   }
+  },
+  {
+   "seed": 1006,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9968393972058572,
+     "on": 0.7981390017822588,
+     "forced_cost": 0.276292318190094,
+     "r_forced_cost": 223.51020490465186
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.7965587003851874,
+     "forced_cost": 0.26099163899614636,
+     "r_forced_cost": 239.3011772938787
+    }
+   },
+   "info": {
+    "n_repairs": 155,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 273,
+    "players_2plus": 98
+   }
+  },
+  {
+   "seed": 1006,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.003093370135320909,
+     "r_forced_cost": 2.502421338822065
+    },
+    "B|PA": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.0025683389156280403,
+     "r_forced_cost": 2.3548897143350587
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1006,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.005737271136604653,
+     "r_forced_cost": 4.641238872424167
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.005583877446032134,
+     "r_forced_cost": 5.1198132317179565
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1006,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.009505595041579685,
+     "r_forced_cost": 7.689672696663095
+    },
+    "B|PA": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.008800834675440133,
+     "r_forced_cost": 8.069415967124952
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1006,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9905181916175715,
+     "forced_cost": 0.052513865928234156,
+     "r_forced_cost": 42.48176355695674
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9905181916175715,
+     "forced_cost": 0.051799846731273726,
+     "r_forced_cost": 47.494871307426465
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  },
+  {
+   "seed": 1007,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 0.995676676416183,
+     "on": 1.0,
+     "forced_cost": 0.0030908844914092964,
+     "r_forced_cost": 4.013546614762044
+    },
+    "B|PA": {
+     "off_10": 0.9978383382080915,
+     "on": 1.0,
+     "forced_cost": 0.0030263193065810847,
+     "r_forced_cost": 5.315016876949901
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1007,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.979456081838072,
+     "forced_cost": 0.02702163063395811,
+     "r_forced_cost": 35.08787677368807
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.979456081838072,
+     "forced_cost": 0.025465575887093264,
+     "r_forced_cost": 44.72428448869055
+    }
+   },
+   "info": {
+    "n_repairs": 8,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 10
+   }
+  },
+  {
+   "seed": 1007,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9604924650732152,
+     "forced_cost": 0.08101610511023345,
+     "r_forced_cost": 105.20028014962314
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9589121636761437,
+     "forced_cost": 0.07668246658600703,
+     "r_forced_cost": 134.67468656875323
+    }
+   },
+   "info": {
+    "n_repairs": 19,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 24
+   }
+  },
+  {
+   "seed": 1007,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9960441662738484,
+     "on": 0.9140823641633077,
+     "forced_cost": 0.12977729305091826,
+     "r_forced_cost": 168.51720491179015
+    },
+    "B|PA": {
+     "off_10": 0.995676676416183,
+     "on": 0.913073262694127,
+     "forced_cost": 0.1258629012595719,
+     "r_forced_cost": 221.04853341871905
+    }
+   },
+   "info": {
+    "n_repairs": 51,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 47
+   }
+  },
+  {
+   "seed": 1007,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9962580368110201,
+     "on": 0.8714142264423801,
+     "forced_cost": 0.2247385593987581,
+     "r_forced_cost": 291.82542627793754
+    },
+    "B|PA": {
+     "off_10": 0.9978383382080915,
+     "on": 0.8698339250453089,
+     "forced_cost": 0.2135866991332586,
+     "r_forced_cost": 375.1147171141619
+    }
+   },
+   "info": {
+    "n_repairs": 67,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1007,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9953383382080915,
+     "on": 0.8388884998980237,
+     "forced_cost": 0.23493498681835198,
+     "r_forced_cost": 305.06559648368943
+    },
+    "B|PA": {
+     "off_10": 0.9953383382080915,
+     "on": 0.8388884998980235,
+     "forced_cost": 0.22357645726333203,
+     "r_forced_cost": 392.6593737346728
+    }
+   },
+   "info": {
+    "n_repairs": 100,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 85
+   }
+  },
+  {
+   "seed": 1007,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.7882396127924332,
+     "forced_cost": 0.30170496785703244,
+     "r_forced_cost": 391.7671319536654
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.7866593113953618,
+     "forced_cost": 0.28842268201047155,
+     "r_forced_cost": 506.5464900703589
+    }
+   },
+   "info": {
+    "n_repairs": 171,
+    "n_fallback_owner_moves": 3,
+    "n_distinct_owner": 266,
+    "players_2plus": 102
+   }
+  },
+  {
+   "seed": 1007,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.006972326116966879,
+     "r_forced_cost": 9.053640134902013
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.006439932051199277,
+     "r_forced_cost": 11.310223433496
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1007,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.00854547135147309,
+     "r_forced_cost": 11.096386069934548
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.007551677394310865,
+     "r_forced_cost": 13.262742207261496
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1007,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9962580368110201,
+     "on": 0.9936787944117146,
+     "forced_cost": 0.008186935544984768,
+     "r_forced_cost": 10.63082348537285
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9936787944117146,
+     "forced_cost": 0.007461497088908693,
+     "r_forced_cost": 13.104361746832645
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1007,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9857772874263574,
+     "forced_cost": 0.03250351857236518,
+     "r_forced_cost": 42.206166971477636
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9857772874263574,
+     "forced_cost": 0.030965402647098673,
+     "r_forced_cost": 54.38343446211264
+    }
+   },
+   "info": {
+    "n_repairs": 4,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  },
+  {
+   "seed": 1008,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 1.0,
+     "forced_cost": 8.003422275468963e-05,
+     "r_forced_cost": 0.05851799625126026
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 1.0,
+     "forced_cost": 8.041744389478134e-05,
+     "r_forced_cost": 0.06608507125422645
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1008,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9826166846322146,
+     "forced_cost": 0.03730620638485275,
+     "r_forced_cost": 27.276886939589055
+    },
+    "B|PA": {
+     "off_10": 0.9952590958087859,
+     "on": 0.9826166846322146,
+     "forced_cost": 0.03585609962908754,
+     "r_forced_cost": 29.46565799812327
+    }
+   },
+   "info": {
+    "n_repairs": 8,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 10
+   }
+  },
+  {
+   "seed": 1008,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9962580368110201,
+     "on": 0.9557515608820009,
+     "forced_cost": 0.07371219196530904,
+     "r_forced_cost": 53.895566479345625
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9557515608820009,
+     "forced_cost": 0.07026006709138286,
+     "r_forced_cost": 57.73798961001398
+    }
+   },
+   "info": {
+    "n_repairs": 18,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 25
+   }
+  },
+  {
+   "seed": 1008,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9178243273522875,
+     "forced_cost": 0.12074337678848607,
+     "r_forced_cost": 88.28298978962869
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9178243273522875,
+     "forced_cost": 0.11520888449974082,
+     "r_forced_cost": 94.67581873463898
+    }
+   },
+   "info": {
+    "n_repairs": 50,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 46
+   }
+  },
+  {
+   "seed": 1008,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.8704152854401458,
+     "forced_cost": 0.23136365674048476,
+     "r_forced_cost": 169.164354095314
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.8719955868372172,
+     "forced_cost": 0.2206978529427789,
+     "r_forced_cost": 181.36405027323698
+    }
+   },
+   "info": {
+    "n_repairs": 80,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1008,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9923022030848685,
+     "on": 0.8384316071741063,
+     "forced_cost": 0.24723154908540257,
+     "r_forced_cost": 180.76635674862135
+    },
+    "B|PA": {
+     "off_10": 0.9906432231140991,
+     "on": 0.8377715682055712,
+     "forced_cost": 0.23444923629492148,
+     "r_forced_cost": 192.66459782433242
+    }
+   },
+   "info": {
+    "n_repairs": 104,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 89
+   }
+  },
+  {
+   "seed": 1008,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9962580368110201,
+     "on": 0.790237494796902,
+     "forced_cost": 0.32056345422940763,
+     "r_forced_cost": 234.38387188920808
+    },
+    "B|PA": {
+     "off_10": 0.9952590958087858,
+     "on": 0.7896561344020648,
+     "forced_cost": 0.30429859418488187,
+     "r_forced_cost": 250.06507674603998
+    }
+   },
+   "info": {
+    "n_repairs": 208,
+    "n_fallback_owner_moves": 29,
+    "n_distinct_owner": 268,
+    "players_2plus": 97
+   }
+  },
+  {
+   "seed": 1008,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9959196986029286,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.0032063009352694747,
+     "r_forced_cost": 2.3443259602282747
+    },
+    "B|PA": {
+     "off_10": 0.9953841273053133,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.00303393501681974,
+     "r_forced_cost": 2.4932129405848533
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1008,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.0068410603037750714,
+     "r_forced_cost": 5.001924519689271
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.0068712470263975626,
+     "r_forced_cost": 5.64662127210863
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1008,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9962580368110201,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.011234928927133164,
+     "r_forced_cost": 8.214555051734175
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9930974340168774,
+     "forced_cost": 0.010335401967568245,
+     "r_forced_cost": 8.493378331714718
+    }
+   },
+   "info": {
+    "n_repairs": 3,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1008,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9889378902205002,
+     "forced_cost": 0.021416340633853618,
+     "r_forced_cost": 15.65881816293549
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9905181916175715,
+     "forced_cost": 0.02124643148065736,
+     "r_forced_cost": 17.459793177887846
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  },
+  {
+   "seed": 1009,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9976244676709197,
+     "on": 1.0,
+     "forced_cost": 0.00023537328366334708,
+     "r_forced_cost": 0.4863075679692533
+    },
+    "B|PA": {
+     "off_10": 0.9976244676709197,
+     "on": 1.0,
+     "forced_cost": 0.00027735944940208203,
+     "r_forced_cost": 0.640846917132281
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1009,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9933011440871027,
+     "on": 0.9748402091433852,
+     "forced_cost": 0.05643684961181925,
+     "r_forced_cost": 116.60485273182356
+    },
+    "B|PA": {
+     "off_10": 0.9938825044819398,
+     "on": 0.9748402091433853,
+     "forced_cost": 0.05538763819510227,
+     "r_forced_cost": 127.97471750498443
+    }
+   },
+   "info": {
+    "n_repairs": 7,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 10
+   }
+  },
+  {
+   "seed": 1009,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9583308032813068,
+     "forced_cost": 0.07397160246594867,
+     "r_forced_cost": 152.8336161781887
+    },
+    "B|PA": {
+     "off_10": 0.9946777354139488,
+     "on": 0.9575355723492978,
+     "forced_cost": 0.06902573638894938,
+     "r_forced_cost": 159.4859322911234
+    }
+   },
+   "info": {
+    "n_repairs": 26,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 24
+   }
+  },
+  {
+   "seed": 1009,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9182419079596847,
+     "forced_cost": 0.11526102203058959,
+     "r_forced_cost": 238.14218178439407
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9198222093567562,
+     "forced_cost": 0.10997455907006995,
+     "r_forced_cost": 254.0993548082347
+    }
+   },
+   "info": {
+    "n_repairs": 47,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 48
+   }
+  },
+  {
+   "seed": 1009,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9943393972058573,
+     "on": 0.86891422644238,
+     "forced_cost": 0.21138960089135428,
+     "r_forced_cost": 436.7545929745379
+    },
+    "B|PA": {
+     "off_10": 0.9975457890972218,
+     "on": 0.869541375934439,
+     "forced_cost": 0.2032531495907206,
+     "r_forced_cost": 469.62219817437335
+    }
+   },
+   "info": {
+    "n_repairs": 75,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1009,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9928048849060076,
+     "on": 0.8393060805054208,
+     "forced_cost": 0.2464730375386761,
+     "r_forced_cost": 509.2409027477625
+    },
+    "B|PA": {
+     "off_10": 0.9920096539739987,
+     "on": 0.8390135313945511,
+     "forced_cost": 0.23133545768636415,
+     "r_forced_cost": 534.5071718352598
+    }
+   },
+   "info": {
+    "n_repairs": 114,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 83
+   }
+  },
+  {
+   "seed": 1009,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9962580368110201,
+     "on": 0.7868630214655872,
+     "forced_cost": 0.3404295405161485,
+     "r_forced_cost": 703.3655618710262
+    },
+    "B|PA": {
+     "off_10": 0.9938825044819398,
+     "on": 0.7883646442889608,
+     "forced_cost": 0.3260025105251453,
+     "r_forced_cost": 753.2380969813646
+    }
+   },
+   "info": {
+    "n_repairs": 168,
+    "n_fallback_owner_moves": 1,
+    "n_distinct_owner": 268,
+    "players_2plus": 97
+   }
+  },
+  {
+   "seed": 1009,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9952590958087858,
+     "forced_cost": 0.018204518333021353,
+     "r_forced_cost": 37.61257394550217
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9952590958087858,
+     "forced_cost": 0.017585307211852058,
+     "r_forced_cost": 40.63135378237041
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1009,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9952590958087859,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.008170085556397914,
+     "r_forced_cost": 16.880311882445415
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.007408718959180874,
+     "r_forced_cost": 17.11805642506768
+    }
+   },
+   "info": {
+    "n_repairs": 3,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1009,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9960441662738484,
+     "on": 0.9920984930146429,
+     "forced_cost": 0.008217342576468776,
+     "r_forced_cost": 16.977950179122303
+    },
+    "B|PA": {
+     "off_10": 0.9976244676709197,
+     "on": 0.9920984930146429,
+     "forced_cost": 0.007564806934599104,
+     "r_forced_cost": 17.478702143336264
+    }
+   },
+   "info": {
+    "n_repairs": 5,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1009,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9857772874263574,
+     "forced_cost": 0.01584353134163039,
+     "r_forced_cost": 32.7345103695502
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9857772874263574,
+     "forced_cost": 0.014126167206169113,
+     "r_forced_cost": 32.638912157072696
+    }
+   },
+   "info": {
+    "n_repairs": 6,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  },
+  {
+   "seed": 1010,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 1.0,
+     "forced_cost": 0.0,
+     "r_forced_cost": 0.0
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 1.0,
+     "forced_cost": 0.0,
+     "r_forced_cost": 0.0
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1010,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9778757804410005,
+     "forced_cost": 0.039252519233708864,
+     "r_forced_cost": 229.23070547181223
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9778757804410005,
+     "forced_cost": 0.038723165907680296,
+     "r_forced_cost": 152.33956849321092
+    }
+   },
+   "info": {
+    "n_repairs": 8,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 10
+   }
+  },
+  {
+   "seed": 1010,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9525909580878582,
+     "forced_cost": 0.09513807911673386,
+     "r_forced_cost": 555.596670453535
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9525909580878582,
+     "forced_cost": 0.09155421915146228,
+     "r_forced_cost": 360.1805253351028
+    }
+   },
+   "info": {
+    "n_repairs": 17,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 22
+   }
+  },
+  {
+   "seed": 1010,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9940963750191116,
+     "on": 0.9164477360254415,
+     "forced_cost": 0.15698026229548007,
+     "r_forced_cost": 916.7487074368582
+    },
+    "B|PA": {
+     "off_10": 0.9960441662738482,
+     "on": 0.9179493588488151,
+     "forced_cost": 0.1507217764336821,
+     "r_forced_cost": 592.9497200507386
+    }
+   },
+   "info": {
+    "n_repairs": 47,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 48
+   }
+  },
+  {
+   "seed": 1010,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.8719955868372172,
+     "forced_cost": 0.23844699122413743,
+     "r_forced_cost": 1392.5060883480885
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.8714142264423801,
+     "forced_cost": 0.22923728874239355,
+     "r_forced_cost": 901.8350858198677
+    }
+   },
+   "info": {
+    "n_repairs": 78,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1010,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9929628058790112,
+     "on": 0.8378793984288427,
+     "forced_cost": 0.2744466328694478,
+     "r_forced_cost": 1602.740320753742
+    },
+    "B|PA": {
+     "off_10": 0.9952489353418393,
+     "on": 0.8387990970317714,
+     "forced_cost": 0.26236913265525463,
+     "r_forced_cost": 1032.1780132835697
+    }
+   },
+   "info": {
+    "n_repairs": 91,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 87
+   }
+  },
+  {
+   "seed": 1010,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9946777354139488,
+     "on": 0.7852827200685158,
+     "forced_cost": 0.3290348618629726,
+     "r_forced_cost": 1921.5300057708625
+    },
+    "B|PA": {
+     "off_10": 0.9930974340168774,
+     "on": 0.7849152302108506,
+     "forced_cost": 0.31685435274298024,
+     "r_forced_cost": 1246.5265750000974
+    }
+   },
+   "info": {
+    "n_repairs": 169,
+    "n_fallback_owner_moves": 6,
+    "n_distinct_owner": 267,
+    "players_2plus": 99
+   }
+  },
+  {
+   "seed": 1010,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9952590958087858,
+     "forced_cost": 0.01406333424768758,
+     "r_forced_cost": 82.12843643714122
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.013548169374887795,
+     "r_forced_cost": 53.29941981923505
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1010,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.00457727984424606,
+     "r_forced_cost": 26.730847046814887
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.004343727770555842,
+     "r_forced_cost": 17.088520494322733
+    }
+   },
+   "info": {
+    "n_repairs": 3,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1010,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.014264992242313495,
+     "r_forced_cost": 83.3060985407351
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.013654600408292321,
+     "r_forced_cost": 53.71812674370984
+    }
+   },
+   "info": {
+    "n_repairs": 4,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1010,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9867762284285918,
+     "forced_cost": 0.018821065890972676,
+     "r_forced_cost": 109.91310357002723
+    },
+    "B|PA": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9881426592884912,
+     "forced_cost": 0.01745203539312342,
+     "r_forced_cost": 68.6574942620938
+    }
+   },
+   "info": {
+    "n_repairs": 3,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  },
+  {
+   "seed": 1011,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 1.0,
+     "forced_cost": 0.00017743855987950474,
+     "r_forced_cost": 0.8324460891386015
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 1.0,
+     "forced_cost": 0.00022055827751638223,
+     "r_forced_cost": 0.5670571237802069
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1011,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.979456081838072,
+     "forced_cost": 0.037705240664139474,
+     "r_forced_cost": 176.89266725455502
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9762954790439292,
+     "forced_cost": 0.035560291702929694,
+     "r_forced_cost": 91.4257989358423
+    }
+   },
+   "info": {
+    "n_repairs": 8,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 9
+   }
+  },
+  {
+   "seed": 1011,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9962580368110201,
+     "on": 0.9510106566907868,
+     "forced_cost": 0.0663544809344172,
+     "r_forced_cost": 311.2994615611601
+    },
+    "B|PA": {
+     "off_10": 0.995676676416183,
+     "on": 0.9541712594849295,
+     "forced_cost": 0.06313926979302542,
+     "r_forced_cost": 162.3315757158837
+    }
+   },
+   "info": {
+    "n_repairs": 21,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 25
+   }
+  },
+  {
+   "seed": 1011,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9146637245581448,
+     "forced_cost": 0.1415478781269944,
+     "r_forced_cost": 664.066354307095
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9115031217640021,
+     "forced_cost": 0.13445157430710405,
+     "r_forced_cost": 345.67609011475093
+    }
+   },
+   "info": {
+    "n_repairs": 36,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 45
+   }
+  },
+  {
+   "seed": 1011,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.8688349840430744,
+     "forced_cost": 0.2218097874537839,
+     "r_forced_cost": 1040.6119742177555
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.8688349840430744,
+     "forced_cost": 0.21302802382537273,
+     "r_forced_cost": 547.6967803487889
+    }
+   },
+   "info": {
+    "n_repairs": 82,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1011,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9976244676709197,
+     "on": 0.8379353479930112,
+     "forced_cost": 0.23614981610657487,
+     "r_forced_cost": 1107.8876598311742
+    },
+    "B|PA": {
+     "off_10": 0.9978383382080915,
+     "on": 0.8395943279637802,
+     "forced_cost": 0.22477820384251843,
+     "r_forced_cost": 577.9065886563797
+    }
+   },
+   "info": {
+    "n_repairs": 95,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 85
+   }
+  },
+  {
+   "seed": 1011,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 0.993803825908242,
+     "on": 0.788150773751789,
+     "forced_cost": 0.2811369240733729,
+     "r_forced_cost": 1318.9429237718202
+    },
+    "B|PA": {
+     "off_10": 0.9937580368110202,
+     "on": 0.7817837790662816,
+     "forced_cost": 0.2685553286354312,
+     "r_forced_cost": 690.4579322376354
+    }
+   },
+   "info": {
+    "n_repairs": 189,
+    "n_fallback_owner_moves": 17,
+    "n_distinct_owner": 267,
+    "players_2plus": 100
+   }
+  },
+  {
+   "seed": 1011,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9984196986029287,
+     "forced_cost": 0.005328092475063365,
+     "r_forced_cost": 24.996538218340334
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9984196986029287,
+     "forced_cost": 0.005379201926396029,
+     "r_forced_cost": 13.829971864866936
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1011,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.006830066941754728,
+     "r_forced_cost": 32.042992898948235
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9936787944117146,
+     "forced_cost": 0.006565656003353257,
+     "r_forced_cost": 16.880354938005937
+    }
+   },
+   "info": {
+    "n_repairs": 3,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1011,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9920984930146429,
+     "forced_cost": 0.020809951257641214,
+     "r_forced_cost": 97.62907539010794
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9920984930146429,
+     "forced_cost": 0.01951838243503587,
+     "r_forced_cost": 50.18191984942147
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1011,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.992098493014643,
+     "forced_cost": 0.02245173249214,
+     "r_forced_cost": 105.33142807380734
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9905181916175717,
+     "forced_cost": 0.02133847985833017,
+     "r_forced_cost": 54.861405115062304
+    }
+   },
+   "info": {
+    "n_repairs": 4,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  },
+  {
+   "seed": 1012,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 1.0,
+     "forced_cost": 0.0,
+     "r_forced_cost": 0.0
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 1.0,
+     "forced_cost": 0.0,
+     "r_forced_cost": 0.0
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1012,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9820353242373776,
+     "forced_cost": 0.032933837773819474,
+     "r_forced_cost": 354.50851142819533
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9826166846322146,
+     "forced_cost": 0.031108925783897554,
+     "r_forced_cost": 78.40896908821982
+    }
+   },
+   "info": {
+    "n_repairs": 10,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 10
+   }
+  },
+  {
+   "seed": 1012,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9533760285529206,
+     "forced_cost": 0.08138283910294376,
+     "r_forced_cost": 876.0263332905511
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9535898990900925,
+     "forced_cost": 0.07867099344604796,
+     "r_forced_cost": 198.28751195400108
+    }
+   },
+   "info": {
+    "n_repairs": 20,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 25
+   }
+  },
+  {
+   "seed": 1012,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9194046287493589,
+     "forced_cost": 0.15055879547237383,
+     "r_forced_cost": 1620.6545630027651
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9178243273522875,
+     "forced_cost": 0.1439442586385841,
+     "r_forced_cost": 362.80651425969626
+    }
+   },
+   "info": {
+    "n_repairs": 46,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 48
+   }
+  },
+  {
+   "seed": 1012,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.871995586837217,
+     "forced_cost": 0.2150079580845704,
+     "r_forced_cost": 2314.402338690365
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.8719955868372172,
+     "forced_cost": 0.2075275331690054,
+     "r_forced_cost": 523.0659536828398
+    }
+   },
+   "info": {
+    "n_repairs": 78,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1012,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9952590958087859,
+     "on": 0.8386454777112781,
+     "forced_cost": 0.26559705805133593,
+     "r_forced_cost": 2858.9567464359125
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.839808198500952,
+     "forced_cost": 0.2556540112041559,
+     "r_forced_cost": 644.3670733292228
+    }
+   },
+   "info": {
+    "n_repairs": 101,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 86
+   }
+  },
+  {
+   "seed": 1012,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9962580368110201,
+     "on": 0.785864080463353,
+     "forced_cost": 0.3130134416369238,
+     "r_forced_cost": 3369.359198700303
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.7876582523975962,
+     "forced_cost": 0.2980381123729299,
+     "r_forced_cost": 751.1947311358632
+    }
+   },
+   "info": {
+    "n_repairs": 175,
+    "n_fallback_owner_moves": 10,
+    "n_distinct_owner": 266,
+    "players_2plus": 102
+   }
+  },
+  {
+   "seed": 1012,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9959196986029286,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.00763643358011283,
+     "r_forced_cost": 82.20058408310186
+    },
+    "B|PA": {
+     "off_10": 0.9943393972058573,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.007346921334297866,
+     "r_forced_cost": 18.51766055170969
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1012,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9952590958087858,
+     "forced_cost": 0.011044008842864111,
+     "r_forced_cost": 118.88062247625265
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9952590958087858,
+     "forced_cost": 0.01090968113805602,
+     "r_forced_cost": 27.497473138688253
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1012,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9952590958087858,
+     "on": 0.9851959270315203,
+     "forced_cost": 0.02953135488502672,
+     "r_forced_cost": 317.8832886907258
+    },
+    "B|PA": {
+     "off_10": 0.9952590958087858,
+     "on": 0.9851959270315203,
+     "forced_cost": 0.028658395644409237,
+     "r_forced_cost": 72.23249281605145
+    }
+   },
+   "info": {
+    "n_repairs": 6,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1012,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9905181916175715,
+     "forced_cost": 0.03213449417444311,
+     "r_forced_cost": 345.90416621095386
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9905181916175715,
+     "forced_cost": 0.03081268740334814,
+     "r_forced_cost": 77.6623105187598
+    }
+   },
+   "info": {
+    "n_repairs": 4,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  },
+  {
+   "seed": 1013,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9960441662738482,
+     "on": 1.0,
+     "forced_cost": 0.00027230293057610823,
+     "r_forced_cost": 0.4838639751493561
+    },
+    "B|PA": {
+     "off_10": 0.9960441662738482,
+     "on": 1.0,
+     "forced_cost": 0.0003821634696383566,
+     "r_forced_cost": 0.6226165215313769
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1013,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9810363832351433,
+     "forced_cost": 0.024024123854511182,
+     "r_forced_cost": 42.68925069271426
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9826166846322146,
+     "forced_cost": 0.022776520092337153,
+     "r_forced_cost": 37.107256028160066
+    }
+   },
+   "info": {
+    "n_repairs": 4,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 10
+   }
+  },
+  {
+   "seed": 1013,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9557515608820011,
+     "forced_cost": 0.07909403949786087,
+     "r_forced_cost": 140.54478327165313
+    },
+    "B|PA": {
+     "off_10": 0.9962580368110201,
+     "on": 0.9541712594849295,
+     "forced_cost": 0.07623696889688547,
+     "r_forced_cost": 124.20443123878982
+    }
+   },
+   "info": {
+    "n_repairs": 23,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 24
+   }
+  },
+  {
+   "seed": 1013,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9194046287493589,
+     "forced_cost": 0.1333139877764967,
+     "r_forced_cost": 236.8899810665794
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9178243273522875,
+     "forced_cost": 0.126175634695029,
+     "r_forced_cost": 205.56395630951727
+    }
+   },
+   "info": {
+    "n_repairs": 43,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 49
+   }
+  },
+  {
+   "seed": 1013,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9959654877001505,
+     "on": 0.8721206183337447,
+     "forced_cost": 0.19062655849043883,
+     "r_forced_cost": 338.73056072176496
+    },
+    "B|PA": {
+     "off_10": 0.9960441662738484,
+     "on": 0.8721992969074425,
+     "forced_cost": 0.17904762594563234,
+     "r_forced_cost": 291.7024229453772
+    }
+   },
+   "info": {
+    "n_repairs": 82,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1013,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 0.993176676416183,
+     "on": 0.8378793984288428,
+     "forced_cost": 0.2534642403781507,
+     "r_forced_cost": 450.3888909609279
+    },
+    "B|PA": {
+     "off_10": 0.9937580368110202,
+     "on": 0.8380932689660148,
+     "forced_cost": 0.24027018151090165,
+     "r_forced_cost": 391.44553711947884
+    }
+   },
+   "info": {
+    "n_repairs": 87,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 84
+   }
+  },
+  {
+   "seed": 1013,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.7898199141895047,
+     "forced_cost": 0.31965983394935044,
+     "r_forced_cost": 568.0140041940725
+    },
+    "B|PA": {
+     "off_10": 0.9959654877001505,
+     "on": 0.788900215586576,
+     "forced_cost": 0.3061913377364642,
+     "r_forced_cost": 498.8435598120349
+    }
+   },
+   "info": {
+    "n_repairs": 185,
+    "n_fallback_owner_moves": 16,
+    "n_distinct_owner": 267,
+    "players_2plus": 99
+   }
+  },
+  {
+   "seed": 1013,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.005687932634150642,
+     "r_forced_cost": 10.107073357305078
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.005485716424561029,
+     "r_forced_cost": 8.937268864551168
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1013,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.010262034638858386,
+     "r_forced_cost": 18.234944673467538
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.009452094464878396,
+     "r_forced_cost": 15.399248343850354
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1013,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9960441662738482,
+     "on": 0.9899368312227346,
+     "forced_cost": 0.013495319452838541,
+     "r_forced_cost": 23.98027411069597
+    },
+    "B|PA": {
+     "off_10": 0.993803825908242,
+     "on": 0.9889378902205002,
+     "forced_cost": 0.012192983701215212,
+     "r_forced_cost": 19.864674942174137
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1013,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9889378902205002,
+     "forced_cost": 0.027665432062682058,
+     "r_forced_cost": 49.15961023170971
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9889378902205002,
+     "forced_cost": 0.026950579474118875,
+     "r_forced_cost": 43.90758766480142
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  },
+  {
+   "seed": 1014,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9976244676709197,
+     "on": 1.0,
+     "forced_cost": 0.00024033170367148137,
+     "r_forced_cost": 0.6268714813462014
+    },
+    "B|PA": {
+     "off_10": 0.9978383382080915,
+     "on": 1.0,
+     "forced_cost": 0.00024430198304141947,
+     "r_forced_cost": 0.6339486572108703
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1014,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9953383382080915,
+     "on": 0.981696986029286,
+     "forced_cost": 0.03702938864607336,
+     "r_forced_cost": 96.58595748831583
+    },
+    "B|PA": {
+     "off_10": 0.9953383382080915,
+     "on": 0.9809017550972772,
+     "forced_cost": 0.03488891003848028,
+     "r_forced_cost": 90.53458099312904
+    }
+   },
+   "info": {
+    "n_repairs": 12,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 10
+   }
+  },
+  {
+   "seed": 1014,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9975457890972218,
+     "on": 0.958038254170437,
+     "forced_cost": 0.06596821415105722,
+     "r_forced_cost": 172.06881778346022
+    },
+    "B|PA": {
+     "off_10": 0.9976244676709197,
+     "on": 0.9581169327441347,
+     "forced_cost": 0.06241553601996089,
+     "r_forced_cost": 161.9644865602357
+    }
+   },
+   "info": {
+    "n_repairs": 18,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 25
+   }
+  },
+  {
+   "seed": 1014,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9178243273522875,
+     "forced_cost": 0.13038806953711532,
+     "r_forced_cost": 340.0989592797621
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9194046287493589,
+     "forced_cost": 0.12595019615820197,
+     "r_forced_cost": 326.8330315452274
+    }
+   },
+   "info": {
+    "n_repairs": 52,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 47
+   }
+  },
+  {
+   "seed": 1014,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9968393972058572,
+     "on": 0.8660919618563289,
+     "forced_cost": 0.17485263524745406,
+     "r_forced_cost": 456.07853146453306
+    },
+    "B|PA": {
+     "off_10": 0.9946777354139488,
+     "on": 0.8684573337184625,
+     "forced_cost": 0.1647485195513501,
+     "r_forced_cost": 427.51230033752887
+    }
+   },
+   "info": {
+    "n_repairs": 80,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1014,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9959196986029286,
+     "on": 0.8388884998980237,
+     "forced_cost": 0.20291202694096572,
+     "r_forced_cost": 529.2675122268419
+    },
+    "B|PA": {
+     "off_10": 0.9943393972058573,
+     "on": 0.840468801295095,
+     "forced_cost": 0.19172158135949713,
+     "r_forced_cost": 497.50574083793424
+    }
+   },
+   "info": {
+    "n_repairs": 117,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 85
+   }
+  },
+  {
+   "seed": 1014,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9959654877001505,
+     "on": 0.7867843428918895,
+     "forced_cost": 0.32268070675276334,
+     "r_forced_cost": 841.6672854799355
+    },
+    "B|PA": {
+     "off_10": 0.993803825908242,
+     "on": 0.7862029824970523,
+     "forced_cost": 0.3059612023009494,
+     "r_forced_cost": 793.9505481804679
+    }
+   },
+   "info": {
+    "n_repairs": 183,
+    "n_fallback_owner_moves": 10,
+    "n_distinct_owner": 268,
+    "players_2plus": 98
+   }
+  },
+  {
+   "seed": 1014,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9923022030848684,
+     "on": 0.9959654877001505,
+     "forced_cost": 0.0029552185761564866,
+     "r_forced_cost": 7.708272434457252
+    },
+    "B|PA": {
+     "off_10": 0.9930974340168774,
+     "on": 0.9960441662738484,
+     "forced_cost": 0.002846582236222549,
+     "r_forced_cost": 7.38670625521549
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1014,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.01201651292320815,
+     "r_forced_cost": 31.343385586298478
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.011138631464741568,
+     "r_forced_cost": 28.90406525698351
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1014,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9930974340168774,
+     "forced_cost": 0.019166292232847975,
+     "r_forced_cost": 49.992580339475715
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9930974340168774,
+     "forced_cost": 0.018762796053803855,
+     "r_forced_cost": 48.688304596421254
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1014,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9899368312227346,
+     "forced_cost": 0.0108501653078547,
+     "r_forced_cost": 28.301131708713253
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9905181916175717,
+     "forced_cost": 0.009621319398321872,
+     "r_forced_cost": 24.966733537029622
+    }
+   },
+   "info": {
+    "n_repairs": 5,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  },
+  {
+   "seed": 1015,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 1.0,
+     "forced_cost": 0.0027254822700501415,
+     "r_forced_cost": 2.1567297188618153
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 1.0,
+     "forced_cost": 0.002806177003021315,
+     "r_forced_cost": 2.3543579908346954
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1015,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9802411523031342,
+     "forced_cost": 0.029772657431200108,
+     "r_forced_cost": 23.559711173677904
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9841969860292861,
+     "forced_cost": 0.028027851003285375,
+     "r_forced_cost": 23.51512214107042
+    }
+   },
+   "info": {
+    "n_repairs": 8,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 10
+   }
+  },
+  {
+   "seed": 1015,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9604924650732152,
+     "forced_cost": 0.06324257483834213,
+     "r_forced_cost": 50.04513958870317
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9589121636761437,
+     "forced_cost": 0.059221578725875225,
+     "r_forced_cost": 49.68638719260835
+    }
+   },
+   "info": {
+    "n_repairs": 29,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 24
+   }
+  },
+  {
+   "seed": 1015,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9140823641633077,
+     "forced_cost": 0.1354214806354247,
+     "r_forced_cost": 107.1617801620544
+    },
+    "B|PA": {
+     "off_10": 0.9962580368110201,
+     "on": 0.9172429669574504,
+     "forced_cost": 0.12835059525854553,
+     "r_forced_cost": 107.68502815396037
+    }
+   },
+   "info": {
+    "n_repairs": 50,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 46
+   }
+  },
+  {
+   "seed": 1015,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9975,
+     "on": 0.8726561896313598,
+     "forced_cost": 0.18008462571094708,
+     "r_forced_cost": 142.50463796770936
+    },
+    "B|PA": {
+     "off_10": 0.9959196986029286,
+     "on": 0.8720748292365229,
+     "forced_cost": 0.16828294657643686,
+     "r_forced_cost": 141.18792206153392
+    }
+   },
+   "info": {
+    "n_repairs": 73,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1015,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.8366475957068095,
+     "forced_cost": 0.21032663427674905,
+     "r_forced_cost": 166.43575626874267
+    },
+    "B|PA": {
+     "off_10": 0.9976244676709197,
+     "on": 0.8364337251696375,
+     "forced_cost": 0.19730421812086654,
+     "r_forced_cost": 165.53651535812457
+    }
+   },
+   "info": {
+    "n_repairs": 102,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 87
+   }
+  },
+  {
+   "seed": 1015,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9954628058790113,
+     "on": 0.7884433228626587,
+     "forced_cost": 0.32122028629124616,
+     "r_forced_cost": 254.18816528675703
+    },
+    "B|PA": {
+     "off_10": 0.9959654877001505,
+     "on": 0.7883646442889608,
+     "forced_cost": 0.30602136722589124,
+     "r_forced_cost": 256.749253706632
+    }
+   },
+   "info": {
+    "n_repairs": 184,
+    "n_fallback_owner_moves": 19,
+    "n_distinct_owner": 267,
+    "players_2plus": 99
+   }
+  },
+  {
+   "seed": 1015,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 0.995676676416183,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.007546256887266508,
+     "r_forced_cost": 5.971507015025972
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.006938772901425941,
+     "r_forced_cost": 5.821569847329878
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1015,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.992098493014643,
+     "forced_cost": 0.01263115418497085,
+     "r_forced_cost": 9.995289976240148
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.992098493014643,
+     "forced_cost": 0.011113031120760692,
+     "r_forced_cost": 9.32373602712432
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1015,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.010905060862196565,
+     "r_forced_cost": 8.629397118427592
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.010446863295365132,
+     "r_forced_cost": 8.764827041244823
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1015,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9905181916175715,
+     "forced_cost": 0.012498921168734488,
+     "r_forced_cost": 9.890651293000262
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9920984930146429,
+     "forced_cost": 0.012122029730784243,
+     "r_forced_cost": 10.170277046344555
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  },
+  {
+   "seed": 1016,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9962580368110201,
+     "on": 1.0,
+     "forced_cost": 0.00027867712901165185,
+     "r_forced_cost": 0.2091827801543761
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 1.0,
+     "forced_cost": 6.724265757976133e-05,
+     "r_forced_cost": 0.057860890614387456
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1016,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9826166846322146,
+     "forced_cost": 0.02898977109147359,
+     "r_forced_cost": 21.7605260053467
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9826166846322146,
+     "forced_cost": 0.026905289083683996,
+     "r_forced_cost": 23.151434590058006
+    }
+   },
+   "info": {
+    "n_repairs": 9,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 10
+   }
+  },
+  {
+   "seed": 1016,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9557515608820009,
+     "forced_cost": 0.057694136554039856,
+     "r_forced_cost": 43.306818631950485
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9557515608820011,
+     "forced_cost": 0.054357131951193,
+     "r_forced_cost": 46.77316719984057
+    }
+   },
+   "info": {
+    "n_repairs": 19,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 24
+   }
+  },
+  {
+   "seed": 1016,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9937580368110202,
+     "on": 0.9113684936261357,
+     "forced_cost": 0.11821119679879541,
+     "r_forced_cost": 88.7326020597629
+    },
+    "B|PA": {
+     "off_10": 0.9943393972058573,
+     "on": 0.9147429669574505,
+     "forced_cost": 0.1123318329320744,
+     "r_forced_cost": 96.65917635820296
+    }
+   },
+   "info": {
+    "n_repairs": 48,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 47
+   }
+  },
+  {
+   "seed": 1016,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9975457890972218,
+     "on": 0.8710758882342884,
+     "forced_cost": 0.1971977044720253,
+     "r_forced_cost": 148.0220648454957
+    },
+    "B|PA": {
+     "off_10": 0.9976244676709197,
+     "on": 0.8727019787285818,
+     "forced_cost": 0.18736175898112895,
+     "r_forced_cost": 161.22084747865802
+    }
+   },
+   "info": {
+    "n_repairs": 75,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1016,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.8398081985009523,
+     "forced_cost": 0.24451601707233928,
+     "r_forced_cost": 183.54050231846705
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.8398081985009521,
+     "forced_cost": 0.2320563686116958,
+     "r_forced_cost": 199.6796177290672
+    }
+   },
+   "info": {
+    "n_repairs": 102,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 83
+   }
+  },
+  {
+   "seed": 1016,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.7914002155865759,
+     "forced_cost": 0.2865998676289599,
+     "r_forced_cost": 215.12980744105252
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.7914002155865759,
+     "forced_cost": 0.2734946595475936,
+     "r_forced_cost": 235.3363943257553
+    }
+   },
+   "info": {
+    "n_repairs": 173,
+    "n_fallback_owner_moves": 2,
+    "n_distinct_owner": 268,
+    "players_2plus": 97
+   }
+  },
+  {
+   "seed": 1016,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.004488860304457253,
+     "r_forced_cost": 3.3694630109804486
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.003963085628310275,
+     "r_forced_cost": 3.4101517145290337
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1016,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.006872837550685556,
+     "r_forced_cost": 5.15894243456802
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.006296519581503992,
+     "r_forced_cost": 5.418022485571789
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1016,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9952590958087858,
+     "forced_cost": 0.009597307994381512,
+     "r_forced_cost": 7.204005493319849
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.008975651787920471,
+     "r_forced_cost": 7.723359322579899
+    }
+   },
+   "info": {
+    "n_repairs": 3,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1016,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9954628058790113,
+     "on": 0.9920984930146429,
+     "forced_cost": 0.021473518795684887,
+     "r_forced_cost": 16.11861862259534
+    },
+    "B|PA": {
+     "off_10": 0.9976244676709197,
+     "on": 0.9920984930146429,
+     "forced_cost": 0.020265524991113813,
+     "r_forced_cost": 17.438057431967035
+    }
+   },
+   "info": {
+    "n_repairs": 4,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  },
+  {
+   "seed": 1017,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 1.0,
+     "forced_cost": 0.00012958309653585465,
+     "r_forced_cost": 0.9674451973000904
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 1.0,
+     "forced_cost": 0.00019325231110966346,
+     "r_forced_cost": 1.8005235376101965
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1017,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9954628058790113,
+     "on": 0.9778757804410005,
+     "forced_cost": 0.03322204068962697,
+     "r_forced_cost": 248.0300638655811
+    },
+    "B|PA": {
+     "off_10": 0.9962580368110201,
+     "on": 0.979456081838072,
+     "forced_cost": 0.031169614539425686,
+     "r_forced_cost": 290.40596883017884
+    }
+   },
+   "info": {
+    "n_repairs": 9,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 10
+   }
+  },
+  {
+   "seed": 1017,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9510106566907868,
+     "forced_cost": 0.07320200437420765,
+     "r_forced_cost": 546.5136229783824
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9525909580878582,
+     "forced_cost": 0.06880658193433883,
+     "r_forced_cost": 641.06798828905
+    }
+   },
+   "info": {
+    "n_repairs": 22,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 25
+   }
+  },
+  {
+   "seed": 1017,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9146637245581448,
+     "forced_cost": 0.1375777600911979,
+     "r_forced_cost": 1027.1319856807559
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9146637245581448,
+     "forced_cost": 0.13190190929985854,
+     "r_forced_cost": 1228.9244614277986
+    }
+   },
+   "info": {
+    "n_repairs": 63,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 49
+   }
+  },
+  {
+   "seed": 1017,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9940963750191116,
+     "on": 0.8690386941132996,
+     "forced_cost": 0.18713921839399597,
+     "r_forced_cost": 1397.1493420183074
+    },
+    "B|PA": {
+     "off_10": 0.9940963750191116,
+     "on": 0.870618995510371,
+     "forced_cost": 0.17789086374271382,
+     "r_forced_cost": 1657.4015878796301
+    }
+   },
+   "info": {
+    "n_repairs": 73,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1017,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.8403895588957891,
+     "forced_cost": 0.20753236250707416,
+     "r_forced_cost": 1549.401062014728
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.8388092574987178,
+     "forced_cost": 0.1971875874929193,
+     "r_forced_cost": 1837.1883397766908
+    }
+   },
+   "info": {
+    "n_repairs": 94,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 88
+   }
+  },
+  {
+   "seed": 1017,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9936787944117144,
+     "on": 0.7896561344020648,
+     "forced_cost": 0.3017033265756204,
+     "r_forced_cost": 2252.4653454648947
+    },
+    "B|PA": {
+     "off_10": 0.9952590958087859,
+     "on": 0.790237494796902,
+     "forced_cost": 0.28756375902308284,
+     "r_forced_cost": 2679.219274075924
+    }
+   },
+   "info": {
+    "n_repairs": 181,
+    "n_fallback_owner_moves": 14,
+    "n_distinct_owner": 268,
+    "players_2plus": 96
+   }
+  },
+  {
+   "seed": 1017,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9984196986029287,
+     "forced_cost": 0.005832801155026856,
+     "r_forced_cost": 43.54669409119885
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9984196986029287,
+     "forced_cost": 0.00537649157917272,
+     "r_forced_cost": 50.09254265823592
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1017,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9976244676709197,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.009612942724174981,
+     "r_forced_cost": 71.76858339583431
+    },
+    "B|PA": {
+     "off_10": 0.9976244676709197,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.008681688120540597,
+     "r_forced_cost": 80.88691781985382
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1017,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9976244676709197,
+     "on": 0.9920984930146429,
+     "forced_cost": 0.015668405965795218,
+     "r_forced_cost": 116.97763447690474
+    },
+    "B|PA": {
+     "off_10": 0.9976244676709197,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.015459100660458478,
+     "r_forced_cost": 144.03178129986657
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1017,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.992098493014643,
+     "forced_cost": 0.01954743629971455,
+     "r_forced_cost": 145.93781035673692
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.992098493014643,
+     "forced_cost": 0.018646982223806414,
+     "r_forced_cost": 173.73313781644865
+    }
+   },
+   "info": {
+    "n_repairs": 6,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  },
+  {
+   "seed": 1018,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9946777354139488,
+     "on": 1.0,
+     "forced_cost": 0.0004177131711581927,
+     "r_forced_cost": 2.442130234967104
+    },
+    "B|PA": {
+     "off_10": 0.9946777354139488,
+     "on": 1.0,
+     "forced_cost": 0.00038407083183654406,
+     "r_forced_cost": 3.6519820570685297
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1018,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9841969860292861,
+     "forced_cost": 0.03219461114562774,
+     "r_forced_cost": 188.2234957153669
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9841969860292861,
+     "forced_cost": 0.03074037241259796,
+     "r_forced_cost": 292.298396995141
+    }
+   },
+   "info": {
+    "n_repairs": 11,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 10
+   }
+  },
+  {
+   "seed": 1018,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9541712594849296,
+     "forced_cost": 0.08949804168467151,
+     "r_forced_cost": 523.2439115158022
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9551702004871641,
+     "forced_cost": 0.084787448916401,
+     "r_forced_cost": 806.2112934394638
+    }
+   },
+   "info": {
+    "n_repairs": 23,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 25
+   }
+  },
+  {
+   "seed": 1018,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9178243273522875,
+     "forced_cost": 0.11754162161359613,
+     "r_forced_cost": 687.1986995615135
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9194046287493589,
+     "forced_cost": 0.11073706720575896,
+     "r_forced_cost": 1052.9562491221295
+    }
+   },
+   "info": {
+    "n_repairs": 45,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 48
+   }
+  },
+  {
+   "seed": 1018,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9975,
+     "on": 0.8710758882342884,
+     "forced_cost": 0.18289765767621488,
+     "r_forced_cost": 1069.2980986864607
+    },
+    "B|PA": {
+     "off_10": 0.9975,
+     "on": 0.8710758882342884,
+     "forced_cost": 0.1724915743616852,
+     "r_forced_cost": 1640.1561439908294
+    }
+   },
+   "info": {
+    "n_repairs": 77,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1018,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9946777354139488,
+     "on": 0.8376465367090438,
+     "forced_cost": 0.2359928223462655,
+     "r_forced_cost": 1379.7151885085627
+    },
+    "B|PA": {
+     "off_10": 0.9943851863030791,
+     "on": 0.837353987598174,
+     "forced_cost": 0.2259889417786106,
+     "r_forced_cost": 2148.8420678158436
+    }
+   },
+   "info": {
+    "n_repairs": 102,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 88
+   }
+  },
+  {
+   "seed": 1018,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.7876582523975962,
+     "forced_cost": 0.27556533834634755,
+     "r_forced_cost": 1611.073078252769
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.7882396127924332,
+     "forced_cost": 0.26198770833956236,
+     "r_forced_cost": 2491.1405155489047
+    }
+   },
+   "info": {
+    "n_repairs": 166,
+    "n_fallback_owner_moves": 14,
+    "n_distinct_owner": 266,
+    "players_2plus": 103
+   }
+  },
+  {
+   "seed": 1018,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9962580368110201,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.0037901969111009876,
+     "r_forced_cost": 22.159115661625226
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9984196986029287,
+     "forced_cost": 0.003662495631948335,
+     "r_forced_cost": 34.825264569061524
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1018,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.006998285609567913,
+     "r_forced_cost": 40.91497721432523
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.006676545559688342,
+     "r_forced_cost": 63.48470793939214
+    }
+   },
+   "info": {
+    "n_repairs": 3,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1018,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9959654877001505,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.01079109634921158,
+     "r_forced_cost": 63.089374437926104
+    },
+    "B|PA": {
+     "off_10": 0.9954628058790113,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.010516063412643075,
+     "r_forced_cost": 99.9932088316247
+    }
+   },
+   "info": {
+    "n_repairs": 3,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1018,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 0.995676676416183,
+     "on": 0.9897229606855626,
+     "forced_cost": 0.01673558701106198,
+     "r_forced_cost": 97.84341471999956
+    },
+    "B|PA": {
+     "off_10": 0.9960441662738484,
+     "on": 0.9896442821118648,
+     "forced_cost": 0.015043640872503126,
+     "r_forced_cost": 143.0442043116297
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  },
+  {
+   "seed": 1019,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9976244676709197,
+     "on": 1.0,
+     "forced_cost": 0.00016839217649239512,
+     "r_forced_cost": 0.1553813687808215
+    },
+    "B|PA": {
+     "off_10": 0.9978383382080915,
+     "on": 1.0,
+     "forced_cost": 0.0002076419436693175,
+     "r_forced_cost": 0.19427359604469333
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1019,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9841969860292861,
+     "forced_cost": 0.03438575218224898,
+     "r_forced_cost": 31.728939858896958
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9810363832351433,
+     "forced_cost": 0.03200136902887768,
+     "r_forced_cost": 29.94106551754461
+    }
+   },
+   "info": {
+    "n_repairs": 5,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 10
+   }
+  },
+  {
+   "seed": 1019,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9565366313470635,
+     "forced_cost": 0.06601678175067065,
+     "r_forced_cost": 60.91600052088656
+    },
+    "B|PA": {
+     "off_10": 0.9962580368110201,
+     "on": 0.954956329949992,
+     "forced_cost": 0.06251208882930685,
+     "r_forced_cost": 58.48745238329845
+    }
+   },
+   "info": {
+    "n_repairs": 24,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 25
+   }
+  },
+  {
+   "seed": 1019,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9953841273053133,
+     "on": 0.9169504178465808,
+     "forced_cost": 0.12087135690610669,
+     "r_forced_cost": 111.53224142402037
+    },
+    "B|PA": {
+     "off_10": 0.9959196986029286,
+     "on": 0.9169046287493589,
+     "forced_cost": 0.11572349402885358,
+     "r_forced_cost": 108.2730152422671
+    }
+   },
+   "info": {
+    "n_repairs": 47,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 46
+   }
+  },
+  {
+   "seed": 1019,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.8704152854401458,
+     "forced_cost": 0.20176582405588256,
+     "r_forced_cost": 186.1764042013513
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.8704152854401457,
+     "forced_cost": 0.19214699926382672,
+     "r_forced_cost": 179.7762429715526
+    }
+   },
+   "info": {
+    "n_repairs": 79,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1019,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.8364337251696375,
+     "forced_cost": 0.2553559342095323,
+     "r_forced_cost": 235.62587888739853
+    },
+    "B|PA": {
+     "off_10": 0.9978383382080915,
+     "on": 0.8348534237725661,
+     "forced_cost": 0.24442217938917188,
+     "r_forced_cost": 228.68585654658463
+    }
+   },
+   "info": {
+    "n_repairs": 89,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 89
+   }
+  },
+  {
+   "seed": 1019,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9975,
+     "on": 0.7889002155865761,
+     "forced_cost": 0.2891817884693972,
+     "r_forced_cost": 266.8381812909829
+    },
+    "B|PA": {
+     "off_10": 0.9975,
+     "on": 0.7889002155865761,
+     "forced_cost": 0.27569762292300715,
+     "r_forced_cost": 257.9477329085557
+    }
+   },
+   "info": {
+    "n_repairs": 177,
+    "n_fallback_owner_moves": 4,
+    "n_distinct_owner": 268,
+    "players_2plus": 96
+   }
+  },
+  {
+   "seed": 1019,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.015933887353315877,
+     "r_forced_cost": 14.702756853252355
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.014568562427983371,
+     "r_forced_cost": 13.630613170301196
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1019,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.004943787931928143,
+     "r_forced_cost": 4.561806562668864
+    },
+    "B|PA": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.004493984968763708,
+     "r_forced_cost": 4.204654440352042
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1019,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9905181916175715,
+     "forced_cost": 0.010608129245476274,
+     "r_forced_cost": 9.788493008999186
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9920984930146429,
+     "forced_cost": 0.009931823893628228,
+     "r_forced_cost": 9.292395885922723
+    }
+   },
+   "info": {
+    "n_repairs": 5,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1019,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9905181916175715,
+     "forced_cost": 0.01968731868178063,
+     "r_forced_cost": 18.166179617836725
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9905181916175715,
+     "forced_cost": 0.01939640537757042,
+     "r_forced_cost": 18.1476312369833
+    }
+   },
+   "info": {
+    "n_repairs": 5,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  },
+  {
+   "seed": 1020,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9968393972058572,
+     "on": 1.0,
+     "forced_cost": 0.0003289583455311551,
+     "r_forced_cost": 0.26387625982084495
+    },
+    "B|PA": {
+     "off_10": 0.9952590958087858,
+     "on": 1.0,
+     "forced_cost": 0.00014007762960011717,
+     "r_forced_cost": 0.11135740449875055
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1020,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9778757804410005,
+     "forced_cost": 0.03074760853947958,
+     "r_forced_cost": 24.66441131545916
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9762954790439291,
+     "forced_cost": 0.0295575974312514,
+     "r_forced_cost": 23.497380292337123
+    }
+   },
+   "info": {
+    "n_repairs": 10,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 10
+   }
+  },
+  {
+   "seed": 1020,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9551702004871641,
+     "forced_cost": 0.07862384544575896,
+     "r_forced_cost": 63.06867282986787
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9573318622790724,
+     "forced_cost": 0.07405090607574262,
+     "r_forced_cost": 58.868191337302285
+    }
+   },
+   "info": {
+    "n_repairs": 28,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 23
+   }
+  },
+  {
+   "seed": 1020,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9162440259552161,
+     "forced_cost": 0.1434530376081774,
+     "r_forced_cost": 115.07186711698667
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9162440259552161,
+     "forced_cost": 0.13698522683027398,
+     "r_forced_cost": 108.89903946860589
+    }
+   },
+   "info": {
+    "n_repairs": 52,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 48
+   }
+  },
+  {
+   "seed": 1020,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.871995586837217,
+     "forced_cost": 0.18725948975457027,
+     "r_forced_cost": 150.2115220472982
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.8714142264423801,
+     "forced_cost": 0.17661189674699515,
+     "r_forced_cost": 140.40102250081375
+    }
+   },
+   "info": {
+    "n_repairs": 67,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1020,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9960441662738482,
+     "on": 0.8390129675689433,
+     "forced_cost": 0.23530557002615865,
+     "r_forced_cost": 188.7520246165455
+    },
+    "B|PA": {
+     "off_10": 0.9960441662738482,
+     "on": 0.8411746293608516,
+     "forced_cost": 0.22382480687238474,
+     "r_forced_cost": 177.93383302455612
+    }
+   },
+   "info": {
+    "n_repairs": 93,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 92
+   }
+  },
+  {
+   "seed": 1020,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9968393972058572,
+     "on": 0.7860779510005247,
+     "forced_cost": 0.314337101499196,
+     "r_forced_cost": 252.14772567208658
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.7882396127924332,
+     "forced_cost": 0.2966306395218059,
+     "r_forced_cost": 235.81222930635008
+    }
+   },
+   "info": {
+    "n_repairs": 200,
+    "n_fallback_owner_moves": 22,
+    "n_distinct_owner": 267,
+    "players_2plus": 100
+   }
+  },
+  {
+   "seed": 1020,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9984196986029287,
+     "forced_cost": 0.010476709538915325,
+     "r_forced_cost": 8.403966538360763
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9952590958087858,
+     "forced_cost": 0.009958796142706977,
+     "r_forced_cost": 7.916936441242363
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1020,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.006213540002337542,
+     "r_forced_cost": 4.984234990046028
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.005662853621482263,
+     "r_forced_cost": 4.501794348924986
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1020,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9952590958087858,
+     "forced_cost": 0.00574872592241145,
+     "r_forced_cost": 4.611381093529371
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9952590958087858,
+     "forced_cost": 0.004791664064514144,
+     "r_forced_cost": 3.8092254628913453
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1020,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9873575888234288,
+     "forced_cost": 0.044052415501346164,
+     "r_forced_cost": 35.33695617236776
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9873575888234288,
+     "forced_cost": 0.04262089048532566,
+     "r_forced_cost": 33.88229623402614
+    }
+   },
+   "info": {
+    "n_repairs": 7,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  },
+  {
+   "seed": 1021,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 1.0,
+     "forced_cost": 0.00017166945336582863,
+     "r_forced_cost": 0.4908060242584814
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 1.0,
+     "forced_cost": 0.00021422294136402064,
+     "r_forced_cost": 0.7979231010217287
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1021,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9841969860292861,
+     "forced_cost": 0.03997187112747716,
+     "r_forced_cost": 114.28029137159565
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.979456081838072,
+     "forced_cost": 0.0370302644637296,
+     "r_forced_cost": 137.92782072927133
+    }
+   },
+   "info": {
+    "n_repairs": 13,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 10
+   }
+  },
+  {
+   "seed": 1021,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9960441662738482,
+     "on": 0.9502154257587779,
+     "forced_cost": 0.0699844473935797,
+     "r_forced_cost": 200.08678137963324
+    },
+    "B|PA": {
+     "off_10": 0.9976244676709197,
+     "on": 0.9517957271558493,
+     "forced_cost": 0.06698360417850299,
+     "r_forced_cost": 249.49599152829035
+    }
+   },
+   "info": {
+    "n_repairs": 21,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 24
+   }
+  },
+  {
+   "seed": 1021,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9975,
+     "on": 0.9184849301464303,
+     "forced_cost": 0.13147303488812384,
+     "r_forced_cost": 375.88374801385106
+    },
+    "B|PA": {
+     "off_10": 0.9959196986029286,
+     "on": 0.9179035697515933,
+     "forced_cost": 0.12581283215440997,
+     "r_forced_cost": 468.6191149359024
+    }
+   },
+   "info": {
+    "n_repairs": 50,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 44
+   }
+  },
+  {
+   "seed": 1021,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.8719955868372172,
+     "forced_cost": 0.18443554660449316,
+     "r_forced_cost": 527.3045121661106
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.871995586837217,
+     "forced_cost": 0.1733265089237299,
+     "r_forced_cost": 645.5948396987186
+    }
+   },
+   "info": {
+    "n_repairs": 84,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1021,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9975,
+     "on": 0.8410501616899321,
+     "forced_cost": 0.25928021628322884,
+     "r_forced_cost": 741.2867556097287
+    },
+    "B|PA": {
+     "off_10": 0.9975457890972218,
+     "on": 0.8410959507871538,
+     "forced_cost": 0.24752364769154395,
+     "r_forced_cost": 921.9593162369777
+    }
+   },
+   "info": {
+    "n_repairs": 126,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 84
+   }
+  },
+  {
+   "seed": 1021,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9962580368110201,
+     "on": 0.7884433228626587,
+     "forced_cost": 0.287976045739353,
+     "r_forced_cost": 823.3286430394419
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.7892385537946676,
+     "forced_cost": 0.2742902387050513,
+     "r_forced_cost": 1021.6577013365728
+    }
+   },
+   "info": {
+    "n_repairs": 179,
+    "n_fallback_owner_moves": 14,
+    "n_distinct_owner": 267,
+    "players_2plus": 100
+   }
+  },
+  {
+   "seed": 1021,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.005439252593226489,
+     "r_forced_cost": 15.550920026116449
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.005262742085326831,
+     "r_forced_cost": 19.602305233340534
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1021,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9936787944117146,
+     "forced_cost": 0.007397193428807711,
+     "r_forced_cost": 21.148707742007392
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9936787944117146,
+     "forced_cost": 0.007269733191011395,
+     "r_forced_cost": 27.07780975481761
+    }
+   },
+   "info": {
+    "n_repairs": 3,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1021,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.992098493014643,
+     "forced_cost": 0.015069387631191597,
+     "r_forced_cost": 43.08364759287636
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.992098493014643,
+     "forced_cost": 0.014688342066859407,
+     "r_forced_cost": 54.710141576017044
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1021,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9905181916175715,
+     "forced_cost": 0.017709973170529133,
+     "r_forced_cost": 50.63312867332739
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9905181916175715,
+     "forced_cost": 0.01661127680046079,
+     "r_forced_cost": 61.872558616544644
+    }
+   },
+   "info": {
+    "n_repairs": 3,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  },
+  {
+   "seed": 1022,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9940963750191116,
+     "on": 1.0,
+     "forced_cost": 0.004071049665217059,
+     "r_forced_cost": 2.7734438725754584
+    },
+    "B|PA": {
+     "off_10": 0.9952590958087858,
+     "on": 1.0,
+     "forced_cost": 0.003899156270047336,
+     "r_forced_cost": 3.112917743378795
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1022,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9953841273053133,
+     "on": 0.9818214537002058,
+     "forced_cost": 0.026348179325963183,
+     "r_forced_cost": 17.94996438620352
+    },
+    "B|PA": {
+     "off_10": 0.9962580368110201,
+     "on": 0.9804550228403062,
+     "forced_cost": 0.025038908981626588,
+     "r_forced_cost": 19.989982100103372
+    }
+   },
+   "info": {
+    "n_repairs": 9,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 10
+   }
+  },
+  {
+   "seed": 1022,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9953383382080915,
+     "on": 0.9532515608820009,
+     "forced_cost": 0.06866789325283718,
+     "r_forced_cost": 46.78069870085773
+    },
+    "B|PA": {
+     "off_10": 0.9959196986029286,
+     "on": 0.9510898990900926,
+     "forced_cost": 0.0661323438612436,
+     "r_forced_cost": 52.797203384309014
+    }
+   },
+   "info": {
+    "n_repairs": 22,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 24
+   }
+  },
+  {
+   "seed": 1022,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9188232683545218,
+     "forced_cost": 0.10322862721329529,
+     "r_forced_cost": 70.32554922265368
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9178243273522875,
+     "forced_cost": 0.0965819874257689,
+     "r_forced_cost": 77.1068819831665
+    }
+   },
+   "info": {
+    "n_repairs": 48,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 48
+   }
+  },
+  {
+   "seed": 1022,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9968393972058572,
+     "on": 0.8682536236482372,
+     "forced_cost": 0.19456449130848882,
+     "r_forced_cost": 132.54903295598052
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.8682536236482372,
+     "forced_cost": 0.18683953965121808,
+     "r_forced_cost": 149.16460840846005
+    }
+   },
+   "info": {
+    "n_repairs": 72,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1022,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9936686339447678,
+     "on": 0.8370614384873043,
+     "forced_cost": 0.24394020100133315,
+     "r_forced_cost": 166.18673594734955
+    },
+    "B|PA": {
+     "off_10": 0.9934654877001505,
+     "on": 0.8369698602928607,
+     "forced_cost": 0.230331783934024,
+     "r_forced_cost": 183.88693538143565
+    }
+   },
+   "info": {
+    "n_repairs": 93,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 85
+   }
+  },
+  {
+   "seed": 1022,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9959196986029286,
+     "on": 0.7857396127924333,
+     "forced_cost": 0.28093029129137986,
+     "r_forced_cost": 191.38661010694744
+    },
+    "B|PA": {
+     "off_10": 0.9959196986029286,
+     "on": 0.7867385537946676,
+     "forced_cost": 0.26645711626822094,
+     "r_forced_cost": 212.72783844357738
+    }
+   },
+   "info": {
+    "n_repairs": 190,
+    "n_fallback_owner_moves": 17,
+    "n_distinct_owner": 267,
+    "players_2plus": 100
+   }
+  },
+  {
+   "seed": 1022,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9984196986029287,
+     "forced_cost": 0.0031307848962728885,
+     "r_forced_cost": 2.1328789626684337
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9984196986029287,
+     "forced_cost": 0.0029483754935807284,
+     "r_forced_cost": 2.3538554888438057
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1022,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9959196986029286,
+     "on": 0.9927590958087859,
+     "forced_cost": 0.007149635218102822,
+     "r_forced_cost": 4.870761503161306
+    },
+    "B|PA": {
+     "off_10": 0.9976244676709197,
+     "on": 0.9928048849060076,
+     "forced_cost": 0.006966332551659051,
+     "r_forced_cost": 5.561618643736346
+    }
+   },
+   "info": {
+    "n_repairs": 3,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1022,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9928835634797053,
+     "forced_cost": 0.008582360488497157,
+     "r_forced_cost": 5.846820124162512
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.007504669700936674,
+     "r_forced_cost": 5.991403742830599
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1022,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9905181916175717,
+     "forced_cost": 0.027287942591828377,
+     "r_forced_cost": 18.590187642051802
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9889378902205002,
+     "forced_cost": 0.025752507842157043,
+     "r_forced_cost": 20.559688570106733
+    }
+   },
+   "info": {
+    "n_repairs": 4,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  },
+  {
+   "seed": 1023,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 1.0,
+     "forced_cost": 0.0,
+     "r_forced_cost": 0.0
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 1.0,
+     "forced_cost": 0.0,
+     "r_forced_cost": 0.0
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1023,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9762954790439292,
+     "forced_cost": 0.036407798552491634,
+     "r_forced_cost": 37.612688805392665
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9762954790439292,
+     "forced_cost": 0.03390184863865844,
+     "r_forced_cost": 40.862822688477934
+    }
+   },
+   "info": {
+    "n_repairs": 5,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 10
+   }
+  },
+  {
+   "seed": 1023,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9573318622790724,
+     "forced_cost": 0.093772562202088,
+     "r_forced_cost": 96.8758985937117
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9589121636761437,
+     "forced_cost": 0.08857623180233017,
+     "r_forced_cost": 106.76334771977106
+    }
+   },
+   "info": {
+    "n_repairs": 20,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 24
+   }
+  },
+  {
+   "seed": 1023,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9178243273522875,
+     "forced_cost": 0.15025601333207506,
+     "r_forced_cost": 155.22862945009066
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9146637245581448,
+     "forced_cost": 0.14015433890400347,
+     "r_forced_cost": 168.93184677618132
+    }
+   },
+   "info": {
+    "n_repairs": 42,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 47
+   }
+  },
+  {
+   "seed": 1023,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9962580368110201,
+     "on": 0.8729945278394514,
+     "forced_cost": 0.17453486715480326,
+     "r_forced_cost": 180.31097470832648
+    },
+    "B|PA": {
+     "off_10": 0.9962580368110201,
+     "on": 0.8727806573022796,
+     "forced_cost": 0.16545880043922856,
+     "r_forced_cost": 199.43200433284696
+    }
+   },
+   "info": {
+    "n_repairs": 72,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1023,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9960441662738484,
+     "on": 0.8379353479930112,
+     "forced_cost": 0.26325581381565794,
+     "r_forced_cost": 271.96807812981837
+    },
+    "B|PA": {
+     "off_10": 0.9960441662738484,
+     "on": 0.837935347993011,
+     "forced_cost": 0.2517870352571237,
+     "r_forced_cost": 303.4857799830155
+    }
+   },
+   "info": {
+    "n_repairs": 97,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 84
+   }
+  },
+  {
+   "seed": 1023,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9925160736220403,
+     "on": 0.7872806020729846,
+     "forced_cost": 0.311232724140633,
+     "r_forced_cost": 321.53275025070445
+    },
+    "B|PA": {
+     "off_10": 0.9909357722249689,
+     "on": 0.7882795430752187,
+     "forced_cost": 0.29255565254777166,
+     "r_forced_cost": 352.6253061887489
+    }
+   },
+   "info": {
+    "n_repairs": 196,
+    "n_fallback_owner_moves": 18,
+    "n_distinct_owner": 268,
+    "players_2plus": 98
+   }
+  },
+  {
+   "seed": 1023,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.0040900673542696685,
+     "r_forced_cost": 4.225425230461031
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.0035769563474190515,
+     "r_forced_cost": 4.311403031347921
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1023,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.006960952782552032,
+     "r_forced_cost": 7.191320574400498
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.006608290137878026,
+     "r_forced_cost": 7.965152315328517
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1023,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.00738552670360009,
+     "r_forced_cost": 7.629945468027116
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.006612639398872327,
+     "r_forced_cost": 7.970394598211975
+    }
+   },
+   "info": {
+    "n_repairs": 5,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1023,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9920984930146429,
+     "forced_cost": 0.016564051822755315,
+     "r_forced_cost": 17.112227361603424
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9920984930146429,
+     "forced_cost": 0.01552845423061646,
+     "r_forced_cost": 18.716869354677623
+    }
+   },
+   "info": {
+    "n_repairs": 4,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  },
+  {
+   "seed": 1024,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9952590958087859,
+     "on": 1.0,
+     "forced_cost": 0.0004386244588673921,
+     "r_forced_cost": 5.434067010582527
+    },
+    "B|PA": {
+     "off_10": 0.9946777354139488,
+     "on": 1.0,
+     "forced_cost": 0.00038793586310724107,
+     "r_forced_cost": 1.8784201117865296
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1024,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9810363832351433,
+     "forced_cost": 0.03266348370035997,
+     "r_forced_cost": 404.6640711399267
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9810363832351433,
+     "forced_cost": 0.030798430497667978,
+     "r_forced_cost": 149.12875235328892
+    }
+   },
+   "info": {
+    "n_repairs": 6,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 10
+   }
+  },
+  {
+   "seed": 1024,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9589121636761437,
+     "forced_cost": 0.07111832946307793,
+     "r_forced_cost": 881.0766480760456
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9589121636761437,
+     "forced_cost": 0.06720003098709075,
+     "r_forced_cost": 325.3885544578647
+    }
+   },
+   "info": {
+    "n_repairs": 18,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 25
+   }
+  },
+  {
+   "seed": 1024,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.91860939781735,
+     "forced_cost": 0.09588371315990653,
+     "r_forced_cost": 1187.8920839932678
+    },
+    "B|PA": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9170290964202786,
+     "forced_cost": 0.08934632111177854,
+     "r_forced_cost": 432.6228700441322
+    }
+   },
+   "info": {
+    "n_repairs": 45,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 45
+   }
+  },
+  {
+   "seed": 1024,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.8672546826460029,
+     "forced_cost": 0.20136366022961316,
+     "r_forced_cost": 2494.6707851390083
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.8650930208540945,
+     "forced_cost": 0.19004710207901696,
+     "r_forced_cost": 920.2250492455428
+    }
+   },
+   "info": {
+    "n_repairs": 64,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1024,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.8398081985009521,
+     "forced_cost": 0.2115371757865868,
+     "r_forced_cost": 2620.709276956247
+    },
+    "B|PA": {
+     "off_10": 0.9978383382080915,
+     "on": 0.8380140265667089,
+     "forced_cost": 0.20216731493128656,
+     "r_forced_cost": 978.9122028344934
+    }
+   },
+   "info": {
+    "n_repairs": 96,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 81
+   }
+  },
+  {
+   "seed": 1024,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9959196986029286,
+     "on": 0.7883188551917389,
+     "forced_cost": 0.30804242224375167,
+     "r_forced_cost": 3816.301464120531
+    },
+    "B|PA": {
+     "off_10": 0.9959196986029286,
+     "on": 0.7883188551917389,
+     "forced_cost": 0.2960640313180207,
+     "r_forced_cost": 1433.5684933842522
+    }
+   },
+   "info": {
+    "n_repairs": 180,
+    "n_fallback_owner_moves": 15,
+    "n_distinct_owner": 267,
+    "players_2plus": 99
+   }
+  },
+  {
+   "seed": 1024,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9984196986029287,
+     "forced_cost": 0.00475270516816495,
+     "r_forced_cost": 58.88070727300295
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9984196986029287,
+     "forced_cost": 0.004421160687918952,
+     "r_forced_cost": 21.407655087900828
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1024,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9962580368110201,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.011434021714936647,
+     "r_forced_cost": 141.65475486675044
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.010416006937338955,
+     "r_forced_cost": 50.43523627563348
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1024,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.992098493014643,
+     "forced_cost": 0.00981153551857314,
+     "r_forced_cost": 121.55396354847609
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.992098493014643,
+     "forced_cost": 0.009167490627313828,
+     "r_forced_cost": 44.389808745783306
+    }
+   },
+   "info": {
+    "n_repairs": 3,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1024,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9883565298256631,
+     "forced_cost": 0.021185499023179472,
+     "r_forced_cost": 262.4646642867511
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9889378902205002,
+     "forced_cost": 0.019975762549596116,
+     "r_forced_cost": 96.72442712794687
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  },
+  {
+   "seed": 1025,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9962580368110201,
+     "on": 1.0,
+     "forced_cost": 0.0004278122600415013,
+     "r_forced_cost": 2.54262460455143
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 1.0,
+     "forced_cost": 0.0004022812242142809,
+     "r_forced_cost": 2.9564523001345626
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1025,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9810363832351433,
+     "forced_cost": 0.023248049520555085,
+     "r_forced_cost": 138.1705674191272
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9810363832351433,
+     "forced_cost": 0.02150767753974774,
+     "r_forced_cost": 158.06460482249463
+    }
+   },
+   "info": {
+    "n_repairs": 6,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 10
+   }
+  },
+  {
+   "seed": 1025,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9946777354139488,
+     "on": 0.9530085386952554,
+     "forced_cost": 0.07582371679099154,
+     "r_forced_cost": 450.64451379353204
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9535898990900925,
+     "forced_cost": 0.07136144976671722,
+     "r_forced_cost": 524.4508309226194
+    }
+   },
+   "info": {
+    "n_repairs": 29,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 25
+   }
+  },
+  {
+   "seed": 1025,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9946777354139488,
+     "on": 0.9135010037684705,
+     "forced_cost": 0.12188615980718852,
+     "r_forced_cost": 724.4082926702035
+    },
+    "B|PA": {
+     "off_10": 0.9946777354139488,
+     "on": 0.9166616065626133,
+     "forced_cost": 0.11558643694728943,
+     "r_forced_cost": 849.4698902356607
+    }
+   },
+   "info": {
+    "n_repairs": 46,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 46
+   }
+  },
+  {
+   "seed": 1025,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9936787944117144,
+     "on": 0.8670909028585632,
+     "forced_cost": 0.22351847501986277,
+     "r_forced_cost": 1328.4415320453536
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.8688349840430744,
+     "forced_cost": 0.2152037511066541,
+     "r_forced_cost": 1581.5792203564322
+    }
+   },
+   "info": {
+    "n_repairs": 72,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1025,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.8382278971038808,
+     "forced_cost": 0.26161241945550484,
+     "r_forced_cost": 1554.8459843092567
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.8382278971038808,
+     "forced_cost": 0.25044730145439703,
+     "r_forced_cost": 1840.591744975258
+    }
+   },
+   "info": {
+    "n_repairs": 108,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 84
+   }
+  },
+  {
+   "seed": 1025,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9962580368110201,
+     "on": 0.7886571933998305,
+     "forced_cost": 0.33814455357498396,
+     "r_forced_cost": 2009.7008480575291
+    },
+    "B|PA": {
+     "off_10": 0.9978383382080915,
+     "on": 0.7892385537946676,
+     "forced_cost": 0.3240893271559685,
+     "r_forced_cost": 2381.8030249628328
+    }
+   },
+   "info": {
+    "n_repairs": 221,
+    "n_fallback_owner_moves": 21,
+    "n_distinct_owner": 267,
+    "players_2plus": 99
+   }
+  },
+  {
+   "seed": 1025,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.0044615734897438765,
+     "r_forced_cost": 26.516553146318657
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.004450789293834552,
+     "r_forced_cost": 32.709819532025584
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1025,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.0076545306438176,
+     "r_forced_cost": 45.49331510362862
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.007254695348147787,
+     "r_forced_cost": 53.31633558264793
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1025,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9905181916175715,
+     "forced_cost": 0.03475573030381902,
+     "r_forced_cost": 206.56438179464814
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.033839653358360505,
+     "r_forced_cost": 248.694979991884
+    }
+   },
+   "info": {
+    "n_repairs": 3,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1025,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.992098493014643,
+     "forced_cost": 0.0140290101803165,
+     "r_forced_cost": 83.37887852609668
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9905181916175715,
+     "forced_cost": 0.01348312896145388,
+     "r_forced_cost": 99.0904502415158
+    }
+   },
+   "info": {
+    "n_repairs": 4,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  },
+  {
+   "seed": 1026,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 1.0,
+     "forced_cost": 0.002657979411754591,
+     "r_forced_cost": 4.436557793807852
+    },
+    "B|PA": {
+     "off_10": 0.9978383382080915,
+     "on": 1.0,
+     "forced_cost": 0.0028078571602369595,
+     "r_forced_cost": 5.691648762759565
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1026,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9976244676709197,
+     "on": 0.9770018709352937,
+     "forced_cost": 0.03961503952979366,
+     "r_forced_cost": 66.12331592963423
+    },
+    "B|PA": {
+     "off_10": 0.9960441662738482,
+     "on": 0.9770018709352937,
+     "forced_cost": 0.038158314086371777,
+     "r_forced_cost": 77.34856467569038
+    }
+   },
+   "info": {
+    "n_repairs": 10,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 10
+   }
+  },
+  {
+   "seed": 1026,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9589121636761437,
+     "forced_cost": 0.05863103796443334,
+     "r_forced_cost": 97.86380860957829
+    },
+    "B|PA": {
+     "off_10": 0.9962580368110201,
+     "on": 0.9604924650732153,
+     "forced_cost": 0.05479494223002343,
+     "r_forced_cost": 111.07173454744941
+    }
+   },
+   "info": {
+    "n_repairs": 19,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 25
+   }
+  },
+  {
+   "seed": 1026,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9130834231610734,
+     "forced_cost": 0.16963576354793972,
+     "r_forced_cost": 283.14698960754953
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9162440259552161,
+     "forced_cost": 0.164117460531587,
+     "r_forced_cost": 332.67324079370854
+    }
+   },
+   "info": {
+    "n_repairs": 48,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 45
+   }
+  },
+  {
+   "seed": 1026,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.8688349840430744,
+     "forced_cost": 0.21755011918454578,
+     "r_forced_cost": 363.1230823473125
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.8672546826460029,
+     "forced_cost": 0.20632238137135886,
+     "r_forced_cost": 418.2244536124478
+    }
+   },
+   "info": {
+    "n_repairs": 71,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1026,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9960441662738482,
+     "on": 0.8374326661718717,
+     "forced_cost": 0.2363992180666289,
+     "r_forced_cost": 394.58499517543254
+    },
+    "B|PA": {
+     "off_10": 0.9960441662738484,
+     "on": 0.838014026566709,
+     "forced_cost": 0.22389382126944773,
+     "r_forced_cost": 453.84252762708945
+    }
+   },
+   "info": {
+    "n_repairs": 105,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 84
+   }
+  },
+  {
+   "seed": 1026,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.7860779510005247,
+     "forced_cost": 0.3295602233319015,
+     "r_forced_cost": 550.0843877443846
+    },
+    "B|PA": {
+     "off_10": 0.9946777354139488,
+     "on": 0.7854965906056876,
+     "forced_cost": 0.3139481936770078,
+     "r_forced_cost": 636.3866629033024
+    }
+   },
+   "info": {
+    "n_repairs": 180,
+    "n_fallback_owner_moves": 14,
+    "n_distinct_owner": 266,
+    "players_2plus": 102
+   }
+  },
+  {
+   "seed": 1026,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9984196986029287,
+     "forced_cost": 0.007913259069846001,
+     "r_forced_cost": 13.208390947456822
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9984196986029287,
+     "forced_cost": 0.007487855299880296,
+     "r_forced_cost": 15.178208833703533
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1026,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.009749407426402212,
+     "r_forced_cost": 16.27319207640517
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.008862324945183608,
+     "r_forced_cost": 17.96431867110031
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1026,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.010282712070209468,
+     "r_forced_cost": 17.16335580886054
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9936787944117144,
+     "forced_cost": 0.009597590852194937,
+     "r_forced_cost": 19.454734689836517
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1026,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9905181916175715,
+     "forced_cost": 0.0150055029184969,
+     "r_forced_cost": 25.046386976759056
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9905181916175715,
+     "forced_cost": 0.013785167069467443,
+     "r_forced_cost": 27.94313407621735
+    }
+   },
+   "info": {
+    "n_repairs": 6,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  },
+  {
+   "seed": 1027,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 1.0,
+     "forced_cost": 0.0,
+     "r_forced_cost": 0.0
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 1.0,
+     "forced_cost": 0.0,
+     "r_forced_cost": 0.0
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1027,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9922235245111706,
+     "on": 0.9779550228403062,
+     "forced_cost": 0.03092186114515515,
+     "r_forced_cost": 75.15238399191763
+    },
+    "B|PA": {
+     "off_10": 0.993803825908242,
+     "on": 0.9779550228403062,
+     "forced_cost": 0.029734126441500384,
+     "r_forced_cost": 77.33018415863059
+    }
+   },
+   "info": {
+    "n_repairs": 9,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 10
+   }
+  },
+  {
+   "seed": 1027,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9545888400923269,
+     "forced_cost": 0.0653267151185832,
+     "r_forced_cost": 158.76982166358354
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9514282372981842,
+     "forced_cost": 0.06125263664235927,
+     "r_forced_cost": 159.30105365881107
+    }
+   },
+   "info": {
+    "n_repairs": 26,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 24
+   }
+  },
+  {
+   "seed": 1027,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9976244676709197,
+     "on": 0.9162440259552161,
+     "forced_cost": 0.13090613904944418,
+     "r_forced_cost": 318.15382594732984
+    },
+    "B|PA": {
+     "off_10": 0.9976244676709197,
+     "on": 0.9162440259552161,
+     "forced_cost": 0.12313116665898746,
+     "r_forced_cost": 320.2298817199106
+    }
+   },
+   "info": {
+    "n_repairs": 36,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 48
+   }
+  },
+  {
+   "seed": 1027,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.8735758882342886,
+     "forced_cost": 0.18909571907532252,
+     "r_forced_cost": 459.57757925586594
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.8735758882342884,
+     "forced_cost": 0.18050964550389104,
+     "r_forced_cost": 469.4553296088242
+    }
+   },
+   "info": {
+    "n_repairs": 76,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1027,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.8372289561016464,
+     "forced_cost": 0.23760174377801974,
+     "r_forced_cost": 577.4664533202816
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.8403895588957893,
+     "forced_cost": 0.22535454133471206,
+     "r_forced_cost": 586.0844177374009
+    }
+   },
+   "info": {
+    "n_repairs": 115,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 87
+   }
+  },
+  {
+   "seed": 1027,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.7860779510005248,
+     "forced_cost": 0.30799733546913005,
+     "r_forced_cost": 748.5556550107649
+    },
+    "B|PA": {
+     "off_10": 0.9978383382080915,
+     "on": 0.7876582523975961,
+     "forced_cost": 0.29324533293745836,
+     "r_forced_cost": 762.6494642217687
+    }
+   },
+   "info": {
+    "n_repairs": 168,
+    "n_fallback_owner_moves": 12,
+    "n_distinct_owner": 266,
+    "players_2plus": 103
+   }
+  },
+  {
+   "seed": 1027,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9938825044819398,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.012605059440814914,
+     "r_forced_cost": 30.63529271055835
+    },
+    "B|PA": {
+     "off_10": 0.9946777354139488,
+     "on": 0.9984196986029287,
+     "forced_cost": 0.011536735163572384,
+     "r_forced_cost": 30.003836048239535
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1027,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9962580368110201,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.014954171538639965,
+     "r_forced_cost": 36.344566598927386
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.014477282427499894,
+     "r_forced_cost": 37.65138076067795
+    }
+   },
+   "info": {
+    "n_repairs": 2,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1027,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.992098493014643,
+     "forced_cost": 0.012790170226918767,
+     "r_forced_cost": 31.085185322552764
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9920984930146429,
+     "forced_cost": 0.012130708485491358,
+     "r_forced_cost": 31.54859528169728
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1027,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9968393972058572,
+     "on": 0.992098493014643,
+     "forced_cost": 0.021387485708241057,
+     "r_forced_cost": 51.980071025550735
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.992098493014643,
+     "forced_cost": 0.020581062696673907,
+     "r_forced_cost": 53.52561379751119
+    }
+   },
+   "info": {
+    "n_repairs": 5,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  },
+  {
+   "seed": 1028,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9975,
+     "on": 1.0,
+     "forced_cost": 9.722566799583138e-05,
+     "r_forced_cost": 0.05524849946903286
+    },
+    "B|PA": {
+     "off_10": 0.9975457890972218,
+     "on": 1.0,
+     "forced_cost": 0.000159316049926318,
+     "r_forced_cost": 0.12407058286638913
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1028,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9810363832351433,
+     "forced_cost": 0.028091041487393067,
+     "r_forced_cost": 15.962738263391088
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9810363832351433,
+     "forced_cost": 0.02624174736032392,
+     "r_forced_cost": 20.43628932511008
+    }
+   },
+   "info": {
+    "n_repairs": 15,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 10
+   }
+  },
+  {
+   "seed": 1028,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9589121636761437,
+     "forced_cost": 0.06995382209203693,
+     "r_forced_cost": 39.75126921086754
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9589121636761437,
+     "forced_cost": 0.06679900383691993,
+     "r_forced_cost": 52.021069721310795
+    }
+   },
+   "info": {
+    "n_repairs": 24,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 24
+   }
+  },
+  {
+   "seed": 1028,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9146637245581448,
+     "forced_cost": 0.11699868325525183,
+     "r_forced_cost": 66.48451816224572
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9146637245581448,
+     "forced_cost": 0.11087546983118415,
+     "r_forced_cost": 86.34650541425013
+    }
+   },
+   "info": {
+    "n_repairs": 49,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 47
+   }
+  },
+  {
+   "seed": 1028,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9962580368110201,
+     "on": 0.8650930208540945,
+     "forced_cost": 0.19489145119428486,
+     "r_forced_cost": 110.74709446365699
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.8688349840430744,
+     "forced_cost": 0.18567676624125207,
+     "r_forced_cost": 144.5995216612062
+    }
+   },
+   "info": {
+    "n_repairs": 77,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1028,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.8419698602928607,
+     "forced_cost": 0.21741609954855792,
+     "r_forced_cost": 123.54672904878079
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.8403895588957893,
+     "forced_cost": 0.2070362832797638,
+     "r_forced_cost": 161.23367578402284
+    }
+   },
+   "info": {
+    "n_repairs": 103,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 88
+   }
+  },
+  {
+   "seed": 1028,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 0.991885186303079,
+     "on": 0.7832854018896552,
+     "forced_cost": 0.32671599080692126,
+     "r_forced_cost": 185.65640757947443
+    },
+    "B|PA": {
+     "off_10": 0.9921777354139487,
+     "on": 0.7833640804633529,
+     "forced_cost": 0.31006375026421035,
+     "r_forced_cost": 241.46839090481447
+    }
+   },
+   "info": {
+    "n_repairs": 178,
+    "n_fallback_owner_moves": 13,
+    "n_distinct_owner": 264,
+    "players_2plus": 109
+   }
+  },
+  {
+   "seed": 1028,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 0.995676676416183,
+     "on": 0.9984196986029287,
+     "forced_cost": 0.003520971482397457,
+     "r_forced_cost": 2.000792538489489
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.9984196986029287,
+     "forced_cost": 0.0030450899667520824,
+     "r_forced_cost": 2.3714251466205427
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1028,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.009812586859223685,
+     "r_forced_cost": 5.576003858414249
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.009247588592068985,
+     "r_forced_cost": 7.201745883463774
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1028,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 0.995676676416183,
+     "on": 0.991303262082634,
+     "forced_cost": 0.010121966307315237,
+     "r_forced_cost": 5.751808773165245
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9915171326198059,
+     "forced_cost": 0.008918634705305855,
+     "r_forced_cost": 6.94556641827027
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1028,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9905181916175717,
+     "forced_cost": 0.017161423745426375,
+     "r_forced_cost": 9.751981449257713
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9905181916175717,
+     "forced_cost": 0.016536817241923886,
+     "r_forced_cost": 12.878379516121287
+    }
+   },
+   "info": {
+    "n_repairs": 4,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  },
+  {
+   "seed": 1029,
+   "scen": "o2o",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9962580368110201,
+     "on": 1.0,
+     "forced_cost": 0.0002404868937259036,
+     "r_forced_cost": 1.0433231788082622
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 1.0,
+     "forced_cost": 8.909893838888682e-05,
+     "r_forced_cost": 0.7442231706527189
+    }
+   },
+   "info": {
+    "n_repairs": 0,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 400,
+    "players_2plus": 0
+   }
+  },
+  {
+   "seed": 1029,
+   "scen": "u390",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9978383382080915,
+     "on": 0.9715545748527148,
+     "forced_cost": 0.035643777005796164,
+     "r_forced_cost": 154.63619723412168
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9731348762497863,
+     "forced_cost": 0.03342219778758914,
+     "r_forced_cost": 279.1680176827373
+    }
+   },
+   "info": {
+    "n_repairs": 7,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 390,
+    "players_2plus": 10
+   }
+  },
+  {
+   "seed": 1029,
+   "scen": "u375",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.9589121636761437,
+     "forced_cost": 0.07381883156539501,
+     "r_forced_cost": 320.2540346855662
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9573318622790724,
+     "forced_cost": 0.07037220027986894,
+     "r_forced_cost": 587.8029858167713
+    }
+   },
+   "info": {
+    "n_repairs": 29,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 375,
+    "players_2plus": 25
+   }
+  },
+  {
+   "seed": 1029,
+   "scen": "u350",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9188232683545219,
+     "forced_cost": 0.11899413931777034,
+     "r_forced_cost": 516.2416203606892
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9194046287493589,
+     "forced_cost": 0.11222993346738917,
+     "r_forced_cost": 937.4311123965299
+    }
+   },
+   "info": {
+    "n_repairs": 42,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 350,
+    "players_2plus": 48
+   }
+  },
+  {
+   "seed": 1029,
+   "scen": "d80",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9952590958087859,
+     "on": 0.8645116604592574,
+     "forced_cost": 0.1637972792390056,
+     "r_forced_cost": 710.6146011040452
+    },
+    "B|PA": {
+     "off_10": 0.9968393972058572,
+     "on": 0.8704152854401457,
+     "forced_cost": 0.1564510882342053,
+     "r_forced_cost": 1306.8003619698713
+    }
+   },
+   "info": {
+    "n_repairs": 75,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 320,
+    "players_2plus": 80
+   }
+  },
+  {
+   "seed": 1029,
+   "scen": "u300",
+   "res": {
+    "B|E0": {
+     "off_10": 1.0,
+     "on": 0.8372289561016464,
+     "forced_cost": 0.23453933419365888,
+     "r_forced_cost": 1017.5204141702632
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.8403895588957891,
+     "forced_cost": 0.2243564166839183,
+     "r_forced_cost": 1873.9981283729226
+    }
+   },
+   "info": {
+    "n_repairs": 93,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 300,
+    "players_2plus": 88
+   }
+  },
+  {
+   "seed": 1029,
+   "scen": "wr",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9905974340168774,
+     "on": 0.7871561344020648,
+     "forced_cost": 0.26647051170758507,
+     "r_forced_cost": 1156.0499494425296
+    },
+    "B|PA": {
+     "off_10": 0.9921777354139487,
+     "on": 0.7877374947969018,
+     "forced_cost": 0.2542050240342203,
+     "r_forced_cost": 2123.3167577919744
+    }
+   },
+   "info": {
+    "n_repairs": 197,
+    "n_fallback_owner_moves": 16,
+    "n_distinct_owner": 267,
+    "players_2plus": 100
+   }
+  },
+  {
+   "seed": 1029,
+   "scen": "d1",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.004005522339524171,
+     "r_forced_cost": 17.37747215789218
+    },
+    "B|PA": {
+     "off_10": 1.0,
+     "on": 0.9968393972058572,
+     "forced_cost": 0.003768440358732151,
+     "r_forced_cost": 31.476925347307162
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 399,
+    "players_2plus": 1
+   }
+  },
+  {
+   "seed": 1029,
+   "scen": "d2",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9962580368110201,
+     "on": 0.9952590958087858,
+     "forced_cost": 0.010110568294780955,
+     "r_forced_cost": 43.86347251377331
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9952590958087858,
+     "forced_cost": 0.009601163656533452,
+     "r_forced_cost": 80.19633665256121
+    }
+   },
+   "info": {
+    "n_repairs": 1,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 398,
+    "players_2plus": 2
+   }
+  },
+  {
+   "seed": 1029,
+   "scen": "d3",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9962580368110201,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.008682423195041407,
+     "r_forced_cost": 37.66763846155272
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9952590958087859,
+     "forced_cost": 0.008579725204884637,
+     "r_forced_cost": 71.66449354804784
+    }
+   },
+   "info": {
+    "n_repairs": 3,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 397,
+    "players_2plus": 3
+   }
+  },
+  {
+   "seed": 1029,
+   "scen": "d5",
+   "res": {
+    "B|E0": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9889378902205002,
+     "forced_cost": 0.02320897095342219,
+     "r_forced_cost": 100.68930151175572
+    },
+    "B|PA": {
+     "off_10": 0.9984196986029287,
+     "on": 0.9889378902205002,
+     "forced_cost": 0.022064004642966036,
+     "r_forced_cost": 184.29561327671894
+    }
+   },
+   "info": {
+    "n_repairs": 3,
+    "n_fallback_owner_moves": 0,
+    "n_distinct_owner": 395,
+    "players_2plus": 5
+   }
+  }
+ ],
+ "pseudo_forced_cost": {
+  "1002": {
+   "E0": [
+    0.0022882918541405127,
+    0.0005560753887278614
+   ],
+   "PA": [
+    0.00183579618228566,
+    0.0007272420926413326
+   ]
+  },
+  "1003": {
+   "E0": [
+    0.0004065672904088657,
+    2.602795919066536e-05
+   ],
+   "PA": [
+    0.0005150778351751018,
+    0.0003772592135266667
+   ]
+  },
+  "1000": {
+   "E0": [
+    0.0032996333861819225,
+    0.00023455274701696116
+   ],
+   "PA": [
+    0.0026925625824698353,
+    0.00017986817046700078
+   ]
+  },
+  "1001": {
+   "E0": [
+    0.0006992734513770277,
+    2.6801556080708332e-05
+   ],
+   "PA": [
+    0.0004550546122703075,
+    0.0
+   ]
+  },
+  "1004": {
+   "E0": [
+    0.0017316041348884813,
+    8.929609661446569e-05
+   ],
+   "PA": [
+    0.0015559558553081105,
+    0.0
+   ]
+  },
+  "1005": {
+   "E0": [
+    0.000726615592573685,
+    3.15009136417449e-05
+   ],
+   "PA": [
+    0.0008324428172974952,
+    0.0005094235666546143
+   ]
+  },
+  "1006": {
+   "E0": [
+    0.001901138919380564,
+    0.0005711626769421513
+   ],
+   "PA": [
+    0.0017609382944448854,
+    0.00042034340209796294
+   ]
+  },
+  "1007": {
+   "E0": [
+    0.0006705261238366523,
+    0.0008696999096873409
+   ],
+   "PA": [
+    0.0004134872521767047,
+    0.000725293442840686
+   ]
+  },
+  "1008": {
+   "E0": [
+    0.002242799601834717,
+    0.000492571664503405
+   ],
+   "PA": [
+    0.0017882605247462535,
+    0.0006454947052486981
+   ]
+  },
+  "1009": {
+   "E0": [
+    0.00015405322318475244,
+    0.0008139485072683855
+   ],
+   "PA": [
+    0.0002444208092456951,
+    0.0006211820109823707
+   ]
+  },
+  "1010": {
+   "E0": [
+    0.00023624739759460888,
+    0.00010622434198249265
+   ],
+   "PA": [
+    0.00010684516199702288,
+    0.00040153445717468314
+   ]
+  },
+  "1011": {
+   "E0": [
+    0.0004263064291961888,
+    0.0
+   ],
+   "PA": [
+    0.0004739505480117578,
+    0.0003039544222884524
+   ]
+  },
+  "1012": {
+   "E0": [
+    7.094720775199959e-05,
+    0.00011485277567373053
+   ],
+   "PA": [
+    0.00016483686312043555,
+    0.0006286674042012314
+   ]
+  },
+  "1013": {
+   "E0": [
+    0.0,
+    0.0011255350452244578
+   ],
+   "PA": [
+    0.0,
+    0.0012276046536587044
+   ]
+  },
+  "1014": {
+   "E0": [
+    0.00012492541343802678,
+    0.0006418400586659873
+   ],
+   "PA": [
+    0.00029700904956956486,
+    0.0004737220822424465
+   ]
+  },
+  "1015": {
+   "E0": [
+    0.0025274212584119977,
+    0.0
+   ],
+   "PA": [
+    0.0022630097557910533,
+    0.0001208052918317043
+   ]
+  },
+  "1016": {
+   "E0": [
+    0.0026644366119045666,
+    0.0
+   ],
+   "PA": [
+    0.002205775137074838,
+    0.00011851185075942961
+   ]
+  },
+  "1017": {
+   "E0": [
+    0.00025104848723199013,
+    1.6838721051208315e-05
+   ],
+   "PA": [
+    0.00015661671585702697,
+    5.804563881139785e-05
+   ]
+  },
+  "1018": {
+   "E0": [
+    0.00022971476807381598,
+    0.00011237441716066387
+   ],
+   "PA": [
+    8.677707473074392e-05,
+    0.0001235584777636406
+   ]
+  },
+  "1019": {
+   "E0": [
+    0.0021161850122449265,
+    5.1284328689075176e-05
+   ],
+   "PA": [
+    0.0018069958151057496,
+    0.00033062811214732644
+   ]
+  },
+  "1020": {
+   "E0": [
+    0.002493277309254699,
+    0.0
+   ],
+   "PA": [
+    0.0024331463638724983,
+    8.267429898587253e-05
+   ]
+  },
+  "1021": {
+   "E0": [
+    6.667395385918317e-05,
+    0.000632866984437937
+   ],
+   "PA": [
+    0.0001100667202633443,
+    0.0004268846252728642
+   ]
+  },
+  "1022": {
+   "E0": [
+    0.0023785256372852587,
+    0.0005572104743935585
+   ],
+   "PA": [
+    0.0020582145620579467,
+    0.00044693115105373297
+   ]
+  },
+  "1023": {
+   "E0": [
+    0.0019060218143978436,
+    2.99098995439534e-05
+   ],
+   "PA": [
+    0.0014537981693154866,
+    0.00020550221221286635
+   ]
+  },
+  "1024": {
+   "E0": [
+    3.912565571216109e-05,
+    0.00012230940131352397
+   ],
+   "PA": [
+    0.0,
+    0.0004130448355754482
+   ]
+  },
+  "1025": {
+   "E0": [
+    0.00020615483927375166,
+    0.00013035748682872937
+   ],
+   "PA": [
+    0.00013893157627713676,
+    0.0001332062317273902
+   ]
+  },
+  "1026": {
+   "E0": [
+    0.0011369552753731568,
+    6.126169160261874e-05
+   ],
+   "PA": [
+    0.0009866586211745032,
+    0.0
+   ]
+  },
+  "1027": {
+   "E0": [
+    0.0006988638165717248,
+    0.00012404716782181578
+   ],
+   "PA": [
+    0.0005751516398101408,
+    0.00019386570484031417
+   ]
+  },
+  "1028": {
+   "E0": [
+    0.002894655423378677,
+    0.0006249213589854124
+   ],
+   "PA": [
+    0.0020844212008467354,
+    0.00048373067279900204
+   ]
+  },
+  "1029": {
+   "E0": [
+    0.00019790118713149896,
+    0.00026310054006217884
+   ],
+   "PA": [
+    6.167525425014086e-05,
+    0.00017776619799796058
+   ]
+  }
+ },
+ "lda_p1_train": {
+  "1002": [
+   526,
+   69822
+  ],
+  "1003": [
+   526,
+   69941
+  ],
+  "1000": [
+   526,
+   69951
+  ],
+  "1001": [
+   526,
+   69895
+  ],
+  "1004": [
+   526,
+   69960
+  ],
+  "1005": [
+   526,
+   69893
+  ],
+  "1006": [
+   526,
+   69926
+  ],
+  "1007": [
+   526,
+   69971
+  ],
+  "1008": [
+   526,
+   69945
+  ],
+  "1009": [
+   526,
+   69995
+  ],
+  "1010": [
+   526,
+   69942
+  ],
+  "1011": [
+   526,
+   69929
+  ],
+  "1012": [
+   526,
+   69873
+  ],
+  "1013": [
+   526,
+   69863
+  ],
+  "1014": [
+   526,
+   69900
+  ],
+  "1015": [
+   526,
+   69847
+  ],
+  "1016": [
+   526,
+   69948
+  ],
+  "1017": [
+   526,
+   69924
+  ],
+  "1018": [
+   526,
+   69896
+  ],
+  "1019": [
+   526,
+   69900
+  ],
+  "1020": [
+   526,
+   69933
+  ],
+  "1021": [
+   526,
+   69900
+  ],
+  "1022": [
+   526,
+   69949
+  ],
+  "1023": [
+   526,
+   69943
+  ],
+  "1024": [
+   526,
+   69964
+  ],
+  "1025": [
+   526,
+   69916
+  ],
+  "1026": [
+   526,
+   69941
+  ],
+  "1027": [
+   526,
+   69886
+  ],
+  "1028": [
+   526,
+   69901
+  ],
+  "1029": [
+   526,
+   69935
+  ]
+ },
+ "seconds_per_seed": {
+  "1002": 94.0,
+  "1003": 46.3,
+  "1000": 140.9,
+  "1001": 140.9,
+  "1004": 52.8,
+  "1005": 54.6,
+  "1006": 55.7,
+  "1007": 77.7,
+  "1008": 86.3,
+  "1009": 88.8,
+  "1010": 30.8,
+  "1011": 31.7,
+  "1012": 32.0,
+  "1013": 28.8,
+  "1014": 28.8,
+  "1015": 29.6,
+  "1016": 33.0,
+  "1017": 34.3,
+  "1018": 34.9,
+  "1019": 31.5,
+  "1020": 32.7,
+  "1021": 34.7,
+  "1022": 32.2,
+  "1023": 31.7,
+  "1024": 33.3,
+  "1025": 32.9,
+  "1026": 33.8,
+  "1027": 31.6,
+  "1028": 30.8,
+  "1029": 26.4
+ },
+ "seam_report_sha256": "8633df09a6f63a8e75a34de7f559e4c6df25994f066b1c13c1071ad42d0f2204",
+ "git_head": "5b2d599c7191d91c593816187f0cde5b4dd61619",
+ "env": {
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "executable": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\.venv\\Scripts\\python.exe"
+ },
+ "seconds": 504.8
+}

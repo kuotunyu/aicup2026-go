@@ -1,0 +1,44 @@
+{
+ "format": "c10-test02 checks summary v1",
+ "comp": "player",
+ "checks": {
+  "T1": {
+   "verdict": "PASS",
+   "consequence": "none; the raw files are used as they are",
+   "details_file": "t1.json",
+   "sha256": "cc0ddcf72f857ed4c5ab335cf14e17a4747fe0c82e4fa6db73ffca76ec0c42cd"
+  },
+  "T2": {
+   "verdict": "PASS",
+   "consequence": "none",
+   "details_file": "t2.json",
+   "sha256": "2e52086a45a91225804abae3f9d202d2b4ee2c61987e309a2ad142da6dba7161"
+  },
+  "T3": {
+   "verdict": "PASS",
+   "consequence": "none: no overlap declared (overlap of about 20% of the candidates or less is not detectable)",
+   "details_file": "t3.json",
+   "sha256": "db5c5f05196a93dae0d13ae0a906409cd064567526a0390a74282c7482e274d8"
+  },
+  "T4": {
+   "verdict": "PASS",
+   "consequence": "none (the rest of T4 is record-only)",
+   "details_file": "t4.json",
+   "sha256": "5953c8a7ee1df0c5f40a1ab100ceb5d16a5e9fad48f4d370d058847615e505ec"
+  },
+  "T5": {
+   "verdict": "RECORD_ONLY",
+   "consequence": "none (record-only)",
+   "details_file": "t5.json",
+   "sha256": "fdc05d47aebe4b460922606b6162bc4ded536033d3e05624e92f07c9aceb0936"
+  },
+  "T6": {
+   "verdict": "RECORD_ONLY",
+   "consequence": "none (descriptive; without an explicit official statement the one-to-one structure is not used)",
+   "details_file": "t6.json",
+   "sha256": "f22b92e553f84617ca30ace8573c04dbb06e90cb98b47b09dc4be365e0bf2016"
+  }
+ },
+ "updated": "2026-11-04T15:26:36+0800",
+ "git_head": "3de23e08e8a02fb9ced2259e0857cfd80a0e5062"
+}

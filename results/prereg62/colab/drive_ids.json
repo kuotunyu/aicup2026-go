@@ -1,0 +1,12 @@
+{
+ "C10/p62": "1WxV-UV5NuIIWFF-W_xKGY30ctZMCqHGV",
+ "C10/p62/overlay2_parts": "1Iz67zgiM49_J115P8TMwPXBWvQKRco87",
+ "parts": {"overlay2.part000": "1y3f0EBUGikWTsEt-xPo9KyoEpL3HTXFH", "overlay2.part001": "1P-x3It2H4ZUrbcuu_-TJ7kRvdIOLRf5b",
+           "overlay2.part002": "1-OOnRK0MpN8a5kOLhQ_zCMowsRPuBHM_", "overlay2.part003": "1kwCaTYtHUOuu8RJm6mv-PI01pO1sK_Kn",
+           "overlay2.part004": "1pR_q0LFbgJtMMqlo2ec9p4jLlGchOEb3", "overlay2.part005": "1KhL8ZaqPL2vdqUozad_HqKefDFXhIXYc",
+           "overlay2.part006": "1j0hcw5NH1z9koNkwDRM_IAM3xR_40LmB", "overlay2.part007": "1JjSgcOa1lczmBZxswmZQsYfqpwfo_2Vj",
+           "overlay2.part008": "1hOkydt1TGZrIsxwGV6WiMJLsydBiEZRa", "overlay2.part009": "1VAGP3WlLWHOaqi06z_p1DTOMd0WMyUW0"},
+ "notebooks": {"p62_S1.ipynb": "1VHEzg06YWRd7SZpS7IkNXG138IxilwTI", "p62_S2.ipynb": "1EX5UTOTEnVlCLiCctwzXIOEnKSq0T2H8",
+               "p62_X.ipynb": "1CvtgBhuWtUUyTcQ7Tj91EtI1zofwzeW_"},
+ "uploaded": "2026-11-21 00:47 (Taiwan), sizes checked against overlay2_parts_sha.txt"
+}

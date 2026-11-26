@@ -1,0 +1,354 @@
+{
+ "format": "c10-g11 rehearsal compare v1",
+ "rule_version": 2,
+ "created": "2026-10-10T10:11:41+00:00",
+ "results_dir": "data/test11/colab_results/rehearsal_nvidia-rtx-pro-6000-blackwell-server-edition",
+ "kit_id": "g11-kit-v1-de2a1ffa6727",
+ "input_id": "rehearsal",
+ "rows": {
+  "seam": [
+   0,
+   400
+  ],
+  "offgrid": [
+   4787,
+   5787
+  ]
+ },
+ "tool": {
+  "git_head": "a8d99dd5c6be6bb0bc4041569776766973f00b32",
+  "g11_gpu_fallback.py": "719b5ff6cdc728434afc5fecbcda6c8e1e3b6edcedf692a1125287e33de0252c",
+  "gpu_fallback_core.py": "980c8beeb0e0a3602988c2086257ef86d27c1b15639236a26d7bbc4ee1187c33"
+ },
+ "environment": {
+  "hs": {
+   "torch": "2.11.0+cu128",
+   "cudnn": "91900",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "python": "3.13.15",
+   "numpy": "2.5.3"
+  },
+  "p1": {
+   "torch": "2.11.0+cu128",
+   "cudnn": "91900",
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "python": "3.13.15",
+   "numpy": "2.5.3"
+  }
+ },
+ "stages": {
+  "hs": {
+   "sets": {
+    "seam": {
+     "chunks": 2,
+     "games": 400
+    },
+    "offgrid": {
+     "chunks": 5,
+     "games": 1000
+    }
+   },
+   "seam_t07_gpu_seam_record": {
+    "games": 400,
+    "counts_equal": true,
+    "moves_compared": 45153,
+    "max_abs_move": 0.017797470092773438,
+    "max_abs_profile_mean": 0.0006737887353454042,
+    "max_abs_lp_hs": 0.01692542998846136,
+    "tolerances": {
+     "move": 0.05,
+     "profile_mean": 0.002,
+     "lp_hs": 0.02
+    },
+    "lp_hs_review_line": 0.005,
+    "lp_hs_above_review_line": true,
+    "bitwise_equal_sums": false,
+    "bitwise_equal_moves": false,
+    "problems": [],
+    "passed": true
+   },
+   "offgrid_t07_fake_tests_compare": {
+    "games": 1000,
+    "equal": {
+     "failed": true,
+     "counts": true,
+     "n_moves": true,
+     "color": true
+    },
+    "max_abs_profile_mean": 0.0006878205440994378,
+    "max_abs_lp_hs": 0.010159608813140153,
+    "bitwise_equal_sums": false,
+    "passed": true,
+    "rule": "spec 9 item 2: failed / counts / n_moves equal, per game per profile mean log p <= 0.002"
+   }
+  },
+  "p1": {
+   "sets": {
+    "seam": {
+     "chunks": 2,
+     "games": 400
+    },
+    "offgrid": {
+     "chunks": 5,
+     "games": 1000
+    }
+   },
+   "seam_t08_gpu_seam_record": {
+    "games": 400,
+    "usable_games": 400,
+    "counts_equal": true,
+    "max_abs_std_feature": 0.011908188315704518,
+    "max_abs_lp_p1": 0.011400769331519456,
+    "tolerances": {
+     "std_feature": 0.05,
+     "lp_p1": 0.04
+    },
+    "lp_review_line": 0.005,
+    "lp_above_review_line": true,
+    "bitwise_equal_means": false,
+    "problems": [],
+    "passed": true,
+    "lp_definition": "lp_P1TO = log_softmax(W z + b) per game with the frozen p1_map.npz, before the x 4"
+   },
+   "seam_t09_gpu_seam_record": {
+    "max_abs_std_ex": 0.014212693323843562,
+    "max_abs_std_ex_all_44": 0.20660178798990603,
+    "frac_lowp_record_only": {
+     "features": [
+      "t_frac_lowp",
+      "o_frac_lowp"
+     ],
+     "max_abs_std": 0.20660178798990603,
+     "games_jumped": 10
+    },
+    "max_abs_std_x": 0.011921810528635515,
+    "max_abs_lp_p1e": 0.007057782262193335,
+    "lp_p1e_quantiles": {
+     "0.5": 0.001255514467754848,
+     "0.9": 0.002734348614431337,
+     "0.99": 0.0048187731902929595
+    },
+    "games_lp_above_review_line": 4,
+    "argmax_equal": 399,
+    "bitwise_equal_means": false,
+    "bitwise_equal_ex": false,
+    "games": 400,
+    "usable_games": 400,
+    "equal": {
+     "failed": true,
+     "counts": true,
+     "n_moves": true
+    },
+    "counts_equal": true,
+    "problems": [],
+    "passed": true,
+    "tolerances": {
+     "std_ex": 0.05,
+     "lp_p1e": 0.04
+    },
+    "std_ex_definition": "largest |difference| of the standardised EX over the 42 features other than t_frac_lowp / o_frac_lowp (recorded only; PREREG_09 rev 4)",
+    "lp_review_line": 0.005,
+    "lp_above_review_line": true,
+    "lp_definition": "lp_P1TO_E = log(mean of the 6 members' probabilities) per game with the frozen p1e_map.npz (numpy float64), before the x 4"
+   },
+   "offgrid_t08_fake_tests_compare": {
+    "games": 1000,
+    "equal": {
+     "failed": true,
+     "counts": true,
+     "n_moves": true,
+     "color": true
+    },
+    "max_abs_std_feature": 0.019417911243076347,
+    "max_abs_lp_p1": 0.013039979810137936,
+    "bitwise_equal_means": false,
+    "positions_per_s": 2327.4,
+    "positions": 221085,
+    "gpu_seconds": 95.0,
+    "validation_rows": [
+     4787,
+     5786
+    ],
+    "rows_contiguous": true,
+    "chunk_starts_val_rows": [
+     4787,
+     4987,
+     5187,
+     5387,
+     5587
+    ],
+    "chunk_boundaries_differ_from_val": true,
+    "passed": true,
+    "rule": "failed / counts / n_moves equal; standardised features <= 0.05; lp_P1TO <= 0.04 (PREREG_08 5.2, rev 4)"
+   },
+   "offgrid_t09_fake_tests_compare": {
+    "max_abs_std_ex": 0.014933881753894172,
+    "max_abs_std_ex_all_44": 0.31429523799450976,
+    "frac_lowp_record_only": {
+     "features": [
+      "t_frac_lowp",
+      "o_frac_lowp"
+     ],
+     "max_abs_std": 0.31429523799450976,
+     "games_jumped": 25
+    },
+    "max_abs_std_x": 0.01936626206563119,
+    "max_abs_lp_p1e": 0.014399703053448398,
+    "lp_p1e_quantiles": {
+     "0.5": 0.0011636709202265116,
+     "0.9": 0.0027443117321237056,
+     "0.99": 0.005042504660719225
+    },
+    "games_lp_above_review_line": 13,
+    "argmax_equal": 999,
+    "bitwise_equal_means": false,
+    "bitwise_equal_ex": false,
+    "games": 1000,
+    "usable_games": 1000,
+    "equal": {
+     "failed": true,
+     "counts": true,
+     "n_moves": true
+    },
+    "counts_equal": true,
+    "set": "private",
+    "report_mode": "rehearsal",
+    "fake_from_val": false,
+    "environment": {
+     "torch": "2.11.0+cu128",
+     "cudnn": 91900,
+     "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+     "driver": "580.82.07"
+    },
+    "positions_per_s": 2327.4,
+    "validation_rows": [
+     4787,
+     5786
+    ],
+    "rows_contiguous": true,
+    "chunk_starts_val_rows": [
+     4787,
+     4987,
+     5187,
+     5387,
+     5587
+    ],
+    "chunk_boundaries_differ_from_val": true,
+    "map_sha256": "ecc9c9b1747b7b7d40cf53869b6c67c8e6f776ba7498498737fe3eede8e2edba",
+    "rule": "validation games: only the P1 seams, the tol_E measurement and apply; never run content statistics"
+   }
+  }
+ },
+ "verdict": {
+  "hs": {
+   "allowed": true,
+   "rule_version": 2,
+   "checks": {
+    "seam_passed": true,
+    "counts_equal": true
+   },
+   "tolerances_now": {
+    "profile_mean": 0.002,
+    "lp_hs": 0.02
+   },
+   "offgrid_measured": {
+    "profile_mean": 0.0006878205440994378,
+    "lp_hs": 0.010159608813140153
+   },
+   "within_current_tolerance": {
+    "profile_mean": true,
+    "lp_hs": true
+   },
+   "record_only_offgrid_times_2_5": {
+    "profile_mean": 0.0017195513602485946,
+    "lp_hs": 0.025399022032850382
+   },
+   "record_only_times_2_5_within": {
+    "profile_mean": true,
+    "lp_hs": false
+   },
+   "rule": "PREREG_11 rev 2 (rule_version 2): allowed iff every seam passes with the pinned tolerances (same games and chunking as the test day) and every off-grid difference (x 1.0) <= the current tolerance; 2.5 x off-grid is recorded only; the tolerances are never changed (they live in the pinned test-day tools)"
+  },
+  "p1": {
+   "allowed": true,
+   "rule_version": 2,
+   "checks": {
+    "seam_passed": true,
+    "counts_equal": true
+   },
+   "tolerances_now": {
+    "std_feature": 0.05,
+    "lp_p1": 0.04,
+    "std_ex": 0.05,
+    "lp_p1e": 0.04
+   },
+   "offgrid_measured": {
+    "std_feature": 0.019417911243076347,
+    "lp_p1": 0.013039979810137936,
+    "std_ex": 0.014933881753894172,
+    "lp_p1e": 0.014399703053448398
+   },
+   "within_current_tolerance": {
+    "std_feature": true,
+    "lp_p1": true,
+    "std_ex": true,
+    "lp_p1e": true
+   },
+   "record_only_offgrid_times_2_5": {
+    "std_feature": 0.04854477810769087,
+    "lp_p1": 0.03259994952534484,
+    "std_ex": 0.037334704384735434,
+    "lp_p1e": 0.035999257633620996
+   },
+   "record_only_times_2_5_within": {
+    "std_feature": true,
+    "lp_p1": true,
+    "std_ex": true,
+    "lp_p1e": true
+   },
+   "rule": "PREREG_11 rev 2 (rule_version 2): allowed iff every seam passes with the pinned tolerances (same games and chunking as the test day) and every off-grid difference (x 1.0) <= the current tolerance; 2.5 x off-grid is recorded only; the tolerances are never changed (they live in the pinned test-day tools)"
+  }
+ },
+ "environment_full": {
+  "hs": {
+   "python": "3.13.15",
+   "torch": "2.11.0+cu128",
+   "numpy": "2.5.3",
+   "cuda": true,
+   "cudnn": 91900,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "driver": "580.82.07",
+   "record_only": {
+    "cuda_runtime": "12.8",
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+    "cpu_count": 48,
+    "nvidia_smi": [
+     {
+      "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "driver": "580.82.07"
+     }
+    ]
+   }
+  },
+  "p1": {
+   "python": "3.13.15",
+   "torch": "2.11.0+cu128",
+   "numpy": "2.5.3",
+   "cuda": true,
+   "cudnn": 91900,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "driver": "580.82.07",
+   "record_only": {
+    "cuda_runtime": "12.8",
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+    "cpu_count": 48,
+    "nvidia_smi": [
+     {
+      "name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "driver": "580.82.07"
+     }
+    ]
+   }
+  }
+ }
+}

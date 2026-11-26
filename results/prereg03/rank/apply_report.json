@@ -1,0 +1,145 @@
+{
+ "what": "PREREG_03 competition 2 apply: frozen configuration on the validation questions",
+ "created": "2026-09-29T02:00:36+08:00",
+ "seconds": 1.7,
+ "smoke": false,
+ "commit_check": {
+  "files": 1,
+  "git_head": "1218ba8909af26695bf4d83ec96cfe004099037e"
+ },
+ "arms_commit_check": {
+  "files": 21,
+  "git_head": "1218ba8909af26695bf4d83ec96cfe004099037e"
+ },
+ "combo": {
+  "id": "P01",
+  "sources": [
+   "C5",
+   "C6A"
+  ],
+  "pool": "log",
+  "calibrated": true,
+  "opening": true
+ },
+ "params": {
+  "a": 1.2517560085323471,
+  "gamma": 0.38222140520128767,
+  "w": 0.10059462598205321,
+  "beta": [
+   0.13862955563537602,
+   0.11884727782960357,
+   0.16053372337623695,
+   0.12167507827333235,
+   0.17002595681071003,
+   0.1038128247136447,
+   0.09187862359327999,
+   0.028174532822958277,
+   -0.2058248283344253
+  ],
+  "b": [
+   0.26105793911642894,
+   0.06500614139112475,
+   0.01747444625311858,
+   -0.07085553455700921,
+   -0.06786612504247366,
+   -0.14529073038101212,
+   -0.10220964355970355,
+   -0.10432002401262336,
+   -0.048259046172833844,
+   0.19526257696498345
+  ]
+ },
+ "questions": 1589,
+ "questions_without_parsed_game": 0,
+ "games": 19156,
+ "games_parsed": 19156,
+ "inputs_sha256": {
+  "val_p02e9_d4.npz": "ec0b729d805eb9f3458f7a497444b099b8ec47e5cec73703ae4b8bf9cf0a11b2",
+  "val_p03a_d4.npz": "1e4e5957442596358b087e5f4e69c1fcf9f22f2c7933cc2049066bfab3075ecd",
+  "val_keys.npz": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+  "frozen_config.json": "92f76190ce5ac338c05c82d288d7659cadf3c7984fc84b67dc7b99bccdc47502",
+  "questions": "73e51bbfd7b051e73cbb62af4b180c403d2422f122240c5e67e9c92303776db5",
+  "opening_val.npz": "75ffec64f9e949ac0be52ce9e72a4a19bb978a25de2b6ed9d355aac7a1a5ae85"
+ },
+ "p02_inputs": {
+  "sha256": {
+   "inner_keys.npz": "b686872d459161330af26132fc0ec2617d104be6cd72eae509250ffef0c03ab6",
+   "pseudo_inner.json": "3a51b3dd4edf8e5745f6a7ff52ca925d4a0eacd6a24950ee1b6e3b48fd0b7923",
+   "opening_inner.npz": "054689536524f7d8ea41a19d19b49ae47e7eedd128bd9cad98c429e5f80fdee5",
+   "players_split.csv": "69554875064ecbd83d790b3215c8ba8f9540f217ec4af3e4a8c43228ac2a3dfc",
+   "inner_p02e9_d4.npz": "d042fca41e04a365dd9f7f4ebc31d244d39b24e803a1191cb06ecaaf3d056de5",
+   "val_p02e9_d4.npz": "ec0b729d805eb9f3458f7a497444b099b8ec47e5cec73703ae4b8bf9cf0a11b2",
+   "val_keys.npz": "055d29416bb79050128eea1e6944eb58376a751dc86780eee927bb94aca7ec8c",
+   "opening_val.npz": "75ffec64f9e949ac0be52ce9e72a4a19bb978a25de2b6ed9d355aac7a1a5ae85"
+  },
+  "equal_to_prereg02_records": true,
+  "commit_check": {
+   "files": 8,
+   "git_head": "1218ba8909af26695bf4d83ec96cfe004099037e"
+  }
+ },
+ "output": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\prereg03\\rank\\rank_val_probs.csv",
+ "output_sha256": "ec5d386d5e703539f3e97f7a4c738669d62e5bc125f7272bc5c5076b0749ba3e",
+ "tool": {
+  "git_head": "1218ba8909af26695bf4d83ec96cfe004099037e",
+  "dirty_or_untracked": [],
+  "files_sha256_rule": "sha256 of the file with CRLF folded to LF",
+  "files_sha256": {
+   "p03_rank_fuse.py": "77abd7479d26f0f647a258b4a6d5d2e517808b4c187184f14ff599d70b8aca2f",
+   "p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+   "p02_rank_pseudo.py": "16e5bfdfb2995874ddb11bde1f7a9e786a478b14443453f675a4fb3a480bb098",
+   "p02_rank_opening.py": "a4195fece41aa3d50ecda82d1af93d9c04f49df5fd2157d69dd8a488dea93463",
+   "p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "decide.py": "cf66daf1231b3c2bd60c5b6484245627e133bd0f1cd7ff5557e978da3801d0e3"
+  }
+ },
+ "frozen_tools": {
+  "rule": "sha256 with CRLF folded to LF, working file == HEAD blob",
+  "files_sha256": {
+   "p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+   "p02_rank_pseudo.py": "16e5bfdfb2995874ddb11bde1f7a9e786a478b14443453f675a4fb3a480bb098",
+   "p02_rank_opening.py": "a4195fece41aa3d50ecda82d1af93d9c04f49df5fd2157d69dd8a488dea93463",
+   "p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "decide.py": "cf66daf1231b3c2bd60c5b6484245627e133bd0f1cd7ff5557e978da3801d0e3"
+  },
+  "equal_to_prereg02_frozen_config_record": true
+ },
+ "environment": {
+  "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1"
+ },
+ "gates": {
+  "selected": "P01",
+  "G1": {
+   "threshold": 0.01,
+   "delta": 0.0014213322955577423,
+   "passed": false
+  },
+  "G2": {
+   "ci95": [
+    -0.005331780666866534,
+    0.008098626478112875
+   ],
+   "se": 0.0032712557280763837,
+   "passed": false,
+   "bootstrap": "players within each level, 1000 draws, default_rng(0), paired"
+  },
+  "G3": {
+   "question_mean_difference": 0.0038580721827529392,
+   "passed": true,
+   "note": "mean of the per-question score differences on the inner eval rounds, >= 0 with 1e-12 slack"
+  },
+  "passed": false,
+  "reason": "a gate failed: not submitted, R20 unchanged"
+ },
+ "score_allowed": false,
+ "score_blocked_reasons": [
+  "gates not passed in tune (PREREG_03 2.4): do not score; record 'not submitted'"
+ ],
+ "score_blocked_single_colour": [],
+ "next": "PY tools/decide.py <out-dir>/rank_val_probs.csv <out-dir>; PY tools/check_submission.py rank <out-dir>/pred_B.csv --questions <question file>; commit; score (PREREG_03 3) only when score_allowed is true"
+}

@@ -1,0 +1,59 @@
+{
+ "what": "prereg05 exploration D2 (train-player lookup, conditional switch): variant list and every fixed choice, written BEFORE d2_probe.py was run (2026-10-01). Inner pseudo-questions only; design-stage simulation, not a validation result. No scoring, data/local never opened.",
+ "folder_note": "The probe spec names results/prereg05/explore/d2/; the workflow task names results/prereg05/explore/D2_train_player_lookup/. Everything is written to the latter (same three file names). Large intermediate arrays go to D2_train_player_lookup/_cache/ and are deleted after the report is written.",
+ "inputs_allowed": [
+  "data/prereg04/design_scratch/moves_fit.npz, moves_fit_moves.npy (720,307 fit games, 5,767 fit players)",
+  "data/prereg04/design_scratch/moves_inner.npz, moves_inner_moves.npy (73,556 inner games; re-ordered to inner_keys order by (rank, game_id))",
+  "results/prereg02/rank/dumps/inner_keys.npz, results/prereg05/explore/u1/u1_oof.npz",
+  "pseudo_inner (fit 25,400 / eval 127,200 questions) and the Q02 sources, read through u1_lib.load_inputs()"
+ ],
+ "forbidden": ["data/local/** (u1_lib guard)", "tools/score.py, results/score_ledger.csv", "any p02_player_* module (asserted at run time)", "external data / engines", "GPU"],
+ "tokens": {
+  "moves": "the encoded moves of design_scratch (made by results/prereg04/design/evidence/B_proxy/prep.py with p02_moves.MOVE_RE); only the first p02_moves.MAX_MOVES = 60 are used, i.e. exactly parse_moves(sgf)",
+  "orientations": {"raw": "as in the SGF", "canon": "p02_moves.canon(mv, 10): the symmetry (SYM_TABLE) making the first 10 points smallest, ties to the smallest index, applied to the whole game; implemented with numpy lookup tables built from p02_moves.SYM_TABLE and checked against p02_moves.canon_sym on a sample of games"},
+  "ranges": {"T": "the target player's first 10 moves (moves of the target colour, in order)", "G": "the whole game's first 10 moves"},
+  "kinds": ["T_pos: (i, point of the target's i-th move), i = 0..9", "T_set: point, once per distinct point among T", "G_pos: (i, point of the game's i-th move), i = 0..9", "G_set: point, once per distinct point among G", "G_bigram: (point_i, point_i+1) of the game's first 10 moves, i = 0..8, ordered pair, no index"],
+  "sets": {"no_colour": "the 5 kinds as above", "colour": "the same tokens prefixed with the target's colour (B or W)"},
+  "code": "int32 ((((prefix*5 + kind)*10 + i)*361 + a)*362 + b), prefix 0 = no colour, 1 = target B, 2 = target W; a, b = point y*19+x (b = 361 when unused); both sets are used together in one vector per orientation",
+  "weights": "count c of a token in a profile / question (summed over its games), weight (1 + ln c) * IDF, IDF = ln(5768 / (1 + df)) + 1, df = number of the 5,767 fit players having the token in their profile; rows L2-normalised; cosine",
+  "vocabulary_sha": "sha256 of the sorted int32 vocabulary codes, per orientation, recorded in the report (a separate implementation; not expected to equal T3's)"
+ },
+ "reference_set": {
+  "fit": "5,767 fit players, one profile each from all their fit games",
+  "inner": "636 inner bank players, profile from their non-bank inner games only: all inner games of the player minus every game used by any eval or fit question (asserted disjoint from all question games). Players with 0 non-bank games have no profile (excluded from the reference set).",
+  "main_subset": "players with >= 5 non-bank games (main analysis); all 636 players listed as well"
+ },
+ "scenarios": {
+  "pi1": "every existing inner profile in the reference set, including the question player's own",
+  "pi0": "the question player's own profile removed (every other profile stays)",
+  "pi05": "inner player kept iff the first byte of sha256('c10-p05-d2|' + player_id) is < 128; profiles of the other inner players are removed for every question",
+  "fit_questions": "fit questions use the same scenario as the eval questions they are fitted for"
+ },
+ "similarity": {
+  "per_player": "for each inner bank player: the bank games' token counts restricted to the columns they use; question counts = sum over the question's games; then 1 + ln, IDF, L2; cosine against every reference profile (dense product on those columns)",
+  "S2": "top-1 cosine minus top-2 cosine, separately raw and canon; the orientation with the larger S2 is used (tie -> raw); the top-1 player and the top-10 used by V2 come from that orientation"
+ },
+ "threshold": "theta_(f, bin) = numpy.percentile(S2, 99) (linear interpolation) over the pi0 S2 of the fit questions of the players NOT in fold f, n-bin 5-7 / 8-12 / 13-20; trigger = S2 > theta of the question's own fold and n-bin; the same theta is used in every scenario",
+ "variants": {
+  "V1": "E = 1[S2 > theta] * onehot(level of the top-1 player)",
+  "V2": "E = log(level distribution of the top-10 + 0.01), distribution weighted by softmax(cos / 0.02) over those 10 profiles, no threshold",
+  "V3": "E = V2 * 1[S2 > theta] (zero row when not triggered)"
+ },
+ "fusion": "Q02's generalised calibration with one extra E term: per fold f, p04_rank_fuse.gen_fit_record(mf[tr], Ef_Q02[tr] + [E_f[tr]], ...) on the fit questions of the other 4 folds, p04_rank_fuse.gen_logits on eval fold f (the same loop as gen_oof_record; it is run per fold because theta depends on the fold). Seam: the loop with no extra term must equal u1_oof.npz eval_P_Q02 exactly. 3 variants x 3 scenarios = 9 fits; sensitivity: the pi0 fold parameters applied to the pi1 E (no refit).",
+ "report": {
+  "comparison": "each variant x scenario vs Q02 on the same 127,200 eval questions, rule B",
+  "metrics": ["rank-balanced mean difference, PlayerBootstrap (p02_rank_fuse, 1000 draws, seed 0, players resampled within level) 95% CI of the paired difference", "question-mean difference", "10 levels", "n bins 5-7 / 8-12 / 13-20", "n = 5 / 10 / 15 / 20 subsets"],
+  "triggers": "per-question trigger rate by n bin and n = 5/10/15/20; among triggered questions: share whose top-1 is the player himself, share whose borrowed level is exact",
+  "pool_simulation": "400-question pools: 100 eval questions drawn without replacement for each of n = 5, 10, 15, 20, 1,000 pools, numpy default_rng(0); probability that >= 10% of the 400 questions trigger, per scenario (main subset; all players listed)",
+  "not_used": "single-colour pseudo-questions (they use non-bank games = the reference set itself, which would leak)"
+ },
+ "success_signal": {
+  "rule": "all three on the main subset (players with >= 5 non-bank games); fixed before running",
+  "c1": "pi1: V1 or V3 rank-balanced delta vs Q02 >= +0.03 and PlayerBootstrap 95% lower bound > 0",
+  "c2": "the same variant at pi0: delta >= -0.001 and per-question trigger rate <= 2%",
+  "c3": "400-question pools: P(>= 10% triggered) >= 0.9 at pi1 and <= 0.01 at pi0",
+  "if_all_pass": "report the value of the switch if 11/04 finds overlap; the user decides whether to register it as a conditional switch (it cannot be judged on the validation set and uses no scoring)",
+  "otherwise": "D2 is not done"
+ },
+ "budget": "CPU only, BLAS threads 4, one process; if the run would pass 55 minutes the fit profiles are capped at 100 games per player (recorded in the report)"
+}

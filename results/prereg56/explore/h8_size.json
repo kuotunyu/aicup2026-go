@@ -1,0 +1,27 @@
+{
+ "games": 94015,
+ "players": 300,
+ "rank_counts": [
+  30,
+  30,
+  30,
+  30,
+  30,
+  30,
+  30,
+  30,
+  30,
+  30
+ ],
+ "score_opponent_id_only_n10": 0.6319947259046965,
+ "score_opponent_id_only_n20": 0.668922081458758,
+ "score_opponent_id_only_n5": 0.5653920061448346,
+ "score_prior_only": 0.12043243646971667,
+ "tau_chosen_per_fold": [
+  50,
+  50,
+  50,
+  50,
+  50
+ ]
+}

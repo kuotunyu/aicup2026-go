@@ -1,0 +1,224 @@
+{
+ "format": "c10-g11 kit record v1",
+ "kit_id": "g11-kit-v1-de2a1ffa6727",
+ "created": "2026-10-10T08:37:55+00:00",
+ "zip": {
+  "file": "C10_gpu_kit_v1.zip",
+  "sha256": "98b6d1e745b0a6b4dd26076e4640b36bddeadd2c1ae730cdf9d60e566d09421c",
+  "bytes": 323898928
+ },
+ "manifest_sha256": "7cccfdc8d971560a4df5a7cd7553716d931b11baafac227937c179a5d1636d6f",
+ "manifest": {
+  "format": "c10-g11 kit v1",
+  "kit_id": "g11-kit-v1-de2a1ffa6727",
+  "files": {
+   "colab_gpu/gpu_fallback_core.py": {
+    "sha256": "980c8beeb0e0a3602988c2086257ef86d27c1b15639236a26d7bbc4ee1187c33",
+    "sha256_lf": "980c8beeb0e0a3602988c2086257ef86d27c1b15639236a26d7bbc4ee1187c33",
+    "bytes": 33734
+   },
+   "data/katago/b18c384nbt-humanv0.ckpt": {
+    "sha256": "84b23476b56a73a775a0f09bad7d1c5c435690adb343aa851e80bf198c0c8b27",
+    "bytes": 323752318,
+    "hashed_at_build": true
+   },
+   "results/prereg05/explore/u1/u1_lib.py": {
+    "sha256": "21ff628a5b8a0d94b7b8a5941084abb7849496ed5793cd46c243ed68f36618d0",
+    "sha256_lf": "225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7",
+    "bytes": 7160
+   },
+   "results/prereg07/explore/pilot_humansl/hs_lib.py": {
+    "sha256": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+    "sha256_lf": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+    "bytes": 29304
+   },
+   "results/prereg07/explore/pilot_humansl/pilot_fuse.py": {
+    "sha256": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+    "sha256_lf": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+    "bytes": 13821
+   },
+   "results/prereg07/explore/pilot_humansl/pilot_run.py": {
+    "sha256": "b0d127fd1d5a83af5b17ec3df1dccc85d94b11c3479d33cac07448a3796a3936",
+    "sha256_lf": "b0d127fd1d5a83af5b17ec3df1dccc85d94b11c3479d33cac07448a3796a3936",
+    "bytes": 20435
+   },
+   "results/prereg08/p1/p1_extract.py": {
+    "sha256": "6f8f51f98a30622ea169911b12e9013c0d8a0b9660a138b9598f75343f69f81a",
+    "sha256_lf": "2ee8eb127150e672b62bcb30b70c4fac46b8cd6e32c7e4eb19d54f746a6e3f9c",
+    "bytes": 20974
+   },
+   "results/prereg08/p1/p1_fuse.py": {
+    "sha256": "68fdbcef7a42b72247e9987943e7bf037b42a53e2895f0aa8b70203bdc256115",
+    "sha256_lf": "ad356c8ca9f26e1e761677afa07b5aa369ca31e5318f61eb6a6cbda33b970953",
+    "bytes": 17781
+   },
+   "results/prereg08/p1/p1_lib.py": {
+    "sha256": "6afe5c6165c36ba8b961aea8b5acb73d311487c5c8de895dbdbc7961c64ba5ee",
+    "sha256_lf": "062600168326f9eecd4ec1073e54881c475f8f276e376164eab20d373bbff511",
+    "bytes": 11925
+   },
+   "third_party/katago/CONTRIBUTORS": {
+    "sha256": "e5cf9928499901e7f48de830039e0e663bfcb680619bb2e6209df2600a54f7ac",
+    "sha256_lf": "6c6d353f188e27a511e269cdc7adc6ebf495ed6c215e89a95dada0a51effe5ee",
+    "bytes": 4655
+   },
+   "third_party/katago/LICENSE": {
+    "sha256": "15a978650e81d1d32161bd39e453cfd2d423cee724cc7ab6aad0df6fec4722bf",
+    "sha256_lf": "ead22455d923920cd152546d89e4f415c94d6b580aa109fda3b57a69c57c32e0",
+    "bytes": 2656
+   },
+   "third_party/katago/SOURCE.txt": {
+    "sha256": "2ab9a377b6b804da75655b459750b8933c090dbe300d328276bbb0871a6b7dac",
+    "sha256_lf": "039d5a1cbc815b4d69b68dc8c01163354820ac00b5070ef136c14a040b5ba20b",
+    "bytes": 4809
+   },
+   "third_party/katago/python/humanslnet_server.py": {
+    "sha256": "30f8ffede009fdbd2aa5ad93da324be4757949ebd643e1d813d047e1abb28bd7",
+    "sha256_lf": "87770956ad34a4444ffc97a9768c618291ce6ab6b59f01e1e695669bb0edd0c3",
+    "bytes": 2965
+   },
+   "third_party/katago/python/katago/__init__.py": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "sha256_lf": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+   },
+   "third_party/katago/python/katago/game/__init__.py": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "sha256_lf": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+   },
+   "third_party/katago/python/katago/game/board.py": {
+    "sha256": "a5f97aac50aaca43c5be6b74a063f1bc108c9b31098675402c9e4c73c3532087",
+    "sha256_lf": "0a759e6ca74fdf3f3c7b309de78d7f8056c838c9328d8cf3a54158912e42527d",
+    "bytes": 64182
+   },
+   "third_party/katago/python/katago/game/features.py": {
+    "sha256": "e89bcd51c68975de6a602fdd30de7da363e582408843993d3c28e4285f4a4fed",
+    "sha256_lf": "ed7fca1a3e4297ee06d72dfa31dd19a7b5370507f1d52c8176519ac7fd9c0077",
+    "bytes": 14594
+   },
+   "third_party/katago/python/katago/game/gamestate.py": {
+    "sha256": "2bea926000c4f51d80185a6e7c5e28b3dc231e29b5312805d21f1b7de00d18b3",
+    "sha256_lf": "8485d575dfcaee66105cf30708a67db7bbe8e615502680047d76466f931c5959",
+    "bytes": 13873
+   },
+   "third_party/katago/python/katago/game/sgfmetadata.py": {
+    "sha256": "d783c342180d897ae82598f5b424a6d7191db82aa6e0075ca2284f6d897f7b59",
+    "sha256_lf": "c11c0a7d8ea0f6aa31bbffb80b5ab56f3fe2712de2e02ad8e8f3b6bfbedab789",
+    "bytes": 7130
+   },
+   "third_party/katago/python/katago/train/LICENSE_AND_AUTHORS": {
+    "sha256": "30dd5cfccb3cc70a9ba0acb821596937595da8b650f995dd820b1822c1f444a3",
+    "sha256_lf": "8ea99ae9c36adc1317f42cf85cf73da053fbf48e802b6f002b905e9a8dbc86cf",
+    "bytes": 1710
+   },
+   "third_party/katago/python/katago/train/__init__.py": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "sha256_lf": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+   },
+   "third_party/katago/python/katago/train/load_model.py": {
+    "sha256": "132654e95fc5a3baaa035c07b7bb2b7f04e7a1df3714f106266214bfc5c7b429",
+    "sha256_lf": "7954930e88554c703daf4179d3dffa57d027624373cf35dcbba20d244a955960",
+    "bytes": 5258
+   },
+   "third_party/katago/python/katago/train/model_pytorch.py": {
+    "sha256": "a4cc51eafd66ed65599710c27236af2fb01013739908552f435c895816c1baaf",
+    "sha256_lf": "bde17b3fff4ebc97717969bf68f2843fb5fd1c781386048c7f19dae13d1d9517",
+    "bytes": 210296
+   },
+   "third_party/katago/python/katago/train/modelconfigs.py": {
+    "sha256": "50ba4d3926962d69914e72125ad80b29ac105d1a85d0601c9801437ed994783f",
+    "sha256_lf": "4ced5464586c18492247033cb9f9b5aa66e9d41e335d10baebe83ec1e68a9d2e",
+    "bytes": 66201
+   },
+   "third_party/katago/python/katago/train/trainloop_helpers.py": {
+    "sha256": "d75bc58be5beff1d867dafa0926673d00aaae0c256c18690570b2c8a11c8dc64",
+    "sha256_lf": "669bed8c0b6616e9c138db01a07b7a7b5ac4ffc89407c9206eb5c1538ad47456",
+    "bytes": 26464
+   }
+  },
+  "pins_lf": {
+   "results/prereg05/explore/u1/u1_lib.py": "225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7",
+   "results/prereg07/explore/pilot_humansl/hs_lib.py": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+   "results/prereg07/explore/pilot_humansl/pilot_fuse.py": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+   "results/prereg07/explore/pilot_humansl/pilot_run.py": "b0d127fd1d5a83af5b17ec3df1dccc85d94b11c3479d33cac07448a3796a3936",
+   "results/prereg08/p1/p1_extract.py": "2ee8eb127150e672b62bcb30b70c4fac46b8cd6e32c7e4eb19d54f746a6e3f9c",
+   "results/prereg08/p1/p1_fuse.py": "ad356c8ca9f26e1e761677afa07b5aa369ca31e5318f61eb6a6cbda33b970953",
+   "results/prereg08/p1/p1_lib.py": "062600168326f9eecd4ec1073e54881c475f8f276e376164eab20d373bbff511"
+  },
+  "constants": {
+   "profiles": [
+    "rank_20k",
+    "rank_15k",
+    "rank_12k",
+    "rank_10k",
+    "rank_8k",
+    "rank_6k",
+    "rank_4k",
+    "rank_2k",
+    "rank_1d",
+    "rank_2d",
+    "rank_3d",
+    "rank_5d",
+    "rank_7d",
+    "rank_9d"
+   ],
+   "hs_run": {
+    "precision": "fp16",
+    "batch": 1024,
+    "channels_last": true,
+    "group_batches": 16,
+    "workers": 8,
+    "cudnn_benchmark": true,
+    "sides": [
+     "target"
+    ],
+    "chunk": 200
+   },
+   "p1_run": {
+    "precision": "fp16",
+    "device": "cuda",
+    "batch": 1024,
+    "channels_last": true,
+    "group_batches": 4,
+    "workers": 20,
+    "chunk": 200,
+    "sides": [
+     "target",
+     "opponent"
+    ],
+    "cudnn_benchmark": true,
+    "pad": true
+   },
+   "hs_chunk_format": "c10-prereg07 pilot chunk v1",
+   "p1_chunk_format": "c10-test08 p1 chunk v1",
+   "ckpt_sha256": "84b23476b56a73a775a0f09bad7d1c5c435690adb343aa851e80bf198c0c8b27",
+   "ckpt_bytes": 323752318,
+   "katago_commit": "d91ea855110dae533f0aada947b2b7d78cc8a4e1",
+   "hs_lib_sha256": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+   "neutral_meta_sha256": "404bb7096c63136d7642f5abc98ec84d3c826290451ed649fcbe37c903307282",
+   "p1_code_record": {
+    "results/prereg05/explore/u1/u1_lib.py": "225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7",
+    "results/prereg07/explore/pilot_humansl/hs_lib.py": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+    "results/prereg07/explore/pilot_humansl/pilot_fuse.py": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+    "results/prereg08/p1/p1_extract.py": "2ee8eb127150e672b62bcb30b70c4fac46b8cd6e32c7e4eb19d54f746a6e3f9c",
+    "results/prereg08/p1/p1_fuse.py": "ad356c8ca9f26e1e761677afa07b5aa369ca31e5318f61eb6a6cbda33b970953",
+    "results/prereg08/p1/p1_lib.py": "062600168326f9eecd4ec1073e54881c475f8f276e376164eab20d373bbff511"
+   },
+   "sources": "tools/p07_rank_fuse.py (PROFILES, RUN, CKPT, PINNED), tools/p08_rank_fuse.py (RUN, NEUTRAL_META_SHA), tools/t07_rank.py CHUNK_FORMAT, tools/t08_rank.py FORMATS['chunk']; the P1 code record of the 4090 validation chunks"
+  },
+  "katago_sources": {
+   "source_txt_sha256": "039d5a1cbc815b4d69b68dc8c01163354820ac00b5070ef136c14a040b5ba20b",
+   "files": 15,
+   "differing": []
+  },
+  "rule": "files: raw SHA-256 of the kit copy (the working-tree bytes) and LF SHA-256; pins_lf: the registered LF SHA-256 (PREREG_07 1.2, PREREG_08 1.2) every Colab run re-checks"
+ },
+ "tool": {
+  "git_head": "8e64b3e13961b6bee12da2493e4c1bccc320613a",
+  "g11_gpu_fallback.py": "bb1bbc14800d9915c1b8fbb7a78d3e6d44c8294838906db793ca5af3522986f4",
+  "gpu_fallback_core.py": "980c8beeb0e0a3602988c2086257ef86d27c1b15639236a26d7bbc4ee1187c33"
+ },
+ "seconds": 1.1
+}

@@ -1,0 +1,421 @@
+{
+ "fetched_at": "2026-10-02T16:02:09+08:00",
+ "releases": {
+  "v1.15.0": {
+   "published_at": "2024-07-19T15:51:24Z",
+   "name": "New Human-like Play and Analysis",
+   "assets": [
+    {
+     "name": "b18c384nbt-humanv0.bin.gz",
+     "bytes": 99066230,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.15.0/b18c384nbt-humanv0.bin.gz"
+    },
+    {
+     "name": "b18c384nbt-humanv0.ckpt",
+     "bytes": 323752318,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.15.0/b18c384nbt-humanv0.ckpt"
+    },
+    {
+     "name": "katago-v1.15.0-cuda12.1-cudnn8.9.7-linux-x64.zip",
+     "bytes": 40622555,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.15.0/katago-v1.15.0-cuda12.1-cudnn8.9.7-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.15.0-eigen-linux-x64.zip",
+     "bytes": 40793539,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.15.0/katago-v1.15.0-eigen-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.15.0-eigenavx2-linux-x64.zip",
+     "bytes": 41250172,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.15.0/katago-v1.15.0-eigenavx2-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.15.0-eigenavx2-windows-x64.zip",
+     "bytes": 4666034,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.15.0/katago-v1.15.0-eigenavx2-windows-x64.zip"
+    },
+    {
+     "name": "katago-v1.15.0-opencl-linux-x64.zip",
+     "bytes": 41590042,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.15.0/katago-v1.15.0-opencl-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.15.0-trt8.6.1-cuda12.1-linux-x64.zip",
+     "bytes": 39977330,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.15.0/katago-v1.15.0-trt8.6.1-cuda12.1-linux-x64.zip"
+    }
+   ]
+  },
+  "v1.15.3": {
+   "published_at": "2024-08-06T01:56:18Z",
+   "name": "New Human-like Play and Analysis + more bugfixes",
+   "assets": [
+    {
+     "name": "katago-v1.15.3-cuda12.1-cudnn8.9.7-linux-x64.zip",
+     "bytes": 40629371,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.15.3/katago-v1.15.3-cuda12.1-cudnn8.9.7-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.15.3-cuda12.5-cudnn8.9.7-linux-x64.zip",
+     "bytes": 40711970,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.15.3/katago-v1.15.3-cuda12.5-cudnn8.9.7-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.15.3-eigen-linux-x64.zip",
+     "bytes": 40802725,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.15.3/katago-v1.15.3-eigen-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.15.3-eigenavx2-linux-x64.zip",
+     "bytes": 41257753,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.15.3/katago-v1.15.3-eigenavx2-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.15.3-eigenavx2-windows-x64.zip",
+     "bytes": 4667856,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.15.3/katago-v1.15.3-eigenavx2-windows-x64.zip"
+    },
+    {
+     "name": "katago-v1.15.3-opencl-linux-x64.zip",
+     "bytes": 41601523,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.15.3/katago-v1.15.3-opencl-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.15.3-trt10.2.0-cuda12.5-linux-x64.zip",
+     "bytes": 40073432,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.15.3/katago-v1.15.3-trt10.2.0-cuda12.5-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.15.3-trt8.6.1-cuda12.1-linux-x64.zip",
+     "bytes": 39982685,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.15.3/katago-v1.15.3-trt8.6.1-cuda12.1-linux-x64.zip"
+    }
+   ]
+  },
+  "v1.16.0": {
+   "published_at": "2025-04-10T04:13:38Z",
+   "name": "New Training Data Gen, Metal Support, Many Bugfixes",
+   "assets": [
+    {
+     "name": "katago-v1.16.0-cuda12.1-cudnn8.9.7-linux-x64.zip",
+     "bytes": 33450361,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.16.0/katago-v1.16.0-cuda12.1-cudnn8.9.7-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.16.0-cuda12.5-cudnn8.9.7-linux-x64.zip",
+     "bytes": 33535114,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.16.0/katago-v1.16.0-cuda12.5-cudnn8.9.7-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.16.0-cuda12.8-cudnn9.8.0-linux-x64.zip",
+     "bytes": 33599104,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.16.0/katago-v1.16.0-cuda12.8-cudnn9.8.0-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.16.0-eigen-linux-x64.zip",
+     "bytes": 34203408,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.16.0/katago-v1.16.0-eigen-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.16.0-eigenavx2-linux-x64.zip",
+     "bytes": 34252843,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.16.0/katago-v1.16.0-eigenavx2-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.16.0-eigenavx2-windows-x64.zip",
+     "bytes": 4692542,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.16.0/katago-v1.16.0-eigenavx2-windows-x64.zip"
+    },
+    {
+     "name": "katago-v1.16.0-opencl-linux-x64.zip",
+     "bytes": 34251672,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.16.0/katago-v1.16.0-opencl-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.16.0-trt10.2.0-cuda12.5-linux-x64.zip",
+     "bytes": 32980596,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.16.0/katago-v1.16.0-trt10.2.0-cuda12.5-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.16.0-trt10.9.0-cuda12.8-linux-x64.zip",
+     "bytes": 33025242,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.16.0/katago-v1.16.0-trt10.9.0-cuda12.8-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.16.0-trt8.6.1-cuda12.1-linux-x64.zip",
+     "bytes": 32924934,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.16.0/katago-v1.16.0-trt8.6.1-cuda12.1-linux-x64.zip"
+    }
+   ]
+  },
+  "v1.17.2": {
+   "published_at": "2026-08-05T15:28:53Z",
+   "name": "TensorRT bugfixes",
+   "assets": [
+    {
+     "name": "katago-v1.17.2-trt10.16.1-cuda13.2-linux-x64.zip",
+     "bytes": 39773222,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.17.2/katago-v1.17.2-trt10.16.1-cuda13.2-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.17.2-trt10.2.0-cuda12.5-linux-x64.zip",
+     "bytes": 39698208,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.17.2/katago-v1.17.2-trt10.2.0-cuda12.5-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.17.2-trt10.9.0-cuda12.8-linux-x64.zip",
+     "bytes": 39754702,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.17.2/katago-v1.17.2-trt10.9.0-cuda12.8-linux-x64.zip"
+    }
+   ]
+  },
+  "v1.18.0": {
+   "published_at": "2026-08-22T15:51:35Z",
+   "name": "New backends, major CUDA optimizations, rules fix support",
+   "assets": [
+    {
+     "name": "katago-v1.18.0-cuda12.1-cudnn8.9.7-linux-x64.zip",
+     "bytes": 50662353,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.0/katago-v1.18.0-cuda12.1-cudnn8.9.7-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.0-cuda12.1-cudnn9.8.0-linux-x64.zip",
+     "bytes": 50796537,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.0/katago-v1.18.0-cuda12.1-cudnn9.8.0-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.0-cuda12.5-cudnn8.9.7-linux-x64.zip",
+     "bytes": 50780144,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.0/katago-v1.18.0-cuda12.5-cudnn8.9.7-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.0-cuda12.5-cudnn9.8.0-linux-x64.zip",
+     "bytes": 50858883,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.0/katago-v1.18.0-cuda12.5-cudnn9.8.0-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.0-cuda12.8-cudnn9.8.0-linux-x64.zip",
+     "bytes": 51238737,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.0/katago-v1.18.0-cuda12.8-cudnn9.8.0-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.0-cuda13.2-cudnn9.24.0-linux-x64.zip",
+     "bytes": 50782814,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.0/katago-v1.18.0-cuda13.2-cudnn9.24.0-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.0-eigen-linux-x64.zip",
+     "bytes": 41693965,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.0/katago-v1.18.0-eigen-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.0-eigenavx2-linux-x64.zip",
+     "bytes": 41740115,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.0/katago-v1.18.0-eigenavx2-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.0-eigenavx2-windows-x64.zip",
+     "bytes": 5893172,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.0/katago-v1.18.0-eigenavx2-windows-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.0-onnx-openvino-linux-x64.zip",
+     "bytes": 120064480,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.0/katago-v1.18.0-onnx-openvino-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.0-opencl-linux-x64.zip",
+     "bytes": 41218436,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.0/katago-v1.18.0-opencl-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.0-rocm7.14.0-linux-x64.zip",
+     "bytes": 85472397,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.0/katago-v1.18.0-rocm7.14.0-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.0-rocm7.2.4-linux-x64.zip",
+     "bytes": 20788836,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.0/katago-v1.18.0-rocm7.2.4-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.0-trt10.16.1-cuda13.2-linux-x64.zip",
+     "bytes": 43070593,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.0/katago-v1.18.0-trt10.16.1-cuda13.2-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.0-trt10.2.0-cuda12.5-linux-x64.zip",
+     "bytes": 43006931,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.0/katago-v1.18.0-trt10.2.0-cuda12.5-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.0-trt10.9.0-cuda12.8-linux-x64.zip",
+     "bytes": 43016275,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.0/katago-v1.18.0-trt10.9.0-cuda12.8-linux-x64.zip"
+    }
+   ]
+  },
+  "v1.18.1": {
+   "published_at": "2026-08-24T04:27:54Z",
+   "name": "Better Benchmark/Genconfig, Minor bugfixes",
+   "assets": [
+    {
+     "name": "katago-v1.18.1-cuda12.1-cudnn8.9.7-linux-x64.zip",
+     "bytes": 50790097,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.1/katago-v1.18.1-cuda12.1-cudnn8.9.7-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.1-cuda12.1-cudnn9.8.0-linux-x64.zip",
+     "bytes": 50870294,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.1/katago-v1.18.1-cuda12.1-cudnn9.8.0-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.1-cuda12.5-cudnn8.9.7-linux-x64.zip",
+     "bytes": 50831816,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.1/katago-v1.18.1-cuda12.5-cudnn8.9.7-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.1-cuda12.5-cudnn9.8.0-linux-x64.zip",
+     "bytes": 50942450,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.1/katago-v1.18.1-cuda12.5-cudnn9.8.0-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.1-cuda12.8-cudnn9.8.0-linux-x64.zip",
+     "bytes": 51344405,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.1/katago-v1.18.1-cuda12.8-cudnn9.8.0-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.1-cuda13.2-cudnn9.24.0-linux-x64.zip",
+     "bytes": 50873776,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.1/katago-v1.18.1-cuda13.2-cudnn9.24.0-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.1-eigen-linux-x64.zip",
+     "bytes": 41780528,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.1/katago-v1.18.1-eigen-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.1-eigenavx2-linux-x64.zip",
+     "bytes": 41821245,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.1/katago-v1.18.1-eigenavx2-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.1-eigenavx2-windows-x64.zip",
+     "bytes": 5899607,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.1/katago-v1.18.1-eigenavx2-windows-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.1-onnx-openvino-linux-x64.zip",
+     "bytes": 120160187,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.1/katago-v1.18.1-onnx-openvino-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.1-opencl-linux-x64.zip",
+     "bytes": 41325151,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.1/katago-v1.18.1-opencl-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.1-rocm7.14.0-linux-x64.zip",
+     "bytes": 85571470,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.1/katago-v1.18.1-rocm7.14.0-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.1-rocm7.2.4-linux-x64.zip",
+     "bytes": 20848171,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.1/katago-v1.18.1-rocm7.2.4-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.1-trt10.16.1-cuda13.2-linux-x64.zip",
+     "bytes": 43118123,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.1/katago-v1.18.1-trt10.16.1-cuda13.2-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.1-trt10.2.0-cuda12.5-linux-x64.zip",
+     "bytes": 43046369,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.1/katago-v1.18.1-trt10.2.0-cuda12.5-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.1-trt10.9.0-cuda12.8-linux-x64.zip",
+     "bytes": 43122191,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.1/katago-v1.18.1-trt10.9.0-cuda12.8-linux-x64.zip"
+    }
+   ]
+  },
+  "v1.18.2": {
+   "published_at": "2026-08-30T01:54:00Z",
+   "name": "CUDA Speedup for Turing (RTX 20xx, etc)",
+   "assets": [
+    {
+     "name": "katago-v1.18.2-cuda12.1-cudnn8.9.7-linux-x64.zip",
+     "bytes": 50783789,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.2/katago-v1.18.2-cuda12.1-cudnn8.9.7-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.2-cuda12.1-cudnn9.8.0-linux-x64.zip",
+     "bytes": 50893347,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.2/katago-v1.18.2-cuda12.1-cudnn9.8.0-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.2-cuda12.5-cudnn8.9.7-linux-x64.zip",
+     "bytes": 50878339,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.2/katago-v1.18.2-cuda12.5-cudnn8.9.7-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.2-cuda12.5-cudnn9.8.0-linux-x64.zip",
+     "bytes": 50958671,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.2/katago-v1.18.2-cuda12.5-cudnn9.8.0-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.2-cuda12.8-cudnn9.8.0-linux-x64.zip",
+     "bytes": 51350638,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.2/katago-v1.18.2-cuda12.8-cudnn9.8.0-linux-x64.zip"
+    },
+    {
+     "name": "katago-v1.18.2-cuda13.2-cudnn9.24.0-linux-x64.zip",
+     "bytes": 50896760,
+     "url": "https://github.com/lightvector/KataGo/releases/download/v1.18.2/katago-v1.18.2-cuda13.2-cudnn9.24.0-linux-x64.zip"
+    }
+   ]
+  }
+ },
+ "v1.15.3_commit": "cd0ed6c0712088ddb901be68189ba7fa1439a9e7",
+ "issues": {
+  "1009": {
+   "title": "[Question] activation of policy_head in b18c384nbt-humanv0",
+   "state": "closed",
+   "created_at": "2025-01-08T01:10:38Z",
+   "url": "https://github.com/lightvector/KataGo/issues/1009"
+  },
+  "1030": {
+   "title": "Question regarding Human-SL profile",
+   "state": "closed",
+   "created_at": "2025-02-27T14:22:11Z",
+   "url": "https://github.com/lightvector/KataGo/issues/1030"
+  },
+  "1041": {
+   "title": "TensorRT issue on RTX5090",
+   "state": "open",
+   "created_at": "2025-03-28T22:59:17Z",
+   "url": "https://github.com/lightvector/KataGo/issues/1041"
+  },
+  "1074": {
+   "title": "Questions regarding Human SL model",
+   "state": "open",
+   "created_at": "2025-06-16T09:15:17Z",
+   "url": "https://github.com/lightvector/KataGo/issues/1074"
+  },
+  "1077": {
+   "title": "Question about supervised training process",
+   "state": "open",
+   "created_at": "2025-06-24T00:28:10Z",
+   "url": "https://github.com/lightvector/KataGo/issues/1077"
+  },
+  "1154": {
+   "title": "Problem comparing policy values between KataGo analysis engine and python implementation",
+   "state": "closed",
+   "created_at": "2026-01-30T16:50:46Z",
+   "url": "https://github.com/lightvector/KataGo/issues/1154"
+  }
+ }
+}

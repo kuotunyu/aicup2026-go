@@ -1,0 +1,173 @@
+{
+ "what": "prereg05 exploration B2 step 1: opponent-move N_both counts on a fit-player subsample (design stage; training players only)",
+ "created": "2026-10-01T19:15:42+08:00",
+ "frac": 0.25,
+ "guard": {
+  "refused_open_listdir_stat_scandir": {
+   "data/local": true,
+   "data/local/rank_val_questions.csv": true,
+   "data/local/x.csv": true
+  },
+  "allowed": {
+   "scratchpad": true,
+   "data/prereg04/design_scratch": true
+  },
+  "passed": true
+ },
+ "inputs": {
+  "moves_fit.npz": {
+   "sha256": "b219d7dc53ffc6562abe3ce9e90d50f1b5c59be01efb00011b3638c16afdf5bb",
+   "manifest_sha256": "b219d7dc53ffc6562abe3ce9e90d50f1b5c59be01efb00011b3638c16afdf5bb",
+   "equal": true
+  },
+  "moves_fit_moves.npy": {
+   "sha256": "57cc0ffaf665ed519d36aa5a5f38cb6e9d7d399ede79064a3be8b0a5ca9ba947",
+   "manifest_sha256": "57cc0ffaf665ed519d36aa5a5f38cb6e9d7d399ede79064a3be8b0a5ca9ba947",
+   "equal": true
+  }
+ },
+ "subsample": {
+  "fit_players": 5767,
+  "selected_players": 1445,
+  "per_level": {
+   "D": {
+    "players": 641,
+    "selected": 161
+   },
+   "C": {
+    "players": 589,
+    "selected": 148
+   },
+   "B": {
+    "players": 755,
+    "selected": 189
+   },
+   "A": {
+    "players": 1140,
+    "selected": 285
+   },
+   "1D": {
+    "players": 312,
+    "selected": 78
+   },
+   "2D": {
+    "players": 439,
+    "selected": 110
+   },
+   "3D": {
+    "players": 445,
+    "selected": 112
+   },
+   "4D": {
+    "players": 460,
+    "selected": 115
+   },
+   "5D": {
+    "players": 474,
+    "selected": 119
+   },
+   "6D": {
+    "players": 512,
+    "selected": 128
+   }
+  },
+  "games": 182008,
+  "list_sha256": "cf5980b33dc9aa1a755ce27bd13cff4778d7ed3bc85a40a29eff25bbf1a4cd70",
+  "list_sha256_definition": "sha256 of '\\n'.join(sorted(selected player_id)) (UTF-8)",
+  "rule": "per level, sort by sha256('c10-p05-b2|' + player_id) hex ascending, first ceil(0.25 x players)"
+ },
+ "seam_b": {
+  "games": 10,
+  "games_drawn": "numpy default_rng(2).choice(subsample rows, 10)",
+  "every_nth_opponent_position": 5,
+  "positions": 234,
+  "empty_points_compared": 57581,
+  "position_mismatches": 0,
+  "min_positions": 50,
+  "seconds": 1.6,
+  "reference": "p04_opp.ref_cell (slow per-point O4 cell) + per-point BFS blocks / liberties / line",
+  "passed": true
+ },
+ "seam_a": {
+  "games": 300,
+  "rows": "the first 300 subsample rows in moves_fit order",
+  "p04_opp_count_shard": {
+   "opponent_moves": 33452,
+   "anomalies": 0,
+   "seconds": 11.5
+  },
+  "b2": {
+   "opponent_moves": 33452,
+   "anomalies": 0,
+   "seconds": 12.9
+  },
+  "C_o_equal": true,
+  "A_o_equal": true,
+  "C_o_total": 33452,
+  "A_o_total": 8298491,
+  "passed": true
+ },
+ "int32_preflight": {
+  "max_shard_opponent_moves": 5022985,
+  "bound": 1813297585,
+  "limit": 4294967296
+ },
+ "count": {
+  "games": 182008,
+  "opponent_moves": 20067590,
+  "empty_points": 5003968368,
+  "memory_retries": 0,
+  "anomalies": 0,
+  "wall_seconds": 873.3,
+  "worker_seconds": [
+   865.8,
+   866.3,
+   859.7,
+   863.8
+  ],
+  "timed_out": false,
+  "workers": 4
+ },
+ "moves_by_level": [
+  1922174,
+  2010601,
+  2023111,
+  1920202,
+  1851304,
+  2309301,
+  1936870,
+  2101058,
+  2284971,
+  1707998
+ ],
+ "cells_seen": {
+  "N_both": 415032,
+  "V0": 114137
+ },
+ "counts": {
+  "C_o": {
+   "file": "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\D--AI-Portfolio-competitions-aicup2026-go\\5c8715ae-39b0-4c78-beba-a69cba3713cd\\scratchpad\\b2\\C_o_25.npy",
+   "dtype": "int64",
+   "shape": [
+    10,
+    6695136
+   ],
+   "total": 20067590,
+   "max": 39159,
+   "sha256": "c4870d03eb89306b203410252ef434ef9c5c0e72247dac7e28098d702840e250"
+  },
+  "A_o": {
+   "file": "C:\\Users\\USER\\AppData\\Local\\Temp\\claude\\D--AI-Portfolio-competitions-aicup2026-go\\5c8715ae-39b0-4c78-beba-a69cba3713cd\\scratchpad\\b2\\A_o_25.npy",
+   "dtype": "int64",
+   "shape": [
+    10,
+    6695136
+   ],
+   "total": 5003968368,
+   "max": 37915831,
+   "sha256": "8495b953a096b09f32b4dc29eeb0a68f8ee28c877738f23397d0b38006578b2d"
+  }
+ },
+ "seconds_total": 910.1,
+ "status": "ok"
+}

@@ -1,0 +1,5 @@
+inputs: fit 25400, eval 127200, single-colour 120544 questions; 73556 inner games
+recon max diff 3.220e-15 (126s)
+panel A_N_ge_20 done (142s)
+panel B_N_ge_80 done (149s)
+D:\AI-Portfolio\competitions\aicup2026-go\results\prereg06\explore\c2_headroom\b_decompose.json

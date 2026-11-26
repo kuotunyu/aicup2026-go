@@ -1,0 +1,28 @@
+{
+ "format": "c10-test02 unpack v1",
+ "created": "2026-11-04T07:24:33+00:00",
+ "comp": "player",
+ "zip": "D:\\AI-Portfolio\\competitions\\aicup2026-go\\results\\test02\\test02_player_results.zip",
+ "zip_sha256": "657dd3a74f2c77e6f3ecb0990cc059bd33bee029b22436803c33ceaafdd41ab3",
+ "zip_bytes": 129041428,
+ "members": 18,
+ "run_status": "completed",
+ "runs": [
+  {
+   "run": 1,
+   "status": "completed"
+  }
+ ],
+ "earlier_failed_runs": [],
+ "smoke": false,
+ "rehearsal": false,
+ "manifest_sha256": "b9e9e8a6a7fc8b7b696d2d4501563cb99aeac6a95e327f3a5e686d04bbdd0bbe",
+ "allow_failed": false,
+ "tool": {
+  "tool": "tools/t02_test_bundle.py",
+  "tool_sha256": "18e41e952da39a68bc901bda5f5b9f0173848379a31056da6139382ac038e796",
+  "sha256_rule": "tool file with CRLF folded to LF",
+  "git_head": "6ca13a6a6be786a58821c04fe4eb5eb24f4476bd",
+  "python": "3.12.13"
+ }
+}

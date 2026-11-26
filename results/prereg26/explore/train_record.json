@@ -1,0 +1,514 @@
+{
+ "format": "c10-prereg26 explore train v1",
+ "created": "2026-11-06T06:29:29+00:00",
+ "smoke": false,
+ "smoke_note": null,
+ "seconds": 10949.4,
+ "code": {
+  "head": "5cc1380c60dea0f334d9746ae39a3faceefc7038",
+  "dirty": "",
+  "sha256_lf": {
+   "results/prereg09/rank/check_report.json": "3dfe765d1b7aa1c7c9f33ac8c0d6f89e44a5abf0141ca1195fdaa0fc71fe00a0",
+   "results/prereg09/rank/frozen_config.json": "50d38d2787c94569d88ed87a482e872ed64be2d1d20e4f57ffbb07a216663ff5",
+   "results/prereg09/rank/p1e_map.npz": "b5a9e33023a48099cbbafa87e5c92a081b272a73402dbd7d0fba4c70323be5eb",
+   "results/prereg09/rank/train_report.json": "9dc6b11fbe200044efebeee2e90454fc327d6fd3dcda047767cec730f829affb",
+   "results/prereg25/explore/p25_lib.py": "a5c2454dd69ff971e3f5fa29636b231b9fda0568704b62d78cc832b282ff774d",
+   "results/prereg26/explore/PLAN.md": "5b64381c84368093a6ec946e5dca6002dcd6cc984487c3eee91b9f829af49ff3",
+   "results/prereg26/explore/p26_lib.py": "d4da30a4cc83e76fe71c65ec988c6c406384a70f79a2adae26de85a3b5162bd4",
+   "results/prereg26/explore/p26_prep.py": "ab41c340f3f64e92459b65278b4d98ec4444b8296728049c8fe545bdb85a1921",
+   "results/prereg26/explore/p26_train.py": "3ee06805b0484f9cad5d93e8159f13ccfcb00d29bea837afa62e369f79b8fc3f",
+   "results/prereg26/explore/v_ex_record.json": "36c44f880e777fbb1c20d628b52f55ee4a93267ca124bdc4a84efb00583a0001",
+   "tools/c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "tools/decide.py": "cf66daf1231b3c2bd60c5b6484245627e133bd0f1cd7ff5557e978da3801d0e3",
+   "tools/p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "tools/p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+   "tools/p02_rank_opening.py": "a4195fece41aa3d50ecda82d1af93d9c04f49df5fd2157d69dd8a488dea93463",
+   "tools/p02_rank_pseudo.py": "16e5bfdfb2995874ddb11bde1f7a9e786a478b14443453f675a4fb3a480bb098",
+   "tools/p03_rank_fuse.py": "77abd7479d26f0f647a258b4a6d5d2e517808b4c187184f14ff599d70b8aca2f",
+   "tools/p04_rank_fuse.py": "c3a647b09c46760239d5b2ee274d56f7231987354fc1c1f6c3ff40102f4b26a2",
+   "tools/p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142",
+   "tools/p08_rank_fuse.py": "64f42bd956f7808947e0c85abe1f9fa60d9958cb8e769fc889c6283c188d481e",
+   "tools/p09_forward.py": "67124e0e534f575493aa8d72dbd2582335e4166718448e36bb5e105c61cb185d",
+   "tools/p09_map.py": "fff3ffe6ae6b8c32163803a6d307fa184c2857af5d6e1505e3c931a4e8831566",
+   "tools/p09_rank_fuse.py": "1486f7ce102450c1ed0b051234537286f6f9a0b38f7aaaf182a38458e4ddfb8b"
+  }
+ },
+ "what": "PLAN.md 3: P1TO_E26 = 09's six ens3fam members (tools/p09_map.fit_member unchanged) on probe + V; no inner data read",
+ "settings": {
+  "members": [
+   {
+    "name": "mlpclm256",
+    "kind": "mlpclm",
+    "seed": 0
+   },
+   {
+    "name": "mlpclm256_s1",
+    "kind": "mlpclm",
+    "seed": 1
+   },
+   {
+    "name": "mlpclm256_s2",
+    "kind": "mlpclm",
+    "seed": 2
+   },
+   {
+    "name": "mlp512",
+    "kind": "mlp",
+    "seed": 0
+   },
+   {
+    "name": "mlp512_s1",
+    "kind": "mlp",
+    "seed": 1
+   },
+   {
+    "name": "lowrank3_ex",
+    "kind": "lowrank",
+    "seed": 0
+   }
+  ],
+  "configs": {
+   "mlpclm": {
+    "kind": "mlpclm",
+    "hidden": [
+     256
+    ],
+    "drop_in": 0.1,
+    "drop": 0.3,
+    "wd": 0.01,
+    "epochs": 24,
+    "lr": 0.001
+   },
+   "mlp": {
+    "kind": "mlp",
+    "hidden": [
+     512
+    ],
+    "drop_in": 0.2,
+    "drop": 0.4,
+    "wd": 0.01,
+    "epochs": 24,
+    "lr": 0.001
+   },
+   "lowrank": {
+    "kind": "lowrank",
+    "rank": 3,
+    "lam": 0.0001,
+    "epochs": 30,
+    "lr": 0.002,
+    "ex": true
+   }
+  },
+  "batch": 512,
+  "predict_batch": 8192,
+  "folds": 5,
+  "fold_seed": 0,
+  "threads": 8,
+  "smoke_epochs": null,
+  "smoke_rows": null,
+  "port_rows_each": 8192
+ },
+ "venv": {
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "torch": "2.14.0+cpu",
+  "differences": {}
+ },
+ "environment": {
+  "torch_threads": 8
+ },
+ "q09_map_sha256": "ecc9c9b1747b7b7d40cf53869b6c67c8e6f776ba7498498737fe3eede8e2edba",
+ "pre_seam_d_prereg25_audit": {
+  "V_players_in_inner": 0,
+  "V_games_vs_inner_8_symmetries": 0
+ },
+ "seam_p": {
+  "probe_want": {
+   "probe_X.npy": "ee8ce70ec56b8ffb92952ca44ad271a420f1d145b8277f09ea6a611fb05701dc",
+   "probe_ex.npy": "13d7e3a0a501d22599ecae69ed622f5089cf3850da430e3acac6c18f76c0c0dd",
+   "probe_meta.npz": "28286a663dacc0dd545819b52ee7c2b9c73caa7f280b4aeccb1760122c0929ac"
+  },
+  "probe_got": {
+   "probe_X.npy": "ee8ce70ec56b8ffb92952ca44ad271a420f1d145b8277f09ea6a611fb05701dc",
+   "probe_ex.npy": "13d7e3a0a501d22599ecae69ed622f5089cf3850da430e3acac6c18f76c0c0dd",
+   "probe_meta.npz": "28286a663dacc0dd545819b52ee7c2b9c73caa7f280b4aeccb1760122c0929ac"
+  },
+  "v": {
+   "v_X.npy": "d70d151f401870671ec81227e8b7c1e804f6b110470ccd6468c2a839f8b3b61e",
+   "v_meta.npz": "d79241a35fef16aab19dd5845ab6021cb7e7c370fc266b5d6d34907c3d51a4a2",
+   "v_ex.npy": "4016f30765b32884ae445d33144810b2e0aa4a0a756d2171506cd3165730c625"
+  },
+  "v_X_meta_are_prereg25": true,
+  "v_ex_is_record": true,
+  "seam_v_passed": true,
+  "ok": true
+ },
+ "seam_t": {
+  "moments_equal_q09_map": {
+   "mu_x": true,
+   "sd_x": true,
+   "mu_ex": true,
+   "sd_ex": true
+  },
+  "fold_sizes": {
+   "0": 53295,
+   "1": 54353,
+   "2": 54409,
+   "3": 53073,
+   "4": 54870
+  },
+  "fold_sizes_09": {
+   "0": 53295,
+   "1": 54353,
+   "2": 54409,
+   "3": 53073,
+   "4": 54870
+  },
+  "rows": 270000,
+  "seconds": 8.0,
+  "ok": true
+ },
+ "rows": {
+  "probe_rows": 270000,
+  "v_rows": 74946,
+  "rows": 344946,
+  "players": 7367,
+  "probe_players": 5767,
+  "v_players": 1600,
+  "folds": {
+   "0": 69125,
+   "1": 69940,
+   "2": 68523,
+   "3": 70121,
+   "4": 67237
+  },
+  "v_rows_per_fold": {
+   "0": 14048,
+   "1": 15490,
+   "2": 16011,
+   "3": 15095,
+   "4": 14302
+  },
+  "level_counts": [
+   34497,
+   34472,
+   34474,
+   34484,
+   34529,
+   34504,
+   34524,
+   34513,
+   34461,
+   34488
+  ],
+  "probe_V_overlap": {
+   "probe_and_V_keys": 0,
+   "probe_and_V_player_id": 0
+  },
+  "seconds_load_and_moments": 11.5
+ },
+ "moments_vs_q09_max_abs_diff_record_only": {
+  "mu_x": 0.0012407383399752892,
+  "sd_x": 0.0024769725069895276,
+  "mu_ex": 0.002557683007368583,
+  "sd_ex": 0.0023398513833553514
+ },
+ "members": {
+  "mlpclm256": {
+   "e_star": 22,
+   "cv": {
+    "logloss": 1.5389759951074526,
+    "top1": 0.36433238825787223,
+    "rule_b_score_per_game": 0.5162727302838234,
+    "games": 344946,
+    "logloss_by_epoch": [
+     1.6094669096616445,
+     1.584878752229364,
+     1.5694305322499793,
+     1.5633520552430644,
+     1.5627928911888123,
+     1.5578661559484905,
+     1.5574066047070212,
+     1.5550621069340533,
+     1.5573524504375096,
+     1.5513877460406176,
+     1.5504561521656537,
+     1.5495015352184576,
+     1.5479533968931933,
+     1.5467662261945692,
+     1.5444991882980748,
+     1.5443649067056406,
+     1.5425834192685401,
+     1.5408431449097415,
+     1.5405974818140877,
+     1.540012977205185,
+     1.5399209444138737,
+     1.5389759951074526,
+     1.5391909104693309,
+     1.5391138278391605
+    ],
+    "epochs_chosen": 22,
+    "epochs_schedule": 24,
+    "seconds_cv": 1154.4,
+    "seconds_refit": 275.5
+   },
+   "seconds": 1430.0,
+   "sha256": "9adede607ff6634ac57c0c4a38f78ed2a697a661fa01eaa73646996cd716a335",
+   "file": "data/prereg26/members/member_mlpclm256.npz"
+  },
+  "mlpclm256_s1": {
+   "e_star": 24,
+   "cv": {
+    "logloss": 1.538960730044109,
+    "top1": 0.36368591025841723,
+    "rule_b_score_per_game": 0.5160784117308874,
+    "games": 344946,
+    "logloss_by_epoch": [
+     1.6124325827127186,
+     1.5885562213192768,
+     1.5684814575113584,
+     1.562501449864217,
+     1.5628128206535203,
+     1.5569741357677154,
+     1.554116432734609,
+     1.5570973335286795,
+     1.5529815025543432,
+     1.5535709226095764,
+     1.5513439566796008,
+     1.5488775564959563,
+     1.5498072485508934,
+     1.5472109429744314,
+     1.5443571651559507,
+     1.543987969212798,
+     1.5421495879601064,
+     1.5418584398368052,
+     1.5407122714593366,
+     1.5400125371443716,
+     1.5390729394713951,
+     1.5393566467942053,
+     1.5390015185568502,
+     1.538960730044109
+    ],
+    "epochs_chosen": 24,
+    "epochs_schedule": 24,
+    "seconds_cv": 1645.9,
+    "seconds_refit": 309.9
+   },
+   "seconds": 1955.7,
+   "sha256": "8b81c7bd3ee2f2b0299b027bd5b814b607d4a2c7e3b6297faafc027e8ac265f3",
+   "file": "data/prereg26/members/member_mlpclm256_s1.npz"
+  },
+  "mlpclm256_s2": {
+   "e_star": 24,
+   "cv": {
+    "logloss": 1.5392165321658644,
+    "top1": 0.3642831051816806,
+    "rule_b_score_per_game": 0.5162600123616428,
+    "games": 344946,
+    "logloss_by_epoch": [
+     1.614441169297758,
+     1.5839477393596353,
+     1.5708836486139783,
+     1.5645654610460318,
+     1.5611980012905133,
+     1.5594844351362807,
+     1.5543138183629095,
+     1.5524506691103455,
+     1.5531763222905561,
+     1.553221098728239,
+     1.551850030914555,
+     1.5517697804884907,
+     1.54951887044304,
+     1.546205718952313,
+     1.5447272887963799,
+     1.5441731077625083,
+     1.5434167443908964,
+     1.5413149102510424,
+     1.5413103642230992,
+     1.5414632159430823,
+     1.5397997078209977,
+     1.5396559463012205,
+     1.5392746102459909,
+     1.5392165321658644
+    ],
+    "epochs_chosen": 24,
+    "epochs_schedule": 24,
+    "seconds_cv": 2596.6,
+    "seconds_refit": 491.5
+   },
+   "seconds": 3088.2,
+   "sha256": "a69810c4fdbd19273864331b108ba996a3ae8e2857b780a617b7585be687e761",
+   "file": "data/prereg26/members/member_mlpclm256_s2.npz"
+  },
+  "mlp512": {
+   "e_star": 24,
+   "cv": {
+    "logloss": 1.544121278844683,
+    "top1": 0.3549801997993889,
+    "rule_b_score_per_game": 0.5094635720095952,
+    "games": 344946,
+    "logloss_by_epoch": [
+     1.6041020492052682,
+     1.5860676746931235,
+     1.5717818768101877,
+     1.5719211767220755,
+     1.5717315881007472,
+     1.567534675129693,
+     1.5671035348855442,
+     1.5658622393586636,
+     1.5631406980550715,
+     1.5620792411190152,
+     1.553108459439127,
+     1.5531143541883004,
+     1.5503298437194963,
+     1.5527883443217763,
+     1.5513493934534468,
+     1.5492591459905747,
+     1.5494639713175196,
+     1.546846927772849,
+     1.5457692962833738,
+     1.544430988108565,
+     1.5447232191006182,
+     1.5442347958331082,
+     1.5442312087523804,
+     1.544121278844683
+    ],
+    "epochs_chosen": 24,
+    "epochs_schedule": 24,
+    "seconds_cv": 1529.9,
+    "seconds_refit": 319.5
+   },
+   "seconds": 1849.4,
+   "sha256": "42467a97cfa47b7df1e228e2fe7b2d09281307330b1273ee30c0dbd9777480b8",
+   "file": "data/prereg26/members/member_mlp512.npz"
+  },
+  "mlp512_s1": {
+   "e_star": 24,
+   "cv": {
+    "logloss": 1.5445260750630039,
+    "top1": 0.3548149565439228,
+    "rule_b_score_per_game": 0.5096415672647784,
+    "games": 344946,
+    "logloss_by_epoch": [
+     1.6015973961235235,
+     1.5799923551335366,
+     1.5775463872573314,
+     1.5785393764216917,
+     1.571465920664215,
+     1.566922296455516,
+     1.56433288700422,
+     1.5657381940669322,
+     1.560323331866374,
+     1.5594163377515016,
+     1.5569122918444578,
+     1.5598179639330974,
+     1.5540437042691304,
+     1.5517110452561542,
+     1.550734856529539,
+     1.5470728454453808,
+     1.547275918844593,
+     1.548618872032854,
+     1.545407032365952,
+     1.5447900129365921,
+     1.5451585369149878,
+     1.5445905665594466,
+     1.5445650644969604,
+     1.5445260750630039
+    ],
+    "epochs_chosen": 24,
+    "epochs_schedule": 24,
+    "seconds_cv": 1443.3,
+    "seconds_refit": 292.6
+   },
+   "seconds": 1736.0,
+   "sha256": "e4d07644ac92bb29b83d34af0bf4669d60f8858375f12f1deca731a01ed72ead",
+   "file": "data/prereg26/members/member_mlp512_s1.npz"
+  },
+  "lowrank3_ex": {
+   "e_star": 30,
+   "cv": {
+    "logloss": 1.5629718915458404,
+    "top1": 0.3580589425591252,
+    "rule_b_score_per_game": 0.5093985920015169,
+    "games": 344946,
+    "logloss_by_epoch": null,
+    "epochs_chosen": 30,
+    "epochs_schedule": 30,
+    "seconds_cv": 693.7,
+    "seconds_refit": 171.3
+   },
+   "seconds": 865.0,
+   "sha256": "fe03f452d10c7bf269fdede8c046bd4176d6bd0de41427e13d438a0038418476",
+   "file": "data/prereg26/members/member_lowrank3_ex.npz"
+  }
+ },
+ "q09_members_record_only": {
+  "mlpclm256": {
+   "cv_logloss": 1.5436563562850938,
+   "top1": 0.36312222222222224,
+   "e_star": 24,
+   "seconds": 1006.2
+  },
+  "mlpclm256_s1": {
+   "cv_logloss": 1.5435011302566735,
+   "top1": 0.36307407407407405,
+   "e_star": 24,
+   "seconds": 984.5
+  },
+  "mlpclm256_s2": {
+   "cv_logloss": 1.5438858143101615,
+   "top1": 0.3627185185185185,
+   "e_star": 24,
+   "seconds": 983.1
+  },
+  "mlp512": {
+   "cv_logloss": 1.5565195211010845,
+   "top1": 0.35127037037037034,
+   "e_star": 24,
+   "seconds": 1360.2
+  },
+  "mlp512_s1": {
+   "cv_logloss": 1.5561492528441545,
+   "top1": 0.3521148148148148,
+   "e_star": 24,
+   "seconds": 1708.0
+  },
+  "lowrank3_ex": {
+   "cv_logloss": 1.5669616358706597,
+   "top1": 0.35734814814814814,
+   "e_star": 30,
+   "seconds": 840.7
+  }
+ },
+ "port_check": {
+  "max_abs_lp_diff": 2.618349981275969e-12,
+  "per_member": {
+   "mlpclm256": 1.213251721310371e-12,
+   "mlpclm256_s1": 1.4495071809506044e-12,
+   "mlpclm256_s2": 7.538858426414663e-12,
+   "mlp512": 2.1316282072803006e-14,
+   "mlp512_s1": 2.1316282072803006e-14,
+   "lowrank3_ex": 2.1316282072803006e-14
+  },
+  "games": 16384,
+  "definition": "torch float64 forward (eval; stored float32 weights cast to float64) vs numpy float64 forward, ensemble lp (judged)",
+  "float32_record_only": {
+   "max_abs_lp_diff": 0.15665307674623463,
+   "max_abs_prob_diff": 4.258848130822557e-07,
+   "per_member_lp": {
+    "mlpclm256": 0.24230331419395235,
+    "mlpclm256_s1": 0.20277055935286548,
+    "mlpclm256_s2": 0.38610959329010797,
+    "mlp512": 1.053822252572445e-05,
+    "mlp512_s1": 1.1660946150016116e-05,
+    "lowrank3_ex": 8.798689737687937e-06
+   },
+   "definition": "torch float32 forward as trained (float32 input) vs numpy"
+  },
+  "ok": true,
+  "seconds": 2.5
+ },
+ "map_file": "data/prereg26/map/p1e26_map.npz",
+ "map_sha256": "9df9169bdce1d6db43b8c4581072255931ae617203957b778b3ef31642c89b04"
+}

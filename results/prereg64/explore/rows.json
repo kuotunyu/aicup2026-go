@@ -1,0 +1,42 @@
+{
+ "format": "c10-prereg64 rows v1",
+ "created": "2026-11-21T02:31:15",
+ "what": "every game of the cache49 players outside the c49 head classes, outside E and outside inner",
+ "cache_players": 8007,
+ "cache_games": 1000000,
+ "head_classes": 5771,
+ "E_players": 600,
+ "inner_players_split": 640,
+ "inner_players_keys": 640,
+ "inner_players_union": 640,
+ "inner_in_head": 508,
+ "val_players": 1600,
+ "val_in_head": 1278,
+ "owners": 1504,
+ "owner_games": 18892,
+ "owners_val": 322,
+ "games_per_owner": {
+  "min": 1,
+  "median": 13.0,
+  "max": 19
+ },
+ "owners_per_rank": [
+  158,
+  176,
+  316,
+  645,
+  2,
+  35,
+  45,
+  59,
+  37,
+  31
+ ],
+ "first_row": 0,
+ "last_row": 999976,
+ "cache_codes_sha256": "2447f0e05a42c3634a3ba16ba2666affeed95e90c4c8724ed29d8a4ee849a09a",
+ "proto_rows_sha256": "d0c69c2dca0ab2cd1ce70008db646d213818b045d60756c6a7709ca6c779a818",
+ "inner_rows_job1": "data/prereg58/inner_rows.npy",
+ "inner_rows_sha256": "b2f97033e16cf0b23bec4bfa36c93b6bf2c2f8a87f052024611c314386d8583c",
+ "inner_rows_count": 73169
+}

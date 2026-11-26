@@ -1,0 +1,91 @@
+{
+ "format": "c10-prereg12 ft sets record v1",
+ "created_utc": "2026-10-12T19:11:26+00:00",
+ "sets_json": "data/prereg12/sets.json",
+ "sha256": "253122b010ab37e38746f6afda95a57a462c6d27270b7c534f3a2e7a9a149753",
+ "seconds": 83.2,
+ "source": "tools/c10data load_rows part 'fit' (split v1; never inner, never validation)",
+ "rule": "per level: fit players shuffled (random.Random(SETS_SEED)); first ceil(5 %) are holdout players; round robin over players, one random not-yet-taken game per turn, until the quota; games whose move sequence equals an inner game's are excluded",
+ "train_games": 200000,
+ "holdout_games": 3000,
+ "train_players": 5475,
+ "holdout_players": 292,
+ "duplicates_with_inner_excluded": 0,
+ "levels": {
+  "D": {
+   "players": 641,
+   "holdout_players": 33,
+   "train_games": 20000,
+   "holdout_games": 300,
+   "fit_games": 69748
+  },
+  "C": {
+   "players": 589,
+   "holdout_players": 30,
+   "train_games": 20000,
+   "holdout_games": 300,
+   "fit_games": 75315
+  },
+  "B": {
+   "players": 755,
+   "holdout_players": 38,
+   "train_games": 20000,
+   "holdout_games": 300,
+   "fit_games": 72264
+  },
+  "A": {
+   "players": 1140,
+   "holdout_players": 57,
+   "train_games": 20000,
+   "holdout_games": 300,
+   "fit_games": 71255
+  },
+  "1D": {
+   "players": 312,
+   "holdout_players": 16,
+   "train_games": 20000,
+   "holdout_games": 300,
+   "fit_games": 71538
+  },
+  "2D": {
+   "players": 439,
+   "holdout_players": 22,
+   "train_games": 20000,
+   "holdout_games": 300,
+   "fit_games": 73011
+  },
+  "3D": {
+   "players": 445,
+   "holdout_players": 23,
+   "train_games": 20000,
+   "holdout_games": 300,
+   "fit_games": 73725
+  },
+  "4D": {
+   "players": 460,
+   "holdout_players": 23,
+   "train_games": 20000,
+   "holdout_games": 300,
+   "fit_games": 71135
+  },
+  "5D": {
+   "players": 474,
+   "holdout_players": 24,
+   "train_games": 20000,
+   "holdout_games": 300,
+   "fit_games": 73840
+  },
+  "6D": {
+   "players": 512,
+   "holdout_players": 26,
+   "train_games": 20000,
+   "holdout_games": 300,
+   "fit_games": 68476
+  }
+ },
+ "checks": {
+  "train_holdout_players_disjoint": true,
+  "no_inner_player": true,
+  "no_duplicate_game": true
+ }
+}

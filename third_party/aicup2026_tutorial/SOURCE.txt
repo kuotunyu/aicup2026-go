@@ -1,0 +1,1 @@
+Source: https://github.com/AILAB-NDHU/AICup-2026-Tutorial at 359e06fcaf811f9e87179f12f71425dd18dbabd1 2026-09-03T15:22:15Z (fetched 2026-09-24). README: participants may freely use, modify and distribute this code. Unmodified copies; our changes live in colab/.

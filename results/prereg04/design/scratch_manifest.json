@@ -1,0 +1,59 @@
+{
+ "what": "PREREG_04 design-phase scratch outputs (2026-09-29, workflow wf_7fe07a95-ca3). Large arrays live in data/prereg04/design_scratch/ (gitignored); scripts, reports and small JSON/logs are committed under results/prereg04/design/. Paper PDFs/text extracts and third-party SE code from taskC are not copied (not ours to redistribute; URLs are cited in understand_prior.md).",
+ "large_files": [
+  {
+   "file": "data/prereg04/design_scratch/counts_fit.npz",
+   "bytes": 178537934,
+   "sha256": "f6c6debe90639585763b9812c235743a6b7f89d8db1c6422ece7bccd550a08a5",
+   "origin": "B_proxy/counts_fit.npz"
+  },
+  {
+   "file": "data/prereg04/design_scratch/counts_fit_tables.npy",
+   "bytes": 401708288,
+   "sha256": "9b4c436ffd0a793b899ed864b184deede68a2a60deadb4b3161a1a99562b8eb3",
+   "origin": "B_proxy/counts_fit_tables.npy"
+  },
+  {
+   "file": "data/prereg04/design_scratch/moves_fit.npz",
+   "bytes": 407101203,
+   "sha256": "b219d7dc53ffc6562abe3ce9e90d50f1b5c59be01efb00011b3638c16afdf5bb",
+   "origin": "B_proxy/moves_fit.npz"
+  },
+  {
+   "file": "data/prereg04/design_scratch/moves_fit_moves.npy",
+   "bytes": 319942454,
+   "sha256": "57cc0ffaf665ed519d36aa5a5f38cb6e9d7d399ede79064a3be8b0a5ca9ba947",
+   "origin": "B_proxy/moves_fit_moves.npy"
+  },
+  {
+   "file": "data/prereg04/design_scratch/moves_inner.npz",
+   "bytes": 41325200,
+   "sha256": "da108b3872bb99faac3df568e3ad6dfb3ef2390d3f1e06bd99209283ff007484",
+   "origin": "B_proxy/moves_inner.npz"
+  },
+  {
+   "file": "data/prereg04/design_scratch/moves_inner_moves.npy",
+   "bytes": 32423322,
+   "sha256": "8eaccf77bc91f8d776d6425f5290b6f73b0956e559b8df0b59f66130177d539f",
+   "origin": "B_proxy/moves_inner_moves.npy"
+  },
+  {
+   "file": "data/prereg04/design_scratch/proxy_inner.npz",
+   "bytes": 154323634,
+   "sha256": "ea0e7cbe587bb5be097d94d004fd75d56412fc4f8c7d635df7289d855778fa50",
+   "origin": "B_proxy/proxy_inner.npz"
+  },
+  {
+   "file": "data/prereg04/design_scratch/proxy_inner_all.npz",
+   "bytes": 154323634,
+   "sha256": "3e6e3efd90816fb8770691fd1786840e834a66cbccebcd4c2afa9da8ce163b34",
+   "origin": "B_proxy/proxy_inner_all.npz"
+  },
+  {
+   "file": "data/prereg04/design_scratch/proxy_null.npz",
+   "bytes": 117765440,
+   "sha256": "de1fccb5a6a6954b7a2e3cf15656e18f8c8d384e52b788c297949c1c6e0dbea7",
+   "origin": "B_proxy/proxy_null.npz"
+  }
+ ]
+}

@@ -1,0 +1,219 @@
+{
+ "what": "Step 10 (continuation run): reconcile with results/prereg06/explore/prior_art/sim_c1_assignment.py.\n\nThe sibling's dual softmax is softmax_row(S / tau) * softmax_col(S / tau) on the RAW opening cosine\nS (tau = 0.02, 0.05 picked without held-out seeds); s8_switch.py uses the same family on row\nz-scores (rank by b Z - logsumexp_col(b Z)). Here the sibling's exact formula, on the base term,\nwith tau chosen on the selection seeds 100-109 + 200-219 and reported on the evaluation seeds 0-19,\nscenarios o2o, d80 (= the sibling's dup80 structure) and wr. CSLS10 and Hungarian on raw S are\nrepeated for the same pools (they match the sibling per seed on o2o seeds 0-4, see report).\nBase term only (cheap).",
+ "selection_mean_diff_vs_base": {
+  "base": {
+   "o2o": 0.0,
+   "d80": 0.0,
+   "wr": 0.0
+  },
+  "hung_raw": {
+   "o2o": 0.0633,
+   "d80": -0.0948,
+   "wr": -0.1974
+  },
+  "csls10": {
+   "o2o": 0.025,
+   "d80": 0.0195,
+   "wr": 0.0152
+  },
+  "dsm_raw_0.01": {
+   "o2o": 0.0388,
+   "d80": 0.0118,
+   "wr": -0.018
+  },
+  "dsm_raw_0.02": {
+   "o2o": 0.0359,
+   "d80": 0.017,
+   "wr": -0.0003
+  },
+  "dsm_raw_0.03": {
+   "o2o": 0.0287,
+   "d80": 0.0175,
+   "wr": 0.0079
+  },
+  "dsm_raw_0.05": {
+   "o2o": 0.0132,
+   "d80": 0.0092,
+   "wr": 0.0074
+  },
+  "dsm_raw_0.1": {
+   "o2o": -0.0005,
+   "d80": -0.0021,
+   "wr": -0.0008
+  }
+ },
+ "dsm_tau_chosen_on_selection": "dsm_raw_0.03",
+ "eval_diff_vs_base": {
+  "base": {
+   "o2o": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "d80": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "wr": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "hung_raw": {
+   "o2o": [
+    0.0584,
+    0.0534,
+    0.0634
+   ],
+   "d80": [
+    -0.0935,
+    -0.0973,
+    -0.0898
+   ],
+   "wr": [
+    -0.1947,
+    -0.1997,
+    -0.1897
+   ]
+  },
+  "csls10": {
+   "o2o": [
+    0.0212,
+    0.0174,
+    0.025
+   ],
+   "d80": [
+    0.0203,
+    0.0163,
+    0.0243
+   ],
+   "wr": [
+    0.0139,
+    0.01,
+    0.0177
+   ]
+  },
+  "dsm_raw_0.01": {
+   "o2o": [
+    0.0347,
+    0.0306,
+    0.0388
+   ],
+   "d80": [
+    0.0138,
+    0.0085,
+    0.0192
+   ],
+   "wr": [
+    -0.0183,
+    -0.0232,
+    -0.0134
+   ]
+  },
+  "dsm_raw_0.02": {
+   "o2o": [
+    0.0336,
+    0.03,
+    0.0373
+   ],
+   "d80": [
+    0.0192,
+    0.0144,
+    0.024
+   ],
+   "wr": [
+    -0.0034,
+    -0.0076,
+    0.0009
+   ]
+  },
+  "dsm_raw_0.03": {
+   "o2o": [
+    0.0263,
+    0.0234,
+    0.0292
+   ],
+   "d80": [
+    0.018,
+    0.0141,
+    0.0218
+   ],
+   "wr": [
+    0.0049,
+    0.0008,
+    0.009
+   ]
+  },
+  "dsm_raw_0.05": {
+   "o2o": [
+    0.0118,
+    0.0087,
+    0.015
+   ],
+   "d80": [
+    0.0107,
+    0.0078,
+    0.0135
+   ],
+   "wr": [
+    0.0049,
+    0.002,
+    0.0078
+   ]
+  },
+  "dsm_raw_0.1": {
+   "o2o": [
+    -0.0035,
+    -0.0057,
+    -0.0012
+   ],
+   "d80": [
+    -0.0015,
+    -0.0037,
+    0.0006
+   ],
+   "wr": [
+    -0.0033,
+    -0.006,
+    -0.0007
+   ]
+  }
+ },
+ "eval_seeds_0_4_mean_diff (sibling's seeds)": {
+  "base": {
+   "o2o": 0.0,
+   "d80": 0.0
+  },
+  "hung_raw": {
+   "o2o": 0.0538,
+   "d80": -0.0949
+  },
+  "csls10": {
+   "o2o": 0.0179,
+   "d80": 0.0222
+  },
+  "dsm_raw_0.01": {
+   "o2o": 0.0334,
+   "d80": 0.018
+  },
+  "dsm_raw_0.02": {
+   "o2o": 0.0313,
+   "d80": 0.0207
+  },
+  "dsm_raw_0.03": {
+   "o2o": 0.0271,
+   "d80": 0.018
+  },
+  "dsm_raw_0.05": {
+   "o2o": 0.0103,
+   "d80": 0.0107
+  },
+  "dsm_raw_0.1": {
+   "o2o": -0.0049,
+   "d80": -0.0004
+  }
+ },
+ "seconds": 12.2
+}

@@ -1,0 +1,152 @@
+{
+ "format": "c10-prereg31 explore stage0b v1",
+ "created": "2026-11-10T11:08:48+00:00",
+ "code": {
+  "head": "29e619d908a4357be8affd630a38e0b19f1b4e6a",
+  "dirty": "",
+  "sha256_lf": {
+   "results/prereg09/rank/check_report.json": "3dfe765d1b7aa1c7c9f33ac8c0d6f89e44a5abf0141ca1195fdaa0fc71fe00a0",
+   "results/prereg09/rank/frozen_config.json": "50d38d2787c94569d88ed87a482e872ed64be2d1d20e4f57ffbb07a216663ff5",
+   "results/prereg09/rank/p1e_map.npz": "b5a9e33023a48099cbbafa87e5c92a081b272a73402dbd7d0fba4c70323be5eb",
+   "results/prereg12/explore/finetune/ft_eval.py": "2e3302cad19ab4c6b3f4242278a7d9bd751cdfbd92b4672696a6af46860b8021",
+   "results/prereg19/explore/p19_lib.py": "bbdc4225687777b732df1275277c4f4986f77225b935808f02cc7aefd4256376",
+   "results/prereg19/explore/p19_train.py": "9493ef1367b01495769a40ab792dc2b57208a9555de25a8f118147501b7b10ed",
+   "results/prereg25/explore/p25_lib.py": "a5c2454dd69ff971e3f5fa29636b231b9fda0568704b62d78cc832b282ff774d",
+   "results/prereg25/explore/p25_train.py": "01a9bd738060ff7a25123503c7369ac692f69220c157b2817249c7aa9b87a23f",
+   "results/prereg25/explore/train_record.json": "c5197c54bbbc9c1981fbdbdf5912d556811bfa7ce9c9ae0a093f70480cb08d63",
+   "results/prereg25/rank/s25_seed0.npz": "733c69d050988e082d04305dd33d8ef2af26bf4211b8f539631ca6481d4797b2",
+   "results/prereg25/rank/s25_seed1.npz": "87daa77cef4da9df5caa8a234cad5237c083b4d71022c1d19d938724f97d3175",
+   "results/prereg25/rank/s25_seed2.npz": "790d6145d293c5cd9fb955afb35ed01fae0e9c5ec4fe3003ec162f4c71da8450",
+   "results/prereg29/explore/p29_lib.py": "d618af25c0e3c5d95ed7f55156d7e69186e76f249d5004d46f38b02a1eb5b4ce",
+   "results/prereg29/explore/p29_train.py": "d3b0b0ea3eb269a5673a69585e387e6fafbb33bf1e46cc64ffcf7c108873e1db",
+   "results/prereg29/explore/train_record.json": "a5305c269c7e02d3454659a06438ec0593fbb5c958d2dcd673c56924eee7670c",
+   "results/prereg31/explore/PLAN.md": "4ae15f876cbbe23fa11e9c04f2105b08fb17cf4d972a76b044892eab11b104fd",
+   "results/prereg31/explore/hd_stats.json": "f98f3166b38384399ef45da80561f1dbde17c609b2c1388ba77fa7f0498f819f",
+   "results/prereg31/explore/p31_hd.py": "ce47318425b3950d8440e8fb47e3377f9de9375fb95f01b4068c985ebcfd9162",
+   "results/prereg31/explore/p31_lib.py": "2d71c3ac95a4b7c03cdeef64dff6bb25c3ae94779888fa9d0375a19f2f4d1360",
+   "results/prereg31/explore/p31_train.py": "6be281d7f9a05bf0974d5613b9dc451a73c3f94e5f504ac039cbaecd8150f67e",
+   "results/prereg31/explore/ram_watch.py": "b1b4e92657b342c9f0e9861bfd6e15e5dd21d5ea1f82ad7e1fb84badffcd94bc",
+   "results/prereg31/explore/run_train.sh": "bba5a60bcf04cad37ed167e4a9eeae22669a1db6975a2fe6e8097ef275c8d140",
+   "tools/c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "tools/decide.py": "cf66daf1231b3c2bd60c5b6484245627e133bd0f1cd7ff5557e978da3801d0e3",
+   "tools/p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "tools/p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+   "tools/p02_rank_opening.py": "a4195fece41aa3d50ecda82d1af93d9c04f49df5fd2157d69dd8a488dea93463",
+   "tools/p02_rank_pseudo.py": "16e5bfdfb2995874ddb11bde1f7a9e786a478b14443453f675a4fb3a480bb098",
+   "tools/p03_rank_fuse.py": "77abd7479d26f0f647a258b4a6d5d2e517808b4c187184f14ff599d70b8aca2f",
+   "tools/p04_rank_fuse.py": "c3a647b09c46760239d5b2ee274d56f7231987354fc1c1f6c3ff40102f4b26a2",
+   "tools/p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142",
+   "tools/p08_rank_fuse.py": "64f42bd956f7808947e0c85abe1f9fa60d9958cb8e769fc889c6283c188d481e",
+   "tools/p09_forward.py": "67124e0e534f575493aa8d72dbd2582335e4166718448e36bb5e105c61cb185d",
+   "tools/p09_map.py": "fff3ffe6ae6b8c32163803a6d307fa184c2857af5d6e1505e3c931a4e8831566",
+   "tools/p09_rank_fuse.py": "1486f7ce102450c1ed0b051234537286f6f9a0b38f7aaaf182a38458e4ddfb8b"
+  }
+ },
+ "what": "PLAN.md 3: GO iff mean over seeds 0-9 of the best held-out NLL, S31 - control <= -0.010 and S31 is lower in at least 8 of the 10 same-seed pairs; control = no-HD models of the same seeds (prereg25 seeds 0-2, prereg29 seeds 3-9); pure function of the committed records; judged once",
+ "train_record_sha256_lf": "ee77d5afeb91050a8778e1722b91e603d1cdf9015331518a5865fee6ab366972",
+ "train_record_checks": {
+  "format": true,
+  "not_smoke": true,
+  "code_clean": true,
+  "stage0a_ok": true,
+  "seam_a_ok": true,
+  "seam_r_ok": true,
+  "seeds_0_to_9": true,
+  "port_checks_ok": true,
+  "same_players_as_prereg25": true
+ },
+ "control_sources": {
+  "prereg25_train_record_sha256_lf": "c5197c54bbbc9c1981fbdbdf5912d556811bfa7ce9c9ae0a093f70480cb08d63",
+  "prereg25_seeds": [
+   0,
+   1,
+   2
+  ],
+  "prereg29_train_record_sha256_lf": "a5305c269c7e02d3454659a06438ec0593fbb5c958d2dcd673c56924eee7670c",
+  "prereg29_seeds": [
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "holdout_questions_prereg25": {
+   "5": 1000,
+   "10": 1000,
+   "15": 1000,
+   "20": 1000
+  },
+  "holdout_questions_prereg29": {
+   "5": 1000,
+   "10": 1000,
+   "15": 1000,
+   "20": 1000
+  }
+ },
+ "holdout_questions": {
+  "5": 1000,
+  "10": 1000,
+  "15": 1000,
+  "20": 1000
+ },
+ "encoding": "Z",
+ "seeds": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "s31_best_holdout_nll": [
+  0.995099539424037,
+  0.9963018697411369,
+  1.0049372062865969,
+  0.9921479822678648,
+  1.0068258792702172,
+  1.0059746395436755,
+  0.9960288553519185,
+  0.9923048588601323,
+  1.0000061916230398,
+  1.0062531710916933
+ ],
+ "control_best_holdout_nll": [
+  1.0073546251903926,
+  1.00711480947954,
+  1.004849481311173,
+  1.0126172525832755,
+  1.0056378380770956,
+  1.0145944882171094,
+  0.9999057058628318,
+  1.0140506575490253,
+  1.0124488312738145,
+  1.0189903375297709
+ ],
+ "pair_diff_s31_minus_control": [
+  -0.0122550857663557,
+  -0.010812939738403027,
+  8.772497542386404e-05,
+  -0.02046927031541068,
+  0.0011880411931215473,
+  -0.008619848673433905,
+  -0.0038768505109132434,
+  -0.021745798688893037,
+  -0.012442639650774634,
+  -0.01273716643807754
+ ],
+ "mean_s31": 0.9995880193460313,
+ "mean_control": 1.0097564027074029,
+ "mean_diff_s31_minus_control": -0.010168383361371602,
+ "threshold_mean_diff": -0.01,
+ "condition_mean": true,
+ "pairs_s31_lower": 8,
+ "threshold_pairs": 8,
+ "condition_pairs": true,
+ "decision": "GO"
+}

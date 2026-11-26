@@ -1,0 +1,633 @@
+{
+ "format": "c10-prereg31 hd shift v1 (record-only)",
+ "created": "2026-11-10T17:03:58+0800",
+ "note": "record-only; not in PLAN.md; added after stage 0a (fb84dec) and before any S31 training; decides nothing, no gate reads it; no labels used",
+ "inputs": {
+  "stats": "results/prereg31/explore/hd_stats.json",
+  "stats_sha256_lf": "f98f3166b38384399ef45da80561f1dbde17c609b2c1388ba77fa7f0498f819f",
+  "table": "data/prereg31/hd_table.npz",
+  "table_sha256": "74785e385a54dc17076939fd7454f32a01c30a1b3e3eca526037e450d729e570",
+  "probs": "results/test25/rank/rank_test_probs.csv",
+  "probs_sha256": "43e06c1367b5fe1f970a027750aba79d00d1bea1562a40476e1df20cb0fb8326",
+  "test_dir": "data/test_rootprops/original",
+  "test_files_sha256": {
+   "rank_prediction_test_public.csv": "4691803a8306ccd65d93a90bd6d7ba767d57abe96c0660b262f1a2b756b84fef",
+   "rank_prediction_test_private.csv": "d59865e24fe2f5ad742db68108a7f59c2e41138f18c4dc2eea1aa364f3e73c73"
+  }
+ },
+ "tool": {
+  "file": "results/prereg31/explore/p31_shift.py",
+  "sha256_lf": "28fb4db4bbe19873e8c9b5ed0ed266f20ae0dda6ad58ce7824bed4551243b40a",
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "draws": 2000,
+  "boot_seed": 31,
+  "min_games": 5
+ },
+ "seam_tallies_equal_hd_stats": {
+  "public": {
+   "n_by_colour_hd": [
+    [
+     1813,
+     482
+    ],
+    [
+     2032,
+     673
+    ]
+   ],
+   "hd_stats": [
+    [
+     1813,
+     482
+    ],
+    [
+     2032,
+     673
+    ]
+   ],
+   "ok": true
+  },
+  "private": {
+   "n_by_colour_hd": [
+    [
+     1934,
+     591
+    ],
+    [
+     1941,
+     534
+    ]
+   ],
+   "hd_stats": [
+    [
+     1934,
+     591
+    ],
+    [
+     1941,
+     534
+    ]
+   ],
+   "ok": true
+  }
+ },
+ "probs_max_abs_sum_minus_1": 4.440892098500626e-16,
+ "train_hd1_share_among_hd_le1": {
+  "D": {
+   "B": 0.3654916126889221,
+   "W": 0.30285574212526045
+  },
+  "C": {
+   "B": 0.2697000612119976,
+   "W": 0.25234194411776634
+  },
+  "B": {
+   "B": 0.22264711266602932,
+   "W": 0.2115839004786235
+  },
+  "A": {
+   "B": 0.16751986239659267,
+   "W": 0.15741958990344715
+  },
+  "1D": {
+   "B": 0.11646378134008005,
+   "W": 0.17804947746570868
+  },
+  "2D": {
+   "B": 0.12000664741685535,
+   "W": 0.1743567805414655
+  },
+  "3D": {
+   "B": 0.0793517922300923,
+   "W": 0.10353866317169069
+  },
+  "4D": {
+   "B": 0.10468163616160346,
+   "W": 0.085199400669116
+  },
+  "5D": {
+   "B": 0.14214876033057852,
+   "W": 0.12985807409852299
+  },
+  "6D": {
+   "B": 0.1482583728046276,
+   "W": 0.20898815074256863
+  }
+ },
+ "train_hd1_share_player_avg": {
+  "D": {
+   "B": 0.35130678689476547,
+   "W": 0.31806208848382167
+  },
+  "C": {
+   "B": 0.24381116997234614,
+   "W": 0.2845010990023365
+  },
+  "B": {
+   "B": 0.2033176842985961,
+   "W": 0.2272299452931292
+  },
+  "A": {
+   "B": 0.1553336746064536,
+   "W": 0.18214228814690053
+  },
+  "1D": {
+   "B": 0.1191374325673329,
+   "W": 0.19716718265385305
+  },
+  "2D": {
+   "B": 0.11054937857934959,
+   "W": 0.1933520666109954
+  },
+  "3D": {
+   "B": 0.11105884123108588,
+   "W": 0.15085172718401
+  },
+  "4D": {
+   "B": 0.11373272807932545,
+   "W": 0.12164469265539618
+  },
+  "5D": {
+   "B": 0.14466974646277292,
+   "W": 0.14959508433382732
+  },
+  "6D": {
+   "B": 0.15982416142222672,
+   "W": 0.23365512709036207
+  }
+ },
+ "train_players_with_min_games": {
+  "D": {
+   "B": 837,
+   "W": 835
+  },
+  "C": {
+   "B": 751,
+   "W": 756
+  },
+  "B": {
+   "B": 905,
+   "W": 932
+  },
+  "A": {
+   "B": 1218,
+   "W": 1267
+  },
+  "1D": {
+   "B": 423,
+   "W": 418
+  },
+  "2D": {
+   "B": 587,
+   "W": 593
+  },
+  "3D": {
+   "B": 590,
+   "W": 588
+  },
+  "4D": {
+   "B": 615,
+   "W": 616
+  },
+  "5D": {
+   "B": 639,
+   "W": 636
+  },
+  "6D": {
+   "B": 657,
+   "W": 674
+  }
+ },
+ "combined": {
+  "questions": 800,
+  "games": 10000,
+  "observed_hd1_share": 0.228,
+  "expected_model25_x_train_hd_le1": 0.18192465736380534,
+  "expected_model25_x_train_all": 0.17593447582023583,
+  "expected_uniform_rank_x_train_hd_le1": 0.17714532787939768,
+  "expected_model25_x_train_player_avg": 0.1929515360890892,
+  "observed_minus_expected_hd_le1": 0.04607534263619467,
+  "observed_minus_expected_player_avg": 0.03504846391091082,
+  "observed_minus_expected_hd_le1_ci95": [
+   0.027664298029084988,
+   0.06398301842441781
+  ],
+  "observed_minus_expected_player_avg_ci95": [
+   0.016555411646132584,
+   0.05292545996392764
+  ]
+ },
+ "by_pool": {
+  "public": {
+   "questions": 400,
+   "games": 5000,
+   "observed_hd1_share": 0.231,
+   "expected_model25_x_train_hd_le1": 0.18512420602291252,
+   "expected_model25_x_train_all": 0.179057077071081,
+   "expected_uniform_rank_x_train_hd_le1": 0.1773015486727513,
+   "expected_model25_x_train_player_avg": 0.19620347254576012,
+   "observed_minus_expected_hd_le1": 0.04587579397708749,
+   "observed_minus_expected_player_avg": 0.03479652745423989,
+   "observed_minus_expected_hd_le1_ci95": [
+    0.021275664402551075,
+    0.07207688162130468
+   ],
+   "observed_minus_expected_player_avg_ci95": [
+    0.01007943457087887,
+    0.06099475916428293
+   ]
+  },
+  "private": {
+   "questions": 400,
+   "games": 5000,
+   "observed_hd1_share": 0.225,
+   "expected_model25_x_train_hd_le1": 0.17872510870469815,
+   "expected_model25_x_train_all": 0.17281187456939065,
+   "expected_uniform_rank_x_train_hd_le1": 0.17698910708604407,
+   "expected_model25_x_train_player_avg": 0.1896995996324182,
+   "observed_minus_expected_hd_le1": 0.04627489129530185,
+   "observed_minus_expected_player_avg": 0.03530040036758181,
+   "observed_minus_expected_hd_le1_ci95": [
+    0.02137654357912616,
+    0.07073228410104632
+   ],
+   "observed_minus_expected_player_avg_ci95": [
+    0.010097823763244168,
+    0.0602832513885376
+   ]
+  }
+ },
+ "by_colour": {
+  "B": {
+   "questions": 396,
+   "games": 4820,
+   "observed_hd1_share": 0.2226141078838174,
+   "expected_model25_x_train_hd_le1": 0.18390440038900918,
+   "expected_model25_x_train_all": 0.17740771738697747,
+   "expected_uniform_rank_x_train_hd_le1": 0.17362696392473792,
+   "expected_model25_x_train_player_avg": 0.1798098442332316,
+   "observed_minus_expected_hd_le1": 0.03870970749480823,
+   "observed_minus_expected_player_avg": 0.042804263650585817,
+   "observed_minus_expected_hd_le1_ci95": [
+    0.014668407642428188,
+    0.06526717879063929
+   ],
+   "observed_minus_expected_player_avg_ci95": [
+    0.0186663670015281,
+    0.06937648069553051
+   ]
+  },
+  "W": {
+   "questions": 404,
+   "games": 5180,
+   "observed_hd1_share": 0.233011583011583,
+   "expected_model25_x_train_hd_le1": 0.18008250265695544,
+   "expected_model25_x_train_all": 0.174563621698287,
+   "expected_uniform_rank_x_train_hd_le1": 0.180419172331417,
+   "expected_model25_x_train_player_avg": 0.20517990573102612,
+   "observed_minus_expected_hd_le1": 0.05292908035462757,
+   "observed_minus_expected_player_avg": 0.027831677280556882,
+   "observed_minus_expected_hd_le1_ci95": [
+    0.028600421745710064,
+    0.0774330588931143
+   ],
+   "observed_minus_expected_player_avg_ci95": [
+    0.003208560132632765,
+    0.052441539880355936
+   ]
+  }
+ },
+ "by_model25_top_rank": {
+  "D": {
+   "questions": 83,
+   "games": 1010,
+   "observed_hd1_share": 0.42376237623762375,
+   "expected_model25_x_train_hd_le1": 0.3322175378333676,
+   "expected_model25_x_train_all": 0.32222019159956794,
+   "expected_uniform_rank_x_train_hd_le1": 0.17624969786395062,
+   "expected_model25_x_train_player_avg": 0.32960450644902817,
+   "observed_minus_expected_hd_le1": 0.09154483840425615,
+   "observed_minus_expected_player_avg": 0.09415786978859558,
+   "observed_minus_expected_hd_le1_ci95": [
+    0.030115589774933393,
+    0.15279792773806616
+   ],
+   "observed_minus_expected_player_avg_ci95": [
+    0.03369597279316139,
+    0.15494481121266873
+   ]
+  },
+  "C": {
+   "questions": 95,
+   "games": 1125,
+   "observed_hd1_share": 0.304,
+   "expected_model25_x_train_hd_le1": 0.2598484314319674,
+   "expected_model25_x_train_all": 0.255074277607554,
+   "expected_uniform_rank_x_train_hd_le1": 0.17715891229621103,
+   "expected_model25_x_train_player_avg": 0.2625627911801204,
+   "observed_minus_expected_hd_le1": 0.044151568568032595,
+   "observed_minus_expected_player_avg": 0.04143720881987961,
+   "observed_minus_expected_hd_le1_ci95": [
+    -0.010871721828474179,
+    0.10313974580709623
+   ],
+   "observed_minus_expected_player_avg_ci95": [
+    -0.013258655017248822,
+    0.10194846718508344
+   ]
+  },
+  "B": {
+   "questions": 101,
+   "games": 1250,
+   "observed_hd1_share": 0.288,
+   "expected_model25_x_train_hd_le1": 0.21561315618890284,
+   "expected_model25_x_train_all": 0.21241357685305437,
+   "expected_uniform_rank_x_train_hd_le1": 0.1772675876307179,
+   "expected_model25_x_train_player_avg": 0.21774965214534167,
+   "observed_minus_expected_hd_le1": 0.07238684381109714,
+   "observed_minus_expected_player_avg": 0.07025034785465831,
+   "observed_minus_expected_hd_le1_ci95": [
+    0.019478254024517555,
+    0.13093131410046185
+   ],
+   "observed_minus_expected_player_avg_ci95": [
+    0.018507960155136643,
+    0.12896398538851364
+   ]
+  },
+  "A": {
+   "questions": 89,
+   "games": 1025,
+   "observed_hd1_share": 0.21560975609756097,
+   "expected_model25_x_train_hd_le1": 0.16941513666951238,
+   "expected_model25_x_train_all": 0.1661468763462618,
+   "expected_uniform_rank_x_train_hd_le1": 0.1764432454592146,
+   "expected_model25_x_train_player_avg": 0.17245885650475276,
+   "observed_minus_expected_hd_le1": 0.04619461942804859,
+   "observed_minus_expected_player_avg": 0.04315089959280821,
+   "observed_minus_expected_hd_le1_ci95": [
+    -0.01105385269893358,
+    0.10838614794125409
+   ],
+   "observed_minus_expected_player_avg_ci95": [
+    -0.014080837415043373,
+    0.10595581553249073
+   ]
+  },
+  "1D": {
+   "questions": 75,
+   "games": 1050,
+   "observed_hd1_share": 0.17904761904761904,
+   "expected_model25_x_train_hd_le1": 0.15026252518810962,
+   "expected_model25_x_train_all": 0.14662996579571494,
+   "expected_uniform_rank_x_train_hd_le1": 0.1771200996767443,
+   "expected_model25_x_train_player_avg": 0.1599074373779203,
+   "observed_minus_expected_hd_le1": 0.02878509385950942,
+   "observed_minus_expected_player_avg": 0.019140181669698747,
+   "observed_minus_expected_hd_le1_ci95": [
+    -0.020211998281869092,
+    0.08326693505457594
+   ],
+   "observed_minus_expected_player_avg_ci95": [
+    -0.030862173144297705,
+    0.07307106288231505
+   ]
+  },
+  "2D": {
+   "questions": 65,
+   "games": 880,
+   "observed_hd1_share": 0.16363636363636364,
+   "expected_model25_x_train_hd_le1": 0.13424611127825334,
+   "expected_model25_x_train_all": 0.13038475226799343,
+   "expected_uniform_rank_x_train_hd_le1": 0.17694588394163793,
+   "expected_model25_x_train_player_avg": 0.14800972036060048,
+   "observed_minus_expected_hd_le1": 0.029390252358110297,
+   "observed_minus_expected_player_avg": 0.015626643275763158,
+   "observed_minus_expected_hd_le1_ci95": [
+    -0.024074952435212363,
+    0.09066727971033348
+   ],
+   "observed_minus_expected_player_avg_ci95": [
+    -0.03797098341740787,
+    0.0761686446199307
+   ]
+  },
+  "3D": {
+   "questions": 75,
+   "games": 995,
+   "observed_hd1_share": 0.1407035175879397,
+   "expected_model25_x_train_hd_le1": 0.10593585599454892,
+   "expected_model25_x_train_all": 0.10193214340393593,
+   "expected_uniform_rank_x_train_hd_le1": 0.17676708037405686,
+   "expected_model25_x_train_player_avg": 0.13317095916871677,
+   "observed_minus_expected_hd_le1": 0.03476766159339077,
+   "observed_minus_expected_player_avg": 0.007532558419222929,
+   "observed_minus_expected_hd_le1_ci95": [
+    -0.01806272486105824,
+    0.09116863561374756
+   ],
+   "observed_minus_expected_player_avg_ci95": [
+    -0.0453980383799787,
+    0.06464623049123011
+   ]
+  },
+  "4D": {
+   "questions": 81,
+   "games": 935,
+   "observed_hd1_share": 0.13475935828877006,
+   "expected_model25_x_train_hd_le1": 0.10327247164889286,
+   "expected_model25_x_train_all": 0.0988767732792412,
+   "expected_uniform_rank_x_train_hd_le1": 0.17754973669437074,
+   "expected_model25_x_train_player_avg": 0.12803236668299903,
+   "observed_minus_expected_hd_le1": 0.0314868866398772,
+   "observed_minus_expected_player_avg": 0.006726991605771032,
+   "observed_minus_expected_hd_le1_ci95": [
+    -0.006895397849512638,
+    0.07416330827154519
+   ],
+   "observed_minus_expected_player_avg_ci95": [
+    -0.031317398175980296,
+    0.04895593103332513
+   ]
+  },
+  "5D": {
+   "questions": 74,
+   "games": 930,
+   "observed_hd1_share": 0.16344086021505377,
+   "expected_model25_x_train_hd_le1": 0.13375520569095853,
+   "expected_model25_x_train_all": 0.12550550156911502,
+   "expected_uniform_rank_x_train_hd_le1": 0.17819162011202225,
+   "expected_model25_x_train_player_avg": 0.1509563097717521,
+   "observed_minus_expected_hd_le1": 0.029685654524095245,
+   "observed_minus_expected_player_avg": 0.012484550443301684,
+   "observed_minus_expected_hd_le1_ci95": [
+    -0.025962415298798308,
+    0.0887133124933013
+   ],
+   "observed_minus_expected_player_avg_ci95": [
+    -0.042801392343960756,
+    0.07155278931403167
+   ]
+  },
+  "6D": {
+   "questions": 62,
+   "games": 800,
+   "observed_hd1_share": 0.22375,
+   "expected_model25_x_train_hd_le1": 0.18242488296468717,
+   "expected_model25_x_train_all": 0.16479231851680168,
+   "expected_uniform_rank_x_train_hd_le1": 0.17799944808653756,
+   "expected_model25_x_train_player_avg": 0.20189772215917212,
+   "observed_minus_expected_hd_le1": 0.04132511703531283,
+   "observed_minus_expected_player_avg": 0.021852277840827883,
+   "observed_minus_expected_hd_le1_ci95": [
+    -0.027347041627010266,
+    0.11572192051153701
+   ],
+   "observed_minus_expected_player_avg_ci95": [
+    -0.04685040596651635,
+    0.09673248744547547
+   ]
+  }
+ },
+ "confident_questions_pmax_ge_0.8": {
+  "D": {
+   "questions": 64,
+   "games": 790,
+   "observed_hd1_share": 0.4443037974683544,
+   "expected_model25_x_train_hd_le1": 0.33943846392770316,
+   "expected_model25_x_train_all": 0.3288486546515475,
+   "expected_uniform_rank_x_train_hd_le1": 0.1760773175904386,
+   "expected_model25_x_train_player_avg": 0.33595052258435665,
+   "observed_minus_expected_hd_le1": 0.10486533354065125,
+   "observed_minus_expected_player_avg": 0.10835327488399776,
+   "observed_minus_expected_hd_le1_ci95": [
+    0.03495324711937481,
+    0.17691418763922384
+   ],
+   "observed_minus_expected_player_avg_ci95": [
+    0.03876356179493562,
+    0.17984562198608695
+   ]
+  },
+  "C": {
+   "questions": 0,
+   "games": 0,
+   "observed_hd1_share": null,
+   "expected_model25_x_train_hd_le1": null,
+   "expected_model25_x_train_all": null,
+   "expected_uniform_rank_x_train_hd_le1": null,
+   "expected_model25_x_train_player_avg": null,
+   "observed_minus_expected_hd_le1": null,
+   "observed_minus_expected_player_avg": null
+  },
+  "B": {
+   "questions": 0,
+   "games": 0,
+   "observed_hd1_share": null,
+   "expected_model25_x_train_hd_le1": null,
+   "expected_model25_x_train_all": null,
+   "expected_uniform_rank_x_train_hd_le1": null,
+   "expected_model25_x_train_player_avg": null,
+   "observed_minus_expected_hd_le1": null,
+   "observed_minus_expected_player_avg": null
+  },
+  "A": {
+   "questions": 0,
+   "games": 0,
+   "observed_hd1_share": null,
+   "expected_model25_x_train_hd_le1": null,
+   "expected_model25_x_train_all": null,
+   "expected_uniform_rank_x_train_hd_le1": null,
+   "expected_model25_x_train_player_avg": null,
+   "observed_minus_expected_hd_le1": null,
+   "observed_minus_expected_player_avg": null
+  },
+  "1D": {
+   "questions": 1,
+   "games": 20,
+   "observed_hd1_share": 0.5,
+   "expected_model25_x_train_hd_le1": 0.1772736535347282,
+   "expected_model25_x_train_all": 0.1737504081295351,
+   "expected_uniform_rank_x_train_hd_le1": 0.180419172331417,
+   "expected_model25_x_train_player_avg": 0.1965704754743634,
+   "observed_minus_expected_hd_le1": 0.32272634646527176,
+   "observed_minus_expected_player_avg": 0.3034295245256366
+  },
+  "2D": {
+   "questions": 0,
+   "games": 0,
+   "observed_hd1_share": null,
+   "expected_model25_x_train_hd_le1": null,
+   "expected_model25_x_train_all": null,
+   "expected_uniform_rank_x_train_hd_le1": null,
+   "expected_model25_x_train_player_avg": null,
+   "observed_minus_expected_hd_le1": null,
+   "observed_minus_expected_player_avg": null
+  },
+  "3D": {
+   "questions": 1,
+   "games": 20,
+   "observed_hd1_share": 0.0,
+   "expected_model25_x_train_hd_le1": 0.10364457962854201,
+   "expected_model25_x_train_all": 0.10122355511834684,
+   "expected_uniform_rank_x_train_hd_le1": 0.180419172331417,
+   "expected_model25_x_train_player_avg": 0.14995266855984335,
+   "observed_minus_expected_hd_le1": -0.10364457962854201,
+   "observed_minus_expected_player_avg": -0.14995266855984335
+  },
+  "4D": {
+   "questions": 1,
+   "games": 20,
+   "observed_hd1_share": 0.05,
+   "expected_model25_x_train_hd_le1": 0.10616542683459254,
+   "expected_model25_x_train_all": 0.10033208619728773,
+   "expected_uniform_rank_x_train_hd_le1": 0.17362696392473792,
+   "expected_model25_x_train_player_avg": 0.11647308408832575,
+   "observed_minus_expected_hd_le1": -0.05616542683459254,
+   "observed_minus_expected_player_avg": -0.06647308408832575
+  },
+  "5D": {
+   "questions": 14,
+   "games": 250,
+   "observed_hd1_share": 0.188,
+   "expected_model25_x_train_hd_le1": 0.13427308699640406,
+   "expected_model25_x_train_all": 0.12657647291068574,
+   "expected_uniform_rank_x_train_hd_le1": 0.17838150980941328,
+   "expected_model25_x_train_player_avg": 0.15035191219638244,
+   "observed_minus_expected_hd_le1": 0.053726913003595944,
+   "observed_minus_expected_player_avg": 0.03764808780361756
+  },
+  "6D": {
+   "questions": 45,
+   "games": 610,
+   "observed_hd1_share": 0.28852459016393445,
+   "expected_model25_x_train_hd_le1": 0.18562393238263347,
+   "expected_model25_x_train_all": 0.1673788540172661,
+   "expected_uniform_rank_x_train_hd_le1": 0.1779695233978606,
+   "expected_model25_x_train_player_avg": 0.20541998592929286,
+   "observed_minus_expected_hd_le1": 0.10290065778130097,
+   "observed_minus_expected_player_avg": 0.08310460423464158,
+   "observed_minus_expected_hd_le1_ci95": [
+    0.022254473601918207,
+    0.19257869297530597
+   ],
+   "observed_minus_expected_player_avg_ci95": [
+    0.0018818481874992854,
+    0.1723808456433308
+   ]
+  }
+ },
+ "model25_mean_rank_probability_game_weighted": {
+  "D": 0.10740594414191121,
+  "C": 0.10516534322724619,
+  "B": 0.12176428026910303,
+  "A": 0.10681279561799609,
+  "1D": 0.10235929728674681,
+  "2D": 0.09183509159815373,
+  "3D": 0.0961556451233602,
+  "4D": 0.09062634850010677,
+  "5D": 0.09321248082996665,
+  "6D": 0.08466277340540937
+ }
+}

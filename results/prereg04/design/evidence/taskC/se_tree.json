@@ -1,0 +1,1898 @@
+{
+  "sha": "d9498964e2ba84b5798c40e3f5b8a91a8791d66c",
+  "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/d9498964e2ba84b5798c40e3f5b8a91a8791d66c",
+  "tree": [
+    {
+      "path": ".autopep8",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "90e1ccdfa9f0a8b2bd967ffa08edd8651aa03876",
+      "size": 18,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/90e1ccdfa9f0a8b2bd967ffa08edd8651aa03876"
+    },
+    {
+      "path": ".clang-format",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "5e38b5c800c134d3bb5d49c9e7f2b9776618ec50",
+      "size": 22,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/5e38b5c800c134d3bb5d49c9e7f2b9776618ec50"
+    },
+    {
+      "path": ".githooks",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "41188185a6ed782a822419202fc728ff43d21f57",
+      "size": 18,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/41188185a6ed782a822419202fc728ff43d21f57"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d220aa3ad5ab3136c1a813bb12d64cf36655f43",
+      "size": 134,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/8d220aa3ad5ab3136c1a813bb12d64cf36655f43"
+    },
+    {
+      "path": ".gitmodules",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ba9cbfd7675394f573e6d2c6f061bc7e0c0ff58",
+      "size": 86,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/5ba9cbfd7675394f573e6d2c6f061bc7e0c0ff58"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04169417b4e3a64394406521f7e0ad262e7ab352",
+      "size": 967,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/04169417b4e3a64394406521f7e0ad262e7ab352"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+      "size": 35149,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/f288702d2fa16d3cdf0035b15a9fcbc552cd88e7"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99f965840e2117757f34bd35df2ac6d4d2570e8d",
+      "size": 11962,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/99f965840e2117757f34bd35df2ac6d4d2570e8d"
+    },
+    {
+      "path": "cfg",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ef506330af5eded49efe0de499145bafbb83dff1",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/ef506330af5eded49efe0de499145bafbb83dff1"
+    },
+    {
+      "path": "cfg/sa_chess_mcts.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ea2bc98a6a2ac7f349124ccef1136e289c73ea0",
+      "size": 6473,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/1ea2bc98a6a2ac7f349124ccef1136e289c73ea0"
+    },
+    {
+      "path": "cfg/sa_go_mcts.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cdc7e35f7653fba8d2f0e8e97589fb2c26ebcd6c",
+      "size": 6534,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/cdc7e35f7653fba8d2f0e8e97589fb2c26ebcd6c"
+    },
+    {
+      "path": "cfg/se_chess.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1dfc7dfd043362abaedddc98044fc271dc3c1f1b",
+      "size": 6439,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/1dfc7dfd043362abaedddc98044fc271dc3c1f1b"
+    },
+    {
+      "path": "cfg/se_chess_mcts.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e215e29d4077aaf73912f08c0c1f45d247d19dfc",
+      "size": 6468,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/e215e29d4077aaf73912f08c0c1f45d247d19dfc"
+    },
+    {
+      "path": "cfg/se_go.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1bf2734fd6efc4d018206e9560d8fdad2fdd6a0f",
+      "size": 6512,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/1bf2734fd6efc4d018206e9560d8fdad2fdd6a0f"
+    },
+    {
+      "path": "cfg/se_go_mcts.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db5bc1719ecd02be40707561d9b6034b378877b7",
+      "size": 6529,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/db5bc1719ecd02be40707561d9b6034b378877b7"
+    },
+    {
+      "path": "cfg/se_infty_chess.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee79eedb901137bdd07c4373950518fec9bbb4fc",
+      "size": 6438,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/ee79eedb901137bdd07c4373950518fec9bbb4fc"
+    },
+    {
+      "path": "cfg/se_infty_chess_mcts.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34c227a5b8ed261964ea82ae3dcfe3f320cccd92",
+      "size": 6473,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/34c227a5b8ed261964ea82ae3dcfe3f320cccd92"
+    },
+    {
+      "path": "cfg/se_infty_go.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42ed06805dc153f872e8e43939f9ba1ba182b3bc",
+      "size": 6517,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/42ed06805dc153f872e8e43939f9ba1ba182b3bc"
+    },
+    {
+      "path": "cfg/se_infty_go_2_rank.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7174c174b00c5704f081928dec46ab323adf195",
+      "size": 6521,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/f7174c174b00c5704f081928dec46ab323adf195"
+    },
+    {
+      "path": "cfg/se_infty_go_3_rank.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0d6571228e661dc29cc514a308429a1f1661c8c",
+      "size": 6521,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/b0d6571228e661dc29cc514a308429a1f1661c8c"
+    },
+    {
+      "path": "cfg/se_infty_go_mcts.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "878d1181b44eab6356e2a0379d7d96d6d7e5339d",
+      "size": 6534,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/878d1181b44eab6356e2a0379d7d96d6d7e5339d"
+    },
+    {
+      "path": "cfg/sl_chess.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44f637755659cdfb41c33d964f4351608d2daf73",
+      "size": 6442,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/44f637755659cdfb41c33d964f4351608d2daf73"
+    },
+    {
+      "path": "cfg/sl_go.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bbdbe4bdf8bbe8f2ba19a8b6b9bf44b719c6a9a8",
+      "size": 6514,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/bbdbe4bdf8bbe8f2ba19a8b6b9bf44b719c6a9a8"
+    },
+    {
+      "path": "cfg/sl_sum_chess.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e595c132910e717fabe773fc64aa675b037bc9b",
+      "size": 6441,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/2e595c132910e717fabe773fc64aa675b037bc9b"
+    },
+    {
+      "path": "cfg/sl_sum_go.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bbdbe4bdf8bbe8f2ba19a8b6b9bf44b719c6a9a8",
+      "size": 6514,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/bbdbe4bdf8bbe8f2ba19a8b6b9bf44b719c6a9a8"
+    },
+    {
+      "path": "cfg/sl_vote_chess.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b7658f6d56c6ff77344a9d4cca4d3ef9bf4fb8a",
+      "size": 6440,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/0b7658f6d56c6ff77344a9d4cca4d3ef9bf4fb8a"
+    },
+    {
+      "path": "cfg/sl_vote_go.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e06c6b45bd078007a6054bd6b7c4339935cd269c",
+      "size": 6513,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/e06c6b45bd078007a6054bd6b7c4339935cd269c"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f45c25a628575e2c1342f22b0e1f8228d2fa30bb",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/f45c25a628575e2c1342f22b0e1f8228d2fa30bb"
+    },
+    {
+      "path": "docs/imgs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f67b2cdfd3d2e62bfaec25951bc09f9ef8747ff0",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/f67b2cdfd3d2e62bfaec25951bc09f9ef8747ff0"
+    },
+    {
+      "path": "docs/imgs/architecture.svg",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ac649cef3ebea9a2fdf932261d9e06083e29d166",
+      "size": 1402605,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/ac649cef3ebea9a2fdf932261d9e06083e29d166"
+    },
+    {
+      "path": "minizero",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6f5933c3264248b2d309cfe4d2e4ed8716d6bbba",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/6f5933c3264248b2d309cfe4d2e4ed8716d6bbba"
+    },
+    {
+      "path": "minizero/.autopep8",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "119a611c316a3ebe124568bf7a4a881e8bc5ebdf",
+      "size": 36,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/119a611c316a3ebe124568bf7a4a881e8bc5ebdf"
+    },
+    {
+      "path": "minizero/.clang-format",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3bf80f60dbfbe168decdd75098db8d78efd9ec94",
+      "size": 366,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/3bf80f60dbfbe168decdd75098db8d78efd9ec94"
+    },
+    {
+      "path": "minizero/.githooks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0f65948a27a37c6f75ff797464d74edf7dffa4bf",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/0f65948a27a37c6f75ff797464d74edf7dffa4bf"
+    },
+    {
+      "path": "minizero/.githooks/autopep8.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c22604d7fa10cd810ab1095bc764343425402c4",
+      "size": 155161,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/0c22604d7fa10cd810ab1095bc764343425402c4"
+    },
+    {
+      "path": "minizero/.githooks/cpplint.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42673f319693bbe03a6ad31b46bff017bff7ba16",
+      "size": 262964,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/42673f319693bbe03a6ad31b46bff017bff7ba16"
+    },
+    {
+      "path": "minizero/.githooks/pre-commit",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1e870346387006ca68fcf7309c315095b9cc0ebb",
+      "size": 2315,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/1e870346387006ca68fcf7309c315095b9cc0ebb"
+    },
+    {
+      "path": "minizero/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09352f06adb8d2baeeda90c9bc205edac01a9efc",
+      "size": 161,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/09352f06adb8d2baeeda90c9bc205edac01a9efc"
+    },
+    {
+      "path": "minizero/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4cafbed38b7f09d99834b9e24facc8e1b92e79f",
+      "size": 1149,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/c4cafbed38b7f09d99834b9e24facc8e1b92e79f"
+    },
+    {
+      "path": "minizero/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed8e2c799201187b24a0d7dacccfb178c555b144",
+      "size": 9373,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/ed8e2c799201187b24a0d7dacccfb178c555b144"
+    },
+    {
+      "path": "minizero/docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ce3048b0380503585a8b385a3e9a5a8716cf8d0a",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/ce3048b0380503585a8b385a3e9a5a8716cf8d0a"
+    },
+    {
+      "path": "minizero/docs/Console.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a131819354bfdc69b948b9a8eabe1528e4e02dd0",
+      "size": 2223,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/a131819354bfdc69b948b9a8eabe1528e4e02dd0"
+    },
+    {
+      "path": "minizero/docs/Development.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3dda69134c3aa06be0d2dbec0360a6fd926b52ac",
+      "size": 6651,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/3dda69134c3aa06be0d2dbec0360a6fd926b52ac"
+    },
+    {
+      "path": "minizero/docs/Evaluation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76564b45cd0f9d6b396529a0e526579dffb7865f",
+      "size": 4779,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/76564b45cd0f9d6b396529a0e526579dffb7865f"
+    },
+    {
+      "path": "minizero/docs/Training.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87cfaf621733b282835aef8a0e6c0212a1098b86",
+      "size": 9542,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/87cfaf621733b282835aef8a0e6c0212a1098b86"
+    },
+    {
+      "path": "minizero/docs/imgs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "94c3c285b6521838dc4be95dc8542231f077b086",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/94c3c285b6521838dc4be95dc8542231f077b086"
+    },
+    {
+      "path": "minizero/docs/imgs/minizero-architecture.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7512fa29a68d36265eec7c1bfa69762aa94d3fcc",
+      "size": 217327,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/7512fa29a68d36265eec7c1bfa69762aa94d3fcc"
+    },
+    {
+      "path": "minizero/docs/imgs/minizero_atari.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "991f6a2157c1eb0aa4c3c90244608a8ecc799767",
+      "size": 7129331,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/991f6a2157c1eb0aa4c3c90244608a8ecc799767"
+    },
+    {
+      "path": "minizero/docs/imgs/minizero_go_9x9.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80e88be137fe7797cb5accc52abb0dd07f63c3ba",
+      "size": 45351,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/80e88be137fe7797cb5accc52abb0dd07f63c3ba"
+    },
+    {
+      "path": "minizero/docs/imgs/minizero_othello_8x8.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "879b6bac765b3bc400ec7013f6991578088bf75d",
+      "size": 46982,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/879b6bac765b3bc400ec7013f6991578088bf75d"
+    },
+    {
+      "path": "minizero/minizero",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a89f23ede0ae7571605e5abed477b99e3519344a",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/a89f23ede0ae7571605e5abed477b99e3519344a"
+    },
+    {
+      "path": "minizero/minizero/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "933ea039542f781a4d915b02f1266e69b2e83403",
+      "size": 196,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/933ea039542f781a4d915b02f1266e69b2e83403"
+    },
+    {
+      "path": "minizero/minizero/actor",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4d9a707daaeb72b14440b55d45b207cfc0211764",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/4d9a707daaeb72b14440b55d45b207cfc0211764"
+    },
+    {
+      "path": "minizero/minizero/actor/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c06d23c0fa84e27ab2bc5a3d9e64fe94dccc042e",
+      "size": 256,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/c06d23c0fa84e27ab2bc5a3d9e64fe94dccc042e"
+    },
+    {
+      "path": "minizero/minizero/actor/actor_group.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5936b0f4d84e1da4c5ff4bb970109f670f6ccd09",
+      "size": 10607,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/5936b0f4d84e1da4c5ff4bb970109f670f6ccd09"
+    },
+    {
+      "path": "minizero/minizero/actor/actor_group.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1a451aef45570401f6ce931f51fdc627345d4a8",
+      "size": 2228,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/a1a451aef45570401f6ce931f51fdc627345d4a8"
+    },
+    {
+      "path": "minizero/minizero/actor/base_actor.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f54ceeb5f4b5a190dc433072090a3ae382f3b27d",
+      "size": 1975,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/f54ceeb5f4b5a190dc433072090a3ae382f3b27d"
+    },
+    {
+      "path": "minizero/minizero/actor/base_actor.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c3f1cc891787e7bed2acbdbe636943f79dd6b22",
+      "size": 2229,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/2c3f1cc891787e7bed2acbdbe636943f79dd6b22"
+    },
+    {
+      "path": "minizero/minizero/actor/create_actor.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80930f54fa64c9cc7ce52133705a7b44aab890d1",
+      "size": 473,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/80930f54fa64c9cc7ce52133705a7b44aab890d1"
+    },
+    {
+      "path": "minizero/minizero/actor/gumbel_zero.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97dd868087db7c891de61b2c1057db2b99fdbd61",
+      "size": 5868,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/97dd868087db7c891de61b2c1057db2b99fdbd61"
+    },
+    {
+      "path": "minizero/minizero/actor/gumbel_zero.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8029f52d89dadb06339ee35c8c9d7e75beed642",
+      "size": 587,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/f8029f52d89dadb06339ee35c8c9d7e75beed642"
+    },
+    {
+      "path": "minizero/minizero/actor/mcts.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c4477fe2c56e0d9acf6f6f8d7fbb63f9a3f1d0e",
+      "size": 8290,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/0c4477fe2c56e0d9acf6f6f8d7fbb63f9a3f1d0e"
+    },
+    {
+      "path": "minizero/minizero/actor/mcts.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a967cfbb90fe1da269a6f04fe9f29937e6d3e29",
+      "size": 5486,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/4a967cfbb90fe1da269a6f04fe9f29937e6d3e29"
+    },
+    {
+      "path": "minizero/minizero/actor/search.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bce3d54f18229a99c079046dc0f4e9c5be7ecc0e",
+      "size": 181,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/bce3d54f18229a99c079046dc0f4e9c5be7ecc0e"
+    },
+    {
+      "path": "minizero/minizero/actor/tree.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ca1ac7160183177ab6f1c71f4b5ef74f84b663e",
+      "size": 3633,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/1ca1ac7160183177ab6f1c71f4b5ef74f84b663e"
+    },
+    {
+      "path": "minizero/minizero/actor/zero_actor.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6aa9dfc3180ab7580a121cd70549418a50a47966",
+      "size": 11910,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/6aa9dfc3180ab7580a121cd70549418a50a47966"
+    },
+    {
+      "path": "minizero/minizero/actor/zero_actor.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8d3cac8533e2a206e13d0d7961200f3b5dc6855",
+      "size": 3197,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/f8d3cac8533e2a206e13d0d7961200f3b5dc6855"
+    },
+    {
+      "path": "minizero/minizero/config",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e5d8e9e87f5775d87be3594156a4bebbf0905de8",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/e5d8e9e87f5775d87be3594156a4bebbf0905de8"
+    },
+    {
+      "path": "minizero/minizero/config/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c2c8d3f8e6169fa4aec64b594fdbb9f9d9ebd8a",
+      "size": 205,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/1c2c8d3f8e6169fa4aec64b594fdbb9f9d9ebd8a"
+    },
+    {
+      "path": "minizero/minizero/config/configuration.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aecef197ee75f29bd6587398ecae15956715c494",
+      "size": 15336,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/aecef197ee75f29bd6587398ecae15956715c494"
+    },
+    {
+      "path": "minizero/minizero/config/configuration.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "623d4d9bf4c1f343bd60ce4c76a96f431088ea3d",
+      "size": 2774,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/623d4d9bf4c1f343bd60ce4c76a96f431088ea3d"
+    },
+    {
+      "path": "minizero/minizero/config/configure_loader.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4488971d767a6189a0867e12f168d635026e03ea",
+      "size": 2971,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/4488971d767a6189a0867e12f168d635026e03ea"
+    },
+    {
+      "path": "minizero/minizero/config/configure_loader.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b26fc0dbe608ea91074ab22fa6eb67e6611b783",
+      "size": 3452,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/3b26fc0dbe608ea91074ab22fa6eb67e6611b783"
+    },
+    {
+      "path": "minizero/minizero/console",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "295fc38b4148de751bb9db802d80925af76eae0b",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/295fc38b4148de751bb9db802d80925af76eae0b"
+    },
+    {
+      "path": "minizero/minizero/console/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c696d3c38a3d50d25bdffc1d80db75913786b4b2",
+      "size": 250,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/c696d3c38a3d50d25bdffc1d80db75913786b4b2"
+    },
+    {
+      "path": "minizero/minizero/console/console.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f42b14019380692cbe18443a55b7207407d13e7",
+      "size": 12485,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/0f42b14019380692cbe18443a55b7207407d13e7"
+    },
+    {
+      "path": "minizero/minizero/console/console.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bd4820a9272e357de2bf70b4dfb22176f03463b",
+      "size": 2560,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/0bd4820a9272e357de2bf70b4dfb22176f03463b"
+    },
+    {
+      "path": "minizero/minizero/console/mode_handler.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6f9418954eb213ff904861c368a891b4a2d2b9a",
+      "size": 6576,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/e6f9418954eb213ff904861c368a891b4a2d2b9a"
+    },
+    {
+      "path": "minizero/minizero/console/mode_handler.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2b913c6f5d45a1a481b9bba3a0399a70defca23",
+      "size": 1591,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/f2b913c6f5d45a1a481b9bba3a0399a70defca23"
+    },
+    {
+      "path": "minizero/minizero/environment",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "52d61c86fef6c62666b405bb0daf865f1876dfc7",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/52d61c86fef6c62666b405bb0daf865f1876dfc7"
+    },
+    {
+      "path": "minizero/minizero/environment/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82d5de47e51fef16e13b63c460c7f8c1a424e47b",
+      "size": 400,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/82d5de47e51fef16e13b63c460c7f8c1a424e47b"
+    },
+    {
+      "path": "minizero/minizero/environment/atari",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7ca018b27bae254a785928c36a55079e20fa8d19",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/7ca018b27bae254a785928c36a55079e20fa8d19"
+    },
+    {
+      "path": "minizero/minizero/environment/atari/atari.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa20966ec6af7c6f9858eb699c4d57df8df6940c",
+      "size": 12123,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/aa20966ec6af7c6f9858eb699c4d57df8df6940c"
+    },
+    {
+      "path": "minizero/minizero/environment/atari/atari.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c8027957adf2fe031b7596c73ad15174f942050",
+      "size": 6342,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/9c8027957adf2fe031b7596c73ad15174f942050"
+    },
+    {
+      "path": "minizero/minizero/environment/atari/obs_recover.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a5e952d2fe9ee8f779379c2efd2a64d0cde6a2c",
+      "size": 9604,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/1a5e952d2fe9ee8f779379c2efd2a64d0cde6a2c"
+    },
+    {
+      "path": "minizero/minizero/environment/atari/obs_recover.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8369aad597c52127d2fd53fa0fad59c9f008024",
+      "size": 2775,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/d8369aad597c52127d2fd53fa0fad59c9f008024"
+    },
+    {
+      "path": "minizero/minizero/environment/atari/obs_remover.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cee1eb1309ffcd4b83af51d2aa80a72cda7b349",
+      "size": 3229,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/3cee1eb1309ffcd4b83af51d2aa80a72cda7b349"
+    },
+    {
+      "path": "minizero/minizero/environment/atari/obs_remover.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69d9022ef77439ee7f06bffc5cc934a0d7a5bff6",
+      "size": 1669,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/69d9022ef77439ee7f06bffc5cc934a0d7a5bff6"
+    },
+    {
+      "path": "minizero/minizero/environment/base",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e86c55b9b9616e3f11148f79d5dc0c711cf5df81",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/e86c55b9b9616e3f11148f79d5dc0c711cf5df81"
+    },
+    {
+      "path": "minizero/minizero/environment/base/base_env.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7adf1e79bbce7c798231acdd9a962895590ceb31",
+      "size": 992,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/7adf1e79bbce7c798231acdd9a962895590ceb31"
+    },
+    {
+      "path": "minizero/minizero/environment/base/base_env.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5d56ca09e7d0f8944b3a91f6342e83317b9d606",
+      "size": 15271,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/d5d56ca09e7d0f8944b3a91f6342e83317b9d606"
+    },
+    {
+      "path": "minizero/minizero/environment/chess",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7887abd5fade43796b331b64ddfc62509d2f2076",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/7887abd5fade43796b331b64ddfc62509d2f2076"
+    },
+    {
+      "path": "minizero/minizero/environment/chess/bitboard.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c3c1e29d3ed4714803b2d1f61d4250e748d2eba",
+      "size": 20756,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/6c3c1e29d3ed4714803b2d1f61d4250e748d2eba"
+    },
+    {
+      "path": "minizero/minizero/environment/chess/bitboard.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ea230ea51ed60ca68568affb2f4104ffce01811",
+      "size": 10676,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/7ea230ea51ed60ca68568affb2f4104ffce01811"
+    },
+    {
+      "path": "minizero/minizero/environment/chess/bititer.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02f4ec6bb659e3e43fbe6aec2cb8828935ac6b14",
+      "size": 3895,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/02f4ec6bb659e3e43fbe6aec2cb8828935ac6b14"
+    },
+    {
+      "path": "minizero/minizero/environment/chess/board.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0d50b737ebdde5a5cde783372ed297ddfd7aafd",
+      "size": 48377,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/b0d50b737ebdde5a5cde783372ed297ddfd7aafd"
+    },
+    {
+      "path": "minizero/minizero/environment/chess/board.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd44620010edca085d6d4a68e9b6879361ef12ba",
+      "size": 11085,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/fd44620010edca085d6d4a68e9b6879361ef12ba"
+    },
+    {
+      "path": "minizero/minizero/environment/chess/chess.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a550f0606b6573adf4f73b7623bf0b1b24f7178",
+      "size": 9331,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/2a550f0606b6573adf4f73b7623bf0b1b24f7178"
+    },
+    {
+      "path": "minizero/minizero/environment/chess/chess.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a70ac3ada04ea3fce07d1419357d5e39c543a441",
+      "size": 3666,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/a70ac3ada04ea3fce07d1419357d5e39c543a441"
+    },
+    {
+      "path": "minizero/minizero/environment/chess/hashcat.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6654237ce8dd2e3a1e2c518c7fb95c244f49f6b3",
+      "size": 1885,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/6654237ce8dd2e3a1e2c518c7fb95c244f49f6b3"
+    },
+    {
+      "path": "minizero/minizero/environment/chess/position.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69939754ddc3a66da4b74ffcbb1f5e114ffe7c6a",
+      "size": 6487,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/69939754ddc3a66da4b74ffcbb1f5e114ffe7c6a"
+    },
+    {
+      "path": "minizero/minizero/environment/chess/position.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f17e5cd56e4f8076f6bf088d89880e69ed0f112",
+      "size": 5696,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/9f17e5cd56e4f8076f6bf088d89880e69ed0f112"
+    },
+    {
+      "path": "minizero/minizero/environment/environment.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7d572be6d7352fb3979c6c589c79010c6ad6c5e",
+      "size": 3139,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/f7d572be6d7352fb3979c6c589c79010c6ad6c5e"
+    },
+    {
+      "path": "minizero/minizero/environment/go",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f2b6080b97154a39bfbf59694b21df4846938156",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/f2b6080b97154a39bfbf59694b21df4846938156"
+    },
+    {
+      "path": "minizero/minizero/environment/go/go.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "861ba6d38fbc05d7b9fe73dc998af2ed1b36f033",
+      "size": 28239,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/861ba6d38fbc05d7b9fe73dc998af2ed1b36f033"
+    },
+    {
+      "path": "minizero/minizero/environment/go/go.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a90b31c32123cad24366b76584a2b7766a63043",
+      "size": 6641,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/5a90b31c32123cad24366b76584a2b7766a63043"
+    },
+    {
+      "path": "minizero/minizero/environment/go/go_area.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fa8a9702e0856ed1e5bb8cf99116ba651648bdb",
+      "size": 1751,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/5fa8a9702e0856ed1e5bb8cf99116ba651648bdb"
+    },
+    {
+      "path": "minizero/minizero/environment/go/go_block.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "031a04773965c3c2f1349357692989a299daccc8",
+      "size": 2676,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/031a04773965c3c2f1349357692989a299daccc8"
+    },
+    {
+      "path": "minizero/minizero/environment/go/go_data_structure_check.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78102a0489080aaa53c16c26d8f2dbe3f5d94f2c",
+      "size": 6832,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/78102a0489080aaa53c16c26d8f2dbe3f5d94f2c"
+    },
+    {
+      "path": "minizero/minizero/environment/go/go_grid.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26a5de7d3e6bb40c1e56c9e60b9bd907e60eed68",
+      "size": 2115,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/26a5de7d3e6bb40c1e56c9e60b9bd907e60eed68"
+    },
+    {
+      "path": "minizero/minizero/environment/go/go_unit.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17393fc24923b72afa0fa0b6615291eb45476446",
+      "size": 325,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/17393fc24923b72afa0fa0b6615291eb45476446"
+    },
+    {
+      "path": "minizero/minizero/environment/gomoku",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "68498f63b70e185a9b3d09887c3e888882558e99",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/68498f63b70e185a9b3d09887c3e888882558e99"
+    },
+    {
+      "path": "minizero/minizero/environment/gomoku/gomoku.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d69e51c1b649e95bce6e57ab1da7303b8f69267",
+      "size": 7993,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/5d69e51c1b649e95bce6e57ab1da7303b8f69267"
+    },
+    {
+      "path": "minizero/minizero/environment/gomoku/gomoku.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b42d0d7251da64c8e0f53fd7a2e1bc4d45b045ec",
+      "size": 3284,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/b42d0d7251da64c8e0f53fd7a2e1bc4d45b045ec"
+    },
+    {
+      "path": "minizero/minizero/environment/hex",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "29a0d372d7dfd60b4980dafe6d33816b463dd3d4",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/29a0d372d7dfd60b4980dafe6d33816b463dd3d4"
+    },
+    {
+      "path": "minizero/minizero/environment/hex/hex.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "240b657c55d5fcdfc08b5f0ec20ba12bfb010377",
+      "size": 12932,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/240b657c55d5fcdfc08b5f0ec20ba12bfb010377"
+    },
+    {
+      "path": "minizero/minizero/environment/hex/hex.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00727b9857ff91dc8743cdfca64cd0e16125e766",
+      "size": 3407,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/00727b9857ff91dc8743cdfca64cd0e16125e766"
+    },
+    {
+      "path": "minizero/minizero/environment/killallgo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "10e7b18b3f30168cfe40e8f6cd94516c0dc5eead",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/10e7b18b3f30168cfe40e8f6cd94516c0dc5eead"
+    },
+    {
+      "path": "minizero/minizero/environment/killallgo/killallgo.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b307d43a7e121dfbff001c611d56677465ce44ce",
+      "size": 1716,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/b307d43a7e121dfbff001c611d56677465ce44ce"
+    },
+    {
+      "path": "minizero/minizero/environment/killallgo/killallgo.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1eaaaa3f22cc6a8616facae5f45e0fec2b0a8a24",
+      "size": 1209,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/1eaaaa3f22cc6a8616facae5f45e0fec2b0a8a24"
+    },
+    {
+      "path": "minizero/minizero/environment/killallgo/killallgo_7x7_bitboard.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e81512d23b4821ac626749f6375b9a99f717439",
+      "size": 23451,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/7e81512d23b4821ac626749f6375b9a99f717439"
+    },
+    {
+      "path": "minizero/minizero/environment/killallgo/killallgo_seki_7x7.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9fafe3f07b61389f4c9df2868c358cf2bf92caec",
+      "size": 22866,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/9fafe3f07b61389f4c9df2868c358cf2bf92caec"
+    },
+    {
+      "path": "minizero/minizero/environment/killallgo/killallgo_seki_7x7.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c7e615350e66a26c94ce4e9a738c9dcfce9b566",
+      "size": 7747,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/4c7e615350e66a26c94ce4e9a738c9dcfce9b566"
+    },
+    {
+      "path": "minizero/minizero/environment/nogo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ddcf632318c4ee3d45eb482ff63ebf4705648b62",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/ddcf632318c4ee3d45eb482ff63ebf4705648b62"
+    },
+    {
+      "path": "minizero/minizero/environment/nogo/nogo.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9f4923f842fd319d5adc295a558a307b4768fea",
+      "size": 2974,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/c9f4923f842fd319d5adc295a558a307b4768fea"
+    },
+    {
+      "path": "minizero/minizero/environment/othello",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0c07b862a8df33d3cf68f8727220a9286e0d2908",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/0c07b862a8df33d3cf68f8727220a9286e0d2908"
+    },
+    {
+      "path": "minizero/minizero/environment/othello/othello.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8fa8aa821007da62287853ca595d2b3df2a72995",
+      "size": 11392,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/8fa8aa821007da62287853ca595d2b3df2a72995"
+    },
+    {
+      "path": "minizero/minizero/environment/othello/othello.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67da98db6cbe7b6b66c14c4e88556dea86f3098e",
+      "size": 4187,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/67da98db6cbe7b6b66c14c4e88556dea86f3098e"
+    },
+    {
+      "path": "minizero/minizero/environment/rubiks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b004086e7625f9880cf36e810e836ddbe015151f",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/b004086e7625f9880cf36e810e836ddbe015151f"
+    },
+    {
+      "path": "minizero/minizero/environment/rubiks/rubiks.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0709dbcf3f3ccb1b40ff803b7bdbc40f68b3f96a",
+      "size": 7200,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/0709dbcf3f3ccb1b40ff803b7bdbc40f68b3f96a"
+    },
+    {
+      "path": "minizero/minizero/environment/rubiks/rubiks.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc930aef6ec647f0dfc2b8098c458fcfa3c7f6c2",
+      "size": 8994,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/fc930aef6ec647f0dfc2b8098c458fcfa3c7f6c2"
+    },
+    {
+      "path": "minizero/minizero/environment/stochastic",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4992f83bcc201ccd71537e51fe635c2247e5bf6e",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/4992f83bcc201ccd71537e51fe635c2247e5bf6e"
+    },
+    {
+      "path": "minizero/minizero/environment/stochastic/puzzle2048",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b2e3aaa535e0e14ffd2438f3e459814aaae7e324",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/b2e3aaa535e0e14ffd2438f3e459814aaae7e324"
+    },
+    {
+      "path": "minizero/minizero/environment/stochastic/puzzle2048/bitboard.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5110699c0ed32a02fc2a4a6a641301f54d839d1b",
+      "size": 10440,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/5110699c0ed32a02fc2a4a6a641301f54d839d1b"
+    },
+    {
+      "path": "minizero/minizero/environment/stochastic/puzzle2048/puzzle2048.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94ddfed595f989f8575bbc4d8766f930baf6d750",
+      "size": 7465,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/94ddfed595f989f8575bbc4d8766f930baf6d750"
+    },
+    {
+      "path": "minizero/minizero/environment/stochastic/puzzle2048/puzzle2048.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d93bf11ac60f9a82d67c56812db5453e562ff9e2",
+      "size": 5440,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/d93bf11ac60f9a82d67c56812db5453e562ff9e2"
+    },
+    {
+      "path": "minizero/minizero/environment/stochastic/stochastic_env.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71f46b2ef64b2b8acd92cedf2de25b0cde0b2e71",
+      "size": 2415,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/71f46b2ef64b2b8acd92cedf2de25b0cde0b2e71"
+    },
+    {
+      "path": "minizero/minizero/environment/tictactoe",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b3e28b1663266f5f092ebbdd09e2648f480fedd4",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/b3e28b1663266f5f092ebbdd09e2648f480fedd4"
+    },
+    {
+      "path": "minizero/minizero/environment/tictactoe/tictactoe.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffd1c718af0dc28bdc68ab52c183deeee0159104",
+      "size": 5916,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/ffd1c718af0dc28bdc68ab52c183deeee0159104"
+    },
+    {
+      "path": "minizero/minizero/environment/tictactoe/tictactoe.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97b482492a2d3c47d241f53e7627d752d79644f1",
+      "size": 2699,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/97b482492a2d3c47d241f53e7627d752d79644f1"
+    },
+    {
+      "path": "minizero/minizero/learner",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "edba40b6e52ea99d57ce185831a938dc90c7925e",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/edba40b6e52ea99d57ce185831a938dc90c7925e"
+    },
+    {
+      "path": "minizero/minizero/learner/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66900e68f559bc03c8341287000b57dd830d879d",
+      "size": 377,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/66900e68f559bc03c8341287000b57dd830d879d"
+    },
+    {
+      "path": "minizero/minizero/learner/data_loader.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e95e5fd7704c13cb099302880a99e1e37785515",
+      "size": 10185,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/9e95e5fd7704c13cb099302880a99e1e37785515"
+    },
+    {
+      "path": "minizero/minizero/learner/data_loader.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b69330538eaa56b91e9fbfcff5eb7115f705a6f2",
+      "size": 2975,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/b69330538eaa56b91e9fbfcff5eb7115f705a6f2"
+    },
+    {
+      "path": "minizero/minizero/learner/pybind.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df7f93fd6bd4da30715ebe6dc47a8de1d8279382",
+      "size": 5093,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/df7f93fd6bd4da30715ebe6dc47a8de1d8279382"
+    },
+    {
+      "path": "minizero/minizero/learner/train.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "036fc71acec55903715f7bb4be38f3f041787526",
+      "size": 14754,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/036fc71acec55903715f7bb4be38f3f041787526"
+    },
+    {
+      "path": "minizero/minizero/minizero.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eca1d2f6dde0b573324ebbcecccdea3c998aab24",
+      "size": 161,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/eca1d2f6dde0b573324ebbcecccdea3c998aab24"
+    },
+    {
+      "path": "minizero/minizero/network",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b850fa92e871897a943880fd2c7945c1d6bf1948",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/b850fa92e871897a943880fd2c7945c1d6bf1948"
+    },
+    {
+      "path": "minizero/minizero/network/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44eef74b5066577583766b2105287807f8e4c52c",
+      "size": 210,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/44eef74b5066577583766b2105287807f8e4c52c"
+    },
+    {
+      "path": "minizero/minizero/network/alphazero_network.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa17e3c6681436c0539350b05e106910e210d19c",
+      "size": 4502,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/aa17e3c6681436c0539350b05e106910e210d19c"
+    },
+    {
+      "path": "minizero/minizero/network/create_network.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5bb7e63f2262ed417fac9008bc69d8d086282cca",
+      "size": 1006,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/5bb7e63f2262ed417fac9008bc69d8d086282cca"
+    },
+    {
+      "path": "minizero/minizero/network/muzero_network.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3842b5137859a76c6ac3c6069287a0e1a3b4bf59",
+      "size": 9585,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/3842b5137859a76c6ac3c6069287a0e1a3b4bf59"
+    },
+    {
+      "path": "minizero/minizero/network/network.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97a4ef18639c5a42335fb76cf9d446bc9d33079e",
+      "size": 3020,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/97a4ef18639c5a42335fb76cf9d446bc9d33079e"
+    },
+    {
+      "path": "minizero/minizero/network/network.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a6152039d76115181bbd39700bf36d9e037774f",
+      "size": 2064,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/7a6152039d76115181bbd39700bf36d9e037774f"
+    },
+    {
+      "path": "minizero/minizero/network/py",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ffb667e24851fca9a1afcddb82cfd54274e3dce2",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/ffb667e24851fca9a1afcddb82cfd54274e3dce2"
+    },
+    {
+      "path": "minizero/minizero/network/py/alphazero_network.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d21c1ce23f6f53073f71750c85760938dd36127",
+      "size": 3922,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/8d21c1ce23f6f53073f71750c85760938dd36127"
+    },
+    {
+      "path": "minizero/minizero/network/py/create_network.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01160821c14212190040666b8e00bd1d4731b53e",
+      "size": 2910,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/01160821c14212190040666b8e00bd1d4731b53e"
+    },
+    {
+      "path": "minizero/minizero/network/py/muzero_atari_network.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa5af1247e21b798fe2dba6a654122834ed25fdd",
+      "size": 8594,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/aa5af1247e21b798fe2dba6a654122834ed25fdd"
+    },
+    {
+      "path": "minizero/minizero/network/py/muzero_network.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e6d764a03a38b5d9ec5e6bcc6f433c39e90806c",
+      "size": 6711,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/1e6d764a03a38b5d9ec5e6bcc6f433c39e90806c"
+    },
+    {
+      "path": "minizero/minizero/network/py/network_unit.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "759087631e50c47d67424310448da59cfe8eb284",
+      "size": 3257,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/759087631e50c47d67424310448da59cfe8eb284"
+    },
+    {
+      "path": "minizero/minizero/utils",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8032720a1681675937f1d59cfea15cff78c66dd9",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/8032720a1681675937f1d59cfea15cff78c66dd9"
+    },
+    {
+      "path": "minizero/minizero/utils/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95949cd19431df6a44dfd82f1169490b4a4f5f30",
+      "size": 166,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/95949cd19431df6a44dfd82f1169490b4a4f5f30"
+    },
+    {
+      "path": "minizero/minizero/utils/base_server.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4cd84ca150440b92d1d2831fa40f2be4d587ce99",
+      "size": 5343,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/4cd84ca150440b92d1d2831fa40f2be4d587ce99"
+    },
+    {
+      "path": "minizero/minizero/utils/color_message.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10f1864e59fdd7fe8360e94bfbf665178c89b7d7",
+      "size": 755,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/10f1864e59fdd7fe8360e94bfbf665178c89b7d7"
+    },
+    {
+      "path": "minizero/minizero/utils/ostream_redirector.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44b62fb50fb2886d7b209a9ebfe78f9671df5838",
+      "size": 1220,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/44b62fb50fb2886d7b209a9ebfe78f9671df5838"
+    },
+    {
+      "path": "minizero/minizero/utils/paralleler.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d423d56202dde2bd64e4c040ac58f9a8c6110b57",
+      "size": 2058,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/d423d56202dde2bd64e4c040ac58f9a8c6110b57"
+    },
+    {
+      "path": "minizero/minizero/utils/random.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "add5ce73a755ef721f64d290eb8e3fe9fd028267",
+      "size": 283,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/add5ce73a755ef721f64d290eb8e3fe9fd028267"
+    },
+    {
+      "path": "minizero/minizero/utils/random.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa1753874d5d760aa7460b0bb21bc32aa3b9d2f4",
+      "size": 1586,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/fa1753874d5d760aa7460b0bb21bc32aa3b9d2f4"
+    },
+    {
+      "path": "minizero/minizero/utils/rotation.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccfbcc88e8effe9d72cde8dab5d007594f24a83d",
+      "size": 2925,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/ccfbcc88e8effe9d72cde8dab5d007594f24a83d"
+    },
+    {
+      "path": "minizero/minizero/utils/sgf_loader.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "474e4b56e2b275db1a37857a1bb6138e75b4e9d5",
+      "size": 4708,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/474e4b56e2b275db1a37857a1bb6138e75b4e9d5"
+    },
+    {
+      "path": "minizero/minizero/utils/sgf_loader.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5e86457c498149c75d55b5dedb5e39273ff2afd",
+      "size": 1745,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/b5e86457c498149c75d55b5dedb5e39273ff2afd"
+    },
+    {
+      "path": "minizero/minizero/utils/time_system.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "787ec5a60410577e9212f5c4262944c92991e6a2",
+      "size": 2381,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/787ec5a60410577e9212f5c4262944c92991e6a2"
+    },
+    {
+      "path": "minizero/minizero/utils/tqdm.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7724b0625133a28a63a708886ede40d516ab18aa",
+      "size": 32252,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/7724b0625133a28a63a708886ede40d516ab18aa"
+    },
+    {
+      "path": "minizero/minizero/utils/utils.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d916e13fc742b355f6651f34c683f7732fb9717",
+      "size": 4096,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/6d916e13fc742b355f6651f34c683f7732fb9717"
+    },
+    {
+      "path": "minizero/minizero/utils/vector_map.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f521f82e42871321ca0fc867089329027f16ac69",
+      "size": 3040,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/f521f82e42871321ca0fc867089329027f16ac69"
+    },
+    {
+      "path": "minizero/minizero/zero",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "df414ceb8287c894e0642619997ca7e4b70e93f2",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/df414ceb8287c894e0642619997ca7e4b70e93f2"
+    },
+    {
+      "path": "minizero/minizero/zero/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ae95f0b5129701844d9ef8d677a98c5cfc0f15d",
+      "size": 204,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/7ae95f0b5129701844d9ef8d677a98c5cfc0f15d"
+    },
+    {
+      "path": "minizero/minizero/zero/zero_server.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18c316a3f57e8f4d16593ad372f022963c8fffe2",
+      "size": 14316,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/18c316a3f57e8f4d16593ad372f022963c8fffe2"
+    },
+    {
+      "path": "minizero/minizero/zero/zero_server.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c4366b1d72b26db2ea0723393b4e01ceac9dc11",
+      "size": 3295,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/6c4366b1d72b26db2ea0723393b4e01ceac9dc11"
+    },
+    {
+      "path": "minizero/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4da32b73aded727106615f6fa687d026f0614536",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/4da32b73aded727106615f6fa687d026f0614536"
+    },
+    {
+      "path": "minizero/scripts/build.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "76600c47fd25d6106233e8eeec2ac4ddd4b15358",
+      "size": 1791,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/76600c47fd25d6106233e8eeec2ac4ddd4b15358"
+    },
+    {
+      "path": "minizero/scripts/start-container.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "802feff6f12b6086d546bedbf5d07ce08c9e4648",
+      "size": 2295,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/802feff6f12b6086d546bedbf5d07ce08c9e4648"
+    },
+    {
+      "path": "minizero/scripts/zero-server.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "6acd54ad93f1a5227ef731c30cd45716a494ffc2",
+      "size": 4266,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/6acd54ad93f1a5227ef731c30cd45716a494ffc2"
+    },
+    {
+      "path": "minizero/scripts/zero-worker.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f17a1ed4d8cfa9c8ade6be11501072978c3f06cc",
+      "size": 5256,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/f17a1ed4d8cfa9c8ade6be11501072978c3f06cc"
+    },
+    {
+      "path": "minizero/tools",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "00f23732f019f1a808266f71c14356c28bf6d962",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/00f23732f019f1a808266f71c14356c28bf6d962"
+    },
+    {
+      "path": "minizero/tools/analysis.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "993967616fe40cd476830c243670a010d6776f2e",
+      "size": 11591,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/993967616fe40cd476830c243670a010d6776f2e"
+    },
+    {
+      "path": "minizero/tools/dependency_graph_generator",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ad769bd2395f61f578bdef2e542ae0072b9a645a",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/ad769bd2395f61f578bdef2e542ae0072b9a645a"
+    },
+    {
+      "path": "minizero/tools/dependency_graph_generator/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42e1b8d610796a67f33adf466de9b84b0e365672",
+      "size": 1321,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/42e1b8d610796a67f33adf466de9b84b0e365672"
+    },
+    {
+      "path": "minizero/tools/dependency_graph_generator/dependency_graph_generator.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5e412e1d517fb94b9d0d03989b059efa676f9244",
+      "size": 7975,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/5e412e1d517fb94b9d0d03989b059efa676f9244"
+    },
+    {
+      "path": "minizero/tools/eval.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "740526838bc4149942e05eaf4047053cf7814268",
+      "size": 6652,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/740526838bc4149942e05eaf4047053cf7814268"
+    },
+    {
+      "path": "minizero/tools/fight-eval.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "534f06cdacf34e7f3ba5f91c4400e272a6a0d790",
+      "size": 4499,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/534f06cdacf34e7f3ba5f91c4400e272a6a0d790"
+    },
+    {
+      "path": "minizero/tools/handle_obs.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3c9e4acd8ff9bc833f76487df6bcc78b3bb0868c",
+      "size": 5373,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/3c9e4acd8ff9bc833f76487df6bcc78b3bb0868c"
+    },
+    {
+      "path": "minizero/tools/plot_board.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "723362c47fb2f6dd583ab9971dec000ab64dd9e7",
+      "size": 18742,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/723362c47fb2f6dd583ab9971dec000ab64dd9e7"
+    },
+    {
+      "path": "minizero/tools/quick-run.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e18cd73673d11929d51a862c698fd2bd02333450",
+      "size": 26884,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/e18cd73673d11929d51a862c698fd2bd02333450"
+    },
+    {
+      "path": "minizero/tools/self-eval.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "cd213fa11af1893b73c760f72ccad87d54054e25",
+      "size": 4076,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/cd213fa11af1893b73c760f72ccad87d54054e25"
+    },
+    {
+      "path": "minizero/tools/to-sgf.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "55fbbfc6041bbc318a6fd9e62f87f9bb61c7e704",
+      "size": 2882,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/55fbbfc6041bbc318a6fd9e62f87f9bb61c7e704"
+    },
+    {
+      "path": "minizero/tools/to-video.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4474a6cda1e33fef288722396c45b1892f270ad5",
+      "size": 4861,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/4474a6cda1e33fef288722396c45b1892f270ad5"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8051e9525b0be23037d4af9b4f51822ab5e6886b",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/8051e9525b0be23037d4af9b4f51822ab5e6886b"
+    },
+    {
+      "path": "scripts/board.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8677008cebe326cf32d6f54c9d658e63ef27b5dc",
+      "size": 15803,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/8677008cebe326cf32d6f54c9d658e63ef27b5dc"
+    },
+    {
+      "path": "scripts/build.sh",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "bee057b0f551528d2e5c1fc87d45fb209b5c8cc3",
+      "size": 28,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/bee057b0f551528d2e5c1fc87d45fb209b5c8cc3"
+    },
+    {
+      "path": "scripts/classify_qc.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13fb924ac8ef9533c96bb598877f572e7b0c4115",
+      "size": 1348,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/13fb924ac8ef9533c96bb598877f572e7b0c4115"
+    },
+    {
+      "path": "scripts/data.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52b11da2b5ec8bd625853278de8e9049ba7f4f5e",
+      "size": 8633,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/52b11da2b5ec8bd625853278de8e9049ba7f4f5e"
+    },
+    {
+      "path": "scripts/eval.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "14450fac36761686df8b9eb15c825ed9edf585d5",
+      "size": 2772,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/14450fac36761686df8b9eb15c825ed9edf585d5"
+    },
+    {
+      "path": "scripts/fight.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b7368c4b3b7df8d5a5005e83e8884731cc3d03c6",
+      "size": 655,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/b7368c4b3b7df8d5a5005e83e8884731cc3d03c6"
+    },
+    {
+      "path": "scripts/plot.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "010c8ed441508d7593283a784de0f52455ad6a97",
+      "size": 1128,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/010c8ed441508d7593283a784de0f52455ad6a97"
+    },
+    {
+      "path": "scripts/preprocess_games.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0f738d3d1c8eed3a964ef8b31d280b0071cb4b91",
+      "size": 1737,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/0f738d3d1c8eed3a964ef8b31d280b0071cb4b91"
+    },
+    {
+      "path": "scripts/random_sample.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3d26f9ae304abf47df123bdf0d9b10dac3418c7",
+      "size": 1734,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/b3d26f9ae304abf47df123bdf0d9b10dac3418c7"
+    },
+    {
+      "path": "scripts/sgf_filter_random_sample.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0080a80e47e5db78efa6ff368525586481d0e26",
+      "size": 2572,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/c0080a80e47e5db78efa6ff368525586481d0e26"
+    },
+    {
+      "path": "scripts/start-container.sh",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "c3c623935c3e1b334c5d627f9fbb0e550f742396",
+      "size": 38,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/c3c623935c3e1b334c5d627f9fbb0e550f742396"
+    },
+    {
+      "path": "scripts/train.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7ce19c5a0ba1cee95cc307c78b95f0f2ebd97b1b",
+      "size": 3684,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/7ce19c5a0ba1cee95cc307c78b95f0f2ebd97b1b"
+    },
+    {
+      "path": "strength",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bbd20ab652b495c26268ac0578b4e67b064a9163",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/bbd20ab652b495c26268ac0578b4e67b064a9163"
+    },
+    {
+      "path": "strength/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6aeb3be29d00823808e1d8557949e9e53994bd5d",
+      "size": 208,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/6aeb3be29d00823808e1d8557949e9e53994bd5d"
+    },
+    {
+      "path": "strength/main.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33749d40b45e719f62fb79b0a32de06badc6728b",
+      "size": 157,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/33749d40b45e719f62fb79b0a32de06badc6728b"
+    },
+    {
+      "path": "strength/misc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6bcc649a66bde513581e7dc66b6f47e3acf4ba3b",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/6bcc649a66bde513581e7dc66b6f47e3acf4ba3b"
+    },
+    {
+      "path": "strength/misc/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac2f5ac9c94d5e7cbe9602053207fc1570410831",
+      "size": 231,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/ac2f5ac9c94d5e7cbe9602053207fc1570410831"
+    },
+    {
+      "path": "strength/misc/evaluator.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56de5bbb8c55a9296176a15ebf787396f3aaf835",
+      "size": 19188,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/56de5bbb8c55a9296176a15ebf787396f3aaf835"
+    },
+    {
+      "path": "strength/misc/evaluator.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77d44a8bfc33b93c741f8faaf357e096fc78e386",
+      "size": 2426,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/77d44a8bfc33b93c741f8faaf357e096fc78e386"
+    },
+    {
+      "path": "strength/misc/game_wrapper.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f356ca8fcfc9df157d67aa67e428b0baac3cb061",
+      "size": 3238,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/f356ca8fcfc9df157d67aa67e428b0baac3cb061"
+    },
+    {
+      "path": "strength/misc/game_wrapper.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f9020ab91926efd95c57710cdcb199435c4a9cf",
+      "size": 617,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/0f9020ab91926efd95c57710cdcb199435c4a9cf"
+    },
+    {
+      "path": "strength/misc/st_actor.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fdf203da48194da8fce17d0c71bd41f2ee18a03",
+      "size": 5197,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/3fdf203da48194da8fce17d0c71bd41f2ee18a03"
+    },
+    {
+      "path": "strength/misc/st_actor.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bec3ac148149d1742fa9e5017c4df646bd2b6a42",
+      "size": 1757,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/bec3ac148149d1742fa9e5017c4df646bd2b6a42"
+    },
+    {
+      "path": "strength/misc/st_actor_group.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "883a93aecc5c14d8f6001d035fc7dce4c4fa4031",
+      "size": 3282,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/883a93aecc5c14d8f6001d035fc7dce4c4fa4031"
+    },
+    {
+      "path": "strength/misc/st_actor_group.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7613a0b3ce2f7a7baa42f12f9eff868a6bd18b0d",
+      "size": 1178,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/7613a0b3ce2f7a7baa42f12f9eff868a6bd18b0d"
+    },
+    {
+      "path": "strength/misc/st_configuration.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f82e98c9742db1b8e108bb78ec17fa3c12645eb",
+      "size": 3100,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/9f82e98c9742db1b8e108bb78ec17fa3c12645eb"
+    },
+    {
+      "path": "strength/misc/st_configuration.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1dbbbaa4a2ca35a4c04b5245180f309465ea638",
+      "size": 926,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/c1dbbbaa4a2ca35a4c04b5245180f309465ea638"
+    },
+    {
+      "path": "strength/misc/st_console.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49200959f7d335ca40103e3400f8482a2d675f0a",
+      "size": 6440,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/49200959f7d335ca40103e3400f8482a2d675f0a"
+    },
+    {
+      "path": "strength/misc/st_console.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ecc0497c6b50c24cbd014fc7dc5abb463cf5c6f2",
+      "size": 839,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/ecc0497c6b50c24cbd014fc7dc5abb463cf5c6f2"
+    },
+    {
+      "path": "strength/misc/st_mcts.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef08b845a0d3246747012960f188ee2b19ae1839",
+      "size": 5941,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/ef08b845a0d3246747012960f188ee2b19ae1839"
+    },
+    {
+      "path": "strength/misc/st_mcts.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd6c6adbf8dc6ba0e024accbefa1c200cd7588fe",
+      "size": 2425,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/fd6c6adbf8dc6ba0e024accbefa1c200cd7588fe"
+    },
+    {
+      "path": "strength/misc/strength_network.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e2970a1bbf431ea6176524c03a8a7de014f49ea",
+      "size": 5711,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/3e2970a1bbf431ea6176524c03a8a7de014f49ea"
+    },
+    {
+      "path": "strength/st_mode_handler.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e3b86ce3c26f57f4caf80aa4e21e743b2e5c309",
+      "size": 8944,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/5e3b86ce3c26f57f4caf80aa4e21e743b2e5c309"
+    },
+    {
+      "path": "strength/st_mode_handler.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8dc09bab55bde30223f9edac65bbdd7b82d3fd29",
+      "size": 1049,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/8dc09bab55bde30223f9edac65bbdd7b82d3fd29"
+    },
+    {
+      "path": "strength/trainer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ef1f6fae0e731489d98843b5b772951098ea3ddb",
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/trees/ef1f6fae0e731489d98843b5b772951098ea3ddb"
+    },
+    {
+      "path": "strength/trainer/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8dce858e553ba3d74b74b05b91864624f71a881",
+      "size": 205,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/f8dce858e553ba3d74b74b05b91864624f71a881"
+    },
+    {
+      "path": "strength/trainer/bt_network.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78cf8183dcbc089d1304aa1a67d2555a243c843a",
+      "size": 4020,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/78cf8183dcbc089d1304aa1a67d2555a243c843a"
+    },
+    {
+      "path": "strength/trainer/create_network.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68e451e8dc5ac72d1b8adbf78ccf82fb44588405",
+      "size": 2579,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/68e451e8dc5ac72d1b8adbf78ccf82fb44588405"
+    },
+    {
+      "path": "strength/trainer/pybind.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "527c9af4b42c4fc7214b20e94d97e8484509bf47",
+      "size": 6087,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/527c9af4b42c4fc7214b20e94d97e8484509bf47"
+    },
+    {
+      "path": "strength/trainer/rank_network.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1081e0fddfd1f3fae21303d981d5d021f553d2c7",
+      "size": 2546,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/1081e0fddfd1f3fae21303d981d5d021f553d2c7"
+    },
+    {
+      "path": "strength/trainer/st_data_loader.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b73287849cab6d3cd872959bc98618d2bc95974",
+      "size": 10529,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/3b73287849cab6d3cd872959bc98618d2bc95974"
+    },
+    {
+      "path": "strength/trainer/st_data_loader.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e78b4bde9e5cfa8b07cd9dee0bf20002341c971",
+      "size": 2496,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/9e78b4bde9e5cfa8b07cd9dee0bf20002341c971"
+    },
+    {
+      "path": "strength/trainer/train.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "224f50b72f018a683f27644c155c9ce16f5d94f9",
+      "size": 13756,
+      "url": "https://api.github.com/repos/rlglab/strength-estimator/git/blobs/224f50b72f018a683f27644c155c9ce16f5d94f9"
+    }
+  ],
+  "truncated": false
+}

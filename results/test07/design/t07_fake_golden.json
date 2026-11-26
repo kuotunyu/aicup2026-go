@@ -1,0 +1,75 @@
+{
+ "what": "PREREG_07 spec 9: the dry-run baselines of R20, 04 and 07 on the from-val fake tree (paths relative to the tree S). R20 equals results/test04/design/r20_fake_golden.json; the 04 outputs are the t04 dry run of the branch point; the 07 outputs are the first green t07 dry run (fake HS = validation HS rows).",
+ "tree": "t02_fake_tests.py from-val -> t02_checks.py t1 --only T1.1,T1.2,T1.3 -> t02_rank.py opening / apply --dry-run (S/out/rank) -> t04_fake_tests.py from-val -> t04_rank.py unpack / opp --workers 6 / apply --dry-run (S/results/test04) -> t07_fake_tests.py from-val (S/results/test07) -> t07_rank.py apply --dry-run",
+ "files_sha256": {
+  "r20": {
+   "out/rank/rank_test_probs.csv": "bb76e6cf7b2bbed94113c536d1b7d4596230125d987c46ffd01eeb9b354d5b59",
+   "out/rank/pred_A.csv": "e04031de197e4ec603e6cc90e949e227b293b2528d823f1402d2a25230776553",
+   "out/rank/pred_B.csv": "d9b9801b3df85c75e5932ce228eebbeb8a76c43b40d2efd02700ce8807490d97",
+   "out/rank/submission_rank.csv": "d9b9801b3df85c75e5932ce228eebbeb8a76c43b40d2efd02700ce8807490d97",
+   "out/rank/seam_val/rank_val_probs.csv": "a83700432fce5d7d26653fdaee345b0c894729fdff0029a244ed94e06c803b63",
+   "out/rank/seam_val/pred_A.csv": "6729fe1dd62eda19a46d05daa9a0abd522e73bf9bcb412e72888c839fbe7f8b2",
+   "out/rank/seam_val/pred_B.csv": "863a62582424adddc9c2e1821fcc056008bd651e103c19ec8ada98a14f87a2fd"
+  },
+  "t04": {
+   "results/test04/opp/o4_seam_val.npz": "30d312c02c357f6761567099003885be5e08635b6e6c0b49d71baac137cd9cd4",
+   "results/test04/opp/o4_public.npz": "2d54353ce03370c4ccae46a9917d5b8a180c68b5f6799c953c005dfe9f929fb4",
+   "results/test04/opp/o4_private.npz": "2edfd1cdb27c9da116b97b34fbe79a13683019456a6ed6adfd66fca4a2bca036",
+   "results/test04/rank/rank_test_probs.csv": "0324e141f3e296e3178a8f3581e262cb5522e38e3e3f8b1fc355ed2413d1252e",
+   "results/test04/rank/pred_A.csv": "8fa9c69dff3c1d99809141bbc6ea0135607186ac20c0bf53709fa09825836b57",
+   "results/test04/rank/pred_B.csv": "a42c09fa99f4c570dcb95270d73f3cacd2ee47bad0ea886fa5f574f6451a7dce",
+   "results/test04/rank/submission_rank.csv": "a42c09fa99f4c570dcb95270d73f3cacd2ee47bad0ea886fa5f574f6451a7dce",
+   "results/test04/rank/seam_val/rank_val_probs.csv": "3c7ab658dc558ce8c6aefdd7b0747de1a60de575d151e9eee96ca6775f442e5c",
+   "results/test04/rank/seam_val/pred_A.csv": "6a6bb3c2e63761bc7196661c99999cec499fae1b38bbb3a7bb9d512e26487739",
+   "results/test04/rank/seam_val/pred_B.csv": "27b6d225d0afc8db9183ae970ee19946ff819ec5ccb2be6a1816ef4338efff79"
+  },
+  "t07": {
+   "results/test07/hs/seam_hs.npz": "ae65b55bfa9538769198bff884765faa82e6ec74ca98d1e83f73d746af069340",
+   "results/test07/hs/public_hs.npz": "571cfd730bafd4150eae62dc41763423ab520e03386677d958eac3754e811e82",
+   "results/test07/hs/private_hs.npz": "26a8910c4f1e03a246ba5ed3fecf3d8cce3f192024433667a01a1f2f40489f1e",
+   "results/test07/rank/rank_test_probs.csv": "ede52634862ed421b0fd76a0b163e39a6596ad7e4e321d59b8f9ad9cf8ebe44c",
+   "results/test07/rank/pred_A.csv": "605e64fd4eb52e2be4685cd967157b85decfe7ced7b3fead9bf3b88cf6154585",
+   "results/test07/rank/pred_B.csv": "d3bcad47e43d41c7106fd4f98260ad881b1165b843ef5e81370d5c26327cb7c6",
+   "results/test07/rank/submission_rank.csv": "d3bcad47e43d41c7106fd4f98260ad881b1165b843ef5e81370d5c26327cb7c6",
+   "results/test07/rank/seam_val/rank_val_probs.csv": "6ae2db6025a903eb5c58af9418dc203c0b6e84dd664049f85dfa850e57dc28c1",
+   "results/test07/rank/seam_val/pred_A.csv": "b229be2c414f7af22310bc304d6da9de5b6406698ec8ce9c0d40e7c146b40a41",
+   "results/test07/rank/seam_val/pred_B.csv": "51d7dbf82d50c3848acadb6934069580bd3ade7e6ca71ad5d1023633a18a26fa"
+  }
+ },
+ "known_values": {
+  "t07 rule_b_differences": {
+   "04": {
+    "public": 57,
+    "all": 103,
+    "file_sha256": "a42c09fa99f4c570dcb95270d73f3cacd2ee47bad0ea886fa5f574f6451a7dce"
+   },
+   "R20": {
+    "public": 108,
+    "all": 214,
+    "file_sha256": "d9b9801b3df85c75e5932ce228eebbeb8a76c43b40d2efd02700ce8807490d97"
+   }
+  },
+  "t07 hs_direction rho": {
+   "public": 0.9437959612247575,
+   "private": 0.9531905199407495
+  },
+  "t07 seam_val rho": 0.9482508617162649,
+  "q02 computed sha256": "0324e141f3e296e3178a8f3581e262cb5522e38e3e3f8b1fc355ed2413d1252e"
+ },
+ "provenance": {
+  "recorded": "2026-10-05",
+  "git_head": "2d81c80ed5e4b64212f69c6b0891ccfcd9796f88",
+  "branch": "p07-testday (tools uncommitted at recording)",
+  "tools_sha256_lf": {
+   "tools/t02_fake_tests.py": "17cf88024ac8b34c5f473d9bf5ca8d1201f1e2779e6d7b535e9b3fac8fbf34d7",
+   "tools/t02_rank.py": "e3485e073a20843654f622828283af4ae3985141e08378cefb59d6c6f2495874",
+   "tools/t02_checks.py": "a6fb40f99e7af19bfe4eef3f5cbb1d0049a8f0c14a7cc95cddfac73884f99cc8",
+   "tools/t04_fake_tests.py": "928d6989b3db72a4161aebc159a05b1b9078c99fc6541b1ddff46aae2bf1b5bc",
+   "tools/t04_rank.py": "f212879e5aaf6fe90060e2b8f03a5e61e8d8704c9dd8204e9c42e65b589940e4",
+   "tools/t07_rank.py": "1686cf7c32730076756c35bf4665f0c7dbb16969ba7d48ee5f9cae644ed57c7c",
+   "tools/t07_fake_tests.py": "934efe1268ebb776aab5aab95b31ad299da804a1933ce7261238097083c9948c",
+   "tools/p07_rank_fuse.py": "8e144e2fe14001af6592130611c1bfce3f49c7bae8208137d2bb3f38ed5b7142"
+  },
+  "order_note": "spec 9 asks for the R20 / 04 / Q04 baselines before any t07 code; they were recorded after t07_rank.py was written but from trees built only by the unchanged t02 / t04 tools (t07 writes nothing there: t07_rank.guard_write, tests/test_t07_dryrun.py snapshots); R20 equals r20_fake_golden.json and the Q04 baseline is results/test06/design/q04_fake_golden.json (07 never reads competition 1)"
+ }
+}

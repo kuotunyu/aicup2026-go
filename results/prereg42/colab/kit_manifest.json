@@ -1,0 +1,21 @@
+{
+ "format": "c10-prereg42 colab kit v1",
+ "zip": "C10_p42_kit.zip",
+ "zip_sha256": "6f5c93650375db2d13a3182d5c2808902b679686975438486a0342e5ad5a7306",
+ "zip_bytes": 475216235,
+ "files": {
+  "tools/c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+  "results/prereg36/explore/p36_lib.py": "8df27b37a6b3de786b54af25908d3d91ffe4c030dceb7350d9dd130a14ce241f",
+  "results/prereg36/explore/p36_train.py": "8abc5ef22eba35b70be06c624f7071218d0a4266affe5494d1207f8819271211",
+  "results/prereg36/explore/p36_embed.py": "2f2e732d1309e25e0b70e370583c07b74dd4c692c6490db8fe1b533ecda32c21",
+  "results/prereg36/explore/split_record.json": "2c847257139cd73b9a1808c003ba30b86bcd59eb6860edef8043afc82535e7e3",
+  "results/prereg42/explore/p42_lib.py": "b5045f8b8222e1c3e6891675eb4b3296fe4254b974421c71853ea8a43cea6eea",
+  "results/prereg42/explore/p42_train.py": "ec5d7baf7bf16753cd9d0fb7369e3ff4cb5a9a271d8ed28cf264691bb2359c80",
+  "results/prereg42/explore/p42_embed.py": "23b60a6f71d1aad5881acd10c87ef2c31a9ed81e6ac2d369c3d29615452b69fd",
+  "data/prereg36/cache/cache.json": "764a61937e60ab660972ecbe8a585e4205bd27a132ce74a64f4cc7390533c48a",
+  "data/prereg36/cache/codes.npy": "be5831abbccf22be3c96725082939638e6607f88ad45b1ed2164db33060c0303",
+  "data/prereg36/cache/off.npy": "7c352279359c5035c1693b78a783d534c8b6ac1e7f870e56655b4b764fb2eaf8",
+  "data/prereg36/cache/meta.npz": "fa8bf685be64aa100746238caeaa87f917d6adc194d2026d83c7865f61f834d3",
+  "data/prereg06/feats/meta.npz": "b1b5def7312dc6321ab08dd7e74e9b9069c49e9efb8caf7133b9869bf7338df5"
+ }
+}

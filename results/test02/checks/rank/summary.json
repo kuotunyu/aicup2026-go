@@ -1,0 +1,38 @@
+{
+ "format": "c10-test02 checks summary v1",
+ "comp": "rank",
+ "checks": {
+  "T1": {
+   "verdict": "PASS",
+   "consequence": "none; the raw files are used as they are",
+   "details_file": "t1.json",
+   "sha256": "9ddf1cc98c4085493c7ec81f539acaba5e8a2701ba849d41bf168368a8bcfb2c"
+  },
+  "T2": {
+   "verdict": "PASS",
+   "consequence": "none",
+   "details_file": "t2.json",
+   "sha256": "4c314c714eebae784908bf4d06bd8811e7f7f599c6c3a314f5ffb72597e7e0ab"
+  },
+  "T3": {
+   "verdict": "RECORD_ONLY",
+   "consequence": "rank: only T3q (question profiles) is recorded; it decides nothing",
+   "details_file": "t3.json",
+   "sha256": "c122ef9b2c17424a02be17e69d02c51d98ea1cfe2a464835df9bc03dbef9469e"
+  },
+  "T4": {
+   "verdict": "RECORD_ONLY",
+   "consequence": "none (rank: record-only)",
+   "details_file": "t4.json",
+   "sha256": "2e9dbd597a4a9d6fc94f9f0b0cef7b194650c277d0e3c3bc9f5ba4e25a1a6280"
+  },
+  "T5": {
+   "verdict": "RECORD_ONLY",
+   "consequence": "none (record-only)",
+   "details_file": "t5.json",
+   "sha256": "e25279f8483b8aa1788b2bc304727bc1678346d966df9562c4024251b043ae9c"
+  }
+ },
+ "updated": "2026-11-04T14:31:56+0800",
+ "git_head": "7cdb60ab8d21a33ea0ffe3c3fd08d5b5569e3b44"
+}

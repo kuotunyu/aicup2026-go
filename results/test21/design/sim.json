@@ -1,0 +1,188 @@
+{
+ "format": "c10-test21 sim v1",
+ "registration": "docs/PREREG_21_PLAYER_EXACT_COPY.md section 6",
+ "players": "fit only (split v1), black games, >= 120 black games; no validation player, no data/local",
+ "questions": 800,
+ "kinds_per_pool": {
+  "N": 200,
+  "C1": 50,
+  "CH": 50,
+  "CA": 40,
+  "XS": 12,
+  "XT": 12,
+  "XC": 12,
+  "XP": 12,
+  "XU": 12
+ },
+ "apply": {
+  "questions_overridden": 304,
+  "rows_changed": 257,
+  "overridden_by_pool": {
+   "public": 152,
+   "private": 152
+  },
+  "changed_by_pool": {
+   "public": 130,
+   "private": 127
+  },
+  "conflicts": 24,
+  "files": {
+   "player_identification_test_public.csv": {
+    "copies": 860,
+    "games": 5000,
+    "games_none": 4128,
+    "games_same": 860,
+    "games_short": 12,
+    "opposite_colour_copies_record_only": 0,
+    "other_pool_copies_record_only": 12,
+    "questions": 400,
+    "questions_conflict": 12,
+    "questions_overridable": 152,
+    "questions_with_copy": 164,
+    "pool": "public",
+    "sha256": "741fa557957b9b942b58bc88835b233ad0c411833cf4c2b0576bbe9cad655f86"
+   },
+   "player_identification_test_private.csv": {
+    "copies": 887,
+    "games": 5000,
+    "games_none": 4101,
+    "games_same": 887,
+    "games_short": 12,
+    "opposite_colour_copies_record_only": 0,
+    "other_pool_copies_record_only": 12,
+    "questions": 400,
+    "questions_conflict": 12,
+    "questions_overridable": 152,
+    "questions_with_copy": 164,
+    "pool": "private",
+    "sha256": "25afde00e99325ccdd948dc37ffb4b73e9f5afaa05343daeea343eb53263706a"
+   }
+  },
+  "pools": {
+   "public": {
+    "sha256": "78816b15997ce1baf563f037e96200fc2dee9ee087d6ebed7543a5217a9353c7",
+    "rows": 40000,
+    "candidates": 400,
+    "distinct_full_keys": 40000,
+    "keys_with_two_or_more_rows": 0,
+    "keys_with_two_or_more_candidates": 0,
+    "rows_under_min_moves": 12,
+    "rows_not_alternating_from_black": 0,
+    "seconds": 2.4,
+    "file": "player_identification_candidates_public.csv"
+   },
+   "private": {
+    "sha256": "1daf0dc2cd9705ce1f0c37783334b107236ca59d6adae32822ede34bb8d71677",
+    "rows": 40000,
+    "candidates": 400,
+    "distinct_full_keys": 40000,
+    "keys_with_two_or_more_rows": 0,
+    "keys_with_two_or_more_candidates": 0,
+    "rows_under_min_moves": 12,
+    "rows_not_alternating_from_black": 0,
+    "seconds": 2.4,
+    "file": "player_identification_candidates_private.csv"
+   }
+  }
+ },
+ "outputs_sha256": {
+  "submission_player.csv": "ee4245a341424080624a29fd1e8aec5188bd61095e7968525cfc1acaf56bd6fc",
+  "overrides.csv": "cf96baeb105469c665a30d48ca022578e945f9e9217efd7827ee0d7bf83ec355",
+  "base_submission_player_csv": "f7f5ab570f45fca83d18cbf6148e34ff728b716a1a80cc51e4b9da9498942c4c",
+  "scan_questions_overridable": 304
+ },
+ "evaluation": {
+  "conditions": {
+   "1_expected_overrides_all_correct_rows": true,
+   "2_no_override_where_not_expected": true,
+   "3_untouched_rows_byte_equal_and_format_ok": true,
+   "4_no_copy_control_not_used": true
+  },
+  "expected_override_questions": 304,
+  "overridden": 304,
+  "untouched_rows_compared": 496,
+  "missed": [],
+  "wrong_candidate": [],
+  "wrong_row": [],
+  "spurious": [],
+  "by_kind": {
+   "C1": {
+    "questions": 100,
+    "overridden": 100,
+    "overridden_correct": 100,
+    "truth_already_top1": 15
+   },
+   "CA": {
+    "questions": 80,
+    "overridden": 80,
+    "overridden_correct": 80,
+    "truth_already_top1": 12
+   },
+   "CH": {
+    "questions": 100,
+    "overridden": 100,
+    "overridden_correct": 100,
+    "truth_already_top1": 15
+   },
+   "N": {
+    "questions": 400,
+    "overridden": 0,
+    "overridden_correct": 0,
+    "truth_already_top1": 56
+   },
+   "XC": {
+    "questions": 24,
+    "overridden": 0,
+    "overridden_correct": 0,
+    "truth_already_top1": 6
+   },
+   "XP": {
+    "questions": 24,
+    "overridden": 0,
+    "overridden_correct": 0,
+    "truth_already_top1": 2
+   },
+   "XS": {
+    "questions": 24,
+    "overridden": 24,
+    "overridden_correct": 24,
+    "truth_already_top1": 5
+   },
+   "XT": {
+    "questions": 24,
+    "overridden": 0,
+    "overridden_correct": 0,
+    "truth_already_top1": 3
+   },
+   "XU": {
+    "questions": 24,
+    "overridden": 0,
+    "overridden_correct": 0,
+    "truth_already_top1": 4
+   }
+  },
+  "passed": true
+ },
+ "no_copy_control": {
+  "exit": 3,
+  "reason": "no question has an exact same-pool, same-colour copy",
+  "not_used_written": true,
+  "submission_written": false
+ },
+ "library_record_only": {
+  "library_games": 80000,
+  "groups_with_two_or_more_rows": 0,
+  "groups_across_candidates": 0
+ },
+ "seconds": 37.8,
+ "rerun_reason": "rerun by the tool after the review fixes (PREREG_21 rev 2)",
+ "provenance": {
+  "tool": "tools/t21_copy.py",
+  "tool_sha256_lf": "1579044fe903979aecd4b5aa351770cd73d3dbbcc14de307179aafa467e6590f",
+  "t02_checks_sha256_lf": "a6fb40f99e7af19bfe4eef3f5cbb1d0049a8f0c14a7cc95cddfac73884f99cc8",
+  "mode": "design",
+  "git_head": "1e231b461b661de5ea2f570928ac4b3ff15b543b",
+  "python": "3.12.13",
+  "created_utc": "2026-10-20T11:53:42+00:00"
+ }
+}

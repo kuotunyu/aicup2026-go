@@ -1,0 +1,276 @@
+{
+ "format": "c10-prereg02 rank frozen_config v1",
+ "what": "PREREG_02 competition 2 frozen configuration (selected on inner; commit before apply)",
+ "created": "2026-09-26T14:02:43+08:00",
+ "smoke": false,
+ "combo": {
+  "id": "R20",
+  "source": "C5",
+  "pool": "log",
+  "calibrated": true,
+  "opening": true
+ },
+ "source_definition": "prereg02 epoch 9, 8 symmetries: log_softmax(mean_s log_softmax(z_s))",
+ "dumps": {
+  "p02e9_d4": {
+   "weights_sha256": "423581b4fddd5c2c160ebf691f4e86b9e00c4fe743d5cfb23df7891f4a2ca939",
+   "syms": 8
+  }
+ },
+ "params": {
+  "a": 1.1602079071066613,
+  "gamma": 0.438654254867862,
+  "w": 0.11638934532134285,
+  "beta": [
+   0.1831710576335903,
+   0.17373812758386764,
+   0.23477712341286536,
+   0.1556856202566642,
+   0.2128731851817358,
+   0.09182149799190883,
+   0.09707244014432542,
+   -0.09104100845360842,
+   -0.4582006134934143
+  ],
+  "b": [
+   0.3100139637054239,
+   0.05097096976577672,
+   -0.03229241398791922,
+   -0.16153309764287382,
+   -0.13227195954645776,
+   -0.22621339836523235,
+   -0.13106620918270362,
+   -0.149830824384337,
+   0.037535700460622094,
+   0.434687269177701
+  ]
+ },
+ "basis": [
+  [
+   0.7071067811865475,
+   0.4082482904638631,
+   0.2886751345948129,
+   0.22360679774997896,
+   0.18257418583505536,
+   0.1543033499620919,
+   0.1336306209562122,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   -0.7071067811865475,
+   0.4082482904638631,
+   0.2886751345948129,
+   0.22360679774997896,
+   0.18257418583505536,
+   0.1543033499620919,
+   0.1336306209562122,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   -0.8164965809277261,
+   0.2886751345948129,
+   0.22360679774997896,
+   0.18257418583505536,
+   0.1543033499620919,
+   0.1336306209562122,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   0.0,
+   -0.8660254037844387,
+   0.22360679774997896,
+   0.18257418583505536,
+   0.1543033499620919,
+   0.1336306209562122,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   -0.8944271909999159,
+   0.18257418583505536,
+   0.1543033499620919,
+   0.1336306209562122,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   -0.9128709291752769,
+   0.1543033499620919,
+   0.1336306209562122,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   -0.9258200997725514,
+   0.1336306209562122,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   -0.9354143466934853,
+   0.11785113019775793,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   -0.9428090415820635,
+   0.10540925533894598
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   -0.9486832980505138
+  ]
+ ],
+ "formula": "p = softmax(e^a (n/12)^gamma (m + w m_op + b)), b = B beta (fixed 10x9 orthonormal basis, sum b = 0)",
+ "decision_rule": "B, tools/decide.py (argmax p_k + e^-1 (p_{k-1} + p_{k+1}))",
+ "opening_build_id": "c0cb86b47cd3f95c75940cc71b3b7ca24d43c3390c1a510bf96c6ae68e0f93a6",
+ "selection": {
+  "rule": "highest OOF rank-balanced mean (rule B); within 0.003 of the best -> the earliest in the list (compared with 1e-12 float slack)",
+  "best_id": "R20",
+  "best_rank_balanced": 0.5854702521055817,
+  "selected": "R20",
+  "selected_rank_balanced": 0.5854702521055817,
+  "R00_rank_balanced": 0.4961654081867494,
+  "within_tolerance": [
+   "R20"
+  ]
+ },
+ "gate": {
+  "threshold": 0.01,
+  "selected_minus_R00": 0.08930484391883226,
+  "passed": true,
+  "meaning": "only when passed is the local validation set scored (PREREG_02 1.2); otherwise record 'not submitted' and keep this scoring slot"
+ },
+ "p02e9": {
+  "threshold_percent": 24.15,
+  "inner_dump": true,
+  "val_dump": true,
+  "inner_accuracy_percent": 25.581869595954103,
+  "history_val_acc_percent": 25.581869595954103,
+  "definition": "inner per-game accuracy of epoch 9 = mean(argmax of the original-orientation logits in inner_p02e9_d4.npz == label) x 100 (the number tune uses) decides; history.csv val_acc (the notebook's monitoring) is recorded only, and history_same_side flags a disagreement about the threshold",
+  "history": [
+   {
+    "epoch": "6",
+    "train_acc": "27.71054564234417",
+    "val_acc": "24.966012289955952",
+    "train_loss": "1.8606195892098107",
+    "val_loss": "1.9502858805159728",
+    "steps": "2814",
+    "samples": "720307",
+    "seconds": "445.78314661979675",
+    "run": "1",
+    "lr_start": "0.001",
+    "lr_end": "0.00075",
+    "global_step": "2814"
+   },
+   {
+    "epoch": "7",
+    "train_acc": "29.620842224218286",
+    "val_acc": "20.77736690412747",
+    "train_loss": "1.804074953232747",
+    "val_loss": "2.2424599313073688",
+    "steps": "2814",
+    "samples": "720307",
+    "seconds": "444.78217482566833",
+    "run": "1",
+    "lr_start": "0.00075",
+    "lr_end": "0.0005",
+    "global_step": "5628"
+   },
+   {
+    "epoch": "8",
+    "train_acc": "31.875297616155333",
+    "val_acc": "25.157702974604383",
+    "train_loss": "1.7373489574837024",
+    "val_loss": "1.973949013484849",
+    "steps": "2814",
+    "samples": "720307",
+    "seconds": "445.1886444091797",
+    "run": "1",
+    "lr_start": "0.0005",
+    "lr_end": "0.00025",
+    "global_step": "8442"
+   },
+   {
+    "epoch": "9",
+    "train_acc": "33.92747814473551",
+    "val_acc": "25.581869595954103",
+    "train_loss": "1.6734723024276783",
+    "val_loss": "1.9804975998898346",
+    "steps": "2814",
+    "samples": "720307",
+    "seconds": "444.7563302516937",
+    "run": "1",
+    "lr_start": "0.00025",
+    "lr_end": "0.0",
+    "global_step": "11256"
+   }
+  ],
+  "history_minus_dump_points": 0.0,
+  "history_same_side": true,
+  "usable": true,
+  "reason": "dumps present and inner accuracy >= threshold"
+ },
+ "inputs_sha256": {
+  "inner_keys.npz": "b686872d459161330af26132fc0ec2617d104be6cd72eae509250ffef0c03ab6",
+  "pseudo_inner.json": "3a51b3dd4edf8e5745f6a7ff52ca925d4a0eacd6a24950ee1b6e3b48fd0b7923",
+  "opening_inner.npz": "054689536524f7d8ea41a19d19b49ae47e7eedd128bd9cad98c429e5f80fdee5",
+  "repro_local.json": "be60ad18372530a70c32ca9eb351a50fade6ad3c33c196b04e11620b6516efff",
+  "players_split.csv": "69554875064ecbd83d790b3215c8ba8f9540f217ec4af3e4a8c43228ac2a3dfc",
+  "inner_p01e1.npz": "b14e49af759c695bd5e41ef2f0cc81aa017886fde0b8b870422ea00ead5ab188",
+  "inner_p01e2.npz": "1423c2bf4a05573ecc0f0534e13e14401a25a9ec6fdd920f9a744d09459337fd",
+  "inner_p01e3.npz": "236ec597eb4922a530cdcaff3027e9bc9634f738dc855121f8ba150f753e16a8",
+  "inner_p01e4.npz": "91dc87d5d7d70e60443ccabe3e5105e1f61f41aa22aae6a04cef72b8437cfac0",
+  "inner_p01e5_d4.npz": "377f2b5fd8700d67fc0df98d92b2d2423443195403ca6a233570f91c23b4b12a",
+  "inner_p02e9_d4.npz": "d042fca41e04a365dd9f7f4ebc31d244d39b24e803a1191cb06ecaaf3d056de5"
+ },
+ "tool": {
+  "git_head": "75308b7ee031ef79d9e6bea81a5a15ee3847e57e",
+  "dirty_or_untracked": [],
+  "files_sha256_rule": "sha256 of the file with CRLF folded to LF",
+  "files_sha256": {
+   "p02_rank_fuse.py": "1f7f1b0ef254315308e73c23ba76ca6978185ca422929702820ba6fca63074fc",
+   "p02_rank_pseudo.py": "16e5bfdfb2995874ddb11bde1f7a9e786a478b14443453f675a4fb3a480bb098",
+   "p02_rank_opening.py": "a4195fece41aa3d50ecda82d1af93d9c04f49df5fd2157d69dd8a488dea93463",
+   "p02_moves.py": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+   "c10data.py": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+   "decide.py": "cf66daf1231b3c2bd60c5b6484245627e133bd0f1cd7ff5557e978da3801d0e3"
+  }
+ }
+}

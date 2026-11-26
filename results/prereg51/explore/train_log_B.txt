@@ -1,0 +1,10 @@
+resumed from /content/drive/MyDrive/C10/p51/B/ckpt/step_280000.pt (step 280000)
+saved /content/drive/MyDrive/C10/p51/B/ckpt/step_285000.pt
+saved /content/drive/MyDrive/C10/p51/B/ckpt/step_290000.pt
+saved /content/drive/MyDrive/C10/p51/B/ckpt/step_295000.pt
+saved /content/drive/MyDrive/C10/p51/B/ckpt/step_300000.pt
+saved /content/drive/MyDrive/C10/p51/B/ckpt/step_305000.pt
+saved /content/drive/MyDrive/C10/p51/B/ckpt/step_310000.pt
+saved /content/drive/MyDrive/C10/p51/B/ckpt/step_315000.pt
+saved /content/drive/MyDrive/C10/p51/B/ckpt/step_320000.pt
+{"finished": true, "steps": 320000, "seconds": 97613.2, "counts": {"T_players": 5771, "positions_seen": 737280000}}

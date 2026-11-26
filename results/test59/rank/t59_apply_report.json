@@ -1,0 +1,727 @@
+{
+ "format": "c10-test59 rank apply v1",
+ "mode": "real",
+ "created": "2026-11-20T16:38:36+00:00",
+ "exit_code": 0,
+ "what": "test59 competition 2 apply (PREREG_59 section 4): frozen Q59 = Q25's seven terms + OPP2 per set, rule B, submission_rank.csv = pred_B.csv (public then private)",
+ "combo": {
+  "id": "Q59",
+  "terms": [
+   "OP",
+   "O4",
+   "SWA",
+   "SWB",
+   "HS",
+   "P1TO",
+   "SET",
+   "OPP2"
+  ]
+ },
+ "theta": [
+  -0.7113658813309872,
+  0.40737718570151393,
+  0.42191885672693136,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.4388450238057809,
+  0.911430569256459,
+  -0.12630113586401606,
+  -0.03479678706535762,
+  -0.06753342957309207,
+  -0.10663193400259721,
+  -0.03920636099832619,
+  -0.10766748427400159,
+  0.053962714596862645,
+  -0.05654540173450085,
+  0.350815567869901
+ ],
+ "params_w": {
+  "OP": 0.42191885672693136,
+  "O4": 0.0,
+  "SWA": 0.0,
+  "SWB": 0.0,
+  "HS": 0.0,
+  "P1TO": 0.0,
+  "SET": 0.4388450238057809,
+  "OPP2": 0.911430569256459
+ },
+ "term": {
+  "tau1": 50,
+  "tau2": 30,
+  "b": 2,
+  "scale": 10.0,
+  "classes": [
+   3685,
+   2500
+  ],
+  "head": {
+   "classes": 3685,
+   "ckpt_sha256": "49c1c8f10c927922ca9f3ab3f7d2aaa37a24ba852d6acf77d3042ce1fd495939",
+   "ckpt_step": 320000,
+   "class_ids_sha256": "9c1db9001568040a648276d3993c6012afc914abd2466f7d9c5411d667cfa066",
+   "sha256": "66bb7d35fa187da47609f05cc8a8bb4c8544f75f2be1f0be0cab3f298f4ab723",
+   "classes_per_rank": [
+    428,
+    361,
+    415,
+    544,
+    220,
+    325,
+    318,
+    322,
+    354,
+    398
+   ]
+  }
+ },
+ "seam_A_q25_recomputed_vs_test25": {
+  "byte_equal": true,
+  "computed_sha256": "43e06c1367b5fe1f970a027750aba79d00d1bea1562a40476e1df20cb0fb8326",
+  "tol": 1e-12,
+  "problems": [],
+  "max_abs_diff": 0.0,
+  "rule_a_differences": 0,
+  "rule_b_differences": 0,
+  "equal": true,
+  "reference_sha256_lf": "43e06c1367b5fe1f970a027750aba79d00d1bea1562a40476e1df20cb0fb8326"
+ },
+ "seam_B_weight_0_equals_25": {
+  "probs_byte_equal": true,
+  "submission_byte_equal": true
+ },
+ "seam_O": {
+  "public": {
+   "source_question_file_sha256_equal_raw": true,
+   "source_candidate_rows": 0,
+   "games": [
+    5000,
+    5000,
+    5000
+   ],
+   "checkpoint_is_s0": true,
+   "weights": "raw",
+   "tta": 1,
+   "mode": null,
+   "moves": [
+    1113061,
+    1113061
+   ],
+   "sample_count_equals_opponent_moves_minus_first_7_plies": true,
+   "question_ids_equal_val_keys": true,
+   "games_per_question_equal": true,
+   "colour_equal_val_keys": true,
+   "finite": true,
+   "ok": true
+  },
+  "private": {
+   "source_question_file_sha256_equal_raw": true,
+   "source_candidate_rows": 0,
+   "games": [
+    5000,
+    5000,
+    5000
+   ],
+   "checkpoint_is_s0": true,
+   "weights": "raw",
+   "tta": 1,
+   "mode": null,
+   "moves": [
+    1109090,
+    1109090
+   ],
+   "sample_count_equals_opponent_moves_minus_first_7_plies": true,
+   "question_ids_equal_val_keys": true,
+   "games_per_question_equal": true,
+   "colour_equal_val_keys": true,
+   "finite": true,
+   "ok": true
+  }
+ },
+ "sets": {
+  "public": {
+   "questions": 400,
+   "changed_vs_25": 40,
+   "changed_by_one_level": 40,
+   "changed_by_two_or_more": 0,
+   "moved_up": 19,
+   "moved_down": 21,
+   "changed_by_number_of_games": {
+    "5": [
+     13,
+     100
+    ],
+    "10": [
+     12,
+     100
+    ],
+    "15": [
+     6,
+     100
+    ],
+    "20": [
+     9,
+     100
+    ]
+   },
+   "predicted_25": {
+    "D": 49,
+    "C": 47,
+    "B": 47,
+    "A": 42,
+    "1D": 41,
+    "2D": 37,
+    "3D": 32,
+    "4D": 40,
+    "5D": 35,
+    "6D": 30
+   },
+   "predicted_59": {
+    "D": 52,
+    "C": 45,
+    "B": 52,
+    "A": 37,
+    "1D": 41,
+    "2D": 34,
+    "3D": 34,
+    "4D": 37,
+    "5D": 33,
+    "6D": 35
+   },
+   "mean_expected_level_25": 4.102046369315089,
+   "mean_expected_level_59": 4.092905175996588,
+   "mean_max_probability_25": 0.6372594853594201,
+   "mean_max_probability_59": 0.6492437247394011,
+   "opp2_vs_q25_spearman_expected_level": {
+    "rho": 0.970780567378546,
+    "questions": 400
+   },
+   "mean_max_q": 0.5755984209805485,
+   "mean_max_q_minus_inner": -0.004701579019451563,
+   "term": {
+    "seam_O": {
+     "source_question_file_sha256_equal_raw": true,
+     "source_candidate_rows": 0,
+     "games": [
+      5000,
+      5000,
+      5000
+     ],
+     "checkpoint_is_s0": true,
+     "weights": "raw",
+     "tta": 1,
+     "mode": null,
+     "moves": [
+      1113061,
+      1113061
+     ],
+     "sample_count_equals_opponent_moves_minus_first_7_plies": true,
+     "question_ids_equal_val_keys": true,
+     "games_per_question_equal": true,
+     "colour_equal_val_keys": true,
+     "finite": true,
+     "ok": true
+    },
+    "vectors": {
+     "file": "data/prereg58/emb_opp_rank/V2_step_320000_raw_tta1/pool_public.npz",
+     "sha256": "0c7971db7ba5d693d9ff54692d90534b4f0c11d1f9f866f0ced688f5b0eae7f2"
+    },
+    "raw_question_file": {
+     "file": "data/test_v2_download/rank/rank_prediction_test_public.csv",
+     "sha256": "4691803a8306ccd65d93a90bd6d7ba767d57abe96c0660b262f1a2b756b84fef"
+    },
+    "games": 5000,
+    "games_without_sample": 0,
+    "games_not_parsed": 0,
+    "mean_max_q": 0.5755984209805485,
+    "mean_max_q_by_colour": {
+     "B": 0.5612488420357257,
+     "W": 0.5877730175344741
+    },
+    "mean_q_by_rank_class": [
+     0.11231215588285338,
+     0.11081761595169837,
+     0.11746889574818956,
+     0.15109682498337246,
+     0.06942434688423567,
+     0.09075486341275389,
+     0.08423783150858288,
+     0.09009148649192528,
+     0.07873566174072204,
+     0.09506031739566714
+    ],
+    "games_share_by_hd_group_x_colour": {
+     "HD0_B": 0.3626,
+     "HD0_W": 0.4064,
+     "HD1_B": 0.0964,
+     "HD1_W": 0.1346,
+     "HD2_B": 0.0,
+     "HD2_W": 0.0
+    },
+    "questions_share_by_colour": {
+     "B": 0.4725,
+     "W": 0.5275
+    },
+    "single_colour_questions": 400,
+    "questions": 400,
+    "question_mean_share_of_HD1_games": 0.23170833333333335
+   },
+   "review": {
+    "max_q_shift_over_line": false,
+    "changed_over_line": false
+   }
+  },
+  "private": {
+   "questions": 400,
+   "changed_vs_25": 44,
+   "changed_by_one_level": 44,
+   "changed_by_two_or_more": 0,
+   "moved_up": 23,
+   "moved_down": 21,
+   "changed_by_number_of_games": {
+    "5": [
+     10,
+     100
+    ],
+    "10": [
+     14,
+     100
+    ],
+    "15": [
+     10,
+     100
+    ],
+    "20": [
+     10,
+     100
+    ]
+   },
+   "predicted_25": {
+    "D": 34,
+    "C": 45,
+    "B": 56,
+    "A": 45,
+    "1D": 36,
+    "2D": 29,
+    "3D": 42,
+    "4D": 42,
+    "5D": 40,
+    "6D": 31
+   },
+   "predicted_59": {
+    "D": 34,
+    "C": 50,
+    "B": 52,
+    "A": 48,
+    "1D": 32,
+    "2D": 27,
+    "3D": 44,
+    "4D": 34,
+    "5D": 46,
+    "6D": 33
+   },
+   "mean_expected_level_25": 4.311570234689326,
+   "mean_expected_level_59": 4.315956679713536,
+   "mean_max_probability_25": 0.612330937014313,
+   "mean_max_probability_59": 0.6264030711316926,
+   "opp2_vs_q25_spearman_expected_level": {
+    "rho": 0.9720649504059399,
+    "questions": 400
+   },
+   "mean_max_q": 0.5624793416534724,
+   "mean_max_q_minus_inner": -0.017820658346527685,
+   "term": {
+    "seam_O": {
+     "source_question_file_sha256_equal_raw": true,
+     "source_candidate_rows": 0,
+     "games": [
+      5000,
+      5000,
+      5000
+     ],
+     "checkpoint_is_s0": true,
+     "weights": "raw",
+     "tta": 1,
+     "mode": null,
+     "moves": [
+      1109090,
+      1109090
+     ],
+     "sample_count_equals_opponent_moves_minus_first_7_plies": true,
+     "question_ids_equal_val_keys": true,
+     "games_per_question_equal": true,
+     "colour_equal_val_keys": true,
+     "finite": true,
+     "ok": true
+    },
+    "vectors": {
+     "file": "data/prereg58/emb_opp_rank/V2_step_320000_raw_tta1/pool_private.npz",
+     "sha256": "896146465c5dc71b19cc42ccb03818163de00ab3f7c2650f9150767ee13e68ec"
+    },
+    "raw_question_file": {
+     "file": "data/test_v2_download/rank/rank_prediction_test_private.csv",
+     "sha256": "d59865e24fe2f5ad742db68108a7f59c2e41138f18c4dc2eea1aa364f3e73c73"
+    },
+    "games": 5000,
+    "games_without_sample": 0,
+    "games_not_parsed": 0,
+    "mean_max_q": 0.5624793416534724,
+    "mean_max_q_by_colour": {
+     "B": 0.5505722419135115,
+     "W": 0.5746269888629274
+    },
+    "mean_q_by_rank_class": [
+     0.1013729540256578,
+     0.10299201357675554,
+     0.11584494903357954,
+     0.15889290911167292,
+     0.06488029419614702,
+     0.09155637289889386,
+     0.08675553909810284,
+     0.09225031198966199,
+     0.08709504777108021,
+     0.09835960829844868
+    ],
+    "games_share_by_hd_group_x_colour": {
+     "HD0_B": 0.3868,
+     "HD0_W": 0.3882,
+     "HD1_B": 0.1182,
+     "HD1_W": 0.1068,
+     "HD2_B": 0.0,
+     "HD2_W": 0.0
+    },
+    "questions_share_by_colour": {
+     "B": 0.5175,
+     "W": 0.4825
+    },
+    "single_colour_questions": 400,
+    "questions": 400,
+    "question_mean_share_of_HD1_games": 0.22416666666666665
+   },
+   "review": {
+    "max_q_shift_over_line": false,
+    "changed_over_line": false
+   }
+  }
+ },
+ "record": {
+  "what": "record only (PREREG_59 section 4): Q59 vs the uploaded 25, and the shift check of the term",
+  "inner_reference": {
+   "mean_max_q": 0.5803,
+   "hd_groups_of_question_games": [
+    58548,
+    12153,
+    2468
+   ],
+   "player_colour_of_question_games": [
+    35736,
+    37433
+   ]
+  },
+  "review_lines": {
+   "abs_mean_max_q_minus_inner": 0.05,
+   "changed_questions_per_pool": 100
+  },
+  "review_needed": false,
+  "sets": {
+   "public": {
+    "questions": 400,
+    "changed_vs_25": 40,
+    "changed_by_one_level": 40,
+    "changed_by_two_or_more": 0,
+    "moved_up": 19,
+    "moved_down": 21,
+    "changed_by_number_of_games": {
+     "5": [
+      13,
+      100
+     ],
+     "10": [
+      12,
+      100
+     ],
+     "15": [
+      6,
+      100
+     ],
+     "20": [
+      9,
+      100
+     ]
+    },
+    "predicted_25": {
+     "D": 49,
+     "C": 47,
+     "B": 47,
+     "A": 42,
+     "1D": 41,
+     "2D": 37,
+     "3D": 32,
+     "4D": 40,
+     "5D": 35,
+     "6D": 30
+    },
+    "predicted_59": {
+     "D": 52,
+     "C": 45,
+     "B": 52,
+     "A": 37,
+     "1D": 41,
+     "2D": 34,
+     "3D": 34,
+     "4D": 37,
+     "5D": 33,
+     "6D": 35
+    },
+    "mean_expected_level_25": 4.102046369315089,
+    "mean_expected_level_59": 4.092905175996588,
+    "mean_max_probability_25": 0.6372594853594201,
+    "mean_max_probability_59": 0.6492437247394011,
+    "opp2_vs_q25_spearman_expected_level": {
+     "rho": 0.970780567378546,
+     "questions": 400
+    },
+    "mean_max_q": 0.5755984209805485,
+    "mean_max_q_minus_inner": -0.004701579019451563,
+    "review": {
+     "max_q_shift_over_line": false,
+     "changed_over_line": false
+    }
+   },
+   "private": {
+    "questions": 400,
+    "changed_vs_25": 44,
+    "changed_by_one_level": 44,
+    "changed_by_two_or_more": 0,
+    "moved_up": 23,
+    "moved_down": 21,
+    "changed_by_number_of_games": {
+     "5": [
+      10,
+      100
+     ],
+     "10": [
+      14,
+      100
+     ],
+     "15": [
+      10,
+      100
+     ],
+     "20": [
+      10,
+      100
+     ]
+    },
+    "predicted_25": {
+     "D": 34,
+     "C": 45,
+     "B": 56,
+     "A": 45,
+     "1D": 36,
+     "2D": 29,
+     "3D": 42,
+     "4D": 42,
+     "5D": 40,
+     "6D": 31
+    },
+    "predicted_59": {
+     "D": 34,
+     "C": 50,
+     "B": 52,
+     "A": 48,
+     "1D": 32,
+     "2D": 27,
+     "3D": 44,
+     "4D": 34,
+     "5D": 46,
+     "6D": 33
+    },
+    "mean_expected_level_25": 4.311570234689326,
+    "mean_expected_level_59": 4.315956679713536,
+    "mean_max_probability_25": 0.612330937014313,
+    "mean_max_probability_59": 0.6264030711316926,
+    "opp2_vs_q25_spearman_expected_level": {
+     "rho": 0.9720649504059399,
+     "questions": 400
+    },
+    "mean_max_q": 0.5624793416534724,
+    "mean_max_q_minus_inner": -0.017820658346527685,
+    "review": {
+     "max_q_shift_over_line": false,
+     "changed_over_line": false
+    }
+   }
+  }
+ },
+ "check_submission": {
+  "mode": "official",
+  "questions": [
+   "data/test/rank_prediction_test_public.csv",
+   "data/test/rank_prediction_test_private.csv"
+  ],
+  "errors": []
+ },
+ "outputs_sha256": {
+  "rank_test_probs.csv": "621822995dc5fa2b58030479d7c7dda86440e9f6b818dec36d99406d0bf33831",
+  "pred_A.csv": "9476c415d3634fabca3285309fd0a9b5114e67c449e0ce8ca68f832e892fda49",
+  "pred_B.csv": "244427fc75895eb0e0ed3d2debc0e4b9e12efad1d114992cbed6678eb720634b",
+  "decide_summary.json": "d4b2e6c83192eb7acec1a0593dee98ca02059cbd124ad9f326e5bd426f2704fc",
+  "submission_rank.csv": "244427fc75895eb0e0ed3d2debc0e4b9e12efad1d114992cbed6678eb720634b"
+ },
+ "decide_summary": {
+  "n_questions": 800,
+  "n_missing": 0,
+  "n_A_ne_B": 10,
+  "distribution_B": {
+   "D": 86,
+   "C": 95,
+   "B": 104,
+   "A": 85,
+   "1D": 73,
+   "2D": 61,
+   "3D": 78,
+   "4D": 71,
+   "5D": 79,
+   "6D": 68
+  }
+ },
+ "test25": {
+  "t25_apply_report_sha256_lf": "63312f51183c5c03303b590b55ece0636d0064ec1eff01e36878538122d615cd",
+  "submission_sha256": "833c6e3749a30c61eac9a37de6bbfe9b0c2f1f7c6ca2b3ecf4bfeebc4453e445",
+  "probs_sha256": "43e06c1367b5fe1f970a027750aba79d00d1bea1562a40476e1df20cb0fb8326"
+ },
+ "checks": {
+  "git": {
+   "clean": true,
+   "head": "8e0d102e787a4430398571c10de8a3079b46047c",
+   "committed": {
+    "committed": [
+     "tools/t59_rank.py",
+     "results/prereg59/rank/frozen_config.json",
+     "results/prereg59/rank/prototypes.npz",
+     "results/prereg59/rank/s0_head.npz",
+     "results/prereg59/explore/kernel.json"
+    ]
+   }
+  },
+  "blas_env": {
+   "OMP_NUM_THREADS": null,
+   "OPENBLAS_NUM_THREADS": null,
+   "MKL_NUM_THREADS": null
+  },
+  "k6_59": {
+   "now": "2026-11-21T00:38:27.875301+08:00",
+   "k6_59": "2026-11-23T12:00:00+08:00"
+  },
+  "prereg59_sha256": {
+   "results/prereg59/rank/frozen_config.json": "c5e68b3f3fc5406fd4c4da9fa4ac1a2f6e588a5acb8425daab1bbf4dbf4bff71",
+   "results/prereg59/rank/prototypes.npz": "405ca18344bcc10254a04100016825a5e2d53a0f3f56adfd5eab176ef6bf65aa",
+   "results/prereg59/rank/s0_head.npz": "66bb7d35fa187da47609f05cc8a8bb4c8544f75f2be1f0be0cab3f298f4ab723",
+   "results/prereg59/explore/kernel.json": "630afc9dda5b145e7d97c9f79b2cabb263114c73f83044b350e1895068a94b93"
+  },
+  "prereg25": {
+   "prereg25_sha256": {
+    "results/prereg25/rank/frozen_config.json": "30c000acbea5bbd17b4758dc646687d05b3494d015a12a08b88d8b4024d58fe3",
+    "results/prereg25/rank/freeze_report.json": "9684e221dc727035155cdf2b565901469c4ef3f69fbcd83d61f5c6d37aa2f474",
+    "results/prereg25/rank/freeze_audit.json": "9e64abb7576658f49124dabc4f8159ad1ab4b7fcd9db5a34403a461f3dc8764b",
+    "results/prereg25/rank/adoption.json": "40b100357cc3ebb679b512a05c39fc0d8a067bb427e76128706cd72c8db31605",
+    "results/prereg25/rank/s25_seed0.npz": "4a01d6a60355cd514e9cc4988c08424a7952fc33302b47a63542a8caf67163bb",
+    "results/prereg25/rank/s25_seed1.npz": "ab53d69b2762a7c01bed354ac6c218cf167fda44bbd3d88eed06a6f4adf3cba4",
+    "results/prereg25/rank/s25_seed2.npz": "20e190f56866c7a28b4eeef0c0d4d656867b79a908e066ba91a47570601c4fbb"
+   },
+   "adopted": {
+    "usable": true,
+    "finalized": "2026-11-05T21:44:01+00:00"
+   }
+  },
+  "venv": {
+   "equal": true,
+   "versions": {
+    "python": "3.12.13",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+   }
+  },
+  "t19_apply_report": {
+   "path": "results/test19/rank/t19_apply_report.json",
+   "sha256": "38f6adc72c0f9ee861b45b6b09e8e2eb4d2455a85ad1b285e65e8d8fe840ad6c",
+   "exit_code": 0,
+   "usable": true,
+   "inputs_bound_checked": 37,
+   "submission_sha256": "eb94dbba5d3cf9edfde94e927afd915af5484586e4c13cd56c0cddbd62f63662",
+   "t1_verdict": "PASS",
+   "t02_fallback_used": false
+  },
+  "frozen_readers": {
+   "prereg09": {
+    "prereg09_sha256": {
+     "results/prereg09/rank/frozen_config.json": "50d38d2787c94569d88ed87a482e872ed64be2d1d20e4f57ffbb07a216663ff5",
+     "results/prereg09/rank/p1e_map.npz": "ecc9c9b1747b7b7d40cf53869b6c67c8e6f776ba7498498737fe3eede8e2edba",
+     "results/prereg09/rank/rank_val_probs.csv": "3f8d32f4b5b0431c9f4407199ae2c074595428ef9053ab807a5cf3b129e3b4fb",
+     "results/prereg09/rank/pred_A.csv": "5c412993c6f72a7169327c8a2575cc7b3be44195ad3e198d30712d73d62432e0",
+     "results/prereg09/rank/pred_B.csv": "d1a2f1d673a8b95425dfdc6b392a64a3e7484509d8bbaa3eb3c72f5ee283333b",
+     "results/prereg09/rank/val_lp_p1e.npz": "dc70be8a0f57dddb51836f8fb47ab598ac02ffaac6803949fdf4770004463cdf",
+     "results/prereg09/rank/apply_report.json": "691cd3a7c06e86947d96af1d2faf152c52006e336ebe15e81124ebeb3fd773b3",
+     "results/prereg09/rank/apply_audit.json": "12cb0145f31780d7dcddfa4dd16c726e5e1cf4eb9c0a5906335d2df6d994609d"
+    },
+    "adopted": {
+     "apply_usable": true,
+     "finalized": "2026-10-09T09:27:10+00:00",
+     "results_md_sha256": "a55818ecacffc23af3f56021cf942aa88de084bb8aec4ed00994b546d1574a06"
+    }
+   },
+   "prereg07": {
+    "prereg07_sha256": {
+     "results/prereg07/rank/frozen_config.json": "93a0ac29615260865d554ee61aec258c633820a87aeb7dfcf8047a5dfd200c0b",
+     "results/prereg07/rank/hs_map.npz": "a4334e79c490e4d8102dd5136ac08c0de1060315981f4ccc527ebffa1b84a3e4",
+     "results/prereg07/hs/val_hs.npz": "ef2067e8cb633f521c205a09aa4638c79fef3ba0b4e90e6a54bdc046e5a5550f",
+     "results/prereg07/hs/val_seam_moves.npz": "3e55fbfa70b43c36c2ebe30bdbca63ea6c68968a1521ec6d63fd2b698f6598ab",
+     "results/prereg07/hs/val_report.json": "11745c5c6e8fedd7c01611331b4f4c69ec1c00f423d3c39e267823bc3c56c7ca",
+     "results/prereg07/rank/rank_val_probs.csv": "6ae2db6025a903eb5c58af9418dc203c0b6e84dd664049f85dfa850e57dc28c1",
+     "results/prereg07/rank/pred_B.csv": "51d7dbf82d50c3848acadb6934069580bd3ade7e6ca71ad5d1023633a18a26fa",
+     "results/prereg07/rank/pred_A.csv": "b229be2c414f7af22310bc304d6da9de5b6406698ec8ce9c0d40e7c146b40a41",
+     "results/prereg07/rank/apply_report.json": "3ed7f7b0580f02d9c4c9c9255634a689213017e65190dce492465aad332fad6b",
+     "results/prereg07/rank/score_H7R.json": "32686f6c91fb0a14301c85ecc1c299844d9346fb2efb8f0fd0b5891f5609cbf5"
+    },
+    "pinned_files": {
+     "results/prereg07/explore/pilot_humansl/hs_lib.py": "d19b6a8615ef757891ff2d451fe5b96b19f31cc706a87862e49a7688d0bde97c",
+     "results/prereg07/explore/pilot_humansl/pilot_run.py": "b0d127fd1d5a83af5b17ec3df1dccc85d94b11c3479d33cac07448a3796a3936",
+     "results/prereg07/explore/pilot_humansl/pilot_fuse.py": "37fb2dff0f37032bf08acc7f27213cafd30533ab024973f92b5b28f41c6ac0c6",
+     "results/prereg05/explore/u1/u1_lib.py": "225dd51cff961ae3608e003432388e0b6d6a053fb4dac26add5425c002dc3ff7"
+    },
+    "katago": {
+     "source_txt_sha256": "039d5a1cbc815b4d69b68dc8c01163354820ac00b5070ef136c14a040b5ba20b",
+     "files": 15,
+     "differing": []
+    }
+   },
+   "prereg04_frozen": {
+    "path": "results/prereg04/rank/frozen_config.json",
+    "sha256": "ae728e9c936a55dfeced255e9b05b5ac6a4955a7101f108e78c53c679e162661",
+    "commit_check": {
+     "path": "results/prereg04/rank/frozen_config.json",
+     "sha256": "ae728e9c936a55dfeced255e9b05b5ac6a4955a7101f108e78c53c679e162661",
+     "git_head": "8e0d102e787a4430398571c10de8a3079b46047c",
+     "state": "committed and unchanged",
+     "combo": "Q02"
+    }
+   }
+  },
+  "t25_apply_report": {
+   "t25_apply_report_sha256_lf": "63312f51183c5c03303b590b55ece0636d0064ec1eff01e36878538122d615cd",
+   "submission_sha256": "833c6e3749a30c61eac9a37de6bbfe9b0c2f1f7c6ca2b3ecf4bfeebc4453e445",
+   "probs_sha256": "43e06c1367b5fe1f970a027750aba79d00d1bea1562a40476e1df20cb0fb8326"
+  }
+ },
+ "rerun": {
+  "reason": null,
+  "replaced": []
+ },
+ "git_head": "8e0d102e787a4430398571c10de8a3079b46047c",
+ "data_local": "never opened, listed or hashed",
+ "not_done_here": "no upload, no official_log.py record (the main session decides, PREREG_59 section 5)",
+ "seconds": 9.3
+}

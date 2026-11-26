@@ -1,0 +1,643 @@
+{
+ "format": "c10-prereg58 kernel v1",
+ "created": "2026-11-20T15:46:40",
+ "seconds": 77.9,
+ "code": {
+  "head": "5785732355607866b48f727f277e03a4fdba7db0",
+  "branch": "p51-ext",
+  "prereg58_dirty": "",
+  "imported_dirty": "",
+  "sha256_lf": {
+   ".venv/Lib/site-packages/_distutils_hack/__init__.py": "df81e6bcba34ee3e3952f776551fb669143b9490fdd6c4caeb32609f97e985b4",
+   ".venv/Lib/site-packages/_virtualenv.py": "cfb3db86aaa53bb62b5ff764970bec2d71c9228590a0ebec57f6ec926cc0bf1a",
+   ".venv/Lib/site-packages/numpy/__config__.py": "ddea608f9be5fc2360a6bb724ceb666c96dbe609aa8c424d0b00722e60a8dcf7",
+   ".venv/Lib/site-packages/numpy/__init__.py": "484d549c227149114d60247bfb019be86bcf380423ffa23ce46999116e903529",
+   ".venv/Lib/site-packages/numpy/_array_api_info.py": "4332889405b9c5b4f946d761086346f58c0acb82bbfb5f9180b30d5520b5c972",
+   ".venv/Lib/site-packages/numpy/_core/__init__.py": "837ce8aec8693095d2e1c7c306d385d1785a50be97a009935c64cae04e3555d2",
+   ".venv/Lib/site-packages/numpy/_core/_add_newdocs.py": "2fc06f2d919b16afc1e1f1abdb161bdce9eedafe3e07f127bb0f45b0841964c6",
+   ".venv/Lib/site-packages/numpy/_core/_add_newdocs_scalars.py": "db6f2b889f9dcfd7d5df64ef3a430f532b3fdbfc279c3b94f8451b1757a16efb",
+   ".venv/Lib/site-packages/numpy/_core/_asarray.py": "f5aa779032cd51c8ca49039fae454fcebd2d64647513576d0884ff61e68525d2",
+   ".venv/Lib/site-packages/numpy/_core/_dtype.py": "59a285cabfcef070f8c3e6eaa15c1d4fde4791983e374e275944fd638c11f926",
+   ".venv/Lib/site-packages/numpy/_core/_dtype_ctypes.py": "28f3e56a40ec3e4b938523abe6a1705b48c9f559e36ef5b811684e6c21d81881",
+   ".venv/Lib/site-packages/numpy/_core/_exceptions.py": "5fc120d61ab5b94f0bf7088ec05a368d1aba4b4be78c27606051e3de1016f42a",
+   ".venv/Lib/site-packages/numpy/_core/_internal.py": "497f1ce325bcc6ffc2ccf013e2cdd2ff2e32c55106a0a07997213d45d6c777a0",
+   ".venv/Lib/site-packages/numpy/_core/_methods.py": "724facf7e63c5b8fcc2fac14bf31a02cb048d9e28f516d86502ba5077a425476",
+   ".venv/Lib/site-packages/numpy/_core/_multiarray_umath.cp312-win_amd64.pyd": "412579a775731de35d64cfa81d2c8af93eed5cf00010897cb87b4408cffd0c5b",
+   ".venv/Lib/site-packages/numpy/_core/_string_helpers.py": "e929a0a22ea80f60ae9e3c014abf41676d079029ef5ba9d33db953394de95a78",
+   ".venv/Lib/site-packages/numpy/_core/_type_aliases.py": "fd576d1516aca4b752b374a3b448f03a9acc6b748243dd72f89619f7b300344d",
+   ".venv/Lib/site-packages/numpy/_core/_ufunc_config.py": "0e938bb63600619bfe9028e8f285f9ddcd925b62d0220690ec4a650a48ac45a5",
+   ".venv/Lib/site-packages/numpy/_core/arrayprint.py": "ea1e7577acc4048383d842a628827e33dc544f06842ab5848b3ee3bb298eaea2",
+   ".venv/Lib/site-packages/numpy/_core/einsumfunc.py": "4b4fc2d54ebe6b533f680fde2fa468d30449c2d44afc73041b6debb6e302dedf",
+   ".venv/Lib/site-packages/numpy/_core/fromnumeric.py": "09b04d56271fa78c43f6aca66ec06c802b0b22b026ae2fa6153575459b6dab53",
+   ".venv/Lib/site-packages/numpy/_core/function_base.py": "97925f5f2a271088cbff838a149a6312335d8dac80ac0314f0c85a31b442c1b5",
+   ".venv/Lib/site-packages/numpy/_core/getlimits.py": "ec0927f602302ef9b449f2773151deaab480cb5ad8eff4c8bbba59e489daf106",
+   ".venv/Lib/site-packages/numpy/_core/memmap.py": "9f79da21b64da6722a66cc86e126061b33371ad66139314580de483a0ebc254c",
+   ".venv/Lib/site-packages/numpy/_core/multiarray.py": "afd14181b927aa10800a0c5dab5f456f52e219726847dbef379e313419029d49",
+   ".venv/Lib/site-packages/numpy/_core/numeric.py": "feb150554b4879d4df7bd0a4ab7b1a6b818de7ba994ed0c73583fee177533417",
+   ".venv/Lib/site-packages/numpy/_core/numerictypes.py": "de7be532bd85cff56ad4e29786d76ec5bf2d511f7e364919bdd7cb0ad93ad3a8",
+   ".venv/Lib/site-packages/numpy/_core/overrides.py": "88cf63f86be1eba2a303d221f011af2077194d819c06a10c725f01c939afe4ca",
+   ".venv/Lib/site-packages/numpy/_core/printoptions.py": "345a6fcb96e78dbbea9ca7aa42dd2f784131a400180153688865c7de98255807",
+   ".venv/Lib/site-packages/numpy/_core/records.py": "f6c0878df1c604fda7043d738e8b2bb54d8f771ceffa92b81236407a99475df5",
+   ".venv/Lib/site-packages/numpy/_core/shape_base.py": "1d6e897dfdb7edf2d71e8ed75254a6e7106b1a947592f88d91af96d1ad2c469e",
+   ".venv/Lib/site-packages/numpy/_core/umath.py": "fabc529bdfcc632ae82bcaaa5539494802757e5a52c492999e2ebfe10f396987",
+   ".venv/Lib/site-packages/numpy/_distributor_init.py": "14148976054795071ae41ad011560fa059ba2924c98481675ad59b1241214d2a",
+   ".venv/Lib/site-packages/numpy/_expired_attrs_2_0.py": "a6cf0f96202d89f172abe6ad706fe252ba7672ee35091722bd70870c83a0426f",
+   ".venv/Lib/site-packages/numpy/_globals.py": "fe13921c6f4a00bd12891da7d800f2a42f878c067d8ed881ddf0af3fbace3a36",
+   ".venv/Lib/site-packages/numpy/_pytesttester.py": "cc2729e50688028a9aeedb131b2a12c0480f3477cc1c0e84be7f5d4177164002",
+   ".venv/Lib/site-packages/numpy/_typing/__init__.py": "23712a130b95f1134c0e93988ee72abe6c1015180277768ac13bae4fe1c8f59b",
+   ".venv/Lib/site-packages/numpy/_typing/_array_like.py": "5c9d8a290c4d76fe7e85f4367f21fdc33f40eed80b44f66d6378629fb4271bf8",
+   ".venv/Lib/site-packages/numpy/_typing/_char_codes.py": "c1ad22e8a3fb2405b257e8bdb303a07ff0a923ab23f7175bf5af3b6b62316bd1",
+   ".venv/Lib/site-packages/numpy/_typing/_dtype_like.py": "060ecb1f4c35793a8a3b4fe200cb1151b51b7d17fc2e53ac7699da4271752bc7",
+   ".venv/Lib/site-packages/numpy/_typing/_nbit.py": "9a353bc8328b57ad47a79fbe36eae4c48272b136a7307df7b70e5ae2e725a284",
+   ".venv/Lib/site-packages/numpy/_typing/_nbit_base.py": "496ed60d5b3b711b201c21e1608c9f2e3f4757f0173f85ffd83d7187e54da43c",
+   ".venv/Lib/site-packages/numpy/_typing/_nested_sequence.py": "3bc45b3564a962a54c203adede2390a7c852ba48349a4c9332a5e7abfe3f2c24",
+   ".venv/Lib/site-packages/numpy/_typing/_scalars.py": "02ee1deaaea050040b408b9613fe4f1de80b45290a5c1bb38d5d70a76a6eb7f5",
+   ".venv/Lib/site-packages/numpy/_typing/_shape.py": "8086f11c19de0c82c78caa3617e4d4f0834ae82afd843befb0f88e9700137a3e",
+   ".venv/Lib/site-packages/numpy/_typing/_ufunc.py": "1ce91a13eeb05747dddeb9876460b7f580072087fcb72be5cde903e32e064310",
+   ".venv/Lib/site-packages/numpy/_utils/__init__.py": "4a9a9d941150a1648e017b1efcd2ebb8ffdde730f9c0366f1d826121eb099caf",
+   ".venv/Lib/site-packages/numpy/_utils/_conversions.py": "d3133175e2cece20e61ec44cffc96e121e12fa441d328320e86c4d0c36acebd9",
+   ".venv/Lib/site-packages/numpy/_utils/_inspect.py": "cc5b890011f4f03d4a82afde79c6240f53a0834397a75b78a2a8d9c4cd2474b9",
+   ".venv/Lib/site-packages/numpy/dtypes.py": "29ba7455e6125e2986d6e1149cd4ae9d699b208ad23edf1cd7482fdac29bda4a",
+   ".venv/Lib/site-packages/numpy/exceptions.py": "df16e967d97b1779a1c2dca6be5d2fa84e346a237c6e471e6a8f1a5df66c9795",
+   ".venv/Lib/site-packages/numpy/lib/__init__.py": "9983bd3542d050794af5c33999f9d6caedb36fc2c4c3184442b842fef757d92d",
+   ".venv/Lib/site-packages/numpy/lib/_array_utils_impl.py": "4644b9438e60d2a4cc38e0fb70d2a36b0887e0ae2251b37a1a9bb6b4da0a7b6e",
+   ".venv/Lib/site-packages/numpy/lib/_arraypad_impl.py": "69f17907431860505f879f7ac0f69be927464119e4068583b5f84f11fee63131",
+   ".venv/Lib/site-packages/numpy/lib/_arraysetops_impl.py": "9f896cc0ddc2f4f94ed7cf0b28fa5dba777ec77df3c44788afcd6448d55416b4",
+   ".venv/Lib/site-packages/numpy/lib/_arrayterator_impl.py": "1ed3800c81ee1bd0036db3138268783ff9ae91ed55fbc13e14d10eddb54e18f0",
+   ".venv/Lib/site-packages/numpy/lib/_datasource.py": "9ead7eb599f6ed893aae85ddf9a8316502b4efd0595cea2b9ddf7af1ab097460",
+   ".venv/Lib/site-packages/numpy/lib/_format_impl.py": "5d7fd66e8c78d0bd9fab82e8893609ba88f7fcd3569eaebb0748f40768e85c16",
+   ".venv/Lib/site-packages/numpy/lib/_function_base_impl.py": "000d045b739c89974bfd9bae66beaa35bfd97ea7a06d13378aa234153a3b6116",
+   ".venv/Lib/site-packages/numpy/lib/_histograms_impl.py": "3f4f1940f437fe139d852031afe1c2b9f85e32a2c32f8d90c0125445af9f16cd",
+   ".venv/Lib/site-packages/numpy/lib/_index_tricks_impl.py": "e168b1ab86f91c9c8ab64e97b2fdc7eb3fe0559c8432d33c9b267b68b4eb407e",
+   ".venv/Lib/site-packages/numpy/lib/_iotools.py": "04e6c05a9fe7ebd9a92d888524bf15512926b9272b453ae5c4ac5c63ab816b48",
+   ".venv/Lib/site-packages/numpy/lib/_nanfunctions_impl.py": "d923a746bdfc4cbc254cd932c03670a9f7566827002b2cf5dc40db8bc81bb5fb",
+   ".venv/Lib/site-packages/numpy/lib/_npyio_impl.py": "51eb4572baad1e8198f71b3488a3cbcdb81ac85aa3c15cc2708cd907198a1fb5",
+   ".venv/Lib/site-packages/numpy/lib/_polynomial_impl.py": "530f29b1db6a1610bd02291c94196e100a3dd7b80f3a278fb6173e29dd297545",
+   ".venv/Lib/site-packages/numpy/lib/_scimath_impl.py": "6f9ffec91cd62483bc75afd9e01f2a41eebc8fc9693bc82db4696f18da65cadc",
+   ".venv/Lib/site-packages/numpy/lib/_shape_base_impl.py": "b550d0cc5e7efe46dc1c77f0286330fcb4100fcbbeb98f41aa9127c2c44e01ec",
+   ".venv/Lib/site-packages/numpy/lib/_stride_tricks_impl.py": "0db57f30a81b00919e7922828cc23c4c32759c07a647639b76d1e157871fe862",
+   ".venv/Lib/site-packages/numpy/lib/_twodim_base_impl.py": "a11d0bdecd5064dae7aca1ecbc3fdb9ff0eacae4cdfa8ed1a644ac0bb4a58fe6",
+   ".venv/Lib/site-packages/numpy/lib/_type_check_impl.py": "53a091170f8fe5fafb13e7b241f8d04c352185c1253125c389aba52ee37e4939",
+   ".venv/Lib/site-packages/numpy/lib/_ufunclike_impl.py": "f468fbb02ccb1038be6194044b04d3f873604c130f59841612109b0e1718feea",
+   ".venv/Lib/site-packages/numpy/lib/_utils_impl.py": "4cb745a05e5cef826bc6c38c55d62cd02113a61d4531b26098c7d86ff2ae2435",
+   ".venv/Lib/site-packages/numpy/lib/_version.py": "0affabe9bf73540e9b0febf2158f2d09746ef5de4eb069e3a976a57d8d9194e0",
+   ".venv/Lib/site-packages/numpy/lib/array_utils.py": "5db732849f52d0894d9cff4dcbacb280b30400259650f34e53cbdebe3d531292",
+   ".venv/Lib/site-packages/numpy/lib/format.py": "9e9274789853eee28d2b96b49423067e226ff91e23c8d86220f7996c970d5c1b",
+   ".venv/Lib/site-packages/numpy/lib/introspect.py": "e97a1b86c7a928352ff339a83e47d53391206421afeb53f63ca97f6916c49074",
+   ".venv/Lib/site-packages/numpy/lib/mixins.py": "cd047e8888c2492796c5ea4ae62fbbba34967f0163ad467fab18deac88a4c3a6",
+   ".venv/Lib/site-packages/numpy/lib/npyio.py": "79a3ef7c7192cd413bd132471cb3823c85fd1b98a132e0447b1cbafcf36127d4",
+   ".venv/Lib/site-packages/numpy/lib/scimath.py": "aa315a41eab4cc4225ee02aa3a16a3fef9820bf29a15dc9398774b514912a792",
+   ".venv/Lib/site-packages/numpy/lib/stride_tricks.py": "c74fc17f097270102547706fa714e775e3fde9d1c14ff7c049b9134d3cc16202",
+   ".venv/Lib/site-packages/numpy/linalg/__init__.py": "3b50094af1bb3530254d3bcb19349c612d5db6f859707320a466c7f71499abc2",
+   ".venv/Lib/site-packages/numpy/linalg/_linalg.py": "fb51e084cbb05b72a571a088299222055f3f176792ea9ea66186327a31ec787f",
+   ".venv/Lib/site-packages/numpy/linalg/_umath_linalg.cp312-win_amd64.pyd": "493793ef35882cd7748c036721c655a2aa7faed4b7a5a5d2fb8cbaa3b58f4d51",
+   ".venv/Lib/site-packages/numpy/matrixlib/__init__.py": "52de88a9f8ee03e930c28e8704e6008058d75c2fe1ed857fdc7c83b0a33bd9d9",
+   ".venv/Lib/site-packages/numpy/matrixlib/defmatrix.py": "8ce552b26458ede8773335bba3835e1c6793f28d5c83ef29dcaa535a8f645c53",
+   ".venv/Lib/site-packages/numpy/version.py": "c1357b603c81e0fcbf935e7ccfc9202cafba0b30e38c625b568004002e372205",
+   ".venv/Lib/site-packages/psutil/__init__.py": "d138a5786b163b56ba86ea0b2d5589dfca37e1bcdf8de1057fe1e933d6ab808a",
+   ".venv/Lib/site-packages/psutil/_common.py": "1bbce9fd97e6f5439a0d385f28401f527c5a9d978d9d062593d7ef6fe215fc75",
+   ".venv/Lib/site-packages/psutil/_ntuples.py": "9b8e8b938abae2786a515f686f4d8132218be897eb6b459b9324ed17d88a31c7",
+   ".venv/Lib/site-packages/psutil/_psutil_windows.pyd": "06ee1c023ce1bcb1e17122fb30b8aab7e3e8ac570da775981dea4aac8c245d05",
+   ".venv/Lib/site-packages/psutil/_pswindows.py": "580ad391de734c113682200ee9f4245e34737f5e26af0a73a4e8c9b4458de220",
+   "results/prereg58/explore/p58_eval.py": "e95290aceaacedf96f63ad02b5fb4b7501e2ff056fa2545fa9d2ae8a74fe33e9",
+   "results/prereg58/explore/p58_lib.py": "eb5c3d8edf59c82277eb93e063d1677fee2dd01a6cadb76e0258124f08294231"
+  }
+ },
+ "what": "PLAN.md: K[h, c][d] = P(opponent's class rank - player's rank = d | HD group h, player's colour c) from soft counts q_g[r_g + d] with add-0.5 smoothing, on the D and E players of prereg36's split (labelled, never seen by S0, no inner player); tau by 5-fold (by player) held-out likelihood. No inner game is read.",
+ "taus": [
+  20,
+  30,
+  50,
+  80,
+  120
+ ],
+ "tau": 50,
+ "per_tau": {
+  "20": {
+   "heldout_mean_loglik": -2.2668399293351196,
+   "heldout_mean_loglik_by_fold": [
+    -2.2627033654214004,
+    -2.2593167149601525,
+    -2.265521396185644,
+    -2.2779219619193896,
+    -2.266870951905135
+   ],
+   "record_only_heldout_mean_log_posterior_true_rank": -2.0184519799045986
+  },
+  "30": {
+   "heldout_mean_loglik": -2.1546443907824124,
+   "heldout_mean_loglik_by_fold": [
+    -2.1478677875124808,
+    -2.144748739276221,
+    -2.151698188725286,
+    -2.1700854411215307,
+    -2.1562413014328836
+   ],
+   "record_only_heldout_mean_log_posterior_true_rank": -1.9399509221794518
+  },
+  "50": {
+   "heldout_mean_loglik": -2.11072377447539,
+   "heldout_mean_loglik_by_fold": [
+    -2.10208709787038,
+    -2.0999387200001793,
+    -2.105694230614086,
+    -2.130212868545123,
+    -2.1128305715360693
+   ],
+   "record_only_heldout_mean_log_posterior_true_rank": -1.915137372567833
+  },
+  "80": {
+   "heldout_mean_loglik": -2.128423163601498,
+   "heldout_mean_loglik_by_fold": [
+    -2.1196325683292994,
+    -2.1182540685379285,
+    -2.121531708227685,
+    -2.1503096429173723,
+    -2.129779110496542
+   ],
+   "record_only_heldout_mean_log_posterior_true_rank": -1.936743364152958
+  },
+  "120": {
+   "heldout_mean_loglik": -2.150958504816508,
+   "heldout_mean_loglik_by_fold": [
+    -2.1424175390653897,
+    -2.141322233449172,
+    -2.1428698208104997,
+    -2.174301686947952,
+    -2.1515101623835315
+   ],
+   "record_only_heldout_mean_log_posterior_true_rank": -1.9596604352365004
+  }
+ },
+ "selection_rule": "largest held-out mean log(sum_s q_g[s] K[h_g, c_g][s - r_g] + 1e-9) over the games of the 5 held-out player folds (NOTES.md 3); ties -> the smaller tau",
+ "index": {
+  "h": [
+   "HD 0",
+   "HD 1",
+   "HD 2+"
+  ],
+  "c": [
+   "player B",
+   "player W"
+  ],
+  "d": [
+   -9,
+   -8,
+   -7,
+   -6,
+   -5,
+   -4,
+   -3,
+   -2,
+   -1,
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "ranks": [
+   "D",
+   "C",
+   "B",
+   "A",
+   "1D",
+   "2D",
+   "3D",
+   "4D",
+   "5D",
+   "6D"
+  ]
+ },
+ "K": [
+  [
+   [
+    0.0004700381064327497,
+    0.0016404999543976524,
+    0.004862558071339823,
+    0.01369390211977058,
+    0.02662875354974038,
+    0.047429496411791554,
+    0.0723404588439369,
+    0.10848275765799496,
+    0.17058734323999702,
+    0.21656967649840556,
+    0.14882745383404009,
+    0.08743160456901886,
+    0.04973736030054891,
+    0.028478438172488352,
+    0.014920788788097121,
+    0.004945807067843762,
+    0.0020239299558343607,
+    0.0007427606067662675,
+    0.00018637225155516678
+   ],
+   [
+    0.00044432966168440327,
+    0.001962338771434392,
+    0.005485382995473581,
+    0.013955935405663436,
+    0.028110268549627653,
+    0.048595418560737506,
+    0.07102471092332137,
+    0.10586691380151346,
+    0.16911665734423198,
+    0.2207324328784522,
+    0.1522657209005805,
+    0.08602545735203686,
+    0.04778183437207216,
+    0.026426076992257852,
+    0.014282820605843207,
+    0.004859852376164668,
+    0.0020703100104676143,
+    0.0007883818990520094,
+    0.00020515659938512707
+   ]
+  ],
+  [
+   [
+    0.0002969216475846618,
+    0.0018451143389913481,
+    0.0027043092268990232,
+    0.0064282384862028715,
+    0.012913216444971613,
+    0.021691790887556912,
+    0.036801187477974354,
+    0.07516873498093807,
+    0.14342570281845607,
+    0.27401617040125115,
+    0.1892583461383535,
+    0.10434945854400572,
+    0.058385696510625425,
+    0.03381736555574975,
+    0.021188678306032053,
+    0.010299875256602059,
+    0.005045870438889086,
+    0.0018360515860301795,
+    0.0005272709528862694
+   ],
+   [
+    0.000691658606521901,
+    0.0027279907363161335,
+    0.007155666111855557,
+    0.01479369115191082,
+    0.023164362080267405,
+    0.0353776940052361,
+    0.0581216311166628,
+    0.10529061602066997,
+    0.19361334687923154,
+    0.25838058784358564,
+    0.13792522637666021,
+    0.07469733779295873,
+    0.04292643713574388,
+    0.022404560514200183,
+    0.012573032293885305,
+    0.005902138950661899,
+    0.0026465885465494577,
+    0.0011870751619254302,
+    0.00042035867515692496
+   ]
+  ],
+  [
+   [
+    0.0005274414743289623,
+    0.001253757384140279,
+    0.001514731055837347,
+    0.0036542851019671545,
+    0.00540315071099481,
+    0.01309577807488294,
+    0.020289980474662475,
+    0.032879087416342795,
+    0.05067682113910549,
+    0.13194732396663425,
+    0.2728770900440789,
+    0.12946238758048573,
+    0.15026492688567702,
+    0.062295767600527845,
+    0.05481879099766486,
+    0.0383023705029551,
+    0.013656236754251238,
+    0.009579105873461011,
+    0.007500966962001746
+   ],
+   [
+    0.018473475256409765,
+    0.015558104838081512,
+    0.03265870653897947,
+    0.061151353166852544,
+    0.07066140055895258,
+    0.10466244983372729,
+    0.10124967543593273,
+    0.12860286236423624,
+    0.1280082125253164,
+    0.1631765998942463,
+    0.06861920930534735,
+    0.045007288218432535,
+    0.02542737381086219,
+    0.01618650478593703,
+    0.009745730832030904,
+    0.005483603788348197,
+    0.00299341091853633,
+    0.0016020394112994457,
+    0.0007319985164711965
+   ]
+  ]
+ ],
+ "soft_counts": [
+  [
+   [
+    55.0982224003448,
+    193.54571685594988,
+    574.6652501893976,
+    1619.2763652860094,
+    3149.2687992542783,
+    5609.67426832058,
+    8556.255004125689,
+    12831.328748197157,
+    20177.338601471507,
+    25616.335899775753,
+    17603.480963032584,
+    10341.303630644152,
+    5882.6587944703015,
+    3368.0578200137115,
+    1764.398041405681,
+    584.5123161163677,
+    238.89954286089036,
+    87.35706699104492,
+    21.54494858907721
+   ],
+   [
+    52.229711776242425,
+    232.37564785304824,
+    650.4641135303394,
+    1655.6857444285965,
+    3335.4158444556924,
+    5766.43980914913,
+    8428.180007047868,
+    12562.991328110125,
+    20068.996518683398,
+    26194.369640768156,
+    18069.253763574165,
+    10208.356087609609,
+    5669.889739519742,
+    3135.5486218637247,
+    1694.4780283469304,
+    576.2308311104025,
+    245.18886471721834,
+    93.05925091524972,
+    23.846446540531527
+   ]
+  ],
+  [
+   [
+    5.873571626228546,
+    39.10630184361871,
+    57.549349710000875,
+    137.4853532255875,
+    276.68864759953766,
+    465.125137296852,
+    789.455889808457,
+    1613.034480733323,
+    3078.204423849563,
+    5881.394105748045,
+    4062.0250290328195,
+    2239.4133023763507,
+    1252.7781684488277,
+    725.4066603369448,
+    454.3255741781302,
+    220.59197232059108,
+    107.81213190597347,
+    38.911765319930744,
+    10.818134639180194
+   ],
+   [
+    13.989210318724068,
+    56.64731393971862,
+    149.4004715442064,
+    309.40563909580436,
+    484.75863903848256,
+    740.6096228686897,
+    1217.0609894474128,
+    2205.180469709009,
+    4055.409197099589,
+    5412.185744441364,
+    2888.8266047514717,
+    1564.2971807557988,
+    898.7444683381323,
+    468.84193593172336,
+    262.88616700845677,
+    123.140957807941,
+    54.94206016739141,
+    24.367444029594918,
+    8.305883706524858
+   ]
+  ],
+  [
+   [
+    2.3315695549350353,
+    6.23079651675709,
+    7.6318336732628,
+    19.118029569910675,
+    28.506814591975644,
+    69.80468459500909,
+    108.42676017822554,
+    176.01138079463635,
+    271.5585142852879,
+    707.8592087148762,
+    1464.440657901638,
+    694.5188277258379,
+    806.1972599857575,
+    333.93482836343384,
+    293.7946794709639,
+    205.12627604511454,
+    72.8135070151978,
+    50.925429881675456,
+    39.76894113550639
+   ],
+   [
+    56.18585882429335,
+    47.240044695653104,
+    99.71324101485847,
+    187.14292719248698,
+    216.32450761514593,
+    320.6567273147921,
+    310.1846290751595,
+    394.1178831646588,
+    392.2932001339333,
+    500.2073967754946,
+    210.05804375345826,
+    137.6048638982602,
+    77.52389653863061,
+    49.16828993564777,
+    29.404775058086816,
+    16.326438224546436,
+    8.685281403528727,
+    4.415857933572347,
+    1.746137447791866
+   ]
+  ]
+ ],
+ "games_per_h_c": [
+  [
+   118275,
+   118663
+  ],
+  [
+   21456,
+   20939
+  ],
+  [
+   5359,
+   3059
+  ]
+ ],
+ "smoothing": 0.5,
+ "players": {
+  "total": 900,
+  "D": 300,
+  "E": 600,
+  "per_rank": [
+   90,
+   90,
+   90,
+   90,
+   90,
+   90,
+   90,
+   90,
+   90,
+   90
+  ],
+  "per_fold": [
+   177,
+   158,
+   197,
+   187,
+   181
+  ]
+ },
+ "games": {
+  "total": 287751,
+  "with_sample": 287751,
+  "without_sample": 0,
+  "D": 94015,
+  "E": 193736
+ },
+ "overlap": {
+  "kernel_and_inner_players": 0,
+  "kernel_and_s0_classes": 0,
+  "inner_and_s0_classes": 0
+ },
+ "hd_join": {
+  "rows": 287751,
+  "joined": 287751,
+  "missing": 0,
+  "player_mismatch": 0,
+  "colour_mismatch": 0,
+  "hd_groups": [
+   236938,
+   42395,
+   8418
+  ],
+  "ok": true,
+  "table_sha256": "74785e385a54dc17076939fd7454f32a01c30a1b3e3eca526037e450d729e570"
+ },
+ "head": {
+  "classes": 3685,
+  "ckpt_sha256": "49c1c8f10c927922ca9f3ab3f7d2aaa37a24ba852d6acf77d3042ce1fd495939",
+  "ckpt_step": 320000,
+  "class_ids_sha256": "9c1db9001568040a648276d3993c6012afc914abd2466f7d9c5411d667cfa066",
+  "sha256": "66bb7d35fa187da47609f05cc8a8bb4c8544f75f2be1f0be0cab3f298f4ab723",
+  "classes_per_rank": [
+   428,
+   361,
+   415,
+   544,
+   220,
+   325,
+   318,
+   322,
+   354,
+   398
+  ]
+ },
+ "vector_files": {
+  "D": {
+   "file": "data/prereg58/emb_opp_D/V2_step_320000_raw_tta1/store_D.npz",
+   "sha256": "b70f5782b2fa16c3698e3aa9846e59370f1533f8052524e72652188faf7cdc4f",
+   "games": 94015
+  },
+  "E": {
+   "file": "data/prereg58/emb_opp_E/V2_step_320000_raw_tta1/store_E.npz",
+   "sha256": "876058667746a58b26ae06720462791f5a0dd384fb443b9c602ae0f86458f62d",
+   "games": 193736
+  }
+ },
+ "standalone_score_record": {
+  "what": "opponent-identity term alone (prior = rank frequencies of the other folds' players), n random games of one kernel player, 20 draws per player, kernel from the other 4 player folds at the chosen tau; decoded by expected competition score; record only",
+  "prior_only_mean": 0.15017926104470128,
+  "n5": {
+   "mean": 0.5406724175892221,
+   "rank_balanced": 0.5406724175892222,
+   "questions": 18000,
+   "D_players_mean": 0.5338540298310824,
+   "E_players_mean": 0.544081611468292,
+   "by_rank": [
+    0.43578524154926235,
+    0.6469935418279424,
+    0.665934290553371,
+    0.6480352353251159,
+    0.4580962807981814,
+    0.43577605591273655,
+    0.47606659527573575,
+    0.5437265642297049,
+    0.6082914726289731,
+    0.48801889779119856
+   ]
+  },
+  "n10": {
+   "mean": 0.5947185197411224,
+   "rank_balanced": 0.5947185197411224,
+   "questions": 18000,
+   "D_players_mean": 0.5839050524535351,
+   "E_players_mean": 0.6001252533849158,
+   "by_rank": [
+    0.4698239929379138,
+    0.6666770725466732,
+    0.7243682816809422,
+    0.7270362160279564,
+    0.5109979911574519,
+    0.4972585580204986,
+    0.5520625526940532,
+    0.6232918793768,
+    0.669077335570116,
+    0.5065913173988181
+   ]
+  },
+  "n20": {
+   "mean": 0.6291954890025636,
+   "rank_balanced": 0.6291954890025636,
+   "questions": 18000,
+   "D_players_mean": 0.6159715110026016,
+   "E_players_mean": 0.6358074780025447,
+   "by_rank": [
+    0.4532843207315817,
+    0.676314460438721,
+    0.761377347547148,
+    0.7843446001458604,
+    0.5393198904710712,
+    0.5600622657165463,
+    0.6225143885765291,
+    0.6840544675306881,
+    0.7032453298022903,
+    0.5074378190651999
+   ]
+  }
+ },
+ "peak_working_set_gb": 0.96
+}

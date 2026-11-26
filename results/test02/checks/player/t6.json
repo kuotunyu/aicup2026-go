@@ -1,0 +1,100 @@
+{
+ "format": "c10-test02 t6 v1",
+ "comp": "player",
+ "verdict": "RECORD_ONLY",
+ "consequence": "none (descriptive; without an explicit official statement the one-to-one structure is not used)",
+ "pools": {
+  "public": {
+   "questions": 400,
+   "candidates": 400,
+   "questions_equal_candidates_equal_400": true,
+   "distinct_top1_submission": 379,
+   "questions_missing_in_submission": 0,
+   "top1_outside_pool": 0,
+   "sr_top1_distinct_per_round": [
+    365,
+    368,
+    377,
+    367,
+    370,
+    377,
+    369,
+    380,
+    370,
+    369
+   ],
+   "t2c": {
+    "same_colour_games": 0,
+    "opposite_colour_games": 0
+   }
+  },
+  "private": {
+   "questions": 400,
+   "candidates": 400,
+   "questions_equal_candidates_equal_400": true,
+   "distinct_top1_submission": 367,
+   "questions_missing_in_submission": 0,
+   "top1_outside_pool": 0,
+   "sr_top1_distinct_per_round": [
+    369,
+    367,
+    366,
+    361,
+    366,
+    370,
+    372,
+    376,
+    368,
+    371
+   ],
+   "t2c": {
+    "same_colour_games": 0,
+    "opposite_colour_games": 0
+   }
+  }
+ },
+ "training_simulation_ranges": {
+  "one_to_one_distinct_top1": [
+   348,
+   369
+  ],
+  "self_retrieval_rounds_distinct_top1": [
+   347,
+   367
+  ],
+  "with_replacement_distinct_top1": [
+   244,
+   254
+  ]
+ },
+ "registered": "without an explicit official statement, the one-to-one structure is not used",
+ "provenance": {
+  "tool": "tools/t02_checks.py",
+  "tool_sha256": "a6fb40f99e7af19bfe4eef3f5cbb1d0049a8f0c14a7cc95cddfac73884f99cc8",
+  "tool_committed_clean": true,
+  "c10data_sha256": "2906d97fe41171dc955288d0a6e695fcef905417d18d94cb98f146aac74c6495",
+  "p02_moves_sha256": "de543954f4bc0dd2eb0c8122cc5cd23f05e8fa1ac9e09c0ba774d9d840eb4092",
+  "p02_player_open_sha256": "5986ad0c4b1bd6d8b43949d9fa343fbd93dd5d78e696847b1b9c93699c4108b8",
+  "git_head": "3de23e08e8a02fb9ced2259e0857cfd80a0e5062",
+  "python": "3.12.13",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "mode": "real",
+  "argv": [
+   "t6",
+   "--comp",
+   "player"
+  ],
+  "created": "2026-11-04T15:26:36+0800",
+  "inputs": {
+   "results/test02/player/submission_player.csv": "e87aaa91df9ddb3f5838b8ce18fd56715c6edaa55d6902de1ceaa0afc3d5bc79",
+   "player_identification_test_public.csv": "0e59f7f72376cfa2e81ae913d61092caeb1240d95abb43a581207ed29f1647a8",
+   "player_identification_candidates_public.csv": "8175aeb08235536a1435bb6ba4c55088f906096cc14e7048e8898e3d7a3597a6",
+   "results/test02/player/public/apply_report.json": "f3373b0c385e0c5d3e59d1ebc02ee657ce25d10914bde3a959f84f9618558412",
+   "player_identification_test_private.csv": "4b07a403b36875f44007adb22aaa8da3c75ec3994e165f36c29a9400e6efcd11",
+   "player_identification_candidates_private.csv": "7a8926ca83b43b1dca0e32c23513cbbff2731d623be151cf80ed912a91d91e57",
+   "results/test02/player/private/apply_report.json": "d78c3ab22f5cf841002190b06e87dd750e39e4843d1571d84e0bc8becc54d2b5"
+  },
+  "rerun_reason": null
+ }
+}

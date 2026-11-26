@@ -1,0 +1,196 @@
+{
+ "what": "PREREG_09 5.2 tol_E (before any test data): the largest lp_P1TO_E difference (per game, before the x 4, numpy float64 forward with the frozen p1e_map.npz) between P1 chunks computed on the RTX 4090 in the 08 rehearsal and the validation chunks of the same games",
+ "tree": "D:\\c10_t08_reh",
+ "map_sha256": "ecc9c9b1747b7b7d40cf53869b6c67c8e6f776ba7498498737fe3eede8e2edba",
+ "val_report_sha256": "590d1012205833e093e40671cab18f2e68981186111e31f3dc0deec463899081",
+ "seam_gpu_same_chunking": {
+  "max_abs_std_ex": 0.0,
+  "max_abs_std_ex_all_44": 0.0,
+  "frac_lowp_record_only": {
+   "features": [
+    "t_frac_lowp",
+    "o_frac_lowp"
+   ],
+   "max_abs_std": 0.0,
+   "games_jumped": 0
+  },
+  "max_abs_std_x": 0.0,
+  "max_abs_lp_p1e": 0.0,
+  "lp_p1e_quantiles": {
+   "0.5": 0.0,
+   "0.9": 0.0,
+   "0.99": 0.0
+  },
+  "games_lp_above_review_line": 0,
+  "argmax_equal": 400,
+  "bitwise_equal_means": true,
+  "bitwise_equal_ex": true,
+  "games": 400,
+  "usable_games": 400,
+  "equal": {
+   "failed": true,
+   "counts": true,
+   "n_moves": true
+  },
+  "counts_equal": true,
+  "set": "seam",
+  "report_mode": "dry-run",
+  "fake_from_val": false,
+  "environment": {
+   "torch": "2.11.0+cu128",
+   "cudnn": 91900,
+   "gpu": "NVIDIA GeForce RTX 4090",
+   "driver": "616.92"
+  },
+  "positions_per_s": 786.5,
+  "validation_rows": [
+   0,
+   399
+  ],
+  "rows_contiguous": true,
+  "chunk_starts_val_rows": [
+   0,
+   200
+  ],
+  "chunk_boundaries_differ_from_val": false,
+  "map_sha256": "ecc9c9b1747b7b7d40cf53869b6c67c8e6f776ba7498498737fe3eede8e2edba",
+  "rule": "validation games: only the P1 seams, the tol_E measurement and apply; never run content statistics"
+ },
+ "private_gpu_off_grid": {
+  "max_abs_std_ex": 0.016124674744541947,
+  "max_abs_std_ex_all_44": 0.2544292850206151,
+  "frac_lowp_record_only": {
+   "features": [
+    "t_frac_lowp",
+    "o_frac_lowp"
+   ],
+   "max_abs_std": 0.2544292850206151,
+   "games_jumped": 24
+  },
+  "max_abs_std_x": 0.018589183211586757,
+  "max_abs_lp_p1e": 0.011267307287091022,
+  "lp_p1e_quantiles": {
+   "0.5": 0.0011240248822019794,
+   "0.9": 0.0025744027632959915,
+   "0.99": 0.004606912514710925
+  },
+  "games_lp_above_review_line": 6,
+  "argmax_equal": 999,
+  "bitwise_equal_means": false,
+  "bitwise_equal_ex": false,
+  "games": 1000,
+  "usable_games": 1000,
+  "equal": {
+   "failed": true,
+   "counts": true,
+   "n_moves": true
+  },
+  "counts_equal": true,
+  "set": "private",
+  "report_mode": "dry-run",
+  "fake_from_val": false,
+  "environment": {
+   "torch": "2.11.0+cu128",
+   "cudnn": 91900,
+   "gpu": "NVIDIA GeForce RTX 4090",
+   "driver": "616.92"
+  },
+  "positions_per_s": 983.3,
+  "validation_rows": [
+   4787,
+   5786
+  ],
+  "rows_contiguous": true,
+  "chunk_starts_val_rows": [
+   4787,
+   4987,
+   5187,
+   5387,
+   5587
+  ],
+  "chunk_boundaries_differ_from_val": true,
+  "map_sha256": "ecc9c9b1747b7b7d40cf53869b6c67c8e6f776ba7498498737fe3eede8e2edba",
+  "rule": "validation games: only the P1 seams, the tol_E measurement and apply; never run content statistics",
+  "std_ex_by_feature": {
+   "largest": [
+    {
+     "feature": "t_frac_lowp",
+     "max_abs": 0.2544292850206151,
+     "q99": 0.11615247891363767,
+     "sd_ex": 0.062386745007062726
+    },
+    {
+     "feature": "o_frac_lowp",
+     "max_abs": 0.2385037585655303,
+     "q99": 0.001175234510782065,
+     "sd_ex": 0.06165897118775569
+    },
+    {
+     "feature": "t_ent_q50",
+     "max_abs": 0.016124674744541947,
+     "q99": 0.006627828045393889,
+     "sd_ex": 0.20886628113405373
+    },
+    {
+     "feature": "t_logp_q50",
+     "max_abs": 0.013672241640650507,
+     "q99": 0.00657647811827218,
+     "sd_ex": 0.31663318011914804
+    },
+    {
+     "feature": "o_logp_q90",
+     "max_abs": 0.011911925947734048,
+     "q99": 0.004721029605234102,
+     "sd_ex": 0.055742097937077864
+    },
+    {
+     "feature": "o_ent_q25",
+     "max_abs": 0.011820649753113921,
+     "q99": 0.006478379569659383,
+     "sd_ex": 0.20445992283257586
+    },
+    {
+     "feature": "o_ent_q50",
+     "max_abs": 0.011497961202456719,
+     "q99": 0.0069280049483890875,
+     "sd_ex": 0.20841478731357888
+    },
+    {
+     "feature": "t_logp_q75",
+     "max_abs": 0.010851262004075046,
+     "q99": 0.005442621717602319,
+     "sd_ex": 0.15426744353681138
+    }
+   ],
+   "max_abs_without_frac_lowp": 0.016124674744541947,
+   "games_with_a_frac_lowp_change": 24,
+   "per_game_max_quantiles": {
+    "0.5": 0.004410185559931008,
+    "0.9": 0.007115145375161758,
+    "0.99": 0.1287216856439553
+   }
+  }
+ },
+ "m": 0.011267307287091022,
+ "rule": "tol_E = max(0.04, 2.5 x m)",
+ "tol_E": 0.04,
+ "std_ex_rule": "PREREG_09 rev 4: judged over the 42 EX features other than t_frac_lowp / o_frac_lowp (those two recorded only)",
+ "std_ex_max_off_grid_judged_42": 0.016124674744541947,
+ "std_ex_max_off_grid_all_44": 0.2544292850206151,
+ "frac_lowp_record_only_off_grid": {
+  "features": [
+   "t_frac_lowp",
+   "o_frac_lowp"
+  ],
+  "max_abs_std": 0.2544292850206151,
+  "games_jumped": 24
+ },
+ "std_ex_tolerance": 0.05,
+ "std_ex_within_tolerance": true,
+ "lp_p1e_within_tol_E": true,
+ "tool_sha256_lf": {
+  "t09_fake_tests.py": "4907c8ee2ac440df09c43ee8b59f7537874ab4df03028780040b2a6da8d10f80",
+  "t09_rank.py": "20bc8274769b5e8c073ccaa3d478ed8115d0e8fdb80ba352b406782b19e65456",
+  "p09_forward.py": "67124e0e534f575493aa8d72dbd2582335e4166718448e36bb5e105c61cb185d"
+ }
+}

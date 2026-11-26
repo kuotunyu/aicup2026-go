@@ -1,0 +1,216 @@
+{
+ "format": "c10-prereg44 data record v1",
+ "plan": "PLAN.md 2, 3.1, 5 (data statistics, no model number)",
+ "seam_d": {
+  "A_players": [
+   6619,
+   6619
+  ],
+  "H_players": [
+   748,
+   748
+  ],
+  "A_per_level": [
+   [
+    730,
+    678,
+    874,
+    1311,
+    360,
+    503,
+    504,
+    525,
+    544,
+    590
+   ],
+   [
+    730,
+    678,
+    874,
+    1311,
+    360,
+    503,
+    504,
+    525,
+    544,
+    590
+   ]
+  ],
+  "H_per_level": [
+   [
+    89,
+    74,
+    90,
+    145,
+    39,
+    58,
+    65,
+    63,
+    61,
+    64
+   ],
+   [
+    89,
+    74,
+    90,
+    145,
+    39,
+    58,
+    65,
+    63,
+    61,
+    64
+   ]
+  ],
+  "overlap": {
+   "A_H": 0,
+   "AH_inner_keys": 0,
+   "AH_inner_player_id": 0
+  },
+  "ok": true
+ },
+ "train_players_equal_A": true,
+ "train_inner_overlap_player_id": 0,
+ "train_H_overlap_player_id": 0,
+ "caches": {
+  "train": {
+   "format": "c10-prereg44 cache v1",
+   "label": "train",
+   "source": "official training CSVs, every game of the A players (prereg25 salt, holdout_bit == 0)",
+   "games": 832593,
+   "players": 6619,
+   "moves": 184829436,
+   "unparsed_games": 0,
+   "games_per_level": [
+    81808,
+    84382,
+    85095,
+    85021,
+    83485,
+    82307,
+    83783,
+    83561,
+    81302,
+    81849
+   ],
+   "codes_sha256": "79c649e6a3b4e9b5f80bef3ecdccc769830ce9e794891c13b2b1dd49af1f77ba",
+   "off_sha256": "ac361d42e4a180de7b98d1fa550a9309923e461df751cdc34e41ccab904dfbfa",
+   "meta_sha256": "342e920c1130d888de9ffaac4e78249e9a8aa9b651b51aba8a624d226d665990",
+   "bytes": 470404127,
+   "seconds": 66.5
+  },
+  "inner": {
+   "format": "c10-prereg44 cache v1",
+   "label": "inner",
+   "source": "official training CSVs, the inner games in results/prereg02/rank/dumps/inner_keys.npz order",
+   "games": 73556,
+   "players": 640,
+   "moves": 16211597,
+   "unparsed_games": 0,
+   "games_per_level": [
+    8147,
+    7240,
+    7431,
+    7590,
+    7033,
+    6490,
+    7191,
+    6601,
+    6946,
+    8887
+   ],
+   "codes_sha256": "288148d0c936b281aabbc8c839cf214eae5fcf9f03105fc6dea998cfb49d69cd",
+   "off_sha256": "d263aaac0ede2a6459506f3425022af1e67b487cbb2598cb6ed000883642519c",
+   "meta_sha256": "b1ffa4e68e5f23652de1a7a7b7547cc53ee03fb665b276a31337adc8b2b9e1d7",
+   "bytes": 41324972,
+   "seconds": 5.1,
+   "inner_keys_sha256": "b686872d459161330af26132fc0ec2617d104be6cd72eae509250ffef0c03ab6"
+  },
+  "hold": {
+   "format": "c10-prereg44 cache v1",
+   "label": "hold",
+   "source": "official training CSVs, the distinct games of S25's 4,000 held-out questions",
+   "games": 24827,
+   "players": 669,
+   "moves": 5516188,
+   "unparsed_games": 0,
+   "games_per_level": [
+    2743,
+    2456,
+    2357,
+    2070,
+    2349,
+    2550,
+    2602,
+    2558,
+    2650,
+    2492
+   ],
+   "codes_sha256": "bb0f24fafa849a3bca9990fee6c4415f6150fea9a586f67759eb77570e486f9c",
+   "off_sha256": "72c788c1c978fb79abe446d1f82a5fc4236b715115eb8c7e1db136ed6c7d4984",
+   "meta_sha256": "9bc8637a255e9779894a587cec0c0b03558acd913f34fc471eb1e2180107830a",
+   "bytes": 14037945,
+   "seconds": 1.6
+  }
+ },
+ "hold": {
+  "seam_h": {
+   "holdout_questions": [
+    {
+     "5": 1000,
+     "10": 1000,
+     "15": 1000,
+     "20": 1000
+    },
+    {
+     "5": 1000,
+     "10": 1000,
+     "15": 1000,
+     "20": 1000
+    }
+   ],
+   "holdout_sampling": [
+    {
+     "colour_switched": 0,
+     "level_missing": 0
+    },
+    {
+     "colour_switched": 0,
+     "level_missing": 0
+    }
+   ],
+   "ok": true
+  },
+  "hold_npz_sha256": "da8af2854aa49cfb60b44338df896465dff68bc26fc9dfcf7c4a1900877b2517",
+  "questions": {
+   "5": 1000,
+   "10": 1000,
+   "15": 1000,
+   "20": 1000
+  },
+  "distinct_games": 24827,
+  "players": 669
+ },
+ "sampler": {
+  "players_per_level_ge_min_games": [
+   730,
+   678,
+   865,
+   1277,
+   359,
+   503,
+   503,
+   525,
+   542,
+   588
+  ],
+  "min_player_games": 5,
+  "dropped_players": 49,
+  "sampled_games": 832425
+ },
+ "code_sha256_lf": {
+  "p44_lib.py": "92a2893e9b84a3bd3882e67773286b777dba4e6194c83945c0b07a392d9e213a",
+  "p44_data.py": "f8cc8a5a72e24d71b0218a1a0d411704584eddd6bb7d6c5b96242a2a65bece45"
+ },
+ "ok": true
+}

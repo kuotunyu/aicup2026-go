@@ -1,0 +1,69 @@
+{
+ "format": "c10-prereg64 frozen settings v1",
+ "created": "2026-11-21",
+ "note": "written before any code of the term and before any kernel / inner number; pointers are to data/advice/gemini_1121/ unless stated; NOTES.md gives the readings",
+ "classes": {
+  "head": {
+   "checkpoint": "data/prereg49/S0/ckpt/step_320000.pt",
+   "rows": "head.weight (5,771 x 256), L2-normalised",
+   "class_ids": "p49_lib.t49(Cache49, E) (every cache player outside E with >= 20 games, sorted)",
+   "class_rank": "the player's rank in the prereg49 cache",
+   "pointer": ["03a_extract_c49_head.py lines 25-38", "03_comp2_and_final_checks.py line 510"],
+   "check": "the extracted rows equal c49_head.npz (Gemini) bit for bit"
+  },
+  "prototypes": {
+   "owners": "E (600, data/prereg49/emb/V2_step_320000_raw_tta1/store_E.npz) + 1,504 players of data/prereg64/proto_rows.npy (data/prereg64/emb_proto/V2_step_320000_raw_tta1/rows_proto.npz)",
+   "gemini": "E only (03 line 517, 04 line 329); the 1,504 are added per PLAN step 2 (coordinator decision)",
+   "function": "p59_lib.prototypes (L2 mean of L2 game vectors, games with a sample)",
+   "never": "an inner player (split v1 inner / inner_keys)"
+  },
+  "tau1": 50,
+  "tau2": 30,
+  "b": 1,
+  "pointer_tau_b": ["03 lines 532-535: _rank_sums(.., (50,), own, 4000), _rank_sums(.., (30,), None, 4000), combine(parts, 50, 30, 1)", "04 lines 337-339"],
+  "own_left_out": {
+   "D_table_games": "the D player's own head row (03 line 527-532)",
+   "inner_games": "the inner question player's own head row (NOTES 4)",
+   "test_games": "nothing"
+  }
+ },
+ "table": {
+  "players": "D only (coordinator decision; 03 line 548-553, 04 line 358-366); prereg59 used D + E",
+  "vectors": "data/prereg56/emb_opp_D/V2_step_320000_raw_tta1/store_D.npz (c49 opponent side)",
+  "construction": "p59_lib.table_counts / table: soft counts q_g[s] at the player's rank, add-0.5 per row, HD group (0, 1, 2+) x player colour; every D game with a sample, once on all D games",
+  "gemini_difference": "Gemini restricted to HD <= 1 games with usable P1 and S0 vectors (03 line 398, 04 line 353); not copied (PLAN: prereg59's construction)"
+ },
+ "term": {
+  "per_game": "l_g(r) = log(sum_s q_g[s] M[h_g, c_g][r][s] + 1e-9) (p59_lib.game_ll)",
+  "question": "10 x mean over the question's games (flat, no (n/12)^gamma)",
+  "pointer": "04 line 412"
+ },
+ "fusion": {
+  "form": "Z = w_A * log_softmax(Q25 gen_logits with Q25's fold parameters) + w_O * OPP3",
+  "fit": "L-BFGS-B, start (0.4, 0.4), bounds [0, 4] each, objective mean NLL + 1e-3 * sum(w^2), no class offsets, no class weighting",
+  "pointer": "04 lines 416-436 (eval_scalar_oof)",
+  "cross_fitting": "the harness's 5 player folds; (w_A, w_O) fitted on the fit questions of the other folds with Q25's theta of that fold",
+  "decode": "rule B (rf.rule_b_np)"
+ },
+ "merge": {
+  "lam": 0.3,
+  "colour_centering": "B games minus the pool's B-game mean, W games minus the W-game mean, then L2",
+  "threshold": 0.65,
+  "edge_weight": "(S_ij - 0.65) / (1 - 0.65), 0 at or below the threshold, diagonal 0",
+  "neighbour_weight": "n_j / 12",
+  "beta": 1.0,
+  "update": "L = L0 + beta * (W_adj * (n / 12)[None, :]) @ L0  (L0 = the step 1-3 log-probabilities)",
+  "pointer": ["04 lines 109-130 (cc_whiten_sim)", "04 lines 156-161"],
+  "simulation": "03 lines 591-878 test_c2_3 simulation part with the setting above (Gemini's 03 json 245-273 used the null p99.99 threshold, n_j / 15, beta 0.8, 03 lines 838-858)",
+  "pass": "0% repeats: mean gain 0 and min = max = 0; 35% repeats: mean gain > 0"
+ },
+ "gates": "p23_lib.gates vs Q59: G1 >= +0.005, G2 lower bound > 0, G4 single colour lower bound > 0 and B, W each >= -1e-12",
+ "seams": {
+  "Q25_inner": 0.7456519871546352,
+  "Q25_single_colour": 0.7482450052195216,
+  "Q59_inner": 0.7539701874530542,
+  "Q59_single_colour": 0.7552848066878524,
+  "anchor_only": "w_A = 1, w_O = 0 reproduces Q25's eval / single-colour probabilities"
+ },
+ "hard_stop": "2026-11-23T12:00:00"
+}

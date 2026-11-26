@@ -1,0 +1,68 @@
+{
+ "format": "c10-prereg68 judge started v1",
+ "e_pools_use_number": 12,
+ "version": "9",
+ "members": [
+  "c49",
+  "S",
+  "B",
+  "p61",
+  "S1",
+  "S2",
+  "X",
+  "X2",
+  "X3"
+ ],
+ "member_files": {
+  "c49": {
+   "store_E.npz": "27ce57a23c1b99a6968bf71689fea35e46f3f6cd4b8f7bb244be33a154e010f6",
+   "pool_public.npz": "67bc36f21307a02104fff37ddb3b5d4716a252bf3f7b5e969bfd1ebed0ca811e",
+   "pool_private.npz": "337b24da4c33cfa2f9162447d0e821f2bbc15fec6dd350ecd4bcf8ba47598871"
+  },
+  "S": {
+   "store_E.npz": "fb8635f30eed7539465eb01256baf6323370636e7f5bfc73f92b14522d09e082",
+   "pool_public.npz": "eb266be41c954cd74d94226e96a9c10e2f517d8ef079f675de6b17b6d6946287",
+   "pool_private.npz": "cebf39fdeeec34a48ae3afbe4df41883951fa4e0b3bcfa8eb39009b87d50f964"
+  },
+  "B": {
+   "store_E.npz": "4a30876238a8f9f3cdc4e98b51d01a83ae9fd2f65d6ee13313271317658261dc",
+   "pool_public.npz": "177c7912132608eb730ed7992368b8bbc24f03db62b6a35884658171bb26f56d",
+   "pool_private.npz": "38bd09722acc480d2f2e5b1685da739ab19b27333d0abc4356a99bfb629c5be4"
+  },
+  "p61": {
+   "store_E.npz": "542fa068495acc05265fe59541e4563350595ab1e611a94e3aed5b1ce7848855",
+   "pool_public.npz": "22829d0ea650b9f072ae07aa94fa69f27c324c4e378978ab0ce0e15303f9ad0b",
+   "pool_private.npz": "3e9915c803159eeaad58f879f213e5ada2f3eaab2619d172c3efc266ba9be118"
+  },
+  "S1": {
+   "store_E.npz": "3c443ff7ef20bb72c5ac7cc8c7faf83c7ca87839a95c783ae30f90526dff1dbc",
+   "pool_public.npz": "c9afb2822b362398556844c1968b295bd498a1d2258623b2726e57b1b6235157",
+   "pool_private.npz": "103da854d7d13f844aafe0830131857cd0cc181521e7464b1de6067208262509"
+  },
+  "S2": {
+   "store_E.npz": "c85a3e4bebdda36659bee7c2c83ac10e9697f5ad44abfb38af436f97c2797b7a",
+   "pool_public.npz": "867bf3fca157f56fd87e6eaecb6f1ffdbd5b8abf962f832f671f63bee7994c27",
+   "pool_private.npz": "95f2d0dbe4c6f6c01d3f67082a8cf366b04b0419c4439cfdf961bba21a4bb543"
+  },
+  "X": {
+   "store_E.npz": "62a6b770aa25a2f964ed23942ca16a348d35c3ad71cee1846a0124285f86a46a",
+   "pool_public.npz": "7497215841e2286062458239419fc8eb5ec48db38cca8ca382ca6d6e892e5208",
+   "pool_private.npz": "489542407b6c9050d08b720f58abc5aa8611f171ac435a4e530866cb61ffda2d"
+  },
+  "X2": {
+   "store_E.npz": "f961e3744609eefd9c46d81625d43f238ce2a43f2069fd1457e18dc677343fe4",
+   "pool_public.npz": "470c5a6de4d526428ab2929fd40420bde33faa3c73d707efb776d7f992f0af2f",
+   "pool_private.npz": "dba45f9ad5348c0fe8ab3057bd2e765f1b66b1c9c5875d955d88e21141cbf470"
+  },
+  "X3": {
+   "store_E.npz": "77ec7ff42feda88dd3927612c3e2c62ca284bd653bc8ddfd997267eac986051d",
+   "pool_public.npz": "6a7a12a753fad51be82c1bf7ae8137a9226ab751cf2821c0966481b18a16ece7",
+   "pool_private.npz": "638c84e2830b0c921bc691f7383633aa89d5af39d5d0bf7931f27c3658beb38d"
+  }
+ },
+ "members_json_sha256": "2ffe9e55f9c47b1b00469a7e4c9c0ef05bc94dc8b6ce0299dc14b7809ada70e1",
+ "git_head": "9bae0cac26090f15c2d672b43d70db687480e175",
+ "pid": 14692,
+ "started_at": "2026-11-23T09:26:22+08:00",
+ "note": "written after the v2-9 seam passed and before the one score of the new version; never deleted; its presence (now or in git history) blocks any further judge run"
+}

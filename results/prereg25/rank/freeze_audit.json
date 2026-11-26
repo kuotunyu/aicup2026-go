@@ -1,0 +1,477 @@
+{
+ "format": "c10-prereg25 freeze_audit v1",
+ "created": "2026-11-05T21:43:01+00:00",
+ "auditor": "independent subagent (Claude), no labels, no scores, no data/local",
+ "audited_commit": "af79fc3",
+ "checks": {
+  "1_model_files": {
+   "per_seed": {
+    "0": {
+     "rank_copy": "4a01d6a60355cd514e9cc4988c08424a7952fc33302b47a63542a8caf67163bb",
+     "original": "4a01d6a60355cd514e9cc4988c08424a7952fc33302b47a63542a8caf67163bb",
+     "train_record": "4a01d6a60355cd514e9cc4988c08424a7952fc33302b47a63542a8caf67163bb",
+     "frozen_config": "4a01d6a60355cd514e9cc4988c08424a7952fc33302b47a63542a8caf67163bb",
+     "freeze_report": "4a01d6a60355cd514e9cc4988c08424a7952fc33302b47a63542a8caf67163bb",
+     "registered_PREREG_25_1_2": "4a01d6a60355cd514e9cc4988c08424a7952fc33302b47a63542a8caf67163bb",
+     "all_equal": true,
+     "format_seed_step_smoke": [
+      "c10-prereg25 s25 model v1",
+      0,
+      11000,
+      false
+     ],
+     "train_record_best_step": 11000,
+     "npz_keys": [
+      "best_step",
+      "format",
+      "p_R1",
+      "p_R2",
+      "p_W1",
+      "p_W2",
+      "p_b1",
+      "p_b2",
+      "p_c1",
+      "p_c2",
+      "p_dt",
+      "p_t0",
+      "seed",
+      "smoke"
+     ],
+     "param_shapes": {
+      "W1": [
+       256,
+       1540
+      ],
+      "b1": [
+       256
+      ],
+      "W2": [
+       64,
+       256
+      ],
+      "b2": [
+       64
+      ],
+      "R1": [
+       32,
+       64
+      ],
+      "c1": [
+       32
+      ],
+      "R2": [
+       1,
+       32
+      ],
+      "c2": [
+       1
+      ],
+      "t0": [],
+      "dt": [
+       8
+      ]
+     }
+    },
+    "1": {
+     "rank_copy": "ab53d69b2762a7c01bed354ac6c218cf167fda44bbd3d88eed06a6f4adf3cba4",
+     "original": "ab53d69b2762a7c01bed354ac6c218cf167fda44bbd3d88eed06a6f4adf3cba4",
+     "train_record": "ab53d69b2762a7c01bed354ac6c218cf167fda44bbd3d88eed06a6f4adf3cba4",
+     "frozen_config": "ab53d69b2762a7c01bed354ac6c218cf167fda44bbd3d88eed06a6f4adf3cba4",
+     "freeze_report": "ab53d69b2762a7c01bed354ac6c218cf167fda44bbd3d88eed06a6f4adf3cba4",
+     "registered_PREREG_25_1_2": "ab53d69b2762a7c01bed354ac6c218cf167fda44bbd3d88eed06a6f4adf3cba4",
+     "all_equal": true,
+     "format_seed_step_smoke": [
+      "c10-prereg25 s25 model v1",
+      1,
+      7500,
+      false
+     ],
+     "train_record_best_step": 7500,
+     "npz_keys": [
+      "best_step",
+      "format",
+      "p_R1",
+      "p_R2",
+      "p_W1",
+      "p_W2",
+      "p_b1",
+      "p_b2",
+      "p_c1",
+      "p_c2",
+      "p_dt",
+      "p_t0",
+      "seed",
+      "smoke"
+     ],
+     "param_shapes": {
+      "W1": [
+       256,
+       1540
+      ],
+      "b1": [
+       256
+      ],
+      "W2": [
+       64,
+       256
+      ],
+      "b2": [
+       64
+      ],
+      "R1": [
+       32,
+       64
+      ],
+      "c1": [
+       32
+      ],
+      "R2": [
+       1,
+       32
+      ],
+      "c2": [
+       1
+      ],
+      "t0": [],
+      "dt": [
+       8
+      ]
+     }
+    },
+    "2": {
+     "rank_copy": "20e190f56866c7a28b4eeef0c0d4d656867b79a908e066ba91a47570601c4fbb",
+     "original": "20e190f56866c7a28b4eeef0c0d4d656867b79a908e066ba91a47570601c4fbb",
+     "train_record": "20e190f56866c7a28b4eeef0c0d4d656867b79a908e066ba91a47570601c4fbb",
+     "frozen_config": "20e190f56866c7a28b4eeef0c0d4d656867b79a908e066ba91a47570601c4fbb",
+     "freeze_report": "20e190f56866c7a28b4eeef0c0d4d656867b79a908e066ba91a47570601c4fbb",
+     "registered_PREREG_25_1_2": "20e190f56866c7a28b4eeef0c0d4d656867b79a908e066ba91a47570601c4fbb",
+     "all_equal": true,
+     "format_seed_step_smoke": [
+      "c10-prereg25 s25 model v1",
+      2,
+      10500,
+      false
+     ],
+     "train_record_best_step": 10500,
+     "npz_keys": [
+      "best_step",
+      "format",
+      "p_R1",
+      "p_R2",
+      "p_W1",
+      "p_W2",
+      "p_b1",
+      "p_b2",
+      "p_c1",
+      "p_c2",
+      "p_dt",
+      "p_t0",
+      "seed",
+      "smoke"
+     ],
+     "param_shapes": {
+      "W1": [
+       256,
+       1540
+      ],
+      "b1": [
+       256
+      ],
+      "W2": [
+       64,
+       256
+      ],
+      "b2": [
+       64
+      ],
+      "R1": [
+       32,
+       64
+      ],
+      "c1": [
+       32
+      ],
+      "R2": [
+       1,
+       32
+      ],
+      "c2": [
+       1
+      ],
+      "t0": [],
+      "dt": [
+       8
+      ]
+     }
+    }
+   },
+   "ok": true
+  },
+  "2_own_forward": {
+   "sampled_fit_questions": 5000,
+   "sample_rng_seed": 20251106,
+   "max_abs_diff_E_SET_sampled_fit": 4.334310688136611e-13,
+   "max_abs_diff_E_SET_all_questions": {
+    "fit": 7.195666285042535e-11,
+    "eval": 1.3038459201197838e-11,
+    "mono": 9.158185321211931e-11
+   },
+   "questions": {
+    "fit": 25400,
+    "eval": 127200,
+    "mono": 120544
+   },
+   "sampled_without_usable_game": 0,
+   "usable_mask_equals_Inner_covered": true,
+   "mu_sd_read_from_npz_equal_tool_load_map": true,
+   "prepared_inner_rows": 73169,
+   "formula": "xs=(x-mu_x)/sd_x (p1e_map.npz, nonfinite->0); h=GELU_erf(W2 GELU_erf(W1 xs+b1)+b2); v=mean h over usable (Inner.covered) games of the question; f=R2 GELU(R1 v+c1)+c2; th=[t0, t0+cumsum softplus(dt)]; P=diff([0, expit(th-f), 1]); lp=log(max(P,1e-12)); lp_SET=log(max(mean_seeds exp lp,1e-300)); E_SET=4 lp_SET",
+   "tolerance": 1e-09,
+   "ok": true
+  },
+  "3_theta": {
+   "max_abs_diff_theta_vs_frozen_config": 0.0,
+   "frozen_config_vs_freeze_report_theta_max_abs_diff": 0.0,
+   "refit_loss": 0.8761860941075635,
+   "frozen_loss": 0.8761860941075635,
+   "loss_abs_diff": 0.0,
+   "starts": [
+    {
+     "start_a": 0.0,
+     "loss": 0.8761860978585234,
+     "nit": 36,
+     "success": true,
+     "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+    },
+    {
+     "start_a": 1.0,
+     "loss": 0.8761860941075635,
+     "nit": 43,
+     "success": true,
+     "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+    }
+   ],
+   "fit_questions": 25400,
+   "gen_params_mapping_ok": true,
+   "term_order": [
+    "OP",
+    "O4",
+    "SWA",
+    "SWB",
+    "HS",
+    "P1TO",
+    "SET"
+   ],
+   "b_max_abs_diff": 0.0,
+   "recomputed": {
+    "a": -0.9284045982353494,
+    "gamma": 0.40051160466610475,
+    "w": {
+     "OP": 0.5848929096849506,
+     "O4": 0.5061526925691523,
+     "SWA": 0.0,
+     "SWB": 0.0,
+     "HS": 0.0,
+     "P1TO": 0.34776923810707044,
+     "SET": 0.578378544933654
+    }
+   },
+   "bounds_hit_recomputed": {
+    "SWA": "lower",
+    "SWB": "lower",
+    "HS": "lower"
+   },
+   "bounds_hit_frozen": {
+    "SWA": "lower",
+    "SWB": "lower",
+    "HS": "lower"
+   },
+   "bounds_hit_ok": true,
+   "scale_4_once": {
+    "SET_slot_is_tool_E_SET_unchanged": true,
+    "SET_slot_vs_own_4lp_max_abs_diff": 7.195666285042535e-11,
+    "P1TO_slot_is_Inner_E_p1": true,
+    "note": "p08_rank_fuse.run_terms passes Emap[t][which] as is; the only x4 is inside set_term (own E = 4 lp matches the fused slot)"
+   },
+   "ok": true
+  },
+  "4_seams": {
+   "seam_1_report": {
+    "Q02H": [
+     0.6242752597994481,
+     0.6242752597994481
+    ],
+    "Q08": [
+     0.6986195853659671,
+     0.6986195853659671
+    ],
+    "Q08_mono": [
+     0.6946737091777063,
+     0.6946737091777063
+    ],
+    "Q09": [
+     0.7114420614163589,
+     0.7114420614163589
+    ],
+    "Q09_mono": [
+     0.7145431684624712,
+     0.7145431684624712
+    ]
+   },
+   "seam_1_own_recompute_max_abs_diff_vs_refs": 0.0,
+   "seam_f19_report": {
+    "inner": [
+     0.7345843051712626,
+     0.7345843051712626
+    ],
+    "mono": [
+     0.7430172362615272,
+     0.7430172362615272
+    ],
+    "fold_weights_max_abs_diff_vs_prereg19_freeze": 0.0,
+    "ok": true
+   },
+   "seam_f_report": {
+    "inner": [
+     0.7456519871546352,
+     0.7456519871546352
+    ],
+    "mono": [
+     0.7482450052195216,
+     0.7482450052195216
+    ],
+    "eval_report_inner": 0.7456519871546352,
+    "eval_report_mono": 0.7482450052195216,
+    "fold_weights_max_abs_diff": 0.0,
+    "eval_report_gates_passed": true,
+    "ok": true
+   },
+   "eval_report_candidate": {
+    "inner": 0.7456519871546352,
+    "mono": 0.7482450052195216,
+    "gates_passed": true
+   },
+   "own_Q25_oof": {
+    "inner": 0.7456519871546352,
+    "mono": 0.7482450052195216,
+    "abs_diff_vs_ref": [
+     0.0,
+     0.0
+    ]
+   },
+   "own_Q19_oof": {
+    "inner": 0.7345843051712626,
+    "mono": 0.7430172362615272,
+    "abs_diff_vs_ref": [
+     0.0,
+     0.0
+    ]
+   },
+   "own_Q25_fold_weights_max_abs_diff_vs_eval_report": 0.0,
+   "own_Q25_fold_weights_max_abs_diff_vs_frozen_config_oof": 0.0,
+   "own_Q19_fold_weights_max_abs_diff_vs_prereg19_freeze": 0.0,
+   "frozen_config_oof_records_equal_refs": true,
+   "seam_e_report": {
+    "fit": 0.0,
+    "eval": 0.0,
+    "mono": 0.0,
+    "ok": true
+   },
+   "ok": true
+  },
+  "5_direction_ref": {
+   "tool_recompute": {
+    "rho_eval": 0.9538300566495522,
+    "rho_mono": 0.9576161336208181,
+    "eval_questions": 127200,
+    "mono_questions": 120544,
+    "validation_threshold": 0.4769150283247761,
+    "test_threshold": 0.47880806681040905
+   },
+   "frozen": {
+    "rho_eval": 0.9538300566495522,
+    "rho_mono": 0.9576161336208181,
+    "eval_questions": 127200,
+    "mono_questions": 120544,
+    "validation_threshold": 0.4769150283247761,
+    "test_threshold": 0.47880806681040905
+   },
+   "abs_diff_tool": {
+    "rho_eval": 0.0,
+    "rho_mono": 0.0,
+    "validation_threshold": 0.0,
+    "test_threshold": 0.0
+   },
+   "own_spearman_with_own_E": {
+    "eval": 0.9538300566495521,
+    "mono": 0.9576161336214842
+   },
+   "own_questions": {
+    "eval": 127200,
+    "mono": 120544
+   },
+   "abs_diff_own": {
+    "rho_eval": 1.1102230246251565e-16,
+    "rho_mono": 6.661338147750939e-13
+   },
+   "frozen_config_equals_freeze_report": true,
+   "ok": true
+  },
+  "6_discipline": {
+   "grep_hits": {
+    "tools/p25_set.py": {
+     "data_local": [
+      "6: from a path without 'AppData\\\\Local' (u1_lib's data/local guard), e.g. a subst drive)",
+      "20: data/local is ever opened, listed or hashed by this tool. Never imports torch; tools/score.py is never run; the ledger"
+     ],
+     "torch_import": [],
+     "score": [
+      "20: data/local is ever opened, listed or hashed by this tool. Never imports torch; tools/score.py is never run; the ledger"
+     ],
+     "answer_or_label": [
+      "19: There is no validation apply (PREREG_25 2.2): no validation question, feature or label is read, and no path under"
+     ],
+     "validation_files": [
+      "14: eval_report.json, fold weights included), then ONE fit of the 7-term theta on all inner fit pseudo-questions",
+      "65: \"results/prereg25/explore/train_record.json\", \"results/prereg25/explore/eval_report.json\",",
+      "67: # the exploration's judged candidate (eval_report.json, 4aa42f5): seam F; Q19 (19's freeze and the baseline): seam F19",
+      "259: ev = read_json(path_of(\"results/prereg25/explore/eval_report.json\"))",
+      "263: \"eval_report_inner\": ev_c.get(\"inner_rank_balanced\"),",
+      "264: \"eval_report_mono\": ev_c.get(\"single_colour_rank_balanced\"), \"fold_weights_max_abs_diff\": w_diff,",
+      "265: \"eval_report_gates_passed\": (ev.get(\"gates\") or {}).get(\"passed\")}",
+      "267: and seamf[\"eval_report_inner\"] == REF_Q25[\"inner\"]",
+      "268: and seamf[\"eval_report_mono\"] == REF_Q25[\"mono\"] and w_diff is not None and w_diff <= TOL",
+      "269: and seamf[\"eval_report_gates_passed\"] is True)",
+      "301: \"results/prereg25/explore/eval_report.json, and the independent audit)\",",
+      "302: **common, \"adopted_on\": {\"eval_report\": \"results/prereg25/explore/eval_report.json\","
+     ]
+    },
+    "tools/p25_forward.py": {
+     "data_local": [],
+     "torch_import": [],
+     "score": [],
+     "answer_or_label": [],
+     "validation_files": []
+    }
+   },
+   "all_hits_in_module_docstrings": null,
+   "torch_loaded_after_full_run": false,
+   "fit_questions_players_unique": 508,
+   "fit_source": "inner.Xf / S_fit from u1_lib.load_inputs through p09_rank_fuse.Inner (training-player inner pseudo-questions only); p25_set.freeze calls only p19_set.InnerPrep / inner_prep_seam / seam_e / inner_set_terms / check_pins, r9.Inner / inner_map_lp / direction_ref, p4.gen_fit_record / gen_params; no p19_set apply path; no validation question / label / data/local path in the code",
+   "ok": true,
+   "grep_hits_assessment": "data/local、score.py、label 只出現在模組 docstring（第 6、19、20 行，說明不碰）；validation_files 樣式的命中全是 'eval_report' 被 'val_report' 子字串誤配（探索的 inner 評估紀錄 results/prereg25/explore/eval_report.json，不是驗證題）；p25_forward.py 0 命中；兩檔都沒有 import torch。",
+   "note_validation_players": "本稽核沒有、也不能在不讀 data/local 的前提下比對驗證玩家名單；inner 擬合假題（25,400 題、508 位玩家）只來自 u1_lib.load_inputs 的 inner（訓練玩家）。inner 玩家不在 S25 訓練／留出組，已由探索的獨立稽核（1965276）檢查。"
+  }
+ },
+ "program_errors_affecting_predictions": [],
+ "inputs_sha256_rule": "frozen_config.json / freeze_report.json: sha256 with CRLF folded to LF; npz: raw bytes",
+ "inputs_sha256": {
+  "frozen_config.json": "30c000acbea5bbd17b4758dc646687d05b3494d015a12a08b88d8b4024d58fe3",
+  "freeze_report.json": "9684e221dc727035155cdf2b565901469c4ef3f69fbcd83d61f5c6d37aa2f474",
+  "s25_seed0.npz": "4a01d6a60355cd514e9cc4988c08424a7952fc33302b47a63542a8caf67163bb",
+  "s25_seed1.npz": "ab53d69b2762a7c01bed354ac6c218cf167fda44bbd3d88eed06a6f4adf3cba4",
+  "s25_seed2.npz": "20e190f56866c7a28b4eeef0c0d4d656867b79a908e066ba91a47570601c4fbb"
+ },
+ "verdict": "ok",
+ "summary": "六項全過，沒有找到影響預測的程式錯誤。① 3 個 S25 模型檔（results/prereg25/rank）和 data/prereg25/models 原檔、train_record.json、frozen_config.json、PREREG_25 1.2 的 SHA-256 全相同，格式 c10-prereg25 s25 model v1、種子 0/1/2、步數 11000/7500/10500、smoke false。② 自寫 numpy float64 前向（erf GELU、p1e_map.npz 的 mu_x/sd_x 標準化、非有限值補 0、可用盤平均、head、累積 link 下限 1e-12、三種子機率平均取 log 下限 1e-300、乘 4）和工具的 E_SET 相比：抽樣 5,000 題 fit 最大差 4.33e-13；全部 fit/eval/mono 題最大差 9.16e-11（容許 1e-9）；可用遮罩等於 Inner.covered。③ 獨立重跑 gen_fit_record，theta 與 frozen_config.json 最大差 0.0，loss 相同；w 的順序 OP,O4,SWA,SWB,HS,P1TO,SET 和 theta[2:9] 一致；SET 欄就是工具的 E_SET（乘 4 只有一次）；界限命中 SWA/SWB/HS 下界，和紀錄一致。④ 接縫 1、F19、F 數字等於參照；自己重算 Q25 OOF 0.7456519871546352／單色 0.7482450052195216、Q19 0.7345843051712626／0.7430172362615272，差 0；5 折權重和 eval_report.json、19 的 freeze_report 差 0。⑤ rho_eval 0.95383、rho_mono 0.95762 由工具函式重算差 0，自寫 Spearman 差 ≤ 6.7e-13。⑥ p25_set.py／p25_forward.py 沒有讀驗證題、答案、data/local，沒有 import torch，沒跑 score.py；擬合只用 inner 訓練玩家的 25,400 題。只記錄（非錯誤）：SWA、SWB、HS 三個權重打到下界 0（登記允許，只記錄）；全題比對最大差 9.2e-11 比抽樣大，來自極端尾端對數機率的浮點加總順序，仍遠低於 1e-9。"
+}

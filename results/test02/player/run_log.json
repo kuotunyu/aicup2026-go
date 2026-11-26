@@ -1,0 +1,109 @@
+{
+ "runs": [
+  {
+   "run": 1,
+   "started_utc": "2026-11-04T07:00:58+00:00",
+   "status": "completed",
+   "smoke": false,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+   "cpu_count": 48,
+   "seconds_so_far": 770.7933328151703,
+   "nproc": 48,
+   "num_workers": 48,
+   "p01_sha256": {
+    "best_model.pth": "356eb4f65488925e2a552ea382979780c903ef515b85d329a3805db837b7773b",
+    "player_val_top5.csv": "0f5761a11b9f68ab07b2bc91b9650236f85b8cbeff45d459753dbd24459d3ec7",
+    "player_val_embeddings.npz": "c247b2653e73589975d558b17e96c4a1f38c3e4d66468d56ea6d02596e15752d",
+    "predict_summary.json": "88b720242fef538a99327fdbdf839515c214a8492e2bf551f48b93c4c81eeb32"
+   },
+   "p02_dump_sha256": {
+    "cand_games.npz": "56ed03d12e9a79871a21b5f69dc4bd4bb8c8aa69b1544cb8ec799e80227cfdea",
+    "query_games.npz": "665d0888a93f6632eb19edac76abf996d5499cd27c683d9844b97cb274b6f689"
+   },
+   "test_zip_sha256": "136266e387064d34514ae4c3371edec9634932d627248dcefc35ad9475125d7d",
+   "drive_free_gb": 197.594669056,
+   "dumps": {
+    "public": {
+     "weights_sha256": "356eb4f65488925e2a552ea382979780c903ef515b85d329a3805db837b7773b",
+     "GPU_BATCH": 4096,
+     "CHUNK": 256,
+     "NPROC": 48,
+     "device": "cuda",
+     "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+     "cand_games.npz": {
+      "rows": 40000,
+      "sha256": "e8ade6004f4be0a29e791ce44cedf31f65af57c25e2a9628fd4cfd73dde5edf3",
+      "bytes": 44961772,
+      "n_parsed": 40000,
+      "n_windows_total": 4286427
+     },
+     "query_games.npz": {
+      "rows": 5000,
+      "sha256": "9efe8788f5b302676b647df65ed033decf132e1a0766f7f433e68dbcdf9ce55e",
+      "bytes": 5387014,
+      "n_parsed": 5000,
+      "n_windows_total": 531914
+     },
+     "seconds": 251.67397928237915
+    },
+    "private": {
+     "weights_sha256": "356eb4f65488925e2a552ea382979780c903ef515b85d329a3805db837b7773b",
+     "GPU_BATCH": 4096,
+     "CHUNK": 256,
+     "NPROC": 48,
+     "device": "cuda",
+     "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+     "cand_games.npz": {
+      "rows": 40000,
+      "sha256": "d133b7d0c8256e3a2b8d0f20477649fe01b6af2a34bb2689f5ae6a6a126b2af2",
+      "bytes": 45281772,
+      "n_parsed": 40000,
+      "n_windows_total": 4284154
+     },
+     "query_games.npz": {
+      "rows": 5000,
+      "sha256": "7f4e67d6b715a9eb6625793ac27d9c25017db423fce9f8c723fb8b5d9b425870",
+      "bytes": 5407014,
+      "n_parsed": 5000,
+      "n_windows_total": 536126
+     },
+     "seconds": 251.31769919395447
+    },
+    "seam_val": {
+     "weights_sha256": "356eb4f65488925e2a552ea382979780c903ef515b85d329a3805db837b7773b",
+     "GPU_BATCH": 4096,
+     "CHUNK": 256,
+     "NPROC": 48,
+     "device": "cuda",
+     "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+     "cand_games.npz": {
+      "rows": 40000,
+      "sha256": "56ed03d12e9a79871a21b5f69dc4bd4bb8c8aa69b1544cb8ec799e80227cfdea",
+      "bytes": 46721772,
+      "n_parsed": 40000,
+      "n_windows_total": 4298662
+     },
+     "query_games.npz": {
+      "rows": 4935,
+      "sha256": "665d0888a93f6632eb19edac76abf996d5499cd27c683d9844b97cb274b6f689",
+      "bytes": 5336749,
+      "n_parsed": 4935,
+      "n_windows_total": 531339
+     },
+     "seconds": 252.72462153434753
+    }
+   },
+   "repro_passed": true,
+   "seam_p02_bitwise_equal": true,
+   "seam_p02_max_abs_emb_diff": 0.0,
+   "finished_utc": "2026-11-04T07:13:49+00:00",
+   "seconds": 770.7933263778687,
+   "readonly_unchanged": true,
+   "readonly_changed_files": [],
+   "final_problems": []
+  }
+ ],
+ "n_runs": 1,
+ "n_resumes": 0,
+ "status": "completed"
+}

@@ -1,0 +1,145 @@
+{
+ "format": "c10-prereg48 seam v1",
+ "p48_eval_sha256_lf": "4a7979b3b929a80d0bda57bf444be548d8f1fd26b88e677b37e4607fdc1d54aa",
+ "base": {
+  "tune": "results/prereg43/explore/tune.json",
+  "eval": "results/prereg43/explore/eval.json",
+  "tune_sha256_lf": "217d50ce637c76022a127881ef9620090c0fcde33998b7a1220fb0e9b655e112",
+  "eval_sha256_lf": "726670f9034de9129d7dcdb7497fe9d76fd1efc68734d6dffb31f1b13d7cabe7",
+  "c_star": {
+   "label": "S0",
+   "members": [
+    [
+     "S0",
+     "raw"
+    ]
+   ],
+   "ckpt_sha256": "49c1c8f10c927922ca9f3ab3f7d2aaa37a24ba852d6acf77d3042ce1fd495939"
+  },
+  "cfg": {
+   "gnorm": true,
+   "pool_w": "mean",
+   "centre_colour": false,
+   "whiten": {
+    "lam": 0.7,
+    "lda": null
+   },
+   "sim": "proto",
+   "alpha": null,
+   "pair": null,
+   "krecip": null,
+   "aqe": null,
+   "qsmooth": null,
+   "wE": 8,
+   "gmul": null,
+   "rowz": false,
+   "norm": [
+    "csls",
+    10
+   ]
+  },
+  "p1": {
+   "variant": "joint",
+   "pw": "b4",
+   "wP": 8,
+   "csls_k": 20,
+   "mean": 0.7467766213119217
+  },
+  "lda_sha256": "ccc95351f79d8c1ec41e5cebf9891f9312191221cef3f3556fa607839333419f",
+  "d_mean": 0.7467766213119217,
+  "e_mean": 0.681614485210018
+ },
+ "base_D_prereg45_path": {
+  "per_pool": [
+   0.7823105950724139,
+   0.7252220037188875,
+   0.7260344906896121,
+   0.7520077070878101,
+   0.7445478414109656,
+   0.7618750215306903,
+   0.7413968096245789,
+   0.7582706093769482,
+   0.7529125324170494,
+   0.7231886021902605
+  ],
+  "mean": 0.7467766213119217,
+  "identical": true,
+  "vectors": {
+   "file": "data/prereg43/emb_S0/V2_step_320000_raw_tta1/store_D.npz",
+   "file_sha256": "9c7e391103a61ddb4467ae9e00adbd7a7f7295d523716ff312f236db475f33ab"
+  }
+ },
+ "select_path_on_tta1": {
+  "file": "data/prereg43/emb_S0/V2_step_320000_raw_tta1/store_D.npz",
+  "file_sha256": "9c7e391103a61ddb4467ae9e00adbd7a7f7295d523716ff312f236db475f33ab",
+  "backend_cfg": {
+   "gnorm": true,
+   "pool_w": "mean",
+   "centre_colour": false,
+   "whiten": {
+    "lam": 0.7,
+    "lda": null
+   },
+   "sim": "proto",
+   "alpha": null,
+   "pair": null,
+   "krecip": null,
+   "aqe": null,
+   "qsmooth": null,
+   "wE": 8,
+   "gmul": null,
+   "rowz": false,
+   "norm": [
+    "csls",
+    10
+   ]
+  },
+  "backend_mean": 0.7072991491960041,
+  "wP": 8,
+  "csls_k": 20,
+  "per_pool": [
+   0.7823105950724139,
+   0.7252220037188875,
+   0.7260344906896121,
+   0.7520077070878101,
+   0.7445478414109656,
+   0.7618750215306903,
+   0.7413968096245789,
+   0.7582706093769482,
+   0.7529125324170494,
+   0.7231886021902605
+  ],
+  "mean": 0.7467766213119217,
+  "want_mean": 0.7467766213119217,
+  "identical_to_prereg43_tune": true
+ },
+ "p1_sets": {
+  "D": {
+   "games": 28212,
+   "usable": 28212,
+   "failed_fresh": 0
+  }
+ },
+ "git_head": "0b1e0116ada6f2407dcc66b08e3c642d20bdc8dd",
+ "vector_seam": {
+  "n": 200,
+  "store_row_equal": true,
+  "count_equal": true,
+  "cos_min": 0.9999996700470214,
+  "max_abs_diff": 0.032143592834472656,
+  "median_norm_ref": 113.09565436343333,
+  "max_abs_over_median_norm": 0.0002842159852683561,
+  "rule": "count equal, store_row equal, cos min >= 0.99999, max |diff| / median norm (ref) <= 0.001",
+  "pass": true,
+  "file": "data/prereg48/seam_tta1/V2_step_320000_raw_tta1/store_D_limit200.npz",
+  "file_sha256": "9111c8842bc2c35ba0c8d10123c4bc631a48e66aac46f92cd71b1353a8b1685b",
+  "ref": "data/prereg43/emb_S0/V2_step_320000_raw_tta1/store_D.npz",
+  "embed_cfg_compare": {
+   "count_equal": true,
+   "file": "data/prereg43/emb_S0/V2_step_320000_raw_tta1/store_D.npz",
+   "max_abs_diff": 0.032143592834472656
+  }
+ },
+ "peak_working_set_mb": 1576.1,
+ "seconds": 408.8
+}

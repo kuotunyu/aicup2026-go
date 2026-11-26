@@ -1,0 +1,116 @@
+{
+ "what": "Competition 2: how much can transductive label-proportion tricks add on top of rule B?",
+ "inputs": "u1_oof.npz mono_P_Q02 (inner, OOF)",
+ "R": 1000,
+ "seed": 20261002,
+ "inner_players_per_level": [
+  71,
+  65,
+  83,
+  123,
+  34,
+  49,
+  49,
+  52,
+  53,
+  57
+ ],
+ "results": {
+  "bal": {
+   "files": 1000,
+   "mean_score": {
+    "B": 0.6098,
+    "HUNG40": 0.6107,
+    "EM": 0.5833,
+    "EMHUNG": 0.5971
+   },
+   "diff_vs_B": {
+    "HUNG40": {
+     "mean": 0.001,
+     "p2.5": -0.0163,
+     "p97.5": 0.019,
+     "share_files_better": 0.554
+    },
+    "EM": {
+     "mean": -0.0265,
+     "p2.5": -0.0578,
+     "p97.5": 0.0022,
+     "share_files_better": 0.038
+    },
+    "EMHUNG": {
+     "mean": -0.0127,
+     "p2.5": -0.0376,
+     "p97.5": 0.0111,
+     "share_files_better": 0.155
+    }
+   },
+   "em_prior_L1_error_mean": 0.3686
+  },
+  "multi": {
+   "files": 1000,
+   "mean_score": {
+    "B": 0.6099,
+    "HUNG40": 0.6042,
+    "EM": 0.587,
+    "EMHUNG": 0.6004
+   },
+   "diff_vs_B": {
+    "HUNG40": {
+     "mean": -0.0057,
+     "p2.5": -0.0288,
+     "p97.5": 0.0149,
+     "share_files_better": 0.325
+    },
+    "EM": {
+     "mean": -0.0229,
+     "p2.5": -0.0561,
+     "p97.5": 0.0078,
+     "share_files_better": 0.08
+    },
+    "EMHUNG": {
+     "mean": -0.0095,
+     "p2.5": -0.0375,
+     "p97.5": 0.0162,
+     "share_files_better": 0.253
+    }
+   },
+   "em_prior_L1_error_mean": 0.3676
+  },
+  "skew": {
+   "files": 1000,
+   "mean_score": {
+    "B": 0.6169,
+    "HUNG40": 0.5852,
+    "EM": 0.6133,
+    "EMHUNG": 0.62
+   },
+   "diff_vs_B": {
+    "HUNG40": {
+     "mean": -0.0317,
+     "p2.5": -0.0546,
+     "p97.5": -0.0084,
+     "share_files_better": 0.003
+    },
+    "EM": {
+     "mean": -0.0036,
+     "p2.5": -0.0403,
+     "p97.5": 0.0252,
+     "share_files_better": 0.444
+    },
+    "EMHUNG": {
+     "mean": 0.003,
+     "p2.5": -0.023,
+     "p97.5": 0.0289,
+     "share_files_better": 0.615
+    }
+   },
+   "em_prior_L1_error_mean": 0.3192
+  }
+ },
+ "seconds": 112.5,
+ "caveats": [
+  "questions are re-drawn from a finite inner pool (636 players, 1D only 34), so files share players; the spread is a lower bound on real file-to-file noise",
+  "Q02 OOF probabilities were calibrated on balanced inner pseudo questions",
+  "official level counts per file are unknown"
+ ]
+}

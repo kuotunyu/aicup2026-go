@@ -1,0 +1,730 @@
+{
+ "format": "c10-prereg25 explore audit v1",
+ "what": "read-only counts: validation players of split v1 (players_split.csv split == 'val') and their games in the official training CSVs; the V selection (PLAN.md 2.2); no model, no score, no data/local",
+ "split_v1_sha256": "69554875064ecbd83d790b3215c8ba8f9540f217ec4af3e4a8c43228ac2a3dfc",
+ "split_v1_players_by_split": {
+  "train": 6407,
+  "val": 1600
+ },
+ "val": {
+  "players": 1600,
+  "games": 206137,
+  "moves": 45711248,
+  "players_in_inner": 0,
+  "players_in_fit": 0,
+  "games_per_player": {
+   "min": 2,
+   "median": 53.0,
+   "p90": 340.10000000000014,
+   "max": 1442
+  }
+ },
+ "duplicates": {
+  "val_vs_inner_8_symmetries": 0,
+  "val_vs_inner_examples": [],
+  "val_vs_fit_original": 0,
+  "val_vs_probe_original": 0,
+  "within_val_original": 0,
+  "rule": "validation games equal to an inner game under any of the 8 symmetries are excluded before sampling; the others are record only"
+ },
+ "per_level": {
+  "D": {
+   "val_players": 178,
+   "fit_players": 641,
+   "val_games": 22105,
+   "val_games_B": 11195,
+   "val_games_W": 10910,
+   "val_moves": 5004069,
+   "quota": {
+    "v1": 833,
+    "v2": 3332,
+    "v3": 3332
+   },
+   "selected": 7497,
+   "selected_players": 178,
+   "probe_games": 27000
+  },
+  "C": {
+   "val_players": 163,
+   "fit_players": 589,
+   "val_games": 17445,
+   "val_games_B": 9122,
+   "val_games_W": 8323,
+   "val_moves": 3921714,
+   "quota": {
+    "v1": 830,
+    "v2": 3321,
+    "v3": 3321
+   },
+   "selected": 7472,
+   "selected_players": 163,
+   "probe_games": 27000
+  },
+  "B": {
+   "val_players": 209,
+   "fit_players": 755,
+   "val_games": 20305,
+   "val_games_B": 10063,
+   "val_games_W": 10242,
+   "val_moves": 4618539,
+   "quota": {
+    "v1": 830,
+    "v2": 3322,
+    "v3": 3322
+   },
+   "selected": 7474,
+   "selected_players": 209,
+   "probe_games": 27000
+  },
+  "A": {
+   "val_players": 316,
+   "fit_players": 1140,
+   "val_games": 21155,
+   "val_games_B": 10393,
+   "val_games_W": 10762,
+   "val_moves": 4747633,
+   "quota": {
+    "v1": 832,
+    "v2": 3326,
+    "v3": 3326
+   },
+   "selected": 7484,
+   "selected_players": 316,
+   "probe_games": 27000
+  },
+  "1D": {
+   "val_players": 87,
+   "fit_players": 312,
+   "val_games": 21429,
+   "val_games_B": 10592,
+   "val_games_W": 10837,
+   "val_moves": 4816270,
+   "quota": {
+    "v1": 837,
+    "v2": 3346,
+    "v3": 3346
+   },
+   "selected": 7529,
+   "selected_players": 87,
+   "probe_games": 27000
+  },
+  "2D": {
+   "val_players": 122,
+   "fit_players": 439,
+   "val_games": 20499,
+   "val_games_B": 9678,
+   "val_games_W": 10821,
+   "val_moves": 4595418,
+   "quota": {
+    "v1": 834,
+    "v2": 3335,
+    "v3": 3335
+   },
+   "selected": 7504,
+   "selected_players": 122,
+   "probe_games": 27000
+  },
+  "3D": {
+   "val_players": 124,
+   "fit_players": 445,
+   "val_games": 19084,
+   "val_games_B": 9439,
+   "val_games_W": 9645,
+   "val_moves": 4190734,
+   "quota": {
+    "v1": 836,
+    "v2": 3344,
+    "v3": 3344
+   },
+   "selected": 7524,
+   "selected_players": 124,
+   "probe_games": 27000
+  },
+  "4D": {
+   "val_players": 128,
+   "fit_players": 460,
+   "val_games": 22264,
+   "val_games_B": 11601,
+   "val_games_W": 10663,
+   "val_moves": 4830723,
+   "quota": {
+    "v1": 835,
+    "v2": 3339,
+    "v3": 3339
+   },
+   "selected": 7513,
+   "selected_players": 128,
+   "probe_games": 27000
+  },
+  "5D": {
+   "val_players": 131,
+   "fit_players": 474,
+   "val_games": 19214,
+   "val_games_B": 10099,
+   "val_games_W": 9115,
+   "val_moves": 4150437,
+   "quota": {
+    "v1": 829,
+    "v2": 3316,
+    "v3": 3316
+   },
+   "selected": 7461,
+   "selected_players": 131,
+   "probe_games": 27000
+  },
+  "6D": {
+   "val_players": 142,
+   "fit_players": 512,
+   "val_games": 22637,
+   "val_games_B": 11366,
+   "val_games_W": 11271,
+   "val_moves": 4835711,
+   "quota": {
+    "v1": 832,
+    "v2": 3328,
+    "v3": 3328
+   },
+   "selected": 7488,
+   "selected_players": 142,
+   "probe_games": 27000
+  }
+ },
+ "v_sets": {
+  "batches": {
+   "v1": {
+    "games": 8328,
+    "positions": 1848684,
+    "seed": 20261125,
+    "players": 1600
+   },
+   "v2": {
+    "games": 33309,
+    "positions": 7417279,
+    "seed": 20261126,
+    "players": 1594
+   },
+   "v3": {
+    "games": 33309,
+    "positions": 7402275,
+    "seed": 20261127,
+    "players": 1096
+   }
+  },
+  "games": 74946,
+  "players": 1600,
+  "positions": 16668238,
+  "games_sha256": "0607d974776f32b7dae3e3319d20b4c66b9442b0e08a2cf8dcbd68b392a0b238"
+ },
+ "depth_games_per_player": {
+  "probe": {
+   "D": {
+    "players": 641,
+    "median": 41.0,
+    "p90": 64.0,
+    "max": 65,
+    "mean": 42.1216848673947
+   },
+   "C": {
+    "players": 589,
+    "median": 45.0,
+    "p90": 73.0,
+    "max": 74,
+    "mean": 45.840407470288625
+   },
+   "B": {
+    "players": 755,
+    "median": 37.0,
+    "p90": 56.0,
+    "max": 57,
+    "mean": 35.76158940397351
+   },
+   "A": {
+    "players": 1140,
+    "median": 24.0,
+    "p90": 37.0,
+    "max": 37,
+    "mean": 23.68421052631579
+   },
+   "1D": {
+    "players": 312,
+    "median": 84.0,
+    "p90": 129.0,
+    "max": 130,
+    "mean": 86.53846153846153
+   },
+   "2D": {
+    "players": 439,
+    "median": 76.0,
+    "p90": 87.0,
+    "max": 87,
+    "mean": 61.50341685649203
+   },
+   "3D": {
+    "players": 445,
+    "median": 68.0,
+    "p90": 87.0,
+    "max": 88,
+    "mean": 60.674157303370784
+   },
+   "4D": {
+    "players": 460,
+    "median": 60.0,
+    "p90": 89.0,
+    "max": 90,
+    "mean": 58.69565217391305
+   },
+   "5D": {
+    "players": 474,
+    "median": 63.0,
+    "p90": 80.0,
+    "max": 81,
+    "mean": 56.962025316455694
+   },
+   "6D": {
+    "players": 512,
+    "median": 62.0,
+    "p90": 71.0,
+    "max": 72,
+    "mean": 52.734375
+   }
+  },
+  "v": {
+   "D": {
+    "players": 178,
+    "median": 48.5,
+    "p90": 61.0,
+    "max": 62,
+    "mean": 42.11797752808989
+   },
+   "C": {
+    "players": 163,
+    "median": 43.0,
+    "p90": 73.0,
+    "max": 75,
+    "mean": 45.84049079754601
+   },
+   "B": {
+    "players": 209,
+    "median": 37.0,
+    "p90": 56.0,
+    "max": 56,
+    "mean": 35.760765550239235
+   },
+   "A": {
+    "players": 316,
+    "median": 24.5,
+    "p90": 37.0,
+    "max": 37,
+    "mean": 23.68354430379747
+   },
+   "1D": {
+    "players": 87,
+    "median": 94.0,
+    "p90": 123.0,
+    "max": 124,
+    "mean": 86.54022988505747
+   },
+   "2D": {
+    "players": 122,
+    "median": 67.5,
+    "p90": 88.0,
+    "max": 89,
+    "mean": 61.50819672131148
+   },
+   "3D": {
+    "players": 124,
+    "median": 62.5,
+    "p90": 89.0,
+    "max": 89,
+    "mean": 60.67741935483871
+   },
+   "4D": {
+    "players": 128,
+    "median": 68.5,
+    "p90": 86.0,
+    "max": 86,
+    "mean": 58.6953125
+   },
+   "5D": {
+    "players": 131,
+    "median": 64.0,
+    "p90": 76.0,
+    "max": 78,
+    "mean": 56.954198473282446
+   },
+   "6D": {
+    "players": 142,
+    "median": 66.0,
+    "p90": 68.0,
+    "max": 69,
+    "mean": 52.732394366197184
+   }
+  }
+ },
+ "eligible_n_level_colour": {
+  "5": {
+   "probe": {
+    "D": [
+     610,
+     601
+    ],
+    "C": [
+     545,
+     547
+    ],
+    "B": [
+     667,
+     671
+    ],
+    "A": [
+     905,
+     911
+    ],
+    "1D": [
+     309,
+     302
+    ],
+    "2D": [
+     434,
+     427
+    ],
+    "3D": [
+     426,
+     424
+    ],
+    "4D": [
+     444,
+     442
+    ],
+    "5D": [
+     462,
+     457
+    ],
+    "6D": [
+     479,
+     494
+    ]
+   },
+   "v": {
+    "D": [
+     167,
+     167
+    ],
+    "C": [
+     155,
+     151
+    ],
+    "B": [
+     179,
+     191
+    ],
+    "A": [
+     250,
+     254
+    ],
+    "1D": [
+     86,
+     85
+    ],
+    "2D": [
+     117,
+     119
+    ],
+    "3D": [
+     124,
+     120
+    ],
+    "4D": [
+     126,
+     125
+    ],
+    "5D": [
+     130,
+     126
+    ],
+    "6D": [
+     130,
+     140
+    ]
+   }
+  },
+  "10": {
+   "probe": {
+    "D": [
+     496,
+     507
+    ],
+    "C": [
+     434,
+     452
+    ],
+    "B": [
+     509,
+     513
+    ],
+    "A": [
+     631,
+     649
+    ],
+    "1D": [
+     301,
+     295
+    ],
+    "2D": [
+     391,
+     397
+    ],
+    "3D": [
+     384,
+     396
+    ],
+    "4D": [
+     407,
+     388
+    ],
+    "5D": [
+     424,
+     423
+    ],
+    "6D": [
+     441,
+     473
+    ]
+   },
+   "v": {
+    "D": [
+     144,
+     132
+    ],
+    "C": [
+     120,
+     124
+    ],
+    "B": [
+     139,
+     144
+    ],
+    "A": [
+     178,
+     183
+    ],
+    "1D": [
+     81,
+     83
+    ],
+    "2D": [
+     104,
+     114
+    ],
+    "3D": [
+     110,
+     114
+    ],
+    "4D": [
+     117,
+     111
+    ],
+    "5D": [
+     122,
+     118
+    ],
+    "6D": [
+     120,
+     132
+    ]
+   }
+  },
+  "15": {
+   "probe": {
+    "D": [
+     384,
+     403
+    ],
+    "C": [
+     336,
+     356
+    ],
+    "B": [
+     415,
+     395
+    ],
+    "A": [
+     443,
+     466
+    ],
+    "1D": [
+     273,
+     271
+    ],
+    "2D": [
+     347,
+     354
+    ],
+    "3D": [
+     341,
+     355
+    ],
+    "4D": [
+     341,
+     333
+    ],
+    "5D": [
+     376,
+     377
+    ],
+    "6D": [
+     372,
+     413
+    ]
+   },
+   "v": {
+    "D": [
+     114,
+     111
+    ],
+    "C": [
+     98,
+     97
+    ],
+    "B": [
+     112,
+     117
+    ],
+    "A": [
+     129,
+     131
+    ],
+    "1D": [
+     75,
+     80
+    ],
+    "2D": [
+     90,
+     99
+    ],
+    "3D": [
+     94,
+     102
+    ],
+    "4D": [
+     98,
+     90
+    ],
+    "5D": [
+     106,
+     103
+    ],
+    "6D": [
+     112,
+     117
+    ]
+   }
+  },
+  "20": {
+   "probe": {
+    "D": [
+     327,
+     327
+    ],
+    "C": [
+     298,
+     304
+    ],
+    "B": [
+     348,
+     330
+    ],
+    "A": [
+     165,
+     206
+    ],
+    "1D": [
+     239,
+     243
+    ],
+    "2D": [
+     293,
+     300
+    ],
+    "3D": [
+     299,
+     306
+    ],
+    "4D": [
+     290,
+     287
+    ],
+    "5D": [
+     314,
+     334
+    ],
+    "6D": [
+     311,
+     340
+    ]
+   },
+   "v": {
+    "D": [
+     95,
+     87
+    ],
+    "C": [
+     86,
+     81
+    ],
+    "B": [
+     97,
+     95
+    ],
+    "A": [
+     41,
+     55
+    ],
+    "1D": [
+     67,
+     74
+    ],
+    "2D": [
+     78,
+     88
+    ],
+    "3D": [
+     80,
+     85
+    ],
+    "4D": [
+     86,
+     77
+    ],
+    "5D": [
+     91,
+     90
+    ],
+    "6D": [
+     99,
+     95
+    ]
+   }
+  }
+ },
+ "gpu_estimate": {
+  "throughput_runs": {
+   "p3": {
+    "positions": 26604604,
+    "seconds": 21458.2,
+    "positions_per_s": 1239.8339096475938
+   },
+   "p2": {
+    "positions": 13827992,
+    "seconds": 12419.3,
+    "positions_per_s": 1113.4276489013068
+   }
+  },
+  "hours_4090": {
+   "p3": 3.7344244862823164,
+   "p2": 4.1583897397194205
+  },
+  "note": "positions = moves (one P1 position per move); same p1_extract.py run, fp16, batch 1024"
+ },
+ "seconds": 179.7
+}

@@ -1,0 +1,416 @@
+launcher start Sun Oct  4 18:53:09     2026
+{"time_utc": "2026-10-04T10:53:31+00:00", "msg": "run start", "set": "mono", "games": 61356, "chunks": 307, "todo": 307, "sides": ["target"], "precision": "fp16", "batch": 1024, "workers": 8, "channels_last": true}
+{"time_utc": "2026-10-04T10:57:04+00:00", "msg": "chunk done", "set": "mono", "chunk": 0, "games": 200, "failed": 0, "evals": 327908, "seconds": 207.6, "evals_per_s": 1579.6, "progress": "1/307", "eta_min": 1059.2}
+{"time_utc": "2026-10-04T11:00:04+00:00", "msg": "chunk done", "set": "mono", "chunk": 1, "games": 200, "failed": 0, "evals": 316120, "seconds": 180.4, "evals_per_s": 1752.7, "progress": "2/307", "eta_min": 986.3}
+{"time_utc": "2026-10-04T11:00:04+00:00", "msg": "stopping before the next chunk (rerun the same command to continue)", "reason": "STOP file", "set": "mono", "chunks_done": 2, "chunks_left": 305}
+{"time_utc": "2026-10-04T11:00:05+00:00", "msg": "run end", "set": "mono", "chunks": 307, "evals": 644028, "seconds": 388.2, "stopped": "STOP file"}
+mono rc=0 Sun Oct  4 19:00:07     2026
+{
+ "bank": {
+  "games": 11813,
+  "chunks": 60,
+  "chunks_present": 60
+ },
+ "mono": {
+  "games": 61356,
+  "chunks": 307,
+  "chunks_present": 2
+ },
+ "fitmap": {
+  "games": 3000,
+  "chunks": 15,
+  "chunks_present": 15
+ }
+}
+mapping side 0: lambda 0.0001, CV {'logloss': 1.7571755879185869, 'top1': 0.331, 'rule_b_score_per_game': 0.47221560135103385}
+inputs: fit 25400, eval 127200, single-colour 120544 questions; 73556 inner games
+Q02: inner eval rank-balanced 0.6101 (6s)
+Q02+HS: inner eval rank-balanced 0.6243 (8s)
+R20+HS: inner eval rank-balanced 0.6050 (3s)
+{
+ "G1_delta": 0.014154061529423334,
+ "G1_passed": true,
+ "G2_ci95": [
+  0.004729748170068845,
+  0.023937551131530375
+ ],
+ "G2_passed": true,
+ "question_mean_diff": 0.012494963827849034,
+ "passed": true,
+ "mono": {
+  "coverage": "11825/120544 questions",
+  "rank_balanced_difference": 0.01387476074021543,
+  "ci95": [
+   -0.0017482824576830923,
+   0.03098936024793075
+  ],
+  "by_colour": {
+   "B": 0.01022419350841619,
+   "W": 0.01860286236694675
+  },
+  "passed": false,
+  "complete": false
+ }
+}
+-> D:\AI-Portfolio\competitions\aicup2026-go\results\prereg07\explore\pilot_humansl\pilot_fuse_report.json
+fuse rc=0 Sun Oct  4 19:00:52     2026
+launcher end Sun Oct  4 19:00:52     2026
+launcher start Sun Oct  4 19:04:46     2026
+{"time_utc": "2026-10-04T11:05:44+00:00", "msg": "run start", "set": "mono", "games": 61356, "chunks": 307, "todo": 305, "sides": ["target"], "precision": "fp16", "batch": 1024, "workers": 8, "channels_last": true}
+{"time_utc": "2026-10-04T11:09:28+00:00", "msg": "chunk done", "set": "mono", "chunk": 2, "games": 200, "failed": 0, "evals": 316148, "seconds": 202.5, "evals_per_s": 1560.8, "progress": "1/305", "eta_min": 1027.6}
+{"time_utc": "2026-10-04T11:12:28+00:00", "msg": "chunk done", "set": "mono", "chunk": 3, "games": 200, "failed": 0, "evals": 313796, "seconds": 179.6, "evals_per_s": 1747.0, "progress": "2/305", "eta_min": 965.7}
+{"time_utc": "2026-10-04T11:15:09+00:00", "msg": "chunk done", "set": "mono", "chunk": 4, "games": 200, "failed": 0, "evals": 276542, "seconds": 160.3, "evals_per_s": 1724.7, "progress": "3/305", "eta_min": 911.6}
+{"time_utc": "2026-10-04T11:18:15+00:00", "msg": "chunk done", "set": "mono", "chunk": 5, "games": 200, "failed": 0, "evals": 315644, "seconds": 186.3, "evals_per_s": 1694.3, "progress": "4/305", "eta_min": 915.1}
+{"time_utc": "2026-10-04T11:21:18+00:00", "msg": "chunk done", "set": "mono", "chunk": 6, "games": 200, "failed": 0, "evals": 314930, "seconds": 182.8, "evals_per_s": 1723.0, "progress": "5/305", "eta_min": 912.4}
+{"time_utc": "2026-10-04T11:24:22+00:00", "msg": "chunk done", "set": "mono", "chunk": 7, "games": 200, "failed": 0, "evals": 311304, "seconds": 183.8, "evals_per_s": 1693.9, "progress": "6/305", "eta_min": 910.5}
+{"time_utc": "2026-10-04T11:27:28+00:00", "msg": "chunk done", "set": "mono", "chunk": 8, "games": 200, "failed": 0, "evals": 314160, "seconds": 186.4, "evals_per_s": 1685.5, "progress": "7/305", "eta_min": 910.0}
+{"time_utc": "2026-10-04T11:30:31+00:00", "msg": "chunk done", "set": "mono", "chunk": 9, "games": 200, "failed": 0, "evals": 309400, "seconds": 182.7, "evals_per_s": 1693.3, "progress": "8/305", "eta_min": 906.7}
+{"time_utc": "2026-10-04T11:33:28+00:00", "msg": "chunk done", "set": "mono", "chunk": 10, "games": 200, "failed": 0, "evals": 297360, "seconds": 177.2, "evals_per_s": 1678.3, "progress": "9/305", "eta_min": 900.3}
+{"time_utc": "2026-10-04T11:36:24+00:00", "msg": "chunk done", "set": "mono", "chunk": 11, "games": 200, "failed": 0, "evals": 299222, "seconds": 176.3, "evals_per_s": 1697.5, "progress": "10/305", "eta_min": 894.2}
+{"time_utc": "2026-10-04T11:39:20+00:00", "msg": "chunk done", "set": "mono", "chunk": 12, "games": 200, "failed": 0, "evals": 294644, "seconds": 175.6, "evals_per_s": 1678.3, "progress": "11/305", "eta_min": 888.4}
+{"time_utc": "2026-10-04T11:42:35+00:00", "msg": "chunk done", "set": "mono", "chunk": 13, "games": 200, "failed": 0, "evals": 314538, "seconds": 194.9, "evals_per_s": 1613.5, "progress": "12/305", "eta_min": 890.9}
+{"time_utc": "2026-10-04T11:45:48+00:00", "msg": "chunk done", "set": "mono", "chunk": 14, "games": 200, "failed": 0, "evals": 313684, "seconds": 193.4, "evals_per_s": 1622.2, "progress": "13/305", "eta_min": 892.0}
+{"time_utc": "2026-10-04T11:48:52+00:00", "msg": "chunk done", "set": "mono", "chunk": 15, "games": 200, "failed": 0, "evals": 299068, "seconds": 183.4, "evals_per_s": 1630.7, "progress": "14/305", "eta_min": 889.0}
+{"time_utc": "2026-10-04T11:51:55+00:00", "msg": "chunk done", "set": "mono", "chunk": 16, "games": 200, "failed": 0, "evals": 305088, "seconds": 182.8, "evals_per_s": 1668.7, "progress": "15/305", "eta_min": 885.8}
+{"time_utc": "2026-10-04T11:55:09+00:00", "msg": "chunk done", "set": "mono", "chunk": 17, "games": 200, "failed": 0, "evals": 316918, "seconds": 194.7, "evals_per_s": 1628.1, "progress": "16/305", "eta_min": 886.1}
+{"time_utc": "2026-10-04T11:58:18+00:00", "msg": "chunk done", "set": "mono", "chunk": 18, "games": 200, "failed": 0, "evals": 285082, "seconds": 188.3, "evals_per_s": 1513.7, "progress": "17/305", "eta_min": 884.3}
+{"time_utc": "2026-10-04T12:01:28+00:00", "msg": "chunk done", "set": "mono", "chunk": 19, "games": 200, "failed": 0, "evals": 297780, "seconds": 190.6, "evals_per_s": 1562.6, "progress": "18/305", "eta_min": 882.9}
+{"time_utc": "2026-10-04T12:04:35+00:00", "msg": "chunk done", "set": "mono", "chunk": 20, "games": 200, "failed": 0, "evals": 286342, "seconds": 186.7, "evals_per_s": 1533.9, "progress": "19/305", "eta_min": 880.4}
+{"time_utc": "2026-10-04T12:07:46+00:00", "msg": "chunk done", "set": "mono", "chunk": 21, "games": 200, "failed": 0, "evals": 286720, "seconds": 190.7, "evals_per_s": 1503.7, "progress": "20/305", "eta_min": 878.7}
+{"time_utc": "2026-10-04T12:11:11+00:00", "msg": "chunk done", "set": "mono", "chunk": 22, "games": 200, "failed": 0, "evals": 318052, "seconds": 205.2, "evals_per_s": 1549.9, "progress": "21/305", "eta_min": 880.2}
+{"time_utc": "2026-10-04T12:14:41+00:00", "msg": "chunk done", "set": "mono", "chunk": 23, "games": 200, "failed": 0, "evals": 324884, "seconds": 209.9, "evals_per_s": 1547.7, "progress": "22/305", "eta_min": 882.2}
+{"time_utc": "2026-10-04T12:18:08+00:00", "msg": "chunk done", "set": "mono", "chunk": 24, "games": 200, "failed": 0, "evals": 315518, "seconds": 207.6, "evals_per_s": 1520.2, "progress": "23/305", "eta_min": 883.3}
+{"time_utc": "2026-10-04T12:21:27+00:00", "msg": "chunk done", "set": "mono", "chunk": 25, "games": 200, "failed": 0, "evals": 310870, "seconds": 198.6, "evals_per_s": 1565.1, "progress": "24/305", "eta_min": 882.3}
+{"time_utc": "2026-10-04T12:24:41+00:00", "msg": "chunk done", "set": "mono", "chunk": 26, "games": 200, "failed": 0, "evals": 299432, "seconds": 194.3, "evals_per_s": 1541.1, "progress": "25/305", "eta_min": 880.2}
+{"time_utc": "2026-10-04T12:27:53+00:00", "msg": "chunk done", "set": "mono", "chunk": 27, "games": 200, "failed": 0, "evals": 294938, "seconds": 192.2, "evals_per_s": 1534.2, "progress": "26/305", "eta_min": 877.7}
+{"time_utc": "2026-10-04T12:31:09+00:00", "msg": "chunk done", "set": "mono", "chunk": 28, "games": 200, "failed": 0, "evals": 298340, "seconds": 195.6, "evals_per_s": 1525.1, "progress": "27/305", "eta_min": 875.8}
+{"time_utc": "2026-10-04T12:34:12+00:00", "msg": "chunk done", "set": "mono", "chunk": 29, "games": 200, "failed": 0, "evals": 286300, "seconds": 182.9, "evals_per_s": 1565.2, "progress": "28/305", "eta_min": 871.6}
+{"time_utc": "2026-10-04T12:37:16+00:00", "msg": "chunk done", "set": "mono", "chunk": 30, "games": 200, "failed": 0, "evals": 296604, "seconds": 183.6, "evals_per_s": 1615.1, "progress": "29/305", "eta_min": 867.7}
+{"time_utc": "2026-10-04T12:40:27+00:00", "msg": "chunk done", "set": "mono", "chunk": 31, "games": 200, "failed": 0, "evals": 311332, "seconds": 190.8, "evals_per_s": 1631.5, "progress": "30/305", "eta_min": 864.9}
+{"time_utc": "2026-10-04T12:43:42+00:00", "msg": "chunk done", "set": "mono", "chunk": 32, "games": 200, "failed": 0, "evals": 307790, "seconds": 195.1, "evals_per_s": 1578.0, "progress": "31/305", "eta_min": 862.7}
+{"time_utc": "2026-10-04T12:46:53+00:00", "msg": "chunk done", "set": "mono", "chunk": 33, "games": 200, "failed": 0, "evals": 305228, "seconds": 191.0, "evals_per_s": 1597.7, "progress": "32/305", "eta_min": 859.8}
+{"time_utc": "2026-10-04T12:50:11+00:00", "msg": "chunk done", "set": "mono", "chunk": 34, "games": 200, "failed": 0, "evals": 304304, "seconds": 198.3, "evals_per_s": 1534.8, "progress": "33/305", "eta_min": 857.9}
+{"time_utc": "2026-10-04T12:57:20+00:00", "msg": "chunk done", "set": "mono", "chunk": 35, "games": 200, "failed": 0, "evals": 310282, "seconds": 429.2, "evals_per_s": 723.0, "progress": "34/305", "eta_min": 886.7}
+{"time_utc": "2026-10-04T13:03:54+00:00", "msg": "chunk done", "set": "mono", "chunk": 36, "games": 200, "failed": 0, "evals": 294812, "seconds": 393.9, "evals_per_s": 748.5, "progress": "35/305", "eta_min": 908.8}
+{"time_utc": "2026-10-04T13:12:11+00:00", "msg": "chunk done", "set": "mono", "chunk": 37, "games": 200, "failed": 0, "evals": 302484, "seconds": 496.8, "evals_per_s": 608.9, "progress": "36/305", "eta_min": 942.2}
+{"time_utc": "2026-10-04T13:20:50+00:00", "msg": "chunk done", "set": "mono", "chunk": 38, "games": 200, "failed": 0, "evals": 314384, "seconds": 519.0, "evals_per_s": 605.7, "progress": "37/305", "eta_min": 976.0}
+{"time_utc": "2026-10-04T13:30:02+00:00", "msg": "chunk done", "set": "mono", "chunk": 39, "games": 200, "failed": 0, "evals": 340256, "seconds": 551.9, "evals_per_s": 616.5, "progress": "38/305", "eta_min": 1011.4}
+{"time_utc": "2026-10-04T13:39:03+00:00", "msg": "chunk done", "set": "mono", "chunk": 40, "games": 200, "failed": 0, "evals": 329756, "seconds": 540.7, "evals_per_s": 609.9, "progress": "39/305", "eta_min": 1043.3}
+{"time_utc": "2026-10-04T13:47:49+00:00", "msg": "chunk done", "set": "mono", "chunk": 41, "games": 200, "failed": 0, "evals": 317534, "seconds": 525.2, "evals_per_s": 604.5, "progress": "40/305", "eta_min": 1071.4}
+{"time_utc": "2026-10-04T13:56:19+00:00", "msg": "chunk done", "set": "mono", "chunk": 42, "games": 200, "failed": 0, "evals": 310338, "seconds": 510.6, "evals_per_s": 607.8, "progress": "41/305", "eta_min": 1096.1}
+{"time_utc": "2026-10-04T14:04:51+00:00", "msg": "chunk done", "set": "mono", "chunk": 43, "games": 200, "failed": 0, "evals": 312368, "seconds": 511.3, "evals_per_s": 610.9, "progress": "42/305", "eta_min": 1119.3}
+{"time_utc": "2026-10-04T14:09:30+00:00", "msg": "chunk done", "set": "mono", "chunk": 44, "games": 200, "failed": 0, "evals": 330134, "seconds": 279.2, "evals_per_s": 1182.6, "progress": "43/305", "eta_min": 1117.5}
+{"time_utc": "2026-10-04T14:13:07+00:00", "msg": "chunk done", "set": "mono", "chunk": 45, "games": 200, "failed": 0, "evals": 340130, "seconds": 217.0, "evals_per_s": 1567.1, "progress": "44/305", "eta_min": 1109.4}
+{"time_utc": "2026-10-04T14:16:43+00:00", "msg": "chunk done", "set": "mono", "chunk": 46, "games": 200, "failed": 0, "evals": 341544, "seconds": 216.6, "evals_per_s": 1577.0, "progress": "45/305", "eta_min": 1101.4}
+{"time_utc": "2026-10-04T14:20:09+00:00", "msg": "chunk done", "set": "mono", "chunk": 47, "games": 200, "failed": 0, "evals": 321132, "seconds": 205.4, "evals_per_s": 1563.5, "progress": "46/305", "eta_min": 1092.6}
+{"time_utc": "2026-10-04T14:23:15+00:00", "msg": "chunk done", "set": "mono", "chunk": 48, "games": 200, "failed": 0, "evals": 288190, "seconds": 185.8, "evals_per_s": 1550.8, "progress": "47/305", "eta_min": 1082.3}
+{"time_utc": "2026-10-04T14:26:18+00:00", "msg": "chunk done", "set": "mono", "chunk": 49, "games": 200, "failed": 0, "evals": 288638, "seconds": 182.5, "evals_per_s": 1581.3, "progress": "48/305", "eta_min": 1071.9}
+{"time_utc": "2026-10-04T14:29:37+00:00", "msg": "chunk done", "set": "mono", "chunk": 50, "games": 200, "failed": 0, "evals": 309456, "seconds": 198.7, "evals_per_s": 1557.3, "progress": "49/305", "eta_min": 1063.3}
+{"time_utc": "2026-10-04T14:33:30+00:00", "msg": "chunk done", "set": "mono", "chunk": 51, "games": 200, "failed": 0, "evals": 354858, "seconds": 232.8, "evals_per_s": 1524.0, "progress": "50/305", "eta_min": 1057.7}
+{"time_utc": "2026-10-04T14:37:10+00:00", "msg": "chunk done", "set": "mono", "chunk": 52, "games": 200, "failed": 0, "evals": 336336, "seconds": 219.9, "evals_per_s": 1529.6, "progress": "51/305", "eta_min": 1051.2}
+{"time_utc": "2026-10-04T14:40:08+00:00", "msg": "chunk done", "set": "mono", "chunk": 53, "games": 200, "failed": 0, "evals": 272272, "seconds": 178.5, "evals_per_s": 1525.6, "progress": "52/305", "eta_min": 1041.4}
+{"time_utc": "2026-10-04T14:43:25+00:00", "msg": "chunk done", "set": "mono", "chunk": 54, "games": 200, "failed": 0, "evals": 289380, "seconds": 196.3, "evals_per_s": 1473.9, "progress": "53/305", "eta_min": 1033.3}
+{"time_utc": "2026-10-04T14:46:52+00:00", "msg": "chunk done", "set": "mono", "chunk": 55, "games": 200, "failed": 0, "evals": 299306, "seconds": 207.8, "evals_per_s": 1440.4, "progress": "54/305", "eta_min": 1026.2}
+{"time_utc": "2026-10-04T14:50:08+00:00", "msg": "chunk done", "set": "mono", "chunk": 56, "games": 200, "failed": 0, "evals": 291886, "seconds": 195.4, "evals_per_s": 1493.6, "progress": "55/305", "eta_min": 1018.4}
+{"time_utc": "2026-10-04T14:53:21+00:00", "msg": "chunk done", "set": "mono", "chunk": 57, "games": 200, "failed": 0, "evals": 301084, "seconds": 193.2, "evals_per_s": 1558.0, "progress": "56/305", "eta_min": 1010.5}
+{"time_utc": "2026-10-04T14:56:43+00:00", "msg": "chunk done", "set": "mono", "chunk": 58, "games": 200, "failed": 0, "evals": 311164, "seconds": 201.9, "evals_per_s": 1541.1, "progress": "57/305", "eta_min": 1003.4}
+{"time_utc": "2026-10-04T15:00:05+00:00", "msg": "chunk done", "set": "mono", "chunk": 59, "games": 200, "failed": 0, "evals": 299796, "seconds": 201.6, "evals_per_s": 1486.9, "progress": "58/305", "eta_min": 996.5}
+{"time_utc": "2026-10-04T15:03:23+00:00", "msg": "chunk done", "set": "mono", "chunk": 60, "games": 200, "failed": 0, "evals": 300594, "seconds": 198.5, "evals_per_s": 1514.4, "progress": "59/305", "eta_min": 989.4}
+{"time_utc": "2026-10-04T15:06:41+00:00", "msg": "chunk done", "set": "mono", "chunk": 61, "games": 200, "failed": 0, "evals": 297416, "seconds": 197.2, "evals_per_s": 1508.4, "progress": "60/305", "eta_min": 982.4}
+{"time_utc": "2026-10-04T15:10:07+00:00", "msg": "chunk done", "set": "mono", "chunk": 62, "games": 200, "failed": 0, "evals": 306908, "seconds": 205.8, "evals_per_s": 1491.6, "progress": "61/305", "eta_min": 976.1}
+{"time_utc": "2026-10-04T15:13:47+00:00", "msg": "chunk done", "set": "mono", "chunk": 63, "games": 200, "failed": 0, "evals": 320446, "seconds": 220.2, "evals_per_s": 1455.6, "progress": "62/305", "eta_min": 970.8}
+{"time_utc": "2026-10-04T15:16:54+00:00", "msg": "chunk done", "set": "mono", "chunk": 64, "games": 200, "failed": 0, "evals": 292222, "seconds": 187.0, "evals_per_s": 1563.0, "progress": "63/305", "eta_min": 963.4}
+{"time_utc": "2026-10-04T15:20:27+00:00", "msg": "chunk done", "set": "mono", "chunk": 65, "games": 200, "failed": 0, "evals": 325710, "seconds": 212.5, "evals_per_s": 1532.4, "progress": "64/305", "eta_min": 957.8}
+{"time_utc": "2026-10-04T15:23:48+00:00", "msg": "chunk done", "set": "mono", "chunk": 66, "games": 200, "failed": 0, "evals": 317716, "seconds": 201.5, "evals_per_s": 1576.8, "progress": "65/305", "eta_min": 951.5}
+{"time_utc": "2026-10-04T15:27:04+00:00", "msg": "chunk done", "set": "mono", "chunk": 67, "games": 200, "failed": 0, "evals": 297360, "seconds": 195.6, "evals_per_s": 1520.4, "progress": "66/305", "eta_min": 945.0}
+{"time_utc": "2026-10-04T15:30:16+00:00", "msg": "chunk done", "set": "mono", "chunk": 68, "games": 200, "failed": 0, "evals": 297108, "seconds": 192.3, "evals_per_s": 1545.4, "progress": "67/305", "eta_min": 938.4}
+{"time_utc": "2026-10-04T15:33:36+00:00", "msg": "chunk done", "set": "mono", "chunk": 69, "games": 200, "failed": 0, "evals": 298298, "seconds": 200.0, "evals_per_s": 1491.1, "progress": "68/305", "eta_min": 932.3}
+{"time_utc": "2026-10-04T15:37:00+00:00", "msg": "chunk done", "set": "mono", "chunk": 70, "games": 200, "failed": 0, "evals": 319536, "seconds": 203.5, "evals_per_s": 1570.1, "progress": "69/305", "eta_min": 926.6}
+{"time_utc": "2026-10-04T15:40:17+00:00", "msg": "chunk done", "set": "mono", "chunk": 71, "games": 200, "failed": 0, "evals": 311724, "seconds": 196.9, "evals_per_s": 1583.4, "progress": "70/305", "eta_min": 920.5}
+{"time_utc": "2026-10-04T15:43:35+00:00", "msg": "chunk done", "set": "mono", "chunk": 72, "games": 200, "failed": 0, "evals": 311906, "seconds": 198.5, "evals_per_s": 1571.5, "progress": "71/305", "eta_min": 914.6}
+{"time_utc": "2026-10-04T15:47:13+00:00", "msg": "chunk done", "set": "mono", "chunk": 73, "games": 200, "failed": 0, "evals": 352436, "seconds": 217.5, "evals_per_s": 1620.1, "progress": "72/305", "eta_min": 909.7}
+{"time_utc": "2026-10-04T15:50:40+00:00", "msg": "chunk done", "set": "mono", "chunk": 74, "games": 200, "failed": 0, "evals": 341726, "seconds": 207.0, "evals_per_s": 1650.9, "progress": "73/305", "eta_min": 904.4}
+{"time_utc": "2026-10-04T15:53:50+00:00", "msg": "chunk done", "set": "mono", "chunk": 75, "games": 200, "failed": 0, "evals": 306950, "seconds": 190.3, "evals_per_s": 1612.6, "progress": "74/305", "eta_min": 898.2}
+{"time_utc": "2026-10-04T15:57:03+00:00", "msg": "chunk done", "set": "mono", "chunk": 76, "games": 200, "failed": 0, "evals": 307930, "seconds": 192.7, "evals_per_s": 1598.0, "progress": "75/305", "eta_min": 892.3}
+{"time_utc": "2026-10-04T16:00:25+00:00", "msg": "chunk done", "set": "mono", "chunk": 77, "games": 200, "failed": 0, "evals": 316400, "seconds": 202.0, "evals_per_s": 1566.0, "progress": "76/305", "eta_min": 886.8}
+{"time_utc": "2026-10-04T16:03:46+00:00", "msg": "chunk done", "set": "mono", "chunk": 78, "games": 200, "failed": 0, "evals": 311416, "seconds": 201.1, "evals_per_s": 1548.5, "progress": "77/305", "eta_min": 881.4}
+{"time_utc": "2026-10-04T16:07:08+00:00", "msg": "chunk done", "set": "mono", "chunk": 79, "games": 200, "failed": 0, "evals": 313670, "seconds": 201.3, "evals_per_s": 1558.5, "progress": "78/305", "eta_min": 876.1}
+{"time_utc": "2026-10-04T16:10:41+00:00", "msg": "chunk done", "set": "mono", "chunk": 80, "games": 200, "failed": 0, "evals": 334782, "seconds": 213.3, "evals_per_s": 1569.9, "progress": "79/305", "eta_min": 871.3}
+{"time_utc": "2026-10-04T16:14:03+00:00", "msg": "chunk done", "set": "mono", "chunk": 81, "games": 200, "failed": 0, "evals": 329420, "seconds": 202.2, "evals_per_s": 1629.1, "progress": "80/305", "eta_min": 866.1}
+{"time_utc": "2026-10-04T16:17:12+00:00", "msg": "chunk done", "set": "mono", "chunk": 82, "games": 200, "failed": 0, "evals": 299250, "seconds": 188.6, "evals_per_s": 1586.5, "progress": "81/305", "eta_min": 860.3}
+{"time_utc": "2026-10-04T16:20:44+00:00", "msg": "chunk done", "set": "mono", "chunk": 83, "games": 200, "failed": 0, "evals": 342132, "seconds": 212.3, "evals_per_s": 1611.5, "progress": "82/305", "eta_min": 855.7}
+{"time_utc": "2026-10-04T16:24:00+00:00", "msg": "chunk done", "set": "mono", "chunk": 84, "games": 200, "failed": 0, "evals": 311822, "seconds": 196.3, "evals_per_s": 1588.1, "progress": "83/305", "eta_min": 850.3}
+{"time_utc": "2026-10-04T16:27:04+00:00", "msg": "chunk done", "set": "mono", "chunk": 85, "games": 200, "failed": 0, "evals": 290724, "seconds": 184.1, "evals_per_s": 1579.4, "progress": "84/305", "eta_min": 844.5}
+{"time_utc": "2026-10-04T16:30:15+00:00", "msg": "chunk done", "set": "mono", "chunk": 86, "games": 200, "failed": 0, "evals": 301392, "seconds": 190.5, "evals_per_s": 1582.0, "progress": "85/305", "eta_min": 839.0}
+{"time_utc": "2026-10-04T16:32:59+00:00", "msg": "chunk done", "set": "mono", "chunk": 87, "games": 200, "failed": 0, "evals": 263620, "seconds": 164.1, "evals_per_s": 1606.2, "progress": "86/305", "eta_min": 832.4}
+{"time_utc": "2026-10-04T16:36:07+00:00", "msg": "chunk done", "set": "mono", "chunk": 88, "games": 200, "failed": 0, "evals": 297164, "seconds": 187.4, "evals_per_s": 1586.1, "progress": "87/305", "eta_min": 826.9}
+{"time_utc": "2026-10-04T16:39:25+00:00", "msg": "chunk done", "set": "mono", "chunk": 89, "games": 200, "failed": 0, "evals": 314622, "seconds": 198.7, "evals_per_s": 1583.4, "progress": "88/305", "eta_min": 822.0}
+{"time_utc": "2026-10-04T16:42:52+00:00", "msg": "chunk done", "set": "mono", "chunk": 90, "games": 200, "failed": 0, "evals": 319900, "seconds": 206.9, "evals_per_s": 1546.0, "progress": "89/305", "eta_min": 817.4}
+{"time_utc": "2026-10-04T16:46:10+00:00", "msg": "chunk done", "set": "mono", "chunk": 91, "games": 200, "failed": 0, "evals": 306782, "seconds": 197.9, "evals_per_s": 1550.3, "progress": "90/305", "eta_min": 812.4}
+{"time_utc": "2026-10-04T16:49:55+00:00", "msg": "chunk done", "set": "mono", "chunk": 92, "games": 200, "failed": 0, "evals": 338002, "seconds": 224.5, "evals_per_s": 1505.6, "progress": "91/305", "eta_min": 808.5}
+{"time_utc": "2026-10-04T16:53:11+00:00", "msg": "chunk done", "set": "mono", "chunk": 93, "games": 200, "failed": 0, "evals": 310576, "seconds": 196.2, "evals_per_s": 1583.3, "progress": "92/305", "eta_min": 803.6}
+{"time_utc": "2026-10-04T16:56:35+00:00", "msg": "chunk done", "set": "mono", "chunk": 94, "games": 200, "failed": 0, "evals": 307650, "seconds": 204.1, "evals_per_s": 1507.5, "progress": "93/305", "eta_min": 799.0}
+{"time_utc": "2026-10-04T16:59:56+00:00", "msg": "chunk done", "set": "mono", "chunk": 95, "games": 200, "failed": 0, "evals": 310016, "seconds": 201.4, "evals_per_s": 1539.2, "progress": "94/305", "eta_min": 794.3}
+{"time_utc": "2026-10-04T17:03:13+00:00", "msg": "chunk done", "set": "mono", "chunk": 96, "games": 200, "failed": 0, "evals": 309372, "seconds": 195.8, "evals_per_s": 1579.8, "progress": "95/305", "eta_min": 789.4}
+{"time_utc": "2026-10-04T17:06:30+00:00", "msg": "chunk done", "set": "mono", "chunk": 97, "games": 200, "failed": 0, "evals": 295540, "seconds": 197.0, "evals_per_s": 1500.3, "progress": "96/305", "eta_min": 784.6}
+{"time_utc": "2026-10-04T17:09:38+00:00", "msg": "chunk done", "set": "mono", "chunk": 98, "games": 200, "failed": 0, "evals": 290920, "seconds": 188.2, "evals_per_s": 1545.4, "progress": "97/305", "eta_min": 779.5}
+{"time_utc": "2026-10-04T17:12:55+00:00", "msg": "chunk done", "set": "mono", "chunk": 99, "games": 200, "failed": 0, "evals": 302036, "seconds": 197.0, "evals_per_s": 1533.4, "progress": "98/305", "eta_min": 774.8}
+{"time_utc": "2026-10-04T17:16:01+00:00", "msg": "chunk done", "set": "mono", "chunk": 100, "games": 200, "failed": 0, "evals": 293622, "seconds": 186.4, "evals_per_s": 1575.3, "progress": "99/305", "eta_min": 769.7}
+{"time_utc": "2026-10-04T17:19:23+00:00", "msg": "chunk done", "set": "mono", "chunk": 101, "games": 200, "failed": 0, "evals": 321006, "seconds": 202.2, "evals_per_s": 1587.4, "progress": "100/305", "eta_min": 765.3}
+{"time_utc": "2026-10-04T17:22:44+00:00", "msg": "chunk done", "set": "mono", "chunk": 102, "games": 200, "failed": 0, "evals": 312312, "seconds": 200.0, "evals_per_s": 1561.3, "progress": "101/305", "eta_min": 760.7}
+{"time_utc": "2026-10-04T17:26:21+00:00", "msg": "chunk done", "set": "mono", "chunk": 103, "games": 200, "failed": 0, "evals": 330456, "seconds": 217.8, "evals_per_s": 1517.2, "progress": "102/305", "eta_min": 756.8}
+{"time_utc": "2026-10-04T17:29:56+00:00", "msg": "chunk done", "set": "mono", "chunk": 104, "games": 200, "failed": 0, "evals": 326970, "seconds": 214.5, "evals_per_s": 1524.6, "progress": "103/305", "eta_min": 752.8}
+{"time_utc": "2026-10-04T17:33:17+00:00", "msg": "chunk done", "set": "mono", "chunk": 105, "games": 200, "failed": 0, "evals": 302106, "seconds": 201.2, "evals_per_s": 1501.4, "progress": "104/305", "eta_min": 748.3}
+{"time_utc": "2026-10-04T17:36:41+00:00", "msg": "chunk done", "set": "mono", "chunk": 106, "games": 200, "failed": 0, "evals": 307454, "seconds": 203.9, "evals_per_s": 1507.7, "progress": "105/305", "eta_min": 744.0}
+{"time_utc": "2026-10-04T17:39:44+00:00", "msg": "chunk done", "set": "mono", "chunk": 107, "games": 200, "failed": 0, "evals": 279664, "seconds": 183.3, "evals_per_s": 1526.1, "progress": "106/305", "eta_min": 739.0}
+{"time_utc": "2026-10-04T17:42:39+00:00", "msg": "chunk done", "set": "mono", "chunk": 108, "games": 200, "failed": 0, "evals": 269080, "seconds": 174.6, "evals_per_s": 1540.8, "progress": "107/305", "eta_min": 733.8}
+{"time_utc": "2026-10-04T17:46:03+00:00", "msg": "chunk done", "set": "mono", "chunk": 109, "games": 200, "failed": 0, "evals": 315532, "seconds": 204.2, "evals_per_s": 1545.3, "progress": "108/305", "eta_min": 729.6}
+{"time_utc": "2026-10-04T17:48:59+00:00", "msg": "chunk done", "set": "mono", "chunk": 110, "games": 200, "failed": 0, "evals": 273644, "seconds": 176.2, "evals_per_s": 1552.8, "progress": "109/305", "eta_min": 724.5}
+{"time_utc": "2026-10-04T17:52:21+00:00", "msg": "chunk done", "set": "mono", "chunk": 111, "games": 200, "failed": 0, "evals": 330134, "seconds": 201.9, "evals_per_s": 1634.8, "progress": "110/305", "eta_min": 720.2}
+{"time_utc": "2026-10-04T17:55:57+00:00", "msg": "chunk done", "set": "mono", "chunk": 112, "games": 200, "failed": 0, "evals": 329322, "seconds": 215.3, "evals_per_s": 1529.9, "progress": "111/305", "eta_min": 716.3}
+{"time_utc": "2026-10-04T17:59:19+00:00", "msg": "chunk done", "set": "mono", "chunk": 113, "games": 200, "failed": 0, "evals": 311458, "seconds": 202.8, "evals_per_s": 1535.5, "progress": "112/305", "eta_min": 712.1}
+{"time_utc": "2026-10-04T18:02:58+00:00", "msg": "chunk done", "set": "mono", "chunk": 114, "games": 200, "failed": 0, "evals": 332682, "seconds": 218.7, "evals_per_s": 1520.9, "progress": "113/305", "eta_min": 708.3}
+{"time_utc": "2026-10-04T18:06:32+00:00", "msg": "chunk done", "set": "mono", "chunk": 115, "games": 200, "failed": 0, "evals": 322322, "seconds": 213.6, "evals_per_s": 1509.1, "progress": "114/305", "eta_min": 704.4}
+{"time_utc": "2026-10-04T18:09:58+00:00", "msg": "chunk done", "set": "mono", "chunk": 116, "games": 200, "failed": 0, "evals": 314762, "seconds": 206.1, "evals_per_s": 1527.4, "progress": "115/305", "eta_min": 700.3}
+{"time_utc": "2026-10-04T18:13:19+00:00", "msg": "chunk done", "set": "mono", "chunk": 117, "games": 200, "failed": 0, "evals": 308798, "seconds": 201.1, "evals_per_s": 1535.5, "progress": "116/305", "eta_min": 696.1}
+{"time_utc": "2026-10-04T18:16:35+00:00", "msg": "chunk done", "set": "mono", "chunk": 118, "games": 200, "failed": 0, "evals": 296660, "seconds": 196.1, "evals_per_s": 1512.9, "progress": "117/305", "eta_min": 691.7}
+{"time_utc": "2026-10-04T18:19:53+00:00", "msg": "chunk done", "set": "mono", "chunk": 119, "games": 200, "failed": 0, "evals": 304416, "seconds": 197.8, "evals_per_s": 1538.9, "progress": "118/305", "eta_min": 687.4}
+{"time_utc": "2026-10-04T18:23:21+00:00", "msg": "chunk done", "set": "mono", "chunk": 120, "games": 200, "failed": 0, "evals": 315896, "seconds": 207.7, "evals_per_s": 1520.6, "progress": "119/305", "eta_min": 683.4}
+{"time_utc": "2026-10-04T18:26:27+00:00", "msg": "chunk done", "set": "mono", "chunk": 121, "games": 200, "failed": 0, "evals": 296184, "seconds": 186.1, "evals_per_s": 1591.5, "progress": "120/305", "eta_min": 678.9}
+{"time_utc": "2026-10-04T18:29:35+00:00", "msg": "chunk done", "set": "mono", "chunk": 122, "games": 200, "failed": 0, "evals": 289674, "seconds": 188.3, "evals_per_s": 1538.3, "progress": "121/305", "eta_min": 674.4}
+{"time_utc": "2026-10-04T18:32:30+00:00", "msg": "chunk done", "set": "mono", "chunk": 123, "games": 200, "failed": 0, "evals": 276290, "seconds": 174.8, "evals_per_s": 1580.8, "progress": "122/305", "eta_min": 669.6}
+{"time_utc": "2026-10-04T18:35:51+00:00", "msg": "chunk done", "set": "mono", "chunk": 124, "games": 200, "failed": 0, "evals": 315700, "seconds": 201.5, "evals_per_s": 1567.1, "progress": "123/305", "eta_min": 665.5}
+{"time_utc": "2026-10-04T18:39:04+00:00", "msg": "chunk done", "set": "mono", "chunk": 125, "games": 200, "failed": 0, "evals": 308476, "seconds": 192.8, "evals_per_s": 1600.2, "progress": "124/305", "eta_min": 661.2}
+{"time_utc": "2026-10-04T18:42:22+00:00", "msg": "chunk done", "set": "mono", "chunk": 126, "games": 200, "failed": 0, "evals": 299656, "seconds": 197.8, "evals_per_s": 1514.7, "progress": "125/305", "eta_min": 657.0}
+{"time_utc": "2026-10-04T18:45:56+00:00", "msg": "chunk done", "set": "mono", "chunk": 127, "games": 200, "failed": 0, "evals": 307762, "seconds": 213.9, "evals_per_s": 1439.1, "progress": "126/305", "eta_min": 653.3}
+{"time_utc": "2026-10-04T18:49:32+00:00", "msg": "chunk done", "set": "mono", "chunk": 128, "games": 200, "failed": 0, "evals": 328412, "seconds": 215.5, "evals_per_s": 1524.3, "progress": "127/305", "eta_min": 649.5}
+{"time_utc": "2026-10-04T18:53:10+00:00", "msg": "chunk done", "set": "mono", "chunk": 129, "games": 200, "failed": 0, "evals": 322252, "seconds": 218.4, "evals_per_s": 1475.3, "progress": "128/305", "eta_min": 645.9}
+{"time_utc": "2026-10-04T18:56:36+00:00", "msg": "chunk done", "set": "mono", "chunk": 130, "games": 200, "failed": 0, "evals": 310996, "seconds": 205.5, "evals_per_s": 1513.0, "progress": "129/305", "eta_min": 641.9}
+{"time_utc": "2026-10-04T19:00:01+00:00", "msg": "chunk done", "set": "mono", "chunk": 131, "games": 200, "failed": 0, "evals": 313250, "seconds": 205.0, "evals_per_s": 1528.0, "progress": "130/305", "eta_min": 638.0}
+{"time_utc": "2026-10-04T19:03:30+00:00", "msg": "chunk done", "set": "mono", "chunk": 132, "games": 200, "failed": 0, "evals": 320614, "seconds": 209.2, "evals_per_s": 1532.8, "progress": "131/305", "eta_min": 634.1}
+{"time_utc": "2026-10-04T19:07:08+00:00", "msg": "chunk done", "set": "mono", "chunk": 133, "games": 200, "failed": 0, "evals": 330484, "seconds": 218.1, "evals_per_s": 1515.0, "progress": "132/305", "eta_min": 630.5}
+{"time_utc": "2026-10-04T19:10:48+00:00", "msg": "chunk done", "set": "mono", "chunk": 134, "games": 200, "failed": 0, "evals": 345954, "seconds": 219.7, "evals_per_s": 1574.7, "progress": "133/305", "eta_min": 626.8}
+{"time_utc": "2026-10-04T19:14:05+00:00", "msg": "chunk done", "set": "mono", "chunk": 135, "games": 200, "failed": 0, "evals": 307776, "seconds": 197.7, "evals_per_s": 1556.7, "progress": "134/305", "eta_min": 622.7}
+{"time_utc": "2026-10-04T19:17:31+00:00", "msg": "chunk done", "set": "mono", "chunk": 136, "games": 200, "failed": 0, "evals": 317492, "seconds": 205.8, "evals_per_s": 1542.8, "progress": "135/305", "eta_min": 618.8}
+{"time_utc": "2026-10-04T19:21:02+00:00", "msg": "chunk done", "set": "mono", "chunk": 137, "games": 200, "failed": 0, "evals": 313292, "seconds": 210.8, "evals_per_s": 1486.4, "progress": "136/305", "eta_min": 615.0}
+{"time_utc": "2026-10-04T19:24:23+00:00", "msg": "chunk done", "set": "mono", "chunk": 138, "games": 200, "failed": 0, "evals": 314286, "seconds": 200.9, "evals_per_s": 1564.2, "progress": "137/305", "eta_min": 611.0}
+{"time_utc": "2026-10-04T19:27:44+00:00", "msg": "chunk done", "set": "mono", "chunk": 139, "games": 200, "failed": 0, "evals": 308882, "seconds": 200.7, "evals_per_s": 1539.1, "progress": "138/305", "eta_min": 607.0}
+{"time_utc": "2026-10-04T19:31:02+00:00", "msg": "chunk done", "set": "mono", "chunk": 140, "games": 200, "failed": 0, "evals": 304836, "seconds": 198.6, "evals_per_s": 1535.1, "progress": "139/305", "eta_min": 603.0}
+{"time_utc": "2026-10-04T19:34:21+00:00", "msg": "chunk done", "set": "mono", "chunk": 141, "games": 200, "failed": 0, "evals": 326340, "seconds": 198.6, "evals_per_s": 1643.5, "progress": "140/305", "eta_min": 599.0}
+{"time_utc": "2026-10-04T19:37:34+00:00", "msg": "chunk done", "set": "mono", "chunk": 142, "games": 200, "failed": 0, "evals": 328356, "seconds": 193.5, "evals_per_s": 1697.4, "progress": "141/305", "eta_min": 594.9}
+{"time_utc": "2026-10-04T19:42:49+00:00", "msg": "chunk done", "set": "mono", "chunk": 143, "games": 200, "failed": 0, "evals": 317702, "seconds": 314.6, "evals_per_s": 1010.0, "progress": "142/305", "eta_min": 593.1}
+{"time_utc": "2026-10-04T19:51:21+00:00", "msg": "chunk done", "set": "mono", "chunk": 144, "games": 200, "failed": 0, "evals": 309022, "seconds": 511.1, "evals_per_s": 604.6, "progress": "143/305", "eta_min": 595.0}
+{"time_utc": "2026-10-04T20:00:30+00:00", "msg": "chunk done", "set": "mono", "chunk": 145, "games": 200, "failed": 0, "evals": 330008, "seconds": 549.3, "evals_per_s": 600.8, "progress": "144/305", "eta_min": 597.5}
+{"time_utc": "2026-10-04T20:09:40+00:00", "msg": "chunk done", "set": "mono", "chunk": 146, "games": 200, "failed": 0, "evals": 329630, "seconds": 549.7, "evals_per_s": 599.7, "progress": "145/305", "eta_min": 599.8}
+{"time_utc": "2026-10-04T20:17:59+00:00", "msg": "chunk done", "set": "mono", "chunk": 147, "games": 200, "failed": 0, "evals": 300216, "seconds": 498.9, "evals_per_s": 601.8, "progress": "146/305", "eta_min": 601.0}
+{"time_utc": "2026-10-04T20:27:00+00:00", "msg": "chunk done", "set": "mono", "chunk": 148, "games": 200, "failed": 0, "evals": 326620, "seconds": 540.5, "evals_per_s": 604.3, "progress": "147/305", "eta_min": 602.9}
+{"time_utc": "2026-10-04T20:31:39+00:00", "msg": "chunk done", "set": "mono", "chunk": 149, "games": 200, "failed": 0, "evals": 297584, "seconds": 279.5, "evals_per_s": 1064.5, "progress": "148/305", "eta_min": 600.0}
+{"time_utc": "2026-10-04T20:34:40+00:00", "msg": "chunk done", "set": "mono", "chunk": 150, "games": 200, "failed": 0, "evals": 307692, "seconds": 180.7, "evals_per_s": 1702.5, "progress": "149/305", "eta_min": 595.3}
+{"time_utc": "2026-10-04T20:37:39+00:00", "msg": "chunk done", "set": "mono", "chunk": 151, "games": 200, "failed": 0, "evals": 308658, "seconds": 179.1, "evals_per_s": 1723.6, "progress": "150/305", "eta_min": 590.6}
+{"time_utc": "2026-10-04T20:40:48+00:00", "msg": "chunk done", "set": "mono", "chunk": 152, "games": 200, "failed": 0, "evals": 324688, "seconds": 188.8, "evals_per_s": 1719.3, "progress": "151/305", "eta_min": 586.1}
+{"time_utc": "2026-10-04T20:44:07+00:00", "msg": "chunk done", "set": "mono", "chunk": 153, "games": 200, "failed": 0, "evals": 347018, "seconds": 199.2, "evals_per_s": 1741.9, "progress": "152/305", "eta_min": 581.8}
+{"time_utc": "2026-10-04T20:47:12+00:00", "msg": "chunk done", "set": "mono", "chunk": 154, "games": 200, "failed": 0, "evals": 321454, "seconds": 185.1, "evals_per_s": 1736.6, "progress": "153/305", "eta_min": 577.3}
+{"time_utc": "2026-10-04T20:50:04+00:00", "msg": "chunk done", "set": "mono", "chunk": 155, "games": 200, "failed": 0, "evals": 301882, "seconds": 171.5, "evals_per_s": 1760.2, "progress": "154/305", "eta_min": 572.6}
+{"time_utc": "2026-10-04T20:52:42+00:00", "msg": "chunk done", "set": "mono", "chunk": 156, "games": 200, "failed": 0, "evals": 277242, "seconds": 158.6, "evals_per_s": 1748.6, "progress": "155/305", "eta_min": 567.7}
+{"time_utc": "2026-10-04T20:55:37+00:00", "msg": "chunk done", "set": "mono", "chunk": 157, "games": 200, "failed": 0, "evals": 304738, "seconds": 174.3, "evals_per_s": 1748.3, "progress": "156/305", "eta_min": 563.1}
+{"time_utc": "2026-10-04T20:58:23+00:00", "msg": "chunk done", "set": "mono", "chunk": 158, "games": 200, "failed": 0, "evals": 291256, "seconds": 166.8, "evals_per_s": 1746.4, "progress": "157/305", "eta_min": 558.3}
+{"time_utc": "2026-10-04T21:01:00+00:00", "msg": "chunk done", "set": "mono", "chunk": 159, "games": 200, "failed": 0, "evals": 271796, "seconds": 156.4, "evals_per_s": 1737.4, "progress": "158/305", "eta_min": 553.5}
+{"time_utc": "2026-10-04T21:03:43+00:00", "msg": "chunk done", "set": "mono", "chunk": 160, "games": 200, "failed": 0, "evals": 284816, "seconds": 163.1, "evals_per_s": 1746.0, "progress": "159/305", "eta_min": 548.8}
+{"time_utc": "2026-10-04T21:06:31+00:00", "msg": "chunk done", "set": "mono", "chunk": 161, "games": 200, "failed": 0, "evals": 293216, "seconds": 168.0, "evals_per_s": 1745.8, "progress": "160/305", "eta_min": 544.1}
+{"time_utc": "2026-10-04T21:09:18+00:00", "msg": "chunk done", "set": "mono", "chunk": 162, "games": 200, "failed": 0, "evals": 291788, "seconds": 167.1, "evals_per_s": 1746.1, "progress": "161/305", "eta_min": 539.5}
+{"time_utc": "2026-10-04T21:12:20+00:00", "msg": "chunk done", "set": "mono", "chunk": 163, "games": 200, "failed": 0, "evals": 317464, "seconds": 181.7, "evals_per_s": 1746.7, "progress": "162/305", "eta_min": 535.1}
+{"time_utc": "2026-10-04T21:15:28+00:00", "msg": "chunk done", "set": "mono", "chunk": 164, "games": 200, "failed": 0, "evals": 328692, "seconds": 187.8, "evals_per_s": 1750.4, "progress": "163/305", "eta_min": 530.9}
+{"time_utc": "2026-10-04T21:18:27+00:00", "msg": "chunk done", "set": "mono", "chunk": 165, "games": 200, "failed": 0, "evals": 313824, "seconds": 179.8, "evals_per_s": 1745.7, "progress": "164/305", "eta_min": 526.5}
+{"time_utc": "2026-10-04T21:21:35+00:00", "msg": "chunk done", "set": "mono", "chunk": 166, "games": 200, "failed": 0, "evals": 327838, "seconds": 187.5, "evals_per_s": 1748.1, "progress": "165/305", "eta_min": 522.2}
+{"time_utc": "2026-10-04T21:24:29+00:00", "msg": "chunk done", "set": "mono", "chunk": 167, "games": 200, "failed": 0, "evals": 305172, "seconds": 173.9, "evals_per_s": 1755.1, "progress": "166/305", "eta_min": 517.8}
+{"time_utc": "2026-10-04T21:27:22+00:00", "msg": "chunk done", "set": "mono", "chunk": 168, "games": 200, "failed": 0, "evals": 302932, "seconds": 172.9, "evals_per_s": 1752.5, "progress": "167/305", "eta_min": 513.4}
+{"time_utc": "2026-10-04T21:29:57+00:00", "msg": "chunk done", "set": "mono", "chunk": 169, "games": 200, "failed": 0, "evals": 269416, "seconds": 155.0, "evals_per_s": 1738.0, "progress": "168/305", "eta_min": 508.7}
+{"time_utc": "2026-10-04T21:32:32+00:00", "msg": "chunk done", "set": "mono", "chunk": 170, "games": 200, "failed": 0, "evals": 271012, "seconds": 155.7, "evals_per_s": 1740.9, "progress": "169/305", "eta_min": 504.1}
+{"time_utc": "2026-10-04T21:35:04+00:00", "msg": "chunk done", "set": "mono", "chunk": 171, "games": 200, "failed": 0, "evals": 263718, "seconds": 151.2, "evals_per_s": 1743.8, "progress": "170/305", "eta_min": 499.5}
+{"time_utc": "2026-10-04T21:37:27+00:00", "msg": "chunk done", "set": "mono", "chunk": 172, "games": 200, "failed": 0, "evals": 253806, "seconds": 143.3, "evals_per_s": 1771.5, "progress": "171/305", "eta_min": 494.7}
+{"time_utc": "2026-10-04T21:40:08+00:00", "msg": "chunk done", "set": "mono", "chunk": 173, "games": 200, "failed": 0, "evals": 280854, "seconds": 161.1, "evals_per_s": 1743.6, "progress": "172/305", "eta_min": 490.3}
+{"time_utc": "2026-10-04T21:43:00+00:00", "msg": "chunk done", "set": "mono", "chunk": 174, "games": 200, "failed": 0, "evals": 298858, "seconds": 171.7, "evals_per_s": 1741.0, "progress": "173/305", "eta_min": 486.0}
+{"time_utc": "2026-10-04T21:45:44+00:00", "msg": "chunk done", "set": "mono", "chunk": 175, "games": 200, "failed": 0, "evals": 287560, "seconds": 164.7, "evals_per_s": 1745.6, "progress": "174/305", "eta_min": 481.6}
+{"time_utc": "2026-10-04T21:48:47+00:00", "msg": "chunk done", "set": "mono", "chunk": 176, "games": 200, "failed": 0, "evals": 322280, "seconds": 183.0, "evals_per_s": 1761.0, "progress": "175/305", "eta_min": 477.4}
+{"time_utc": "2026-10-04T21:51:43+00:00", "msg": "chunk done", "set": "mono", "chunk": 177, "games": 200, "failed": 0, "evals": 307146, "seconds": 175.8, "evals_per_s": 1747.4, "progress": "176/305", "eta_min": 473.2}
+{"time_utc": "2026-10-04T21:54:58+00:00", "msg": "chunk done", "set": "mono", "chunk": 178, "games": 200, "failed": 0, "evals": 339556, "seconds": 194.7, "evals_per_s": 1744.4, "progress": "177/305", "eta_min": 469.2}
+{"time_utc": "2026-10-04T21:57:55+00:00", "msg": "chunk done", "set": "mono", "chunk": 179, "games": 200, "failed": 0, "evals": 307412, "seconds": 176.7, "evals_per_s": 1739.4, "progress": "178/305", "eta_min": 465.1}
+{"time_utc": "2026-10-04T22:00:44+00:00", "msg": "chunk done", "set": "mono", "chunk": 180, "games": 200, "failed": 0, "evals": 295176, "seconds": 169.5, "evals_per_s": 1741.8, "progress": "179/305", "eta_min": 460.8}
+{"time_utc": "2026-10-04T22:03:36+00:00", "msg": "chunk done", "set": "mono", "chunk": 181, "games": 200, "failed": 0, "evals": 298046, "seconds": 171.6, "evals_per_s": 1737.3, "progress": "180/305", "eta_min": 456.6}
+{"time_utc": "2026-10-04T22:06:38+00:00", "msg": "chunk done", "set": "mono", "chunk": 182, "games": 200, "failed": 0, "evals": 317450, "seconds": 182.1, "evals_per_s": 1743.0, "progress": "181/305", "eta_min": 452.5}
+{"time_utc": "2026-10-04T22:09:31+00:00", "msg": "chunk done", "set": "mono", "chunk": 183, "games": 200, "failed": 0, "evals": 305088, "seconds": 173.6, "evals_per_s": 1757.0, "progress": "182/305", "eta_min": 448.4}
+{"time_utc": "2026-10-04T22:12:35+00:00", "msg": "chunk done", "set": "mono", "chunk": 184, "games": 200, "failed": 0, "evals": 323652, "seconds": 183.7, "evals_per_s": 1761.5, "progress": "183/305", "eta_min": 444.3}
+{"time_utc": "2026-10-04T22:15:46+00:00", "msg": "chunk done", "set": "mono", "chunk": 185, "games": 200, "failed": 0, "evals": 333830, "seconds": 191.1, "evals_per_s": 1746.6, "progress": "184/305", "eta_min": 440.4}
+{"time_utc": "2026-10-04T22:19:03+00:00", "msg": "chunk done", "set": "mono", "chunk": 186, "games": 200, "failed": 0, "evals": 341040, "seconds": 196.5, "evals_per_s": 1736.0, "progress": "185/305", "eta_min": 436.5}
+{"time_utc": "2026-10-04T22:21:43+00:00", "msg": "chunk done", "set": "mono", "chunk": 187, "games": 200, "failed": 0, "evals": 279300, "seconds": 160.0, "evals_per_s": 1745.8, "progress": "186/305", "eta_min": 432.2}
+{"time_utc": "2026-10-04T22:24:17+00:00", "msg": "chunk done", "set": "mono", "chunk": 188, "games": 200, "failed": 0, "evals": 272006, "seconds": 154.0, "evals_per_s": 1765.8, "progress": "187/305", "eta_min": 427.9}
+{"time_utc": "2026-10-04T22:26:52+00:00", "msg": "chunk done", "set": "mono", "chunk": 189, "games": 200, "failed": 0, "evals": 271222, "seconds": 155.8, "evals_per_s": 1741.4, "progress": "188/305", "eta_min": 423.7}
+{"time_utc": "2026-10-04T22:29:27+00:00", "msg": "chunk done", "set": "mono", "chunk": 190, "games": 200, "failed": 0, "evals": 272272, "seconds": 154.6, "evals_per_s": 1761.4, "progress": "189/305", "eta_min": 419.4}
+{"time_utc": "2026-10-04T22:32:23+00:00", "msg": "chunk done", "set": "mono", "chunk": 191, "games": 200, "failed": 0, "evals": 308728, "seconds": 176.0, "evals_per_s": 1754.0, "progress": "190/305", "eta_min": 415.4}
+{"time_utc": "2026-10-04T22:35:30+00:00", "msg": "chunk done", "set": "mono", "chunk": 192, "games": 200, "failed": 0, "evals": 326466, "seconds": 186.8, "evals_per_s": 1747.5, "progress": "191/305", "eta_min": 411.5}
+{"time_utc": "2026-10-04T22:38:38+00:00", "msg": "chunk done", "set": "mono", "chunk": 193, "games": 200, "failed": 0, "evals": 326760, "seconds": 187.9, "evals_per_s": 1739.3, "progress": "192/305", "eta_min": 407.6}
+{"time_utc": "2026-10-04T22:41:36+00:00", "msg": "chunk done", "set": "mono", "chunk": 194, "games": 200, "failed": 0, "evals": 311234, "seconds": 178.1, "evals_per_s": 1747.2, "progress": "193/305", "eta_min": 403.6}
+{"time_utc": "2026-10-04T22:44:40+00:00", "msg": "chunk done", "set": "mono", "chunk": 195, "games": 200, "failed": 0, "evals": 322294, "seconds": 184.2, "evals_per_s": 1749.9, "progress": "194/305", "eta_min": 399.7}
+{"time_utc": "2026-10-04T22:47:41+00:00", "msg": "chunk done", "set": "mono", "chunk": 196, "games": 200, "failed": 0, "evals": 314202, "seconds": 180.6, "evals_per_s": 1739.8, "progress": "195/305", "eta_min": 395.8}
+{"time_utc": "2026-10-04T22:50:33+00:00", "msg": "chunk done", "set": "mono", "chunk": 197, "games": 200, "failed": 0, "evals": 301448, "seconds": 171.9, "evals_per_s": 1754.1, "progress": "196/305", "eta_min": 391.8}
+{"time_utc": "2026-10-04T22:53:30+00:00", "msg": "chunk done", "set": "mono", "chunk": 198, "games": 200, "failed": 0, "evals": 310184, "seconds": 177.6, "evals_per_s": 1746.9, "progress": "197/305", "eta_min": 387.8}
+{"time_utc": "2026-10-04T22:56:30+00:00", "msg": "chunk done", "set": "mono", "chunk": 199, "games": 200, "failed": 0, "evals": 312620, "seconds": 179.9, "evals_per_s": 1738.2, "progress": "198/305", "eta_min": 383.9}
+{"time_utc": "2026-10-04T22:59:35+00:00", "msg": "chunk done", "set": "mono", "chunk": 200, "games": 200, "failed": 0, "evals": 325108, "seconds": 184.7, "evals_per_s": 1760.1, "progress": "199/305", "eta_min": 380.0}
+{"time_utc": "2026-10-04T23:02:40+00:00", "msg": "chunk done", "set": "mono", "chunk": 201, "games": 200, "failed": 0, "evals": 323386, "seconds": 185.7, "evals_per_s": 1741.7, "progress": "200/305", "eta_min": 376.2}
+{"time_utc": "2026-10-04T23:05:48+00:00", "msg": "chunk done", "set": "mono", "chunk": 202, "games": 200, "failed": 0, "evals": 328832, "seconds": 187.6, "evals_per_s": 1752.9, "progress": "201/305", "eta_min": 372.4}
+{"time_utc": "2026-10-04T23:08:42+00:00", "msg": "chunk done", "set": "mono", "chunk": 203, "games": 200, "failed": 0, "evals": 303590, "seconds": 174.5, "evals_per_s": 1739.6, "progress": "202/305", "eta_min": 368.5}
+{"time_utc": "2026-10-04T23:11:40+00:00", "msg": "chunk done", "set": "mono", "chunk": 204, "games": 200, "failed": 0, "evals": 309862, "seconds": 176.8, "evals_per_s": 1753.0, "progress": "203/305", "eta_min": 364.6}
+{"time_utc": "2026-10-04T23:14:42+00:00", "msg": "chunk done", "set": "mono", "chunk": 205, "games": 200, "failed": 0, "evals": 319228, "seconds": 181.4, "evals_per_s": 1760.2, "progress": "204/305", "eta_min": 360.7}
+{"time_utc": "2026-10-04T23:17:38+00:00", "msg": "chunk done", "set": "mono", "chunk": 206, "games": 200, "failed": 0, "evals": 305158, "seconds": 176.1, "evals_per_s": 1732.7, "progress": "205/305", "eta_min": 356.8}
+{"time_utc": "2026-10-04T23:20:29+00:00", "msg": "chunk done", "set": "mono", "chunk": 207, "games": 200, "failed": 0, "evals": 300020, "seconds": 171.0, "evals_per_s": 1754.4, "progress": "206/305", "eta_min": 352.9}
+{"time_utc": "2026-10-04T23:23:20+00:00", "msg": "chunk done", "set": "mono", "chunk": 208, "games": 200, "failed": 0, "evals": 301644, "seconds": 171.6, "evals_per_s": 1757.8, "progress": "207/305", "eta_min": 349.0}
+{"time_utc": "2026-10-04T23:26:06+00:00", "msg": "chunk done", "set": "mono", "chunk": 209, "games": 200, "failed": 0, "evals": 289282, "seconds": 165.4, "evals_per_s": 1749.0, "progress": "208/305", "eta_min": 345.1}
+{"time_utc": "2026-10-04T23:28:51+00:00", "msg": "chunk done", "set": "mono", "chunk": 210, "games": 200, "failed": 0, "evals": 290920, "seconds": 164.8, "evals_per_s": 1764.8, "progress": "209/305", "eta_min": 341.2}
+{"time_utc": "2026-10-04T23:31:40+00:00", "msg": "chunk done", "set": "mono", "chunk": 211, "games": 200, "failed": 0, "evals": 294966, "seconds": 169.3, "evals_per_s": 1742.8, "progress": "210/305", "eta_min": 337.3}
+{"time_utc": "2026-10-04T23:34:32+00:00", "msg": "chunk done", "set": "mono", "chunk": 212, "games": 200, "failed": 0, "evals": 302274, "seconds": 172.3, "evals_per_s": 1754.4, "progress": "211/305", "eta_min": 333.4}
+{"time_utc": "2026-10-04T23:37:22+00:00", "msg": "chunk done", "set": "mono", "chunk": 213, "games": 200, "failed": 0, "evals": 293832, "seconds": 169.3, "evals_per_s": 1735.8, "progress": "212/305", "eta_min": 329.6}
+{"time_utc": "2026-10-04T23:40:03+00:00", "msg": "chunk done", "set": "mono", "chunk": 214, "games": 200, "failed": 0, "evals": 280406, "seconds": 161.0, "evals_per_s": 1741.5, "progress": "213/305", "eta_min": 325.6}
+{"time_utc": "2026-10-04T23:42:49+00:00", "msg": "chunk done", "set": "mono", "chunk": 215, "games": 200, "failed": 0, "evals": 289562, "seconds": 166.5, "evals_per_s": 1739.6, "progress": "214/305", "eta_min": 321.8}
+{"time_utc": "2026-10-04T23:45:36+00:00", "msg": "chunk done", "set": "mono", "chunk": 216, "games": 200, "failed": 0, "evals": 291816, "seconds": 166.6, "evals_per_s": 1751.7, "progress": "215/305", "eta_min": 317.9}
+{"time_utc": "2026-10-04T23:48:19+00:00", "msg": "chunk done", "set": "mono", "chunk": 217, "games": 200, "failed": 0, "evals": 284564, "seconds": 163.4, "evals_per_s": 1741.3, "progress": "216/305", "eta_min": 314.1}
+{"time_utc": "2026-10-04T23:51:00+00:00", "msg": "chunk done", "set": "mono", "chunk": 218, "games": 200, "failed": 0, "evals": 283654, "seconds": 161.3, "evals_per_s": 1758.4, "progress": "217/305", "eta_min": 310.2}
+{"time_utc": "2026-10-04T23:54:23+00:00", "msg": "chunk done", "set": "mono", "chunk": 219, "games": 200, "failed": 0, "evals": 355698, "seconds": 203.0, "evals_per_s": 1751.8, "progress": "218/305", "eta_min": 306.6}
+{"time_utc": "2026-10-04T23:57:27+00:00", "msg": "chunk done", "set": "mono", "chunk": 220, "games": 200, "failed": 0, "evals": 319970, "seconds": 183.2, "evals_per_s": 1746.7, "progress": "219/305", "eta_min": 302.9}
+{"time_utc": "2026-10-05T00:00:15+00:00", "msg": "chunk done", "set": "mono", "chunk": 221, "games": 200, "failed": 0, "evals": 296506, "seconds": 168.8, "evals_per_s": 1757.1, "progress": "220/305", "eta_min": 299.1}
+{"time_utc": "2026-10-05T00:03:15+00:00", "msg": "chunk done", "set": "mono", "chunk": 222, "games": 200, "failed": 0, "evals": 312732, "seconds": 179.5, "evals_per_s": 1741.8, "progress": "221/305", "eta_min": 295.4}
+{"time_utc": "2026-10-05T00:06:12+00:00", "msg": "chunk done", "set": "mono", "chunk": 223, "games": 200, "failed": 0, "evals": 309232, "seconds": 177.1, "evals_per_s": 1745.7, "progress": "222/305", "eta_min": 291.7}
+{"time_utc": "2026-10-05T00:09:08+00:00", "msg": "chunk done", "set": "mono", "chunk": 224, "games": 200, "failed": 0, "evals": 305480, "seconds": 175.7, "evals_per_s": 1738.6, "progress": "223/305", "eta_min": 287.9}
+{"time_utc": "2026-10-05T00:12:02+00:00", "msg": "chunk done", "set": "mono", "chunk": 225, "games": 200, "failed": 0, "evals": 306278, "seconds": 173.9, "evals_per_s": 1761.1, "progress": "224/305", "eta_min": 284.2}
+{"time_utc": "2026-10-05T00:15:00+00:00", "msg": "chunk done", "set": "mono", "chunk": 226, "games": 200, "failed": 0, "evals": 310912, "seconds": 178.1, "evals_per_s": 1745.6, "progress": "225/305", "eta_min": 280.5}
+{"time_utc": "2026-10-05T00:18:14+00:00", "msg": "chunk done", "set": "mono", "chunk": 227, "games": 200, "failed": 0, "evals": 337638, "seconds": 194.5, "evals_per_s": 1736.1, "progress": "226/305", "eta_min": 276.9}
+{"time_utc": "2026-10-05T00:21:15+00:00", "msg": "chunk done", "set": "mono", "chunk": 228, "games": 200, "failed": 0, "evals": 315882, "seconds": 181.1, "evals_per_s": 1743.9, "progress": "227/305", "eta_min": 273.2}
+{"time_utc": "2026-10-05T00:24:23+00:00", "msg": "chunk done", "set": "mono", "chunk": 229, "games": 200, "failed": 0, "evals": 328006, "seconds": 188.0, "evals_per_s": 1744.4, "progress": "228/305", "eta_min": 269.6}
+{"time_utc": "2026-10-05T00:27:18+00:00", "msg": "chunk done", "set": "mono", "chunk": 230, "games": 200, "failed": 0, "evals": 304416, "seconds": 174.1, "evals_per_s": 1748.6, "progress": "229/305", "eta_min": 265.9}
+{"time_utc": "2026-10-05T00:30:06+00:00", "msg": "chunk done", "set": "mono", "chunk": 231, "games": 200, "failed": 0, "evals": 296828, "seconds": 168.2, "evals_per_s": 1764.7, "progress": "230/305", "eta_min": 262.2}
+{"time_utc": "2026-10-05T00:33:10+00:00", "msg": "chunk done", "set": "mono", "chunk": 232, "games": 200, "failed": 0, "evals": 321342, "seconds": 184.3, "evals_per_s": 1743.3, "progress": "231/305", "eta_min": 258.5}
+{"time_utc": "2026-10-05T00:35:59+00:00", "msg": "chunk done", "set": "mono", "chunk": 233, "games": 200, "failed": 0, "evals": 295316, "seconds": 168.8, "evals_per_s": 1749.6, "progress": "232/305", "eta_min": 254.8}
+{"time_utc": "2026-10-05T00:39:10+00:00", "msg": "chunk done", "set": "mono", "chunk": 234, "games": 200, "failed": 0, "evals": 332654, "seconds": 191.0, "evals_per_s": 1742.0, "progress": "233/305", "eta_min": 251.2}
+{"time_utc": "2026-10-05T00:42:08+00:00", "msg": "chunk done", "set": "mono", "chunk": 235, "games": 200, "failed": 0, "evals": 307510, "seconds": 177.7, "evals_per_s": 1730.1, "progress": "234/305", "eta_min": 247.6}
+{"time_utc": "2026-10-05T00:45:03+00:00", "msg": "chunk done", "set": "mono", "chunk": 236, "games": 200, "failed": 0, "evals": 307286, "seconds": 175.4, "evals_per_s": 1751.5, "progress": "235/305", "eta_min": 243.9}
+{"time_utc": "2026-10-05T00:47:49+00:00", "msg": "chunk done", "set": "mono", "chunk": 237, "games": 200, "failed": 0, "evals": 291942, "seconds": 166.1, "evals_per_s": 1757.2, "progress": "236/305", "eta_min": 240.3}
+{"time_utc": "2026-10-05T00:50:46+00:00", "msg": "chunk done", "set": "mono", "chunk": 238, "games": 200, "failed": 0, "evals": 308112, "seconds": 177.2, "evals_per_s": 1739.2, "progress": "237/305", "eta_min": 236.6}
+{"time_utc": "2026-10-05T00:54:09+00:00", "msg": "chunk done", "set": "mono", "chunk": 239, "games": 200, "failed": 0, "evals": 353836, "seconds": 202.3, "evals_per_s": 1749.1, "progress": "238/305", "eta_min": 233.1}
+{"time_utc": "2026-10-05T00:57:09+00:00", "msg": "chunk done", "set": "mono", "chunk": 240, "games": 200, "failed": 0, "evals": 317380, "seconds": 180.6, "evals_per_s": 1757.7, "progress": "239/305", "eta_min": 229.5}
+{"time_utc": "2026-10-05T00:59:59+00:00", "msg": "chunk done", "set": "mono", "chunk": 241, "games": 200, "failed": 0, "evals": 296282, "seconds": 169.8, "evals_per_s": 1745.0, "progress": "240/305", "eta_min": 225.8}
+{"time_utc": "2026-10-05T01:02:52+00:00", "msg": "chunk done", "set": "mono", "chunk": 242, "games": 200, "failed": 0, "evals": 301294, "seconds": 173.2, "evals_per_s": 1740.0, "progress": "241/305", "eta_min": 222.2}
+{"time_utc": "2026-10-05T01:05:43+00:00", "msg": "chunk done", "set": "mono", "chunk": 243, "games": 200, "failed": 0, "evals": 297906, "seconds": 171.2, "evals_per_s": 1740.6, "progress": "242/305", "eta_min": 218.6}
+{"time_utc": "2026-10-05T01:08:40+00:00", "msg": "chunk done", "set": "mono", "chunk": 244, "games": 200, "failed": 0, "evals": 310212, "seconds": 176.3, "evals_per_s": 1759.8, "progress": "243/305", "eta_min": 215.0}
+{"time_utc": "2026-10-05T01:11:30+00:00", "msg": "chunk done", "set": "mono", "chunk": 245, "games": 200, "failed": 0, "evals": 299810, "seconds": 169.9, "evals_per_s": 1764.6, "progress": "244/305", "eta_min": 211.3}
+{"time_utc": "2026-10-05T01:14:21+00:00", "msg": "chunk done", "set": "mono", "chunk": 246, "games": 200, "failed": 0, "evals": 299222, "seconds": 171.3, "evals_per_s": 1746.6, "progress": "245/305", "eta_min": 207.7}
+{"time_utc": "2026-10-05T01:17:15+00:00", "msg": "chunk done", "set": "mono", "chunk": 247, "games": 200, "failed": 0, "evals": 304416, "seconds": 173.8, "evals_per_s": 1751.5, "progress": "246/305", "eta_min": 204.1}
+{"time_utc": "2026-10-05T01:20:13+00:00", "msg": "chunk done", "set": "mono", "chunk": 248, "games": 200, "failed": 0, "evals": 307020, "seconds": 177.6, "evals_per_s": 1728.9, "progress": "247/305", "eta_min": 200.6}
+{"time_utc": "2026-10-05T01:23:15+00:00", "msg": "chunk done", "set": "mono", "chunk": 249, "games": 200, "failed": 0, "evals": 317968, "seconds": 181.9, "evals_per_s": 1747.9, "progress": "248/305", "eta_min": 197.0}
+{"time_utc": "2026-10-05T01:26:13+00:00", "msg": "chunk done", "set": "mono", "chunk": 250, "games": 200, "failed": 0, "evals": 310394, "seconds": 177.8, "evals_per_s": 1745.6, "progress": "249/305", "eta_min": 193.4}
+{"time_utc": "2026-10-05T01:29:15+00:00", "msg": "chunk done", "set": "mono", "chunk": 251, "games": 200, "failed": 0, "evals": 319186, "seconds": 182.1, "evals_per_s": 1752.7, "progress": "250/305", "eta_min": 189.9}
+{"time_utc": "2026-10-05T01:32:09+00:00", "msg": "chunk done", "set": "mono", "chunk": 252, "games": 200, "failed": 0, "evals": 302456, "seconds": 174.5, "evals_per_s": 1733.3, "progress": "251/305", "eta_min": 186.3}
+{"time_utc": "2026-10-05T01:35:12+00:00", "msg": "chunk done", "set": "mono", "chunk": 253, "games": 200, "failed": 0, "evals": 318318, "seconds": 183.1, "evals_per_s": 1738.6, "progress": "252/305", "eta_min": 182.8}
+{"time_utc": "2026-10-05T01:38:01+00:00", "msg": "chunk done", "set": "mono", "chunk": 254, "games": 200, "failed": 0, "evals": 295764, "seconds": 168.3, "evals_per_s": 1757.5, "progress": "253/305", "eta_min": 179.2}
+{"time_utc": "2026-10-05T01:40:59+00:00", "msg": "chunk done", "set": "mono", "chunk": 255, "games": 200, "failed": 0, "evals": 310730, "seconds": 178.5, "evals_per_s": 1741.2, "progress": "254/305", "eta_min": 175.7}
+{"time_utc": "2026-10-05T01:43:54+00:00", "msg": "chunk done", "set": "mono", "chunk": 256, "games": 200, "failed": 0, "evals": 306586, "seconds": 175.3, "evals_per_s": 1748.7, "progress": "255/305", "eta_min": 172.1}
+{"time_utc": "2026-10-05T01:46:51+00:00", "msg": "chunk done", "set": "mono", "chunk": 257, "games": 200, "failed": 0, "evals": 306740, "seconds": 175.8, "evals_per_s": 1744.4, "progress": "256/305", "eta_min": 168.6}
+{"time_utc": "2026-10-05T01:49:46+00:00", "msg": "chunk done", "set": "mono", "chunk": 258, "games": 200, "failed": 0, "evals": 303380, "seconds": 174.7, "evals_per_s": 1736.9, "progress": "257/305", "eta_min": 165.0}
+{"time_utc": "2026-10-05T01:52:48+00:00", "msg": "chunk done", "set": "mono", "chunk": 259, "games": 200, "failed": 0, "evals": 321342, "seconds": 182.2, "evals_per_s": 1763.9, "progress": "258/305", "eta_min": 161.5}
+{"time_utc": "2026-10-05T01:55:54+00:00", "msg": "chunk done", "set": "mono", "chunk": 260, "games": 200, "failed": 0, "evals": 326676, "seconds": 186.0, "evals_per_s": 1756.1, "progress": "259/305", "eta_min": 158.0}
+{"time_utc": "2026-10-05T01:59:04+00:00", "msg": "chunk done", "set": "mono", "chunk": 261, "games": 200, "failed": 0, "evals": 333438, "seconds": 190.4, "evals_per_s": 1750.9, "progress": "260/305", "eta_min": 154.6}
+{"time_utc": "2026-10-05T02:01:48+00:00", "msg": "chunk done", "set": "mono", "chunk": 262, "games": 200, "failed": 0, "evals": 282366, "seconds": 163.8, "evals_per_s": 1723.6, "progress": "261/305", "eta_min": 151.0}
+{"time_utc": "2026-10-05T02:04:41+00:00", "msg": "chunk done", "set": "mono", "chunk": 263, "games": 200, "failed": 0, "evals": 302708, "seconds": 173.1, "evals_per_s": 1749.1, "progress": "262/305", "eta_min": 147.5}
+{"time_utc": "2026-10-05T02:07:32+00:00", "msg": "chunk done", "set": "mono", "chunk": 264, "games": 200, "failed": 0, "evals": 297094, "seconds": 170.6, "evals_per_s": 1741.0, "progress": "263/305", "eta_min": 144.0}
+{"time_utc": "2026-10-05T02:10:15+00:00", "msg": "chunk done", "set": "mono", "chunk": 265, "games": 200, "failed": 0, "evals": 283626, "seconds": 163.3, "evals_per_s": 1737.2, "progress": "264/305", "eta_min": 140.4}
+{"time_utc": "2026-10-05T02:13:24+00:00", "msg": "chunk done", "set": "mono", "chunk": 266, "games": 200, "failed": 0, "evals": 327082, "seconds": 188.3, "evals_per_s": 1737.4, "progress": "265/305", "eta_min": 137.0}
+{"time_utc": "2026-10-05T02:16:31+00:00", "msg": "chunk done", "set": "mono", "chunk": 267, "games": 200, "failed": 0, "evals": 327250, "seconds": 187.0, "evals_per_s": 1750.0, "progress": "266/305", "eta_min": 133.5}
+{"time_utc": "2026-10-05T02:19:28+00:00", "msg": "chunk done", "set": "mono", "chunk": 268, "games": 200, "failed": 0, "evals": 307580, "seconds": 177.1, "evals_per_s": 1736.7, "progress": "267/305", "eta_min": 130.0}
+{"time_utc": "2026-10-05T02:22:25+00:00", "msg": "chunk done", "set": "mono", "chunk": 269, "games": 200, "failed": 0, "evals": 308756, "seconds": 177.3, "evals_per_s": 1741.7, "progress": "268/305", "eta_min": 126.5}
+{"time_utc": "2026-10-05T02:25:21+00:00", "msg": "chunk done", "set": "mono", "chunk": 270, "games": 200, "failed": 0, "evals": 305326, "seconds": 175.8, "evals_per_s": 1736.4, "progress": "269/305", "eta_min": 123.0}
+{"time_utc": "2026-10-05T02:28:15+00:00", "msg": "chunk done", "set": "mono", "chunk": 271, "games": 200, "failed": 0, "evals": 302638, "seconds": 173.7, "evals_per_s": 1742.0, "progress": "270/305", "eta_min": 119.5}
+{"time_utc": "2026-10-05T02:31:09+00:00", "msg": "chunk done", "set": "mono", "chunk": 272, "games": 200, "failed": 0, "evals": 304332, "seconds": 174.7, "evals_per_s": 1742.3, "progress": "271/305", "eta_min": 116.1}
+{"time_utc": "2026-10-05T02:33:58+00:00", "msg": "chunk done", "set": "mono", "chunk": 273, "games": 200, "failed": 0, "evals": 295134, "seconds": 168.5, "evals_per_s": 1751.3, "progress": "272/305", "eta_min": 112.6}
+{"time_utc": "2026-10-05T02:36:47+00:00", "msg": "chunk done", "set": "mono", "chunk": 274, "games": 200, "failed": 0, "evals": 295694, "seconds": 169.5, "evals_per_s": 1744.5, "progress": "273/305", "eta_min": 109.1}
+{"time_utc": "2026-10-05T02:39:39+00:00", "msg": "chunk done", "set": "mono", "chunk": 275, "games": 200, "failed": 0, "evals": 300216, "seconds": 171.7, "evals_per_s": 1748.1, "progress": "274/305", "eta_min": 105.6}
+{"time_utc": "2026-10-05T02:42:06+00:00", "msg": "chunk done", "set": "mono", "chunk": 276, "games": 200, "failed": 0, "evals": 256564, "seconds": 147.2, "evals_per_s": 1743.1, "progress": "275/305", "eta_min": 102.1}
+{"time_utc": "2026-10-05T02:44:54+00:00", "msg": "chunk done", "set": "mono", "chunk": 277, "games": 200, "failed": 0, "evals": 292684, "seconds": 168.1, "evals_per_s": 1740.9, "progress": "276/305", "eta_min": 98.6}
+{"time_utc": "2026-10-05T02:47:50+00:00", "msg": "chunk done", "set": "mono", "chunk": 278, "games": 200, "failed": 0, "evals": 307132, "seconds": 176.0, "evals_per_s": 1745.4, "progress": "277/305", "eta_min": 95.2}
+{"time_utc": "2026-10-05T02:50:41+00:00", "msg": "chunk done", "set": "mono", "chunk": 279, "games": 200, "failed": 0, "evals": 297024, "seconds": 171.1, "evals_per_s": 1736.5, "progress": "278/305", "eta_min": 91.7}
+{"time_utc": "2026-10-05T02:53:26+00:00", "msg": "chunk done", "set": "mono", "chunk": 280, "games": 200, "failed": 0, "evals": 288624, "seconds": 164.5, "evals_per_s": 1754.9, "progress": "279/305", "eta_min": 88.3}
+{"time_utc": "2026-10-05T02:56:11+00:00", "msg": "chunk done", "set": "mono", "chunk": 281, "games": 200, "failed": 0, "evals": 286608, "seconds": 164.8, "evals_per_s": 1739.1, "progress": "280/305", "eta_min": 84.8}
+{"time_utc": "2026-10-05T02:59:06+00:00", "msg": "chunk done", "set": "mono", "chunk": 282, "games": 200, "failed": 0, "evals": 302946, "seconds": 175.0, "evals_per_s": 1730.9, "progress": "281/305", "eta_min": 81.4}
+{"time_utc": "2026-10-05T03:02:12+00:00", "msg": "chunk done", "set": "mono", "chunk": 283, "games": 200, "failed": 0, "evals": 325808, "seconds": 186.1, "evals_per_s": 1750.8, "progress": "282/305", "eta_min": 78.0}
+{"time_utc": "2026-10-05T03:05:12+00:00", "msg": "chunk done", "set": "mono", "chunk": 284, "games": 200, "failed": 0, "evals": 314930, "seconds": 180.4, "evals_per_s": 1745.4, "progress": "283/305", "eta_min": 74.6}
+{"time_utc": "2026-10-05T03:07:57+00:00", "msg": "chunk done", "set": "mono", "chunk": 285, "games": 200, "failed": 0, "evals": 285474, "seconds": 164.8, "evals_per_s": 1731.8, "progress": "284/305", "eta_min": 71.1}
+{"time_utc": "2026-10-05T03:10:49+00:00", "msg": "chunk done", "set": "mono", "chunk": 286, "games": 200, "failed": 0, "evals": 299530, "seconds": 171.3, "evals_per_s": 1748.4, "progress": "285/305", "eta_min": 67.7}
+{"time_utc": "2026-10-05T03:13:42+00:00", "msg": "chunk done", "set": "mono", "chunk": 287, "games": 200, "failed": 0, "evals": 302246, "seconds": 173.3, "evals_per_s": 1744.5, "progress": "286/305", "eta_min": 64.3}
+{"time_utc": "2026-10-05T03:16:21+00:00", "msg": "chunk done", "set": "mono", "chunk": 288, "games": 200, "failed": 0, "evals": 272272, "seconds": 158.9, "evals_per_s": 1714.0, "progress": "287/305", "eta_min": 60.9}
+{"time_utc": "2026-10-05T03:19:29+00:00", "msg": "chunk done", "set": "mono", "chunk": 289, "games": 200, "failed": 0, "evals": 327418, "seconds": 188.4, "evals_per_s": 1737.6, "progress": "288/305", "eta_min": 57.5}
+{"time_utc": "2026-10-05T03:22:26+00:00", "msg": "chunk done", "set": "mono", "chunk": 290, "games": 200, "failed": 0, "evals": 305970, "seconds": 176.5, "evals_per_s": 1733.6, "progress": "289/305", "eta_min": 54.1}
+{"time_utc": "2026-10-05T03:25:11+00:00", "msg": "chunk done", "set": "mono", "chunk": 291, "games": 200, "failed": 0, "evals": 283668, "seconds": 165.1, "evals_per_s": 1718.4, "progress": "290/305", "eta_min": 50.6}
+{"time_utc": "2026-10-05T03:27:52+00:00", "msg": "chunk done", "set": "mono", "chunk": 292, "games": 200, "failed": 0, "evals": 276794, "seconds": 161.3, "evals_per_s": 1716.0, "progress": "291/305", "eta_min": 47.2}
+{"time_utc": "2026-10-05T03:30:54+00:00", "msg": "chunk done", "set": "mono", "chunk": 293, "games": 200, "failed": 0, "evals": 310716, "seconds": 182.5, "evals_per_s": 1702.8, "progress": "292/305", "eta_min": 43.8}
+{"time_utc": "2026-10-05T03:33:56+00:00", "msg": "chunk done", "set": "mono", "chunk": 294, "games": 200, "failed": 0, "evals": 315294, "seconds": 181.5, "evals_per_s": 1736.8, "progress": "293/305", "eta_min": 40.5}
+{"time_utc": "2026-10-05T03:37:00+00:00", "msg": "chunk done", "set": "mono", "chunk": 295, "games": 200, "failed": 0, "evals": 319060, "seconds": 184.1, "evals_per_s": 1733.1, "progress": "294/305", "eta_min": 37.1}
+{"time_utc": "2026-10-05T03:40:04+00:00", "msg": "chunk done", "set": "mono", "chunk": 296, "games": 200, "failed": 0, "evals": 316302, "seconds": 184.1, "evals_per_s": 1718.5, "progress": "295/305", "eta_min": 33.7}
+{"time_utc": "2026-10-05T03:43:16+00:00", "msg": "chunk done", "set": "mono", "chunk": 297, "games": 200, "failed": 0, "evals": 328286, "seconds": 191.5, "evals_per_s": 1714.5, "progress": "296/305", "eta_min": 30.3}
+{"time_utc": "2026-10-05T03:46:36+00:00", "msg": "chunk done", "set": "mono", "chunk": 298, "games": 200, "failed": 0, "evals": 338856, "seconds": 200.0, "evals_per_s": 1694.5, "progress": "297/305", "eta_min": 26.9}
+{"time_utc": "2026-10-05T03:50:00+00:00", "msg": "chunk done", "set": "mono", "chunk": 299, "games": 200, "failed": 0, "evals": 345394, "seconds": 204.7, "evals_per_s": 1687.3, "progress": "298/305", "eta_min": 23.6}
+{"time_utc": "2026-10-05T03:53:08+00:00", "msg": "chunk done", "set": "mono", "chunk": 300, "games": 200, "failed": 0, "evals": 325514, "seconds": 187.2, "evals_per_s": 1739.1, "progress": "299/305", "eta_min": 20.2}
+{"time_utc": "2026-10-05T03:56:20+00:00", "msg": "chunk done", "set": "mono", "chunk": 301, "games": 200, "failed": 0, "evals": 333312, "seconds": 192.7, "evals_per_s": 1730.1, "progress": "300/305", "eta_min": 16.8}
+{"time_utc": "2026-10-05T03:59:18+00:00", "msg": "chunk done", "set": "mono", "chunk": 302, "games": 200, "failed": 0, "evals": 307972, "seconds": 177.4, "evals_per_s": 1736.1, "progress": "301/305", "eta_min": 13.5}
+{"time_utc": "2026-10-05T04:02:37+00:00", "msg": "chunk done", "set": "mono", "chunk": 303, "games": 200, "failed": 0, "evals": 338464, "seconds": 199.0, "evals_per_s": 1700.7, "progress": "302/305", "eta_min": 10.1}
+{"time_utc": "2026-10-05T04:05:25+00:00", "msg": "chunk done", "set": "mono", "chunk": 304, "games": 200, "failed": 0, "evals": 285656, "seconds": 167.7, "evals_per_s": 1702.9, "progress": "303/305", "eta_min": 6.7}
+{"time_utc": "2026-10-05T04:08:29+00:00", "msg": "chunk done", "set": "mono", "chunk": 305, "games": 200, "failed": 0, "evals": 303254, "seconds": 184.8, "evals_per_s": 1641.0, "progress": "304/305", "eta_min": 3.4}
+{"time_utc": "2026-10-05T04:10:49+00:00", "msg": "chunk done", "set": "mono", "chunk": 306, "games": 156, "failed": 0, "evals": 231252, "seconds": 139.5, "evals_per_s": 1657.2, "progress": "305/305", "eta_min": 0.0}
+{"time_utc": "2026-10-05T04:10:49+00:00", "msg": "run end", "set": "mono", "chunks": 305, "evals": 93842546, "seconds": 61483.5, "stopped": null}
+mono rc=0 Mon Oct  5 12:10:58     2026
+{
+ "bank": {
+  "games": 11813,
+  "chunks": 60,
+  "chunks_present": 60
+ },
+ "mono": {
+  "games": 61356,
+  "chunks": 307,
+  "chunks_present": 307
+ },
+ "fitmap": {
+  "games": 3000,
+  "chunks": 15,
+  "chunks_present": 15
+ }
+}
+mapping side 0: lambda 0.0001, CV {'logloss': 1.7571755879185869, 'top1': 0.331, 'rule_b_score_per_game': 0.47221560135103385}
+inputs: fit 25400, eval 127200, single-colour 120544 questions; 73556 inner games
+Q02: inner eval rank-balanced 0.6101 (4s)
+Q02+HS: inner eval rank-balanced 0.6243 (6s)
+R20+HS: inner eval rank-balanced 0.6050 (2s)
+{
+ "G1_delta": 0.014154061529423334,
+ "G1_passed": true,
+ "G2_ci95": [
+  0.004729748170068845,
+  0.023937551131530375
+ ],
+ "G2_passed": true,
+ "question_mean_diff": 0.012494963827849034,
+ "passed": true,
+ "mono": {
+  "coverage": "120544/120544 questions",
+  "rank_balanced_difference": 0.015409749395039474,
+  "ci95": [
+   0.009536342860068294,
+   0.0210199429984344
+  ],
+  "by_colour": {
+   "B": 0.01573619639273005,
+   "W": 0.01517872883713789
+  },
+  "passed": true,
+  "complete": true
+ }
+}
+-> D:\AI-Portfolio\competitions\aicup2026-go\results\prereg07\explore\pilot_humansl\pilot_fuse_report.json
+fuse rc=0 Mon Oct  5 12:11:50     2026
+launcher end Mon Oct  5 12:11:50     2026

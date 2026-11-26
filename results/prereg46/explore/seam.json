@@ -1,0 +1,211 @@
+{
+ "format": "c10-prereg46 seam v1",
+ "base": {
+  "tune": "results/prereg43/explore/tune.json",
+  "eval": "results/prereg43/explore/eval.json",
+  "tune_sha256_lf": "217d50ce637c76022a127881ef9620090c0fcde33998b7a1220fb0e9b655e112",
+  "eval_sha256_lf": "726670f9034de9129d7dcdb7497fe9d76fd1efc68734d6dffb31f1b13d7cabe7",
+  "c_star": {
+   "label": "S0",
+   "members": [
+    [
+     "S0",
+     "raw"
+    ]
+   ],
+   "ckpt_sha256": "49c1c8f10c927922ca9f3ab3f7d2aaa37a24ba852d6acf77d3042ce1fd495939"
+  },
+  "cfg": {
+   "gnorm": true,
+   "pool_w": "mean",
+   "centre_colour": false,
+   "whiten": {
+    "lam": 0.7,
+    "lda": null
+   },
+   "sim": "proto",
+   "alpha": null,
+   "pair": null,
+   "krecip": null,
+   "aqe": null,
+   "qsmooth": null,
+   "wE": 8,
+   "gmul": null,
+   "rowz": false,
+   "norm": [
+    "csls",
+    10
+   ]
+  },
+  "p1": {
+   "variant": "joint",
+   "pw": "b4",
+   "wP": 8,
+   "csls_k": 20,
+   "mean": 0.7467766213119217
+  },
+  "lda_sha256": "ccc95351f79d8c1ec41e5cebf9891f9312191221cef3f3556fa607839333419f",
+  "d_mean": 0.7467766213119217,
+  "e_mean": 0.681614485210018
+ },
+ "git_head": "10ee784eb2ca2e7fd3a0be6e4195d09afa2a97e3",
+ "rule": "wO = 0, k = 20: M46 per pool == v2-6's recorded per-pool scores, bit for bit",
+ "D": {
+  "per_pool": [
+   0.7823105950724139,
+   0.7252220037188875,
+   0.7260344906896121,
+   0.7520077070878101,
+   0.7445478414109656,
+   0.7618750215306903,
+   0.7413968096245789,
+   0.7582706093769482,
+   0.7529125324170494,
+   0.7231886021902605
+  ],
+  "mean": 0.7467766213119217,
+  "want_mean": 0.7467766213119217,
+  "want_per_pool": [
+   0.7823105950724139,
+   0.7252220037188875,
+   0.7260344906896121,
+   0.7520077070878101,
+   0.7445478414109656,
+   0.7618750215306903,
+   0.7413968096245789,
+   0.7582706093769482,
+   0.7529125324170494,
+   0.7231886021902605
+  ],
+  "per_pool_identical": true,
+  "mean_identical": true,
+  "seam_term": [
+   "b4",
+   "max"
+  ],
+  "side0_loader_identical_to_p39": true,
+  "lda_sha256": "ccc95351f79d8c1ec41e5cebf9891f9312191221cef3f3556fa607839333419f",
+  "vectors": {
+   "file": "data/prereg43/emb_S0/V2_step_320000_raw_tta1/store_D.npz",
+   "file_sha256": "9c7e391103a61ddb4467ae9e00adbd7a7f7295d523716ff312f236db475f33ab"
+  },
+  "opponent_sets": {
+   "D": {
+    "games": 28212,
+    "usable": 28212,
+    "failed": 0,
+    "not_usable": 0
+   }
+  },
+  "questions_without_opponent_vector_per_pool": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "E": {
+  "per_pool": [
+   0.6723171990909081,
+   0.6812309815467404,
+   0.6752483672107893,
+   0.6584984272118416,
+   0.6871906307292522,
+   0.6923425639097067,
+   0.6884563216008647,
+   0.6990337657620119,
+   0.6918484800568032,
+   0.6669003607159064,
+   0.6701342927542611,
+   0.6376135606661355,
+   0.6816643793354703,
+   0.6915435951507954,
+   0.6874777558731808,
+   0.6569526267938298,
+   0.7122430752139635,
+   0.7231134306363401,
+   0.7105010403795308,
+   0.6479788495620267
+  ],
+  "mean": 0.681614485210018,
+  "want_mean": 0.681614485210018,
+  "want_per_pool": [
+   0.6723171990909081,
+   0.6812309815467404,
+   0.6752483672107893,
+   0.6584984272118416,
+   0.6871906307292522,
+   0.6923425639097067,
+   0.6884563216008647,
+   0.6990337657620119,
+   0.6918484800568032,
+   0.6669003607159064,
+   0.6701342927542611,
+   0.6376135606661355,
+   0.6816643793354703,
+   0.6915435951507954,
+   0.6874777558731808,
+   0.6569526267938298,
+   0.7122430752139635,
+   0.7231134306363401,
+   0.7105010403795308,
+   0.6479788495620267
+  ],
+  "per_pool_identical": true,
+  "mean_identical": true,
+  "seam_term": [
+   "b4",
+   "max"
+  ],
+  "side0_loader_identical_to_p39": true,
+  "lda_sha256": "ccc95351f79d8c1ec41e5cebf9891f9312191221cef3f3556fa607839333419f",
+  "vectors": {
+   "file": "data/prereg43/emb_S0/V2_step_320000_raw_tta1/store_E.npz",
+   "file_sha256": "eeb2c856ec63c969d27768a4c42babcdb009cabbb399336dfc1a7f844cca4d3c"
+  },
+  "opponent_sets": {
+   "E": {
+    "games": 56934,
+    "usable": 56934,
+    "failed": 0,
+    "not_usable": 0
+   },
+   "E2": {
+    "games": 35769,
+    "usable": 35769,
+    "failed": 0,
+    "not_usable": 0
+   }
+  },
+  "questions_without_opponent_vector_per_pool": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "peak_working_set_mb": 2209.6,
+ "seconds": 89.3
+}

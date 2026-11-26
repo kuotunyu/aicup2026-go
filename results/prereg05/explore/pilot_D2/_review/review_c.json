@@ -1,0 +1,18 @@
+{
+ "cap0": {
+  "inner_games": 73556,
+  "inner_game_seq_also_in_fit": 0,
+  "inner_game_seq_shared_by_2plus_inner_players": 0,
+  "fit_games": 720307,
+  "fit_distinct": 720307,
+  "inner_distinct": 73556
+ },
+ "cap60": {
+  "inner_games": 73556,
+  "inner_game_seq_also_in_fit": 0,
+  "inner_game_seq_shared_by_2plus_inner_players": 0,
+  "fit_games": 720307,
+  "fit_distinct": 720165,
+  "inner_distinct": 73556
+ }
+}

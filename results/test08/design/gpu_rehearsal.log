@@ -1,0 +1,58 @@
+=== 0 nvidia-smi 2026-10-08T18:22:31Z
+pid, process_name, used_gpu_memory [MiB]
+=== 1 p1 seam (GPU) 2026-10-08T18:22:31Z
+{"time_utc": "2026-10-08T18:22:51+00:00", "msg": "p1 start", "set": "seam", "mode": "dry-run", "games": 400, "chunks": 2, "todo": 2}
+{"time_utc": "2026-10-08T18:24:20+00:00", "msg": "chunk done", "set": "seam", "chunk": 0, "games": 200, "failed": 0, "positions": 46175, "seconds": 78.8, "positions_per_s": 586.2, "progress": "1/2", "eta_min": 1.3}
+{"time_utc": "2026-10-08T18:24:56+00:00", "msg": "chunk done", "set": "seam", "chunk": 1, "games": 200, "failed": 0, "positions": 44138, "seconds": 36.1, "positions_per_s": 1223.8, "progress": "2/2", "eta_min": 0.0}
+p1 seam: 400 games, failed 0, 90313 positions in 115 s (786.5 positions/s) -> D:\c10_t08_reh\gpu\test08\p1\seam_p1.npz
+rc=0
+=== 1b fake public/private + apply (CPU) 2026-10-08T18:25:07Z
+t08 from-val: public rows 0-4787 -> D:\c10_t08_reh\gpu\test08\p1\public_p1.npz (24 chunks in D:\c10_t08_reh\gpu\test08\p1_data\public)
+t08 from-val: private rows 4787-9602 -> D:\c10_t08_reh\gpu\test08\p1\private_p1.npz (25 chunks in D:\c10_t08_reh\gpu\test08\p1_data\private)
+rc=0
+GPU seam: counts equal True, max |d std feature| 0.0 (<= 0.05), max |d lp_P1TO| 0.0 (<= 0.02) -> PASSED
+local seam: 1589 questions, max |dP| 0 (tol 0.0001), rule-B differences 0, byte identical True/True/True (required: True) -> passed
+apply Q08: public 400, private 400 questions -> D:\c10_t08_reh\gpu\test08\rank\submission_rank.csv (sha256 457c85428cb3); check_submission official: OK; rule-B differences on public vs 07 / 04 / R20: 126 / 145 / 167
+(dry-run: nothing is uploaded)
+rc=0
+=== 2 p1 private --max-games 1000 (GPU; chunks off the validation chunk grid) 2026-10-08T18:25:31Z
+{"time_utc": "2026-10-08T18:25:55+00:00", "msg": "p1 start", "set": "private", "mode": "dry-run", "games": 1000, "chunks": 5, "todo": 5}
+{"time_utc": "2026-10-08T18:27:16+00:00", "msg": "chunk done", "set": "private", "chunk": 0, "games": 200, "failed": 0, "positions": 43143, "seconds": 72.2, "positions_per_s": 597.8, "progress": "1/5", "eta_min": 4.8}
+{"time_utc": "2026-10-08T18:27:53+00:00", "msg": "chunk done", "set": "private", "chunk": 1, "games": 200, "failed": 0, "positions": 43675, "seconds": 37.1, "positions_per_s": 1178.8, "progress": "2/5", "eta_min": 2.7}
+{"time_utc": "2026-10-08T18:28:32+00:00", "msg": "chunk done", "set": "private", "chunk": 2, "games": 200, "failed": 0, "positions": 44536, "seconds": 38.6, "positions_per_s": 1153.5, "progress": "3/5", "eta_min": 1.6}
+{"time_utc": "2026-10-08T18:29:11+00:00", "msg": "chunk done", "set": "private", "chunk": 3, "games": 200, "failed": 0, "positions": 45063, "seconds": 39.1, "positions_per_s": 1151.9, "progress": "4/5", "eta_min": 0.8}
+{"time_utc": "2026-10-08T18:29:49+00:00", "msg": "chunk done", "set": "private", "chunk": 4, "games": 200, "failed": 0, "positions": 44668, "seconds": 37.9, "positions_per_s": 1178.5, "progress": "5/5", "eta_min": 0.0}
+p1 private: 1000 games, failed 0, 221085 positions in 225 s (983.3 positions/s) -> D:\c10_t08_reh\gpu_pub\test08\p1\private_p1.npz
+rc=0
+{
+ "games": 1000,
+ "equal": {
+  "failed": true,
+  "counts": true,
+  "n_moves": true,
+  "color": true
+ },
+ "max_abs_std_feature": 0.01863875994554931,
+ "max_abs_lp_p1": 0.015975245995750953,
+ "bitwise_equal_means": false,
+ "positions_per_s": 983.3,
+ "positions": 221085,
+ "gpu_seconds": 224.8,
+ "validation_rows": [
+  4787,
+  5786
+ ],
+ "rows_contiguous": true,
+ "chunk_starts_val_rows": [
+  4787,
+  4987,
+  5187,
+  5387,
+  5587
+ ],
+ "chunk_boundaries_differ_from_val": true,
+ "passed": true,
+ "rule": "failed / counts / n_moves equal; standardised features <= 0.05; lp_P1TO <= 0.02 (PREREG_08 5.2)"
+}
+rc=0
+=== done 2026-10-08T18:31:11Z
